@@ -6,7 +6,7 @@ The original work is available at [https://github.com/bitwarden/server].
 The original documentation is available at [https://bitwarden.com/help/].
 A complete list of all changes is available in the git history of this project.
 
-This project contains the APIs, database, and other core infrastructure items needed for the "backend" of all bitwarden client applications.
+This project contains the APIs, database, and other core infrastructure items needed for all bitwarden client applications.
 
 The server project is written in C# using .NET Core with ASP.NET Core. The database is written in T-SQL/SQL Server. The codebase can be developed, built, run, and deployed cross-platform on Windows, macOS, and Linux distributions.
 
