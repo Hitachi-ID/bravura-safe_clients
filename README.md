@@ -1,8 +1,16 @@
-[![Github Workflow build on master](https://github.com/bitwarden/browser/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/bitwarden/browser/actions/workflows/build.yml?query=branch:master)
-[![Crowdin](https://d322cqt584bo4o.cloudfront.net/bitwarden-browser/localized.svg)](https://crowdin.com/project/bitwarden-browser)
-[![Join the chat at https://gitter.im/bitwarden/Lobby](https://badges.gitter.im/bitwarden/Lobby.svg)](https://gitter.im/bitwarden/Lobby)
+----------------------------------------------------------------
 
-# Bitwarden Browser Extension
+Hitachi ID Bravura Safe is a modified version of Bitwarden®. It was developed using Bitwarden open source software. Hitachi ID Systems, Inc. and Bravura Safe are not affiliated with or endorsed by Bitwarden or Bitwarden, Inc. Bitwarden is a trademark or registered trademark of Bitwarden, Inc. in the United States and/or other countries. 
+
+The original work is available at [https://github.com/bitwarden/server]. 
+The original documentation is available at [https://bitwarden.com/help/].
+A complete list of all changes is available in the git history of this project.
+
+This project contains the APIs, database, and other core infrastructure items needed for the "backend" of all bitwarden client applications.
+
+The server project is written in C# using .NET Core with ASP.NET Core. The database is written in T-SQL/SQL Server. The codebase can be developed, built, run, and deployed cross-platform on Windows, macOS, and Linux distributions.
+
+#  Browser Extension
 
 <a href="https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb" target="_blank"><img src="https://imgur.com/3C4iKO0.png" width="64" height="64"></a>
 <a href="https://addons.mozilla.org/firefox/addon/bitwarden-password-manager/" target="_blank"><img src="https://imgur.com/ihXsdDO.png" width="64" height="64"></a>
@@ -13,9 +21,7 @@
 <a href="https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb" target="_blank"><img src="https://imgur.com/z8yjLZ2.png" width="64" height="64"></a>
 <a href="https://addons.mozilla.org/firefox/addon/bitwarden-password-manager/" target="_blank"><img src="https://imgur.com/MQYBSrD.png" width="64" height="64"></a>
 
-The Bitwarden browser extension is written using the Web Extension API and Angular.
-
-![](https://raw.githubusercontent.com/bitwarden/brand/master/screenshots/browser-chrome.png "My Vault")
+The browser extension is written using the Web Extension API and Angular.
 
 # Build/Run
 
