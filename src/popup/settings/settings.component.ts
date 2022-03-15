@@ -308,9 +308,7 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("cancel")
     );
     if (confirmed) {
-      BrowserApi.createNewTab(
-        "https://bitwarden.com/help/master-password/#change-your-master-password"
-      );
+      BrowserApi.createNewTab("http://docs.test.hitachi-id.net/safe/#/home/27069/10/10)");
     }
   }
 
@@ -322,7 +320,7 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("cancel")
     );
     if (confirmed) {
-      BrowserApi.createNewTab("https://bitwarden.com/help/setup-two-step-login/");
+      BrowserApi.createNewTab("http://docs.test.hitachi-id.net/safe/#/home/27071/10/10");
     }
   }
 
@@ -334,7 +332,7 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("cancel")
     );
     if (confirmed) {
-      BrowserApi.createNewTab("https://bitwarden.com/help/about-organizations/");
+      BrowserApi.createNewTab("https://docs.test.hitachi-id.net/safe/#/home/27454/10/11");
     }
   }
 
@@ -344,7 +342,7 @@ export class SettingsComponent implements OnInit {
   }
 
   import() {
-    BrowserApi.createNewTab("https://bitwarden.com/help/import-data/");
+    BrowserApi.createNewTab("https://docs.test.hitachi-id.net/safe/#/home/27912/10/11");
   }
 
   export() {
@@ -361,11 +359,8 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("version") + ": " + BrowserApi.getInternalApplicationVersion()
     );
     const div = document.createElement("div");
-    div.innerHTML =
-      `<p class="text-center"><i class="bwi bwi-shield bwi-3x" aria-hidden="true"></i></p>
-            <p class="text-center"><b>Bitwarden</b><br>&copy; Bitwarden Inc. 2015-` +
-      year +
-      `</p>`;
+    div.innerHTML = `<p class="text-center"><img src="../../images/hitachi-id-logo-dark.svg" alt="Hitachi ID" /></p>
+      <p class="text-center">&copy; 2022, Bitwarden Inc., with modifications &copy; 2022, Hitachi ID Systems, Inc.</p>`;
     div.appendChild(versionText);
 
     Swal.fire({
@@ -401,7 +396,9 @@ export class SettingsComponent implements OnInit {
     });
 
     if (result.value) {
-      this.platformUtilsService.launchUri("https://bitwarden.com/help/fingerprint-phrase/");
+      this.platformUtilsService.launchUri(
+        "https://docs.test.hitachi-id.net/safe/#/home/27269/10/11"
+      );
     }
   }
 
