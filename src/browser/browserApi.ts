@@ -100,6 +100,10 @@ export class BrowserApi {
     return chrome.runtime.getManifest().version;
   }
 
+  static getInternalApplicationVersion(): string {
+    return chrome.runtime.getManifest().internalVersion;
+  }
+
   static async isPopupOpen(): Promise<boolean> {
     return Promise.resolve(chrome.extension.getViews({ type: "popup" }).length > 0);
   }

@@ -358,7 +358,7 @@ export class SettingsComponent implements OnInit {
   about() {
     const year = new Date().getFullYear();
     const versionText = document.createTextNode(
-      this.i18nService.t("version") + ": " + BrowserApi.getApplicationVersion()
+      this.i18nService.t("version") + ": " + BrowserApi.getInternalApplicationVersion()
     );
     const div = document.createElement("div");
     div.innerHTML =
