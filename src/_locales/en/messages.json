@@ -350,7 +350,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "bravura-safe.com"
       }
     }
   },
@@ -513,7 +513,7 @@
   },
   "uriPosition": {
     "message": "URL $POSITION$",
-    "description": "A listing of URIs. Ex: URL 1, URL 2, URL 3, etc.",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -741,7 +741,7 @@
     "message": "Manage Membership"
   },
   "premiumManageAlert": {
-    "message": "You can manage your membership on the bitwarden.com web vault. Do you want to visit the website now?"
+    "message": "You can manage your membership on the bravura-safe.com web vault. Do you want to visit the website now?"
   },
   "premiumRefresh": {
     "message": "Refresh Membership"
@@ -774,7 +774,7 @@
     "message": "Purchase Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "You can purchase premium membership on the bitwarden.com web vault. Do you want to visit the website now?"
+    "message": "You can purchase premium membership on the bravura-safe.com web vault. Do you want to visit the website now?"
   },
   "premiumCurrentMember": {
     "message": "You are a premium member!"

@@ -350,7 +350,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -479,7 +479,7 @@
     "message": "ප්රධාන මුරපදය වෙනස්"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "bitwarden.com වෙබ් සුරක්ෂිතාගාරයේ ඔබේ ප්රධාන මුරපදය වෙනස් කළ හැකිය. ඔබට දැන් වෙබ් අඩවියට පිවිසීමට අවශ්යද?"
+    "message": "Bravura Safe වෙබ් සුරක්ෂිතාගාරයේ ඔබේ ප්රධාන මුරපදය වෙනස් කළ හැකිය. ඔබට දැන් වෙබ් අඩවියට පිවිසීමට අවශ්යද?"
   },
   "twoStepLoginConfirmation": {
     "message": "ආරක්ෂක යතුරක්, සත්යාපන යෙදුම, කෙටි පණිවුඩ, දුරකථන ඇමතුමක් හෝ විද්යුත් තැපෑල වැනි වෙනත් උපාංගයක් සමඟ ඔබේ පිවිසුම සත්යාපනය කිරීමට ඔබට අවශ්ය වීමෙන් ද්වි-පියවර පිවිසුම ඔබගේ ගිණුම වඩාත් සුරක්ෂිත කරයි. බිට්වොන්.com වෙබ් සුරක්ෂිතාගාරයේ ද්වි-පියවර පිවිසුම සක්රීය කළ හැකිය. ඔබට දැන් වෙබ් අඩවියට පිවිසීමට අවශ්යද?"
@@ -513,7 +513,7 @@
   },
   "uriPosition": {
     "message": "යූරි $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -582,7 +582,7 @@
     "description": "Clipboard is the operating system thing where you copy/paste data to on your device."
   },
   "notificationAddDesc": {
-    "message": "Bitwarden ඔබ වෙනුවෙන් මෙම මුරපදය මතක තබා ගත යුතුද?"
+    "message": "Bravura Safe ඔබ වෙනුවෙන් මෙම මුරපදය මතක තබා ගත යුතුද?"
   },
   "notificationAddSave": {
     "message": "සුරකින්න"
@@ -594,7 +594,7 @@
     "message": "මෙම “වෙනස් මුරපදය නිවේදනය” ස්වයංක්රීයව ඔබ වෙබ් අඩවිය මත එය වෙනස් කර ඇති බව හඳුනාගන්නා සෑම අවස්ථාවකදීම ඔබගේ සුරක්ෂිතාගාරයේ පිවිසුම් මුරපදය යාවත්කාලීන කිරීමට ඔබෙන් විමසනු ඇත."
   },
   "notificationChangeDesc": {
-    "message": "Bitwarden හි මෙම මුරපදය යාවත්කාලීන කිරීමට ඔබට අවශ්යද?"
+    "message": "Bravura Safe හි මෙම මුරපදය යාවත්කාලීන කිරීමට ඔබට අවශ්යද?"
   },
   "notificationChangeSave": {
     "message": "යාවත්කාල"
@@ -606,11 +606,11 @@
     "message": "සන්දර්භය මෙනු විකල්පයන් ඔබගේ වත්මන් පටිත්තෙහි ඇති වෙබ් අඩවිය සඳහා මුරපද උත්පාදනය සහ පිවිසුම් සඳහා ඉක්මන් ප්රවේශයක් ලබා දෙයි."
   },
   "defaultUriMatchDetection": {
-    "message": "පෙරනිමි URI තරග හඳුනා",
-    "description": "Default URI match detection for auto-fill."
+    "message": "පෙරනිමි URL තරග හඳුනා",
+    "description": "Default URL match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "එවැනි ස්වයංක්රීය-පිරවීම ලෙස ක්රියා සිදු කරන විට URI තරගය හඳුනා පිවිසුම් සඳහා කටයුතු කරන බව පෙරනිමි මාර්ගය තෝරන්න."
+    "message": "එවැනි ස්වයංක්රීය-පිරවීම ලෙස ක්රියා සිදු කරන විට URL තරගය හඳුනා පිවිසුම් සඳහා කටයුතු කරන බව පෙරනිමි මාර්ගය තෝරන්න."
   },
   "theme": {
     "message": "තේමාව"
@@ -650,7 +650,7 @@
     "message": "මෙම අපනයනය ඔබගේ ගිණුමේ ගුප්තකේතන යතුර භාවිතා කරමින් ඔබගේ දත්ත සංකේතනය කරයි. ඔබ කවදා හෝ ඔබගේ ගිණුමේ ගුප්තකේතන යතුර භ්රමණය කරන්නේ නම්, ඔබට මෙම අපනයන ගොනුව විකේතනය කිරීමට නොහැකි වනු ඇති බැවින් ඔබ නැවත අපනයනය කළ යුතුය."
   },
   "encExportAccountWarningDesc": {
-    "message": "ගිණුම් සංකේතාංකන යතුරු එක් එක් Bitwarden පරිශීලක ගිණුමට අද්විතීය වේ, එබැවින් ඔබට සංකේතාත්මක අපනයනයක් වෙනත් ගිණුමකට ආනයනය කළ නොහැක."
+    "message": "ගිණුම් සංකේතාංකන යතුරු එක් එක් Bravura Safe පරිශීලක ගිණුමට අද්විතීය වේ, එබැවින් ඔබට සංකේතාත්මක අපනයනයක් වෙනත් ගිණුමකට ආනයනය කළ නොහැක."
   },
   "exportMasterPassword": {
     "message": "ඔබගේ සුරක්ෂිතාගාරය දත්ත අපනයනය කිරීමට ඔබගේ ප්රධාන මුරපදය ඇතුලත් කරන්න."
@@ -662,7 +662,7 @@
     "message": "සංවිධාන ගැන ඉගෙන ගන්න"
   },
   "learnOrgConfirmation": {
-    "message": "සංවිධානයක් භාවිතා කිරීමෙන් ඔබේ සුරක්ෂිතාගාරය අයිතම අන් අය සමඟ බෙදා ගැනීමට Bitwarden ඔබට ඉඩ දෙයි. වැඩි විස්තර දැනගැනීම සඳහා bitwarden.com වෙබ් අඩවියට පිවිසීමට ඔබ කැමතිද?"
+    "message": "සංවිධානයක් භාවිතා කිරීමෙන් ඔබේ සුරක්ෂිතාගාරය අයිතම අන් අය සමඟ බෙදා ගැනීමට Bravura Safe ඔබට ඉඩ දෙයි. වැඩි විස්තර දැනගැනීම සඳහා Bravura Safe වෙබ් අඩවියට පිවිසීමට ඔබ කැමතිද?"
   },
   "moveToOrganization": {
     "message": "සංවිධානය වෙත ගෙනයන්න"
@@ -774,7 +774,7 @@
     "message": "වාරික මිලදී"
   },
   "premiumPurchaseAlert": {
-    "message": "ඔබට bitwarden.com වෙබ් සුරක්ෂිතාගාරයේ වාරික සාමාජිකත්වය මිලදී ගත හැකිය. ඔබට දැන් වෙබ් අඩවියට පිවිසීමට අවශ්යද?"
+    "message": "ඔබට hitachi-id.com වෙබ් සුරක්ෂිතාගාරයේ වාරික සාමාජිකත්වය මිලදී ගත හැකිය. ඔබට දැන් වෙබ් අඩවියට පිවිසීමට අවශ්යද?"
   },
   "premiumCurrentMember": {
     "message": "ඔබ වාරික සාමාජිකයෙක්!"
@@ -1251,26 +1251,26 @@
   },
   "matchDetection": {
     "message": "තරගය හඳුනා",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "පෙරනිමි තරගය හඳුනා",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "ටොගල් කරන්න විකල්ප"
   },
   "toggleCurrentUris": {
     "message": "ටොගල් කරන්න වත්මන් URis",
-    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
+    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
   },
   "currentUri": {
     "message": "වත්මන් වර්ගය",
-    "description": "The URI of one of the current open tabs in the browser."
+    "description": "The URL of one of the current open tabs in the browser."
   },
   "organization": {
     "message": "සංවිධානය",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "types": {
     "message": "වර්ග"
@@ -1326,7 +1326,7 @@
     "message": "දුර්වල මාස්ටර් මුරපදය"
   },
   "weakMasterPasswordDesc": {
-    "message": "ඔබ තෝරාගත් ප්රධාන මුරපදය දුර්වලයි. ඔබේ Bitwarden ගිණුම නිසි ලෙස ආරක්ෂා කිරීම සඳහා ඔබ ශක්තිමත් ප්රධාන මුරපදයක් (හෝ passphrase) භාවිතා කළ යුතුය. ඔබට මෙම ප්රධාන මුරපදය භාවිතා කිරීමට අවශ්ය බව ඔබට විශ්වාසද?"
+    "message": "ඔබ තෝරාගත් ප්රධාන මුරපදය දුර්වලයි. ඔබේ Bravura Safe ගිණුම නිසි ලෙස ආරක්ෂා කිරීම සඳහා ඔබ ශක්තිමත් ප්රධාන මුරපදයක් (හෝ passphrase) භාවිතා කළ යුතුය. ඔබට මෙම ප්රධාන මුරපදය භාවිතා කිරීමට අවශ්ය බව ඔබට විශ්වාසද?"
   },
   "pin": {
     "message": "පින්",
@@ -1351,7 +1351,7 @@
     "message": "ඩෙස්ක්ටොප් සිට තහවුරු කිරීම බලාපොරොත්තුවෙන්"
   },
   "awaitDesktopDesc": {
-    "message": "බ්රව්සරය සඳහා biometrics සක්රීය කිරීම සඳහා Bitwarden ඩෙස්ක්ටොප් යෙදුමේ biometrics භාවිතා කිරීම තහවුරු කරන්න."
+    "message": "බ්රව්සරය සඳහා biometrics සක්රීය කිරීම සඳහා Bravura Safe ඩෙස්ක්ටොප් යෙදුමේ biometrics භාවිතා කිරීම තහවුරු කරන්න."
   },
   "lockWithMasterPassOnRestart": {
     "message": "බ්රව්සරය නැවත ආරම්භ මත ප්රධාන මුරපදය සමග අගුළු"
@@ -1410,7 +1410,7 @@
     "message": "ස්වයංක්රීය-පිරවීම සහ සුරකින්න"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "ස්වයංක්රීය-පිරවූ අයිතමය සහ සුරකින ලද URI"
+    "message": "ස්වයංක්රීය-පිරවූ අයිතමය සහ සුරකින ලද URL"
   },
   "autoFillSuccess": {
     "message": "ස්වයංක්රීය-පිරවූ අයිතමය"
@@ -1561,15 +1561,15 @@
   },
   "send": {
     "message": "යවන්න",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "searchSends": {
     "message": "සෙවුම් යවයි",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "addSend": {
     "message": "යවන්න එකතු කරන්න",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeText": {
     "message": "පෙළ"
@@ -1579,7 +1579,7 @@
   },
   "allSends": {
     "message": "සියලු යවයි",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "මැක්ස් ප්රවේශ ගණන ළඟා"
@@ -1595,7 +1595,7 @@
   },
   "copySendLink": {
     "message": "සබැඳිය යවන්න පිටපත් කරන්න",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "removePassword": {
     "message": "මුරපදය ඉවත් කරන්න"
@@ -1608,11 +1608,11 @@
   },
   "deletedSend": {
     "message": "මකාදැමූ යවන්න",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
     "message": "සබැඳිය යවන්න",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "disabled": {
     "message": "අබල කර ඇත"
@@ -1622,23 +1622,23 @@
   },
   "deleteSend": {
     "message": "යවන්න මකන්න",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deleteSendConfirmation": {
     "message": "ඔබට මෙය මකා දැමීමට අවශ්ය බව ඔබට විශ්වාසද?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
     "message": "යැවීම සංස්කරණය",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeHeader": {
     "message": "මෙය කුමන ආකාරයේ යවන්න ද?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNameDesc": {
     "message": "මෙම යවන්න විස්තර කිරීමට මිත්රශීලී නමක්.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendFileDesc": {
     "message": "ඔබට යැවීමට අවශ්ය ගොනුව."
@@ -1647,15 +1647,15 @@
     "message": "මකාදැමීමේ දිනය"
   },
   "deletionDateDesc": {
-    "message": "නියම කරන ලද දිනය හා වේලාව මත Send ස්ථිරවම මකා දමනු ලැබේ.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "නියම කරන ලද දිනය හා වේලාව මත Share ස්ථිරවම මකා දමනු ලැබේ.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "කල් ඉකුත්වන දිනය"
   },
   "expirationDateDesc": {
     "message": "සකසා ඇත්නම්, මෙම යවන්න වෙත ප්රවේශය නිශ්චිත දිනය හා වේලාව කල් ඉකුත් වනු ඇත.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "oneDay": {
     "message": "දින 1"
@@ -1676,57 +1676,57 @@
     "message": "උපරිම ප්රවේශ ගණන්"
   },
   "maximumAccessCountDesc": {
-    "message": "සකසා ඇත්නම්, උපරිම ප්රවේශ ගණන ළඟා වූ පසු පරිශීලකයින්ට මෙම Send වෙත ප්රවේශ වීමට තවදුරටත් නොහැකි වනු ඇත.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "සකසා ඇත්නම්, උපරිම ප්රවේශ ගණන ළඟා වූ පසු පරිශීලකයින්ට මෙම Share වෙත ප්රවේශ වීමට තවදුරටත් නොහැකි වනු ඇත.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
     "message": "විකල්පයක් ලෙස පරිශීලකයින්ට මෙම යවන්න වෙත ප්රවේශ වීමට මුරපදයක් අවශ්ය වේ.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
     "message": "මේ ගැන පෞද්ගලික සටහන් යවන්න.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisableDesc": {
     "message": "මෙය අක්රීය කරන්න යවන්න එවිට කිසිවෙකුට එයට ප්රවේශ විය නොහැක.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendShareDesc": {
     "message": "සුරකින්න මත මෙම යවන්න ගේ සබැඳිය පසුරු පුවරුවට පිටපත් කරන්න.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "ඔබට යැවීමට අවශ්ය පෙළ."
   },
   "sendHideText": {
     "message": "මෙම යවන්න පෙළ පෙරනිමියෙන් සඟවන්න.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "වත්මන් ප්රවේශ ගණන්"
   },
   "createSend": {
     "message": "නව යවන්න නිර්මාණය",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "නව මුරපදය"
   },
   "sendDisabled": {
     "message": "ආබාධිත යවන්න",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "ව්යවසාය ප්රතිපත්තියක් නිසා, ඔබට දැනට පවතින Send මකා දැමිය හැකිය.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "ව්යවසාය ප්රතිපත්තියක් නිසා, ඔබට දැනට පවතින Share මකා දැමිය හැකිය.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
     "message": "නිර්මාණය යවන්න",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
     "message": "සංස්කරණය යවන්න",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinuxChromiumFileWarning": {
     "message": "ගොනුවක් තෝරා ගැනීම සඳහා, පැති තීරුවේ දිගුව විවෘත කරන්න (හැකි නම්) හෝ මෙම බැනරය ක්ලික් කිරීමෙන් නව කවුළුවකට පොප් කරන්න."
@@ -1771,7 +1771,7 @@
     "message": "ලබන්නන්ගෙන් මගේ විද්යුත් තැපැල් ලිපිනය සඟවන්න."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "සංවිධාන ප්රතිපත්ති එකක් හෝ කිහිපයක් ඔබගේ Send විකල්පයන්ට බලපායි."
+    "message": "සංවිධාන ප්රතිපත්ති එකක් හෝ කිහිපයක් ඔබගේ Share විකල්පයන්ට බලපායි."
   },
   "passwordPrompt": {
     "message": "ප්රධාන මුරපදය නැවත විමසුමක්"
