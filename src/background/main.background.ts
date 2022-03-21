@@ -76,16 +76,6 @@ import { AutofillService as AutofillServiceAbstraction } from "../services/abstr
 import { BrowserApi } from "../browser/browserApi";
 import { SafariApp } from "../browser/safariApp";
 
-import CommandsBackground from "./commands.background";
-import ContextMenusBackground from "./contextMenus.background";
-import IdleBackground from "./idle.background";
-import { NativeMessagingBackground } from "./nativeMessaging.background";
-import NotificationBackground from "./notification.background";
-import RuntimeBackground from "./runtime.background";
-import TabsBackground from "./tabs.background";
-import WebRequestBackground from "./webRequest.background";
-import WindowsBackground from "./windows.background";
-
 import { StateService as StateServiceAbstraction } from "../services/abstractions/state.service";
 
 import { PopupUtilsService } from "../popup/services/popup-utils.service";
