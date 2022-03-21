@@ -3,11 +3,11 @@
     "message": "Bravura Safe"
   },
   "extName": {
-    "message": "Bravura Safe - Free Password Manager",
+    "message": "Bravura Safe - Password Manager",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
-    "message": "A secure and free password manager for all of your devices.",
+    "message": "A secure password manager for all of your devices.",
     "description": "Extension description"
   },
   "loginOrCreateNewAccount": {

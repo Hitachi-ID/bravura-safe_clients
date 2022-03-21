@@ -22,17 +22,13 @@ import { ModalService } from "jslib-angular/services/modal.service";
 import { SetPinComponent } from "../components/set-pin.component";
 
 const RateUrls = {
-  [DeviceType.ChromeExtension]:
-    "https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb/reviews",
-  [DeviceType.FirefoxExtension]:
-    "https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/#reviews",
+  [DeviceType.ChromeExtension]: "https://chrome.google.com/webstore/detail/***/***/reviews",
+  [DeviceType.FirefoxExtension]: "https://addons.mozilla.org/en-US/firefox/addon/***/#reviews",
   [DeviceType.OperaExtension]:
-    "https://addons.opera.com/en/extensions/details/bitwarden-free-password-manager/#feedback-container",
-  [DeviceType.EdgeExtension]:
-    "https://microsoftedge.microsoft.com/addons/detail/jbkfoedolllekgbhcbcoahefnbanhhlh",
-  [DeviceType.VivaldiExtension]:
-    "https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb/reviews",
-  [DeviceType.SafariExtension]: "https://apps.apple.com/app/bitwarden/id1352778147",
+    "https://addons.opera.com/en/extensions/details/***/#feedback-container",
+  [DeviceType.EdgeExtension]: "https://microsoftedge.microsoft.com/addons/detail/***",
+  [DeviceType.VivaldiExtension]: "https://chrome.google.com/webstore/detail/***/***/reviews",
+  [DeviceType.SafariExtension]: "https://apps.apple.com/app/***/***",
 };
 
 @Component({
@@ -350,7 +346,7 @@ export class SettingsComponent implements OnInit {
   }
 
   help() {
-    BrowserApi.createNewTab("https://bitwarden.com/help/");
+    BrowserApi.createNewTab("https://docs.test.hitachi-id.net/safe/#/home/MY_SAFE_/10/11");
   }
 
   about() {
@@ -360,7 +356,7 @@ export class SettingsComponent implements OnInit {
     );
     const div = document.createElement("div");
     div.innerHTML = `<p class="text-center"><img src="../../images/hitachi-id-logo-dark.svg" alt="Hitachi ID" /></p>
-      <p class="text-center">&copy; 2022, Bitwarden Inc., with modifications &copy; 2022, Hitachi ID Systems, Inc.</p>`;
+      <p class="text-center">&copy; 2022, Bitwarden®, with modifications &copy; 2022, Hitachi ID Systems, Inc.</p>`;
     div.appendChild(versionText);
 
     Swal.fire({

@@ -30,9 +30,9 @@
 		<string>$(PRODUCT_MODULE_NAME).SafariWebExtensionHandler</string>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2015-2022 Bitwarden Inc., with modifications © 2022, Hitachi ID Systems Inc.</string>
+	<string>Copyright © 2015-2022 Bitwarden® Inc., with modifications © 2022, Hitachi ID Systems Inc.</string>
 	<key>NSHumanReadableDescription</key>
-	<string>A secure and free password manager for all of your devices.</string>
+	<string>A secure password manager for all of your devices.</string>
 	<key>SFSafariAppExtensionBundleIdentifiersToReplace</key>
 	<array>
 		<string>com.bitwarden.desktop.safari</string>

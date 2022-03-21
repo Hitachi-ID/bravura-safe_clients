@@ -118,37 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bitwarden - Gratis adgangskodemanager</value>
+    <value>Bravura Safe - Gratis adgangskodemanager</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>En sikker og gratis adgangskodemanager til alle dine enheder</value>
   </data>
   <data name="Description" xml:space="preserve">
-    <value>Bitwarden, Inc. er moderselskab for 8bit Solutions LLC.
-
-UDNÆVNT BEDSTE PASSWORD MANAGER AF THE VERGE, U.S. NEWS &amp; WORLD REPORT, CNET OG FLERE.
-
-Administrér, gem, sikr og del adgangskoder ubegrænset på tværs af enheder hvor som helst. Bitwarden leverer open source adgangskodeadministrationsløsninger til alle, hvad enten det er hjemme, på arbejdspladsen eller på farten.
-
-Generér stærke, unikke og tilfældige adgangskoder baseret på sikkerhedskrav til hvert websted, du besøger.
-
-Bitwarden Send overfører hurtigt krypterede oplysninger --- filer og almindelig tekst - direkte til enhver.
-
-Bitwarden tilbyder Teams og Enterprise-planer for virksomheder, så du sikkert kan dele adgangskoder med kolleger.
-
-Hvorfor vælge Bitwarden:
-
-Kryptering i verdensklasse
-Adgangskoder er beskyttet med avanceret end-to-end-kryptering (AES-256 bit, saltet hashtag og PBKDF2 SHA-256), så dine data forbliver sikre og private.
-
-Indbygget adgangskodegenerator
-Generér stærke, unikke og tilfældige adgangskoder baseret på sikkerhedskrav til hvert websted, du besøger.
-
-Globale oversættelser
-Bitwarden findes på 40 sprog, og flere kommer til, takket være vores globale fællesskab.
-
-Applikationer på tværs af platforme
-Beskyt og del følsomme data i din Bitwarden boks fra enhver browser, mobilenhed eller desktop OS og mere.</value>
+    <value>Hitachi ID Systems Inc.</value>
   </data>
   <data name="AssetTitle" xml:space="preserve">
     <value>En sikker og gratis adgangskodemanager til alle dine enheder</value>
