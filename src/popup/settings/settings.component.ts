@@ -234,7 +234,7 @@ export class SettingsComponent implements OnInit {
         titleText: this.i18nService.t("awaitDesktop"),
         text: this.i18nService.t("awaitDesktopDesc"),
         icon: "info",
-        iconHtml: '<i class="swal-custom-icon bwi bwi-info-circle text-info"></i>',
+        iconHtml: '<i class="swal-custom-icon fa fa-info-circle text-info"></i>',
         showCancelButton: true,
         cancelButtonText: this.i18nService.t("cancel"),
         showConfirmButton: false,
@@ -355,8 +355,8 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("version") + ": " + BrowserApi.getInternalApplicationVersion()
     );
     const div = document.createElement("div");
-    div.innerHTML = `<p class="text-center"><img src="../../images/hitachi-id-logo-dark.svg" alt="Hitachi ID" /></p>
-      <p class="text-center">&copy; 2022, Bitwarden®, with modifications &copy; 2022, Hitachi ID Systems, Inc.</p>`;
+    div.innerHTML = `<p class="text-center"><i class="fa fa-shield fa-3x" aria-hidden="true"></i></p>
+            <p class="text-center">&copy; 2022, Bitwarden�, with modifications &copy; 2022, Hitachi ID Systems, Inc.</p>`;
     div.appendChild(versionText);
 
     Swal.fire({
