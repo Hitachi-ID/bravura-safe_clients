@@ -22,17 +22,13 @@ import { ModalService } from "jslib-angular/services/modal.service";
 import { SetPinComponent } from "../components/set-pin.component";
 
 const RateUrls = {
-  [DeviceType.ChromeExtension]:
-    "https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb/reviews",
-  [DeviceType.FirefoxExtension]:
-    "https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/#reviews",
+  [DeviceType.ChromeExtension]: "https://chrome.google.com/webstore/detail/***/***/reviews",
+  [DeviceType.FirefoxExtension]: "https://addons.mozilla.org/en-US/firefox/addon/***/#reviews",
   [DeviceType.OperaExtension]:
-    "https://addons.opera.com/en/extensions/details/bitwarden-free-password-manager/#feedback-container",
-  [DeviceType.EdgeExtension]:
-    "https://microsoftedge.microsoft.com/addons/detail/jbkfoedolllekgbhcbcoahefnbanhhlh",
-  [DeviceType.VivaldiExtension]:
-    "https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb/reviews",
-  [DeviceType.SafariExtension]: "https://apps.apple.com/app/bitwarden/id1352778147",
+    "https://addons.opera.com/en/extensions/details/***/#feedback-container",
+  [DeviceType.EdgeExtension]: "https://microsoftedge.microsoft.com/addons/detail/***",
+  [DeviceType.VivaldiExtension]: "https://chrome.google.com/webstore/detail/***/***/reviews",
+  [DeviceType.SafariExtension]: "https://apps.apple.com/app/***/***",
 };
 
 @Component({
@@ -238,7 +234,7 @@ export class SettingsComponent implements OnInit {
         titleText: this.i18nService.t("awaitDesktop"),
         text: this.i18nService.t("awaitDesktopDesc"),
         icon: "info",
-        iconHtml: '<i class="swal-custom-icon bwi bwi-info-circle text-info"></i>',
+        iconHtml: '<i class="swal-custom-icon fa fa-info-circle text-info"></i>',
         showCancelButton: true,
         cancelButtonText: this.i18nService.t("cancel"),
         showConfirmButton: false,
@@ -308,9 +304,7 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("cancel")
     );
     if (confirmed) {
-      BrowserApi.createNewTab(
-        "https://bitwarden.com/help/master-password/#change-your-master-password"
-      );
+      BrowserApi.createNewTab("http://docs.test.hitachi-id.net/safe/#/home/27069/10/10)");
     }
   }
 
@@ -322,7 +316,7 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("cancel")
     );
     if (confirmed) {
-      BrowserApi.createNewTab("https://bitwarden.com/help/setup-two-step-login/");
+      BrowserApi.createNewTab("http://docs.test.hitachi-id.net/safe/#/home/27071/10/10");
     }
   }
 
@@ -334,7 +328,7 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("cancel")
     );
     if (confirmed) {
-      BrowserApi.createNewTab("https://bitwarden.com/help/about-organizations/");
+      BrowserApi.createNewTab("https://docs.test.hitachi-id.net/safe/#/home/27454/10/11");
     }
   }
 
@@ -344,7 +338,7 @@ export class SettingsComponent implements OnInit {
   }
 
   import() {
-    BrowserApi.createNewTab("https://bitwarden.com/help/import-data/");
+    BrowserApi.createNewTab("https://docs.test.hitachi-id.net/safe/#/home/27912/10/11");
   }
 
   export() {
@@ -352,7 +346,7 @@ export class SettingsComponent implements OnInit {
   }
 
   help() {
-    BrowserApi.createNewTab("https://bitwarden.com/help/");
+    BrowserApi.createNewTab("https://docs.test.hitachi-id.net/safe/#/home/MY_SAFE_/10/11");
   }
 
   about() {
@@ -361,11 +355,8 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("version") + ": " + BrowserApi.getInternalApplicationVersion()
     );
     const div = document.createElement("div");
-    div.innerHTML =
-      `<p class="text-center"><i class="bwi bwi-shield bwi-3x" aria-hidden="true"></i></p>
-            <p class="text-center"><b>Bitwarden</b><br>&copy; Bitwarden Inc. 2015-` +
-      year +
-      `</p>`;
+    div.innerHTML = `<p class="text-center"><i class="fa fa-shield fa-3x" aria-hidden="true"></i></p>
+            <p class="text-center">&copy; 2022, Bitwarden Inc., with modifications &copy; 2022, Hitachi ID Systems, Inc.</p>`;
     div.appendChild(versionText);
 
     Swal.fire({
@@ -401,7 +392,9 @@ export class SettingsComponent implements OnInit {
     });
 
     if (result.value) {
-      this.platformUtilsService.launchUri("https://bitwarden.com/help/fingerprint-phrase/");
+      this.platformUtilsService.launchUri(
+        "https://docs.test.hitachi-id.net/safe/#/home/27269/10/11"
+      );
     }
   }
 
