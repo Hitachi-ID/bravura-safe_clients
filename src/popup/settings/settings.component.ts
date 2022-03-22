@@ -355,7 +355,7 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("version") + ": " + BrowserApi.getInternalApplicationVersion()
     );
     const div = document.createElement("div");
-    div.innerHTML = `<p class="text-center"><i class="fa fa-shield fa-3x" aria-hidden="true"></i></p>
+    div.innerHTML = `<p class="text-center"><img src="../../images/icon38.png" alt="Hitachi ID" /></p>
             <p class="text-center">&copy; 2022, Bitwarden Inc., with modifications &copy; 2022, Hitachi ID Systems, Inc.</p>`;
     div.appendChild(versionText);
 
