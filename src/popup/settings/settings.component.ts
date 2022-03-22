@@ -356,7 +356,7 @@ export class SettingsComponent implements OnInit {
     );
     const div = document.createElement("div");
     div.innerHTML = `<p class="text-center"><i class="fa fa-shield fa-3x" aria-hidden="true"></i></p>
-            <p class="text-center">&copy; 2022, Bitwarden&reg;, with modifications &copy; 2022, Hitachi ID Systems, Inc.</p>`;
+            <p class="text-center">&copy; 2022, Bitwarden Inc., with modifications &copy; 2022, Hitachi ID Systems, Inc.</p>`;
     div.appendChild(versionText);
 
     Swal.fire({
