@@ -11,7 +11,7 @@
 
 .outer-wrapper {
   padding: 0 10px;
-  border-bottom: 2px solid #cc0000;
+  border-bottom: 2px solid #414141;
   display: grid;
   grid-template-columns: 24px auto 55px;
   grid-column-gap: 10px;
@@ -51,7 +51,7 @@ img {
 
 button:not(.link),
 button:not(.neutral) {
-  background-color: #cc0000;
+  background-color: #414141;
   padding: 5px 15px;
   border-radius: 3px;
   color: #ffffff;
@@ -67,7 +67,7 @@ button.link,
 button.neutral {
   background: none;
   padding: 5px 15px;
-  color: #cc0000;
+  color: #414141;
   border: 0;
 
   &:hover {
