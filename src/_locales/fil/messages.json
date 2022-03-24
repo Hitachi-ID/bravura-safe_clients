@@ -38,7 +38,7 @@
     "message": "Master Password"
   },
   "masterPassDesc": {
-    "message": "The master password is the password you use to access your vault. It is very important that you do not forget your master password. There is no way to recover the password in the event that you forget it."
+    "message": "The master password is the password you use to access your safe. It is very important that you do not forget your master password. There is no way to recover the password in the event that you forget it."
   },
   "masterPassHintDesc": {
     "message": "A master password hint can help you remember your password if you forget it."
@@ -95,10 +95,10 @@
     "message": "No matching logins."
   },
   "unlockVaultMenu": {
-    "message": "Unlock your vault"
+    "message": "Unlock your safe"
   },
   "loginToVaultMenu": {
-    "message": "Log in to your vault"
+    "message": "Log in to your safe"
   },
   "autoFillInfo": {
     "message": "There are no logins available to auto-fill for the current browser tab."
@@ -193,7 +193,7 @@
     "message": "Sync"
   },
   "syncVaultNow": {
-    "message": "Sync Vault Now"
+    "message": "Sync Safe Now"
   },
   "lastSync": {
     "message": "Last Sync:"
@@ -209,7 +209,7 @@
     "message": "Automatically generate strong, unique passwords for your logins."
   },
   "bitWebVault": {
-    "message": "Bravura Safe Web Vault"
+    "message": "Bravura Safe Web Safe"
   },
   "importItems": {
     "message": "Import Items"
@@ -336,7 +336,7 @@
     "message": "Verify Identity"
   },
   "yourVaultIsLocked": {
-    "message": "Your vault is locked. Verify your identity to continue."
+    "message": "Your safe is locked. Verify your identity to continue."
   },
   "unlock": {
     "message": "Unlock"
@@ -358,7 +358,7 @@
     "message": "Invalid master password"
   },
   "vaultTimeout": {
-    "message": "Vault Timeout"
+    "message": "Safe Timeout"
   },
   "lockNow": {
     "message": "Lock Now"
@@ -479,10 +479,10 @@
     "message": "Change Master Password"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "You can change your master password on the Bravura Safe web vault. Do you want to visit the website now?"
+    "message": "You can change your master password on the Bravura Safe web safe. Do you want to visit the website now?"
   },
   "twoStepLoginConfirmation": {
-    "message": "Two-step login makes your account more secure by requiring you to verify your login with another device such as a security key, authenticator app, SMS, phone call, or email. Two-step login can be enabled on the Bravura Safe web vault. Do you want to visit the website now?"
+    "message": "Two-step login makes your account more secure by requiring you to verify your login with another device such as a security key, authenticator app, SMS, phone call, or email. Two-step login can be enabled on the Bravura Safe web safe. Do you want to visit the website now?"
   },
   "editedFolder": {
     "message": "Edited folder"
@@ -559,19 +559,19 @@
     "message": "Disable Add Login Notification"
   },
   "addLoginNotificationDesc": {
-    "message": "The \"Add Login Notification\" automatically prompts you to save new logins to your vault whenever you log into them for the first time."
+    "message": "The \"Add Login Notification\" automatically prompts you to save new logins to your safe whenever you log into them for the first time."
   },
   "dontShowCardsCurrentTab": {
     "message": "Don't Show Cards on Tab Page"
   },
   "dontShowCardsCurrentTabDesc": {
-    "message": "Card items from your vault are listed on the 'Current Tab' page for easy auto-fill access."
+    "message": "Card items from your safe are listed on the 'Current Tab' page for easy auto-fill access."
   },
   "dontShowIdentitiesCurrentTab": {
     "message": "Don't Show Identities on Tab Page"
   },
   "dontShowIdentitiesCurrentTabDesc": {
-    "message": "Identity items from your vault are listed on the 'Current Tab' page for easy auto-fill access."
+    "message": "Identity items from your safe are listed on the 'Current Tab' page for easy auto-fill access."
   },
   "clearClipboard": {
     "message": "Clear Clipboard",
@@ -591,7 +591,7 @@
     "message": "Disable Changed Password Notification"
   },
   "disableChangedPasswordNotificationDesc": {
-    "message": "The \"Changed Password Notification\" automatically prompts you to update a login's password in your vault whenever it detects that you have changed it on a website."
+    "message": "The \"Changed Password Notification\" automatically prompts you to update a login's password in your safe whenever it detects that you have changed it on a website."
   },
   "notificationChangeDesc": {
     "message": "Do you want to update this password in Bravura Safe?"
@@ -631,7 +631,7 @@
     "description": "'Solarized' is a noun and the name of a color scheme. It should not be translated."
   },
   "exportVault": {
-    "message": "Export Vault"
+    "message": "Export Safe"
   },
   "fileFormat": {
     "message": "File Format"
@@ -641,10 +641,10 @@
     "description": "WARNING (should stay in capitalized letters if the language permits)"
   },
   "confirmVaultExport": {
-    "message": "Confirm Vault Export"
+    "message": "Confirm Safe Export"
   },
   "exportWarningDesc": {
-    "message": "This export contains your vault data in an unencrypted format. You should not store or send the exported file over unsecure channels (such as email). Delete it immediately after you are done using it."
+    "message": "This export contains your safe data in an unencrypted format. You should not store or send the exported file over unsecure channels (such as email). Delete it immediately after you are done using it."
   },
   "encExportKeyWarningDesc": {
     "message": "This export encrypts your data using your account's encryption key. If you ever rotate your account's encryption key you should export again since you will not be able to decrypt this export file."
@@ -653,7 +653,7 @@
     "message": "Account encryption keys are unique to each Bravura Safe user account, so you can't import an encrypted export into a different account."
   },
   "exportMasterPassword": {
-    "message": "Enter your master password to export your vault data."
+    "message": "Enter your master password to export your safe data."
   },
   "shared": {
     "message": "Shared"
@@ -662,7 +662,7 @@
     "message": "Learn about Teams"
   },
   "learnOrgConfirmation": {
-    "message": "Bravura Safe allows you to share your vault items with others by using an team. Would you like to visit the Bravura Safe website to learn more?"
+    "message": "Bravura Safe allows you to share your safe items with others by using an team. Would you like to visit the Bravura Safe website to learn more?"
   },
   "moveToOrganization": {
     "message": "Move to Team"
@@ -741,7 +741,7 @@
     "message": "Manage Membership"
   },
   "premiumManageAlert": {
-    "message": "You can manage your membership on the hitachi-id.com web vault. Do you want to visit the website now?"
+    "message": "You can manage your membership on the hitachi-id.com web safe. Do you want to visit the website now?"
   },
   "premiumRefresh": {
     "message": "Refresh Membership"
@@ -759,10 +759,10 @@
     "message": "Additional two-step login options such as YubiKey, FIDO U2F, and Duo."
   },
   "ppremiumSignUpReports": {
-    "message": "Password hygiene, account health, and data breach reports to keep your vault safe."
+    "message": "Password hygiene, account health, and data breach reports to keep your safe safe."
   },
   "ppremiumSignUpTotp": {
-    "message": "TOTP verification code (2FA) generator for logins in your vault."
+    "message": "TOTP verification code (2FA) generator for logins in your safe."
   },
   "ppremiumSignUpSupport": {
     "message": "Priority customer support."
@@ -774,7 +774,7 @@
     "message": "Purchase Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "You can purchase premium membership on the hitachi-id.com web vault. Do you want to visit the website now?"
+    "message": "You can purchase premium membership on the hitachi-id.com web safe. Do you want to visit the website now?"
   },
   "premiumCurrentMember": {
     "message": "You are a premium member!"
@@ -924,7 +924,7 @@
     "message": "API Server URL"
   },
   "webVaultUrl": {
-    "message": "Web Vault Server URL"
+    "message": "Web Safe Server URL"
   },
   "identityUrl": {
     "message": "Identity Server URL"
@@ -966,10 +966,10 @@
     "message": "Do not auto-fill on page load"
   },
   "commandOpenPopup": {
-    "message": "Open vault popup"
+    "message": "Open safe popup"
   },
   "commandOpenSidebar": {
-    "message": "Open vault in sidebar"
+    "message": "Open safe in sidebar"
   },
   "commandAutofillDesc": {
     "message": "Auto-fill the last used login for the current website"
@@ -978,7 +978,7 @@
     "message": "Generate and copy a new random password to the clipboard"
   },
   "commandLockVaultDesc": {
-    "message": "Lock the vault"
+    "message": "Lock the safe"
   },
   "privateModeWarning": {
     "message": "Private mode support is experimental and some features are limited."
@@ -1025,13 +1025,13 @@
     "message": "Disable Website Icons"
   },
   "disableFaviconDesc": {
-    "message": "Website Icons provide a recognizable image next to each login item in your vault."
+    "message": "Website Icons provide a recognizable image next to each login item in your safe."
   },
   "disableBadgeCounter": {
     "message": "Disable Badge Counter"
   },
   "disableBadgeCounterDesc": {
-    "message": "Badge counter indicates how many logins you have for the current page in your vault."
+    "message": "Badge counter indicates how many logins you have for the current page in your safe."
   },
   "cardholderName": {
     "message": "Cardholder Name"
@@ -1296,7 +1296,7 @@
     "description": "ex. Date this password was updated"
   },
   "neverLockWarning": {
-    "message": "Are you sure you want to use the \"Never\" option? Setting your lock options to \"Never\" stores your vault's encryption key on your device. If you use this option you should ensure that you keep your device properly protected."
+    "message": "Are you sure you want to use the \"Never\" option? Setting your lock options to \"Never\" stores your safe's encryption key on your device. If you use this option you should ensure that you keep your device properly protected."
   },
   "noOrganizationsList": {
     "message": "You do not belong to any teams. Teams allow you to securely share items with other users."
@@ -1369,7 +1369,7 @@
     "message": "One or more team policies are affecting your generator settings."
   },
   "vaultTimeoutAction": {
-    "message": "Vault Timeout Action"
+    "message": "Safe Timeout Action"
   },
   "lock": {
     "message": "Lock",
@@ -1401,7 +1401,7 @@
     "message": "Restored Item"
   },
   "vaultTimeoutLogOutConfirmation": {
-    "message": "Logging out will remove all access to your vault and requires online authentication after the timeout period. Are you sure you want to use this setting?"
+    "message": "Logging out will remove all access to your safe and requires online authentication after the timeout period. Are you sure you want to use this setting?"
   },
   "vaultTimeoutLogOutConfirmationTitle": {
     "message": "Timeout Action Confirmation"
@@ -1539,7 +1539,7 @@
     "message": "This action cannot be done in the sidebar, please retry the action in the popup or popout."
   },
   "personalOwnershipSubmitError": {
-    "message": "Due to an Enterprise Policy, you are restricted from saving items to your personal vault. Change the Ownership option to a team and choose from available Collections."
+    "message": "Due to an Enterprise Policy, you are restricted from saving items to your personal safe. Change the Ownership option to a team and choose from available Collections."
   },
   "personalOwnershipPolicyInEffect": {
     "message": "A team policy is affecting your ownership options."
@@ -1786,7 +1786,7 @@
     "message": "Email Verification Required"
   },
   "emailVerificationRequiredDesc": {
-    "message": "You must verify your email to use this feature. You can verify your email in the web vault."
+    "message": "You must verify your email to use this feature. You can verify your email in the web safe."
   },
   "updatedMasterPassword": {
     "message": "Updated Master Password"
@@ -1795,7 +1795,7 @@
     "message": "Update Master Password"
   },
   "updateMasterPasswordWarning": {
-    "message": "Your Master Password was recently changed by an administrator in your team. In order to access the vault, you must update it now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
+    "message": "Your Master Password was recently changed by an administrator in your team. In order to access the safe, you must update it now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
   },
   "resetPasswordPolicyAutoEnroll": {
     "message": "Automatic Enrollment"
@@ -1807,7 +1807,7 @@
     "message": "Select folder..."
   },
   "ssoCompleteRegistration": {
-    "message": "In order to complete logging in with SSO, please set a master password to access and protect your vault."
+    "message": "In order to complete logging in with SSO, please set a master password to access and protect your safe."
   },
   "hours": {
     "message": "Hours"
@@ -1816,7 +1816,7 @@
     "message": "Minutes"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Your team policies are affecting your vault timeout. Maximum allowed Vault Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
+    "message": "Your team policies are affecting your safe timeout. Maximum allowed Safe Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1829,13 +1829,13 @@
     }
   },
   "vaultTimeoutToLarge": {
-    "message": "Your vault timeout exceeds the restrictions set by your team."
+    "message": "Your safe timeout exceeds the restrictions set by your team."
   },
   "vaultExportDisabled": {
-    "message": "Vault Export Disabled"
+    "message": "Safe Export Disabled"
   },
   "personalVaultExportPolicyInEffect": {
-    "message": "One or more team policies prevents you from exporting your personal vault."
+    "message": "One or more team policies prevents you from exporting your personal safe."
   },
   "copyCustomFieldNameInvalidElement": {
     "message": "Unable to identify a valid form element. Try inspecting the HTML instead."

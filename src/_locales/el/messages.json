@@ -209,7 +209,7 @@
     "message": "Δημιουργήστε αυτόματα ισχυρούς και μοναδικούς κωδικούς πρόσβασης για τις συνδέσεις σας."
   },
   "bitWebVault": {
-    "message": "Bravura Safe Web Vault"
+    "message": "Bravura Safe Web Safe"
   },
   "importItems": {
     "message": "Εισαγωγή στοιχείων"
@@ -358,7 +358,7 @@
     "message": "Μη έγκυρος κύριος κωδικός πρόσβασης"
   },
   "vaultTimeout": {
-    "message": "Χρόνος Λήξης Vault"
+    "message": "Χρόνος Λήξης Safe"
   },
   "lockNow": {
     "message": "Κλείδωμα Τώρα"
@@ -631,7 +631,7 @@
     "description": "'Solarized' is a noun and the name of a color scheme. It should not be translated."
   },
   "exportVault": {
-    "message": "Εξαγωγή Vault"
+    "message": "Εξαγωγή Safe"
   },
   "fileFormat": {
     "message": "Μορφή Αρχείου"
@@ -641,7 +641,7 @@
     "description": "WARNING (should stay in capitalized letters if the language permits)"
   },
   "confirmVaultExport": {
-    "message": "Επιβεβαίωση εξαγωγής Vault"
+    "message": "Επιβεβαίωση εξαγωγής Safe"
   },
   "exportWarningDesc": {
     "message": "Αυτή η εξαγωγή περιέχει τα δεδομένα σε μη κρυπτογραφημένη μορφή. Δεν πρέπει να αποθηκεύετε ή να στείλετε το εξαγόμενο αρχείο μέσω μη ασφαλών τρόπων (όπως μέσω email). Διαγράψτε το αμέσως μόλις τελειώσετε με τη χρήση του."
@@ -924,7 +924,7 @@
     "message": "URL Διακομιστή API"
   },
   "webVaultUrl": {
-    "message": "Web Vault Server URL"
+    "message": "Web Safe Server URL"
   },
   "identityUrl": {
     "message": "URL Ταυτότητας Διακομιστή"
@@ -1369,7 +1369,7 @@
     "message": "Μία ή περισσότερες πολιτικές του οργανισμού επηρεάζουν τις ρυθμίσεις της γεννήτριας."
   },
   "vaultTimeoutAction": {
-    "message": "Ενέργεια Χρόνου Λήξης Vault"
+    "message": "Ενέργεια Χρόνου Λήξης Safe"
   },
   "lock": {
     "message": "Κλείδωμα",
@@ -1816,7 +1816,7 @@
     "message": "Λεπτά"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Οι πολιτικές του οργανισμού σας επηρεάζουν το χρονικό όριο vault σας. Το μέγιστο επιτρεπόμενο Χρονικό όριο Vault είναι $HOURS$ ώρα(ες) και $MINUTES$ λεπτό(ά)",
+    "message": "Οι πολιτικές του οργανισμού σας επηρεάζουν το χρονικό όριο vault σας. Το μέγιστο επιτρεπόμενο Χρονικό όριο Safe είναι $HOURS$ ώρα(ες) και $MINUTES$ λεπτό(ά)",
     "placeholders": {
       "hours": {
         "content": "$1",

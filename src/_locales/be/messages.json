@@ -95,10 +95,10 @@
     "message": "Няма падыходных уліковых даных."
   },
   "unlockVaultMenu": {
-    "message": "Unlock your vault"
+    "message": "Unlock your safe"
   },
   "loginToVaultMenu": {
-    "message": "Log in to your vault"
+    "message": "Log in to your safe"
   },
   "autoFillInfo": {
     "message": "Няма ўліковых даных, даступных для аўтазапаўнення ў бягучую ўкладку браўзера."
@@ -662,7 +662,7 @@
     "message": "Learn about Teams"
   },
   "learnOrgConfirmation": {
-    "message": "Bravura Safe allows you to share your vault items with others by using a team. Would you like to visit the Bravura Safe website to learn more?"
+    "message": "Bravura Safe allows you to share your safe items with others by using a team. Would you like to visit the Bravura Safe website to learn more?"
   },
   "moveToOrganization": {
     "message": "Move to Team"
@@ -1031,7 +1031,7 @@
     "message": "Disable Badge Counter"
   },
   "disableBadgeCounterDesc": {
-    "message": "Badge counter indicates how many logins you have for the current page in your vault."
+    "message": "Badge counter indicates how many logins you have for the current page in your safe."
   },
   "cardholderName": {
     "message": "Імя ўладальніка карткі"
@@ -1539,7 +1539,7 @@
     "message": "This action cannot be done in the sidebar, please retry the action in the popup or popout."
   },
   "personalOwnershipSubmitError": {
-    "message": "Due to an Enterprise Policy, you are restricted from saving items to your personal vault. Change the Ownership option to a team and choose from available Collections."
+    "message": "Due to an Enterprise Policy, you are restricted from saving items to your personal safe. Change the Ownership option to a team and choose from available Collections."
   },
   "personalOwnershipPolicyInEffect": {
     "message": "A team policy is affecting your ownership options."
@@ -1786,7 +1786,7 @@
     "message": "Email Verification Required"
   },
   "emailVerificationRequiredDesc": {
-    "message": "You must verify your email to use this feature. You can verify your email in the web vault."
+    "message": "You must verify your email to use this feature. You can verify your email in the web safe."
   },
   "updatedMasterPassword": {
     "message": "Updated Master Password"
@@ -1795,7 +1795,7 @@
     "message": "Update Master Password"
   },
   "updateMasterPasswordWarning": {
-    "message": "Your Master Password was recently changed by an administrator in your team. In order to access the vault, you must update it now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
+    "message": "Your Master Password was recently changed by an administrator in your team. In order to access the safe, you must update it now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
   },
   "resetPasswordPolicyAutoEnroll": {
     "message": "Automatic Enrollment"
@@ -1807,7 +1807,7 @@
     "message": "Select folder..."
   },
   "ssoCompleteRegistration": {
-    "message": "In order to complete logging in with SSO, please set a master password to access and protect your vault."
+    "message": "In order to complete logging in with SSO, please set a master password to access and protect your safe."
   },
   "hours": {
     "message": "Hours"
@@ -1816,7 +1816,7 @@
     "message": "Minutes"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Your team policies are affecting your vault timeout. Maximum allowed Safe Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
+    "message": "Your team policies are affecting your safe timeout. Maximum allowed Safe Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1829,13 +1829,13 @@
     }
   },
   "vaultTimeoutToLarge": {
-    "message": "Your vault timeout exceeds the restrictions set by your team."
+    "message": "Your safe timeout exceeds the restrictions set by your team."
   },
   "vaultExportDisabled": {
     "message": "Safe Export Disabled"
   },
   "personalVaultExportPolicyInEffect": {
-    "message": "One or more team policies prevents you from exporting your personal vault."
+    "message": "One or more team policies prevents you from exporting your personal safe."
   },
   "copyCustomFieldNameInvalidElement": {
     "message": "Unable to identify a valid form element. Try inspecting the HTML instead."

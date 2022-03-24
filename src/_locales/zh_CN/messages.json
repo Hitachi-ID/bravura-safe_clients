@@ -1787,7 +1787,7 @@
     "message": "Minutes"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Your team policies are affecting your vault timeout. Maximum allowed Vault Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
+    "message": "Your team policies are affecting your vault timeout. Maximum allowed Safe Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1803,7 +1803,7 @@
     "message": "Your vault timeout exceeds the restrictions set by your team."
   },
   "vaultExportDisabled": {
-    "message": "Vault Export Disabled"
+    "message": "Safe Export Disabled"
   },
   "personalVaultExportPolicyInEffect": {
     "message": "One or more team policies prevents you from exporting your personal vault."

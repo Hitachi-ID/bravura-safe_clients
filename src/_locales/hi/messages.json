@@ -193,7 +193,7 @@
     "message": "सिंक"
   },
   "syncVaultNow": {
-    "message": "Sync Vault Now"
+    "message": "Sync Safe Now"
   },
   "lastSync": {
     "message": "Last Sync:"
@@ -209,7 +209,7 @@
     "message": "स्वचालित रूप से अपने लॉगिन के लिए मजबूत, अद्वितीय पासवर्ड उत्पन्न करते हैं।"
   },
   "bitWebVault": {
-    "message": "bravura safe Web Vault"
+    "message": "bravura safe Web Safe"
   },
   "importItems": {
     "message": "Import Items"
@@ -631,7 +631,7 @@
     "description": "'Solarized' is a noun and the name of a color scheme. It should not be translated."
   },
   "exportVault": {
-    "message": "Export Vault"
+    "message": "Export Safe"
   },
   "fileFormat": {
     "message": "File Format"
@@ -924,7 +924,7 @@
     "message": "API Server URL"
   },
   "webVaultUrl": {
-    "message": "Web Vault Server URL"
+    "message": "Web Safe Server URL"
   },
   "identityUrl": {
     "message": "Identity Server URL"
@@ -1816,7 +1816,7 @@
     "message": "Minutes"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Your team policies are affecting your vault timeout. Maximum allowed Vault Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
+    "message": "Your team policies are affecting your vault timeout. Maximum allowed Safe Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1832,7 +1832,7 @@
     "message": "Your vault timeout exceeds the restrictions set by your team."
   },
   "vaultExportDisabled": {
-    "message": "Vault Export Disabled"
+    "message": "Safe Export Disabled"
   },
   "personalVaultExportPolicyInEffect": {
     "message": "One or more team policies prevents you from exporting your personal vault."

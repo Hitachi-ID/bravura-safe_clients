@@ -924,7 +924,7 @@
     "message": "URL naslov API strežnika"
   },
   "webVaultUrl": {
-    "message": "Web Vault Server URL"
+    "message": "Web Safe Server URL"
   },
   "identityUrl": {
     "message": "Identity Server URL"
@@ -1031,7 +1031,7 @@
     "message": "Disable Badge Counter"
   },
   "disableBadgeCounterDesc": {
-    "message": "Badge counter indicates how many logins you have for the current page in your vault."
+    "message": "Badge counter indicates how many logins you have for the current page in your safe."
   },
   "cardholderName": {
     "message": "Ime imetnika kartice"
@@ -1369,7 +1369,7 @@
     "message": "One or more team policies are affecting your generator settings."
   },
   "vaultTimeoutAction": {
-    "message": "Vault Timeout Action"
+    "message": "Safe Timeout Action"
   },
   "lock": {
     "message": "Lock",
@@ -1816,7 +1816,7 @@
     "message": "Minutes"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Your team policies are affecting your vault timeout. Maximum allowed Vault Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
+    "message": "Your team policies are affecting your vault timeout. Maximum allowed Safe Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1832,7 +1832,7 @@
     "message": "Your vault timeout exceeds the restrictions set by your team."
   },
   "vaultExportDisabled": {
-    "message": "Vault Export Disabled"
+    "message": "Safe Export Disabled"
   },
   "personalVaultExportPolicyInEffect": {
     "message": "One or more team policies prevents you from exporting your personal vault."
