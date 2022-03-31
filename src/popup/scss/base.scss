@@ -147,7 +147,7 @@ header {
   min-height: 44px;
   max-height: 44px;
   display: flex;
-  border-bottom: 1px solid #000000;
+  border-bottom: 3px solid #000000;
 
   @include themify($themes) {
     color: themed("headerColor");
