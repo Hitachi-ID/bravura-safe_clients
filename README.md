@@ -11,14 +11,14 @@ This project contains the APIs, database, and other core infrastructure items ne
 
 #  Browser Extension
 
-<a href="https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb" target="_blank"><img src="https://imgur.com/3C4iKO0.png" width="64" height="64"></a>
-<a href="https://addons.mozilla.org/firefox/addon/bitwarden-password-manager/" target="_blank"><img src="https://imgur.com/ihXsdDO.png" width="64" height="64"></a>
-<a href="https://microsoftedge.microsoft.com/addons/detail/bitwarden-free-password/jbkfoedolllekgbhcbcoahefnbanhhlh" target="_blank"><img src="https://imgur.com/vMcaXaw.png" width="64" height="64"></a>
-<a href="https://addons.opera.com/extensions/details/bitwarden-free-password-manager/" target="_blank"><img src="https://imgur.com/nSJ9htU.png" width="64" height="64"></a>
-<a href="https://bitwarden.com/download/" target="_blank"><img src="https://imgur.com/ENbaWUu.png" width="64" height="64"></a>
-<a href="https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb" target="_blank"><img src="https://imgur.com/EuDp4vP.png" width="64" height="64"></a>
-<a href="https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb" target="_blank"><img src="https://imgur.com/z8yjLZ2.png" width="64" height="64"></a>
-<a href="https://addons.mozilla.org/firefox/addon/bitwarden-password-manager/" target="_blank"><img src="https://imgur.com/MQYBSrD.png" width="64" height="64"></a>
+<a href="https://chrome.google.com/webstore/detail/<replace me>/nngceckbapebfimnlniiiahkandclblb" target="_blank"><img src="https://imgur.com/3C4iKO0.png" width="64" height="64"></a>
+<a href="https://addons.mozilla.org/firefox/addon/<replace me>/" target="_blank"><img src="https://imgur.com/ihXsdDO.png" width="64" height="64"></a>
+<a href="https://microsoftedge.microsoft.com/addons/detail/<replace me>/jbkfoedolllekgbhcbcoahefnbanhhlh" target="_blank"><img src="https://imgur.com/vMcaXaw.png" width="64" height="64"></a>
+<a href="https://addons.opera.com/extensions/details/<replace me>/" target="_blank"><img src="https://imgur.com/nSJ9htU.png" width="64" height="64"></a>
+<a href="https://<replace me>/download/" target="_blank"><img src="https://imgur.com/ENbaWUu.png" width="64" height="64"></a>
+<a href="https://chrome.google.com/webstore/detail/<replace me>/nngceckbapebfimnlniiiahkandclblb" target="_blank"><img src="https://imgur.com/EuDp4vP.png" width="64" height="64"></a>
+<a href="https://chrome.google.com/webstore/detail/<replace me>/nngceckbapebfimnlniiiahkandclblb" target="_blank"><img src="https://imgur.com/z8yjLZ2.png" width="64" height="64"></a>
+<a href="https://addons.mozilla.org/firefox/addon/<replace me>/" target="_blank"><img src="https://imgur.com/MQYBSrD.png" width="64" height="64"></a>
 
 The browser extension is written using the Web Extension API and Angular.
 
