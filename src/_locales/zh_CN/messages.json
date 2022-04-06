@@ -1530,7 +1530,7 @@
       }
     }
   },
-  "Share": {
+  "send": {
     "message": "Share",
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
