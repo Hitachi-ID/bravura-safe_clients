@@ -2,7 +2,7 @@ import AddLoginRuntimeMessage from "src/background/models/addLoginRuntimeMessage
 import ChangePasswordRuntimeMessage from "src/background/models/changePasswordRuntimeMessage";
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  if (window.location.hostname.endsWith("vault.bitwarden.com")) {
+  if (window.location.hostname.endsWith("safe.hitachi-id.net")) {
     return;
   }
 
