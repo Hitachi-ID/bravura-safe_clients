@@ -224,7 +224,7 @@ export default class RuntimeBackground {
       if (this.onInstalledReason != null) {
         /*
         if (this.onInstalledReason === "install") {
-          BrowserApi.createNewTab("https://bitwarden.com/browser-start/");
+          BrowserApi.createNewTab("https://safe.hitachi-id.net/browser-start/");
         }
         */
 
