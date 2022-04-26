@@ -6,7 +6,7 @@ The original work is available at [https://github.com/bitwarden/server].
 The original documentation is available at [https://bitwarden.com/help/].
 A complete list of all changes is available in the git history of this project.
 
-This project contains the APIs, database, and other core infrastructure items needed for all bitwarden client applications.
+This project contains the browser extensions.
 
 
 #  Browser Extension
