@@ -7,13 +7,12 @@ import { MessagingService } from "jslib-common/abstractions/messaging.service";
 import { PlatformUtilsService } from "jslib-common/abstractions/platformUtils.service";
 import { StateService } from "jslib-common/abstractions/state.service";
 import { VaultTimeoutService } from "jslib-common/abstractions/vaultTimeout.service";
-
 import { Utils } from "jslib-common/misc/utils";
-
 import { EncString } from "jslib-common/models/domain/encString";
 import { SymmetricCryptoKey } from "jslib-common/models/domain/symmetricCryptoKey";
 
 import { BrowserApi } from "../browser/browserApi";
+
 import RuntimeBackground from "./runtime.background";
 
 const MessageValidTimeout = 10 * 1000;
@@ -116,18 +115,12 @@ export class NativeMessagingBackground {
             break;
           case "disconnected":
             if (this.connecting) {
-              this.messagingService.send("showDialog", {
-                text: this.i18nService.t("startDesktopDesc"),
-                title: this.i18nService.t("startDesktopTitle"),
-                confirmText: this.i18nService.t("ok"),
-                type: "error",
-              });
-              reject();
+              reject("startDesktop");
             }
             this.connected = false;
             this.port.disconnect();
             break;
-          case "setupEncryption":
+          case "setupEncryption": {
             // Ignore since it belongs to another device
             if (message.appId !== this.appId) {
               return;
@@ -147,6 +140,7 @@ export class NativeMessagingBackground {
             this.sharedSecret = new SymmetricCryptoKey(decrypted);
             this.secureSetupResolve();
             break;
+          }
           case "invalidateEncryption":
             // Ignore since it belongs to another device
             if (message.appId !== this.appId) {
@@ -173,6 +167,7 @@ export class NativeMessagingBackground {
           }
           case "wrongUserId":
             this.showWrongUserDialog();
+            break;
           default:
             // Ignore since it belongs to another device
             if (!this.platformUtilsService.isSafari() && message.appId !== this.appId) {
@@ -191,18 +186,12 @@ export class NativeMessagingBackground {
           error = chrome.runtime.lastError.message;
         }
 
-        if (error != null) {
-          this.messagingService.send("showDialog", {
-            text: this.i18nService.t("desktopIntegrationDisabledDesc"),
-            title: this.i18nService.t("desktopIntegrationDisabledTitle"),
-            confirmText: this.i18nService.t("ok"),
-            type: "error",
-          });
-        }
         this.sharedSecret = null;
         this.privateKey = null;
         this.connected = false;
-        reject();
+
+        const reason = error != null ? "desktopIntegrationDisabled" : null;
+        reject(reason);
       });
     });
   }
@@ -279,7 +268,7 @@ export class NativeMessagingBackground {
     }
 
     switch (message.command) {
-      case "biometricUnlock":
+      case "biometricUnlock": {
         await this.stateService.setBiometricAwaitingAcceptance(null);
 
         if (message.response === "not enabled") {
@@ -337,8 +326,10 @@ export class NativeMessagingBackground {
           this.runtimeBackground.processMessage({ command: "unlocked" }, null, null);
         }
         break;
+      }
       default:
         this.logService.error("NativeMessage, got unknown command: " + message.command);
+        break;
     }
 
     if (this.resolver) {

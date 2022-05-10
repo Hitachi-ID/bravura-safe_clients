@@ -14,11 +14,6 @@ const ENV = (process.env.ENV = process.env.NODE_ENV);
 
 const moduleRules = [
   {
-    test: /\.ts$/,
-    enforce: "pre",
-    loader: "tslint-loader",
-  },
-  {
     test: /\.(html)$/,
     loader: "html-loader",
   },
@@ -130,6 +125,15 @@ const config = {
     minimizer: [
       new TerserPlugin({
         exclude: [/content\/.*/, /notification\/.*/],
+        terserOptions: {
+          // Replicate Angular CLI behaviour
+          compress: {
+            global_defs: {
+              ngDevMode: false,
+              ngI18nClosureMode: false,
+            },
+          },
+        },
       }),
     ],
     splitChunks: {
@@ -173,6 +177,10 @@ const config = {
     extensions: [".ts", ".js"],
     symlinks: false,
     modules: [path.resolve("node_modules")],
+    alias: {
+      sweetalert2: require.resolve("sweetalert2/dist/sweetalert2.js"),
+      "#sweetalert2": require.resolve("sweetalert2/src/sweetalert2.scss"),
+    },
     fallback: {
       assert: false,
       buffer: require.resolve("buffer/"),

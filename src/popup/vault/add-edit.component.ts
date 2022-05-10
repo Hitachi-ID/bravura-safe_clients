@@ -1,11 +1,9 @@
 import { Location } from "@angular/common";
 import { Component } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
-
 import { first } from "rxjs/operators";
 
-import { BrowserApi } from "../../browser/browserApi";
-
+import { AddEditComponent as BaseAddEditComponent } from "jslib-angular/components/add-edit.component";
 import { AuditService } from "jslib-common/abstractions/audit.service";
 import { CipherService } from "jslib-common/abstractions/cipher.service";
 import { CollectionService } from "jslib-common/abstractions/collection.service";
@@ -19,14 +17,11 @@ import { PasswordRepromptService } from "jslib-common/abstractions/passwordRepro
 import { PlatformUtilsService } from "jslib-common/abstractions/platformUtils.service";
 import { PolicyService } from "jslib-common/abstractions/policy.service";
 import { StateService } from "jslib-common/abstractions/state.service";
-
-import { PopupUtilsService } from "../services/popup-utils.service";
-
+import { CipherType } from "jslib-common/enums/cipherType";
 import { LoginUriView } from "jslib-common/models/view/loginUriView";
 
-import { AddEditComponent as BaseAddEditComponent } from "jslib-angular/components/add-edit.component";
-
-import { CipherType } from "jslib-common/enums/cipherType";
+import { BrowserApi } from "../../browser/browserApi";
+import { PopupUtilsService } from "../services/popup-utils.service";
 
 @Component({
   selector: "app-vault-add-edit",
@@ -187,17 +182,20 @@ export class AddEditComponent extends BaseAddEditComponent {
     this.location.back();
   }
 
+  async generateUsername(): Promise<boolean> {
+    const confirmed = await super.generateUsername();
+    if (confirmed) {
+      await this.saveCipherState();
+      this.router.navigate(["generator"], { queryParams: { type: "username" } });
+    }
+    return confirmed;
+  }
+
   async generatePassword(): Promise<boolean> {
     const confirmed = await super.generatePassword();
     if (confirmed) {
-      this.stateService.setAddEditCipherInfo({
-        cipher: this.cipher,
-        collectionIds:
-          this.collections == null
-            ? []
-            : this.collections.filter((c) => (c as any).checked).map((c) => c.id),
-      });
-      this.router.navigate(["generator"]);
+      await this.saveCipherState();
+      this.router.navigate(["generator"], { queryParams: { type: "password" } });
     }
     return confirmed;
   }
@@ -221,5 +219,15 @@ export class AddEditComponent extends BaseAddEditComponent {
       this.ownershipOptions &&
       (this.ownershipOptions.length > 1 || !this.allowPersonal)
     );
+  }
+
+  private saveCipherState() {
+    return this.stateService.setAddEditCipherInfo({
+      cipher: this.cipher,
+      collectionIds:
+        this.collections == null
+          ? []
+          : this.collections.filter((c) => (c as any).checked).map((c) => c.id),
+    });
   }
 }

@@ -1,41 +1,3 @@
-import { CipherRepromptType } from "jslib-common/enums/cipherRepromptType";
-import { CipherType } from "jslib-common/enums/cipherType";
-
-import { CipherView } from "jslib-common/models/view/cipherView";
-
-import { GlobalState } from "jslib-common/models/domain/globalState";
-
-import { ApiService } from "jslib-common/services/api.service";
-import { AppIdService } from "jslib-common/services/appId.service";
-import { AuditService } from "jslib-common/services/audit.service";
-import { AuthService } from "jslib-common/services/auth.service";
-import { CipherService } from "jslib-common/services/cipher.service";
-import { CollectionService } from "jslib-common/services/collection.service";
-import { ConsoleLogService } from "jslib-common/services/consoleLog.service";
-import { ContainerService } from "jslib-common/services/container.service";
-import { EnvironmentService } from "jslib-common/services/environment.service";
-import { EventService } from "jslib-common/services/event.service";
-import { ExportService } from "jslib-common/services/export.service";
-import { FileUploadService } from "jslib-common/services/fileUpload.service";
-import { FolderService } from "jslib-common/services/folder.service";
-import { KeyConnectorService } from "jslib-common/services/keyConnector.service";
-import { NotificationsService } from "jslib-common/services/notifications.service";
-import { OrganizationService } from "jslib-common/services/organization.service";
-import { PasswordGenerationService } from "jslib-common/services/passwordGeneration.service";
-import { PolicyService } from "jslib-common/services/policy.service";
-import { ProviderService } from "jslib-common/services/provider.service";
-import { SearchService } from "jslib-common/services/search.service";
-import { SendService } from "jslib-common/services/send.service";
-import { SettingsService } from "jslib-common/services/settings.service";
-import { StateMigrationService } from "jslib-common/services/stateMigration.service";
-import { SyncService } from "jslib-common/services/sync.service";
-import { SystemService } from "jslib-common/services/system.service";
-import { TokenService } from "jslib-common/services/token.service";
-import { TotpService } from "jslib-common/services/totp.service";
-import { TwoFactorService } from "jslib-common/services/twoFactor.service";
-import { UserVerificationService } from "jslib-common/services/userVerification.service";
-import { WebCryptoFunctionService } from "jslib-common/services/webCryptoFunction.service";
-
 import { ApiService as ApiServiceAbstraction } from "jslib-common/abstractions/api.service";
 import { AppIdService as AppIdServiceAbstraction } from "jslib-common/abstractions/appId.service";
 import { AuditService as AuditServiceAbstraction } from "jslib-common/abstractions/audit.service";
@@ -69,16 +31,51 @@ import { TokenService as TokenServiceAbstraction } from "jslib-common/abstractio
 import { TotpService as TotpServiceAbstraction } from "jslib-common/abstractions/totp.service";
 import { TwoFactorService as TwoFactorServiceAbstraction } from "jslib-common/abstractions/twoFactor.service";
 import { UserVerificationService as UserVerificationServiceAbstraction } from "jslib-common/abstractions/userVerification.service";
+import { UsernameGenerationService as UsernameGenerationServiceAbstraction } from "jslib-common/abstractions/usernameGeneration.service";
 import { VaultTimeoutService as VaultTimeoutServiceAbstraction } from "jslib-common/abstractions/vaultTimeout.service";
-
-import { AutofillService as AutofillServiceAbstraction } from "../services/abstractions/autofill.service";
+import { CipherRepromptType } from "jslib-common/enums/cipherRepromptType";
+import { CipherType } from "jslib-common/enums/cipherType";
+import { StateFactory } from "jslib-common/factories/stateFactory";
+import { GlobalState } from "jslib-common/models/domain/globalState";
+import { CipherView } from "jslib-common/models/view/cipherView";
+import { ApiService } from "jslib-common/services/api.service";
+import { AppIdService } from "jslib-common/services/appId.service";
+import { AuditService } from "jslib-common/services/audit.service";
+import { AuthService } from "jslib-common/services/auth.service";
+import { CipherService } from "jslib-common/services/cipher.service";
+import { CollectionService } from "jslib-common/services/collection.service";
+import { ConsoleLogService } from "jslib-common/services/consoleLog.service";
+import { ContainerService } from "jslib-common/services/container.service";
+import { EnvironmentService } from "jslib-common/services/environment.service";
+import { EventService } from "jslib-common/services/event.service";
+import { ExportService } from "jslib-common/services/export.service";
+import { FileUploadService } from "jslib-common/services/fileUpload.service";
+import { FolderService } from "jslib-common/services/folder.service";
+import { KeyConnectorService } from "jslib-common/services/keyConnector.service";
+import { NotificationsService } from "jslib-common/services/notifications.service";
+import { OrganizationService } from "jslib-common/services/organization.service";
+import { PasswordGenerationService } from "jslib-common/services/passwordGeneration.service";
+import { PolicyService } from "jslib-common/services/policy.service";
+import { ProviderService } from "jslib-common/services/provider.service";
+import { SearchService } from "jslib-common/services/search.service";
+import { SendService } from "jslib-common/services/send.service";
+import { SettingsService } from "jslib-common/services/settings.service";
+import { StateMigrationService } from "jslib-common/services/stateMigration.service";
+import { SyncService } from "jslib-common/services/sync.service";
+import { SystemService } from "jslib-common/services/system.service";
+import { TokenService } from "jslib-common/services/token.service";
+import { TotpService } from "jslib-common/services/totp.service";
+import { TwoFactorService } from "jslib-common/services/twoFactor.service";
+import { UserVerificationService } from "jslib-common/services/userVerification.service";
+import { UsernameGenerationService } from "jslib-common/services/usernameGeneration.service";
+import { WebCryptoFunctionService } from "jslib-common/services/webCryptoFunction.service";
 
 import { BrowserApi } from "../browser/browserApi";
 import { SafariApp } from "../browser/safariApp";
-
-import { StateService as StateServiceAbstraction } from "../services/abstractions/state.service";
-
+import { Account } from "../models/account";
 import { PopupUtilsService } from "../popup/services/popup-utils.service";
+import { AutofillService as AutofillServiceAbstraction } from "../services/abstractions/autofill.service";
+import { StateService as StateServiceAbstraction } from "../services/abstractions/state.service";
 import AutofillService from "../services/autofill.service";
 import { BrowserCryptoService } from "../services/browserCrypto.service";
 import BrowserMessagingService from "../services/browserMessaging.service";
@@ -89,19 +86,16 @@ import I18nService from "../services/i18n.service";
 import { StateService } from "../services/state.service";
 import VaultTimeoutService from "../services/vaultTimeout.service";
 
-import { Account } from "../models/account";
 import CommandsBackground from "./commands.background";
 import ContextMenusBackground from "./contextMenus.background";
 import IdleBackground from "./idle.background";
 import IconDetails from "./models/iconDetails";
-import { NativeMessagingBackground } from "./nativeMessaging.background";
+import { NativeMessagingBackground , NativeMessagingBackground } from "./nativeMessaging.background";
 import NotificationBackground from "./notification.background";
 import RuntimeBackground from "./runtime.background";
 import TabsBackground from "./tabs.background";
 import WebRequestBackground from "./webRequest.background";
 import WindowsBackground from "./windows.background";
-
-import { StateFactory } from "jslib-common/factories/stateFactory";
 
 export default class MainBackground {
   messagingService: MessagingServiceAbstraction;
@@ -144,6 +138,7 @@ export default class MainBackground {
   keyConnectorService: KeyConnectorServiceAbstraction;
   userVerificationService: UserVerificationServiceAbstraction;
   twoFactorService: TwoFactorServiceAbstraction;
+  usernameGenerationService: UsernameGenerationServiceAbstraction;
 
   onUpdatedRan: boolean;
   onReplacedRan: boolean;
@@ -156,7 +151,6 @@ export default class MainBackground {
   private runtimeBackground: RuntimeBackground;
   private tabsBackground: TabsBackground;
   private webRequestBackground: WebRequestBackground;
-  private windowsBackground: WindowsBackground;
 
   private sidebarAction: any;
   private buildingContextMenu: boolean;
@@ -208,7 +202,7 @@ export default class MainBackground {
       }
     );
     this.i18nService = new I18nService(BrowserApi.getUILanguage(window));
-    this.cryptoFunctionService = new WebCryptoFunctionService(window, this.platformUtilsService);
+    this.cryptoFunctionService = new WebCryptoFunctionService(window);
     this.cryptoService = new BrowserCryptoService(
       this.cryptoFunctionService,
       this.platformUtilsService,
@@ -222,6 +216,7 @@ export default class MainBackground {
       this.tokenService,
       this.platformUtilsService,
       this.environmentService,
+      this.appIdService,
       (expired: boolean) => this.logout(expired)
     );
     this.settingsService = new SettingsService(this.stateService);
@@ -427,7 +422,6 @@ export default class MainBackground {
       this.vaultTimeoutService
     );
     this.notificationBackground = new NotificationBackground(
-      this,
       this.autofillService,
       this.cipherService,
       this.vaultTimeoutService,
@@ -456,10 +450,10 @@ export default class MainBackground {
       this.cipherService,
       this.vaultTimeoutService
     );
-    this.windowsBackground = new WindowsBackground(this);
 
     this.twoFactorService = new TwoFactorService(this.i18nService, this.platformUtilsService);
 
+    // eslint-disable-next-line
     const that = this;
     const backgroundMessagingService = new (class extends MessagingServiceAbstraction {
       // AuthService should send the messages to the background not popup.
@@ -482,6 +476,10 @@ export default class MainBackground {
       this.twoFactorService,
       this.i18nService
     );
+    this.usernameGenerationService = new UsernameGenerationService(
+      this.cryptoService,
+      this.stateService
+    );
   }
 
   async bootstrap() {
@@ -502,10 +500,15 @@ export default class MainBackground {
     await this.contextMenusBackground.init();
     await this.idleBackground.init();
     await this.webRequestBackground.init();
-    await this.windowsBackground.init();
 
-    if (this.platformUtilsService.isFirefox && !this.isPrivateMode) {
-      // Set new Private Mode windows to the default icon - they do not share state with the background page
+    if (this.platformUtilsService.isFirefox() && !this.isPrivateMode) {
+      // Set Private Mode windows to the default icon - they do not share state with the background page
+      const privateWindows = await BrowserApi.getPrivateModeWindows();
+      privateWindows.forEach(async (win) => {
+        await this.actionSetIcon(chrome.browserAction, "", win.id);
+        await this.actionSetIcon(this.sidebarAction, "", win.id);
+      });
+
       BrowserApi.onWindowCreated(async (win) => {
         if (win.incognito) {
           await this.actionSetIcon(chrome.browserAction, "", win.id);
@@ -544,7 +547,7 @@ export default class MainBackground {
     await this.actionSetIcon(this.sidebarAction, suffix);
   }
 
-  async refreshBadgeAndMenu(forLocked: boolean = false) {
+  async refreshBadgeAndMenu(forLocked = false) {
     if (!chrome.windows || !chrome.contextMenus) {
       return;
     }
@@ -593,7 +596,7 @@ export default class MainBackground {
     }
 
     await this.setIcon();
-    await this.refreshBadgeAndMenu();
+    await this.refreshBadgeAndMenu(true);
     await this.reseedStorage();
     this.notificationsService.updateConnection(false);
     await this.systemService.clearPendingClipboard();
@@ -659,6 +662,7 @@ export default class MainBackground {
     await clearStorage();
 
     for (const key in storage) {
+      // eslint-disable-next-line
       if (!storage.hasOwnProperty(key)) {
         continue;
       }
@@ -891,7 +895,7 @@ export default class MainBackground {
     return title.replace(/&/g, "&&");
   }
 
-  private async fullSync(override: boolean = false) {
+  private async fullSync(override = false) {
     const syncInternal = 6 * 60 * 60 * 1000; // 6 hours
     const lastSync = await this.syncService.getLastSync();
 

@@ -542,6 +542,12 @@
   "overwritePasswordConfirmation": {
     "message": "Вы хотите перезаписать текущий пароль?"
   },
+  "overwriteUsername": {
+    "message": "Перезаписать имя пользователя"
+  },
+  "overwriteUsernameConfirmation": {
+    "message": "Вы хотите перезаписать текущее имя пользователя?"
+  },
   "searchFolder": {
     "message": "Поиск в папке"
   },
@@ -1233,7 +1239,12 @@
     "message": "Этот пароль не обнаружен в известных базах утечек. Можно продолжать его использовать."
   },
   "baseDomain": {
-    "message": "Основной домен"
+    "message": "Основной домен",
+    "description": "Domain name. Ex. website.com"
+  },
+  "domainName": {
+    "message": "Доменное имя",
+    "description": "Domain name. Ex. website.com"
   },
   "host": {
     "message": "Хост",
@@ -1494,7 +1505,7 @@
     "message": "Запустить приложение Bravura Safe для компьютера"
   },
   "startDesktopDesc": {
-    "message": "Перед использованием этой функции необходимо запустить приложение Bravura Safe для компьютера."
+    "message": "Перед использованием разблокировки с помощью биометрии необходимо запустить приложение Bravura Safe для компьютера."
   },
   "errorEnableBiometricTitle": {
     "message": "Не удается включить биометрию"
@@ -1582,7 +1593,8 @@
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCountReached": {
-    "message": "Достигнут максимум обращений"
+    "message": "Достигнут максимум обращений",
+    "description": "This text will be displayed after a Send has been accessed the maximum amount of times."
   },
   "expired": {
     "message": "Срок истек"
@@ -1866,5 +1878,66 @@
   },
   "leftOrganization": {
     "message": "Вы покинули организацию."
+  },
+  "toggleCharacterCount": {
+    "message": "Показать количество символов"
+  },
+  "sessionTimeout": {
+    "message": "Время вашей сессии истекло. Пожалуйста, вернитесь и попробуйте войти снова."
+  },
+  "exportingPersonalVaultTitle": {
+    "message": "Экспорт личного хранилища"
+  },
+  "exportingPersonalVaultDescription": {
+    "message": "Будут экспортированы только личные элементы хранилища, связанные с $EMAIL$. Элементы хранилища организации включены не будут.",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "error": {
+    "message": "Ошибка"
+  },
+  "regenerateUsername": {
+    "message": "Пересоздать имя пользователя"
+  },
+  "generateUsername": {
+    "message": "Создать имя пользователя"
+  },
+  "usernameType": {
+    "message": "Тип имени пользователя"
+  },
+  "plusAddressedEmail": {
+    "message": "Плюс-адресованные email",
+    "description": "Username generator option that appends a random sub-address to the username. For example: address+subaddress@email.com"
+  },
+  "plusAddressedEmailDesc": {
+    "message": "Использовать возможности суб-адресации вашего провайдера электронной почты."
+  },
+  "catchallEmail": {
+    "message": "Catch-all-адрес электронной почты"
+  },
+  "catchallEmailDesc": {
+    "message": "Использовать настроенную в вашем домене почту catch-all."
+  },
+  "random": {
+    "message": "Случайно"
+  },
+  "randomWord": {
+    "message": "Случайное слово"
+  },
+  "websiteName": {
+    "message": "Название сайта"
+  },
+  "whatWouldYouLikeToGenerate": {
+    "message": "Что вы хотите сгенерировать?"
+  },
+  "passwordType": {
+    "message": "Тип пароля"
+  },
+  "service": {
+    "message": "Служба"
   }
 }

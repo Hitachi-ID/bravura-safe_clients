@@ -457,6 +457,11 @@
     display: flex;
     margin-left: 5px;
 
+    &.action-buttons-fixed {
+      align-self: start;
+      margin-top: 2px;
+    }
+
     .row-btn {
       cursor: pointer;
       padding: 10px 8px;
@@ -670,6 +675,15 @@
 
       @include themify($themes) {
         color: themed("textColor");
+      }
+    }
+
+    &.align-start {
+      align-items: start;
+      margin-top: 10px;
+
+      label {
+        margin-top: -4px;
       }
     }
   }
