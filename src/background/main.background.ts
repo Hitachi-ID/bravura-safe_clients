@@ -90,12 +90,11 @@ import CommandsBackground from "./commands.background";
 import ContextMenusBackground from "./contextMenus.background";
 import IdleBackground from "./idle.background";
 import IconDetails from "./models/iconDetails";
-import { NativeMessagingBackground , NativeMessagingBackground } from "./nativeMessaging.background";
+import { NativeMessagingBackground } from "./nativeMessaging.background";
 import NotificationBackground from "./notification.background";
 import RuntimeBackground from "./runtime.background";
 import TabsBackground from "./tabs.background";
 import WebRequestBackground from "./webRequest.background";
-import WindowsBackground from "./windows.background";
 
 export default class MainBackground {
   messagingService: MessagingServiceAbstraction;
