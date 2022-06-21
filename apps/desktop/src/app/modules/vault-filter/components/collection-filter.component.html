@@ -8,11 +8,11 @@
       appA11yTitle="{{ 'toggleCollapse' | i18n }}"
     >
       <i
-        class="bwi bwi-fw"
+        class="fa fa-fw"
         aria-hidden="true"
         [ngClass]="{
-          'bwi-angle-right': isCollapsed(collectionsGrouping),
-          'bwi-angle-down': !isCollapsed(collectionsGrouping)
+          'fa-chevron-right': isCollapsed(collectionsGrouping),
+          'fa-chevron-down': !isCollapsed(collectionsGrouping)
         }"
       ></i>
     </button>
@@ -35,11 +35,11 @@
             appA11yTitle="{{ 'toggleCollapse' | i18n }}"
           >
             <i
-              class="bwi bwi-fw"
+              class="fa fa-fw"
               aria-hidden="true"
               [ngClass]="{
-                'bwi-angle-right': isCollapsed(c.node),
-                'bwi-angle-down': !isCollapsed(c.node)
+                'fa-chevron-right': isCollapsed(c.node),
+                'fa-chevron-down': !isCollapsed(c.node)
               }"
             ></i>
           </button>
@@ -50,7 +50,7 @@
           >
             <i
               *ngIf="c.children.length === 0"
-              class="bwi bwi-fw bwi-collection"
+              class="fa fa-fw fa-cube"
               aria-hidden="true"
             ></i>
             &nbsp;{{ c.node.name }}

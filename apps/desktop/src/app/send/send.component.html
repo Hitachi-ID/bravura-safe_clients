@@ -7,7 +7,7 @@
           <li class="filter-option" [ngClass]="{ active: selectedAll }">
             <span class="filter-buttons">
               <button class="filter-button" (click)="selectAll()" [attr.aria-pressed]="selectedAll">
-                <i class="bwi bwi-fw bwi-filter" aria-hidden="true"></i>&nbsp;{{
+                <i class="fa fa-fw fa-th" aria-hidden="true"></i>&nbsp;{{
                   "allSends" | i18n
                 }}
               </button>
@@ -27,7 +27,7 @@
                 (click)="selectType(sendType.Text)"
                 [attr.aria-pressed]="selectedType === sendType.Text"
               >
-                <i class="bwi bwi-fw bwi-file-text" aria-hidden="true"></i>&nbsp;{{
+                <i class="fa fa-fw fa-file-text-o" aria-hidden="true"></i>&nbsp;{{
                   "sendTypeText" | i18n
                 }}
               </button>
@@ -40,7 +40,7 @@
                 (click)="selectType(sendType.File)"
                 [attr.aria-pressed]="selectedType === sendType.File"
               >
-                <i class="bwi bwi-fw bwi-file" aria-hidden="true"></i>&nbsp;{{
+                <i class="fa fa-fw fa-file" aria-hidden="true"></i>&nbsp;{{
                   "sendTypeFile" | i18n
                 }}
               </button>
@@ -65,7 +65,7 @@
           class="flex-list-item"
         >
           <span class="item-icon" aria-hidden="true">
-            <i class="bwi bwi-fw bwi-lg" [ngClass]="s.type == 0 ? 'bwi-file-text' : 'bwi-file'"></i>
+            <i class="fa fa-fw fa-lg" [ngClass]="s.type == 0 ? 'fa-file-text-o' : 'fa-file'"></i>
           </span>
           <span class="item-content">
             <span class="item-title">
@@ -73,7 +73,7 @@
               <span class="title-badges">
                 <ng-container *ngIf="s.disabled">
                   <i
-                    class="bwi bwi-exclamation-triangle"
+                    class="fa fa-warning"
                     appStopProp
                     title="{{ 'disabled' | i18n }}"
                     aria-hidden="true"
@@ -82,7 +82,7 @@
                 </ng-container>
                 <ng-container *ngIf="s.password">
                   <i
-                    class="bwi bwi-key"
+                    class="fa fa-key"
                     appStopProp
                     title="{{ 'password' | i18n }}"
                     aria-hidden="true"
@@ -91,7 +91,7 @@
                 </ng-container>
                 <ng-container *ngIf="s.maxAccessCountReached">
                   <i
-                    class="bwi bwi-ban"
+                    class="fa fa-ban"
                     appStopProp
                     title="{{ 'maxAccessCountReached' | i18n }}"
                     aria-hidden="true"
@@ -100,7 +100,7 @@
                 </ng-container>
                 <ng-container *ngIf="s.expired">
                   <i
-                    class="bwi bwi-clock"
+                    class="fa fa-clock-o"
                     appStopProp
                     title="{{ 'expired' | i18n }}"
                     aria-hidden="true"
@@ -109,7 +109,7 @@
                 </ng-container>
                 <ng-container *ngIf="s.pendingDelete">
                   <i
-                    class="bwi bwi-trash"
+                    class="fa fa-trash"
                     appStopProp
                     title="{{ 'pendingDeletion' | i18n }}"
                     aria-hidden="true"
@@ -123,7 +123,7 @@
         </button>
       </div>
       <div class="no-items" *ngIf="!filteredSends.length">
-        <i class="bwi bwi-spinner bwi-spin bwi-3x" *ngIf="!loaded" aria-hidden="true"></i>
+        <i class="fa fa-spinner fa-spin fa-3x" *ngIf="!loaded" aria-hidden="true"></i>
         <ng-container *ngIf="loaded">
           <img class="no-items-image" aria-hidden="true" />
           <p>{{ "noItemsInList" | i18n }}</p>
@@ -131,7 +131,7 @@
       </div>
       <div class="footer">
         <button (click)="addSend()" class="block primary" appA11yTitle="{{ 'addItem' | i18n }}">
-          <i class="bwi bwi-plus bwi-lg" aria-hidden="true"></i>
+          <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
         </button>
       </div>
     </div>

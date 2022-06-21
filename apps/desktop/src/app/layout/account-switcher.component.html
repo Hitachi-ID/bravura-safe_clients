@@ -24,9 +24,9 @@
     <span>{{ "switchAccount" | i18n }}</span>
   </ng-template>
   <i
-    class="bwi"
+    class="fa"
     aria-hidden="true"
-    [ngClass]="{ 'bwi-angle-down': !isOpen, 'bwi-chevron-up': isOpen }"
+    [ngClass]="{ 'fa-chevron-down': !isOpen, 'fa-chevron-up': isOpen }"
   ></i>
 </button>
 
@@ -77,9 +77,9 @@
           }}</span>
         </div>
         <i
-          class="bwi bwi-2x text-muted"
+          class="fa fa-2x text-muted"
           [ngClass]="
-            a.value.profile.authenticationStatus == authStatus.Unlocked ? 'bwi-unlock' : 'bwi-lock'
+            a.value.profile.authenticationStatus == authStatus.Unlocked ? 'fa-unlock-alt' : 'fa-lock'
           "
           aria-hidden="true"
         ></i>
@@ -89,7 +89,7 @@
       <div class="border" *ngIf="numberOfAccounts > 0"></div>
       <ng-container *ngIf="numberOfAccounts < 4">
         <button class="add" routerLink="/login" (click)="addAccount()">
-          <i class="bwi bwi-plus" aria-hidden="true"></i> {{ "addAccount" | i18n }}
+          <i class="fa fa-plus" aria-hidden="true"></i> {{ "addAccount" | i18n }}
         </button>
       </ng-container>
       <ng-container *ngIf="numberOfAccounts == 4">

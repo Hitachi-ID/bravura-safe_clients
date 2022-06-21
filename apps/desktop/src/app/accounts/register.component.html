@@ -49,9 +49,9 @@
                 (click)="togglePassword(false)"
               >
                 <i
-                  class="bwi bwi-lg"
+                  class="fa fa-lg"
                   aria-hidden="true"
-                  [ngClass]="{ 'bwi-eye': !showPassword, 'bwi-eye-slash': showPassword }"
+                  [ngClass]="{ 'fa-eye': !showPassword, 'fa-eye-slash': showPassword }"
                 ></i>
               </button>
             </div>
@@ -98,9 +98,9 @@
               (click)="togglePassword(true)"
             >
               <i
-                class="bwi bwi-lg"
+                class="fa fa-lg"
                 aria-hidden="true"
-                [ngClass]="{ 'bwi-eye': !showPassword, 'bwi-eye-slash': showPassword }"
+                [ngClass]="{ 'fa-eye': !showPassword, 'fa-eye-slash': showPassword }"
               ></i>
             </button>
           </div>
@@ -140,7 +140,7 @@
     <div class="buttons">
       <button type="submit" class="btn primary block" [disabled]="form.loading">
         <b [hidden]="form.loading">{{ "submit" | i18n }}</b>
-        <i class="bwi bwi-spinner bwi-spin" [hidden]="!form.loading" aria-hidden="true"></i>
+        <i class="fa fa-spinner fa-spin" [hidden]="!form.loading" aria-hidden="true"></i>
       </button>
       <button type="button" routerLink="/login" class="btn block">{{ "cancel" | i18n }}</button>
     </div>

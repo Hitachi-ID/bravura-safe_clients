@@ -70,7 +70,7 @@ const systemTimeoutOptions = {
     <app-header></app-header>
     <div id="container">
       <div class="loading" *ngIf="loading">
-        <i class="bwi bwi-spinner bwi-spin bwi-3x" aria-hidden="true"></i>
+        <i class="fa fa-spinner fa-spin fa-3x" aria-hidden="true"></i>
       </div>
       <router-outlet *ngIf="!loading"></router-outlet>
     </div>
