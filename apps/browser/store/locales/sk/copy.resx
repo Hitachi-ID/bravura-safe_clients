@@ -118,38 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bitwarden – Bezplatný správca hesiel</value>
+    <value>Bravura Safe – Bezplatný správca hesiel</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>Bezpečný a bezplatný správca hesiel pre všetky vaše zariadenia</value>
   </data>
   <data name="Description" xml:space="preserve">
-    <value>Bitwarden, Inc. je materská spoločnosť spoločnosti 8bit Solutions LLC.
-
-OHODNOTENÝ AKO NAJLEPŠÍ SPRÁVCA HESIEL V THE VERGE, U.S. NEWS &amp; WORLD REPORT, CNET A ĎALŠÍMI.
-
-Spravujte, ukladajte, zabezpečte a zdieľajte neobmedzený počet hesiel naprieč neobmedzeným počtom zariadení odkiaľkoľvek. Bitwarden ponúka open source riešenie na správu hesiel komukoľvek, kdekoľvek doma, v práci alebo na ceste.
-
-Vygenerujte si silné, unikátne a náhodné heslá podľa bezpečnostných požiadaviek na každej stránke, ktorú navštevujete.
-
-Bitwarden Send rýchlo prenesie šifrované informácie -- súbory a text -- priamo komukoľvek.
-
-Bitwarden ponúka Teams a Enterprise paušály pre firmy, aby ste mohli bezpečne zdieľať hesla s kolegami.
-
-Prečo si vybrať Bitwarden:
-
-Svetová trieda v šifrovaní
-Heslá sú chránené pokročilým end-to-end šifrovaním (AES-256 bit, salted hashtag a PBKDF2 SHA-256), takže Vaše dáta zostanú bezpečné a súkromné.
-
-Vstavaný generátor hesiel
-Vygenerujte si silné, unikátne a náhodné heslá podľa bezpečnostných požiadaviek na každej stránke, ktorú navštevujete.
-
-Svetová lokalizácia
-Vďaka našej globálnej komunite má Bitwarden neustále rastúcu lokalizáciu už do 40 jazykov.
-
-Aplikácie pre rôzne platformy
-Zabezpečte a zdieľajte súkromné dáta prostredníctvom Bitwarden trezora z ktoréhokoľvek prehliadača, mobilného zariadenia, alebo stolného počítača a ďalších.
-</value>
+    <value>Hitachi ID Systems Inc.</value>
   </data>
   <data name="AssetTitle" xml:space="preserve">
     <value>Bezpečný a bezplatný správca hesiel pre všetky vaše zariadenia</value>

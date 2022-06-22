@@ -27,7 +27,7 @@ const moduleRules = [
   },
   {
     test: /\.(jpe?g|png|gif|svg)$/i,
-    exclude: /.*(bwi-font|glyphicons-halflings-regular)\.svg/,
+    exclude: /.*(fontawesome-webfont|glyphicons-halflings-regular)\.svg/,
     generator: {
       filename: "popup/images/[name][ext]",
     },

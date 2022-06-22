@@ -22,17 +22,13 @@
           ></span>
         </div>
         <div *ngIf="field.type === fieldType.Boolean">
-          <i class="bwi bwi-check-square" *ngIf="field.value === 'true'" aria-hidden="true"></i>
-          <i class="bwi bwi-square" *ngIf="field.value !== 'true'" aria-hidden="true"></i>
+          <i class="fa fa-check-square-o" *ngIf="field.value === 'true'" aria-hidden="true"></i>
+          <i class="fa fa-square-o" *ngIf="field.value !== 'true'" aria-hidden="true"></i>
           <span class="sr-only">{{ field.value }}</span>
         </div>
         <div *ngIf="field.type === fieldType.Linked" class="box-content-row-flex">
           <div class="icon icon-small">
-            <i
-              class="bwi bwi-link"
-              aria-hidden="true"
-              appA11yTitle="{{ 'linkedValue' | i18n }}"
-            ></i>
+            <i class="fa fa-link" aria-hidden="true" appA11yTitle="{{ 'linkedValue' | i18n }}"></i>
             <span class="sr-only">{{ "linkedValue" | i18n }}</span>
           </div>
           <span>{{ cipher.linkedFieldI18nKey(field.linkedId) | i18n }}</span>
@@ -62,9 +58,9 @@
           [attr.aria-pressed]="field.showValue"
         >
           <i
-            class="bwi bwi-lg"
+            class="fa fa-lg"
             aria-hidden="true"
-            [ngClass]="{ 'bwi-eye': !field.showValue, 'bwi-eye-slash': field.showValue }"
+            [ngClass]="{ 'fa-eye': !field.showValue, 'fa-eye-slash': field.showValue }"
           ></i>
         </button>
         <button
@@ -83,7 +79,7 @@
             copy(field.value, 'value', field.type === fieldType.Hidden ? 'H_Field' : 'Field')
           "
         >
-          <i class="bwi bwi-lg bwi-clone" aria-hidden="true"></i>
+          <i class="fa fa-lg fa-clone" aria-hidden="true"></i>
         </button>
       </div>
     </div>

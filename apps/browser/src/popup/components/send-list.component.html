@@ -13,8 +13,8 @@
   >
     <div class="app-vault-icon">
       <div class="icon" aria-hidden="true">
-        <i class="bwi bwi-fw bwi-lg bwi-file-text" *ngIf="s.type === sendType.Text"></i>
-        <i class="bwi bwi-fw bwi-lg bwi-file" *ngIf="s.type === sendType.File"></i>
+        <i class="fa fa-fw fa-lg fa-file-text-o" *ngIf="s.type === sendType.Text"></i>
+        <i class="fa fa-fw fa-lg fa-file-o" *ngIf="s.type === sendType.File"></i>
       </div>
     </div>
     <div class="row-main-content">
@@ -22,7 +22,7 @@
         {{ s.name }}
         <ng-container *ngIf="s.disabled">
           <i
-            class="bwi bwi-exclamation-triangle text-muted"
+            class="fa fa-warning text-muted"
             title="{{ 'disabled' | i18n }}"
             aria-hidden="true"
           ></i>
@@ -30,7 +30,7 @@
         </ng-container>
         <ng-container *ngIf="s.password">
           <i
-            class="bwi bwi-key text-muted"
+            class="fa fa-key text-muted"
             title="{{ 'passwordProtected' | i18n }}"
             aria-hidden="true"
           ></i>
@@ -38,19 +38,19 @@
         </ng-container>
         <ng-container *ngIf="s.maxAccessCountReached">
           <i
-            class="bwi bwi-ban text-muted"
+            class="fa fa-ban text-muted"
             title="{{ 'maxAccessCountReached' | i18n }}"
             aria-hidden="true"
           ></i>
           <span class="sr-only">{{ "maxAccessCountReached" | i18n }}</span>
         </ng-container>
         <ng-container *ngIf="s.expired">
-          <i class="bwi bwi-clock text-muted" title="{{ 'expired' | i18n }}" aria-hidden="true"></i>
+          <i class="fa fa-clock-o text-muted" title="{{ 'expired' | i18n }}" aria-hidden="true"></i>
           <span class="sr-only">{{ "expired" | i18n }}</span>
         </ng-container>
         <ng-container *ngIf="s.pendingDelete">
           <i
-            class="bwi bwi-trash text-muted"
+            class="fa fa-trash text-muted"
             title="{{ 'pendingDeletion' | i18n }}"
             aria-hidden="true"
           ></i>
@@ -69,7 +69,7 @@
       appA11yTitle="{{ 'copySendLink' | i18n }}"
       (click)="copySendLink(s)"
     >
-      <i class="bwi bwi-lg bwi-files" aria-hidden="true"></i>
+      <i class="fa fa-lg fa-copy" aria-hidden="true"></i>
     </button>
     <button
       type="button"
@@ -82,7 +82,7 @@
       (click)="removePassword(s)"
       *ngIf="s.password"
     >
-      <i class="bwi bwi-lg bwi-undo" aria-hidden="true"></i>
+      <i class="fa fa-lg fa-undo" aria-hidden="true"></i>
     </button>
     <button
       type="button"
@@ -92,7 +92,7 @@
       appA11yTitle="{{ 'delete' | i18n }}"
       (click)="delete(s)"
     >
-      <i class="bwi bwi-lg bwi-trash" aria-hidden="true"></i>
+      <i class="fa fa-lg fa-trash-o" aria-hidden="true"></i>
     </button>
   </div>
 </div>

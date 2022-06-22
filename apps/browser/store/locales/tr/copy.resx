@@ -118,37 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bitwarden - Ücretsiz Parola Yöneticisi</value>
+    <value>Bravura Safe - Ücretsiz Parola Yöneticisi</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>Tüm aygıtlarınız için güvenli ve ücretsiz bir parola yöneticisi</value>
   </data>
   <data name="Description" xml:space="preserve">
-    <value>Bitwarden, Inc., 8bit Solutions LLC’nin ana şirketidir.
-
-THE VERGE, U.S. NEWS &amp; WORLD REPORT, CNET VE BİRÇOK MEDYA KURULUŞUNA GÖRE EN İYİ PAROLA YÖNETİCİSİ.
-
-Sınırsız sayıda parolayı istediğiniz kadar cihazda yönetin, saklayın, koruyun ve paylaşın. Bitwarden; herkesin evde, işte veya yolda kullanabileceği açık kaynaklı parola yönetim çözümleri sunuyor.
-
-Sık kullandığınız web siteleri için güvenlik gereksinimlerinize uygun, güçlü, benzersiz ve rastgele parolalar oluşturabilirsiniz.
-
-Bitwarden Send, şifrelenmiş bilgileri (dosyalar ve düz metinler) herkese hızlı bir şekilde iletmenizi sağlıyor.
-
-Bitwarden, parolaları iş arkadaşlarınızla güvenli bir şekilde paylaşabilmeniz için şirketlere yönelik Teams ve Enterprise paketleri de sunuyor.
-
-Neden Bitwarden?
-
-Üst düzey şifreleme
-Parolalarınız gelişmiş uçtan uca şifreleme (AES-256 bit, salted hashtag ve PBKDF2 SHA-256) ile korunuyor, böylece verileriniz güvende ve gizli kalıyor.
-
-Dahili parola oluşturucu
-Sık kullandığınız web siteleri için güvenlik gereksinimlerinize uygun, güçlü, benzersiz ve rastgele parolalar oluşturabilirsiniz.
-
-Çeviriler
-Bitwarden 40 dilde kullanılabiliyor ve gönüllü topluluğumuz sayesinde çeviri sayısı giderek artıyor.
-
-Her platformla uyumlu uygulamalar
-Bitwarden kasanızdaki hassas verilere her tarayıcıdan, mobil cihazdan veya masaüstü işletim sisteminden ulaşabilir ve onları paylaşabilirsiniz.</value>
+    <value>Hitachi ID Systems Inc.</value>
   </data>
   <data name="AssetTitle" xml:space="preserve">
     <value>Tüm cihazarınız için güvenli ve ücretsiz bir parola yöneticisi</value>

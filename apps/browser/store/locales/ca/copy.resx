@@ -118,37 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bitwarden - Administrador de contrasenyes gratuït</value>
+    <value>Bravura Safe - Administrador de contrasenyes gratuït</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>Administrador de contrasenyes segur i gratuït per a tots els vostres dispositius</value>
   </data>
   <data name="Description" xml:space="preserve">
-    <value>Bitwarden, Inc. és la companyia matriu de solucions de 8 bits LLC.
-
-Nomenada Millor gestor de contrasenyes per THE VERGE, U.S. NEWS &amp; WORLD REPORT, CNET, AND MORE.
-
-Gestioneu, emmagatzemeu, segures i compartiu contrasenyes il·limitades a través de dispositius il·limitats des de qualsevol lloc. Bitwarden lliura solucions de gestió de contrasenyes de codi obert a tothom, ja siga a casa, a la feina o sobre la marxa.
-
-Genereu contrasenyes fortes, úniques i aleatòries basades en els requisits de seguretat per a cada lloc web que freqüenteu.
-
-Bitwarden Send transmet ràpidament informació xifrada --- Fitxers i text complet - directament a qualsevol persona.
-
-Bitwarden ofereix equips i plans empresarials per a empreses perquè pugueu compartir amb seguretat contrasenyes amb els companys.
-
-Per què triar Bitwarden:
-
-Xifratge de classe mundial
-Les contrasenyes estan protegides amb un xifratge avançat fi-a-fi (AES-256 bit, salted hashtag, and PBKDF2 SHA-256), de manera que les vostres dades es mantenen segures i privades.
-
-Generador de contrasenyes integrat
-Genereu contrasenyes fortes, úniques i aleatòries basades en els requisits de seguretat per a cada lloc web que freqüenteu.
-
-Traduccions globals
-Les traduccions de Bitwarden existeixen en 40 idiomes i creixen, gràcies a la nostra comunitat global.
-
-Aplicacions de plataforma creuada
-Assegureu-vos i compartiu dades sensibles a la vostra caixa forta de Bitwarden des de qualsevol navegador, dispositiu mòbil o S.O. d'escriptori, i molt més.</value>
+    <value>Hitachi ID Systems Inc.</value>
   </data>
   <data name="AssetTitle" xml:space="preserve">
     <value>Administrador de contrasenyes segur i gratuït per a tots els vostres dispositius</value>

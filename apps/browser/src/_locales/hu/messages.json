@@ -1,9 +1,9 @@
 {
   "appName": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "extName": {
-    "message": "Bitwarden - Ingyenes jelszókezelő",
+    "message": "Bravura Safe - Ingyenes jelszókezelő",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
@@ -71,7 +71,7 @@
     "message": "Jegyzet másolása"
   },
   "copyUri": {
-    "message": "URI másolása"
+    "message": "URL másolása"
   },
   "copyUsername": {
     "message": "Felhasználónév másolása"
@@ -209,7 +209,7 @@
     "message": "Automatikusan létrehoz erős, egyedi jelszavakat a bejelentkezéseidhez."
   },
   "bitWebVault": {
-    "message": "Bitwarden webes széf"
+    "message": "Bravura Safe webes széf"
   },
   "importItems": {
     "message": "Elemek importálása"
@@ -350,7 +350,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -479,10 +479,10 @@
     "message": "Mesterjelszó módosítása"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Mesterjelszavadat a bitwarden.com webes széfén tudod megváltoztatni. Szeretnéd meglátogatni a most a weboldalt?"
+    "message": "Mesterjelszavadat a Bravura Safe webes széfén tudod megváltoztatni. Szeretnéd meglátogatni a most a weboldalt?"
   },
   "twoStepLoginConfirmation": {
-    "message": "A kétlépcsős bejelentkezés biztonságosabbá teszi a felhasználódat azáltal, hogy ellenőrizned kell a bejelentkezésedet egy másik készülékkel mint például biztonsági kulcs, hitelesítő alkalmazás, SMS, telefon hívás vagy e-mail. Kétlépcsős bejelentkezést a bitwarden.com webes széfén tudod megváltoztatni. Szeretnéd meglátogatni a most a weboldalt?"
+    "message": "A kétlépcsős bejelentkezés biztonságosabbá teszi a felhasználódat azáltal, hogy ellenőrizned kell a bejelentkezésedet egy másik készülékkel mint például biztonsági kulcs, hitelesítő alkalmazás, SMS, telefon hívás vagy e-mail. Kétlépcsős bejelentkezést a Bravura Safe webes széfén tudod megváltoztatni. Szeretnéd meglátogatni a most a weboldalt?"
   },
   "editedFolder": {
     "message": "A mappa módosításra került."
@@ -509,11 +509,11 @@
     "message": "Jelszó másolva"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -522,7 +522,7 @@
     }
   },
   "newUri": {
-    "message": "Új URI"
+    "message": "Új URL"
   },
   "addedItem": {
     "message": "Elem hozzáadva"
@@ -588,7 +588,7 @@
     "description": "Clipboard is the operating system thing where you copy/paste data to on your device."
   },
   "notificationAddDesc": {
-    "message": "A Bitwarden megjegyezze ezt a jelszót?"
+    "message": "A Bravura Safe megjegyezze ezt a jelszót?"
   },
   "notificationAddSave": {
     "message": "Mentés"
@@ -600,7 +600,7 @@
     "message": "A \"Megváltozott jelszó értesítés\" automatikusan felajánlja a bejelentkezési jelszó frissítését a széfben, ha annak megváltoztatását érzékeli a webhelyen."
   },
   "notificationChangeDesc": {
-    "message": "Frissítésre kerüljön a jelszó a Bitwardenben?"
+    "message": "Frissítésre kerüljön a jelszó a Bravura Safeben?"
   },
   "notificationChangeSave": {
     "message": "Frissítés"
@@ -612,11 +612,11 @@
     "message": "Helyi menü opciók gyors hozzáférést biztosít jelszó generáláshoz és bejelentkezésekhez a weboldalhoz amin éppen vagy."
   },
   "defaultUriMatchDetection": {
-    "message": "Alapértelmezett URI egyezés érzékelés",
-    "description": "Default URI match detection for auto-fill."
+    "message": "Alapértelmezett URL egyezés érzékelés",
+    "description": "Default URL match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "Az URI egyezés érzékelés alapértelmezett módjának kiválasztása a bejelentkezéseknél olyan műveletek esetében mint az automatikus kitöltés."
+    "message": "Az URL egyezés érzékelés alapértelmezett módjának kiválasztása a bejelentkezéseknél olyan műveletek esetében mint az automatikus kitöltés."
   },
   "theme": {
     "message": "Téma"
@@ -656,7 +656,7 @@
     "message": "Ez az exportálás titkosítja az adatokat a fiók titkosítási kulcsával. Ha valaha a diók forgatási kulcsa más lesz, akkor újra exportálni kell, mert nem lehet visszafejteni ezt az exportálási fájlt."
   },
   "encExportAccountWarningDesc": {
-    "message": "A fiók titkosítási kulcsai minden Bitwarden felhasználói fiókhoz egyediek, ezért nem importálhatunk titkosított exportálást egy másik fiókba."
+    "message": "A fiók titkosítási kulcsai minden Bravura Safe felhasználói fiókhoz egyediek, ezért nem importálhatunk titkosított exportálást egy másik fiókba."
   },
   "exportMasterPassword": {
     "message": "Add meg a jelszavad a széf adataid exportálásához."
@@ -668,7 +668,7 @@
     "message": "Információ szervezetekről"
   },
   "learnOrgConfirmation": {
-    "message": "A Bitwarden lehetővé teszi a tároló elemeinek megosztását másokkal egy szervezet használatával. Szeretnénk ellátogatni a bitwarden.com webhelyre további információkét?"
+    "message": "A Bravura Safe lehetővé teszi a tároló elemeinek megosztását másokkal egy szervezet használatával. Szeretnénk ellátogatni a Bravura Safe webhelyre további információkét?"
   },
   "moveToOrganization": {
     "message": "Áthelyezés szervezethez"
@@ -747,7 +747,7 @@
     "message": "Tagság kezelése"
   },
   "premiumManageAlert": {
-    "message": "Prémium tagságod a bitwarden.com webes széfén tudod kezelni. Szeretnéd meglátogatni a most a weboldalt?"
+    "message": "Prémium tagságod a hitachi-id.com webes széfén tudod kezelni. Szeretnéd meglátogatni a most a weboldalt?"
   },
   "premiumRefresh": {
     "message": "Tagság frissítése"
@@ -780,13 +780,13 @@
     "message": "Prémium funkció megvásárlása"
   },
   "premiumPurchaseAlert": {
-    "message": "Prémium tagságot a bitwarden.com webes széfén tudsz venni. Szeretnéd meglátogatni a most a weboldalt?"
+    "message": "Prémium tagságot a hitachi-id.com webes széfén tudsz venni. Szeretnéd meglátogatni a most a weboldalt?"
   },
   "premiumCurrentMember": {
     "message": "Te egy prémium tag vagy!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Köszönjük a Bitwarden támogatását."
+    "message": "Köszönjük a Bravura Safe támogatását."
   },
   "premiumPrice": {
     "message": "Mindez csak $PRICE$ /év.",
@@ -915,7 +915,7 @@
     "message": "Saját üzemeltetésű környezet"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "A helyileg működtetett Bitwarden telepítés alap webcímének megadása."
+    "message": "A helyileg működtetett Bravura Safe telepítés alap webcímének megadása."
   },
   "customEnvironment": {
     "message": "Egyedi környezet"
@@ -1262,26 +1262,26 @@
   },
   "matchDetection": {
     "message": "Találat érzékelés",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Alapértelmezett találat érzékelés",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Opciók megnyitása"
   },
   "toggleCurrentUris": {
-    "message": "Aktuális URI elemek váltása",
-    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
+    "message": "Aktuális URL elemek váltása",
+    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
   },
   "currentUri": {
-    "message": "Aktuális URI",
-    "description": "The URI of one of the current open tabs in the browser."
+    "message": "Aktuális URL",
+    "description": "The URL of one of the current open tabs in the browser."
   },
   "organization": {
     "message": "Szervezet",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "types": {
     "message": "Típusok"
@@ -1337,7 +1337,7 @@
     "message": "Gyenge mesterjelszó"
   },
   "weakMasterPasswordDesc": {
-    "message": "A választott mesterjelszó gyenge. Erős jelszót (vagy kifejezést) kell használni a Bitwarden fiók megfelelő védelme érdekében. Biztosan ezt a mesterjelszót szeretnénk használni?"
+    "message": "A választott mesterjelszó gyenge. Erős jelszót (vagy kifejezést) kell használni a Bravura Safe fiók megfelelő védelme érdekében. Biztosan ezt a mesterjelszót szeretnénk használni?"
   },
   "pin": {
     "message": "Pinkód",
@@ -1347,7 +1347,7 @@
     "message": "Felnyitás pinkóddal"
   },
   "setYourPinCode": {
-    "message": "A pinkód beállítása a Bitwarden feloldásához. A pinkód beállítás alaphelyzetbe kerül, ha teljesen kijelentkezünk az alkalmazásból."
+    "message": "A pinkód beállítása a Bravura Safe feloldásához. A pinkód beállítás alaphelyzetbe kerül, ha teljesen kijelentkezünk az alkalmazásból."
   },
   "pinRequired": {
     "message": "A pinkód szükséges."
@@ -1362,7 +1362,7 @@
     "message": "Várakozás megerősítésre az asztali alkalmazásból"
   },
   "awaitDesktopDesc": {
-    "message": "Erősítsük meg a biometrikus adatok használatát a Bitwarden asztali alkalmazásban a biometrikus adatok engedélyezéséhez a böngészőben."
+    "message": "Erősítsük meg a biometrikus adatok használatát a Bravura Safe asztali alkalmazásban a biometrikus adatok engedélyezéséhez a böngészőben."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Lezárás mesterjelszóval a böngésző újraindításakor"
@@ -1421,7 +1421,7 @@
     "message": "Automatikus kitöltés és mentés"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "Automatikusan kitöltött elem és mentett URI"
+    "message": "Automatikusan kitöltött elem és mentett URL"
   },
   "autoFillSuccess": {
     "message": "Automatikusan kitöltött elem"
@@ -1499,13 +1499,13 @@
     "message": "A böngésző integráció nem engedélyezett."
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "A böngésző integráció nincs engedélyezve a Bitwarden asztali alkalmazásban. Engedélyezzük az asztali alkalmazás beállításai között."
+    "message": "A böngésző integráció nincs engedélyezve a Bravura Safe asztali alkalmazásban. Engedélyezzük az asztali alkalmazás beállításai között."
   },
   "startDesktopTitle": {
-    "message": "A Bitwarden asztali alkalmazás indítása"
+    "message": "A Bravura Safe asztali alkalmazás indítása"
   },
   "startDesktopDesc": {
-    "message": "A funkció használatához el kell indítani a Bitwarden asztali alkalmazást."
+    "message": "A funkció használatához el kell indítani a Bravura Safe asztali alkalmazást."
   },
   "errorEnableBiometricTitle": {
     "message": "Nem lehet engedélyezni a biometrikus adatokat."
@@ -1541,7 +1541,7 @@
     "message": "A jogosultság nincs megadva."
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "A Bitwarden Desktop alkalmazással való kommunikáció engedélye nélkül nem adhatunk meg biometrikus adatokat a böngésző kiterjesztésében. Próbáljuk újra."
+    "message": "A Bravura Safe Desktop alkalmazással való kommunikáció engedélye nélkül nem adhatunk meg biometrikus adatokat a böngésző kiterjesztésében. Próbáljuk újra."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Engedélykérési hiba történt."
@@ -1559,7 +1559,7 @@
     "message": "Kizárt domainek"
   },
   "excludedDomainsDesc": {
-    "message": "A Bitwarden nem fogja kérni a domainek bejelentkezési adatainak mentését. A változások életbe lépéséhez frissíteni kell az oldalt."
+    "message": "A Bravura Safe nem fogja kérni a domainek bejelentkezési adatainak mentését. A változások életbe lépéséhez frissíteni kell az oldalt."
   },
   "excludedDomainsInvalidDomain": {
     "message": "$DOMAIN$ nem érvényes domain.",
@@ -1571,16 +1571,16 @@
     }
   },
   "send": {
-    "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "searchSends": {
-    "message": "Send keresése",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share keresése",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "addSend": {
-    "message": "Send hozzáadása",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share hozzáadása",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeText": {
     "message": "Szöveg"
@@ -1589,8 +1589,8 @@
     "message": "Fájl"
   },
   "allSends": {
-    "message": "Összes Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Összes Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "A maximális hozzáférések száma elérésre került.",
@@ -1606,8 +1606,8 @@
     "message": "Jelszóval védett"
   },
   "copySendLink": {
-    "message": "Send hivatkozás másolása",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share hivatkozás másolása",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "removePassword": {
     "message": "Jelszó eltávolítása"
@@ -1619,12 +1619,12 @@
     "message": "A jelszó eltávolításra került."
   },
   "deletedSend": {
-    "message": "A Send törlésre került.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "A Share törlésre került.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
-    "message": "Send hivatkozás",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share hivatkozás",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "disabled": {
     "message": "Letiltva"
@@ -1633,24 +1633,24 @@
     "message": "Biztosan eltávolításra kerüljön ez a jelszó?"
   },
   "deleteSend": {
-    "message": "Send törlése",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share törlése",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deleteSendConfirmation": {
-    "message": "Biztosan törlésre kerüljön ez a Send?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Biztosan törlésre kerüljön ez a Share?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Send szerkesztése",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share szerkesztése",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeHeader": {
-    "message": "Milyen típusú ez a Send?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Milyen típusú ez a Share?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNameDesc": {
-    "message": "Barátságos név a Send leírására.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Barátságos név a Share leírására.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendFileDesc": {
     "message": "A küldendő fájl."
@@ -1659,15 +1659,15 @@
     "message": "Törlési dátum"
   },
   "deletionDateDesc": {
-    "message": "A Send véglegesen törölve lesz a meghatározott időpontban.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "A Share véglegesen törölve lesz a meghatározott időpontban.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Lejárati dátum"
   },
   "expirationDateDesc": {
     "message": "Amennyiben be van állítva, a hozzáférés ehhez a Sendhez a meghatározott időpontban lejár",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "oneDay": {
     "message": "1 nap"
@@ -1689,56 +1689,56 @@
   },
   "maximumAccessCountDesc": {
     "message": "Beállítva a Küldés elérhetetlen lesz a meghatározott hozzáférések számának elérése után.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
     "message": "Opcionálisan megadhatunk egy jelszót a felhasználók számára a Küldés eléréséhez. ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
     "message": "Személyes megjegyzések erről a Küldésről.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisableDesc": {
-    "message": "A Send letiltásával senki nem férhet hozzá.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "A Share letiltásával senki nem férhet hozzá.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendShareDesc": {
     "message": "Mentéskor másoljuk a Küldés hivatkozását a vágólapra.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "A küldendő fájl."
   },
   "sendHideText": {
     "message": "Alapértelmezés szerint elrejti a Küldés szövegét.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Aktuális elérési szám"
   },
   "createSend": {
     "message": "Új küldés létrehozása",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "Új jelszó"
   },
   "sendDisabled": {
-    "message": "A  Send kikapcsolásra került",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "A  Share kikapcsolásra került",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "A vállalati házirend miatt csak egy meglévő Send törölhető.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "A vállalati házirend miatt csak egy meglévő Share törölhető.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "A Send létrejött.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "A Share létrejött.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "A Send szerkesztésre került",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "A Share szerkesztésre került",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinuxChromiumFileWarning": {
     "message": "A fájl kiválasztásához nyissuk meg a kiterjesztést az oldalsávon (ha lehetséges) vagy kattintsunk erre a sávra új ablak felbukkanásához."
@@ -1783,7 +1783,7 @@
     "message": "Saját email cím elrejtése a címzettek elől."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "Egy vagy több szervezeti szabály érinti a Send opciókat."
+    "message": "Egy vagy több szervezeti szabály érinti a Share opciókat."
   },
   "passwordPrompt": {
     "message": "Mesterjelszó ismételt megadás"

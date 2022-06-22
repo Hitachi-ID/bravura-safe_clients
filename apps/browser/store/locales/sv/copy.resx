@@ -118,38 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bitwarden - Gratis lösenordshanterare</value>
+    <value>Bravura Safe - Gratis lösenordshanterare</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>En säker och gratis lösenordshanterare för alla dina enheter</value>
   </data>
   <data name="Description" xml:space="preserve">
-    <value>Bitwarden, Inc. är moderbolag till 8bit Solutions LLC.
-
-UTNÄMND TILL DEN BÄSTA LÖSENORDSHANTERAREN AV THE VERGE, U.S. NEWS &amp; WORLD REPORT, CNET MED FLERA.
-
-Hantera, lagra, säkra och dela ett obegränsat antal lösenord mellan ett obegränsat antal enheter var som helst ifrån. Bitwarden levererar lösningar för lösenordshantering med öppen källkod till alla, vare sig det är hemma, på jobbet eller på språng.
-
-Generera starka, unika och slumpmässiga lösenord baserat på säkerhetskrav för varje webbplats du besöker.
-
-Bitwarden Send överför snabbt krypterad information --- filer och klartext -- direkt till vem som helst.
-
-Bitwarden erbjuder abonnemang för team och företag så att du säkert kan dela lösenord med kollegor.
-
-Varför välja Bitwarden:
-
-Kryptering i världsklass
-Lösenord skyddas med avancerad end-to-end-kryptering (AES-256 bitar, saltad hashtag och PBKDF2 SHA-256) så att dina data förblir säkra och privata.
-
-Inbyggd lösenordsgenerator
-Generera starka, unika och slumpmässiga lösenord baserat på säkerhetskrav för varje webbplats du besöker.
-
-Globala översättningar
-Översättningar av Bitwarden finns på 40 språk och antalet växer tack vare vår globala gemenskap.
-
-Plattformsoberoende program
-Säkra och dela känsliga data i ditt Bitwardenvalv från alla webbläsare, mobiler och datorer.
-</value>
+    <value>Hitachi ID Systems Inc.</value>
   </data>
   <data name="AssetTitle" xml:space="preserve">
     <value>En säker och gratis lösenordshanterare för alla dina enheter</value>

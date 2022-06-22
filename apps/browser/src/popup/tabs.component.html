@@ -8,7 +8,7 @@
           appA11yTitle="{{ 'currentTab' | i18n }}"
           [attr.aria-pressed]="rlaCurrentTab.isActive"
         >
-          <i class="bwi bwi-folder-closed-f bwi-2x" aria-hidden="true"></i>{{ "tab" | i18n }}
+          <i class="fa fa-folder fa-2x" aria-hidden="true"></i>{{ "tab" | i18n }}
         </button>
       </li>
       <li routerLinkActive="active" #rlaMyVault="routerLinkActive">
@@ -17,7 +17,7 @@
           appA11yTitle="{{ 'myVault' | i18n }}"
           [attr.aria-pressed]="rlaMyVault.isActive"
         >
-          <i class="bwi bwi-lock-f bwi-2x" aria-hidden="true"></i>{{ "vault" | i18n }}
+          <i class="fa fa-lock fa-2x" aria-hidden="true"></i>{{ "myVault" | i18n }}
         </button>
       </li>
       <li routerLinkActive="active" #rlaSend="routerLinkActive">
@@ -26,7 +26,7 @@
           appA11yTitle="{{ 'send' | i18n }}"
           [attr.aria-pressed]="rlaSend.isActive"
         >
-          <i class="bwi bwi-send-f bwi-2x" aria-hidden="true"></i>{{ "send" | i18n }}
+          <i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i>{{ "send" | i18n }}
         </button>
       </li>
       <li routerLinkActive="active" #rlaGenerator="routerLinkActive">
@@ -35,7 +35,7 @@
           appA11yTitle="{{ 'passGen' | i18n }}"
           [attr.aria-pressed]="rlaGenerator.isActive"
         >
-          <i class="bwi bwi-generate-f bwi-2x" aria-hidden="true"></i>{{ "generator" | i18n }}
+          <i class="fa fa-refresh fa-2x" aria-hidden="true"></i>{{ "generator" | i18n }}
         </button>
       </li>
       <li routerLinkActive="active" #rlaSettings="routerLinkActive">
@@ -44,7 +44,7 @@
           appA11yTitle="{{ 'settings' | i18n }}"
           [attr.aria-pressed]="rlaSettings.isActive"
         >
-          <i class="bwi bwi-cog-f bwi-2x" aria-hidden="true"></i>{{ "settings" | i18n }}
+          <i class="fa fa-cogs fa-2x" aria-hidden="true"></i>{{ "settings" | i18n }}
         </button>
       </li>
     </ul>

@@ -1,9 +1,9 @@
 {
   "appName": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "extName": {
-    "message": "Bitwarden",
+    "message": "Bravura Safe",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
@@ -71,7 +71,7 @@
     "message": "Ievietot piezīmi starpliktuvē"
   },
   "copyUri": {
-    "message": "Ievietot URI starpliktuvē"
+    "message": "Ievietot URL starpliktuvē"
   },
   "copyUsername": {
     "message": "Ievietot lietotājvārdu starpliktuvē"
@@ -209,7 +209,7 @@
     "message": "Automātiski veido spēcīgas, neatkārtojamas paroles visiem pierakstīšanās vienumiem. "
   },
   "bitWebVault": {
-    "message": "Bitwarden tīmekļa glabātava"
+    "message": "Bravura Safe tīmekļa glabātava"
   },
   "importItems": {
     "message": "Ievietot vienumus"
@@ -350,7 +350,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -479,10 +479,10 @@
     "message": "Mainīt galveno paroli"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Galveno paroli ir iespējams mainīt bitwarden.com tīmekļa glabātavā. Vai apmeklēt tīmekļa vietni?"
+    "message": "Galveno paroli ir iespējams mainīt Bravura Safe tīmekļa glabātavā. Vai apmeklēt tīmekļa vietni?"
   },
   "twoStepLoginConfirmation": {
-    "message": "Divpakāpju pieslēgšanās padara kontu krietni drošāku, pieprasot apstiprināt pierakstīšanos ar tādu citu ierīču vai pakalpojumu starpniecību kā drošības atslēga, autentificētāja lietotne, īsziņa, tālruņa zvans vai e-pasts. Divpakāpju pierakstīšanos var iespējot bitwarden.com tīmekļa glabātavā. Vai apmeklēt tīmekļa vietni?"
+    "message": "Divpakāpju pieslēgšanās padara kontu krietni drošāku, pieprasot apstiprināt pierakstīšanos ar tādu citu ierīču vai pakalpojumu starpniecību kā drošības atslēga, autentificētāja lietotne, īsziņa, tālruņa zvans vai e-pasts. Divpakāpju pierakstīšanos var iespējot Bravura Safe tīmekļa glabātavā. Vai apmeklēt tīmekļa vietni?"
   },
   "editedFolder": {
     "message": "Mape labota"
@@ -509,11 +509,11 @@
     "message": "Parole ievietota starpliktuvē"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -522,7 +522,7 @@
     }
   },
   "newUri": {
-    "message": "Jauns URI"
+    "message": "Jauns URL"
   },
   "addedItem": {
     "message": "Vienums pievienots"
@@ -588,7 +588,7 @@
     "description": "Clipboard is the operating system thing where you copy/paste data to on your device."
   },
   "notificationAddDesc": {
-    "message": "Vai Bitwarden atcerēties šo paroli?"
+    "message": "Vai Bravura Safe atcerēties šo paroli?"
   },
   "notificationAddSave": {
     "message": "Jā, saglabāt"
@@ -600,7 +600,7 @@
     "message": "\"Mainītas paroles paziņojums\" vaicā atjaunināt pieteikšanās vienuma paroli glabātavā, kad vien tiek noteikts, ka tā ir mainīta tīmekļa vietnē."
   },
   "notificationChangeDesc": {
-    "message": "Vai atjaunināt šo paroli Bitwarden?"
+    "message": "Vai atjaunināt šo paroli Bravura Safe?"
   },
   "notificationChangeSave": {
     "message": "Jā, atjaunināt"
@@ -612,11 +612,11 @@
     "message": "Konteksta izvēlnes iespējas piedāvā ātru piekļūšanu paroļu veidošanai un tīmekļa vietnes pieteikšanās vienumiem pašreizējā cilnē."
   },
   "defaultUriMatchDetection": {
-    "message": "Noklusējuma URI atbilstības noteikšana",
-    "description": "Default URI match detection for auto-fill."
+    "message": "Noklusējuma URL atbilstības noteikšana",
+    "description": "Default URL match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "Izvēlēties noklusējuma veidu, kādā URI atbilstības noteikšana tiek apstrādāta, kad tiek veiktas tādas darbības kā automātiska aizpildīšana."
+    "message": "Izvēlēties noklusējuma veidu, kādā URL atbilstības noteikšana tiek apstrādāta, kad tiek veiktas tādas darbības kā automātiska aizpildīšana."
   },
   "theme": {
     "message": "Izskats"
@@ -656,7 +656,7 @@
     "message": "Šī izguve šifrē datus ar konta šifrēšanas atslēgu. Ja tā jebkad tiks mainīta, izvadi vajadzētu veikt vēlreiz, jo vairs nebūs iespējams atšifrēt šo datni."
   },
   "encExportAccountWarningDesc": {
-    "message": "Katram Bitwarden kontam ir neatkārtojamas šifrēšanas atslēgas, tādēļ nav iespējams ievietot šifrētu izguvi citā kontā."
+    "message": "Katram Bravura Safe kontam ir neatkārtojamas šifrēšanas atslēgas, tādēļ nav iespējams ievietot šifrētu izguvi citā kontā."
   },
   "exportMasterPassword": {
     "message": "Ievadīt galveno paroli, lai izgūtu glabātavas saturu."
@@ -668,7 +668,7 @@
     "message": "Uzzināt par apvienībām"
   },
   "learnOrgConfirmation": {
-    "message": "Bitwarden nodrošina iespēju kopīgot glabātavas vienumus ar citiem, kad tiek izmantota apvienība. Vai apmeklēt bitwarden.com tīmekļa vietni, lai uzzinātu vairāk?"
+    "message": "Bravura Safe nodrošina iespēju kopīgot glabātavas vienumus ar citiem, kad tiek izmantota apvienība. Vai apmeklēt Bravura Safe tīmekļa vietni, lai uzzinātu vairāk?"
   },
   "moveToOrganization": {
     "message": "Pārvietot uz apvienību"
@@ -747,7 +747,7 @@
     "message": "Pārvaldīt dalību"
   },
   "premiumManageAlert": {
-    "message": "Dalību ir iespējams pārvaldīt bitwarden.com tīmekļa glabātavā. Vai apmeklēt tīmekļa vietni?"
+    "message": "Dalību ir iespējams pārvaldīt hitachi-id.com tīmekļa glabātavā. Vai apmeklēt tīmekļa vietni?"
   },
   "premiumRefresh": {
     "message": "Atjaunot dalību"
@@ -780,13 +780,13 @@
     "message": "Iegādāties Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Premium dalību ir iespējams iegādāties bitwarden.com tīmekļa glabātavā. Vai apmeklēt tīmekļa vietni?"
+    "message": "Premium dalību ir iespējams iegādāties hitachi-id.com tīmekļa glabātavā. Vai apmeklēt tīmekļa vietni?"
   },
   "premiumCurrentMember": {
     "message": "Tu esi Premium dalībnieks!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Paldies, ka atbalsti Bitwarden!"
+    "message": "Paldies, ka atbalsti Bravura Safe!"
   },
   "premiumPrice": {
     "message": "Viss par tikai $PRICE$ gadā!",
@@ -915,7 +915,7 @@
     "message": "Pašuzturēta vide"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Norādīt pašuzstādīta Bitwarden pamata URL."
+    "message": "Norādīt pašuzstādīta Bravura Safe pamata URL."
   },
   "customEnvironment": {
     "message": "Pielāgota vide"
@@ -1262,26 +1262,26 @@
   },
   "matchDetection": {
     "message": "Atbilstības noteikšana",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Noklusētā atbilstības noteikšana",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Pārslēgt iespējas"
   },
   "toggleCurrentUris": {
-    "message": "Pārslēgt pašreizējos URI",
-    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
+    "message": "Pārslēgt pašreizējos URL",
+    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
   },
   "currentUri": {
-    "message": "Pašreizējais URI",
-    "description": "The URI of one of the current open tabs in the browser."
+    "message": "Pašreizējais URL",
+    "description": "The URL of one of the current open tabs in the browser."
   },
   "organization": {
     "message": "Apvienība",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "types": {
     "message": "Veidi"
@@ -1337,7 +1337,7 @@
     "message": "Vāja galvenā parole"
   },
   "weakMasterPasswordDesc": {
-    "message": "Jūsu izvēlētā galvenā parole ir vāja. Jums vajadzētu izmantot drošu galveno paroli (vai paroles vārdkopu), lai pienācīgi aizsargātu savu Bitwarden kontu. Vai tiešām vēlaties izmantot šo galveno paroli?"
+    "message": "Jūsu izvēlētā galvenā parole ir vāja. Jums vajadzētu izmantot drošu galveno paroli (vai paroles vārdkopu), lai pienācīgi aizsargātu savu Bravura Safe kontu. Vai tiešām vēlaties izmantot šo galveno paroli?"
   },
   "pin": {
     "message": "PIN",
@@ -1347,7 +1347,7 @@
     "message": "Atslēgt ar PIN"
   },
   "setYourPinCode": {
-    "message": "Uzstādīt PIN kodu Bitwarden atslēgšanai. PIN iestatījumi tiks atiestatīti, ja jebkad tiks veikta pilnīga izrakstīšanās no lietotnes."
+    "message": "Uzstādīt PIN kodu Bravura Safe atslēgšanai. PIN iestatījumi tiks atiestatīti, ja jebkad tiks veikta pilnīga izrakstīšanās no lietotnes."
   },
   "pinRequired": {
     "message": "Ir nepieciešams PIN kods."
@@ -1362,7 +1362,7 @@
     "message": "Tiek gaidīts apstiprinājums no darbvirsmas"
   },
   "awaitDesktopDesc": {
-    "message": "Lūgums apstiprināt ar biometriju Bitwarden darbvirsmas lietotnē, lai iespējotu biometriju pārlūkā."
+    "message": "Lūgums apstiprināt ar biometriju Bravura Safe darbvirsmas lietotnē, lai iespējotu biometriju pārlūkā."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Aizslēgt ar galveno paroli pēc pārlūka atsāknēšanas"
@@ -1421,7 +1421,7 @@
     "message": "Automātiski aizpildīt un saglabāt"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "Automātiski aizpildīts vienums un saglabāts URI"
+    "message": "Automātiski aizpildīts vienums un saglabāts URL"
   },
   "autoFillSuccess": {
     "message": "Automātiski aizpildīts vienums"
@@ -1499,13 +1499,13 @@
     "message": "Savienojums ar pārlūku nav iespējots"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "Savienojums ar pārlūku nav iespējots Bitwarden darbvirsmas lietotnē. Lūgums iespējot to darbvirsmas lietotnes iestatījumos."
+    "message": "Savienojums ar pārlūku nav iespējots Bravura Safe darbvirsmas lietotnē. Lūgums iespējot to darbvirsmas lietotnes iestatījumos."
   },
   "startDesktopTitle": {
-    "message": "Palaist Bitwarden darbvirsmas lietotni"
+    "message": "Palaist Bravura Safe darbvirsmas lietotni"
   },
   "startDesktopDesc": {
-    "message": "Bitwarden darbvirsmas lietotnei ir jābūt sāknētai, pirms šī iespēja var tikt izmantota."
+    "message": "Bravura Safe darbvirsmas lietotnei ir jābūt sāknētai, pirms šī iespēja var tikt izmantota."
   },
   "errorEnableBiometricTitle": {
     "message": "Nevar iespējot biometriju"
@@ -1541,7 +1541,7 @@
     "message": "Atļauja nav nodrošināta"
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "Bez atļaujas sazināties ar Bitwarden darbvirsmas lietotni mēs nevaram nodrošināt biometriju pārlūka paplašinājumā. Lūgums mēģināt vēlreiz."
+    "message": "Bez atļaujas sazināties ar Bravura Safe darbvirsmas lietotni mēs nevaram nodrošināt biometriju pārlūka paplašinājumā. Lūgums mēģināt vēlreiz."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Atļaujas pieprasījuma kļūda"
@@ -1559,7 +1559,7 @@
     "message": "Izņēmuma domēni"
   },
   "excludedDomainsDesc": {
-    "message": "Bitwarden nevaicās saglabāt pierakstīšanās datus šiem domēniem. Ir jāpārlādē lapa, lai izmaiņas iedarbotos."
+    "message": "Bravura Safe nevaicās saglabāt pierakstīšanās datus šiem domēniem. Ir jāpārlādē lapa, lai izmaiņas iedarbotos."
   },
   "excludedDomainsInvalidDomain": {
     "message": "$DOMAIN$ nav derīgs domēns",
@@ -1571,16 +1571,16 @@
     }
   },
   "send": {
-    "message": "\"Send\"",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "\"Share\"",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "searchSends": {
-    "message": "Meklēt \"Send\"",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Meklēt \"Share\"",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "addSend": {
-    "message": "Pievienot \"Send'",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Pievienot \"Share'",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeText": {
     "message": "Teksts"
@@ -1589,8 +1589,8 @@
     "message": "Datne"
   },
   "allSends": {
-    "message": "Visi \"Send\"",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Visi \"Share\"",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "Sasniegts lielākais pieļaujamais piekļuvju skaits",
@@ -1606,8 +1606,8 @@
     "message": "Aizsargāts ar paroli"
   },
   "copySendLink": {
-    "message": "Ievietot \"Send\" saiti starpliktuvē",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Ievietot \"Share\" saiti starpliktuvē",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "removePassword": {
     "message": "Noņemt paroli"
@@ -1619,12 +1619,12 @@
     "message": "Parole noņemta"
   },
   "deletedSend": {
-    "message": "\"Send\" izdzēsts",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "\"Share\" izdzēsts",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
-    "message": "\"Send\" saite",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "\"Share\" saite",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "disabled": {
     "message": "Atspējots"
@@ -1633,24 +1633,24 @@
     "message": "Vai tiešām noņemt paroli?"
   },
   "deleteSend": {
-    "message": "Dzēst \"Send\"",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Dzēst \"Share\"",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deleteSendConfirmation": {
-    "message": "Vai tiešām izdzēst šo \"Send\"?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Vai tiešām izdzēst šo \"Share\"?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Labot \"Send\"",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Labot \"Share\"",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeHeader": {
-    "message": "Kāds veids ir šim \"Send\"?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Kāds veids ir šim \"Share\"?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNameDesc": {
-    "message": "Lasāms nosaukums, kas apraksta šo \"Send\".",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Lasāms nosaukums, kas apraksta šo \"Share\".",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendFileDesc": {
     "message": "Datne, kuru ir vēlme nosūtīt."
@@ -1659,15 +1659,15 @@
     "message": "Dzēšanas datums"
   },
   "deletionDateDesc": {
-    "message": "\"Send\" tiks pastāvīgi izdzēsts norādītajā dienā un laikā.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "\"Share\" tiks pastāvīgi izdzēsts norādītajā dienā un laikā.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Derīguma beigu datums"
   },
   "expirationDateDesc": {
-    "message": "Ja uzstādīts, piekļuve šim \"Send\" beigsies norādītajā dienā un laikā.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Ja uzstādīts, piekļuve šim \"Share\" beigsies norādītajā dienā un laikā.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "oneDay": {
     "message": "1 diena"
@@ -1688,57 +1688,57 @@
     "message": "Lielākais pieļaujamais piekļuvju skaits"
   },
   "maximumAccessCountDesc": {
-    "message": "Ja uzstādīts, lietotāji nevarēs piekļūt šim \"Send\", kad tiks sasniegts lielākais pieļaujamais piekļūšanas reižu skaits.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Ja uzstādīts, lietotāji nevarēs piekļūt šim \"Share\", kad tiks sasniegts lielākais pieļaujamais piekļūšanas reižu skaits.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
-    "message": "Pēc izvēles pieprasīt lietotājiem paroli, lai viņi varētu piekļūt šim \"Send\".",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Pēc izvēles pieprasīt lietotājiem paroli, lai viņi varētu piekļūt šim \"Share\".",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "Personīgās piezīmes par šo \"Send\".",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Personīgās piezīmes par šo \"Share\".",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisableDesc": {
-    "message": "Atspējot šo \"Send\", lai neviens tam nevarētu piekļūt.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Atspējot šo \"Share\", lai neviens tam nevarētu piekļūt.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendShareDesc": {
-    "message": "Saglabājot ievietot šī \"Send\" saiti starpliktuvē.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Saglabājot ievietot šī \"Share\" saiti starpliktuvē.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Teksts, kuru ir vēlme nosūtīt."
   },
   "sendHideText": {
-    "message": "Pēc noklusējuma paslēpt šī \"Send\" tekstu.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Pēc noklusējuma paslēpt šī \"Share\" tekstu.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Pašreizējais piekļuvju skaits"
   },
   "createSend": {
-    "message": "Izveidot jaunu \"Send\"",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Izveidot jaunu \"Share\"",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "Jauna parole"
   },
   "sendDisabled": {
-    "message": "\"Send\" atspējots",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "\"Share\" atspējots",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "Uzņēmuma nosacījumu kopas dēļ ir tikai iespējams dzēst esošu \"Send\".",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Uzņēmuma nosacījumu kopas dēļ ir tikai iespējams dzēst esošu \"Share\".",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "\"Send\" izveidots",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "\"Share\" izveidots",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "\"Send\" labots",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "\"Share\" labots",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinuxChromiumFileWarning": {
     "message": "Lai izvēlētos datni, paplašinājums ir jāatver sānjoslā (ja iespējams) vai atsevišķā logā, klikšķinot uz šī paziņojuma."
@@ -1783,7 +1783,7 @@
     "message": "Slēpt e-pasta adresi no saņēmējiem."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "Viens vai vairāki apvienības nosacījumi ietekmē \"Send\" iestatījumus."
+    "message": "Viens vai vairāki apvienības nosacījumi ietekmē \"Share\" iestatījumus."
   },
   "passwordPrompt": {
     "message": "Galvenās paroles pārvaicāšana"
