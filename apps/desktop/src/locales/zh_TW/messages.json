@@ -1,6 +1,6 @@
 {
   "bitwarden": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "filters": {
     "message": "篩選器"
@@ -73,11 +73,11 @@
     "message": "名稱"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -86,7 +86,7 @@
     }
   },
   "newUri": {
-    "message": "新增 URI"
+    "message": "新增 URL"
   },
   "username": {
     "message": "使用者名稱"
@@ -392,7 +392,7 @@
     "message": "複製密碼"
   },
   "copyUri": {
-    "message": "複製 URI"
+    "message": "複製 URL"
   },
   "copyVerificationCodeTotp": {
     "message": "複製驗證碼（TOTP）"
@@ -659,7 +659,7 @@
     "message": "自我託管環境"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "指定您本地托管的 Bitwarden 安裝之基礎 URL。"
+    "message": "指定您本地托管的 Bravura Safe 安裝之基礎 URL。"
   },
   "customEnvironment": {
     "message": "自訂環境"
@@ -764,7 +764,7 @@
     "message": "變更主密碼"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "您可以在 Bitwarden 網頁版密碼庫變更主密碼。現在要前往嗎？"
+    "message": "您可以在 Bravura Safe 網頁版密碼庫變更主密碼。現在要前往嗎？"
   },
   "fingerprintPhrase": {
     "message": "指紋短語",
@@ -804,7 +804,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -812,7 +812,7 @@
     "message": "無效的主密碼"
   },
   "twoStepLoginConfirmation": {
-    "message": "兩步驟登入需要您從其他設備（例如安全鑰匙、驗證器程式、SMS、手機或電子郵件）來驗證您的登入，這使您的賬戶更加安全。兩步驟登入可以在 Bitwarden 網頁版密碼庫啟用。現在要前往嗎？"
+    "message": "兩步驟登入需要您從其他設備（例如安全鑰匙、驗證器程式、SMS、手機或電子郵件）來驗證您的登入，這使您的賬戶更加安全。兩步驟登入可以在 Bravura Safe 網頁版密碼庫啟用。現在要前往嗎？"
   },
   "twoStepLogin": {
     "message": "兩步驟登入"
@@ -934,13 +934,13 @@
     "message": "登入時自動啟動"
   },
   "openAtLoginDesc": {
-    "message": "登入時自動啟動 Bitwarden 桌面應用程式。"
+    "message": "登入時自動啟動 Bravura Safe 桌面應用程式。"
   },
   "alwaysShowDock": {
     "message": "總是在 Dock 中顯示"
   },
   "alwaysShowDockDesc": {
-    "message": "即使最小化到選單列，也在 Docker 中顯示 Bitwarden 圖示。"
+    "message": "即使最小化到選單列，也在 Docker 中顯示 Bravura Safe 圖示。"
   },
   "confirmTrayTitle": {
     "message": "確認禁用系統匣"
@@ -1035,7 +1035,7 @@
     "message": "管理會員資格"
   },
   "premiumManageAlert": {
-    "message": "您可以在 Bitwarden 網頁版密碼庫管理你的會員資格。現在要前往嗎？"
+    "message": "您可以在 Bravura Safe 網頁版密碼庫管理你的會員資格。現在要前往嗎？"
   },
   "premiumRefresh": {
     "message": "刷新會員資格"
@@ -1068,13 +1068,13 @@
     "message": "購買進階會員資格"
   },
   "premiumPurchaseAlert": {
-    "message": "您可以在 Bitwarden 網頁版密碼庫購買進階會員資格。現在要前往嗎？"
+    "message": "您可以在 Bravura Safe 網頁版密碼庫購買進階會員資格。現在要前往嗎？"
   },
   "premiumCurrentMember": {
     "message": "您目前是進階會員！"
   },
   "premiumCurrentMemberThanks": {
-    "message": "感謝您支持 Bitwarden 。"
+    "message": "感謝您支持 Bravura Safe 。"
   },
   "premiumPrice": {
     "message": "每年只需 $PRICE$！",
@@ -1145,13 +1145,13 @@
     "description": "Bring all windows to front (foreground)"
   },
   "aboutBitwarden": {
-    "message": "關於 Bitwarden"
+    "message": "關於 Bravura Safe"
   },
   "services": {
     "message": "服務"
   },
   "hideBitwarden": {
-    "message": "隱藏 Bitwarden"
+    "message": "隱藏 Bravura Safe"
   },
   "hideOthers": {
     "message": "隱藏其他"
@@ -1160,7 +1160,7 @@
     "message": "顯示全部"
   },
   "quitBitwarden": {
-    "message": "結束 Bitwarden"
+    "message": "結束 Bravura Safe"
   },
   "valueCopied": {
     "message": "$VALUE$ 已複製",
@@ -1217,18 +1217,18 @@
   },
   "matchDetection": {
     "message": "一致性偵測",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "預設一致性偵測",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "切換選項"
   },
   "organization": {
     "message": "組織",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "default": {
     "message": "預設"
@@ -1275,7 +1275,7 @@
     "message": "將使用您帳戶的加密金鑰來加密匯出資料，若您更新了帳戶的加密金鑰，請重新匯出，才有辦法解密匯出的檔案。"
   },
   "encExportAccountWarningDesc": {
-    "message": "每個 Bitwarden 使用者帳戶的帳戶加密金鑰都不相同，因此無法將已加密匯出的檔案匯入至不同帳戶中。"
+    "message": "每個 Bravura Safe 使用者帳戶的帳戶加密金鑰都不相同，因此無法將已加密匯出的檔案匯入至不同帳戶中。"
   },
   "noOrganizationsList": {
     "message": "您沒有加入任何組織。組織允許您與其他使用者安全地共用項目。"
@@ -1315,7 +1315,7 @@
     "message": "使用 PIN 碼解鎖"
   },
   "setYourPinCode": {
-    "message": "設定您用來解鎖 Bitwarden 的 PIN 碼。您的 PIN 設定將在您完全結束本應用程式時被重設。"
+    "message": "設定您用來解鎖 Bravura Safe 的 PIN 碼。您的 PIN 設定將在您完全結束本應用程式時被重設。"
   },
   "pinRequired": {
     "message": "需要 PIN 碼。"
@@ -1327,7 +1327,7 @@
     "message": "使用 Windows Hello 解鎖"
   },
   "windowsHelloConsentMessage": {
-    "message": "驗證 Bitwarden。"
+    "message": "驗證 Bravura Safe。"
   },
   "unlockWithTouchId": {
     "message": "使用 Touch ID 解鎖"
@@ -1549,8 +1549,8 @@
     "message": "組織原則正在影響您的擁有權選項。"
   },
   "allSends": {
-    "message": "所有 Send",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "所有 Share",
+    "description": "'Shares' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "檔案"
@@ -1559,12 +1559,12 @@
     "message": "文字"
   },
   "searchSends": {
-    "message": "搜尋 Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "搜尋 Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "編輯 Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "編輯 Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "myVault": {
     "message": "密碼庫"
@@ -1576,72 +1576,72 @@
     "message": "刪除日期"
   },
   "deletionDateDesc": {
-    "message": "此 Send 將在指定的日期和時間後被永久刪除。",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "此 Share 將在指定的日期和時間後被永久刪除。",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "逾期日期"
   },
   "expirationDateDesc": {
-    "message": "如果設定此選項，對此 Send 的存取將在指定的日期和時間後逾期。",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "如果設定此選項，對此 Share 的存取將在指定的日期和時間後逾期。",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "最大存取次數"
   },
   "maxAccessCountDesc": {
-    "message": "如果設定此選項，當達到最大存取次數時，使用者將無法再次存取此 Send。",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "如果設定此選項，當達到最大存取次數時，使用者將無法再次存取此 Share。",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "目前存取次數"
   },
   "disableSend": {
-    "message": "停用此 Send 以阻止任何人存取它。",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "停用此 Share 以阻止任何人存取它。",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
-    "message": "可選。使用者需提供密碼才能存取此 Send。",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "可選。使用者需提供密碼才能存取此 Share。",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "關於此 Send 的私人備註。",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "關於此 Share 的私人備註。",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
-    "message": "Send 連結",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share 連結",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinkLabel": {
-    "message": "Send 連結",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share 連結",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "textHiddenByDefault": {
-    "message": "存取此 Send 時，預設隱藏文字内容",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "存取此 Share 時，預設隱藏文字内容",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Send 已創建",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share 已創建",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "Send 已編輯",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share 已編輯",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
-    "message": "Send 已刪除",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share 已刪除",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "新密碼"
   },
   "whatTypeOfSend": {
-    "message": "這是什麽類型的 Send？",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "這是什麽類型的 Share？",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createSend": {
-    "message": "創建 Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "創建 Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "您想要傳送的文字。"
@@ -1665,23 +1665,23 @@
     "message": "自訂"
   },
   "deleteSendConfirmation": {
-    "message": "您確定要刪除此 Send 嗎？",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "您確定要刪除此 Share 嗎？",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkToClipboard": {
-    "message": "複製 Send 連結到剪貼簿",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "複製 Share 連結到剪貼簿",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkOnSave": {
-    "message": "储存時複製連結到剪貼簿以便分享此 Send。"
+    "message": "储存時複製連結到剪貼簿以便分享此 Share。"
   },
   "sendDisabled": {
-    "message": "Send 已停用",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share 已停用",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "由於企業原則限制，您只能刪除現有的 Send。",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "由於企業原則限制，您只能刪除現有的 Share。",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copyLink": {
     "message": "複製連結"
@@ -1705,7 +1705,7 @@
     "message": "對收件人隱藏我的電子郵件位址。"
   },
   "sendOptionsPolicyInEffect": {
-    "message": "一個或多個組織原則正影響您的 Send 選項。"
+    "message": "一個或多個組織原則正影響您的 Share 選項。"
   },
   "emailVerificationRequired": {
     "message": "需要驗證電子郵件"

@@ -1,6 +1,6 @@
 {
   "bitwarden": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "filters": {
     "message": "فیلترها"
@@ -73,11 +73,11 @@
     "message": "نام"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -86,7 +86,7 @@
     }
   },
   "newUri": {
-    "message": "URI جدید"
+    "message": "URL جدید"
   },
   "username": {
     "message": "نام کاربری"
@@ -392,7 +392,7 @@
     "message": "رونوشت کلمه عبور"
   },
   "copyUri": {
-    "message": "رونوشت URI"
+    "message": "رونوشت URL"
   },
   "copyVerificationCodeTotp": {
     "message": "کپی کد تأیید (TOTP)"
@@ -659,7 +659,7 @@
     "message": "محیط خود میزبان"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "آدرس اینترنتی پایه نصب Bitwarden میزبانی شده را مشخص کنید."
+    "message": "آدرس اینترنتی پایه نصب Bravura Safe میزبانی شده را مشخص کنید."
   },
   "customEnvironment": {
     "message": "محیط سفارشی"
@@ -764,7 +764,7 @@
     "message": "تغییر کلمه عبور اصلی"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "شما می‌توانید کلمه عبور اصلی خود را در bitwarden.com تغییر دهید. آیا می‌خواهید از سایت بازدید کنید؟"
+    "message": "شما می‌توانید کلمه عبور اصلی خود را در hitachi-id.com تغییر دهید. آیا می‌خواهید از سایت بازدید کنید؟"
   },
   "fingerprintPhrase": {
     "message": "عبارت اثر انگشت",
@@ -804,7 +804,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -812,7 +812,7 @@
     "message": "کلمه عبور اصلی نامعتبر است"
   },
   "twoStepLoginConfirmation": {
-    "message": "ورودی دو مرحله‌ای باعث می‌شود که حساب کاربری شما با استفاده از یک دستگاه دیگر مانند کلید امنیتی، برنامه تایید هویت، پیامک، تماس تلفنی و یا رایانامه، اعتبار خود را با ایمنی بیشتر ثابت کند. ورود دو مرحله‌ای می‌تواند در bitwarden.com فعال شود. آیا می‌خواهید از سایت بازدید کنید؟"
+    "message": "ورودی دو مرحله‌ای باعث می‌شود که حساب کاربری شما با استفاده از یک دستگاه دیگر مانند کلید امنیتی، برنامه تایید هویت، پیامک، تماس تلفنی و یا رایانامه، اعتبار خود را با ایمنی بیشتر ثابت کند. ورود دو مرحله‌ای می‌تواند در hitachi-id.com فعال شود. آیا می‌خواهید از سایت بازدید کنید؟"
   },
   "twoStepLogin": {
     "message": "ورود دو مرحله‌ای"
@@ -934,13 +934,13 @@
     "message": "هنگام ورود به سیستم به طور خودکار شروع کنید"
   },
   "openAtLoginDesc": {
-    "message": "برنامه دستکتاپ Bitwarden را به طور خودکار هنگام ورود به سیستم شروع کنید."
+    "message": "برنامه دستکتاپ Bravura Safe را به طور خودکار هنگام ورود به سیستم شروع کنید."
   },
   "alwaysShowDock": {
     "message": "همیشه در داک نشان بده"
   },
   "alwaysShowDockDesc": {
-    "message": "نماد Bitwarden را در داک نمایش بده حتی زمانی که به نوار منو کوچک شود."
+    "message": "نماد Bravura Safe را در داک نمایش بده حتی زمانی که به نوار منو کوچک شود."
   },
   "confirmTrayTitle": {
     "message": "غیرفعال کردن tray را تأیید کنید"
@@ -988,7 +988,7 @@
     "message": "برای بروزرسانی راه اندازی مجدد کنید"
   },
   "restartToUpdateDesc": {
-    "message": "نسخه $VERSION_NUM$ آماده نصب است. برای تکمیل نصب باید Bitwarden را مجددا راه اندازی کنید. آیا تمایل به راه اندازی مجدد و بروزرسانی دارید؟",
+    "message": "نسخه $VERSION_NUM$ آماده نصب است. برای تکمیل نصب باید Bravura Safe را مجددا راه اندازی کنید. آیا تمایل به راه اندازی مجدد و بروزرسانی دارید؟",
     "placeholders": {
       "version_num": {
         "content": "$1",
@@ -1035,7 +1035,7 @@
     "message": "مدیریت عضویت"
   },
   "premiumManageAlert": {
-    "message": "شما می‌توانید عضویت خود را در نسخه وب گاوصندوق در bitwarden.com مدیریت کنید. آیا مایل به دیدن وبسایت هستید؟"
+    "message": "شما می‌توانید عضویت خود را در نسخه وب گاوصندوق در hitachi-id.com مدیریت کنید. آیا مایل به دیدن وبسایت هستید؟"
   },
   "premiumRefresh": {
     "message": "نوسازی عضویت"
@@ -1068,13 +1068,13 @@
     "message": "خرید پریمیوم"
   },
   "premiumPurchaseAlert": {
-    "message": "شما می‌توانید عضویت پریمیوم را از گاوصندوق وب bitwarden.com خریداری کنید. آیا مایلید اکنون از وبسایت بازید کنید؟"
+    "message": "شما می‌توانید عضویت پریمیوم را از گاوصندوق وب hitachi-id.com خریداری کنید. آیا مایلید اکنون از وبسایت بازید کنید؟"
   },
   "premiumCurrentMember": {
     "message": "شما یک عضو پریمیوم هستید!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "برای حمایتتان از Bitwarden سپاسگزاریم."
+    "message": "برای حمایتتان از Bravura Safe سپاسگزاریم."
   },
   "premiumPrice": {
     "message": "تمامش فقط $PRICE$ در سال!",
@@ -1145,13 +1145,13 @@
     "description": "Bring all windows to front (foreground)"
   },
   "aboutBitwarden": {
-    "message": "درباره Bitwarden"
+    "message": "درباره Bravura Safe"
   },
   "services": {
     "message": "خدمات"
   },
   "hideBitwarden": {
-    "message": "پنهان‌سازی Bitwarden"
+    "message": "پنهان‌سازی Bravura Safe"
   },
   "hideOthers": {
     "message": "پنهان‌سازی بقیه"
@@ -1160,7 +1160,7 @@
     "message": "نمایش همه"
   },
   "quitBitwarden": {
-    "message": "خروج از Bitwarden"
+    "message": "خروج از Bravura Safe"
   },
   "valueCopied": {
     "message": "$VALUE$ رونوشت شد",
@@ -1217,18 +1217,18 @@
   },
   "matchDetection": {
     "message": "تشخیص تطابق",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "تشخیص تطابق پیشفرض",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "گزینه های تبدیل"
   },
   "organization": {
     "message": "سازمان",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "default": {
     "message": "پیش فرض"
@@ -1275,7 +1275,7 @@
     "message": "این صادرات با استفاده از کلید رمزگذاری حساب شما ، اطلاعات شما را رمزگذاری می کند. اگر حتی کلید رمزگذاری حساب خود را بچرخانید ، باید دوباره صادر کنید چون قادر به رمزگشایی این پرونده صادراتی نخواهید بود."
   },
   "encExportAccountWarningDesc": {
-    "message": "کلیدهای رمزگذاری حساب برای هر حساب کاربری Bitwarden منحصر به فرد است ، بنابراین نمی توانید صادرات رمزگذاری شده را به حساب دیگری وارد کنید."
+    "message": "کلیدهای رمزگذاری حساب برای هر حساب کاربری Bravura Safe منحصر به فرد است ، بنابراین نمی توانید صادرات رمزگذاری شده را به حساب دیگری وارد کنید."
   },
   "noOrganizationsList": {
     "message": "شما به هیچ سازمانی تعلق ندارید. سازمان‌ها به شما اجازه می‌دهند تا داده‌های خود را را با کاربران دیگر به صورت امن به اشتراک بگذارید."
@@ -1305,7 +1305,7 @@
     "message": "کلمه عبور اصلی ضعیف"
   },
   "weakMasterPasswordDesc": {
-    "message": "کلمه عبور اصلی که انتخاب کرده‌اید، ضعیف است. شما باید از کلمه عبور (یا عبارت عبور) قوی استفاده کنید تا از حساب کاربری Bitwarden خود به خوبی محافظت کنید. آیا مطمئنید که می‌خواهید این کلمه عبور را استفاده کنید؟"
+    "message": "کلمه عبور اصلی که انتخاب کرده‌اید، ضعیف است. شما باید از کلمه عبور (یا عبارت عبور) قوی استفاده کنید تا از حساب کاربری Bravura Safe خود به خوبی محافظت کنید. آیا مطمئنید که می‌خواهید این کلمه عبور را استفاده کنید؟"
   },
   "pin": {
     "message": "پین",
@@ -1315,7 +1315,7 @@
     "message": "بازکردن با پین"
   },
   "setYourPinCode": {
-    "message": "کد پین خود را برای باز کردن Bitwarden تنظیم کنید. اگر به طور کامل از برنامه خارج شوید (Log out)، تنظیمات پین شما از بین می‌رود."
+    "message": "کد پین خود را برای باز کردن Bravura Safe تنظیم کنید. اگر به طور کامل از برنامه خارج شوید (Log out)، تنظیمات پین شما از بین می‌رود."
   },
   "pinRequired": {
     "message": "کد پین الزامیست."
@@ -1327,13 +1327,13 @@
     "message": "باز کردن با Windows Hello"
   },
   "windowsHelloConsentMessage": {
-    "message": "تایید برای Bitwarden."
+    "message": "تایید برای Bravura Safe."
   },
   "unlockWithTouchId": {
     "message": "باز کردن با اثر انگشت"
   },
   "touchIdConsentMessage": {
-    "message": "تایید برای Bitwarden."
+    "message": "تایید برای Bravura Safe."
   },
   "noAutoPromptWindowsHello": {
     "message": "در هنگام راه اندازی ، درخواست Windows Hello نکنید."
@@ -1550,7 +1550,7 @@
   },
   "allSends": {
     "message": "همه ارسال ها",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Shares' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "فایل"
@@ -1560,11 +1560,11 @@
   },
   "searchSends": {
     "message": "ارسال ها را جستجو کن",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
     "message": "ویرایش ارسال",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "myVault": {
     "message": "گاوصندوق من"
@@ -1577,71 +1577,71 @@
   },
   "deletionDateDesc": {
     "message": "ارسال در تاریخ و ساعت مشخص شده برای همیشه حذف خواهد شد.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "تاريخ انقضاء"
   },
   "expirationDateDesc": {
     "message": "در صورت تنظیم، دسترسی به این ارسال در تاریخ و ساعت مشخص شده منقضی می شود.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "تعداد دسترسی حداکثر"
   },
   "maxAccessCountDesc": {
     "message": "در صورت تنظیم، با رسیدن به حداکثر تعداد دسترسی، کاربران دیگر نمی توانند به این ارسال دسترسی پیدا کنند.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "تعداد دسترسی فعلی"
   },
   "disableSend": {
     "message": "این ارسال را غیرفعال کنید تا کسی نتواند به آن دسترسی پیدا کند.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
     "message": "به صورت اختیاری برای دسترسی کاربران به این ارسال به یک کلمه عبور نیاز دارید.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
     "message": "یادداشت های خصوصی در مورد این ارسال.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
     "message": "ارسال پیوند",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinkLabel": {
     "message": "ارسال پیوند",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "textHiddenByDefault": {
     "message": "هنگام دسترسی به ارسال، متن را به طور پیش فرض پنهان کن",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
     "message": "ارسال جدید ساخته شد",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
     "message": "ارسال جدید ویرایش شد",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
     "message": "ارسال پاک شد",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "کلمه عبور جدید"
   },
   "whatTypeOfSend": {
     "message": "این چه نوع ارسالی است؟",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createSend": {
     "message": "ساختن ارسال",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "متنی که می خواهید ارسال کنید."
@@ -1666,22 +1666,22 @@
   },
   "deleteSendConfirmation": {
     "message": "آیا مطمئن هستید می خواهید این ارسال را حذف کنید؟",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkToClipboard": {
     "message": "کپی لینک ارسال به حافظه موقت",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkOnSave": {
     "message": "این پیوند را برای به اشتراک گذاری ارسال بعد از ارسال کپی کن."
   },
   "sendDisabled": {
     "message": "ارسال غیرفعال شد",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "به دلیل خط مشی سازمانی، شما فقط می توانید ارسال موجود را حذف کنید.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copyLink": {
     "message": "کپی پیوند"

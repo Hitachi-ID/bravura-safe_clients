@@ -92,7 +92,7 @@
   position: relative;
   overflow: hidden;
 
-  .bwi-spinner {
+  .fa-spinner {
     position: absolute;
     display: none;
     align-items: center;
@@ -105,7 +105,7 @@
 
   &:disabled:not(.manual),
   &.loading {
-    .bwi-spinner {
+    .fa-spinner {
       display: flex;
     }
 

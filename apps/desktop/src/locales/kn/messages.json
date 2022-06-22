@@ -73,11 +73,11 @@
     "message": "ಹೆಸರು"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
     "message": "ಯುಆರ್ಐ $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -392,7 +392,7 @@
     "message": "ಪಾಸ್ವರ್ಡ್ ನಕಲಿಸಿ"
   },
   "copyUri": {
-    "message": "URI ಅನ್ನು ನಕಲಿಸಿ"
+    "message": "URL ಅನ್ನು ನಕಲಿಸಿ"
   },
   "copyVerificationCodeTotp": {
     "message": "ನಕಲಿಸಿ ಪರಿಶೀಲನೆ ಕೋಡ್ (TOTP)"
@@ -764,7 +764,7 @@
     "message": "ಮಾಸ್ಟರ್ ಪಾಸ್ವರ್ಡ್ ಬದಲಾಯಿಸಿ"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "ನಿಮ್ಮ ಮಾಸ್ಟರ್ ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ನೀವು bitwarden.com ವೆಬ್ ವಾಲ್ಟ್‌ನಲ್ಲಿ ಬದಲಾಯಿಸಬಹುದು. ನೀವು ಈಗ ವೆಬ್‌ಸೈಟ್‌ಗೆ ಭೇಟಿ ನೀಡಲು ಬಯಸುವಿರಾ?"
+    "message": "ನಿಮ್ಮ ಮಾಸ್ಟರ್ ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ನೀವು hitachi-id.com ವೆಬ್ ವಾಲ್ಟ್‌ನಲ್ಲಿ ಬದಲಾಯಿಸಬಹುದು. ನೀವು ಈಗ ವೆಬ್‌ಸೈಟ್‌ಗೆ ಭೇಟಿ ನೀಡಲು ಬಯಸುವಿರಾ?"
   },
   "fingerprintPhrase": {
     "message": "ಫಿಂಗರ್ಪ್ರಿಂಟ್ ಫ್ರೇಸ್",
@@ -804,7 +804,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -1035,7 +1035,7 @@
     "message": "ಸದಸ್ಯತ್ವವನ್ನು ನಿರ್ವಹಿಸಿ"
   },
   "premiumManageAlert": {
-    "message": "ನಿಮ್ಮ ಸದಸ್ಯತ್ವವನ್ನು ನೀವು bitwarden.com ವೆಬ್ ವಾಲ್ಟ್‌ನಲ್ಲಿ ನಿರ್ವಹಿಸಬಹುದು. ನೀವು ಈಗ ವೆಬ್‌ಸೈಟ್‌ಗೆ ಭೇಟಿ ನೀಡಲು ಬಯಸುವಿರಾ?"
+    "message": "ನಿಮ್ಮ ಸದಸ್ಯತ್ವವನ್ನು ನೀವು hitachi-id.com ವೆಬ್ ವಾಲ್ಟ್‌ನಲ್ಲಿ ನಿರ್ವಹಿಸಬಹುದು. ನೀವು ಈಗ ವೆಬ್‌ಸೈಟ್‌ಗೆ ಭೇಟಿ ನೀಡಲು ಬಯಸುವಿರಾ?"
   },
   "premiumRefresh": {
     "message": "ಸದಸ್ಯತ್ವವನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಿ"
@@ -1217,18 +1217,18 @@
   },
   "matchDetection": {
     "message": "ಹೊಂದಾಣಿಕೆ ಪತ್ತೆ",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "ಡೀಫಾಲ್ಟ್ ಪಂದ್ಯ ಪತ್ತೆ",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "ಟಾಗಲ್ ಆಯ್ಕೆಗಳು"
   },
   "organization": {
     "message": "ಸಂಸ್ಥೆ",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "default": {
     "message": "ಡಿಫಾಲ್ಟ್"
@@ -1540,7 +1540,7 @@
     "message": "ಬ್ರೌಸರ್ ಬಯೋಮೆಟ್ರಿಕ್ಸ್ ಮೊದಲು ಸೆಟ್ಟಿಂಗ್ಗಳಲ್ಲಿ ಡೆಸ್ಕ್ಟಾಪ್ ಬಯೋಮೆಟ್ರಿಕ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಬೇಕಾಗುತ್ತದೆ."
   },
   "personalOwnershipSubmitError": {
-    "message": "Due to an Enterprise Policy, you are restricted from saving items to your personal vault. Change the Ownership option to an organization and choose from available Collections."
+    "message": "Due to an Enterprise Policy, you are restricted from saving items to your personal vault. Change the Ownership option to a team and choose from available Collections."
   },
   "hintEqualsPassword": {
     "message": "ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ ಸುಳಿವು ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್‌ನಂತೆಯೇ ಇರಬಾರದು."
@@ -1550,7 +1550,7 @@
   },
   "allSends": {
     "message": "ಎಲ್ಲಾ ಕಳುಹಿಸುತ್ತದೆ",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Shares' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "ಫೈಲ್"
@@ -1560,11 +1560,11 @@
   },
   "searchSends": {
     "message": "ಹುಡುಕಾಟ ಕಳುಹಿಸುತ್ತದೆ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
     "message": "ಕಳುಹಿಸು ಸಂಪಾದಿಸಿ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "myVault": {
     "message": "ನನ್ನ ವಾಲ್ಟ್"
@@ -1577,71 +1577,71 @@
   },
   "deletionDateDesc": {
     "message": "ಕಳುಹಿಸಿದ ದಿನಾಂಕ ಮತ್ತು ಸಮಯದ ಮೇಲೆ ಕಳುಹಿಸುವಿಕೆಯನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "ಮುಕ್ತಾಯ ದಿನಾಂಕ"
   },
   "expirationDateDesc": {
     "message": "ಹೊಂದಿಸಿದ್ದರೆ, ಈ ಕಳುಹಿಸುವಿಕೆಯ ಪ್ರವೇಶವು ನಿಗದಿತ ದಿನಾಂಕ ಮತ್ತು ಸಮಯದ ಮೇಲೆ ಮುಕ್ತಾಯಗೊಳ್ಳುತ್ತದೆ.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "ಗರಿಷ್ಠ ಪ್ರವೇಶ ಎಣಿಕೆ"
   },
   "maxAccessCountDesc": {
     "message": "ಹೊಂದಿಸಿದ್ದರೆ, ಗರಿಷ್ಠ ಪ್ರವೇಶ ಎಣಿಕೆ ತಲುಪಿದ ನಂತರ ಬಳಕೆದಾರರಿಗೆ ಈ ಕಳುಹಿಸುವಿಕೆಯನ್ನು ಪ್ರವೇಶಿಸಲು ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "ಪ್ರಸ್ತುತ ಪ್ರವೇಶ ಎಣಿಕೆ"
   },
   "disableSend": {
     "message": "ಇದನ್ನು ಕಳುಹಿಸುವುದನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ ಇದರಿಂದ ಯಾರೂ ಅದನ್ನು ಪ್ರವೇಶಿಸಲಾಗುವುದಿಲ್ಲ.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
     "message": "ಈ ಕಳುಹಿಸುವಿಕೆಯನ್ನು ಪ್ರವೇಶಿಸಲು ಬಳಕೆದಾರರಿಗೆ ಪಾಸ್‌ವರ್ಡ್ ಐಚ್ ಗತ್ಯವಿದೆ.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
     "message": "ಈ ಕಳುಹಿಸುವ ಬಗ್ಗೆ ಖಾಸಗಿ ಟಿಪ್ಪಣಿಗಳು.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
     "message": "ಲಿಂಕ್ ಕಳುಹಿಸಿ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinkLabel": {
     "message": "ಲಿಂಕ್ ಕಳುಹಿಸಿ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "textHiddenByDefault": {
     "message": "ಕಳುಹಿಸುವಿಕೆಯನ್ನು ಪ್ರವೇಶಿಸುವಾಗ, ಪಠ್ಯವನ್ನು ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಮರೆಮಾಡಿ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
     "message": "ಕಳುಹಿಸು ರಚಿಸಲಾಗಿದೆ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
     "message": "ಕಳುಹಿಸಿದ ಸಂಪಾದನೆ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
     "message": "ಅಳಿಸಿದ ಕಳುಹಿಸಲಾಗಿದೆ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "ಹೊಸ ಪಾಸ್‌ವರ್ಡ್"
   },
   "whatTypeOfSend": {
     "message": "ಇದು ಯಾವ ರೀತಿಯ ಕಳುಹಿಸುತ್ತದೆ?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createSend": {
     "message": "ಕಳುಹಿಸು ರಚಿಸಿ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "ನೀವು ಕಳುಹಿಸಲು ಬಯಸುವ ಪಠ್ಯ."
@@ -1666,22 +1666,22 @@
   },
   "deleteSendConfirmation": {
     "message": "ಈ ಕಳುಹಿಸುವಿಕೆಯನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkToClipboard": {
     "message": "ನಕಲಿಸಿ ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ಲಿಂಕ್ ಕಳುಹಿಸಿ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkOnSave": {
     "message": "ಇದನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ಲಿಂಕ್ ಅನ್ನು ನಕಲಿಸಿ ಉಳಿಸಿದ ನಂತರ ನನ್ನ ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ಕಳುಹಿಸಿ."
   },
   "sendDisabled": {
     "message": "ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ ಕಳುಹಿಸಿ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "Due to an enterprise policy, you are only able to delete an existing Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Due to an enterprise policy, you are only able to delete an existing Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copyLink": {
     "message": "ಲಿಂಕ್ ಕಾಪಿ ಮಾಡಿ"
@@ -1729,7 +1729,7 @@
     "message": "Update Master Password"
   },
   "updateMasterPasswordWarning": {
-    "message": "Your Master Password was recently changed by an administrator in your organization. In order to access the vault, you must update it now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
+    "message": "Your Master Password was recently changed by an administrator in your team. In order to access the vault, you must update it now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
   },
   "hours": {
     "message": "Hours"
@@ -1738,7 +1738,7 @@
     "message": "Minutes"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Your organization policies are affecting your vault timeout. Maximum allowed Vault Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
+    "message": "Your team policies are affecting your vault timeout. Maximum allowed Vault Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1751,19 +1751,19 @@
     }
   },
   "vaultTimeoutTooLarge": {
-    "message": "Your vault timeout exceeds the restrictions set by your organization."
+    "message": "Your vault timeout exceeds the restrictions set by your team."
   },
   "resetPasswordPolicyAutoEnroll": {
     "message": "Automatic Enrollment"
   },
   "resetPasswordAutoEnrollInviteWarning": {
-    "message": "This organization has an enterprise policy that will automatically enroll you in password reset. Enrollment will allow organization administrators to change your master password."
+    "message": "This team has an enterprise policy that will automatically enroll you in password reset. Enrollment will allow team administrators to change your master password."
   },
   "vaultExportDisabled": {
     "message": "Vault Export Disabled"
   },
   "personalVaultExportPolicyInEffect": {
-    "message": "One or more organization policies prevents you from exporting your personal vault."
+    "message": "One or more team policies prevents you from exporting your personal vault."
   },
   "addAccount": {
     "message": "Add Account"
@@ -1775,7 +1775,7 @@
     "message": "Master password removed."
   },
   "convertOrganizationEncryptionDesc": {
-    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this organization.",
+    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this team.",
     "placeholders": {
       "organization": {
         "content": "$1",
@@ -1784,13 +1784,13 @@
     }
   },
   "leaveOrganization": {
-    "message": "Leave Organization"
+    "message": "Leave Team"
   },
   "leaveOrganizationConfirmation": {
-    "message": "Are you sure you want to leave this organization?"
+    "message": "Are you sure you want to leave this team?"
   },
   "leftOrganization": {
-    "message": "You have left the organization."
+    "message": "You have left the team."
   },
   "ssoKeyConnectorUnavailable": {
     "message": "Unable to reach the key connector, try again later."
@@ -1832,7 +1832,7 @@
     "message": "Exporting Personal Vault"
   },
   "exportingPersonalVaultDescription": {
-    "message": "Only the personal vault items associated with $EMAIL$ will be exported. Organization vault items will not be included.",
+    "message": "Only the personal vault items associated with $EMAIL$ will be exported. Team vault items will not be included.",
     "placeholders": {
       "email": {
         "content": "$1",

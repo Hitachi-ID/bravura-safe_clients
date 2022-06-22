@@ -26,7 +26,7 @@
               appA11yTitle="{{ 'copyPassword' | i18n }}"
               (click)="copy()"
             >
-              <i class="bwi bwi-lg bwi-clone" aria-hidden="true"></i>
+              <i class="fa fa-lg fa-clone" aria-hidden="true"></i>
             </button>
             <button
               type="button"
@@ -35,7 +35,7 @@
               appA11yTitle="{{ 'regeneratePassword' | i18n }}"
               (click)="regenerate()"
             >
-              <i class="bwi bwi-lg bwi-generate" aria-hidden="true"></i>
+              <i class="fa fa-lg fa-refresh" aria-hidden="true"></i>
             </button>
           </div>
         </div>
@@ -49,7 +49,7 @@
               appA11yTitle="{{ 'copyUsername' | i18n }}"
               (click)="copy()"
             >
-              <i class="bwi bwi-lg bwi-clone" aria-hidden="true"></i>
+              <i class="fa fa-lg fa-clone" aria-hidden="true"></i>
             </button>
             <button
               type="button"
@@ -60,8 +60,8 @@
               [disabled]="form.loading"
             >
               <i
-                class="bwi bwi-lg bwi-generate"
-                [ngClass]="form.loading ? 'bwi-spin' : ''"
+                class="fa fa-lg fa-refresh"
+                [ngClass]="form.loading ? 'fa-spin' : ''"
                 aria-hidden="true"
               ></i>
             </button>
@@ -110,8 +110,8 @@
                 appA11yTitle="{{ 'toggleVisibility' | i18n }}"
                 [attr.aria-expanded]="showOptions"
               >
-                <i class="bwi bwi-plus-square" aria-hidden="true" [hidden]="showOptions"></i>
-                <i class="bwi bwi-minus-square" aria-hidden="true" [hidden]="!showOptions"></i>
+                <i class="fa fa-plus-square-o" aria-hidden="true" [hidden]="showOptions"></i>
+                <i class="fa fa-minus-square-o" aria-hidden="true" [hidden]="!showOptions"></i>
                 {{ "options" | i18n }}
               </button>
             </div>
@@ -310,8 +310,8 @@
                 appA11yTitle="{{ 'toggleVisibility' | i18n }}"
                 [attr.aria-expanded]="showOptions"
               >
-                <i class="bwi bwi-plus-square" aria-hidden="true" [hidden]="showOptions"></i>
-                <i class="bwi bwi-minus-square" aria-hidden="true" [hidden]="!showOptions"></i>
+                <i class="fa fa-plus-square-o" aria-hidden="true" [hidden]="showOptions"></i>
+                <i class="fa fa-minus-square-o" aria-hidden="true" [hidden]="!showOptions"></i>
                 {{ "options" | i18n }}
               </button>
             </div>
@@ -329,7 +329,7 @@
                     (click)="usernameTypesLearnMore()"
                     appA11yTitle="{{ 'learnMore' | i18n }}"
                   >
-                    <i class="bwi bwi-question-circle" aria-hidden="true"></i>
+                    <i class="fa fa-question-circle-o" aria-hidden="true"></i>
                   </a>
                 </label>
                 <div
@@ -549,7 +549,7 @@
           (click)="select()"
           appA11yTitle="{{ 'select' | i18n }}"
         >
-          <i class="bwi bwi-lg bwi-fw bwi-check" aria-hidden="true"></i>
+          <i class="fa fa-lg fa-fw fa-check" aria-hidden="true"></i>
         </button>
         <button type="button" data-dismiss="modal">
           {{ (comingFromAddEdit ? "cancel" : "close") | i18n }}

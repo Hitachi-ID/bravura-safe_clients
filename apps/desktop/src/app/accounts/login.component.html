@@ -7,7 +7,7 @@
       class="environment-urls-settings-icon"
       attr.aria-label="{{ 'settings' | i18n }}"
     >
-      <i class="bwi bwi-cog bwi-lg" aria-hidden="true"></i>
+      <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
       {{ "settings" | i18n }}
     </button>
   </div>
@@ -19,7 +19,7 @@
     attr.aria-hidden="{{ showingModal }}"
   >
     <div id="content" class="content">
-      <img class="logo-image" alt="Bitwarden" />
+      <img class="logo-image" alt="Bravura Safe" />
       <p class="lead">{{ "loginOrCreateNewAccount" | i18n }}</p>
       <div class="box last">
         <div class="box-content">
@@ -57,9 +57,9 @@
                 (click)="togglePassword()"
               >
                 <i
-                  class="bwi bwi-lg"
+                  class="fa fa-lg"
                   aria-hidden="true"
-                  [ngClass]="{ 'bwi-eye': !showPassword, 'bwi-eye-slash': showPassword }"
+                  [ngClass]="{ 'fa-eye': !showPassword, 'fa-eye-slash': showPassword }"
                 ></i>
               </button>
             </div>
@@ -77,21 +77,12 @@
         <div class="buttons-row">
           <button type="submit" class="btn primary block" [disabled]="form.loading">
             <b [hidden]="form.loading"
-              ><i class="bwi bwi-sign-in" aria-hidden="true"></i> {{ "logIn" | i18n }}</b
+              ><i class="fa fa-sign-in" aria-hidden="true"></i> {{ "logIn" | i18n }}</b
             >
-            <i class="bwi bwi-spinner bwi-spin" [hidden]="!form.loading" aria-hidden="true"></i>
+            <i class="fa fa-spinner fa-spin" [hidden]="!form.loading" aria-hidden="true"></i>
           </button>
           <button type="button" routerLink="/register" class="btn block">
-            <i class="bwi bwi-pencil-square" aria-hidden="true"></i> {{ "createAccount" | i18n }}
-          </button>
-        </div>
-        <div class="buttons-row">
-          <button
-            type="button"
-            (click)="launchSsoBrowser('desktop', 'bitwarden://sso-callback')"
-            class="btn block"
-          >
-            <i class="bwi bwi-bank" aria-hidden="true"></i> {{ "enterpriseSingleSignOn" | i18n }}
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> {{ "createAccount" | i18n }}
           </button>
         </div>
       </div>

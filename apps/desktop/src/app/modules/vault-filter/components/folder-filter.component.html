@@ -8,17 +8,17 @@
       appA11yTitle="{{ 'toggleCollapse' | i18n }}"
     >
       <i
-        class="bwi bwi-fw"
+        class="fa fa-fw"
         aria-hidden="true"
         [ngClass]="{
-          'bwi-angle-right': isCollapsed(foldersGrouping),
-          'bwi-angle-down': !isCollapsed(foldersGrouping)
+          'fa-chevron-right': isCollapsed(foldersGrouping),
+          'fa-chevron-down': !isCollapsed(foldersGrouping)
         }"
       ></i>
     </button>
     <h2>&nbsp;{{ foldersGrouping.name | i18n }}</h2>
     <button class="add-button" (click)="addFolder()" appA11yTitle="{{ 'addFolder' | i18n }}">
-      <i class="bwi bwi-plus bwi-fw" aria-hidden="true"></i>
+      <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
     </button>
   </div>
   <ul id="folder-filters" class="filter-options" *ngIf="!isCollapsed(foldersGrouping)">
@@ -40,11 +40,11 @@
             [attr.aria-controls]="f.node.name + '_children'"
           >
             <i
-              class="bwi bwi-fw"
+              class="fa fa-fw"
               aria-hidden="true"
               [ngClass]="{
-                'bwi-angle-right': isCollapsed(f.node),
-                'bwi-angle-down': !isCollapsed(f.node)
+                'fa-chevron-right': isCollapsed(f.node),
+                'fa-chevron-down': !isCollapsed(f.node)
               }"
             ></i>
           </button>
@@ -55,7 +55,7 @@
               activeFilter.selectedFolder && f.node.id === activeFilter.selectedFolderId
             "
           >
-            <i *ngIf="f.children.length === 0" class="bwi bwi-fw bwi-folder" aria-hidden="true"></i>
+            <i *ngIf="f.children.length === 0" class="fa fa-fw fa-folder-o" aria-hidden="true"></i>
             &nbsp;{{ f.node.name }}
           </button>
           <button
@@ -64,7 +64,7 @@
             (click)="editFolder(f.node)"
             appA11yTitle="{{ 'editFolder' | i18n }}"
           >
-            <i class="bwi bwi-pencil bwi-fw" aria-hidden="true"></i>
+            <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
           </button>
         </span>
         <ul

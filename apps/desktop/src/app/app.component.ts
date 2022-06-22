@@ -70,7 +70,7 @@ const systemTimeoutOptions = {
     <app-header></app-header>
     <div id="container">
       <div class="loading" *ngIf="loading">
-        <i class="bwi bwi-spinner bwi-spin bwi-3x" aria-hidden="true"></i>
+        <i class="fa fa-spinner fa-spin fa-3x" aria-hidden="true"></i>
       </div>
       <router-outlet *ngIf="!loading"></router-outlet>
     </div>
@@ -217,7 +217,7 @@ export class AppComponent implements OnInit {
               this.i18nService.t("close")
             );
             if (result) {
-              this.platformUtilsService.launchUri("https://bitwarden.com/help/fingerprint-phrase/");
+              this.platformUtilsService.launchUri("https://docs.hitachi-id.net/safe/#/home/27269/10/11");
             }
             break;
           }
@@ -261,7 +261,7 @@ export class AppComponent implements OnInit {
             );
             if (emailVerificationConfirmed) {
               this.platformUtilsService.launchUri(
-                "https://bitwarden.com/help/create-bitwarden-account/"
+                "https://hitachi-id.com/help/create-bitwarden-account/"
               );
             }
             break;

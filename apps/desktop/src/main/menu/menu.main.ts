@@ -7,7 +7,7 @@ import { Main } from "../../main";
 import { MenuUpdateRequest } from "./menu.updater";
 import { Menubar } from "./menubar";
 
-const cloudWebVaultUrl = "https://vault.bitwarden.com";
+const cloudWebVaultUrl = "https://vault.hitachi-id.com";
 
 export class MenuMain extends BaseMenu {
   constructor(private main: Main) {

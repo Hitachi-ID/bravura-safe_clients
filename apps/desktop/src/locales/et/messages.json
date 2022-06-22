@@ -1,6 +1,6 @@
 {
   "bitwarden": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "filters": {
     "message": "Filtrid"
@@ -73,11 +73,11 @@
     "message": "Nimi"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -86,7 +86,7 @@
     }
   },
   "newUri": {
-    "message": "Uus URI"
+    "message": "Uus URL"
   },
   "username": {
     "message": "Kasutajanimi"
@@ -392,7 +392,7 @@
     "message": "Kopeeri parool"
   },
   "copyUri": {
-    "message": "Kopeeri URI"
+    "message": "Kopeeri URL"
   },
   "copyVerificationCodeTotp": {
     "message": "Kopeeri Kinnituskood (TOTP)"
@@ -764,7 +764,7 @@
     "message": "Muuda ülemparooli"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Saad oma ülemparooli muuta bitwarden.com veebihoidlas. Soovid seda kohe teha?"
+    "message": "Saad oma ülemparooli muuta hitachi-id.com veebihoidlas. Soovid seda kohe teha?"
   },
   "fingerprintPhrase": {
     "message": "Sõrmejälje fraas",
@@ -804,7 +804,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -812,7 +812,7 @@
     "message": "Vale ülemparool"
   },
   "twoStepLoginConfirmation": {
-    "message": "Kaheastmeline kinnitamine aitab konto turvalisust tõsta. Lisaks paroolile pead kontole ligipääsemiseks kinnitama sisselogimise päringu SMS-ga, telefonikõnega, autentimise rakendusega või e-postiga. Kaheastmelist kinnitust saab sisse lülitada bitwarden.com veebihoidlas. Soovid seda kohe avada?"
+    "message": "Kaheastmeline kinnitamine aitab konto turvalisust tõsta. Lisaks paroolile pead kontole ligipääsemiseks kinnitama sisselogimise päringu SMS-ga, telefonikõnega, autentimise rakendusega või e-postiga. Kaheastmelist kinnitust saab sisse lülitada hitachi-id.com veebihoidlas. Soovid seda kohe avada?"
   },
   "twoStepLogin": {
     "message": "Kaheastmeline kinnitamine"
@@ -988,7 +988,7 @@
     "message": "Vajalik on rakenduse taaskäivitamine"
   },
   "restartToUpdateDesc": {
-    "message": "Versioon $VERSION_NUM$ on paigaldamiseks valmis. Paigaldamise lõpetamiseks on vajalik Bitwarden taaskäivitada. Soovid seda kohe teha?",
+    "message": "Versioon $VERSION_NUM$ on paigaldamiseks valmis. Paigaldamise lõpetamiseks on vajalik Bravura Safe taaskäivitada. Soovid seda kohe teha?",
     "placeholders": {
       "version_num": {
         "content": "$1",
@@ -1035,7 +1035,7 @@
     "message": "Halda Preemium versiooni"
   },
   "premiumManageAlert": {
-    "message": "Saad Preemium versiooni hallata bitwarden.com veebihoidlas. Soovid seda kohe teha?"
+    "message": "Saad Preemium versiooni hallata hitachi-id.com veebihoidlas. Soovid seda kohe teha?"
   },
   "premiumRefresh": {
     "message": "Uuenda staatust"
@@ -1068,7 +1068,7 @@
     "message": "Osta Preemium"
   },
   "premiumPurchaseAlert": {
-    "message": "Saad Preemium versiooni osta bitwarden.com veebihoidlas. Soovid seda kohe teha?"
+    "message": "Saad Preemium versiooni osta hitachi-id.com veebihoidlas. Soovid seda kohe teha?"
   },
   "premiumCurrentMember": {
     "message": "Oled preemium kasutaja!"
@@ -1151,7 +1151,7 @@
     "message": "Teenused"
   },
   "hideBitwarden": {
-    "message": "Peida Bitwarden"
+    "message": "Peida Bravura Safe"
   },
   "hideOthers": {
     "message": "Peida teised"
@@ -1217,18 +1217,18 @@
   },
   "matchDetection": {
     "message": "Sobivuse tuvastamine",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Vaike sobivuse tuvastamine",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Valik sisse"
   },
   "organization": {
     "message": "Organisatsioon",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "default": {
     "message": "Vaikimisi"
@@ -1550,7 +1550,7 @@
   },
   "allSends": {
     "message": "Kõik Sendid",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Shares' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "Fail"
@@ -1560,11 +1560,11 @@
   },
   "searchSends": {
     "message": "Otsi Sende",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
     "message": "Muuda Sendi",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "myVault": {
     "message": "Minu hoidla"
@@ -1576,72 +1576,72 @@
     "message": "Kustutamise kuupäev"
   },
   "deletionDateDesc": {
-    "message": "Send kustutatakse määratud kuupäeval ja kellaajal jäädavalt.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share kustutatakse määratud kuupäeval ja kellaajal jäädavalt.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Aegumiskuupäev"
   },
   "expirationDateDesc": {
     "message": "Selle valimisel ei pääse sellele Sendile enam pärast määratud kuupäeva ligi.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "Maksimaalne ligipääsude arv"
   },
   "maxAccessCountDesc": {
     "message": "Selle valimisel ei saa kasutajad pärast maksimaalse ligipääsude arvu saavutamist sellele Sendile enam ligi.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Hetkeline ligipääsude arv"
   },
   "disableSend": {
-    "message": "Keela see Send, et keegi ei pääseks sellele ligi.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Keela see Share, et keegi ei pääseks sellele ligi.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
     "message": "Soovi korral nõua parooli, millega Sendile ligi pääseb.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
     "message": "Privaatne märkus selle Sendi kohta.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
     "message": "Sendi link",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinkLabel": {
     "message": "Sendi link",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "textHiddenByDefault": {
     "message": "Sendi avamisel peida tekst automaatselt",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Send on loodud",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share on loodud",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
     "message": "Muudetud",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
-    "message": "Send on kustutatud",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share on kustutatud",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "Uus Parool"
   },
   "whatTypeOfSend": {
-    "message": "Mis tüüpi Send see on?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Mis tüüpi Share see on?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createSend": {
-    "message": "Loo Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Loo Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Tekst, mida soovid saata."
@@ -1666,22 +1666,22 @@
   },
   "deleteSendConfirmation": {
     "message": "Soovid tõesti selle Sendi kustutada?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkToClipboard": {
     "message": "Kopeeri Sendi link lõikelauale",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkOnSave": {
     "message": "Salvestamisel kopeeri Sendi jagamise link lõikepuhvrisse."
   },
   "sendDisabled": {
-    "message": "Send on väljalülitatud",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share on väljalülitatud",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "Ettevõtte poliitika kohaselt saad ainult olemasolevat Sendi kustutada.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copyLink": {
     "message": "Kopeeri link"

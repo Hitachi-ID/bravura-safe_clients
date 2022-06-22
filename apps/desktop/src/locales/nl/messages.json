@@ -1,6 +1,6 @@
 {
   "bitwarden": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "filters": {
     "message": "Filters"
@@ -73,11 +73,11 @@
     "message": "Naam"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -86,7 +86,7 @@
     }
   },
   "newUri": {
-    "message": "Nieuwe URI"
+    "message": "Nieuwe URL"
   },
   "username": {
     "message": "Gebruikersnaam"
@@ -392,7 +392,7 @@
     "message": "Wachtwoord kopiëren"
   },
   "copyUri": {
-    "message": "URI kopiëren"
+    "message": "URL kopiëren"
   },
   "copyVerificationCodeTotp": {
     "message": "Verificatiecode kopiëren (TOTP)"
@@ -659,7 +659,7 @@
     "message": "Zelfgehoste omgeving"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Geef de basis-URL van jouw zelfgehoste Bitwarden-installatie."
+    "message": "Geef de basis-URL van jouw zelfgehoste Bravura Safe-installatie."
   },
   "customEnvironment": {
     "message": "Aangepaste omgeving"
@@ -764,7 +764,7 @@
     "message": "Hoofdwachtwoord wijzigen"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Je kunt je hoofdwachtwoord wijzigen in de kluis op bitwarden.com. Wil je de website nu bezoeken?"
+    "message": "Je kunt je hoofdwachtwoord wijzigen in de kluis op hitachi-id.com. Wil je de website nu bezoeken?"
   },
   "fingerprintPhrase": {
     "message": "Vingerafdrukzin",
@@ -804,7 +804,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -812,7 +812,7 @@
     "message": "Ongeldig hoofdwachtwoord"
   },
   "twoStepLoginConfirmation": {
-    "message": "Tweestapsaanmelding beschermt je account door je inlogpoging te bevestigen met een ander apparaat zoals een beveiligingssleutel, authenticatie-app, SMS, spraakoproep of e-mail. Je kunt Tweestapsaanmelding inschakelen in de webkluis op bitwarden.com. Wil je de website nu bezoeken?"
+    "message": "Tweestapsaanmelding beschermt je account door je inlogpoging te bevestigen met een ander apparaat zoals een beveiligingssleutel, authenticatie-app, SMS, spraakoproep of e-mail. Je kunt Tweestapsaanmelding inschakelen in de webkluis op hitachi-id.com. Wil je de website nu bezoeken?"
   },
   "twoStepLogin": {
     "message": "Tweestapsaanmelding"
@@ -934,13 +934,13 @@
     "message": "Automatisch starten bij inloggen"
   },
   "openAtLoginDesc": {
-    "message": "Bitwarden-desktopapplicatie automatisch starten bij inloggen."
+    "message": "Bravura Safe-desktopapplicatie automatisch starten bij inloggen."
   },
   "alwaysShowDock": {
     "message": "Altijd laten zien in het dock"
   },
   "alwaysShowDockDesc": {
-    "message": "Toon het Bitwarden-pictogram in het dock, zelfs wanneer geminimaliseerd in de menubalk."
+    "message": "Toon het Bravura Safe-pictogram in het dock, zelfs wanneer geminimaliseerd in de menubalk."
   },
   "confirmTrayTitle": {
     "message": "Uitschakelen van het systeemvakpictogram bevestigen"
@@ -985,10 +985,10 @@
     }
   },
   "restartToUpdate": {
-    "message": "Bitwarden opnieuw starten om bij te werken"
+    "message": "Bravura Safe opnieuw starten om bij te werken"
   },
   "restartToUpdateDesc": {
-    "message": "Versie $VERSION_NUM$ is klaar voor installatie. Je moet Bitwarden opnieuw opstarten om de installatie af te ronden. Wil je nu opnieuw opstarten en bijwerken?",
+    "message": "Versie $VERSION_NUM$ is klaar voor installatie. Je moet Bravura Safe opnieuw opstarten om de installatie af te ronden. Wil je nu opnieuw opstarten en bijwerken?",
     "placeholders": {
       "version_num": {
         "content": "$1",
@@ -1035,7 +1035,7 @@
     "message": "Abonnement beheren"
   },
   "premiumManageAlert": {
-    "message": "Je kunt je abonnement aanpassen in de webkluis op bitwarden.com. Wil je de website nu bezoeken?"
+    "message": "Je kunt je abonnement aanpassen in de webkluis op hitachi-id.com. Wil je de website nu bezoeken?"
   },
   "premiumRefresh": {
     "message": "Abonnement vernieuwen"
@@ -1068,13 +1068,13 @@
     "message": "Premium aanschaffen"
   },
   "premiumPurchaseAlert": {
-    "message": "Je kunt een Premium-abonnement aanschaffen in de webkluis op bitwarden.com. Wil je de website nu bezoeken?"
+    "message": "Je kunt een Premium-abonnement aanschaffen in de webkluis op hitachi-id.com. Wil je de website nu bezoeken?"
   },
   "premiumCurrentMember": {
     "message": "Je bent Premium-lid!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Bedankt voor het ondersteunen van Bitwarden."
+    "message": "Bedankt voor het ondersteunen van Bravura Safe."
   },
   "premiumPrice": {
     "message": "Dit alles voor slechts $PRICE$ per jaar!",
@@ -1145,13 +1145,13 @@
     "description": "Bring all windows to front (foreground)"
   },
   "aboutBitwarden": {
-    "message": "Over Bitwarden"
+    "message": "Over Bravura Safe"
   },
   "services": {
     "message": "Diensten"
   },
   "hideBitwarden": {
-    "message": "Bitwarden verbergen"
+    "message": "Bravura Safe verbergen"
   },
   "hideOthers": {
     "message": "Overige verbergen"
@@ -1160,7 +1160,7 @@
     "message": "Alles weergeven"
   },
   "quitBitwarden": {
-    "message": "Bitwarden afsluiten"
+    "message": "Bravura Safe afsluiten"
   },
   "valueCopied": {
     "message": "$VALUE$ gekopieerd",
@@ -1217,18 +1217,18 @@
   },
   "matchDetection": {
     "message": "Overeenkomstdetectie",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Standaard overeenkomstdetectie",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Opties schakelen"
   },
   "organization": {
     "message": "Organisatie",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "default": {
     "message": "Standaard"
@@ -1275,7 +1275,7 @@
     "message": "Deze export versleutelt je gegevens met de encryptiesleutel van je account. Als je je encryptiesleutel verandert moet je opnieuw exporteren, omdat je deze export dan niet meer kunt ontcijferen."
   },
   "encExportAccountWarningDesc": {
-    "message": "Encryptiesleutels zijn uniek voor elk Bitwarden-gebruikersaccount, je kun kunt een versleutelde niet in een ander account importeren."
+    "message": "Encryptiesleutels zijn uniek voor elk Bravura Safe-gebruikersaccount, je kun kunt een versleutelde niet in een ander account importeren."
   },
   "noOrganizationsList": {
     "message": "Je behoort niet tot een organisatie. Via organisaties deel je je items veilig met andere gebruikers."
@@ -1305,7 +1305,7 @@
     "message": "Zwak hoofdwachtwoord"
   },
   "weakMasterPasswordDesc": {
-    "message": "Je hebt een zwak hoofdwachtwoord gekozen. Gebruik een sterk hoofdwachtwoord (of wachtwoordzin) om jouw Bitwarden-account goed te beschermen. Weet je zeker dat je dit hoofdwachtwoord wilt gebruiken?"
+    "message": "Je hebt een zwak hoofdwachtwoord gekozen. Gebruik een sterk hoofdwachtwoord (of wachtwoordzin) om jouw Bravura Safe-account goed te beschermen. Weet je zeker dat je dit hoofdwachtwoord wilt gebruiken?"
   },
   "pin": {
     "message": "PIN-code",
@@ -1315,7 +1315,7 @@
     "message": "Ontgrendelen met PIN"
   },
   "setYourPinCode": {
-    "message": "Stel je PIN-code in voor het ontgrendelen van Bitwarden. Je PIN-code wordt opnieuw ingesteld als je je ooit volledig afmeldt bij de applicatie."
+    "message": "Stel je PIN-code in voor het ontgrendelen van Bravura Safe. Je PIN-code wordt opnieuw ingesteld als je je ooit volledig afmeldt bij de applicatie."
   },
   "pinRequired": {
     "message": "PIN-code vereist."
@@ -1327,7 +1327,7 @@
     "message": "Ontgrendelen met Windows Hello"
   },
   "windowsHelloConsentMessage": {
-    "message": "Verifiëren voor Bitwarden."
+    "message": "Verifiëren voor Bravura Safe."
   },
   "unlockWithTouchId": {
     "message": "Ontgrendelen met Touch ID"
@@ -1549,8 +1549,8 @@
     "message": "Een organisatiebeleid heeft invloed op je eigendomsopties."
   },
   "allSends": {
-    "message": "Alle Sends",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Alle Shares",
+    "description": "'Shares' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "Bestand"
@@ -1559,12 +1559,12 @@
     "message": "Tekst"
   },
   "searchSends": {
-    "message": "Sends zoeken",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Shares zoeken",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Send bewerken",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share bewerken",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "myVault": {
     "message": "Mijn kluis"
@@ -1576,72 +1576,72 @@
     "message": "Verwijderingsdatum"
   },
   "deletionDateDesc": {
-    "message": "Deze Send wordt op de aangegeven datum en tijd definitief verwijderd.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Deze Share wordt op de aangegeven datum en tijd definitief verwijderd.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Vervaldatum"
   },
   "expirationDateDesc": {
-    "message": "Als dit is ingesteld verloopt deze Send op een specifieke datum en tijd.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Als dit is ingesteld verloopt deze Share op een specifieke datum en tijd.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "Maximum toegangsaantal"
   },
   "maxAccessCountDesc": {
-    "message": "Als dit is ingesteld kunnen gebruikers deze Send niet meer benaderen zodra het maximale aantal toegang is bereikt.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Als dit is ingesteld kunnen gebruikers deze Share niet meer benaderen zodra het maximale aantal toegang is bereikt.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Huidige toegangsaantal"
   },
   "disableSend": {
-    "message": "Schakel deze Send uit zodat niemand hem kan benaderen.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Schakel deze Share uit zodat niemand hem kan benaderen.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
-    "message": "Vereis optioneel een wachtwoord voor gebruikers om toegang te krijgen tot deze Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Vereis optioneel een wachtwoord voor gebruikers om toegang te krijgen tot deze Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "Privénotities over deze Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Privénotities over deze Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
-    "message": "Send-link",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share-link",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinkLabel": {
-    "message": "Send-link",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share-link",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "textHiddenByDefault": {
-    "message": "Verberg de tekst standaard bij het gebruiken van de Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Verberg de tekst standaard bij het gebruiken van de Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Send aangemaakt",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share aangemaakt",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "Send bewerkt",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share bewerkt",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
-    "message": "Send verwijderd",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share verwijderd",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "Nieuw wachtwoord"
   },
   "whatTypeOfSend": {
-    "message": "Wat voor soort Send is dit?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Wat voor soort Share is dit?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createSend": {
-    "message": "Send aanmaken",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share aanmaken",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "De tekst die je wilt versturen."
@@ -1665,23 +1665,23 @@
     "message": "Aangepast"
   },
   "deleteSendConfirmation": {
-    "message": "Weet je zeker dat je deze Send wilt verwijderen?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Weet je zeker dat je deze Share wilt verwijderen?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkToClipboard": {
-    "message": "Send-link naar klembord kopiëren",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share-link naar klembord kopiëren",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkOnSave": {
     "message": "Kopieer de link om deze Share te delen bij het opslaan naar mijn klembord."
   },
   "sendDisabled": {
-    "message": "Send uitgeschakeld",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share uitgeschakeld",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "Als gevolg van een ondernemingsbeleid kun je alleen een bestaande Send verwijderen.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Als gevolg van een ondernemingsbeleid kun je alleen een bestaande Share verwijderen.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copyLink": {
     "message": "Link kopiëren"
@@ -1705,7 +1705,7 @@
     "message": "Verberg mijn e-mailadres voor ontvangers."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "Een of meer organisatiebeleidseisen heeft invloed op de mogelijkheden van je Send."
+    "message": "Een of meer organisatiebeleidseisen heeft invloed op de mogelijkheden van je Share."
   },
   "emailVerificationRequired": {
     "message": "E-mailverificatie vereist"

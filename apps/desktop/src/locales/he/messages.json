@@ -1,6 +1,6 @@
 {
   "bitwarden": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "filters": {
     "message": "מסננים"
@@ -77,7 +77,7 @@
   },
   "uriPosition": {
     "message": "כתובת $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -659,7 +659,7 @@
     "message": "סביבה על שרתים מקומיים"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "הזן את כתובת השרת המקומי של Bitwarden."
+    "message": "הזן את כתובת השרת המקומי של Bravura Safe."
   },
   "customEnvironment": {
     "message": "סביבה מותאמת אישית"
@@ -764,7 +764,7 @@
     "message": "החלף סיסמה ראשית"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "באפשרותך לשנות את הסיסמה הראשית שלך דרך הכספת באתר bitwarden.com. האם ברצונך לפתוח את האתר כעת?"
+    "message": "באפשרותך לשנות את הסיסמה הראשית שלך דרך הכספת באתר hitachi-id.com. האם ברצונך לפתוח את האתר כעת?"
   },
   "fingerprintPhrase": {
     "message": "סיסמת טביעת אצבע",
@@ -804,7 +804,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -812,7 +812,7 @@
     "message": "סיסמה ראשית שגויה"
   },
   "twoStepLoginConfirmation": {
-    "message": "התחברות בשני-שלבים הופכת את החשבון שלך למאובטח יותר בכך שאתה נדרש לוודא בכל כניסה בעזרת מכשיר אחר כדוגמת מפתח אבטחה, תוכנת אימות, SMS, שיחת טלפון, או אימייל. ניתן להפעיל את \"התחברות בשני-שלבים\" בכספת שבאתר bitwarden.com. האם ברצונך לפתוח את האתר כעת?"
+    "message": "התחברות בשני-שלבים הופכת את החשבון שלך למאובטח יותר בכך שאתה נדרש לוודא בכל כניסה בעזרת מכשיר אחר כדוגמת מפתח אבטחה, תוכנת אימות, SMS, שיחת טלפון, או אימייל. ניתן להפעיל את \"התחברות בשני-שלבים\" בכספת שבאתר hitachi-id.com. האם ברצונך לפתוח את האתר כעת?"
   },
   "twoStepLogin": {
     "message": "התחברות בשני-שלבים"
@@ -934,13 +934,13 @@
     "message": "הפעלה אוטומטית באתחול המערכת"
   },
   "openAtLoginDesc": {
-    "message": "התחל באופן אוטומטי את אפליקציית שולחן העבודה של Bitwarden בהתחברות."
+    "message": "התחל באופן אוטומטי את אפליקציית שולחן העבודה של Bravura Safe בהתחברות."
   },
   "alwaysShowDock": {
     "message": "הצג תמיד ב-Dock"
   },
   "alwaysShowDockDesc": {
-    "message": "הצג את הסמל של Bitwarden ב-Dock גם כשהתוכנה ממוזערת במגש המערכת."
+    "message": "הצג את הסמל של Bravura Safe ב-Dock גם כשהתוכנה ממוזערת במגש המערכת."
   },
   "confirmTrayTitle": {
     "message": "אשר השבתת מגש המערכת"
@@ -1035,7 +1035,7 @@
     "message": "נהל חשבון"
   },
   "premiumManageAlert": {
-    "message": "באפשרותך לנהל את החשבון שלך דרך הכספת באתר bitwarden.com. האם ברצונך לפתוח את האתר כעת?"
+    "message": "באפשרותך לנהל את החשבון שלך דרך הכספת באתר hitachi-id.com. האם ברצונך לפתוח את האתר כעת?"
   },
   "premiumRefresh": {
     "message": "רענן פרטי חשבון"
@@ -1068,7 +1068,7 @@
     "message": "רכוש פרימיום"
   },
   "premiumPurchaseAlert": {
-    "message": "באפשרותך לרכוש מנוי פרימיום בכספת באתר bitwarden.com. האם ברצונך לפתוח את האתר כעת?"
+    "message": "באפשרותך לרכוש מנוי פרימיום בכספת באתר hitachi-id.com. האם ברצונך לפתוח את האתר כעת?"
   },
   "premiumCurrentMember": {
     "message": "אתה מנוי פרימיום!"
@@ -1145,13 +1145,13 @@
     "description": "Bring all windows to front (foreground)"
   },
   "aboutBitwarden": {
-    "message": "אודות Bitwarden"
+    "message": "אודות Bravura Safe"
   },
   "services": {
     "message": "שירותים"
   },
   "hideBitwarden": {
-    "message": "הסתר את Bitwarden"
+    "message": "הסתר את Bravura Safe"
   },
   "hideOthers": {
     "message": "הסתר אחרים"
@@ -1217,18 +1217,18 @@
   },
   "matchDetection": {
     "message": "זיהוי התאמה",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "ברירת מחדל לזיהוי התאמות",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "הצגה\\הסתרה של אפשרויות"
   },
   "organization": {
     "message": "ארגון",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "default": {
     "message": "ברירת מחדל"
@@ -1275,7 +1275,7 @@
     "message": "ייצוא זה מצפין את הנתונים שלך באמצעות מפתח ההצפנה של חשבונך. אם אי פעם תחדש את מפתח ההצפנה עבור חשבונך, יהיה עליך לייצא שוב מכיוון שלא תוכל לפענח מקובץ ייצוא זה."
   },
   "encExportAccountWarningDesc": {
-    "message": "מפתחות הצפנת חשבון ייחודיים לכל חשבון משתמש של Bitwarden, כך שלא ניתן לייבא ייצוא מוצפן לחשבון אחר."
+    "message": "מפתחות הצפנת חשבון ייחודיים לכל חשבון משתמש של Bravura Safe, כך שלא ניתן לייבא ייצוא מוצפן לחשבון אחר."
   },
   "noOrganizationsList": {
     "message": "אינך משויך לארגון. ניתן לשתף באופן מאובטח פריטים רק עם משתמשים אחרים בתוך ארגון."
@@ -1315,7 +1315,7 @@
     "message": "בטל נעילה עם קוד PIN"
   },
   "setYourPinCode": {
-    "message": "קבע קוד PIN לביטול נעילת Bitwarden. הגדרות הPIN יאופסו אם תבצע יציאה מהתוכנה."
+    "message": "קבע קוד PIN לביטול נעילת Bravura Safe. הגדרות הPIN יאופסו אם תבצע יציאה מהתוכנה."
   },
   "pinRequired": {
     "message": "נדרש קוד PIN."
@@ -1327,7 +1327,7 @@
     "message": "שחרור נעילה עם Windows Hello"
   },
   "windowsHelloConsentMessage": {
-    "message": "אימות עבור Bitwarden."
+    "message": "אימות עבור Bravura Safe."
   },
   "unlockWithTouchId": {
     "message": "שחרור נעילה עם Touch ID"
@@ -1550,7 +1550,7 @@
   },
   "allSends": {
     "message": "כל השליחות",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Shares' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "קובץ"
@@ -1560,11 +1560,11 @@
   },
   "searchSends": {
     "message": "חיפוש שליחויות",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "ערוך Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "ערוך Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "myVault": {
     "message": "הכספת שלי"
@@ -1577,71 +1577,71 @@
   },
   "deletionDateDesc": {
     "message": "המשלוח יימחק לצמיתות בתאריך ובשעה שצוינו.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "תאריך תפוגה"
   },
   "expirationDateDesc": {
     "message": "במדה והגדרת זמן, הגישה לשליחה זו תושבת בתאריך ובשעה שהוגדרו.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "מונה גישה מרבי"
   },
   "maxAccessCountDesc": {
     "message": "אם תגדיר, משתמשים כבר לא יוכלו לגשת לשליחה זו לאחר שמספר הגישות המרבי יושג.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "מונה גישה נוכחית"
   },
   "disableSend": {
     "message": "השבת את השליחה הזאת ואל תאפשר גישה אליה.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
     "message": "לחלופין, דרוש סיסמה לכל המשתמשים כדי לגשת לשליחה זאת.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
     "message": "הערות אישיות אודות השליחה הזאת.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
     "message": "שלח קישור",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinkLabel": {
     "message": "שלח קישור",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "textHiddenByDefault": {
     "message": "בעת גישה לשליחה, הסתר את הטקסט בברירת מחדל",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "ה-Send נוצר",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "ה-Share נוצר",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
     "message": "שליחה שנערכה",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
     "message": "השליחה נמחקה",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "סיסמה חדשה"
   },
   "whatTypeOfSend": {
     "message": "איזה סוג של שליחה הוא זה?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createSend": {
-    "message": "צור Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "צור Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "הטקסט שברצונך לשלוח."
@@ -1666,22 +1666,22 @@
   },
   "deleteSendConfirmation": {
     "message": "האם אתה בטוח שברצונך למחוק את המשלוח הזה?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkToClipboard": {
-    "message": "העתק את קישור ה-Send ללוח",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "העתק את קישור ה-Share ללוח",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkOnSave": {
-    "message": "בשמירה העתק את הקישור ללוח כדי לשתף את ה-Send."
+    "message": "בשמירה העתק את הקישור ללוח כדי לשתף את ה-Share."
   },
   "sendDisabled": {
-    "message": "ה-Send הושבת",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "ה-Share הושבת",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "בשל מדיניות החברה, אתה יכול למחוק רק משלוח קיים.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copyLink": {
     "message": "העתק קישור"

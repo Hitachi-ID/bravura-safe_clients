@@ -15,7 +15,6 @@ export class AccountMenu implements IMenubarMenu {
 
   get items(): MenuItemConstructorOptions[] {
     return [
-      this.premiumMembership,
       this.changeMasterPassword,
       this.twoStepLogin,
       this.fingerprintPhrase,
