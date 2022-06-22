@@ -1,6 +1,6 @@
 {
   "bitwarden": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "filters": {
     "message": "Filtry"
@@ -73,11 +73,11 @@
     "message": "Název"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -86,7 +86,7 @@
     }
   },
   "newUri": {
-    "message": "Nová URI"
+    "message": "Nová URL"
   },
   "username": {
     "message": "Uživatelské jméno"
@@ -392,7 +392,7 @@
     "message": "Kopírovat heslo"
   },
   "copyUri": {
-    "message": "Kopírovat URI"
+    "message": "Kopírovat URL"
   },
   "copyVerificationCodeTotp": {
     "message": "Kopírovat ověřovací kód (TOTP)"
@@ -659,7 +659,7 @@
     "message": "Vlastnoručně hostované prostředí"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Zadejte základní URL adresu vlastnoručně hostované aplikace Bitwarden."
+    "message": "Zadejte základní URL adresu vlastnoručně hostované aplikace Bravura Safe."
   },
   "customEnvironment": {
     "message": "Vlastní prostředí"
@@ -764,7 +764,7 @@
     "message": "Změnit hlavní heslo"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Hlavní heslo si můžete změnit na webové stránce bitwarden.com. Chcete tuto stránku nyní otevřít?"
+    "message": "Hlavní heslo si můžete změnit na webové stránce hitachi-id.com. Chcete tuto stránku nyní otevřít?"
   },
   "fingerprintPhrase": {
     "message": "Fráze otisku prstu",
@@ -804,7 +804,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -812,7 +812,7 @@
     "message": "Chybné hlavní heslo"
   },
   "twoStepLoginConfirmation": {
-    "message": "Dvoufázové přihlášení činí váš účet mnohem bezpečnějším díky nutnosti po každém úspěšném přihlášení zadat ověřovací kód získaný z aplikace, SMS, e-mailu nebo telefonního hovoru. Dvoufázové přihlášení lze aktivovat na webové stránce bitwarden.com. Chcete tuto stránku nyní otevřít?"
+    "message": "Dvoufázové přihlášení činí váš účet mnohem bezpečnějším díky nutnosti po každém úspěšném přihlášení zadat ověřovací kód získaný z aplikace, SMS, e-mailu nebo telefonního hovoru. Dvoufázové přihlášení lze aktivovat na webové stránce hitachi-id.com. Chcete tuto stránku nyní otevřít?"
   },
   "twoStepLogin": {
     "message": "Dvoufázové přihlášení"
@@ -934,13 +934,13 @@
     "message": "Spustit automaticky při přihlášení"
   },
   "openAtLoginDesc": {
-    "message": "Při přihlášení automaticky spustit aplikaci Bitwarden."
+    "message": "Při přihlášení automaticky spustit aplikaci Bravura Safe."
   },
   "alwaysShowDock": {
     "message": "Vždy zobrazovat v Docku"
   },
   "alwaysShowDockDesc": {
-    "message": "Zobrazit ikonu Bitwarden v Docku, i když je minimalizován na liště nabídky."
+    "message": "Zobrazit ikonu Bravura Safe v Docku, i když je minimalizován na liště nabídky."
   },
   "confirmTrayTitle": {
     "message": "Potvrdit zakázání lišty"
@@ -988,7 +988,7 @@
     "message": "Restartovat pro aktualizaci"
   },
   "restartToUpdateDesc": {
-    "message": "Verze $VERSION_NUM$ je připravena k instalaci. Pro dokončení je ovšem potřeba restartovat aplikaci Bitwarden. Chcete nyní provést restart a aktualizaci?",
+    "message": "Verze $VERSION_NUM$ je připravena k instalaci. Pro dokončení je ovšem potřeba restartovat aplikaci Bravura Safe. Chcete nyní provést restart a aktualizaci?",
     "placeholders": {
       "version_num": {
         "content": "$1",
@@ -1035,7 +1035,7 @@
     "message": "Spravovat členství"
   },
   "premiumManageAlert": {
-    "message": "Své členství můžete spravovat na webové stránce bitwarden.com. Chcete tuto stránku nyní otevřít?"
+    "message": "Své členství můžete spravovat na webové stránce hitachi-id.com. Chcete tuto stránku nyní otevřít?"
   },
   "premiumRefresh": {
     "message": "Obnovit členství"
@@ -1068,13 +1068,13 @@
     "message": "Zakoupit prémiové členství"
   },
   "premiumPurchaseAlert": {
-    "message": "Prémiové členství můžete zakoupit na webové stránce bitwarden.com. Chcete tuto stránku nyní otevřít?"
+    "message": "Prémiové členství můžete zakoupit na webové stránce hitachi-id.com. Chcete tuto stránku nyní otevřít?"
   },
   "premiumCurrentMember": {
     "message": "Jste prémiovým členem!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Děkujeme za podporu Bitwarden."
+    "message": "Děkujeme za podporu Bravura Safe."
   },
   "premiumPrice": {
     "message": "Vše jen za $PRICE$ ročně!",
@@ -1145,13 +1145,13 @@
     "description": "Bring all windows to front (foreground)"
   },
   "aboutBitwarden": {
-    "message": "O Bitwarden"
+    "message": "O Bravura Safe"
   },
   "services": {
     "message": "Služby"
   },
   "hideBitwarden": {
-    "message": "Skrýt Bitwarden"
+    "message": "Skrýt Bravura Safe"
   },
   "hideOthers": {
     "message": "Skrýt ostatní"
@@ -1160,7 +1160,7 @@
     "message": "Zobrazit vše"
   },
   "quitBitwarden": {
-    "message": "Ukončit Bitwarden"
+    "message": "Ukončit Bravura Safe"
   },
   "valueCopied": {
     "message": "$VALUE$ zkopírováno",
@@ -1217,18 +1217,18 @@
   },
   "matchDetection": {
     "message": "Zjišťování shody",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Výchozí",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Přepnout možnosti"
   },
   "organization": {
     "message": "Organizace",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "default": {
     "message": "Výchozí"
@@ -1275,7 +1275,7 @@
     "message": "Tento export zašifruje vaše data pomocí šifrovacího klíče vašeho účtu. Pokud někdy změníte šifrovací klíč vašeho účtu, měli by jste vyexportovat data znovu, protože tento exportovaný soubor nebudete moci dešifrovat."
   },
   "encExportAccountWarningDesc": {
-    "message": "Šifrovací klíče účtů jsou jedinečné pro každý Bitwarden uživatelský účet, takže nelze importovat šifrovaný export do jiného účtu."
+    "message": "Šifrovací klíče účtů jsou jedinečné pro každý Bravura Safe uživatelský účet, takže nelze importovat šifrovaný export do jiného účtu."
   },
   "noOrganizationsList": {
     "message": "Nepatříte do žádné organizace. Organizace umožňují bezpečné sdílení položek s ostatními uživateli."
@@ -1305,7 +1305,7 @@
     "message": "Slabé hlavní heslo"
   },
   "weakMasterPasswordDesc": {
-    "message": "Hlavní heslo, které jste si vybrali, je slabé. Pro správnou ochranu účtu Bitwarden byste měli použít silné hlavní heslo (nebo heslovou frázi). Opravdu chcete toto heslo použít?"
+    "message": "Hlavní heslo, které jste si vybrali, je slabé. Pro správnou ochranu účtu Bravura Safe byste měli použít silné hlavní heslo (nebo heslovou frázi). Opravdu chcete toto heslo použít?"
   },
   "pin": {
     "message": "PIN",
@@ -1327,7 +1327,7 @@
     "message": "Odemknout pomocí Windows Hello"
   },
   "windowsHelloConsentMessage": {
-    "message": "Ověřte se pro Bitwarden."
+    "message": "Ověřte se pro Bravura Safe."
   },
   "unlockWithTouchId": {
     "message": "Odemknout pomocí Touch ID"
@@ -1549,8 +1549,8 @@
     "message": "Zásady organizace ovlivňují možnosti vlastnictví."
   },
   "allSends": {
-    "message": "Všechny Sends",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Všechny Shares",
+    "description": "'Shares' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "Soubor"
@@ -1559,12 +1559,12 @@
     "message": "Text"
   },
   "searchSends": {
-    "message": "Hledat Sends",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Hledat Shares",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Upravit Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Upravit Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "myVault": {
     "message": "Můj trezor"
@@ -1576,72 +1576,72 @@
     "message": "Datum smazání"
   },
   "deletionDateDesc": {
-    "message": "Tento Send bude trvale smazán v určený datum a čas.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Tento Share bude trvale smazán v určený datum a čas.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Datum expirace"
   },
   "expirationDateDesc": {
-    "message": "Je-li nastaveno, přístup k tomuto Send vyprší v daný datum a čas.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Je-li nastaveno, přístup k tomuto Share vyprší v daný datum a čas.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "Maximální počet přístupů"
   },
   "maxAccessCountDesc": {
-    "message": "Je-li nastaveno, uživatelé již nebudou mít přístup k tomuto Send, jakmile bude dosaženo maximálního počtu přístupů.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Je-li nastaveno, uživatelé již nebudou mít přístup k tomuto Share, jakmile bude dosaženo maximálního počtu přístupů.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Počet aktuálních přístupů"
   },
   "disableSend": {
-    "message": "Deaktivujte tento Send, aby k němu nikdo neměl přístup.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Deaktivujte tento Share, aby k němu nikdo neměl přístup.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
-    "message": "Volitelně vyžadovat heslo pro přístup k tomuto Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Volitelně vyžadovat heslo pro přístup k tomuto Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "Soukromé poznámky o tomto Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Soukromé poznámky o tomto Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
-    "message": "Odkaz tohoto Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Odkaz tohoto Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinkLabel": {
-    "message": "Odkaz tohoto Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Odkaz tohoto Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "textHiddenByDefault": {
-    "message": "Při přístupu k tomuto Send, ve výchozím nastavení skrýt text",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Při přístupu k tomuto Share, ve výchozím nastavení skrýt text",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Send vytvořen",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share vytvořen",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "Send upraven",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share upraven",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
-    "message": "Send smazán",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share smazán",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "Nové heslo"
   },
   "whatTypeOfSend": {
-    "message": "Jakého typu je tento Send?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Jakého typu je tento Share?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createSend": {
-    "message": "Vytvořit Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Vytvořit Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Text, který chcete odeslat."
@@ -1665,23 +1665,23 @@
     "message": "Vlastní"
   },
   "deleteSendConfirmation": {
-    "message": "Jste si jisti, že chcete odstranit tento Send?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Jste si jisti, že chcete odstranit tento Share?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkToClipboard": {
-    "message": "Zkopírovat odkaz Send do schránky",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Zkopírovat odkaz Share do schránky",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkOnSave": {
-    "message": "Zkopírovat odkaz tohoto Send do mé schránky při uložení."
+    "message": "Zkopírovat odkaz tohoto Share do mé schránky při uložení."
   },
   "sendDisabled": {
-    "message": "Send deaktivován",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share deaktivován",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "Kvůli zásadám podniku můžete odstranit pouze existující Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Kvůli zásadám podniku můžete odstranit pouze existující Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copyLink": {
     "message": "Kopírovat odkaz"
@@ -1705,7 +1705,7 @@
     "message": "Skrýt moji e-mailovou adresu před příjemci."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "Jedna nebo více zásad organizace ovlivňuje nastavení Send."
+    "message": "Jedna nebo více zásad organizace ovlivňuje nastavení Share."
   },
   "emailVerificationRequired": {
     "message": "Je vyžadováno ověření emailu"
@@ -1729,7 +1729,7 @@
     "message": "Aktualizovat hlavní heslo"
   },
   "updateMasterPasswordWarning": {
-    "message": "Your Master Password was recently changed by an administrator in your organization. In order to access the vault, you must update it now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
+    "message": "Your Master Password was recently changed by an administrator in your team. In order to access the vault, you must update it now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
   },
   "hours": {
     "message": "Hodin"
@@ -1738,7 +1738,7 @@
     "message": "Minut"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Your organization policies are affecting your vault timeout. Maximum allowed Vault Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
+    "message": "Your team policies are affecting your vault timeout. Maximum allowed Vault Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1751,19 +1751,19 @@
     }
   },
   "vaultTimeoutTooLarge": {
-    "message": "Your vault timeout exceeds the restrictions set by your organization."
+    "message": "Your vault timeout exceeds the restrictions set by your team."
   },
   "resetPasswordPolicyAutoEnroll": {
     "message": "Automatic Enrollment"
   },
   "resetPasswordAutoEnrollInviteWarning": {
-    "message": "This organization has an enterprise policy that will automatically enroll you in password reset. Enrollment will allow organization administrators to change your master password."
+    "message": "This team has an enterprise policy that will automatically enroll you in password reset. Enrollment will allow team administrators to change your master password."
   },
   "vaultExportDisabled": {
     "message": "Vault Export Disabled"
   },
   "personalVaultExportPolicyInEffect": {
-    "message": "One or more organization policies prevents you from exporting your personal vault."
+    "message": "One or more team policies prevents you from exporting your personal vault."
   },
   "addAccount": {
     "message": "Přidat účet"
@@ -1775,7 +1775,7 @@
     "message": "Hlavní heslo bylo odstraněno."
   },
   "convertOrganizationEncryptionDesc": {
-    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this organization.",
+    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this team.",
     "placeholders": {
       "organization": {
         "content": "$1",
@@ -1832,7 +1832,7 @@
     "message": "Exporting Personal Vault"
   },
   "exportingPersonalVaultDescription": {
-    "message": "Only the personal vault items associated with $EMAIL$ will be exported. Organization vault items will not be included.",
+    "message": "Only the personal vault items associated with $EMAIL$ will be exported. Team vault items will not be included.",
     "placeholders": {
       "email": {
         "content": "$1",

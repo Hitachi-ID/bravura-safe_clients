@@ -14,7 +14,7 @@ export class AboutMenu implements IMenubarMenu {
   }
 
   get items(): MenuItemConstructorOptions[] {
-    return [this.separator, this.checkForUpdates, this.aboutBitwarden];
+    return [this.separator, this.aboutBitwarden];
   }
 
   private readonly _i18nService: I18nService;
@@ -63,8 +63,8 @@ export class AboutMenu implements IMenubarMenu {
           "\nArchitecture " +
           process.arch;
         const result = await dialog.showMessageBox(this._window, {
-          title: "Bitwarden",
-          message: "Bitwarden",
+          title: "Bravura Safe",
+          message: "Bravura Safe",
           detail: aboutInformation,
           type: "info",
           noLink: true,

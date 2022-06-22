@@ -14,7 +14,7 @@ export class SwitcherAccount extends Account {
     return this.removeWebProtocolFromString(
       this.settings?.environmentUrls?.base ??
         this.settings?.environmentUrls.api ??
-        "https://bitwarden.com"
+        "https://hitachi-id.com"
     );
   }
 

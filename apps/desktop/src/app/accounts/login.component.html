@@ -19,7 +19,7 @@
     attr.aria-hidden="{{ showingModal }}"
   >
     <div id="content" class="content">
-      <img class="logo-image" alt="Bitwarden" />
+      <img class="logo-image" alt="Bravura Safe" />
       <p class="lead">{{ "loginOrCreateNewAccount" | i18n }}</p>
       <div class="box last">
         <div class="box-content">
@@ -83,15 +83,6 @@
           </button>
           <button type="button" routerLink="/register" class="btn block">
             <i class="fa fa-pencil-square-o" aria-hidden="true"></i> {{ "createAccount" | i18n }}
-          </button>
-        </div>
-        <div class="buttons-row">
-          <button
-            type="button"
-            (click)="launchSsoBrowser('desktop', 'bitwarden://sso-callback')"
-            class="btn block"
-          >
-            <i class="fa fa-bank" aria-hidden="true"></i> {{ "enterpriseSingleSignOn" | i18n }}
           </button>
         </div>
       </div>

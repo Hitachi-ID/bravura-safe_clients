@@ -36,6 +36,6 @@ export class GeneratorComponent extends BaseGeneratorComponent {
   }
 
   usernameTypesLearnMore() {
-    this.platformUtilsService.launchUri("https://bitwarden.com/help/generator/#username-types");
+    this.platformUtilsService.launchUri("https://hitachi-id.com/help/generator/#username-types");
   }
 }

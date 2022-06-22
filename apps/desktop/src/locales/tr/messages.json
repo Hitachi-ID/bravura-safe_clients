@@ -1,6 +1,6 @@
 {
   "bitwarden": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "filters": {
     "message": "Filtreler"
@@ -73,11 +73,11 @@
     "message": "Ad"
   },
   "uri": {
-    "message": "URl"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -86,7 +86,7 @@
     }
   },
   "newUri": {
-    "message": "Yeni URI"
+    "message": "Yeni URL"
   },
   "username": {
     "message": "Kullanıcı adı"
@@ -392,7 +392,7 @@
     "message": "Parolayı kopyala"
   },
   "copyUri": {
-    "message": "URI'yi kopyala"
+    "message": "URL'yi kopyala"
   },
   "copyVerificationCodeTotp": {
     "message": "Doğrulama kodunu kopyala (TOTP)"
@@ -659,7 +659,7 @@
     "message": "Şirket içinde barındırılan ortam"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Kurum içi barındırılan Bitwarden kurulumunuzun taban URL'sini belirtin."
+    "message": "Kurum içi barındırılan Bravura Safe kurulumunuzun taban URL'sini belirtin."
   },
   "customEnvironment": {
     "message": "Özel ortam"
@@ -764,7 +764,7 @@
     "message": "Ana parolayı değiştir"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Ana parolanızı bitwarden.com web kasası üzerinden değiştirebilirsiniz. Siteyi şimdi ziyaret etmek ister misiniz?"
+    "message": "Ana parolanızı hitachi-id.com web kasası üzerinden değiştirebilirsiniz. Siteyi şimdi ziyaret etmek ister misiniz?"
   },
   "fingerprintPhrase": {
     "message": "Parmak izi ifadesi",
@@ -804,7 +804,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -812,7 +812,7 @@
     "message": "Geçersiz ana parola"
   },
   "twoStepLoginConfirmation": {
-    "message": "İki aşamalı giriş, hesabınıza girererken işlemi bir güvenlik anahtarı, şifrematik uygulaması, SMS, telefon araması veya e-posta gibi ek bir yöntemle doğrulamanızı isteyerek hesabınızın güvenliğini artırır. İki aşamalı giriş özelliğini bitwarden.com web kasası üzerinden etkinleştirebilirsiniz. Şimdi siteye gitmek ister misiniz?"
+    "message": "İki aşamalı giriş, hesabınıza girererken işlemi bir güvenlik anahtarı, şifrematik uygulaması, SMS, telefon araması veya e-posta gibi ek bir yöntemle doğrulamanızı isteyerek hesabınızın güvenliğini artırır. İki aşamalı giriş özelliğini hitachi-id.com web kasası üzerinden etkinleştirebilirsiniz. Şimdi siteye gitmek ister misiniz?"
   },
   "twoStepLogin": {
     "message": "İki aşamalı giriş"
@@ -934,13 +934,13 @@
     "message": "Oturum açıldığında otomatik başlat"
   },
   "openAtLoginDesc": {
-    "message": "Oturum açılınca Bitwarden masaüstü uygulamasını otomatik olarak başlat."
+    "message": "Oturum açılınca Bravura Safe masaüstü uygulamasını otomatik olarak başlat."
   },
   "alwaysShowDock": {
     "message": "Dock'ta her zaman göster"
   },
   "alwaysShowDockDesc": {
-    "message": "Menü çubuğuna küçültüldüğünde bile Bitwarden simgesini Dock'ta göster."
+    "message": "Menü çubuğuna küçültüldüğünde bile Bravura Safe simgesini Dock'ta göster."
   },
   "confirmTrayTitle": {
     "message": "Tepsiyi kapatmayı onaylayın"
@@ -1035,7 +1035,7 @@
     "message": "Üyeliğimi yönet"
   },
   "premiumManageAlert": {
-    "message": "Üyeliğinizi bitwarden.com web kasası üzerinden yönetebilirsiniz. Web sitesini ziyaret etmek ister misiniz?"
+    "message": "Üyeliğinizi hitachi-id.com web kasası üzerinden yönetebilirsiniz. Web sitesini ziyaret etmek ister misiniz?"
   },
   "premiumRefresh": {
     "message": "Üyeliğimi yenile"
@@ -1068,13 +1068,13 @@
     "message": "Premium satın al"
   },
   "premiumPurchaseAlert": {
-    "message": "Premium üyeliği bitwarden.com web kasası üzerinden satın alabilirsiniz. Şimdi siteye gitmek ister misiniz?"
+    "message": "Premium üyeliği hitachi-id.com web kasası üzerinden satın alabilirsiniz. Şimdi siteye gitmek ister misiniz?"
   },
   "premiumCurrentMember": {
     "message": "Premium üyesiniz!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Bitwarden'ı desteklediğiniz için teşekkür ederiz."
+    "message": "Bravura Safe'ı desteklediğiniz için teşekkür ederiz."
   },
   "premiumPrice": {
     "message": "Bunların hepsi sadece yılda $PRICE$!",
@@ -1145,13 +1145,13 @@
     "description": "Bring all windows to front (foreground)"
   },
   "aboutBitwarden": {
-    "message": "Bitwarden hakkında"
+    "message": "Bravura Safe hakkında"
   },
   "services": {
     "message": "Hizmetler"
   },
   "hideBitwarden": {
-    "message": "Bitwarden'ı gizle"
+    "message": "Bravura Safe'ı gizle"
   },
   "hideOthers": {
     "message": "Diğerlerini gizle"
@@ -1160,7 +1160,7 @@
     "message": "Tümünü göster"
   },
   "quitBitwarden": {
-    "message": "Bitwarden'dan çık"
+    "message": "Bravura Safe'dan çık"
   },
   "valueCopied": {
     "message": "$VALUE$ kopyalandı",
@@ -1209,7 +1209,7 @@
     "message": "Tam"
   },
   "startsWith": {
-    "message": "URI başlangıcı"
+    "message": "URL başlangıcı"
   },
   "regEx": {
     "message": "Düzenli ifade",
@@ -1217,18 +1217,18 @@
   },
   "matchDetection": {
     "message": "Eşleşme tespiti",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Varsayılan eşleşme tespiti",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Seçenekleri aç/kapat"
   },
   "organization": {
     "message": "Kuruluş",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "default": {
     "message": "Varsayılan"
@@ -1275,7 +1275,7 @@
     "message": "Dışa aktardığınız bu dosyadaki verileriniz, hesabınızın şifreleme anahtarıyla şifrelenir. Hesabınızın şifreleme anahtarını değiştirirseniz bu dosyanın şifresi çözülemez hale gelir, dolayısıyla dosyayı yeniden dışa aktarmanız gerekir."
   },
   "encExportAccountWarningDesc": {
-    "message": "Hesap şifreleme anahtarları her Bitwarden kullanıcı hesabı için farklıdır. Dolayısıyla şifrelenmiş bir dışa aktarmayı başka bir hesapta içe aktaramazsınız."
+    "message": "Hesap şifreleme anahtarları her Bravura Safe kullanıcı hesabı için farklıdır. Dolayısıyla şifrelenmiş bir dışa aktarmayı başka bir hesapta içe aktaramazsınız."
   },
   "noOrganizationsList": {
     "message": "Herhangi bir kuruluşa dahil değilsiniz. Kuruluşlar, kayıtlarınızı diğer kullanıcılarla güvenli bir şekilde paylaşmanıza olanak verir."
@@ -1305,7 +1305,7 @@
     "message": "Zayıf ana parola"
   },
   "weakMasterPasswordDesc": {
-    "message": "Seçtiğiniz ana parola zayıf. Bitwarden hesabınızı korumak için daha güçlü bir ana parola seçmenizi öneririz. Bu ana parolayı kullanmak istediğinizden emin misiniz?"
+    "message": "Seçtiğiniz ana parola zayıf. Bravura Safe hesabınızı korumak için daha güçlü bir ana parola seçmenizi öneririz. Bu ana parolayı kullanmak istediğinizden emin misiniz?"
   },
   "pin": {
     "message": "PIN",
@@ -1315,7 +1315,7 @@
     "message": "Kilidi PIN koduyla aç"
   },
   "setYourPinCode": {
-    "message": "Bitwarden'ı açarken kullanacağınız PIN kodunu belirleyin. Uygulamadan tamamen çıkış yaparsanız PIN ayarlarınız sıfırlanacaktır."
+    "message": "Bravura Safe'ı açarken kullanacağınız PIN kodunu belirleyin. Uygulamadan tamamen çıkış yaparsanız PIN ayarlarınız sıfırlanacaktır."
   },
   "pinRequired": {
     "message": "PIN kodu gereklidir."
@@ -1327,7 +1327,7 @@
     "message": "Kilidi Windows Hello ile aç"
   },
   "windowsHelloConsentMessage": {
-    "message": "Bitwarden için doğrulayın."
+    "message": "Bravura Safe için doğrulayın."
   },
   "unlockWithTouchId": {
     "message": "Kilidi Touch ID ile aç"
@@ -1549,8 +1549,8 @@
     "message": "Bir kuruluş ilkesi sahiplik seçeneklerinizi etkiliyor."
   },
   "allSends": {
-    "message": "Tüm Send'ler",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Tüm Share'ler",
+    "description": "'Shares' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "Dosya"
@@ -1559,12 +1559,12 @@
     "message": "Metin"
   },
   "searchSends": {
-    "message": "Send'lerde ara",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share'lerde ara",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Send'i düzenle",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share'i düzenle",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "myVault": {
     "message": "Kasam"
@@ -1576,72 +1576,72 @@
     "message": "Silinme tarihi"
   },
   "deletionDateDesc": {
-    "message": "Bu Send belirtilen tarih ve saatte kalıcı olacak silinecek.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Bu Share belirtilen tarih ve saatte kalıcı olacak silinecek.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Son kullanma tarihi"
   },
   "expirationDateDesc": {
-    "message": "Bunu ayarlarsanız belirtilen tarih ve saatten sonra bu Send'e erişilemeyecektir.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Bunu ayarlarsanız belirtilen tarih ve saatten sonra bu Share'e erişilemeyecektir.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "Maksimum erişim sayısı"
   },
   "maxAccessCountDesc": {
-    "message": "Bunu ayarlarsanız maksimum erişim sayısına ulaşıldıktan sonra bu Send'e erişilemeyecektir.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Bunu ayarlarsanız maksimum erişim sayısına ulaşıldıktan sonra bu Share'e erişilemeyecektir.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Mevcut erişim sayısı"
   },
   "disableSend": {
-    "message": "Kimsenin erişememesi için bu Send'i devre dışı bırak.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Kimsenin erişememesi için bu Share'i devre dışı bırak.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
-    "message": "Kullanıcıların bu Send'e erişmek için parola girmelerini isteyebilirsiniz.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Kullanıcıların bu Share'e erişmek için parola girmelerini isteyebilirsiniz.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "Bu Send ile ilgili özel notlar.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Bu Share ile ilgili özel notlar.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
-    "message": "Send bağlantısı",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share bağlantısı",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinkLabel": {
-    "message": "Send bağlantısı",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share bağlantısı",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "textHiddenByDefault": {
-    "message": "Send'e erişirken varsayılan olarak metni gizle",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share'e erişirken varsayılan olarak metni gizle",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Send oluşturuldu",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share oluşturuldu",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "Send düzenlendi",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share düzenlendi",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
-    "message": "Send silindi",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share silindi",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "Yeni parola"
   },
   "whatTypeOfSend": {
-    "message": "Bu ne tür bir Send?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Bu ne tür bir Share?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createSend": {
-    "message": "Send oluştur",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share oluştur",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Göndermek istediğiniz metin."
@@ -1665,23 +1665,23 @@
     "message": "Özel"
   },
   "deleteSendConfirmation": {
-    "message": "Bu Send'i silmek istediğinizden emin misiniz?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Bu Share'i silmek istediğinizden emin misiniz?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkToClipboard": {
-    "message": "Send linkini panoya kopyala",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share linkini panoya kopyala",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkOnSave": {
-    "message": "Kaydettikten sonra bu Send'i paylaşma linkini panoya kopyala."
+    "message": "Kaydettikten sonra bu Share'i paylaşma linkini panoya kopyala."
   },
   "sendDisabled": {
-    "message": "Send devre dışı",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share devre dışı",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "Bir kuruluş ilkesi nedeniyle yalnızca mevcut Send'leri silebilirsiniz.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Bir kuruluş ilkesi nedeniyle yalnızca mevcut Share'leri silebilirsiniz.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copyLink": {
     "message": "Bağlantıyı kopyala"
@@ -1705,7 +1705,7 @@
     "message": "E-posta adresimi alıcılardan gizle."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "Bir veya daha fazla kuruluş ilkesi Send seçeneklerinizi etkiliyor."
+    "message": "Bir veya daha fazla kuruluş ilkesi Share seçeneklerinizi etkiliyor."
   },
   "emailVerificationRequired": {
     "message": "E-posta doğrulaması gerekiyor"
@@ -1832,7 +1832,7 @@
     "message": "Exporting Personal Vault"
   },
   "exportingPersonalVaultDescription": {
-    "message": "Only the personal vault items associated with $EMAIL$ will be exported. Organization vault items will not be included.",
+    "message": "Only the personal vault items associated with $EMAIL$ will be exported. Team vault items will not be included.",
     "placeholders": {
       "email": {
         "content": "$1",

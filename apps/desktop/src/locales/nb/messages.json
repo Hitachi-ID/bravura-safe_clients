@@ -1,6 +1,6 @@
 {
   "bitwarden": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "filters": {
     "message": "Filtre"
@@ -73,11 +73,11 @@
     "message": "Navn"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -86,7 +86,7 @@
     }
   },
   "newUri": {
-    "message": "Ny URI"
+    "message": "Ny URL"
   },
   "username": {
     "message": "Brukernavn"
@@ -126,7 +126,7 @@
     "message": "Minimer vinduet ved kopiering til utklippstavlen"
   },
   "minimizeOnCopyToClipboardDesc": {
-    "message": "Bitwarden-vinduet minimeres automatisk når et objekts data kopieres til utklippstavlen."
+    "message": "Bravura Safe-vinduet minimeres automatisk når et objekts data kopieres til utklippstavlen."
   },
   "toggleVisibility": {
     "message": "Juster synlighet"
@@ -392,7 +392,7 @@
     "message": "Kopier passordet"
   },
   "copyUri": {
-    "message": "Kopier URIen"
+    "message": "Kopier URLen"
   },
   "copyVerificationCodeTotp": {
     "message": "Kopier verifiseringskode (TOTP)"
@@ -659,7 +659,7 @@
     "message": "Selvbetjent miljø"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Spesifiser grunn-nettadressen til din selvbetjente Bitwarden-installasjon."
+    "message": "Spesifiser grunn-nettadressen til din selvbetjente Bravura Safe-installasjon."
   },
   "customEnvironment": {
     "message": "Tilpasset miljø"
@@ -804,7 +804,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -812,7 +812,7 @@
     "message": "Ugyldig superpassord"
   },
   "twoStepLoginConfirmation": {
-    "message": "2-trinnsinnlogging gjør kontoen din mer sikker, ved å kreve at du verifiserer din innlogging med en annen enhet, f.eks. en autentiseringsapp, SMS, E-post, telefonsamtale, eller sikkerhetsnøkkel. 2-trinnsinnlogging kan aktiveres på bitwarden.com-netthvelvet. Vil du besøke den nettsiden nå?"
+    "message": "2-trinnsinnlogging gjør kontoen din mer sikker, ved å kreve at du verifiserer din innlogging med en annen enhet, f.eks. en autentiseringsapp, SMS, E-post, telefonsamtale, eller sikkerhetsnøkkel. 2-trinnsinnlogging kan aktiveres på hitachi-id.com-netthvelvet. Vil du besøke den nettsiden nå?"
   },
   "twoStepLogin": {
     "message": "2-trinnsinnlogging"
@@ -940,7 +940,7 @@
     "message": "Alltid vis i dokken"
   },
   "alwaysShowDockDesc": {
-    "message": "Vis Bitwarden-ikonet i dokken selv når den er minimert til menylinjen."
+    "message": "Vis Bravura Safe-ikonet i dokken selv når den er minimert til menylinjen."
   },
   "confirmTrayTitle": {
     "message": "Bekreft avskruing av skuffen"
@@ -988,7 +988,7 @@
     "message": "Start på nytt for å oppdatere"
   },
   "restartToUpdateDesc": {
-    "message": "Versjon $VERSION_NUM$ er klar til å installeres. Du må starte appen på nytt for å fullføre installasjonen. Vil du starte Bitwarden på nytt nå og oppdatere den?",
+    "message": "Versjon $VERSION_NUM$ er klar til å installeres. Du må starte appen på nytt for å fullføre installasjonen. Vil du starte Bravura Safe på nytt nå og oppdatere den?",
     "placeholders": {
       "version_num": {
         "content": "$1",
@@ -1074,7 +1074,7 @@
     "message": "Du er et Premium-medlem!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Takk for at du støtter Bitwarden."
+    "message": "Takk for at du støtter Bravura Safe."
   },
   "premiumPrice": {
     "message": "Alt dette for bare $PRICE$/år!",
@@ -1145,13 +1145,13 @@
     "description": "Bring all windows to front (foreground)"
   },
   "aboutBitwarden": {
-    "message": "Om Bitwarden"
+    "message": "Om Bravura Safe"
   },
   "services": {
     "message": "Tjenester"
   },
   "hideBitwarden": {
-    "message": "Skjul Bitwarden"
+    "message": "Skjul Bravura Safe"
   },
   "hideOthers": {
     "message": "Skjul andre"
@@ -1160,7 +1160,7 @@
     "message": "Vis alle"
   },
   "quitBitwarden": {
-    "message": "Avslutt Bitwarden"
+    "message": "Avslutt Bravura Safe"
   },
   "valueCopied": {
     "message": "$VALUE$ har blitt kopiert",
@@ -1217,18 +1217,18 @@
   },
   "matchDetection": {
     "message": "Match-gjenkjenning",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Standard match-gjenkjenning",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Skru av/på innstillinger"
   },
   "organization": {
     "message": "Organisasjon",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "default": {
     "message": "Standard"
@@ -1275,7 +1275,7 @@
     "message": "Denne eksporten krypterer dataene dine ved hjelp av kontoen din sin krypteringsnøkkel. Hvis du noen gang endrer krypteringsnøkkelen til kontoen din, bør du eksportere dataene igjen, ettersom du da ikke vil kunne dekryptere denne eksportfilen."
   },
   "encExportAccountWarningDesc": {
-    "message": "Kontokrypteringsnøkler er unike for hver Bitwarden sin brukerkonto, og du kan ikke importere en kryptert eksport til en annen konto."
+    "message": "Kontokrypteringsnøkler er unike for hver Bravura Safe sin brukerkonto, og du kan ikke importere en kryptert eksport til en annen konto."
   },
   "noOrganizationsList": {
     "message": "Du tilhører ikke noen organisasjoner. Organisasjoner gjør det mulig for deg å sikkert dele objekter med andre brukere."
@@ -1305,7 +1305,7 @@
     "message": "Svakt hovedpassord"
   },
   "weakMasterPasswordDesc": {
-    "message": "Superpassordet du har valgt er svakt. Du bør bruke et sterkt superpassord (eller en passordfrase) for å sikre Bitwarden-kontoen din på en forsvarlig måte. Er du sikker på at du vil bruke dette superpassordet?"
+    "message": "Superpassordet du har valgt er svakt. Du bør bruke et sterkt superpassord (eller en passordfrase) for å sikre Bravura Safe-kontoen din på en forsvarlig måte. Er du sikker på at du vil bruke dette superpassordet?"
   },
   "pin": {
     "message": "PIN",
@@ -1315,7 +1315,7 @@
     "message": "Lås opp med PIN"
   },
   "setYourPinCode": {
-    "message": "Angi PIN-koden for å låse opp Bitwarden. PIN-innstillingene dine blir tilbakestilt hvis du noen gang logger deg ut av applikasjonen."
+    "message": "Angi PIN-koden for å låse opp Bravura Safe. PIN-innstillingene dine blir tilbakestilt hvis du noen gang logger deg ut av applikasjonen."
   },
   "pinRequired": {
     "message": "PIN-kode er påkrevd."
@@ -1327,7 +1327,7 @@
     "message": "Lås opp med Windows Hello"
   },
   "windowsHelloConsentMessage": {
-    "message": "Bekreft for Bitwarden."
+    "message": "Bekreft for Bravura Safe."
   },
   "unlockWithTouchId": {
     "message": "Lås opp med Touch ID"
@@ -1549,8 +1549,8 @@
     "message": "En bedriftsretningslinje påvirker dine eierskapsinnstillinger."
   },
   "allSends": {
-    "message": "Alle Send-er",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Alle Share-er",
+    "description": "'Shares' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "Fil"
@@ -1559,12 +1559,12 @@
     "message": "Tekst"
   },
   "searchSends": {
-    "message": "Søk i Send-ene",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Søk i Share-ene",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Rediger Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Rediger Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "myVault": {
     "message": "Mitt hvelv"
@@ -1576,72 +1576,72 @@
     "message": "Dato for sletting"
   },
   "deletionDateDesc": {
-    "message": "Send-en vil bli slettet permanent på den angitte dato og klokkeslett.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share-en vil bli slettet permanent på den angitte dato og klokkeslett.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Utløpsdato"
   },
   "expirationDateDesc": {
-    "message": "Hvis satt, vil tilgang til denne Send gå ut på angitt dato og klokkeslett.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Hvis satt, vil tilgang til denne Share gå ut på angitt dato og klokkeslett.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "Maksimal antall tilganger"
   },
   "maxAccessCountDesc": {
     "message": "Hvis satt, vil brukere ikke lenger ha tilgang til dette send når maksimal antall tilgang er nådd.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Antall nåværende tilgang"
   },
   "disableSend": {
-    "message": "Deaktiver denne Send-en, slik at ingen får tilgang til den.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Deaktiver denne Share-en, slik at ingen får tilgang til den.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
-    "message": "Eventuelt krever et passord for brukere å få tilgang til denne Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Eventuelt krever et passord for brukere å få tilgang til denne Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "Private notater om denne Send-en.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Private notater om denne Share-en.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
-    "message": "Send lenke",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share lenke",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinkLabel": {
-    "message": "Send lenke",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share lenke",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "textHiddenByDefault": {
-    "message": "Når du åpner Send-en, er teksten skjult som standard",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Når du åpner Share-en, er teksten skjult som standard",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Opprettet Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Opprettet Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "Redigerte Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Redigerte Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
-    "message": "Slettet Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Slettet Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "Nytt passord"
   },
   "whatTypeOfSend": {
-    "message": "Hvilken type Send er dette?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Hvilken type Share er dette?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createSend": {
-    "message": "Opprett Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Opprett Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Teksten du ønsker å sende."
@@ -1665,23 +1665,23 @@
     "message": "Egendefinert"
   },
   "deleteSendConfirmation": {
-    "message": "Er du sikker på at du vil slette denne Send?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Er du sikker på at du vil slette denne Share?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkToClipboard": {
-    "message": "Kopier Send-lenke til utklippstavlen",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Kopier Share-lenke til utklippstavlen",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkOnSave": {
-    "message": "Kopier lenken for å dele denne Send-en til utklippstavlen min ved lagring."
+    "message": "Kopier lenken for å dele denne Share-en til utklippstavlen min ved lagring."
   },
   "sendDisabled": {
-    "message": "Send er skrudd av",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share er skrudd av",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "På grunn av en virksomhetsregel kan du kun slette en eksisterende Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "På grunn av en virksomhetsregel kan du kun slette en eksisterende Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copyLink": {
     "message": "Kopier lenke"
@@ -1832,7 +1832,7 @@
     "message": "Eksporter personlig hvelv"
   },
   "exportingPersonalVaultDescription": {
-    "message": "Only the personal vault items associated with $EMAIL$ will be exported. Organization vault items will not be included.",
+    "message": "Only the personal vault items associated with $EMAIL$ will be exported. Team vault items will not be included.",
     "placeholders": {
       "email": {
         "content": "$1",

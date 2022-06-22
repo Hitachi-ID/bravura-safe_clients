@@ -1,6 +1,6 @@
 {
   "bitwarden": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "filters": {
     "message": "Filtre"
@@ -73,11 +73,11 @@
     "message": "Denumire"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -86,7 +86,7 @@
     }
   },
   "newUri": {
-    "message": "URI nou"
+    "message": "URL nou"
   },
   "username": {
     "message": "Nume utilizator"
@@ -392,7 +392,7 @@
     "message": "Copiere parolă"
   },
   "copyUri": {
-    "message": "Copiere URI"
+    "message": "Copiere URL"
   },
   "copyVerificationCodeTotp": {
     "message": "Copiere cod de verificare (TOTP)"
@@ -659,7 +659,7 @@
     "message": "Mediu de găzduire personal"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Specificați URL-ul de bază al implementări Bitwarden găzduită local."
+    "message": "Specificați URL-ul de bază al implementări Bravura Safe găzduită local."
   },
   "customEnvironment": {
     "message": "Mediu personalizat"
@@ -764,7 +764,7 @@
     "message": "Schimbare parolă principală"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Puteți modifica parola principală pe saitul web bitwarden.com. Doriți să vizitați saitul acum?"
+    "message": "Puteți modifica parola principală pe saitul web hitachi-id.com. Doriți să vizitați saitul acum?"
   },
   "fingerprintPhrase": {
     "message": "Frază amprentă",
@@ -804,7 +804,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -812,7 +812,7 @@
     "message": "Parolă principală incorectă"
   },
   "twoStepLoginConfirmation": {
-    "message": "Autentificarea în două etape întărește siguranța contului dvs. prin solicitarea unei confirmări de autentificare cu un alt dispozitiv, cum ar fi: o cheie de securitate, o aplicație de autentificare, un SMS, un apel telefonic sau un e-mail. Autentificarea în două etape poate fi activată în seiful web bitwarden.com. Doriți să vizitați saitul acum?"
+    "message": "Autentificarea în două etape întărește siguranța contului dvs. prin solicitarea unei confirmări de autentificare cu un alt dispozitiv, cum ar fi: o cheie de securitate, o aplicație de autentificare, un SMS, un apel telefonic sau un e-mail. Autentificarea în două etape poate fi activată în seiful web hitachi-id.com. Doriți să vizitați saitul acum?"
   },
   "twoStepLogin": {
     "message": "Autentificare în două etape"
@@ -934,13 +934,13 @@
     "message": "Pornire automată la conectare"
   },
   "openAtLoginDesc": {
-    "message": "Pornește aplicația Bitwarden Desktop automat la autentificare."
+    "message": "Pornește aplicația Bravura Safe Desktop automat la autentificare."
   },
   "alwaysShowDock": {
     "message": "Se afișează întotdeauna în Dock"
   },
   "alwaysShowDockDesc": {
-    "message": "Afișează pictograma Bitwarden în Dock chiar și atunci când este minimizată în bara de meniu."
+    "message": "Afișează pictograma Bravura Safe în Dock chiar și atunci când este minimizată în bara de meniu."
   },
   "confirmTrayTitle": {
     "message": "Confirmați dezactivarea zonei de notificare"
@@ -988,7 +988,7 @@
     "message": "Reporniți pentru actualizare"
   },
   "restartToUpdateDesc": {
-    "message": "Versiunea $VERSION_NUM$ este gata pentru instalare. Trebuie să reporniți Bitwarden pentru a finaliza instalarea. Doriți să reporniți și să actualizați acum?",
+    "message": "Versiunea $VERSION_NUM$ este gata pentru instalare. Trebuie să reporniți Bravura Safe pentru a finaliza instalarea. Doriți să reporniți și să actualizați acum?",
     "placeholders": {
       "version_num": {
         "content": "$1",
@@ -1035,7 +1035,7 @@
     "message": "Gestionare statut de membru"
   },
   "premiumManageAlert": {
-    "message": "Vă puteți gestiona abonamentul pe seiful web bitwarden.com. Doriți să vizitați saitul acum?"
+    "message": "Vă puteți gestiona abonamentul pe seiful web hitachi-id.com. Doriți să vizitați saitul acum?"
   },
   "premiumRefresh": {
     "message": "Actualizare statut de membru"
@@ -1068,13 +1068,13 @@
     "message": "Achiziționare abonament Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Puteți achiziționa un abonament premium pe saitul web bitwarden.com. Doriți să vizitați saitul acum?"
+    "message": "Puteți achiziționa un abonament premium pe saitul web hitachi-id.com. Doriți să vizitați saitul acum?"
   },
   "premiumCurrentMember": {
     "message": "Sunteți un membru premium!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Vă mulțumim pentru susținerea Bitwarden."
+    "message": "Vă mulțumim pentru susținerea Bravura Safe."
   },
   "premiumPrice": {
     "message": "Totul pentru doar $PRICE$ /an!",
@@ -1145,13 +1145,13 @@
     "description": "Bring all windows to front (foreground)"
   },
   "aboutBitwarden": {
-    "message": "Despre Bitwarden"
+    "message": "Despre Bravura Safe"
   },
   "services": {
     "message": "Servicii"
   },
   "hideBitwarden": {
-    "message": "Ascundere Bitwarden"
+    "message": "Ascundere Bravura Safe"
   },
   "hideOthers": {
     "message": "Ascunde celelalte"
@@ -1160,7 +1160,7 @@
     "message": "Afișare tot"
   },
   "quitBitwarden": {
-    "message": "Închidere Bitwarden"
+    "message": "Închidere Bravura Safe"
   },
   "valueCopied": {
     "message": "$VALUE$ s-a copiat",
@@ -1217,18 +1217,18 @@
   },
   "matchDetection": {
     "message": "Detectare de potrivire",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Detectare de potrivire implicită",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Activare/Dezactivare opțiuni"
   },
   "organization": {
     "message": "Organizație",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "default": {
     "message": "Prestabilită"
@@ -1275,7 +1275,7 @@
     "message": "Acest export criptează datele, utilizând cheia de criptare a contului. Dacă revocați vreodată cheia de criptare a contului dvs., ar trebui să exportați din nou, deoarece nu veți putea decripta acest fișier de export."
   },
   "encExportAccountWarningDesc": {
-    "message": "Cheile de criptare a contului sunt unice fiecărui cont de utilizator Bitwarden, astfel încât nu puteți importa un export criptat într-un cont diferit."
+    "message": "Cheile de criptare a contului sunt unice fiecărui cont de utilizator Bravura Safe, astfel încât nu puteți importa un export criptat într-un cont diferit."
   },
   "noOrganizationsList": {
     "message": "Nu aparțineți niciunei organizații. Organizațiile vă permit să partajați în siguranță articole cu alți utilizatori."
@@ -1305,7 +1305,7 @@
     "message": "Parolă principală slabă"
   },
   "weakMasterPasswordDesc": {
-    "message": "Parola principală aleasă este slabă. Ar trebui să folosiți o parolă principală (sau o frază de acces) puternică pentru a vă proteja corespunzător contul Bitwarden. Sigur doriți să folosiți această parolă principală?"
+    "message": "Parola principală aleasă este slabă. Ar trebui să folosiți o parolă principală (sau o frază de acces) puternică pentru a vă proteja corespunzător contul Bravura Safe. Sigur doriți să folosiți această parolă principală?"
   },
   "pin": {
     "message": "PIN",
@@ -1315,7 +1315,7 @@
     "message": "Deblocare cu codul PIN"
   },
   "setYourPinCode": {
-    "message": "Stabiliți codul PIN de deblocare Bitwarden. Setările codului PIN vor fi reinițializate dacă vă deconectați vreodată din aplicație."
+    "message": "Stabiliți codul PIN de deblocare Bravura Safe. Setările codului PIN vor fi reinițializate dacă vă deconectați vreodată din aplicație."
   },
   "pinRequired": {
     "message": "Codul PIN este necesar."
@@ -1327,7 +1327,7 @@
     "message": "Deblocare cu Windows Hello"
   },
   "windowsHelloConsentMessage": {
-    "message": "Verificați pentru Bitwarden."
+    "message": "Verificați pentru Bravura Safe."
   },
   "unlockWithTouchId": {
     "message": "Deblocare cu Touch ID"
@@ -1549,8 +1549,8 @@
     "message": "O politică de organizație vă afectează opțiunile de proprietate."
   },
   "allSends": {
-    "message": "Toate Send-urile",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Toate Share-urile",
+    "description": "'Shares' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "Fișier"
@@ -1559,12 +1559,12 @@
     "message": "Text"
   },
   "searchSends": {
-    "message": "Căutare Send-uri",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Căutare Share-uri",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Editare Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Editare Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "myVault": {
     "message": "Seiful meu"
@@ -1576,72 +1576,72 @@
     "message": "Data ștergerii"
   },
   "deletionDateDesc": {
-    "message": "Send-ul va fi șters definitiv la data și ora specificate.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share-ul va fi șters definitiv la data și ora specificate.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Data expirării"
   },
   "expirationDateDesc": {
-    "message": "Dacă este setat, accesul la acest Send va expira la data și ora specificate.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Dacă este setat, accesul la acest Share va expira la data și ora specificate.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "Număr maxim de accesări"
   },
   "maxAccessCountDesc": {
-    "message": "Dacă este configurat, utilizatorii nu vor mai putea accesa acest Send când a fost atins numărul maxim de accesări.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Dacă este configurat, utilizatorii nu vor mai putea accesa acest Share când a fost atins numărul maxim de accesări.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Număr actual de accesări"
   },
   "disableSend": {
-    "message": "Dezactivați acest Send astfel încât nimeni să nu-l poată accesa.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Dezactivați acest Share astfel încât nimeni să nu-l poată accesa.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
-    "message": "Opțional, este necesară o parolă pentru ca utilizatorii să acceseze acest Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Opțional, este necesară o parolă pentru ca utilizatorii să acceseze acest Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "Note private despre acest Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Note private despre acest Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
-    "message": "Link Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Link Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinkLabel": {
-    "message": "Link Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Link Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "textHiddenByDefault": {
-    "message": "Când Send-ul este accesat, ascundeți textul în mod implicit",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Când Share-ul este accesat, ascundeți textul în mod implicit",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Send creat",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share creat",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "Send editat",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share editat",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
-    "message": "Send șters",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share șters",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "Parolă nouă"
   },
   "whatTypeOfSend": {
-    "message": "Ce fel de Send este acesta?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Ce fel de Share este acesta?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createSend": {
-    "message": "Creare de Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Creare de Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Textul pe care doriți să-l trimiteți."
@@ -1665,23 +1665,23 @@
     "message": "Personalizat"
   },
   "deleteSendConfirmation": {
-    "message": "Sigur doriți să ștergeți acest Send?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Sigur doriți să ștergeți acest Share?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkToClipboard": {
-    "message": "Copiați link-ul Send-ului în clipboard",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Copiați link-ul Share-ului în clipboard",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkOnSave": {
-    "message": "Copiați în clipboard linkul pentru partajarea acestui Send după salvare."
+    "message": "Copiați în clipboard linkul pentru partajarea acestui Share după salvare."
   },
   "sendDisabled": {
-    "message": "Send dezactivat",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share dezactivat",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "Datorită unei politici de întreprindere, puteți șterge numai un Send existent.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Datorită unei politici de întreprindere, puteți șterge numai un Share existent.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copyLink": {
     "message": "Copiere link"
@@ -1705,7 +1705,7 @@
     "message": "Ascundeți adresa mea de e-mail de la destinatari."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "Una sau mai multe politici organizaționale vă afectează opțiunile Send-ului."
+    "message": "Una sau mai multe politici organizaționale vă afectează opțiunile Share-ului."
   },
   "emailVerificationRequired": {
     "message": "Este necesară verificarea adresei de e-mail"

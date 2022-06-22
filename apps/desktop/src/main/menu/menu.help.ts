@@ -16,16 +16,9 @@ export class HelpMenu implements IMenubarMenu {
   get items(): MenuItemConstructorOptions[] {
     const items = [
       this.getHelp,
-      this.contactUs,
-      this.fileBugReport,
       this.legal,
       this.separator,
-      this.followUs,
-      this.separator,
       this.goToWebVault,
-      this.separator,
-      this.getMobileApp,
-      this.getBrowserExtension,
     ];
 
     if (this._aboutMenu != null) {
@@ -48,7 +41,7 @@ export class HelpMenu implements IMenubarMenu {
     return {
       id: "contactUs",
       label: this.localize("contactUs"),
-      click: () => shell.openExternal("https://bitwarden.com/contact"),
+      click: () => shell.openExternal("https://hitachi-id.com/contact"),
     };
   }
 
@@ -56,7 +49,7 @@ export class HelpMenu implements IMenubarMenu {
     return {
       id: "getHelp",
       label: this.localize("getHelp"),
-      click: () => shell.openExternal("https://bitwarden.com/help"),
+      click: () => shell.openExternal("https://docs.hitachi-id.net/safe/#/home/2202/10/11"),
     };
   }
 
@@ -64,7 +57,7 @@ export class HelpMenu implements IMenubarMenu {
     return {
       id: "fileBugReport",
       label: this.localize("fileBugReport"),
-      click: () => shell.openExternal("https://github.com/bitwarden/clients/issues"),
+      click: () => shell.openExternal("https://hitachi-id.com/bitwarden/clients/issues"),
     };
   }
 
@@ -82,12 +75,12 @@ export class HelpMenu implements IMenubarMenu {
       {
         id: "termsOfService",
         label: this.localize("termsOfService"),
-        click: () => shell.openExternal("https://bitwarden.com/terms/"),
+        click: () => shell.openExternal("https://hitachi-id.com/terms/"),
       },
       {
         id: "privacyPolicy",
         label: this.localize("privacyPolicy"),
-        click: () => shell.openExternal("https://bitwarden.com/privacy/"),
+        click: () => shell.openExternal("https://hitachi-id.com/privacy/"),
       },
     ];
   }

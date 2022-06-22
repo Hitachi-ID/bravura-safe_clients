@@ -1,6 +1,6 @@
 {
   "bitwarden": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "filters": {
     "message": "Филтери"
@@ -77,7 +77,7 @@
   },
   "uriPosition": {
     "message": "УРЛ $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -659,7 +659,7 @@
     "message": "Самостално окружење"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Наведите основни УРЛ ваше локалне Bitwarden инсталације."
+    "message": "Наведите основни УРЛ ваше локалне Bravura Safe инсталације."
   },
   "customEnvironment": {
     "message": "Прилагођено окружење"
@@ -764,7 +764,7 @@
     "message": "Промени главну лозинку"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Можете променити главну лозинку у Вашем сефу на bitwarden.com. Да ли желите да посетите веб страницу сада?"
+    "message": "Можете променити главну лозинку у Вашем сефу на hitachi-id.com. Да ли желите да посетите веб страницу сада?"
   },
   "fingerprintPhrase": {
     "message": "Сигурносна Фраза Сефа",
@@ -804,7 +804,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -934,13 +934,13 @@
     "message": "Аутоматски покрени након пријављивања"
   },
   "openAtLoginDesc": {
-    "message": "Покрени Bitwarden Desktop апликацију аутоматски након пријављивања."
+    "message": "Покрени Bravura Safe Desktop апликацију аутоматски након пријављивања."
   },
   "alwaysShowDock": {
     "message": "Увек покажи у Dock"
   },
   "alwaysShowDockDesc": {
-    "message": "Покажи Bitwarden иконицу у Dock чак и када је умањен на траци менија."
+    "message": "Покажи Bravura Safe иконицу у Dock чак и када је умањен на траци менија."
   },
   "confirmTrayTitle": {
     "message": "Потврди онемогућавање траке"
@@ -1035,7 +1035,7 @@
     "message": "Управљање чланством"
   },
   "premiumManageAlert": {
-    "message": "Можете управљати вашим чланством на bitwarden.com. Да ли желите да посетите веб сајт сада?"
+    "message": "Можете управљати вашим чланством на hitachi-id.com. Да ли желите да посетите веб сајт сада?"
   },
   "premiumRefresh": {
     "message": "Освежите чланство"
@@ -1068,13 +1068,13 @@
     "message": "Купити премијум"
   },
   "premiumPurchaseAlert": {
-    "message": "Можете купити премијум претплату на bitwarden.com. Да ли желите да посетите веб сајт сада?"
+    "message": "Можете купити премијум претплату на hitachi-id.com. Да ли желите да посетите веб сајт сада?"
   },
   "premiumCurrentMember": {
     "message": "Ви сте премијум члан!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Хвала Вам за подршку Bitwarden-а."
+    "message": "Хвала Вам за подршку Bravura Safe-а."
   },
   "premiumPrice": {
     "message": "Све за само $PRICE$ годишње!",
@@ -1145,13 +1145,13 @@
     "description": "Bring all windows to front (foreground)"
   },
   "aboutBitwarden": {
-    "message": "О Bitwarden"
+    "message": "О Bravura Safe"
   },
   "services": {
     "message": "Услуге"
   },
   "hideBitwarden": {
-    "message": "Сакриј Bitwarden"
+    "message": "Сакриј Bravura Safe"
   },
   "hideOthers": {
     "message": "Сакриј остале"
@@ -1160,7 +1160,7 @@
     "message": "Прикажи све"
   },
   "quitBitwarden": {
-    "message": "Затвори Bitwarden"
+    "message": "Затвори Bravura Safe"
   },
   "valueCopied": {
     "message": "$VALUE$ копиран(а/о)",
@@ -1217,18 +1217,18 @@
   },
   "matchDetection": {
     "message": "Налажење УРЛ",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Стандардно налажење вење",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Промена опција"
   },
   "organization": {
     "message": "Организација",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "default": {
     "message": "Подразумевано"
@@ -1275,7 +1275,7 @@
     "message": "Овај извоз шифрује податке користећи кључ за шифровање вашег налога. Ако икада промените кључ за шифровање свог налога, требало би да поново извезете, јер нећете моћи да дешифрујете овај извоз."
   },
   "encExportAccountWarningDesc": {
-    "message": "Кључеви за шифровање налога су јединствени за сваки Bitwarden кориснички налог, тако да не можете да увезете шифровани извоз на други налог."
+    "message": "Кључеви за шифровање налога су јединствени за сваки Bravura Safe кориснички налог, тако да не можете да увезете шифровани извоз на други налог."
   },
   "noOrganizationsList": {
     "message": "Не припадате ниједној организацији. Организације вам омогућавају да безбедно делите ставке са другим корисницима."
@@ -1315,7 +1315,7 @@
     "message": "Откључај са ПИН"
   },
   "setYourPinCode": {
-    "message": "Поставите свој ПИН код за откључавање Bitwarden-а. Поставке ПИН-а ће се ресетовати ако се икада потпуно одјавите из апликације."
+    "message": "Поставите свој ПИН код за откључавање Bravura Safe-а. Поставке ПИН-а ће се ресетовати ако се икада потпуно одјавите из апликације."
   },
   "pinRequired": {
     "message": "ПИН је обавезан."
@@ -1327,7 +1327,7 @@
     "message": "Откључај са Windows Hello"
   },
   "windowsHelloConsentMessage": {
-    "message": "Потврди за Bitwarden."
+    "message": "Потврди за Bravura Safe."
   },
   "unlockWithTouchId": {
     "message": "Откључај са Touch ID"
@@ -1550,7 +1550,7 @@
   },
   "allSends": {
     "message": "Сва слања",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Shares' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "Датотека"
@@ -1560,11 +1560,11 @@
   },
   "searchSends": {
     "message": "Претражи слања",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
     "message": "Уреди слање",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "myVault": {
     "message": "Мој сеф"
@@ -1577,71 +1577,71 @@
   },
   "deletionDateDesc": {
     "message": "Слање ће бити трајно обрисано у наведени датум и време.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Рок употребе"
   },
   "expirationDateDesc": {
     "message": "Ако је подешено, приступ овом слању истиче у наведени датум и време.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "Максималан број приступа"
   },
   "maxAccessCountDesc": {
-    "message": "Ако је постављено, корисници више неће моћи да приступе овом „Send“ када се достигне максимални број приступа.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Ако је постављено, корисници више неће моћи да приступе овом „Share“ када се достигне максимални број приступа.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Тренутни број приступа"
   },
   "disableSend": {
     "message": "Онемогући ово слање да нико други нема приступ.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
     "message": "Опционо захтевај лозинку од корисника за приступ овом слању.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
     "message": "Приватне белешке о овом слању.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
     "message": "Линк слања",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinkLabel": {
     "message": "Линк слања",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "textHiddenByDefault": {
     "message": "Када се приступа слању, подразумевано сакриј текст",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
     "message": "Креирано слање",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
     "message": "Измењено слање",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
     "message": "Обрисано слање",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "Нова лозинка"
   },
   "whatTypeOfSend": {
-    "message": "Који је ово тип „Send“-a?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Који је ово тип „Share“-a?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createSend": {
     "message": "Креирај слање",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Текст који желиш да пошаљеш."
@@ -1666,22 +1666,22 @@
   },
   "deleteSendConfirmation": {
     "message": "Сигурно обрисати ово слање?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkToClipboard": {
     "message": "Копирај везу слања у привремену меморију",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkOnSave": {
     "message": "Копирај линк за дељење слања у привремену меморију након чувања."
   },
   "sendDisabled": {
     "message": "Слање онемогућено",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "Због полисе компаније, можеш само да бришеш постојећа слања.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copyLink": {
     "message": "Копирај везу"
@@ -1705,7 +1705,7 @@
     "message": "Сакриј моју е-адресу од примаоца."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "Једна или више смерница организације утичу на опције „Send“-а."
+    "message": "Једна или више смерница организације утичу на опције „Share“-а."
   },
   "emailVerificationRequired": {
     "message": "Потребна је верификација е-поште"

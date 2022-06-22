@@ -1,6 +1,6 @@
 {
   "bitwarden": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "filters": {
     "message": "Suodattimet"
@@ -73,11 +73,11 @@
     "message": "Nimi"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -86,7 +86,7 @@
     }
   },
   "newUri": {
-    "message": "Uusi URI"
+    "message": "Uusi URL"
   },
   "username": {
     "message": "Käyttäjätunnus"
@@ -392,7 +392,7 @@
     "message": "Kopioi salasana"
   },
   "copyUri": {
-    "message": "Kopioi URI"
+    "message": "Kopioi URL"
   },
   "copyVerificationCodeTotp": {
     "message": "Kopioi todennuskoodi (TOTP)"
@@ -659,7 +659,7 @@
     "message": "Oma palvelinympäristö"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Määritä omassa palvelinympäristössäsi suoritettavan Bitwarden-asennuksen pääverkkotunnus."
+    "message": "Määritä omassa palvelinympäristössäsi suoritettavan Bravura Safe-asennuksen pääverkkotunnus."
   },
   "customEnvironment": {
     "message": "Mukautettu palvelinympäristö"
@@ -764,7 +764,7 @@
     "message": "Vaihda pääsalasana"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Voit vaihtaa pääsalasanasi bitwarden.com-verkkoholvissa. Haluatko käydä sivustolla nyt?"
+    "message": "Voit vaihtaa pääsalasanasi hitachi-id.com-verkkoholvissa. Haluatko käydä sivustolla nyt?"
   },
   "fingerprintPhrase": {
     "message": "Tunnistelauseke",
@@ -804,7 +804,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -812,7 +812,7 @@
     "message": "Virheellinen pääsalasana"
   },
   "twoStepLoginConfirmation": {
-    "message": "Kaksivaiheinen kirjautuminen tekee tilistäsi turvallisemman edellyttämällä salasanan lisäksi kirjautumisen lisätodennusta todennuslaitteen, ‑sovelluksen, tekstiviestin, puhelun tai sähköpostin avulla. Voit ottaa kaksivaiheisen kirjautumisen käyttöön bitwarden.com‑verkkoholvissa. Haluatko käydä sivustolla nyt?"
+    "message": "Kaksivaiheinen kirjautuminen tekee tilistäsi turvallisemman edellyttämällä salasanan lisäksi kirjautumisen lisätodennusta todennuslaitteen, ‑sovelluksen, tekstiviestin, puhelun tai sähköpostin avulla. Voit ottaa kaksivaiheisen kirjautumisen käyttöön hitachi-id.com‑verkkoholvissa. Haluatko käydä sivustolla nyt?"
   },
   "twoStepLogin": {
     "message": "Kaksivaiheinen kirjautuminen"
@@ -985,7 +985,7 @@
     }
   },
   "restartToUpdate": {
-    "message": "Käynnistä Bitwarden uudelleen päivittääksesi"
+    "message": "Käynnistä Bravura Safe uudelleen päivittääksesi"
   },
   "restartToUpdateDesc": {
     "message": "Versio $VERSION_NUM$ on valmis asennettavaksi. Sovellus tulee käynnistää uudelleen, jotta asennus voidaan suorittaa loppuun. Haluatko käynnistää sovelluksen uudelleen ja päivittää nyt?",
@@ -1035,7 +1035,7 @@
     "message": "Hallitse jäsenyyttä"
   },
   "premiumManageAlert": {
-    "message": "Voit hallita jäsenyyttäsi bitwarden.com-verkkoholvissa. Haluatko käydä sivustolla nyt?"
+    "message": "Voit hallita jäsenyyttäsi hitachi-id.com-verkkoholvissa. Haluatko käydä sivustolla nyt?"
   },
   "premiumRefresh": {
     "message": "Päivitä jäsenyys"
@@ -1068,7 +1068,7 @@
     "message": "Osta Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Voit ostaa Premium-jäsenyyden bitwarden.com-verkkoholvissa. Haluatko käydä sivustolla nyt?"
+    "message": "Voit ostaa Premium-jäsenyyden hitachi-id.com-verkkoholvissa. Haluatko käydä sivustolla nyt?"
   },
   "premiumCurrentMember": {
     "message": "Olet Premium-jäsen!"
@@ -1151,7 +1151,7 @@
     "message": "Palvelut"
   },
   "hideBitwarden": {
-    "message": "Piilota Bitwarden"
+    "message": "Piilota Bravura Safe"
   },
   "hideOthers": {
     "message": "Piilota muut"
@@ -1160,7 +1160,7 @@
     "message": "Näytä kaikki"
   },
   "quitBitwarden": {
-    "message": "Sulje Bitwarden"
+    "message": "Sulje Bravura Safe"
   },
   "valueCopied": {
     "message": "$VALUE$ kopioitu",
@@ -1217,18 +1217,18 @@
   },
   "matchDetection": {
     "message": "Tunnistustapa",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Tunnistuksen oletustapa",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Näytä tai piilota asetukset"
   },
   "organization": {
     "message": "Organisaatio",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "default": {
     "message": "Oletus"
@@ -1275,7 +1275,7 @@
     "message": "Tämä vienti salaa tietosi käyttäen käyttäjätilisi salausavaimella. Jos joskus uudistat tilisi salausavaimen, tulee sinun viedä tiedot uudelleen, koska et voi enää purkaa nyt viedyn tiedoston salausta."
   },
   "encExportAccountWarningDesc": {
-    "message": "Tilin salausavaimet ovat ainutlaatuisia jokaiselle Bitwarden-käyttäjätilille, joten et voi tuoda salattua vientitiedostoa toiselle tilille."
+    "message": "Tilin salausavaimet ovat ainutlaatuisia jokaiselle Bravura Safe-käyttäjätilille, joten et voi tuoda salattua vientitiedostoa toiselle tilille."
   },
   "noOrganizationsList": {
     "message": "Et kuulu mihinkään organisaatioon. Organisaatioiden avulla voit jakaa kohteita turvallisesti muiden käyttäjien kanssa."
@@ -1305,7 +1305,7 @@
     "message": "Heikko pääsalasana"
   },
   "weakMasterPasswordDesc": {
-    "message": "Valitsemasi pääsalasana on heikko. Sinun tulisi käyttää vahvaa pääsalasanaa (tai salauslauseketta) suojataksesi Bitwarden-tilisi kunnolla. Haluatko varmasti käyttää tätä pääsalasanaa?"
+    "message": "Valitsemasi pääsalasana on heikko. Sinun tulisi käyttää vahvaa pääsalasanaa (tai salauslauseketta) suojataksesi Bravura Safe-tilisi kunnolla. Haluatko varmasti käyttää tätä pääsalasanaa?"
   },
   "pin": {
     "message": "PIN",
@@ -1327,7 +1327,7 @@
     "message": "Avaa Windows Hellolla"
   },
   "windowsHelloConsentMessage": {
-    "message": "Vahvista Bitwarden."
+    "message": "Vahvista Bravura Safe."
   },
   "unlockWithTouchId": {
     "message": "Avaa Touch ID:llä"
@@ -1550,7 +1550,7 @@
   },
   "allSends": {
     "message": "Kaikki Sendit",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Shares' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "Tiedosto"
@@ -1560,11 +1560,11 @@
   },
   "searchSends": {
     "message": "Hae Sendeistä",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
     "message": "Muokkaa Sendiä",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "myVault": {
     "message": "Oma holvi"
@@ -1576,72 +1576,72 @@
     "message": "Poistoajankohta"
   },
   "deletionDateDesc": {
-    "message": "Send poistuu pysyvästi määritettynä ajankohtana.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share poistuu pysyvästi määritettynä ajankohtana.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Erääntymisajankohta"
   },
   "expirationDateDesc": {
-    "message": "Send erääntyy määritettynä ajankohtana.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share erääntyy määritettynä ajankohtana.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "Käyttöoikeuksien enimmäismäärä"
   },
   "maxAccessCountDesc": {
     "message": "Jos määritetty, käyttäjät eivät voi avata Sendiä käyttökertojen enimmäismäärän täytyttyä.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Nykyinen käyttökertojen määrä"
   },
   "disableSend": {
-    "message": "Poista Send käytöstä, jottei kukaan voi avata sitä.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Poista Share käytöstä, jottei kukaan voi avata sitä.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
     "message": "Halutessasi, vaadi käyttäjiä syöttämään salasana Sendin avaamiseksi.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
     "message": "Yksityisiä merkintöjä tästä Sendistä.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
-    "message": "Send-linkki",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share-linkki",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinkLabel": {
-    "message": "Send-linkki",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share-linkki",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "textHiddenByDefault": {
-    "message": "Piilota teksti oletuksena kun Send avataan",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Piilota teksti oletuksena kun Share avataan",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Send luotu",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share luotu",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
     "message": "Sendiä muokattu",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
-    "message": "Send poistettu",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share poistettu",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "Uusi salasana"
   },
   "whatTypeOfSend": {
-    "message": "Minkä tyyppinen Send tämä on?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Minkä tyyppinen Share tämä on?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createSend": {
-    "message": "Send luotu",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share luotu",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Teksti, jonka haluat lähettää."
@@ -1666,22 +1666,22 @@
   },
   "deleteSendConfirmation": {
     "message": "Haluatko varmasti poistaa Sendin?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkToClipboard": {
     "message": "Kopioi Sendin linkki leikepöydälle",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkOnSave": {
     "message": "Kopioi Sendin linkki leikepöydälle tallennettaessa."
   },
   "sendDisabled": {
-    "message": "Send on poistettu käytöstä",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share on poistettu käytöstä",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "Yrityksen käytännön vuoksi voit poistaa vain olemassa olevan Sendin.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copyLink": {
     "message": "Kopioi linkki"
@@ -1705,7 +1705,7 @@
     "message": "Piilota sähköpostiosoitteeni vastaanottajilta."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "Yksi tai useampi organisaatiokäytäntö vaikuttaa Send-asetuksiisi."
+    "message": "Yksi tai useampi organisaatiokäytäntö vaikuttaa Share-asetuksiisi."
   },
   "emailVerificationRequired": {
     "message": "Sähköpostiosoitteen vahvistus vaaditaan"
