@@ -1,9 +1,9 @@
 {
   "appName": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "extName": {
-    "message": "Bitwarden",
+    "message": "Bravura Safe",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
@@ -209,7 +209,7 @@
     "message": "Tự động tạo mật khẩu mạnh mẽ, duy nhất cho đăng nhập của bạn."
   },
   "bitWebVault": {
-    "message": "Hầm bitwarden trên Web"
+    "message": "Hầm Bravura Safe trên Web"
   },
   "importItems": {
     "message": "Nhập mục"
@@ -350,7 +350,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -479,10 +479,10 @@
     "message": "Thay đổi mật khẩu chính"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Bạn có thể thay đổi mật khẩu chủ trong trang web Bitwarden. Bạn có muốn truy cập bitwarden.com bây giờ?"
+    "message": "Bạn có thể thay đổi mật khẩu chủ trong trang web Bravura Safe. Bạn có muốn truy cập Bravura Safe bây giờ?"
   },
   "twoStepLoginConfirmation": {
-    "message": "Xác thực hai lớp giúp cho tài khoản của bạn an toàn hơn bằng cách yêu cầu bạn xác minh thông tin đăng nhập của bạn bằng một thiết bị khác như khóa bảo mật, ứng dụng xác thực, SMS, cuộc gọi điện thoại hoặc email. Bạn có thể bật xác thực hai lớp trong trang web Bitwarden. Bạn có muốn ghé thăm bitwarden.com bây giờ?"
+    "message": "Xác thực hai lớp giúp cho tài khoản của bạn an toàn hơn bằng cách yêu cầu bạn xác minh thông tin đăng nhập của bạn bằng một thiết bị khác như khóa bảo mật, ứng dụng xác thực, SMS, cuộc gọi điện thoại hoặc email. Bạn có thể bật xác thực hai lớp trong trang web Bravura Safe. Bạn có muốn ghé thăm Bravura Safe bây giờ?"
   },
   "editedFolder": {
     "message": "Chỉnh sửa Thư mục"
@@ -513,7 +513,7 @@
   },
   "uriPosition": {
     "message": "URL $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -571,13 +571,13 @@
     "message": "Don't Show Cards on Tab Page"
   },
   "dontShowCardsCurrentTabDesc": {
-    "message": "Card items from your vault are listed on the 'Current Tab' page for easy auto-fill access."
+    "message": "Card items from your safe are listed on the 'Current Tab' page for easy auto-fill access."
   },
   "dontShowIdentitiesCurrentTab": {
     "message": "Don't Show Identities on Tab Page"
   },
   "dontShowIdentitiesCurrentTabDesc": {
-    "message": "Identity items from your vault are listed on the 'Current Tab' page for easy auto-fill access."
+    "message": "Identity items from your safe are listed on the 'Current Tab' page for easy auto-fill access."
   },
   "clearClipboard": {
     "message": "Dọn dẹp khay nhớ tạm",
@@ -588,7 +588,7 @@
     "description": "Clipboard is the operating system thing where you copy/paste data to on your device."
   },
   "notificationAddDesc": {
-    "message": "Bạn có cần Bitwarden nhớ giúp bạn mật khẩu này không?"
+    "message": "Bạn có cần Bravura Safe nhớ giúp bạn mật khẩu này không?"
   },
   "notificationAddSave": {
     "message": "Vâng, Lưu Ngay"
@@ -597,10 +597,10 @@
     "message": "Disable Changed Password Notification"
   },
   "disableChangedPasswordNotificationDesc": {
-    "message": "The \"Changed Password Notification\" automatically prompts you to update a login's password in your vault whenever it detects that you have changed it on a website."
+    "message": "The \"Changed Password Notification\" automatically prompts you to update a login's password in your safe whenever it detects that you have changed it on a website."
   },
   "notificationChangeDesc": {
-    "message": "Bạn có muốn cập nhật mật khẩu này trên Bitwarden không?"
+    "message": "Bạn có muốn cập nhật mật khẩu này trên Bravura Safe không?"
   },
   "notificationChangeSave": {
     "message": "Yes, Update Now"
@@ -612,11 +612,11 @@
     "message": "Tùy chọn menu ngữ cảnh giúp bạn truy cập nhanh thông tin đăng nhập và tạo mật khẩu cho trang web trong tab mà bạn đang mở."
   },
   "defaultUriMatchDetection": {
-    "message": "Phương thức kiểm tra URI mặc định",
-    "description": "Default URI match detection for auto-fill."
+    "message": "Phương thức kiểm tra URL mặc định",
+    "description": "Default URL match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "Chọn phương thức mặc định để kiểm tra so sánh URI cho các đăng nhập khi xử lí các hành động như là tự động điền."
+    "message": "Chọn phương thức mặc định để kiểm tra so sánh URL cho các đăng nhập khi xử lí các hành động như là tự động điền."
   },
   "theme": {
     "message": "Giao diện"
@@ -650,13 +650,13 @@
     "message": "Xác nhận xuất mật khẩu"
   },
   "exportWarningDesc": {
-    "message": "This export contains your vault data in an unencrypted format. You should not store or send the exported file over unsecure channels (such as email). Delete it immediately after you are done using it."
+    "message": "This export contains your safe data in an unencrypted format. You should not store or send the exported file over unsecure channels (such as email). Delete it immediately after you are done using it."
   },
   "encExportKeyWarningDesc": {
     "message": "This export encrypts your data using your account's encryption key. If you ever rotate your account's encryption key you should export again since you will not be able to decrypt this export file."
   },
   "encExportAccountWarningDesc": {
-    "message": "Account encryption keys are unique to each Bitwarden user account, so you can't import an encrypted export into a different account."
+    "message": "Account encryption keys are unique to each Bravura Safe user account, so you can't import an encrypted export into a different account."
   },
   "exportMasterPassword": {
     "message": "Nhập mật khẩu chủ để xuất kho dữ liệu của bạn."
@@ -668,7 +668,7 @@
     "message": "Xem tổ chức của bạn"
   },
   "learnOrgConfirmation": {
-    "message": "Bitwarden allows you to share your vault items with others by using an organization. Would you like to visit the bitwarden.com website to learn more?"
+    "message": "Bravura Safe allows you to share your safe items with others by using a team. Would you like to visit the Bravura Safe website to learn more?"
   },
   "moveToOrganization": {
     "message": "Chuyển tới Tổ chức"
@@ -690,7 +690,7 @@
     }
   },
   "moveToOrgDesc": {
-    "message": "Choose an organization that you wish to move this item to. Moving to an organization transfers ownership of the item to that organization. You will no longer be the direct owner of this item once it has been moved."
+    "message": "Choose a team that you wish to move this item to. Moving to a team transfers ownership of the item to that team. You will no longer be the direct owner of this item once it has been moved."
   },
   "learnMore": {
     "message": "Tìm hiểu thêm"
@@ -747,7 +747,7 @@
     "message": "Quản lý Thành viên"
   },
   "premiumManageAlert": {
-    "message": "Bạn có thể quản lý các thành viên trong trang web Bitwarden. Bạn có muốn truy cập bitwarden.com bây giờ?"
+    "message": "Bạn có thể quản lý các thành viên trong trang web Bravura Safe. Bạn có muốn truy cập hitachi-id.com bây giờ?"
   },
   "premiumRefresh": {
     "message": "Làm mới thành viên"
@@ -780,13 +780,13 @@
     "message": "Mua bản Cao Cấp"
   },
   "premiumPurchaseAlert": {
-    "message": "Bạn có thể nâng cấp làm thành viên cao cấp trong trang web Bitwarden. Bạn có muốn truy cập bitwarden.com bây giờ?"
+    "message": "Bạn có thể nâng cấp làm thành viên cao cấp trong trang web Bravura Safe. Bạn có muốn truy cập hitachi-id.com bây giờ?"
   },
   "premiumCurrentMember": {
     "message": "Bạn là một thành viên cao cấp!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Cảm ơn bạn đã hỗ trợ Bitwarden."
+    "message": "Cảm ơn bạn đã hỗ trợ Bravura Safe."
   },
   "premiumPrice": {
     "message": "Tất cả chỉ với $PRICE$ /năm!",
@@ -915,7 +915,7 @@
     "message": "Môi trường độc lập"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Chỉ định liên kết cơ bản của cài đặt bitwarden tại chỗ của bạn."
+    "message": "Chỉ định liên kết cơ bản của cài đặt Bravura Safe tại chỗ của bạn."
   },
   "customEnvironment": {
     "message": "Môi trường tùy chỉnh"
@@ -1262,26 +1262,26 @@
   },
   "matchDetection": {
     "message": "Độ phù hợp",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Độ phù hợp mặc định",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Bật/tắt tùy chọn"
   },
   "toggleCurrentUris": {
-    "message": "Bật/tắt URI hiện tại",
-    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
+    "message": "Bật/tắt URL hiện tại",
+    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
   },
   "currentUri": {
-    "message": "URI hiện tại",
-    "description": "The URI of one of the current open tabs in the browser."
+    "message": "URL hiện tại",
+    "description": "The URL of one of the current open tabs in the browser."
   },
   "organization": {
     "message": "Tổ chức",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "types": {
     "message": "Các loại"
@@ -1310,7 +1310,7 @@
     "message": "Bạn có chắc bạn muốn sử dụng tùy chọn \"Không bao giờ\"? Đặt các tùy chọn khóa về \"Không bao giờ\" sẽ lưu key mã hóa kho của ngay trên thiết bị của bạn. Nếu bạn sử dụng tùy chọn này, bạn nên chắc chắn là thiết bị bạn đang được bảo vệ."
   },
   "noOrganizationsList": {
-    "message": "You do not belong to any organizations. Organizations allow you to securely share items with other users."
+    "message": "You do not belong to any teams. Teams allow you to securely share items with other users."
   },
   "noCollectionsInList": {
     "message": "Không có bộ sưu tập nào để liệt kê."
@@ -1337,7 +1337,7 @@
     "message": "Mật khẩu chính đơn giản"
   },
   "weakMasterPasswordDesc": {
-    "message": "Mật khẩu chính bạn vừa chọn có vẻ yếu. Bạn nên chọn mật khẩu chính (hoặc cụm từ mật khẩu) mạnh để bảo vệ đúng cách tài khoản Bitwarden của bạn. Bạn có thực sự muốn dùng mật khẩu chính này?"
+    "message": "Mật khẩu chính bạn vừa chọn có vẻ yếu. Bạn nên chọn mật khẩu chính (hoặc cụm từ mật khẩu) mạnh để bảo vệ đúng cách tài khoản Bravura Safe của bạn. Bạn có thực sự muốn dùng mật khẩu chính này?"
   },
   "pin": {
     "message": "Mã PIN",
@@ -1347,7 +1347,7 @@
     "message": "Mở khóa với mã PIN"
   },
   "setYourPinCode": {
-    "message": "Đặt mã PIN của bạn để mở khóa Bitwarden. Cài đặt mã PIN của bạn sẽ bị xóa nếu bạn hoàn toàn đăng xuất khỏi ứng dụng."
+    "message": "Đặt mã PIN của bạn để mở khóa Bravura Safe. Cài đặt mã PIN của bạn sẽ bị xóa nếu bạn hoàn toàn đăng xuất khỏi ứng dụng."
   },
   "pinRequired": {
     "message": "Mã PIN là bắt buộc."
@@ -1362,7 +1362,7 @@
     "message": "Đợi xác nhận từ máy tính"
   },
   "awaitDesktopDesc": {
-    "message": "Vui lòng xác nhận sử dụng sinh trắc học với ứng dụng Bitwarden trên máy tính."
+    "message": "Vui lòng xác nhận sử dụng sinh trắc học với ứng dụng Bravura Safe trên máy tính."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Khóa với mật khẩu chính khi trình duyệt khởi động lại"
@@ -1421,7 +1421,7 @@
     "message": "Tự động điền và Lưu"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "Tự động điền và Lưu URI"
+    "message": "Tự động điền và Lưu URL"
   },
   "autoFillSuccess": {
     "message": "Tự động điền"
@@ -1499,13 +1499,13 @@
     "message": "Tích hợp trình duyệt chưa được kích hoạt"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "Browser integration is not enabled in the Bitwarden Desktop application. Please enable it in the settings within the desktop application."
+    "message": "Browser integration is not enabled in the Bravura Safe Desktop application. Please enable it in the settings within the desktop application."
   },
   "startDesktopTitle": {
-    "message": "Mở ứng dụng Bitwarden trên máy tính"
+    "message": "Mở ứng dụng Bravura Safe trên máy tính"
   },
   "startDesktopDesc": {
-    "message": "The Bitwarden Desktop application needs to be started before unlock with biometrics can be used."
+    "message": "The Bravura Safe Desktop application needs to be started before unlock with biometrics can be used."
   },
   "errorEnableBiometricTitle": {
     "message": "Không thể bật nhận dạng sinh trắc học"
@@ -1541,7 +1541,7 @@
     "message": "Quyền chưa được cấp"
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "Without permission to communicate with the Bitwarden Desktop Application we cannot provide biometrics in the browser extension. Please try again."
+    "message": "Without permission to communicate with the Bravura Safe Desktop Application we cannot provide biometrics in the browser extension. Please try again."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Lỗi yêu cầu quyền"
@@ -1550,16 +1550,16 @@
     "message": "This action cannot be done in the sidebar, please retry the action in the popup or popout."
   },
   "personalOwnershipSubmitError": {
-    "message": "Due to an Enterprise Policy, you are restricted from saving items to your personal vault. Change the Ownership option to an organization and choose from available Collections."
+    "message": "Due to an Enterprise Policy, you are restricted from saving items to your personal safe. Change the Ownership option to a team and choose from available Collections."
   },
   "personalOwnershipPolicyInEffect": {
-    "message": "An organization policy is affecting your ownership options."
+    "message": "A team policy is affecting your ownership options."
   },
   "excludedDomains": {
     "message": "Excluded Domains"
   },
   "excludedDomainsDesc": {
-    "message": "Bitwarden will not ask to save login details for these domains. You must refresh the page for changes to take effect."
+    "message": "Bravura Safe will not ask to save login details for these domains. You must refresh the page for changes to take effect."
   },
   "excludedDomainsInvalidDomain": {
     "message": "$DOMAIN$ is not a valid domain",
@@ -1571,16 +1571,16 @@
     }
   },
   "send": {
-    "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "searchSends": {
-    "message": "Tìm kiếm Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Tìm kiếm Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "addSend": {
-    "message": "Thêm Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Thêm Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeText": {
     "message": "Văn bản"
@@ -1589,8 +1589,8 @@
     "message": "Tập tin"
   },
   "allSends": {
-    "message": "Toàn bộ Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Toàn bộ Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "Max access count reached",
@@ -1606,8 +1606,8 @@
     "message": "Mật khẩu đã được bảo vệ"
   },
   "copySendLink": {
-    "message": "Sao chép liên kết Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Sao chép liên kết Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "removePassword": {
     "message": "Đã xóa mật khẩu"
@@ -1619,12 +1619,12 @@
     "message": "Xóa mật khẩu"
   },
   "deletedSend": {
-    "message": "Đã xóa Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Đã xóa Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
     "message": "Gửi liên kết",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "disabled": {
     "message": "Đã tắt"
@@ -1633,24 +1633,24 @@
     "message": "Bạn có chắc chắn muốn xóa mật khẩu này?"
   },
   "deleteSend": {
-    "message": "Xóa Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Xóa Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deleteSendConfirmation": {
-    "message": "Bạn có chắc chắn muốn xóa Send này?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Bạn có chắc chắn muốn xóa Share này?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Chỉnh sửa Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Chỉnh sửa Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeHeader": {
-    "message": "Đây là loại Send gì?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Đây là loại Share gì?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNameDesc": {
-    "message": "Một tên gợi nhớ để mô tả về Send này.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Một tên gợi nhớ để mô tả về Share này.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendFileDesc": {
     "message": "Tập tin bạn muốn gửi."
@@ -1659,15 +1659,15 @@
     "message": "Ngày xóa"
   },
   "deletionDateDesc": {
-    "message": "Send sẽ được xóa vĩnh viễn vào ngày và giờ được chỉ định.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share sẽ được xóa vĩnh viễn vào ngày và giờ được chỉ định.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Ngày hết hạn"
   },
   "expirationDateDesc": {
-    "message": "Nếu được thiết lập, truy cập vào Send này sẽ hết hạn vào ngày và giờ được chỉ định.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Nếu được thiết lập, truy cập vào Share này sẽ hết hạn vào ngày và giờ được chỉ định.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "oneDay": {
     "message": "1 ngày"
@@ -1688,57 +1688,57 @@
     "message": "Số lượng truy cập tối đa"
   },
   "maximumAccessCountDesc": {
-    "message": "Nếu được thiết lập, khi đã đạt tới số lượng truy cập tối đa, người dùng sẽ không thể truy cập Send này nữa.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Nếu được thiết lập, khi đã đạt tới số lượng truy cập tối đa, người dùng sẽ không thể truy cập Share này nữa.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
-    "message": "Optionally require a password for users to access this Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Optionally require a password for users to access this Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "Private notes about this Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Private notes about this Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisableDesc": {
-    "message": "Disable this Send so that no one can access it.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Disable this Share so that no one can access it.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendShareDesc": {
-    "message": "Copy this Send's link to clipboard upon save.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Copy this Share's link to clipboard upon save.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Văn bản bạn muốn gửi."
   },
   "sendHideText": {
-    "message": "Hide this Send's text by default.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Hide this Share's text by default.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Current Access Count"
   },
   "createSend": {
-    "message": "Create New Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Create New Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "Mật khẩu mới"
   },
   "sendDisabled": {
     "message": "Đã tắt gửi",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "Do chính sách doanh nghiệp, bạn chỉ có thể xóa những Send hiện có.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Do chính sách doanh nghiệp, bạn chỉ có thể xóa những Share hiện có.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Đã tạo Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Đã tạo Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "Đã chỉnh sửa Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Đã chỉnh sửa Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinuxChromiumFileWarning": {
     "message": "In order to choose a file, open the extension in the sidebar (if possible) or pop out to a new window by clicking this banner."
@@ -1783,7 +1783,7 @@
     "message": "Hide my email address from recipients."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "One or more organization policies are affecting your Send options."
+    "message": "One or more team policies are affecting your Share options."
   },
   "passwordPrompt": {
     "message": "Nhắc lại mật khẩu chính"
@@ -1807,19 +1807,19 @@
     "message": "Cập nhật mật khẩu chính"
   },
   "updateMasterPasswordWarning": {
-    "message": "Your Master Password was recently changed by an administrator in your organization. In order to access the vault, you must update it now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
+    "message": "Your Master Password was recently changed by an administrator in your team. In order to access the safe, you must update it now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
   },
   "resetPasswordPolicyAutoEnroll": {
     "message": "Automatic Enrollment"
   },
   "resetPasswordAutoEnrollInviteWarning": {
-    "message": "This organization has an enterprise policy that will automatically enroll you in password reset. Enrollment will allow organization administrators to change your master password."
+    "message": "This team has an enterprise policy that will automatically enroll you in password reset. Enrollment will allow team administrators to change your master password."
   },
   "selectFolder": {
     "message": "Chọn thư mục"
   },
   "ssoCompleteRegistration": {
-    "message": "In order to complete logging in with SSO, please set a master password to access and protect your vault."
+    "message": "In order to complete logging in with SSO, please set a master password to access and protect your safe."
   },
   "hours": {
     "message": "Giờ"
@@ -1828,7 +1828,7 @@
     "message": "Phút"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Your organization policies are affecting your vault timeout. Maximum allowed Vault Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
+    "message": "Your team policies are affecting your safe timeout. Maximum allowed Safe Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1841,13 +1841,13 @@
     }
   },
   "vaultTimeoutToLarge": {
-    "message": "Your vault timeout exceeds the restrictions set by your organization."
+    "message": "Your safe timeout exceeds the restrictions set by your team."
   },
   "vaultExportDisabled": {
     "message": "Xuất mật khẩu đăng tắt"
   },
   "personalVaultExportPolicyInEffect": {
-    "message": "One or more organization policies prevents you from exporting your personal vault."
+    "message": "One or more team policies prevents you from exporting your personal safe."
   },
   "copyCustomFieldNameInvalidElement": {
     "message": "Unable to identify a valid form element. Try inspecting the HTML instead."
@@ -1856,7 +1856,7 @@
     "message": "No unique identifier found."
   },
   "convertOrganizationEncryptionDesc": {
-    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this organization.",
+    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this team.",
     "placeholders": {
       "organization": {
         "content": "$1",
@@ -1874,10 +1874,10 @@
     "message": "Đã xóa mật khẩu chính"
   },
   "leaveOrganizationConfirmation": {
-    "message": "Are you sure you want to leave this organization?"
+    "message": "Are you sure you want to leave this team?"
   },
   "leftOrganization": {
-    "message": "You have left the organization."
+    "message": "You have left the team."
   },
   "toggleCharacterCount": {
     "message": "Toggle character count"

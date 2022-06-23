@@ -2,7 +2,7 @@ import AddLoginRuntimeMessage from "src/background/models/addLoginRuntimeMessage
 import ChangePasswordRuntimeMessage from "src/background/models/changePasswordRuntimeMessage";
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  if (window.location.hostname.endsWith("vault.bitwarden.com")) {
+  if (window.location.hostname.endsWith("safe.hitachi-id.net")) {
     return;
   }
 
@@ -526,7 +526,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       return;
     }
 
-    const barPageUrl: string = chrome.extension.getURL(barPage);
+    const barPageUrl: string = chrome.runtime.getURL(barPage);
 
     const iframe = document.createElement("iframe");
     iframe.style.cssText = "height: 42px; width: 100%; border: 0; min-height: initial;";

@@ -6,13 +6,13 @@
   IgnorableNamespaces="uap3">
 
   <Identity
-    Name="8bitSolutionsLLC.bitwarden-FreePasswordManager"
-    Publisher="CN=14D52771-DE3C-4886-B8BF-825BA7690418"
+    Name="HitachiIDSystems.bravura-safe-PasswordManager"
+    Publisher="CN=4E16CCBC-3892-426C-BE0E-FAC31C31CDD1"
     Version="0.0.0.0"/>
 
   <Properties>
-    <DisplayName>Bitwarden Extension - Free Password Manager</DisplayName>
-    <PublisherDisplayName>8bit Solutions LLC</PublisherDisplayName>
+    <DisplayName>Bravura Safe Extension</DisplayName>
+    <PublisherDisplayName>Hitachi ID Systems</PublisherDisplayName>
     <Logo>Assets/icon_50.png</Logo>
   </Properties>
 
@@ -30,10 +30,10 @@
     <Application Id="App">
       <uap:VisualElements
         AppListEntry="none"
-        DisplayName="Bitwarden Extension - Free Password Manager"
+        DisplayName="Bravura Safe Extension"
         Square150x150Logo="Assets/icon_150.png"
         Square44x44Logo="Assets/icon_44.png"
-        Description="A secure and free password manager for all of your devices."
+        Description="A secure password manager for all of your devices."
         BackgroundColor="white">
       </uap:VisualElements>
       <Extensions>
@@ -41,7 +41,7 @@
         <uap3:AppExtension Name="com.microsoft.edge.extension"
           Id="EdgeExtension"
           PublicFolder="Extension"
-          DisplayName="Bitwarden Extension - Free Password Manager">
+          DisplayName="Bravura Safe Extension">
         </uap3:AppExtension>
       </uap3:Extension>
       </Extensions>

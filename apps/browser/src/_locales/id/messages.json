@@ -1,13 +1,13 @@
 {
   "appName": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "extName": {
-    "message": "Bitwarden - Pengelola Sandi Gratis",
+    "message": "Bravura Safe - Pengelola Sandi Gratis",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
-    "message": "Bitwarden adalah sebuah pengelola sandi yang aman dan gratis untuk semua perangkat Anda.",
+    "message": "Bravura Safe adalah sebuah pengelola sandi yang aman dan gratis untuk semua perangkat Anda.",
     "description": "Extension description"
   },
   "loginOrCreateNewAccount": {
@@ -71,7 +71,7 @@
     "message": "Salin Catatan"
   },
   "copyUri": {
-    "message": "Salin URI"
+    "message": "Salin URL"
   },
   "copyUsername": {
     "message": "Salin Nama Pengguna"
@@ -209,7 +209,7 @@
     "message": "Secara otomatis membuat sandi yang kuat dan unik untuk info masuk Anda."
   },
   "bitWebVault": {
-    "message": "Brankas Web Bitwarden"
+    "message": "Brankas Web Bravura Safe"
   },
   "importItems": {
     "message": "Impor Item"
@@ -350,7 +350,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -479,10 +479,10 @@
     "message": "Ubah Kata Sandi Utama"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Anda dapat mengubah kata sandi utama Anda di brankas web bitwarden.com. Anda ingin mengunjungi situs web sekarang?"
+    "message": "Anda dapat mengubah kata sandi utama Anda di brankas web hitachi-id.com. Anda ingin mengunjungi situs web sekarang?"
   },
   "twoStepLoginConfirmation": {
-    "message": "Info masuk dua langkah membuat akun Anda lebih aman dengan mengharuskan Anda memverifikasi info masuk Anda dengan peranti lain seperti kode keamanan, aplikasi autentikasi, SMK, panggilan telepon, atau email. Info masuk dua langkah dapat diaktifkan di brankas web bitwarden.com. Anda ingin mengunjungi situs web sekarang?"
+    "message": "Info masuk dua langkah membuat akun Anda lebih aman dengan mengharuskan Anda memverifikasi info masuk Anda dengan peranti lain seperti kode keamanan, aplikasi autentikasi, SMK, panggilan telepon, atau email. Info masuk dua langkah dapat diaktifkan di brankas web hitachi-id.com. Anda ingin mengunjungi situs web sekarang?"
   },
   "editedFolder": {
     "message": "Folder yang disunting"
@@ -509,11 +509,11 @@
     "message": "Sandi disalin"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -588,7 +588,7 @@
     "description": "Clipboard is the operating system thing where you copy/paste data to on your device."
   },
   "notificationAddDesc": {
-    "message": "Haruskah Bitwarden mengingat sandi ini untuk Anda?"
+    "message": "Haruskah Bravura Safe mengingat sandi ini untuk Anda?"
   },
   "notificationAddSave": {
     "message": "Iya, Simpan Sekarang"
@@ -600,7 +600,7 @@
     "message": "\"Notifikasi Perubahan Kata Sandi\" secara otomatis akan meminta Anda untuk memperbarui kata sandi info masuk di brankas Anda ketika mendeteksi bahwa Anda telah mengubahnya lewat situs web."
   },
   "notificationChangeDesc": {
-    "message": "Apakah Anda ingin memperbarui kata sandi ini di Bitwarden?"
+    "message": "Apakah Anda ingin memperbarui kata sandi ini di Bravura Safe?"
   },
   "notificationChangeSave": {
     "message": "Iya, Perbarui Sekarang"
@@ -612,11 +612,11 @@
     "message": "Pilihan menu konteks menyediakan akses cepat ke pembuat sandi dan info masuk untuk situs web di tab Anda saat ini."
   },
   "defaultUriMatchDetection": {
-    "message": "Deteksi Kecocokan URI Bawaan",
-    "description": "Default URI match detection for auto-fill."
+    "message": "Deteksi Kecocokan URL Bawaan",
+    "description": "Default URL match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "Pilih cara bawaan penanganan pencocokan URI untuk masuk saat melakukan tindakan seperti isi-otomatis."
+    "message": "Pilih cara bawaan penanganan pencocokan URL untuk masuk saat melakukan tindakan seperti isi-otomatis."
   },
   "theme": {
     "message": "Tema"
@@ -656,7 +656,7 @@
     "message": "Ekspor ini mengenkripsi data Anda menggunakan kunci enkripsi akun Anda. Jika Anda pernah merotasi kunci enkripsi akun Anda, Anda harus mengekspor lagi karena Anda tidak akan dapat mendekripsi file ekspor ini."
   },
   "encExportAccountWarningDesc": {
-    "message": "Kunci enkripsi akun unik untuk setiap akun pengguna Bitwarden, jadi Anda tidak dapat mengimpor ekspor terenkripsi ke akun lain."
+    "message": "Kunci enkripsi akun unik untuk setiap akun pengguna Bravura Safe, jadi Anda tidak dapat mengimpor ekspor terenkripsi ke akun lain."
   },
   "exportMasterPassword": {
     "message": "Masukkan sandi utama Anda untuk mengekspor data brankas Anda."
@@ -668,7 +668,7 @@
     "message": "Pelajari tentang Organisasi"
   },
   "learnOrgConfirmation": {
-    "message": "Bitwarden memungkinkan Anda berbagi item brankas Anda dengan orang lain menggunakan organisasi. Maukah Anda mengunjungi laman bitwarden.com untuk mempelajari lebih lanjut?"
+    "message": "Bravura Safe memungkinkan Anda berbagi item brankas Anda dengan orang lain menggunakan organisasi. Maukah Anda mengunjungi laman hitachi-id.com untuk mempelajari lebih lanjut?"
   },
   "moveToOrganization": {
     "message": "Pindah ke Organisasi"
@@ -747,7 +747,7 @@
     "message": "Kelola Keanggotaan"
   },
   "premiumManageAlert": {
-    "message": "Anda dapat mengelola keanggotaan Anda di brankas web bitwarden.com. Anda ingin mengunjungi situs web sekarang?"
+    "message": "Anda dapat mengelola keanggotaan Anda di brankas web hitachi-id.com. Anda ingin mengunjungi situs web sekarang?"
   },
   "premiumRefresh": {
     "message": "Segarkan Keanggotaan"
@@ -780,13 +780,13 @@
     "message": "Beli Keanggotaan Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Anda dapat membeli keanggotaan premium di brankas web bitwarden.com. Anda ingin mengunjungi situs web sekarang?"
+    "message": "Anda dapat membeli keanggotaan premium di brankas web hitachi-id.com. Anda ingin mengunjungi situs web sekarang?"
   },
   "premiumCurrentMember": {
     "message": "Anda adalah anggota premium!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Terima kasih telah mendukung Bitwarden."
+    "message": "Terima kasih telah mendukung Bravura Safe."
   },
   "premiumPrice": {
     "message": "Semua itu hanya $PRICE$ /tahun!",
@@ -915,7 +915,7 @@
     "message": "Lingkungan Penyedia Personal"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Tetapkan URL dasar penyedia personal pemasangan Bitwarden Anda."
+    "message": "Tetapkan URL dasar penyedia personal pemasangan Bravura Safe Anda."
   },
   "customEnvironment": {
     "message": "Lingkungan Khusus"
@@ -1262,26 +1262,26 @@
   },
   "matchDetection": {
     "message": "Deteksi Kecocokan",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Deteksi kecocokan standar",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Ubah Opsi"
   },
   "toggleCurrentUris": {
-    "message": "Alihkan URI Saat Ini",
-    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
+    "message": "Alihkan URL Saat Ini",
+    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
   },
   "currentUri": {
-    "message": "URI Saat Ini",
-    "description": "The URI of one of the current open tabs in the browser."
+    "message": "URL Saat Ini",
+    "description": "The URL of one of the current open tabs in the browser."
   },
   "organization": {
     "message": "Organisasi",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "types": {
     "message": "Tipe"
@@ -1337,7 +1337,7 @@
     "message": "Kata Sandi Utama Lemah"
   },
   "weakMasterPasswordDesc": {
-    "message": "Kata sandi utama yang Anda pilih itu lemah. Anda harus menggunakan kata sandi yang kuat (atau frasa sandi) untuk melindungi akun Bitwarden Anda. Apakah Anda yakin ingin menggunakan kata sandi ini?"
+    "message": "Kata sandi utama yang Anda pilih itu lemah. Anda harus menggunakan kata sandi yang kuat (atau frasa sandi) untuk melindungi akun Bravura Safe Anda. Apakah Anda yakin ingin menggunakan kata sandi ini?"
   },
   "pin": {
     "message": "PIN",
@@ -1347,7 +1347,7 @@
     "message": "Buka kunci dengan PIN"
   },
   "setYourPinCode": {
-    "message": "Setel kode PIN Anda untuk membuka kunci Bitwarden. Pengaturan PIN Anda akan diatur ulang jika Anda pernah keluar sepenuhnya dari aplikasi."
+    "message": "Setel kode PIN Anda untuk membuka kunci Bravura Safe. Pengaturan PIN Anda akan diatur ulang jika Anda pernah keluar sepenuhnya dari aplikasi."
   },
   "pinRequired": {
     "message": "Membutuhkan kode PIN."
@@ -1362,7 +1362,7 @@
     "message": "Menunggu konfirmasi dari desktop"
   },
   "awaitDesktopDesc": {
-    "message": "Silakan konfirmasi menggunakan biometrik di aplikasi Bitwarden Desktop untuk mengaktifkan biometrik untuk peramban."
+    "message": "Silakan konfirmasi menggunakan biometrik di aplikasi Bravura Safe Desktop untuk mengaktifkan biometrik untuk peramban."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Kunci dengan kata sandi utama saat peramban dimulai ulang"
@@ -1421,7 +1421,7 @@
     "message": "Isi Otomatis dan Simpan"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "Item yang Diisi Otomatis dan URI Tersimpan"
+    "message": "Item yang Diisi Otomatis dan URL Tersimpan"
   },
   "autoFillSuccess": {
     "message": "Item Terisi Otomatis"
@@ -1499,13 +1499,13 @@
     "message": "Integrasi peramban tidak diaktifkan"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "Integrasi peramban tidak diaktifkan di aplikasi Desktop Bitwarden. Silakan aktifkan di pengaturan di dalam aplikasi desktop."
+    "message": "Integrasi peramban tidak diaktifkan di aplikasi Desktop Bravura Safe. Silakan aktifkan di pengaturan di dalam aplikasi desktop."
   },
   "startDesktopTitle": {
-    "message": "Jalankan aplikasi Desktop Bitwarden"
+    "message": "Jalankan aplikasi Desktop Bravura Safe"
   },
   "startDesktopDesc": {
-    "message": "Aplikasi Desktop Bitwarden harus dijalankan sebelum fungsi ini bisa digunakan."
+    "message": "Aplikasi Desktop Bravura Safe harus dijalankan sebelum fungsi ini bisa digunakan."
   },
   "errorEnableBiometricTitle": {
     "message": "Tidak bisa mengaktifkan biometrik"
@@ -1541,7 +1541,7 @@
     "message": "Izin tidak diberikan"
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "Tanpa adanya izin untuk berkomunikasi dengan Aplikasi Desktop Bitwarden kami tidak bisa menyediakan fitur biometrik di dalam ekstensi peramban. Silakan coba lagi."
+    "message": "Tanpa adanya izin untuk berkomunikasi dengan Aplikasi Desktop Bravura Safe kami tidak bisa menyediakan fitur biometrik di dalam ekstensi peramban. Silakan coba lagi."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Kesalahan permintaan izin"
@@ -1559,7 +1559,7 @@
     "message": "Domain yang Dikecualikan"
   },
   "excludedDomainsDesc": {
-    "message": "Bitwarden tidak akan meminta untuk menyimpan detail login untuk domain ini. Anda harus menyegarkan halaman agar perubahan diterapkan."
+    "message": "Bravura Safe tidak akan meminta untuk menyimpan detail login untuk domain ini. Anda harus menyegarkan halaman agar perubahan diterapkan."
   },
   "excludedDomainsInvalidDomain": {
     "message": "$DOMAIN$ bukan domain yang valid",
@@ -1571,16 +1571,16 @@
     }
   },
   "send": {
-    "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "searchSends": {
-    "message": "Pencarian Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Pencarian Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "addSend": {
-    "message": "Tambahkan Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Tambahkan Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeText": {
     "message": "Teks"
@@ -1590,7 +1590,7 @@
   },
   "allSends": {
     "message": "Semua Sends",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "Jumlah akses maksimum tercapai",
@@ -1606,8 +1606,8 @@
     "message": "Dilindungi kata sandi"
   },
   "copySendLink": {
-    "message": "Salin tautan Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Salin tautan Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "removePassword": {
     "message": "Hapus Kata Sandi"
@@ -1619,12 +1619,12 @@
     "message": "Kata Sandi yang Dihapus"
   },
   "deletedSend": {
-    "message": "Send Dihapus",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share Dihapus",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
-    "message": "Tautan Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Tautan Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "disabled": {
     "message": "Dinonaktifkan"
@@ -1633,24 +1633,24 @@
     "message": "Anda yakin ingin menghapus kata sandi?"
   },
   "deleteSend": {
-    "message": "Hapus Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Hapus Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deleteSendConfirmation": {
-    "message": "Anda yakin ingin menghapus Send ini?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Anda yakin ingin menghapus Share ini?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Edit Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Edit Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeHeader": {
-    "message": "Jenis Send apakah ini?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Jenis Share apakah ini?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNameDesc": {
-    "message": "Nama yang bersahabat untuk menggambarkan Send ini.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Nama yang bersahabat untuk menggambarkan Share ini.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendFileDesc": {
     "message": "File yang ingin Anda kirim."
@@ -1659,15 +1659,15 @@
     "message": "Tanggal Penghapusan"
   },
   "deletionDateDesc": {
-    "message": "Send akan dihapus secara permanen pada tanggal dan waktu yang ditentukan.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share akan dihapus secara permanen pada tanggal dan waktu yang ditentukan.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Tanggal habis tempo"
   },
   "expirationDateDesc": {
-    "message": "Jika disetel, akses ke Send ini akan berakhir pada tanggal dan waktu yang ditentukan.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Jika disetel, akses ke Share ini akan berakhir pada tanggal dan waktu yang ditentukan.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "oneDay": {
     "message": "1 hari"
@@ -1688,57 +1688,57 @@
     "message": "Hitungan Akses Maksimum"
   },
   "maximumAccessCountDesc": {
-    "message": "Jika disetel, pengguna tidak dapat lagi mengakses Send ini setelah jumlah akses maksimum tercapai.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Jika disetel, pengguna tidak dapat lagi mengakses Share ini setelah jumlah akses maksimum tercapai.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
-    "message": "Secara opsional, minta kata sandi bagi pengguna untuk mengakses Send ini.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Secara opsional, minta kata sandi bagi pengguna untuk mengakses Share ini.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "Catatan pribadi tentang Send ini.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Catatan pribadi tentang Share ini.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisableDesc": {
-    "message": "Nonaktifkan Send ini sehingga tidak ada yang dapat mengaksesnya.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Nonaktifkan Share ini sehingga tidak ada yang dapat mengaksesnya.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendShareDesc": {
-    "message": "Salin tautan Send ini ke papan klip setelah disimpan.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Salin tautan Share ini ke papan klip setelah disimpan.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Teks yang ingin Anda kirim."
   },
   "sendHideText": {
-    "message": "Sembunyikan teks Send ini secara default.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Sembunyikan teks Share ini secara default.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Hitungan Akses Saat Ini"
   },
   "createSend": {
-    "message": "Buat Send Baru",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Buat Share Baru",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "Kata Sandi baru"
   },
   "sendDisabled": {
-    "message": "Send Dinonaktifkan",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share Dinonaktifkan",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "Karena kebijakan perusahaan, Anda hanya dapat menghapus Send yang sudah ada.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Karena kebijakan perusahaan, Anda hanya dapat menghapus Share yang sudah ada.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Send Dibuat ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share Dibuat ",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "Send diedit",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share diedit",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinuxChromiumFileWarning": {
     "message": "Untuk memilih file ini, buka Extension di sidebar (jika memungkinkan) atau keluarkan menjadi window baru dengan menekan gambar ini."
@@ -1783,7 +1783,7 @@
     "message": "Sembunyikan alamat surel dari penerima."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "Satu atau lebih kebijakan organisasi mempengaruhi pengaturan feature Send anda."
+    "message": "Satu atau lebih kebijakan organisasi mempengaruhi pengaturan feature Share anda."
   },
   "passwordPrompt": {
     "message": "Master password ditanyakan kembali"
@@ -1856,7 +1856,7 @@
     "message": "Tidak ada pengidentifikasi unik yang ditemukan."
   },
   "convertOrganizationEncryptionDesc": {
-    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this organization.",
+    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this team.",
     "placeholders": {
       "organization": {
         "content": "$1",

@@ -43,7 +43,7 @@ export class HomeComponent {
 
     let url = this.environmentService.getWebVaultUrl();
     if (url == null) {
-      url = "https://vault.bitwarden.com";
+      url = "https://vault.bravura-safe.com";
     }
 
     const redirectUri = url + "/sso-connector.html";

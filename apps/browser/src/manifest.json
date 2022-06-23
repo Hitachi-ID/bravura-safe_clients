@@ -1,12 +1,13 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "__MSG_extName__",
   "short_name": "__MSG_appName__",
-  "version": "2022.05.0",
+  "version": "2022.5",
+  "internalVersion": "2022-05",
   "description": "__MSG_extDesc__",
   "default_locale": "en",
-  "author": "Bitwarden Inc.",
-  "homepage_url": "https://bitwarden.com",
+  "author": "Hitachid ID Systems",
+  "homepage_url": "https://www.hitachi-id.com/",
   "icons": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",
@@ -46,15 +47,14 @@
     }
   ],
   "background": {
-    "page": "background.html",
-    "persistent": true
+    "service_worker": "background.html"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "19": "images/icon19.png",
       "38": "images/icon38.png"
     },
-    "default_title": "Bitwarden",
+    "default_title": "Bravura Safe",
     "default_popup": "popup/index.html"
   },
   "permissions": [
@@ -65,15 +65,15 @@
     "clipboardRead",
     "clipboardWrite",
     "idle",
-    "http://*/*",
-    "https://*/*",
-    "webRequest",
-    "webRequestBlocking"
+    "declarativeNetRequest"
   ],
   "optional_permissions": ["nativeMessaging"],
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
   "commands": {
-    "_execute_browser_action": {
+    "_execute_action": {
       "suggested_key": {
         "default": "Ctrl+Shift+Y",
         "linux": "Ctrl+Shift+U"
@@ -104,10 +104,16 @@
     }
   },
   "web_accessible_resources": [
-    "notification/bar.html",
-    "images/icon38.png",
-    "images/icon38_locked.png",
-    "images/close.png"
+    {
+      "resources": [
+        "notification/bar.html",
+        "images/icon38.png",
+        "images/icon38_locked.png",
+        "images/close.png"
+      ],
+      "matches": [],
+      "extension_ids": []
+    }
   ],
   "applications": {
     "gecko": {
@@ -116,7 +122,7 @@
     }
   },
   "sidebar_action": {
-    "default_title": "Bitwarden",
+    "default_title": "Bravura Safe",
     "default_panel": "popup/index.html?uilocation=sidebar",
     "default_icon": "images/icon19.png"
   }

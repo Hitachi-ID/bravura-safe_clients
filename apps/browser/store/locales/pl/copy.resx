@@ -118,37 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bitwarden - darmowy menedżer haseł</value>
+    <value>Bravura Safe - darmowy menedżer haseł</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>Bezpieczny i darmowy menedżer haseł dla wszystkich Twoich urządzeń</value>
   </data>
   <data name="Description" xml:space="preserve">
-    <value>Bitwarden, Inc. jest macierzystą firmą 8bit Solutions LLC.
-
-NAZWANY NAJLEPSZYM MENEDŻEREM HASEŁ PRZEZ THE VERGE, US NEWS &amp; WORLD REPORT, CNET I WIĘCEJ.
-
-Zarządzaj, przechowuj, zabezpieczaj i udostępniaj nieograniczoną liczbę haseł na nieograniczonej liczbie urządzeń z każdego miejsca. Bitwarden dostarcza rozwiązania do zarządzania hasłami z otwartym kodem źródłowym każdemu, niezależnie od tego, czy jest w domu, w pracy, czy w podróży.
-
-Generuj silne, unikalne i losowe hasła w oparciu o wymagania bezpieczeństwa dla każdej odwiedzanej strony.
-
-Funkcja Bitwarden Send szybko przesyła zaszyfrowane informacje --- pliki i zwykły tekst -- bezpośrednio do każdego.
-
-Bitwarden oferuje plany dla zespołów i firm, dzięki czemu możesz bezpiecznie udostępniać hasła współpracownikom.
-
-Dlaczego warto wybrać Bitwarden:
-
-Szyfrowanie światowej klasy
-Hasła są chronione za pomocą zaawansowanego szyfrowania typu end-to-end (AES-256 bitów, dodatkowy ciąg zaburzający i PBKDF2 SHA-256), dzięki czemu Twoje dane pozostają bezpieczne i prywatne.
-
-Wbudowany generator haseł
-Generuj silne, unikalne i losowe hasła w oparciu o wymagania bezpieczeństwa dla każdej odwiedzanej strony.
-
-Przetłumaczone aplikacje
-Tłumaczenia Bitwarden są dostępne w 40 językach i rosną dzięki naszej globalnej społeczności.
-
-Aplikacje wieloplatformowe
-Zabezpiecz i udostępniaj poufne dane w swoim sejfie Bitwarden z dowolnej przeglądarki, urządzenia mobilnego, systemu operacyjnego i nie tylko.</value>
+    <value>Hitachi ID Systems Inc.</value>
   </data>
   <data name="AssetTitle" xml:space="preserve">
     <value>Bezpieczny i darmowy menedżer haseł dla wszystkich Twoich urządzeń</value>
