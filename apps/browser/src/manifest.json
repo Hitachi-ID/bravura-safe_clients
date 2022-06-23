@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "__MSG_extName__",
   "short_name": "__MSG_appName__",
   "version": "2022.5",
@@ -47,9 +47,10 @@
     }
   ],
   "background": {
-    "service_worker": "background.html"
+    "page": "background.html",
+    "persistent": true
   },
-  "action": {
+  "browser_action": {
     "default_icon": {
       "19": "images/icon19.png",
       "38": "images/icon38.png"
@@ -65,15 +66,15 @@
     "clipboardRead",
     "clipboardWrite",
     "idle",
-    "declarativeNetRequest"
+    "http://*/*",
+    "https://*/*",
+    "webRequest",
+    "webRequestBlocking"
   ],
   "optional_permissions": ["nativeMessaging"],
-  "host_permissions": ["http://*/*", "https://*/*"],
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'"
-  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "commands": {
-    "_execute_action": {
+    "_execute_browser_action": {
       "suggested_key": {
         "default": "Ctrl+Shift+Y",
         "linux": "Ctrl+Shift+U"
@@ -104,16 +105,10 @@
     }
   },
   "web_accessible_resources": [
-    {
-      "resources": [
-        "notification/bar.html",
-        "images/icon38.png",
-        "images/icon38_locked.png",
-        "images/close.png"
-      ],
-      "matches": [],
-      "extension_ids": []
-    }
+    "notification/bar.html",
+    "images/icon38.png",
+    "images/icon38_locked.png",
+    "images/close.png"
   ],
   "applications": {
     "gecko": {
