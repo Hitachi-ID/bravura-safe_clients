@@ -3,7 +3,7 @@
     "message": "Bravura Safe"
   },
   "extName": {
-    "message": "Bravura Safe - مدیریت کلمه عبور رایگان",
+    "message": "Bravura Safe - مدیریت کلمه عبور",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {

@@ -3,7 +3,7 @@
     "message": "Bravura Safe"
   },
   "extName": {
-    "message": "Bravura Safe - Kostenloser Passwortmanager",
+    "message": "Bravura Safe - Passwortmanager",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
@@ -52,8 +52,14 @@
   "tab": {
     "message": "Tab"
   },
+  "vault": {
+    "message": "Tresor"
+  },
   "myVault": {
     "message": "Mein Tresor"
+  },
+  "allVaults": {
+    "message": "All Tresor"
   },
   "tools": {
     "message": "Werkzeuge"
@@ -1939,5 +1945,24 @@
   },
   "service": {
     "message": "Dienst"
+  },
+  "forwardedEmail": {
+    "message": "Forwarded Emailen Alias"
+  },
+  "forwardedEmailDesc": {
+    "message": "Generate an emailen alias with an external forwarding service."
+  },
+  "hostname": {
+    "message": "Hostname",
+    "description": "Part of a URLenen."
+  },
+  "apiAccessToken": {
+    "message": "API Accessen Token"
+  },
+  "apiKey": {
+    "message": "API Keyen"
+  },
+  "ssoKeyConnectorError": {
+    "message": "Key enConnector error: make sure Key Connector is available and working correctly."
   }
 }

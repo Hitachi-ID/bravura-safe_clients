@@ -3,11 +3,11 @@
     "message": "Bravura Safe"
   },
   "extName": {
-    "message": "Bravura Safe - Manager de parole gratuit",
+    "message": "Bravura Safe - Manager de parole",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
-    "message": "Un manager de parole sigur și gratuit pentru toate dispozitivele dvs.",
+    "message": "Un manager de parole sigur și pentru toate dispozitivele dvs.",
     "description": "Extension description"
   },
   "loginOrCreateNewAccount": {
