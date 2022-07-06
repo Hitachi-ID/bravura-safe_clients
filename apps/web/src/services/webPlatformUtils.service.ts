@@ -1,25 +1,21 @@
 import { Injectable } from "@angular/core";
 import Swal, { SweetAlertIcon } from "sweetalert2";
 
-import { I18nService } from "jslib-common/abstractions/i18n.service";
-import { LogService } from "jslib-common/abstractions/log.service";
-import { MessagingService } from "jslib-common/abstractions/messaging.service";
-import { PlatformUtilsService } from "jslib-common/abstractions/platformUtils.service";
-import { StateService } from "jslib-common/abstractions/state.service";
-import { ClientType } from "jslib-common/enums/clientType";
-import { DeviceType } from "jslib-common/enums/deviceType";
-import { ThemeType } from "jslib-common/enums/themeType";
+import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
+import { LogService } from "@bitwarden/common/abstractions/log.service";
+import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
+import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
+import { ClientType } from "@bitwarden/common/enums/clientType";
+import { DeviceType } from "@bitwarden/common/enums/deviceType";
 
 @Injectable()
 export class WebPlatformUtilsService implements PlatformUtilsService {
   private browserCache: DeviceType = null;
-  private prefersColorSchemeDark = window.matchMedia("(prefers-color-scheme: dark)");
 
   constructor(
     private i18nService: I18nService,
     private messagingService: MessagingService,
-    private logService: LogService,
-    private stateService: StateService
+    private logService: LogService
   ) {}
 
   getDevice(): DeviceType {
@@ -302,33 +298,5 @@ export class WebPlatformUtilsService implements PlatformUtilsService {
 
   supportsSecureStorage() {
     return false;
-  }
-
-  getDefaultSystemTheme(): Promise<ThemeType.Light | ThemeType.Dark> {
-    return Promise.resolve(this.prefersColorSchemeDark.matches ? ThemeType.Dark : ThemeType.Light);
-  }
-
-  async getEffectiveTheme(): Promise<ThemeType.Light | ThemeType.Dark> {
-    const theme = await this.stateService.getTheme();
-    if (theme === ThemeType.Dark) {
-      return ThemeType.Dark;
-    } else if (theme === ThemeType.System) {
-      return this.getDefaultSystemTheme();
-    } else {
-      return ThemeType.Light;
-    }
-  }
-
-  onDefaultSystemThemeChange(callback: (theme: ThemeType.Light | ThemeType.Dark) => unknown) {
-    try {
-      this.prefersColorSchemeDark.addEventListener("change", ({ matches }) => {
-        callback(matches ? ThemeType.Dark : ThemeType.Light);
-      });
-    } catch (e) {
-      // Safari older than v14
-      this.prefersColorSchemeDark.addListener((ev) => {
-        callback(ev.matches ? ThemeType.Dark : ThemeType.Light);
-      });
-    }
   }
 }

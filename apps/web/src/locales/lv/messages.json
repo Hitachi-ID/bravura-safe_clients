@@ -421,11 +421,23 @@
     "message": "Ievietot URI starpliktuvē",
     "description": "Copy URI to clipboard"
   },
+  "me": {
+    "message": "Es"
+  },
   "myVault": {
     "message": "Mana glabātava"
   },
+  "allVaults": {
+    "message": "Visas glabātavas"
+  },
   "vault": {
     "message": "Glabātava"
+  },
+  "vaults": {
+    "message": "Glabātavas"
+  },
+  "vaultItems": {
+    "message": "Glabātavas vienumi"
   },
   "moveSelectedToOrg": {
     "message": "Pārvietot atzīmēto uz apvienību"
@@ -891,6 +903,20 @@
   "length": {
     "message": "Garums"
   },
+  "uppercase": {
+    "message": "Lielie burti (A-Z)",
+    "description": "Include uppercase letters in the password generator."
+  },
+  "lowercase": {
+    "message": "Mazie burti (a-z)",
+    "description": "Include lowercase letters in the password generator."
+  },
+  "numbers": {
+    "message": "Cipari (0-9)"
+  },
+  "specialCharacters": {
+    "message": "Īpašās rakstzīmes (!@#$%^&*)"
+  },
   "numWords": {
     "message": "Vārdu skaits"
   },
@@ -1110,11 +1136,14 @@
   "options": {
     "message": "Iespējas"
   },
-  "optionsDesc": {
+  "preferences": {
+    "message": "Uzstādījumi"
+  },
+  "preferencesDesc": {
     "message": "Pielāgot tīmekļa glabātavas lietošanas pieredzi."
   },
-  "optionsUpdated": {
-    "message": "Iespējas atjauninātas"
+  "preferencesUpdated": {
+    "message": "Uzstādījumi atjaunināti"
   },
   "language": {
     "message": "Valoda"
@@ -1122,15 +1151,15 @@
   "languageDesc": {
     "message": "Nomainīt tīmekļa glabātavā izmantoto valodu."
   },
-  "disableIcons": {
-    "message": "Atspējot tīmekļa vietņu ikonas"
+  "enableFavicon": {
+    "message": "Rādīt vietņu ikonas"
   },
-  "disableIconsDesc": {
-    "message": "Tīmekļa vietņu ikonas nodrošina atpazīstamu attēlu pie katra glabātavas pieteikšanās vienuma."
+  "faviconDesc": {
+    "message": "Attēlot atpazīstamu attēlu pie katra pierakstīšanās vienuma."
   },
   "enableGravatars": {
     "message": "Iespējot Gravatārus",
-    "description": "'Gravatar' is the name of a service. See www.gravatar.com"
+    "description": "Use avatar images loaded from gravatar.com."
   },
   "enableGravatarsDesc": {
     "message": "Izmantot no gravatar.com ielādētus avatāra attēlus."
@@ -1209,6 +1238,9 @@
   "enabled": {
     "message": "Iespējots"
   },
+  "activate": {
+    "message": "Activate"
+  },
   "premium": {
     "message": "Premium",
     "description": "Premium Membership"
@@ -1233,6 +1265,9 @@
   },
   "disable": {
     "message": "Atspējot"
+  },
+  "deactivate": {
+    "message": "Deactivate"
   },
   "twoStepLoginProviderEnabled": {
     "message": "Šis divpakāpju pierakstīšanās nodrošinātājs ir iespējots kontā."
@@ -1431,7 +1466,8 @@
     "message": "Pārskati"
   },
   "reportsDesc": {
-    "message": "Noteikt un novērst drošības nepilnības tiešsaistes kontos klikšķinot uz zemāk esošajām atskaitēm."
+    "message": "Noteikt un novērst drošības nepilnības tiešsaistes kontos klikšķinot uz zemāk esošajām atskaitēm.",
+    "description": "Vault Health Reports can be used to evaluate the security of your Bitwarden Personal or Organization Vault."
   },
   "unsecuredWebsitesReport": {
     "message": "Nedrošu tīmekļa vietņu pārskats"
@@ -2196,6 +2232,12 @@
   "removeUserConfirmation": {
     "message": "Vai tiešām noņemt šo lietotāju?"
   },
+  "deactivateUserConfirmation": {
+    "message": "The member will no longer have access to the organization, but will still have access to their individual vault."
+  },
+  "activateUserConfirmation": {
+    "message": "Are you sure you want to activate this user, granting them access to the organization?"
+  },
   "removeUserConfirmationKeyConnector": {
     "message": "Uzmanību! Šim lietotājam ir nepieciešams Key Connector, lai pārvaldītu šifrēšanu. Lietotāja noņemšana no apvienības neatgriezeniski atspējos viņa kontu. Šī darbība nevar tikt atdarīta. Vai turpināt?"
   },
@@ -2534,6 +2576,42 @@
   },
   "removedUserId": {
     "message": "Noņemts lietotājs $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
+  "deactivatedUserId": {
+    "message": "Deactivated user $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
+  "activatedUserId": {
+    "message": "Activated user $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
+  "deactivateUserId": {
+    "message": "Deactivate user $ID$?",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
+  "activateUserId": {
+    "message": "Activate user $ID$?",
     "placeholders": {
       "id": {
         "content": "$1",
@@ -3588,6 +3666,9 @@
   "disabled": {
     "message": "Atspējots"
   },
+  "deactivated": {
+    "message": "Deactivated"
+  },
   "sendLink": {
     "message": "\"Send\" saite",
     "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
@@ -4189,6 +4270,12 @@
   "removeUsersWarning": {
     "message": "Vai tiešām noņemt šos lietotājus? Tas var aizņemt dažas sekundes un nevar tikt pārtraukts vai atcelts."
   },
+  "deactivateUsersWarning": {
+    "message": "Are you sure you want to deactivate the following members? They will no longer have access to the organization, but will still have access to their individual vaults. The process may take a few seconds to complete and cannot be interrupted or canceled."
+  },
+  "activateUsersWarning": {
+    "message": "Are you sure you want to activate the following members, granting them access to the organization? The process may take a few seconds to complete and cannot be interrupted or canceled."
+  },
   "theme": {
     "message": "Izskats"
   },
@@ -4219,6 +4306,12 @@
   "bulkRemovedMessage": {
     "message": "Veiksmīgi noņemts"
   },
+  "bulkDeactivatedMessage": {
+    "message": "Deactivated successfully"
+  },
+  "bulkActivatedMessage": {
+    "message": "Activated successfully"
+  },
   "bulkFilteredMessage": {
     "message": "Nav iekļauts, tādēļ nav piemērojams šai darbībai."
   },
@@ -4227,6 +4320,12 @@
   },
   "removeUsers": {
     "message": "Noņemt lietotājus"
+  },
+  "deactivateUsers": {
+    "message": "Deactivate Users"
+  },
+  "activateUsers": {
+    "message": "Activate Users"
   },
   "error": {
     "message": "Kļūda"
@@ -4400,6 +4499,12 @@
   },
   "vaultTimeoutToLarge": {
     "message": "Glabātavas noildze pāŗsniedz apvienības uzstādīto ierobežojumu."
+  },
+  "vaultCustomTimeoutMinimum": {
+    "message": "Mazākā pieļaujamā pielāgotā noildze ir 1 minūte."
+  },
+  "vaultTimeoutRangeError": {
+    "message": "Glabātavas noildze nav pieļaujamajās robežvērtībās."
   },
   "disablePersonalVaultExport": {
     "message": "Atspējot personīgās glabātavas izgūšanu"
@@ -4615,7 +4720,7 @@
     }
   },
   "freeFamiliesPlan": {
-    "message": "Bezmaksas ģimenes plāns"
+    "message": "Bezmaksas ģimeņu plāns"
   },
   "redeemNow": {
     "message": "Izmantot tagad"
@@ -4644,8 +4749,8 @@
   "removeSponsorshipSuccess": {
     "message": "Noņemta pabalstītājdarbība"
   },
-  "ssoKeyConnectorUnavailable": {
-    "message": "Nav iespējams sasniegt Key Connector, tāpēc vēlāk jāmēģina atkal."
+  "ssoKeyConnectorError": {
+    "message": "Key Connector kļūda: jāpārliecinās, ka Key Connector ir pieejams un darbojas pareizi."
   },
   "keyConnectorUrl": {
     "message": "Key Connector URL"
@@ -4773,6 +4878,75 @@
   "freeWithSponsorship": {
     "message": "Bezmaksas ar pabalstītājdarbību"
   },
+  "viewBillingSyncToken": {
+    "message": "Skatīt norēķinu sinhronizācijas pilnvaru"
+  },
+  "generateBillingSyncToken": {
+    "message": "Izveidot norēķinu sinhronizācijas pilnvaru"
+  },
+  "copyPasteBillingSync": {
+    "message": "Ievietot starpliktuvē šo pilnvaru un ielīmēt to pašizvietotās apvienības norēķinu sinhronizācijas iestatījumos."
+  },
+  "billingSyncCanAccess": {
+    "message": "Norēķinu pilvara nodrošina piekļuvi šīs apvienības abonēšanas iestatījumiem un to labošanu."
+  },
+  "manageBillingSync": {
+    "message": "Pārvaldīt norēķinu sinhronizāciju"
+  },
+  "setUpBillingSync": {
+    "message": "Uzstādīt norēķinu sinhronizāciju"
+  },
+  "generateToken": {
+    "message": "Izveidot pilnvaru"
+  },
+  "rotateToken": {
+    "message": "Nomainīt pilnvaru"
+  },
+  "rotateBillingSyncTokenWarning": {
+    "message": "Pēc turpināšanas būs nepieciešams atkārtoti uzstādīt norēķinu sinhronizāciju pašuzturētajā serverī."
+  },
+  "rotateBillingSyncTokenTitle": {
+    "message": "Norēķinu sinhronizācijas pilnvaras nomaiņa padarīs nederīgu iepriekšējo."
+  },
+  "selfHostingTitle": {
+    "message": "Pašizvietošana"
+  },
+  "selfHostingEnterpriseOrganizationSectionCopy": {
+    "message": "Lai uzstādītu apvienību savā serverī, ir nepieciešams augšupielādēt licences datni. Lai nodrošinātu bezmaksas ģimeņu plānus un papildu norēķinu iespējas pašizvietotajai apvienībai, ir nepieciešams uzstādīt norēķinu sinhronizāciju."
+  },
+  "billingSyncApiKeyRotated": {
+    "message": "Pilnvara nomainīta."
+  },
+  "billingSync": {
+    "message": "Norēķinu sinhronizācija"
+  },
+  "billingSyncDesc": {
+    "message": "Norēķinu sinhronizācija nodrošina bezmaksas ģimeņu plānus locekļiem un papildu norēķinu iespējas, sasaistot pašizvietoto Bitwarden ar Bitwarden mākoņa serveri."
+  },
+  "billingSyncKeyDesc": {
+    "message": "Ir nepieciešama norēķinu sinhronizācijas pilnvara no mākoņa apvienības abonomenta iestatījumiem, lai pabeigtu šo veidlapu."
+  },
+  "billingSyncKey": {
+    "message": "Norēķinu sinhronizācijas pilnvara"
+  },
+  "active": {
+    "message": "Izmantots"
+  },
+  "inactive": {
+    "message": "Neizmantots"
+  },
+  "sentAwaitingSync": {
+    "message": "Nosūtīts (gaida sinhronizāciju)"
+  },
+  "sent": {
+    "message": "Nosūtīts"
+  },
+  "requestRemoved": {
+    "message": "Noņemts (gaida sinhronizāciju)"
+  },
+  "requested": {
+    "message": "Pieprasīts"
+  },
   "formErrorSummaryPlural": {
     "message": "$COUNT$ augstāk esošajiem laukiem ir jāpievērš uzmanība.",
     "placeholders": {
@@ -4836,8 +5010,33 @@
       }
     }
   },
+  "accessDenied": {
+    "message": "Piekļuve liegta. Nav nepieciešamo atļauju, lai skatītu šo lapu."
+  },
+  "masterPassword": {
+    "message": "Galvenā parole"
+  },
+  "security": {
+    "message": "Drošība"
+  },
+  "keys": {
+    "message": "Atslēgas"
+  },
+  "billingHistory": {
+    "message": "Rēķinu vēsture"
+  },
   "backToReports": {
     "message": "Atgriezties pie atskaitēm"
+  },
+  "organizationPicker": {
+    "message": "Apvienību atlasītājs"
+  },
+  "currentOrganization": {
+    "message": "Pašreizējā apvienība",
+    "description": "This is used by screen readers to indicate the organization that is currently being shown to the user."
+  },
+  "accountSettings": {
+    "message": "Konta iestatījumi"
   },
   "generator": {
     "message": "Veidotājs"
@@ -4871,12 +5070,100 @@
     "message": "Izmantot uzstādīto domēna visu tverošo iesūtni."
   },
   "random": {
-    "message": "Nejauši"
+    "message": "Nejauši",
+    "description": "Generates domain-based username using random letters"
   },
   "randomWord": {
     "message": "Nejaušs vārds"
   },
   "service": {
     "message": "Pakalpojums"
+  },
+  "unknownCipher": {
+    "message": "Nezināms vienums, var būt nepieciešams pierakstīties ar citu kontu, lai tam piekļūtu."
+  },
+  "cannotSponsorSelf": {
+    "message": "Nevar pielietot izmantotam kontam. Jānorāda cita e-pasta adrese."
+  },
+  "revokeWhenExpired": {
+    "message": "Beidzas $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "12/31/2020"
+      }
+    }
+  },
+  "awaitingSyncSingular": {
+    "message": "Pilnvara nomainīta pirms $DAYS$ dienas. Norēķinu sinhronizācijas pilnvara ir jāatjaunina pašizvietotās apvienības iestatījumos.",
+    "placeholders": {
+      "days": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "awaitingSyncPlural": {
+    "message": "Pilnvara nomainīta pirms $DAYS$ dienām. Norēķinu sinhronizācijas pilnvara ir jāatjaunina pašizvietotās apvienības iestatījumos.",
+    "placeholders": {
+      "days": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "lastSync": {
+    "message": "Pēdējā sinhronizācija",
+    "Description": "Used as a prefix to indicate the last time a sync occured. Example \"Last sync 1968-11-16 00:00:00\""
+  },
+  "sponsorshipsSynced": {
+    "message": "Pašizvietotās pabalstītājdarbības vienādotas."
+  },
+  "billingManagedByProvider": {
+    "message": "Pārvalda $PROVIDER$",
+    "placeholders": {
+      "provider": {
+        "content": "$1",
+        "example": "Managed Services Company"
+      }
+    }
+  },
+  "billingContactProviderForAssistance": {
+    "message": "Lūgums sazināties ar tiem turpmākam atbalstam",
+    "description": "This text is displayed if an organization's billing is managed by a Provider. It tells the user to contact the Provider for assistance."
+  },
+  "forwardedEmail": {
+    "message": "Pārvirzīto e-pastu aizstājvārds"
+  },
+  "forwardedEmailDesc": {
+    "message": "Izveidot e-pastu aizstājvārdu ar ārēju pārvirzīšanas pakalpojumu."
+  },
+  "hostname": {
+    "message": "Resursdatora nosaukums",
+    "description": "Part of a URL."
+  },
+  "apiAccessToken": {
+    "message": "API piekļuves pilnvara"
+  },
+  "deviceVerification": {
+    "message": "Ierīces apstiprināšana"
+  },
+  "enableDeviceVerification": {
+    "message": "Iespējot ierīces apstiprināšanu"
+  },
+  "deviceVerificationDesc": {
+    "message": "Kad iespējots, apstiprinājuma kodi tiek sūtīti uz e-pasta adresi, kad notiek pierakstīšanās no neatpazītas ierīces"
+  },
+  "updatedDeviceVerification": {
+    "message": "Atjaunināta ierīces apstiprināšana"
+  },
+  "areYouSureYouWantToEnableDeviceVerificationTheVerificationCodeEmailsWillArriveAtX": {
+    "message": "Vai tiešām iespējot ierīces apstiprināšanu? Apstiprinājuma koda e-pasta ziņojumi tiks nosūtīti uz: $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "My Email"
+      }
+    }
   }
 }

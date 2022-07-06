@@ -421,11 +421,23 @@
     "message": "Αντιγραφή URI",
     "description": "Copy URI to clipboard"
   },
+  "me": {
+    "message": "Εγώ"
+  },
   "myVault": {
     "message": "Το Vault μου"
   },
+  "allVaults": {
+    "message": "Όλα τα Vaults"
+  },
   "vault": {
     "message": "Vault"
+  },
+  "vaults": {
+    "message": "Vaults"
+  },
+  "vaultItems": {
+    "message": "Αντικείμενα Vault"
   },
   "moveSelectedToOrg": {
     "message": "Μετακίνηση Επιλεγμένων στον Οργανισμό"
@@ -891,6 +903,20 @@
   "length": {
     "message": "Μήκος"
   },
+  "uppercase": {
+    "message": "Κεφαλαία (A-Z)",
+    "description": "Include uppercase letters in the password generator."
+  },
+  "lowercase": {
+    "message": "Πεζά (α-ω)",
+    "description": "Include lowercase letters in the password generator."
+  },
+  "numbers": {
+    "message": "Αριθμοί (0-9)"
+  },
+  "specialCharacters": {
+    "message": "Ειδικοί Χαρακτήρες (!@#$%^&*)"
+  },
   "numWords": {
     "message": "Αριθμός Λέξεων"
   },
@@ -1110,11 +1136,14 @@
   "options": {
     "message": "Επιλογές"
   },
-  "optionsDesc": {
+  "preferences": {
+    "message": "Προτιμήσεις"
+  },
+  "preferencesDesc": {
     "message": "Προσαρμόστε την εμπειρία σας στο web vault."
   },
-  "optionsUpdated": {
-    "message": "Οι επιλογές ενημερώθηκαν"
+  "preferencesUpdated": {
+    "message": "Οι προτιμήσεις ενημερώθηκαν"
   },
   "language": {
     "message": "Γλώσσα"
@@ -1122,15 +1151,15 @@
   "languageDesc": {
     "message": "Αλλάξτε γλώσσα που χρησιμοποιείται από το web vault."
   },
-  "disableIcons": {
-    "message": "Απενεργοποίηση Εικονιδίων Ιστοσελίδας"
+  "enableFavicon": {
+    "message": "Show website icons"
   },
-  "disableIconsDesc": {
-    "message": "Τα εικονίδια ιστοσελίδων παρέχουν μια αναγνωρίσιμη εικόνα δίπλα σε κάθε στοιχείο σύνδεσης του vault σας."
+  "faviconDesc": {
+    "message": "Show a recognizable image next to each login."
   },
   "enableGravatars": {
     "message": "Ενεργοποίηση Gravatars",
-    "description": "'Gravatar' is the name of a service. See www.gravatar.com"
+    "description": "Use avatar images loaded from gravatar.com."
   },
   "enableGravatarsDesc": {
     "message": "Χρήση εικόνων avatar από gravatar.com."
@@ -1209,6 +1238,9 @@
   "enabled": {
     "message": "Ενεργοποιημένο"
   },
+  "activate": {
+    "message": "Activate"
+  },
   "premium": {
     "message": "Premium",
     "description": "Premium Membership"
@@ -1233,6 +1265,9 @@
   },
   "disable": {
     "message": "Απενεργοποίηση"
+  },
+  "deactivate": {
+    "message": "Deactivate"
   },
   "twoStepLoginProviderEnabled": {
     "message": "Ο πάροχος σύνδεσης δύο βημάτων του λογαριασμού σας, είναι ενεργοποιημένος."
@@ -1431,7 +1466,8 @@
     "message": "Αναφορές"
   },
   "reportsDesc": {
-    "message": "Προσδιορίστε και κλείστε τα κενά ασφαλείας στους online λογαριασμούς σας κάνοντας κλικ στις παρακάτω αναφορές."
+    "message": "Προσδιορίστε και κλείστε τα κενά ασφαλείας στους online λογαριασμούς σας κάνοντας κλικ στις παρακάτω αναφορές.",
+    "description": "Vault Health Reports can be used to evaluate the security of your Bitwarden Personal or Organization Vault."
   },
   "unsecuredWebsitesReport": {
     "message": "Αναφορά Μη-Ασφαλών Ιστοσελίδων"
@@ -2196,6 +2232,12 @@
   "removeUserConfirmation": {
     "message": "Είστε βέβαιοι ότι θέλετε να αφαιρέσετε αυτό τον χρήστη;"
   },
+  "deactivateUserConfirmation": {
+    "message": "The member will no longer have access to the organization, but will still have access to their individual vault."
+  },
+  "activateUserConfirmation": {
+    "message": "Are you sure you want to activate this user, granting them access to the organization?"
+  },
   "removeUserConfirmationKeyConnector": {
     "message": "Προσοχή! Αυτός ο χρήστης απαιτεί σύνδεση κλειδιού για τη διαχείριση της κρυπτογράφησης του. Η αφαίρεση αυτού του χρήστη από τον οργανισμό σας θα απενεργοποιήσει οριστικά τον λογαριασμό του. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί. Θέλετε να συνεχίσετε;"
   },
@@ -2534,6 +2576,42 @@
   },
   "removedUserId": {
     "message": "Χρήστης που αφαιρέθηκε $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
+  "deactivatedUserId": {
+    "message": "Deactivated user $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
+  "activatedUserId": {
+    "message": "Activated user $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
+  "deactivateUserId": {
+    "message": "Deactivate user $ID$?",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
+  "activateUserId": {
+    "message": "Activate user $ID$?",
     "placeholders": {
       "id": {
         "content": "$1",
@@ -3588,6 +3666,9 @@
   "disabled": {
     "message": "Απενεργοποιημένο"
   },
+  "deactivated": {
+    "message": "Deactivated"
+  },
   "sendLink": {
     "message": "Αποστολή Συνδέσμου",
     "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
@@ -4189,6 +4270,12 @@
   "removeUsersWarning": {
     "message": "Είστε βέβαιοι ότι θέλετε να καταργήσετε τους ακόλουθους χρήστες? Η διαδικασία μπορεί να διαρκέσει μερικά δευτερόλεπτα για να ολοκληρωθεί και δεν μπορεί να διακοπεί ή να ακυρωθεί."
   },
+  "deactivateUsersWarning": {
+    "message": "Are you sure you want to deactivate the following members? They will no longer have access to the organization, but will still have access to their individual vaults. The process may take a few seconds to complete and cannot be interrupted or canceled."
+  },
+  "activateUsersWarning": {
+    "message": "Are you sure you want to activate the following members, granting them access to the organization? The process may take a few seconds to complete and cannot be interrupted or canceled."
+  },
   "theme": {
     "message": "Θέμα"
   },
@@ -4219,6 +4306,12 @@
   "bulkRemovedMessage": {
     "message": "Καταργήθηκε με επιτυχία"
   },
+  "bulkDeactivatedMessage": {
+    "message": "Deactivated successfully"
+  },
+  "bulkActivatedMessage": {
+    "message": "Activated successfully"
+  },
   "bulkFilteredMessage": {
     "message": "Εξαιρείται, δεν ισχύει για αυτήν την ενέργεια."
   },
@@ -4227,6 +4320,12 @@
   },
   "removeUsers": {
     "message": "Αφαίρεση Χρηστών"
+  },
+  "deactivateUsers": {
+    "message": "Deactivate Users"
+  },
+  "activateUsers": {
+    "message": "Activate Users"
   },
   "error": {
     "message": "Σφάλμα"
@@ -4400,6 +4499,12 @@
   },
   "vaultTimeoutToLarge": {
     "message": "Το χρονικό όριο του vault υπερβαίνει τον περιορισμό που ορίστηκε από τον οργανισμό σας."
+  },
+  "vaultCustomTimeoutMinimum": {
+    "message": "Minimum custom timeout is 1 minute."
+  },
+  "vaultTimeoutRangeError": {
+    "message": "Vault Timeout is not within allowed range."
   },
   "disablePersonalVaultExport": {
     "message": "Απενεργοποίηση Εξαγωγής Προσωπικών Vault"
@@ -4644,8 +4749,8 @@
   "removeSponsorshipSuccess": {
     "message": "Χορηγία Αφαιρέθηκε"
   },
-  "ssoKeyConnectorUnavailable": {
-    "message": "Δεν είναι δυνατή η πρόσβαση στον σύνδεσμο κλειδιού, προσπαθήστε ξανά αργότερα."
+  "ssoKeyConnectorError": {
+    "message": "Key Connector error: make sure Key Connector is available and working correctly."
   },
   "keyConnectorUrl": {
     "message": "URL Σύνδεσης Κλειδιού"
@@ -4773,6 +4878,75 @@
   "freeWithSponsorship": {
     "message": "ΔΩΡΕΑΝ με χορηγία"
   },
+  "viewBillingSyncToken": {
+    "message": "View Billing Sync Token"
+  },
+  "generateBillingSyncToken": {
+    "message": "Generate Billing Sync Token"
+  },
+  "copyPasteBillingSync": {
+    "message": "Copy and paste this token into the Billing Sync settings of your self-hosted organization."
+  },
+  "billingSyncCanAccess": {
+    "message": "Your Billing Sync token can access and edit this organization's subscription settings."
+  },
+  "manageBillingSync": {
+    "message": "Manage Billing Sync"
+  },
+  "setUpBillingSync": {
+    "message": "Set Up Billing Sync"
+  },
+  "generateToken": {
+    "message": "Generate Token"
+  },
+  "rotateToken": {
+    "message": "Rotate Token"
+  },
+  "rotateBillingSyncTokenWarning": {
+    "message": "If you proceed, you will need to re-setup billing sync on your self-hosted server."
+  },
+  "rotateBillingSyncTokenTitle": {
+    "message": "Rotating the Billing Sync Token will invalidate the previous token."
+  },
+  "selfHostingTitle": {
+    "message": "Self-Hosting"
+  },
+  "selfHostingEnterpriseOrganizationSectionCopy": {
+    "message": "To set-up your organization on your own server, you will need to upload your license file. To support Free Families plans and advanced billing capabilities for your self-hosted organization, you will need to set up billing sync."
+  },
+  "billingSyncApiKeyRotated": {
+    "message": "Token rotated."
+  },
+  "billingSync": {
+    "message": "Billing Sync"
+  },
+  "billingSyncDesc": {
+    "message": "Billing Sync provides Free Families plans for members and advanced billing capabilities by linking your self-hosted Bitwarden to the Bitwarden cloud server."
+  },
+  "billingSyncKeyDesc": {
+    "message": "A Billing Sync Token from your cloud organization's subscription settings is required to complete this form."
+  },
+  "billingSyncKey": {
+    "message": "Billing Sync Token"
+  },
+  "active": {
+    "message": "Active"
+  },
+  "inactive": {
+    "message": "Inactive"
+  },
+  "sentAwaitingSync": {
+    "message": "Sent (Awaiting Sync)"
+  },
+  "sent": {
+    "message": "Sent"
+  },
+  "requestRemoved": {
+    "message": "Removed (Awaiting Sync)"
+  },
+  "requested": {
+    "message": "Requested"
+  },
   "formErrorSummaryPlural": {
     "message": "$COUNT$ πεδία παραπάνω χρειάζονται την προσοχή σας.",
     "placeholders": {
@@ -4836,8 +5010,33 @@
       }
     }
   },
+  "accessDenied": {
+    "message": "Access Denied. You do not have permission to view this page."
+  },
+  "masterPassword": {
+    "message": "Master Password"
+  },
+  "security": {
+    "message": "Security"
+  },
+  "keys": {
+    "message": "Keys"
+  },
+  "billingHistory": {
+    "message": "Billing History"
+  },
   "backToReports": {
     "message": "Επιστροφή στις Αναφορές"
+  },
+  "organizationPicker": {
+    "message": "Organization picker"
+  },
+  "currentOrganization": {
+    "message": "Current organization",
+    "description": "This is used by screen readers to indicate the organization that is currently being shown to the user."
+  },
+  "accountSettings": {
+    "message": "Account Settings"
   },
   "generator": {
     "message": "Γεννήτρια"
@@ -4871,12 +5070,100 @@
     "message": "Χρησιμοποιήστε τα διαμορφωμένα εισερχόμενα catch-all του domain σας."
   },
   "random": {
-    "message": "Τυχαίο"
+    "message": "Τυχαίο",
+    "description": "Generates domain-based username using random letters"
   },
   "randomWord": {
     "message": "Τυχαία Λέξη"
   },
   "service": {
     "message": "Υπηρεσία"
+  },
+  "unknownCipher": {
+    "message": "Unknown Item, you may need to request permission to access this item."
+  },
+  "cannotSponsorSelf": {
+    "message": "You cannot redeem for the active account. Enter a different email."
+  },
+  "revokeWhenExpired": {
+    "message": "Expires $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "12/31/2020"
+      }
+    }
+  },
+  "awaitingSyncSingular": {
+    "message": "Token rotated $DAYS$ day ago. Update the billing sync token in your self-hosted organization settings.",
+    "placeholders": {
+      "days": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "awaitingSyncPlural": {
+    "message": "Token rotated $DAYS$ days ago. Update the billing sync token in your self-hosted organization settings.",
+    "placeholders": {
+      "days": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "lastSync": {
+    "message": "Last Sync",
+    "Description": "Used as a prefix to indicate the last time a sync occured. Example \"Last sync 1968-11-16 00:00:00\""
+  },
+  "sponsorshipsSynced": {
+    "message": "Self-hosted sponsorships synced."
+  },
+  "billingManagedByProvider": {
+    "message": "Managed by $PROVIDER$",
+    "placeholders": {
+      "provider": {
+        "content": "$1",
+        "example": "Managed Services Company"
+      }
+    }
+  },
+  "billingContactProviderForAssistance": {
+    "message": "Please reach out to them for further assistance",
+    "description": "This text is displayed if an organization's billing is managed by a Provider. It tells the user to contact the Provider for assistance."
+  },
+  "forwardedEmail": {
+    "message": "Forwarded Email Alias"
+  },
+  "forwardedEmailDesc": {
+    "message": "Generate an email alias with an external forwarding service."
+  },
+  "hostname": {
+    "message": "Hostname",
+    "description": "Part of a URL."
+  },
+  "apiAccessToken": {
+    "message": "API Access Token"
+  },
+  "deviceVerification": {
+    "message": "Device Verification"
+  },
+  "enableDeviceVerification": {
+    "message": "Enable Device Verification"
+  },
+  "deviceVerificationDesc": {
+    "message": "When enabled, verification codes are sent to your email address when logging in from an unrecognized device"
+  },
+  "updatedDeviceVerification": {
+    "message": "Updated Device Verification"
+  },
+  "areYouSureYouWantToEnableDeviceVerificationTheVerificationCodeEmailsWillArriveAtX": {
+    "message": "Are you sure you want to enable Device Verification? The verification code emails will arrive at: $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "My Email"
+      }
+    }
   }
 }
