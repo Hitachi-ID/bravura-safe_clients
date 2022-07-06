@@ -219,7 +219,7 @@ export class ChangePasswordComponent extends BaseChangePasswordComponent {
 
     await this.updateEmergencyAccesses(encKey[0]);
 
-    await this.updateAllResetPasswordKeys(encKey[0]);
+    await this.updateAllResetPasswordKeys(encKey[0], masterPasswordHash);
   }
 
   private async updateEmergencyAccesses(encKey: SymmetricCryptoKey) {
@@ -247,7 +247,7 @@ export class ChangePasswordComponent extends BaseChangePasswordComponent {
     }
   }
 
-  private async updateAllResetPasswordKeys(encKey: SymmetricCryptoKey) {
+  private async updateAllResetPasswordKeys(encKey: SymmetricCryptoKey, masterPasswordHash: string) {
     const orgs = await this.organizationService.getAll();
 
     for (const org of orgs) {
@@ -265,6 +265,7 @@ export class ChangePasswordComponent extends BaseChangePasswordComponent {
 
       // Create/Execute request
       const request = new OrganizationUserResetPasswordEnrollmentRequest();
+      request.masterPasswordHash = masterPasswordHash;
       request.resetPasswordKey = encryptedKey.encryptedString;
 
       await this.apiService.putOrganizationUserResetPasswordEnrollment(org.id, org.userId, request);
