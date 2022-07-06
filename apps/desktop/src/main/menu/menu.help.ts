@@ -155,7 +155,7 @@ export class HelpMenu implements IMenubarMenu {
         label: "Android",
         click: () => {
           shell.openExternal(
-            "https://play.google.com/store/apps/" + "details?id=com.x8bit.bitwarden"
+            "https://play.google.com/store/apps/" + "details?id=com.hitachi_id.safe"
           );
         },
       },
