@@ -3,7 +3,7 @@ import SafariServices.SFSafariApplication
 import SafariServices.SFSafariExtensionManager
 
 let appName = "desktop"
-let extensionBundleIdentifier = "com.bitwarden.desktop.Extension"
+let extensionBundleIdentifier = "com.hitachiid.desktop.Extension"
 
 class ViewController: NSViewController {
 
