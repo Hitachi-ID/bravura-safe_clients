@@ -95,18 +95,6 @@ const routes: Routes = [
         data: { titleId: "acceptEmergency", doNotSaveUrl: false },
       },
       {
-        path: "accept-families-for-enterprise",
-        component: AcceptFamilySponsorshipComponent,
-        data: { titleId: "acceptFamilySponsorship", doNotSaveUrl: false },
-      },
-      { path: "recover", pathMatch: "full", redirectTo: "recover-2fa" },
-      {
-        path: "recover-2fa",
-        component: RecoverTwoFactorComponent,
-        canActivate: [UnauthGuard],
-        data: { titleId: "recoverAccountTwoStep" },
-      },
-      {
         path: "recover-delete",
         component: RecoverDeleteComponent,
         canActivate: [UnauthGuard],
@@ -121,7 +109,7 @@ const routes: Routes = [
       {
         path: "send/:sendId/:key",
         component: AccessComponent,
-        data: { title: "Bitwarden Send" },
+        data: { title: "Bravura Safe Share" },
       },
       {
         path: "update-temp-password",

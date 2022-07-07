@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "Bravura Safe"
       }
     }
   },
@@ -16,11 +16,11 @@
     "message": "Name"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -29,7 +29,7 @@
     }
   },
   "newUri": {
-    "message": "New URI"
+    "message": "New URL"
   },
   "username": {
     "message": "Username"
@@ -210,11 +210,11 @@
   },
   "matchDetection": {
     "message": "Match Detection",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Default match detection",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "never": {
     "message": "Never"
@@ -282,7 +282,7 @@
     "description": "Search item type"
   },
   "searchVault": {
-    "message": "Search Vault"
+    "message": "Search Item"
   },
   "allItems": {
     "message": "All Items"
@@ -385,7 +385,7 @@
     "message": "Share"
   },
   "moveToOrganization": {
-    "message": "Move to Organization"
+    "message": "Move to Team"
   },
   "valueCopied": {
     "message": "$VALUE$ copied",
@@ -418,20 +418,20 @@
     "description": "Copy credit card security code (CVV)"
   },
   "copyUri": {
-    "message": "Copy URI",
-    "description": "Copy URI to clipboard"
+    "message": "Copy URL",
+    "description": "Copy URL to clipboard"
   },
   "me": {
     "message": "Me"
   },
   "myVault": {
-    "message": "My Vault"
+    "message": "My Safe"
   },
   "allVaults": {
     "message": "All Vaults"
   },
   "vault": {
-    "message": "Vault"
+    "message": "Safe"
   },
   "vaults": {
     "message": "Vaults"
@@ -440,13 +440,13 @@
     "message": "Vault Items"
   },
   "moveSelectedToOrg": {
-    "message": "Move Selected to Organization"
+    "message": "Move Selected to Team"
   },
   "deleteSelected": {
     "message": "Delete Selected"
   },
   "moveSelected": {
-    "message": "Move Selected"
+    "message": "Move Selected to Folder"
   },
   "selectAll": {
     "message": "Select All"
@@ -567,7 +567,7 @@
     "message": "No"
   },
   "loginOrCreateNewAccount": {
-    "message": "Log in or create a new account to access your secure vault."
+    "message": "Log in or create a new account to access your secure safe."
   },
   "createAccount": {
     "message": "Create Account"
@@ -659,7 +659,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -685,10 +685,10 @@
     "message": "There are no events to list."
   },
   "newOrganization": {
-    "message": "New Organization"
+    "message": "New Team"
   },
   "noOrganizationsList": {
-    "message": "You do not belong to any organizations. Organizations allow you to securely share items with other users."
+    "message": "You do not belong to any teams. Teams allow you to securely share items with other users."
   },
   "versionNumber": {
     "message": "Version $VERSION_NUMBER$",
@@ -771,7 +771,7 @@
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
   "duoOrganizationDesc": {
-    "message": "Verify with Duo Security for your organization using the Duo Mobile app, SMS, phone call, or U2F security key.",
+    "message": "Verify with Duo Security for your team using the Duo Mobile app, SMS, phone call, or U2F security key.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
   "u2fDesc": {
@@ -799,19 +799,19 @@
     "message": "Continue"
   },
   "organization": {
-    "message": "Organization"
+    "message": "Team"
   },
   "organizations": {
-    "message": "Organizations"
+    "message": "Teams"
   },
   "moveToOrgDesc": {
-    "message": "Choose an organization that you wish to move this item to. Moving to an organization transfers ownership of the item to that organization. You will no longer be the direct owner of this item once it has been moved."
+    "message": "Choose a team that you wish to move this item to. Moving to a team transfers ownership of the item to that team. You will no longer be the direct owner of this item once it has been moved."
   },
   "moveManyToOrgDesc": {
-    "message": "Choose an organization that you wish to move these items to. Moving to an organization transfers ownership of the items to that organization. You will no longer be the direct owner of these items once they have been moved."
+    "message": "Choose a team that you wish to move these items to. Moving to a team transfers ownership of the items to that team. You will no longer be the direct owner of these items once they have been moved."
   },
   "collectionsDesc": {
-    "message": "Edit the collections that this item is being shared with. Only organization users with access to these collections will be able to see this item."
+    "message": "Edit the collections that this item is being shared with. Only team users with access to these collections will be able to see this item."
   },
   "deleteSelectedItemsDesc": {
     "message": "You have selected $COUNT$ item(s) to delete. Are you sure you want to delete all of these items?",
@@ -832,7 +832,7 @@
     }
   },
   "moveSelectedItemsCountDesc": {
-    "message": "You have selected $COUNT$ item(s). $MOVEABLE_COUNT$ item(s) can be moved to an organization, $NONMOVEABLE_COUNT$ cannot.",
+    "message": "You have selected $COUNT$ item(s). $MOVEABLE_COUNT$ item(s) can be moved to a team, $NONMOVEABLE_COUNT$ cannot.",
     "placeholders": {
       "count": {
         "content": "$1",
@@ -867,7 +867,7 @@
     "message": "This export encrypts your data using your account's encryption key. If you ever rotate your account's encryption key you should export again since you will not be able to decrypt this export file."
   },
   "encExportAccountWarningDesc": {
-    "message": "Account encryption keys are unique to each Bitwarden user account, so you can't import an encrypted export into a different account."
+    "message": "Account encryption keys are unique to each Bravura Safe user account, so you can't import an encrypted export into a different account."
   },
   "export": {
     "message": "Export"
@@ -916,7 +916,7 @@
   },
   "specialCharacters": {
     "message": "Special Characters (!@#$%^&*)"
-  },
+  }, 
   "numWords": {
     "message": "Number of Words"
   },
@@ -974,7 +974,7 @@
     "message": "Please log back in."
   },
   "logBackInOthersToo": {
-    "message": "Please log back in. If you are using other Bitwarden applications log out and back in to those as well."
+    "message": "Please log back in. If you are using other Bravura Safe applications log out and back in to those as well."
   },
   "changeMasterPassword": {
     "message": "Change Master Password"
@@ -1010,7 +1010,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "Setting your KDF iterations too high could result in poor performance when logging into (and unlocking) Bitwarden on devices with slower CPUs. We recommend that you increase the value in increments of $INCREMENT$ and then test all of your devices.",
+    "message": "Setting your KDF iterations too high could result in poor performance when logging into (and unlocking) Bravura Safe on devices with slower CPUs. We recommend that you increase the value in increments of $INCREMENT$ and then test all of your devices.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -1046,16 +1046,16 @@
     "message": "Purge Vault"
   },
   "purgedOrganizationVault": {
-    "message": "Purged organization vault."
+    "message": "Purged team vault."
   },
   "vaultAccessedByProvider": {
     "message": "Vault accessed by provider."
   },
   "purgeVaultDesc": {
-    "message": "Proceed below to delete all items and folders in your vault. Items that belong to an organization that you share with will not be deleted."
+    "message": "Proceed below to delete all items and folders in your vault. Items that belong to a team that you share with will not be deleted."
   },
   "purgeOrgVaultDesc": {
-    "message": "Proceed below to delete all items in the organization's vault."
+    "message": "Proceed below to delete all items in the team's vault."
   },
   "purgeVaultWarning": {
     "message": "Purging your vault is permanent. It cannot be undone."
@@ -1097,7 +1097,7 @@
     "message": "Data has been successfully imported into your vault."
   },
   "importWarning": {
-    "message": "You are importing data to $ORGANIZATION$. Your data may be shared with members of this organization. Do you want to proceed?",
+    "message": "You are importing data to $ORGANIZATION$. Your data may be shared with members of this team. Do you want to proceed?",
     "placeholders": {
       "organization": {
         "content": "$1",
@@ -1178,7 +1178,7 @@
     "message": "Domain Rules"
   },
   "domainRulesDesc": {
-    "message": "If you have the same login across multiple different website domains, you can mark the website as \"equivalent\". \"Global\" domains are ones already created for you by Bitwarden."
+    "message": "If you have the same login across multiple different website domains, you can mark the website as \"equivalent\". \"Global\" domains are ones already created for you by Bravura Safe."
   },
   "globalEqDomains": {
     "message": "Global Equivalent Domains"
@@ -1220,10 +1220,10 @@
     "message": "Secure your account by requiring an additional step when logging in."
   },
   "twoStepLoginOrganizationDesc": {
-    "message": "Require two-step login for your organization's users by configuring providers at the organization level."
+    "message": "Require two-step login for your team's users by configuring providers at the team level."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "Enabling two-step login can permanently lock you out of your Bitwarden account. A recovery code allows you to access your account in the event that you can no longer use your normal two-step login provider (ex. you lose your device). Bitwarden support will not be able to assist you if you lose access to your account. We recommend you write down or print the recovery code and keep it in a safe place."
+    "message": "Enabling two-step login can permanently lock you out of your Bravura Safe account. A recovery code allows you to access your account in the event that you can no longer use your normal two-step login provider (ex. you lose your device). Bravura Safe support will not be able to assist you if you lose access to your account. We recommend you write down or print the recovery code and keep it in a safe place."
   },
   "viewRecoveryCode": {
     "message": "View Recovery Code"
@@ -1258,7 +1258,7 @@
     "message": "You have premium access"
   },
   "alreadyPremiumFromOrg": {
-    "message": "You already have access to premium features because of an organization you are a member of."
+    "message": "You already have access to premium features because of a team you are a member of."
   },
   "manage": {
     "message": "Manage"
@@ -1330,7 +1330,7 @@
     "message": "Save the form."
   },
   "twoFactorYubikeyWarning": {
-    "message": "Due to platform limitations, YubiKeys cannot be used on all Bitwarden applications. You should enable another two-step login provider so that you can access your account when YubiKeys cannot be used. Supported platforms:"
+    "message": "Due to platform limitations, YubiKeys cannot be used on all Bravura Safe applications. You should enable another two-step login provider so that you can access your account when YubiKeys cannot be used. Supported platforms:"
   },
   "twoFactorYubikeySupportUsb": {
     "message": "Web vault, desktop application, CLI, and all browser extensions on a device with a USB port that can accept your YubiKey."
@@ -1381,7 +1381,7 @@
     "message": "Disable All Keys"
   },
   "twoFactorDuoDesc": {
-    "message": "Enter the Bitwarden application information from your Duo Admin panel."
+    "message": "Enter the Bravura Safe application information from your Duo Admin panel."
   },
   "twoFactorDuoIntegrationKey": {
     "message": "Integration Key"
@@ -1432,7 +1432,7 @@
     "message": "Save the form."
   },
   "twoFactorU2fWarning": {
-    "message": "Due to platform limitations, FIDO U2F cannot be used on all Bitwarden applications. You should enable another two-step login provider so that you can access your account when FIDO U2F cannot be used. Supported platforms:"
+    "message": "Due to platform limitations, FIDO U2F cannot be used on all Bravura Safe applications. You should enable another two-step login provider so that you can access your account when FIDO U2F cannot be used. Supported platforms:"
   },
   "twoFactorU2fSupportWeb": {
     "message": "Web vault and browser extensions on a desktop/laptop with a U2F enabled browser (Chrome, Opera, Vivaldi, or Firefox with FIDO U2F enabled)."
@@ -1447,13 +1447,13 @@
     "message": "There was a problem reading the security key. Try again."
   },
   "twoFactorWebAuthnWarning": {
-    "message": "Due to platform limitations, WebAuthn cannot be used on all Bitwarden applications. You should enable another two-step login provider so that you can access your account when WebAuthn cannot be used. Supported platforms:"
+    "message": "Due to platform limitations, WebAuthn cannot be used on all Bravura Safe applications. You should enable another two-step login provider so that you can access your account when WebAuthn cannot be used. Supported platforms:"
   },
   "twoFactorWebAuthnSupportWeb": {
     "message": "Web vault and browser extensions on a desktop/laptop with a WebAuthn enabled browser (Chrome, Opera, Vivaldi, or Firefox with FIDO U2F enabled)."
   },
   "twoFactorRecoveryYourCode": {
-    "message": "Your Bitwarden two-step login recovery code"
+    "message": "Your Bravura Safe two-step login recovery code"
   },
   "twoFactorRecoveryNoCode": {
     "message": "You have not enabled any two-step login providers yet. After you have enabled a two-step login provider you can check back here for your recovery code."
@@ -1467,19 +1467,19 @@
   },
   "reportsDesc": {
     "message": "Identify and close security gaps in your online accounts by clicking the reports below.",
-    "description": "Vault Health Reports can be used to evaluate the security of your Bitwarden Personal or Organization Vault."
+    "description": "Vault Health Reports can be used to evaluate the security of your Bravura Safe Personal or Team Vault."
   },
   "unsecuredWebsitesReport": {
     "message": "Unsecure Websites"
   },
   "unsecuredWebsitesReportDesc": {
-    "message": "URLs that start with http:// don’t use the best available encryption. Change the Login URIs for these accounts to https:// for safer browsing."
+    "message": "URLs that start with http:// don’t use the best available encryption. Change the Login URLs for these accounts to https:// for safer browsing."
   },
   "unsecuredWebsitesFound": {
     "message": "Unsecured Websites Found"
   },
   "unsecuredWebsitesFoundDesc": {
-    "message": "We found $COUNT$ items in your vault with unsecured URIs. You should change their URI scheme to https:// if the website allows it.",
+    "message": "We found $COUNT$ items in your vault with unsecured URLs. You should change their URL scheme to https:// if the website allows it.",
     "placeholders": {
       "count": {
         "content": "$1",
@@ -1488,13 +1488,13 @@
     }
   },
   "noUnsecuredWebsites": {
-    "message": "No items in your vault have unsecured URIs."
+    "message": "No items in your vault have unsecured URLs."
   },
   "inactive2faReport": {
     "message": "Inactive Two-step Login"
   },
   "inactive2faReportDesc": {
-    "message": "Two-step Login adds a layer of protection to your accounts. Turn on Two-Step Login using Bitwarden Authenticator for these accounts or use an alternative method."
+    "message": "Two-step Login adds a layer of protection to your accounts. Turn on Two-Step Login using Bravura Safe Authenticator for these accounts or use an alternative method."
   },
   "inactive2faFound": {
     "message": "Logins Without 2FA Found"
@@ -1662,11 +1662,11 @@
   },
   "accountCredit": {
     "message": "Account Credit",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of Bravura Safe, a positive balance means that you owe money, while a negative balance means that you have a credit (Bravura Safe owes you money)."
   },
   "accountBalance": {
     "message": "Account Balance",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of Bravura Safe, a positive balance means that you owe money, while a negative balance means that you have a credit (Bravura Safe owes you money)."
   },
   "addCredit": {
     "message": "Add Credit",
@@ -1732,7 +1732,7 @@
     "message": "Premium Access"
   },
   "premiumAccessDesc": {
-    "message": "You can add premium access to all members of your organization for $PRICE$ /$INTERVAL$.",
+    "message": "You can add premium access to all members of your team for $PRICE$ /$INTERVAL$.",
     "placeholders": {
       "price": {
         "content": "$1",
@@ -1971,7 +1971,7 @@
     "placeholders": {
       "file_name": {
         "content": "$1",
-        "example": "bitwarden_premium_license.json"
+        "example": "bravura_safe_premium_license.json"
       }
     }
   },
@@ -1979,19 +1979,19 @@
     "message": "To upgrade your account to a premium membership you need to upload a valid license file."
   },
   "uploadLicenseFileOrg": {
-    "message": "To create an on-premises hosted organization you need to upload a valid license file."
+    "message": "To create an on-premises hosted team you need to upload a valid license file."
   },
   "accountEmailMustBeVerified": {
     "message": "Your account's email address must be verified."
   },
   "newOrganizationDesc": {
-    "message": "Organizations allow you to share parts of your vault with others as well as manage related users for a specific entity such as a family, small team, or large company."
+    "message": "Teams allow you to share parts of your vault with others as well as manage related users for a specific entity such as a family, small team, or large company."
   },
   "generalInformation": {
     "message": "General Information"
   },
   "organizationName": {
-    "message": "Organization Name"
+    "message": "Team Name"
   },
   "accountOwnedBusiness": {
     "message": "This account is owned by a business."
@@ -2056,13 +2056,13 @@
     "message": "Teams"
   },
   "planDescTeams": {
-    "message": "For businesses and other team organizations."
+    "message": "For businesses and other team teams."
   },
   "planNameEnterprise": {
     "message": "Enterprise"
   },
   "planDescEnterprise": {
-    "message": "For businesses and other large organizations."
+    "message": "For businesses and other large teams."
   },
   "freeForever": {
     "message": "Free Forever"
@@ -2170,22 +2170,22 @@
     "message": "Base Price"
   },
   "organizationCreated": {
-    "message": "Organization Created"
+    "message": "Team Created"
   },
   "organizationReadyToGo": {
-    "message": "Your new organization is ready to go!"
+    "message": "Your new team is ready to go!"
   },
   "organizationUpgraded": {
-    "message": "Your organization has been upgraded."
+    "message": "Your team has been upgraded."
   },
   "leave": {
     "message": "Leave"
   },
   "leaveOrganizationConfirmation": {
-    "message": "Are you sure you want to leave this organization?"
+    "message": "Are you sure you want to leave this team?"
   },
   "leftOrganization": {
-    "message": "You have left the organization."
+    "message": "You have left the team."
   },
   "defaultCollection": {
     "message": "Default Collection"
@@ -2233,13 +2233,13 @@
     "message": "Are you sure you want to remove this user?"
   },
   "deactivateUserConfirmation": {
-    "message": "The member will no longer have access to the organization, but will still have access to their individual vault."
+    "message": "The member will no longer have access to the team, but will still have access to their individual vault."
   },
   "activateUserConfirmation": {
-    "message": "Are you sure you want to activate this user, granting them access to the organization?"
+    "message": "Are you sure you want to activate this user, granting them access to the team?"
   },
   "removeUserConfirmationKeyConnector": {
-    "message": "Warning! This user requires Key Connector to manage their encryption. Removing this user from your organization will permanently disable their account. This action cannot be undone. Do you want to proceed?"
+    "message": "Warning! This user requires Key Connector to manage their encryption. Removing this user from your team will permanently disable their account. This action cannot be undone. Do you want to proceed?"
   },
   "externalId": {
     "message": "External Id"
@@ -2278,7 +2278,7 @@
     "message": "Invite User"
   },
   "inviteUserDesc": {
-    "message": "Invite a new user to your organization by entering their Bitwarden account email address below. If they do not have a Bitwarden account already, they will be prompted to create a new account."
+    "message": "Invite a new user to your team by entering their Bravura Safe account email address below. If they do not have a Bravura Safe account already, they will be prompted to create a new account."
   },
   "inviteMultipleEmailDesc": {
     "message": "You can invite up to $COUNT$ users at a time by comma separating a list of email addresses.",
@@ -2317,28 +2317,28 @@
     "message": "Owner"
   },
   "ownerDesc": {
-    "message": "The highest access user that can manage all aspects of your organization."
+    "message": "The highest access user that can manage all aspects of your team."
   },
   "clientOwnerDesc": {
-    "message": "This user should be independent of the Provider. If the Provider is disassociated with the organization, this user will maintain ownership of the organization."
+    "message": "This user should be independent of the Provider. If the Provider is disassociated with the team, this user will maintain ownership of the team."
   },
   "admin": {
     "message": "Admin"
   },
   "adminDesc": {
-    "message": "Admins can access and manage all items, collections and users in your organization."
+    "message": "Admins can access and manage all items, collections and users in your team."
   },
   "user": {
     "message": "User"
   },
   "userDesc": {
-    "message": "A regular user with access to assigned collections in your organization."
+    "message": "A regular user with access to assigned collections in your team."
   },
   "manager": {
     "message": "Manager"
   },
   "managerDesc": {
-    "message": "Managers can access and manage assigned collections in your organization."
+    "message": "Managers can access and manage assigned collections in your team."
   },
   "all": {
     "message": "All"
@@ -2398,10 +2398,10 @@
     "message": "Exported vault."
   },
   "exportedOrganizationVault": {
-    "message": "Exported organization vault."
+    "message": "Exported team vault."
   },
   "editedOrgSettings": {
-    "message": "Edited organization settings."
+    "message": "Edited team settings."
   },
   "createdItemId": {
     "message": "Created item $ID$.",
@@ -2431,7 +2431,7 @@
     }
   },
   "movedItemIdToOrg": {
-    "message": "Moved item $ID$ to an organization.",
+    "message": "Moved item $ID$ to a team.",
     "placeholders": {
       "id": {
         "content": "$1",
@@ -2692,7 +2692,7 @@
     }
   },
   "createdOrganizationId": {
-    "message": "Created organization $ID$.",
+    "message": "Created team $ID$.",
     "placeholders": {
       "id": {
         "content": "$1",
@@ -2701,7 +2701,7 @@
     }
   },
   "addedOrganizationId": {
-    "message": "Added organization $ID$.",
+    "message": "Added team $ID$.",
     "placeholders": {
       "id": {
         "content": "$1",
@@ -2710,7 +2710,7 @@
     }
   },
   "removedOrganizationId": {
-    "message": "Removed organization $ID$.",
+    "message": "Removed team $ID$.",
     "placeholders": {
       "id": {
         "content": "$1",
@@ -2719,7 +2719,7 @@
     }
   },
   "accessedClientVault": {
-    "message": "Accessed $ID$ organization vault.",
+    "message": "Accessed $ID$ team vault.",
     "placeholders": {
       "id": {
         "content": "$1",
@@ -2788,7 +2788,7 @@
     "message": "Confirm Users"
   },
   "usersNeedConfirmed": {
-    "message": "You have users that have accepted their invitation, but still need to be confirmed. Users will not have access to the organization until they are confirmed."
+    "message": "You have users that have accepted their invitation, but still need to be confirmed. Users will not have access to the team until they are confirmed."
   },
   "startDate": {
     "message": "Start Date"
@@ -2827,26 +2827,26 @@
     "message": "You are using an unsupported web browser. The web vault may not function properly."
   },
   "joinOrganization": {
-    "message": "Join Organization"
+    "message": "Join Team"
   },
   "joinOrganizationDesc": {
-    "message": "You've been invited to join the organization listed above. To accept the invitation, you need to log in or create a new Bitwarden account."
+    "message": "You've been invited to join the team listed above. To accept the invitation, you need to log in or create a new Bravura Safe account."
   },
   "inviteAccepted": {
     "message": "Invitation Accepted"
   },
   "inviteAcceptedDesc": {
-    "message": "You can access this organization once an administrator confirms your membership. We'll send you an email when that happens."
+    "message": "You can access this team once an administrator confirms your membership. We'll send you an email when that happens."
   },
   "inviteAcceptFailed": {
-    "message": "Unable to accept invitation. Ask an organization admin to send a new invitation."
+    "message": "Unable to accept invitation. Ask a team admin to send a new invitation."
   },
   "inviteAcceptFailedShort": {
     "message": "Unable to accept invitation. $DESCRIPTION$",
     "placeholders": {
       "description": {
         "content": "$1",
-        "example": "You must enable 2FA on your user account before you can join this organization."
+        "example": "You must enable 2FA on your user account before you can join this team."
       }
     }
   },
@@ -2872,13 +2872,13 @@
     "message": "If your account exists, we've sent you an email with further instructions."
   },
   "deleteRecoverConfirmDesc": {
-    "message": "You have requested to delete your Bitwarden account. Click the button below to confirm."
+    "message": "You have requested to delete your Bravura Safe account. Click the button below to confirm."
   },
   "myOrganization": {
-    "message": "My Organization"
+    "message": "My Team"
   },
   "deleteOrganization": {
-    "message": "Delete Organization"
+    "message": "Delete Team"
   },
   "deletingOrganizationContentWarning": {
     "message": "Enter the master password to confirm deletion of $ORGANIZATION$ and all associated data. Vault data in $ORGANIZATION$ includes:",
@@ -2890,7 +2890,7 @@
     }
   },
   "deletingOrganizationActiveUserAccountsWarning": {
-    "message": "User accounts will remain active after deletion but will no longer be associated to this organization."
+    "message": "User accounts will remain active after deletion but will no longer be associated to this team."
   },
   "deletingOrganizationIsPermanentWarning": {
     "message": "Deleting $ORGANIZATION$ is permanent and irreversible.",
@@ -2902,13 +2902,13 @@
     }
   },
   "organizationDeleted": {
-    "message": "Organization Deleted"
+    "message": "Team Deleted"
   },
   "organizationDeletedDesc": {
-    "message": "The organization and all associated data has been deleted."
+    "message": "The team and all associated data has been deleted."
   },
   "organizationUpdated": {
-    "message": "Organization updated"
+    "message": "Team updated"
   },
   "taxInformation": {
     "message": "Tax Information"
@@ -2951,7 +2951,7 @@
     "message": "We have made two micro-deposits to your bank account (it may take 1-2 business days to show up). Enter these amounts to verify the bank account."
   },
   "verifyBankAccountInitialDesc": {
-    "message": "Payment with a bank account is only available to customers in the United States. You will be required to verify your bank account. We will make two micro-deposits within the next 1-2 business days. Enter these amounts on the organization's billing page to verify the bank account."
+    "message": "Payment with a bank account is only available to customers in the United States. You will be required to verify your bank account. We will make two micro-deposits within the next 1-2 business days. Enter these amounts on the team's billing page to verify the bank account."
   },
   "verifyBankAccountFailureWarning": {
     "message": "Failure to verify the bank account will result in a missed payment and your subscription being disabled."
@@ -3070,7 +3070,7 @@
     }
   },
   "subscriptionSponsoredFamiliesPlan": {
-    "message": "Your subscription allows for a total of $COUNT$ users. Your plan is sponsored and billed to an external organization.",
+    "message": "Your subscription allows for a total of $COUNT$ users. Your plan is sponsored and billed to an external team.",
     "placeholders": {
       "count": {
         "content": "$1",
@@ -3082,10 +3082,10 @@
     "message": "Adjustments to your subscription will result in prorated changes to your billing totals. You cannot invite more than $COUNT$ users without increasing your subscription seats.",
     "placeholders": {
       "count": {
-        "content": "$1",
-        "example": "50"
-      }
-    }
+            "content": "$1",
+            "example": "50"
+          }
+        }
   },
   "seatsToAdd": {
     "message": "Seats To Add"
@@ -3124,7 +3124,7 @@
     "message": "We've moved to larger encryption keys that provide better security and access to newer features. Updating your encryption key is quick and easy. Just type your master password below. This update will eventually become mandatory."
   },
   "updateEncryptionKeyWarning": {
-    "message": "After updating your encryption key, you are required to log out and back in to all Bitwarden applications that you are currently using (such as the mobile app or browser extensions). Failure to log out and back in (which downloads your new encryption key) may result in data corruption. We will attempt to log you out automatically, however, it may be delayed."
+    "message": "After updating your encryption key, you are required to log out and back in to all Bravura Safe applications that you are currently using (such as the mobile app or browser extensions). Failure to log out and back in (which downloads your new encryption key) may result in data corruption. We will attempt to log you out automatically, however, it may be delayed."
   },
   "updateEncryptionKeyExportWarning": {
     "message": "Any encrypted exports that you have saved will also become invalid."
@@ -3139,16 +3139,16 @@
     "message": "Upgrade"
   },
   "upgradeOrganization": {
-    "message": "Upgrade Organization"
+    "message": "Upgrade Team"
   },
   "upgradeOrganizationDesc": {
-    "message": "This feature is not available for free organizations. Switch to a paid plan to unlock more features."
+    "message": "This feature is not available for free teams. Switch to a paid plan to unlock more features."
   },
   "createOrganizationStep1": {
-    "message": "Create Organization: Step 1"
+    "message": "Create Team: Step 1"
   },
   "createOrganizationCreatePersonalAccount": {
-    "message": "Before creating your organization, you first need to create a free personal account."
+    "message": "Before creating your team, you first need to create a free personal account."
   },
   "refunded": {
     "message": "Refunded"
@@ -3207,7 +3207,7 @@
     "description": "ex. Date this password was updated"
   },
   "organizationIsDisabled": {
-    "message": "Organization is disabled."
+    "message": "Team is disabled."
   },
   "licenseIsExpired": {
     "message": "License is expired."
@@ -3244,7 +3244,7 @@
     "message": "Weak Master Password"
   },
   "weakMasterPasswordDesc": {
-    "message": "The master password you have chosen is weak. You should use a strong master password (or a passphrase) to properly protect your Bitwarden account. Are you sure you want to use this master password?"
+    "message": "The master password you have chosen is weak. You should use a strong master password (or a passphrase) to properly protect your Bravura Safe account. Are you sure you want to use this master password?"
   },
   "rotateAccountEncKey": {
     "message": "Also rotate my account's encryption key"
@@ -3288,16 +3288,16 @@
     "message": "API Key"
   },
   "apiKeyDesc": {
-    "message": "Your API key can be used to authenticate to the Bitwarden public API."
+    "message": "Your API key can be used to authenticate to the Bravura Safe public API."
   },
   "apiKeyRotateDesc": {
     "message": "Rotating the API key will invalidate the previous key. You can rotate your API key if you believe that the current key is no longer safe to use."
   },
   "apiKeyWarning": {
-    "message": "Your API key has full access to the organization. It should be kept secret."
+    "message": "Your API key has full access to the team. It should be kept secret."
   },
   "userApiKeyDesc": {
-    "message": "Your API key can be used to authenticate in the Bitwarden CLI."
+    "message": "Your API key can be used to authenticate in the Bravura Safe CLI."
   },
   "userApiKeyWarning": {
     "message": "Your API key is an alternative authentication mechanism. It should be kept secret."
@@ -3340,19 +3340,19 @@
     "message": "Require users to set up two-step login on their personal accounts."
   },
   "twoStepLoginPolicyWarning": {
-    "message": "Organization members who are not Owners or Administrators and do not have two-step login enabled for their personal account will be removed from the organization and will receive an email notifying them about the change."
+    "message": "Team members who are not Owners or Administrators and do not have two-step login enabled for their personal account will be removed from the team and will receive an email notifying them about the change."
   },
   "twoStepLoginPolicyUserWarning": {
-    "message": "You are a member of an organization that requires two-step login to be enabled on your user account. If you disable all two-step login providers you will be automatically removed from these organizations."
+    "message": "You are a member of a team that requires two-step login to be enabled on your user account. If you disable all two-step login providers you will be automatically removed from these teams."
   },
   "passwordGeneratorPolicyDesc": {
     "message": "Set minimum requirements for password generator configuration."
   },
   "passwordGeneratorPolicyInEffect": {
-    "message": "One or more organization policies are affecting your generator settings."
+    "message": "One or more team policies are affecting your generator settings."
   },
   "masterPasswordPolicyInEffect": {
-    "message": "One or more organization policies require your master password to meet the following requirements:"
+    "message": "One or more team policies require your master password to meet the following requirements:"
   },
   "policyInEffectMinComplexity": {
     "message": "Minimum complexity score of $SCORE$",
@@ -3528,10 +3528,10 @@
     "message": "Identifier"
   },
   "organizationIdentifier": {
-    "message": "Organization Identifier"
+    "message": "Team Identifier"
   },
   "ssoLogInWithOrgIdentifier": {
-    "message": "Log in using your organization's single sign-on portal. Please enter your organization's identifier to begin."
+    "message": "Log in using your team's single sign-on portal. Please enter your team's identifier to begin."
   },
   "enterpriseSingleSignOn": {
     "message": "Enterprise Single Sign-On"
@@ -3552,28 +3552,28 @@
     "message": "SSO Validation Failed"
   },
   "ssoIdentifierRequired": {
-    "message": "Organization Identifier is required."
+    "message": "Team Identifier is required."
   },
   "unlinkSso": {
     "message": "Unlink SSO"
   },
   "unlinkSsoConfirmation": {
-    "message": "Are you sure you want to unlink SSO for this organization?"
+    "message": "Are you sure you want to unlink SSO for this team?"
   },
   "linkSso": {
     "message": "Link SSO"
   },
   "singleOrg": {
-    "message": "Single Organization"
+    "message": "Single Team"
   },
   "singleOrgDesc": {
-    "message": "Restrict users from being able to join any other organizations."
+    "message": "Restrict users from being able to join any other teams."
   },
   "singleOrgBlockCreateMessage": {
-    "message": "Your current organization has a policy that does not allow you to join more than one organization. Please contact your organization admins or sign up from a different Bitwarden account."
+    "message": "Your current team has a policy that does not allow you to join more than one team. Please contact your team admins or sign up from a different Bravura Safe account."
   },
   "singleOrgPolicyWarning": {
-    "message": "Organization members who are not Owners or Administrators and are already a member of another organization will be removed from your organization."
+    "message": "Team members who are not Owners or Administrators and are already a member of another team will be removed from your team."
   },
   "requireSso": {
     "message": "Single Sign-On Authentication"
@@ -3585,13 +3585,13 @@
     "message": "Prerequisite"
   },
   "requireSsoPolicyReq": {
-    "message": "The Single Organization enterprise policy must be enabled before activating this policy."
+    "message": "The Single Team enterprise policy must be enabled before activating this policy."
   },
   "requireSsoPolicyReqError": {
-    "message": "Single Organization policy not enabled."
+    "message": "Single Team policy not enabled."
   },
   "requireSsoExemption": {
-    "message": "Organization Owners and Administrators are exempt from this policy's enforcement."
+    "message": "Team Owners and Administrators are exempt from this policy's enforcement."
   },
   "sendTypeFile": {
     "message": "File"
@@ -3600,68 +3600,68 @@
     "message": "Text"
   },
   "createSend": {
-    "message": "Create New Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Create New Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Edit Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Edit Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Created Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Created Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "Edited Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Edited Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
-    "message": "Deleted Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Deleted Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deleteSend": {
-    "message": "Delete Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Delete Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deleteSendConfirmation": {
-    "message": "Are you sure you want to delete this Send?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Are you sure you want to delete this Share?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "whatTypeOfSend": {
-    "message": "What type of Send is this?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "What type of Share is this?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletionDate": {
     "message": "Deletion Date"
   },
   "deletionDateDesc": {
-    "message": "The Send will be permanently deleted on the specified date and time.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "The Share will be permanently deleted on the specified date and time.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Expiration Date"
   },
   "expirationDateDesc": {
-    "message": "If set, access to this Send will expire on the specified date and time.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "If set, access to this Share will expire on the specified date and time.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "Maximum Access Count"
   },
   "maxAccessCountDesc": {
-    "message": "If set, users will no longer be able to access this Send once the maximum access count is reached.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "If set, users will no longer be able to access this Share once the maximum access count is reached.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Current Access Count"
   },
   "sendPasswordDesc": {
-    "message": "Optionally require a password for users to access this Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Optionally require a password for users to access this Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "Private notes about this Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Private notes about this Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "disabled": {
     "message": "Disabled"
@@ -3670,12 +3670,12 @@
     "message": "Deactivated"
   },
   "sendLink": {
-    "message": "Send link",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share link",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLink": {
-    "message": "Copy Send Link",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Copy Share Link",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "removePassword": {
     "message": "Remove Password"
@@ -3690,15 +3690,15 @@
     "message": "Hide my email address from recipients."
   },
   "disableThisSend": {
-    "message": "Disable this Send so that no one can access it.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Disable this Share so that no one can access it.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "allSends": {
-    "message": "All Sends"
+    "message": "All Shares"
   },
   "maxAccessCountReached": {
     "message": "Max access count reached",
-    "description": "This text will be displayed after a Send has been accessed the maximum amount of times."
+    "description": "This text will be displayed after a Share has been accessed the maximum amount of times."
   },
   "pendingDeletion": {
     "message": "Pending deletion"
@@ -3707,35 +3707,35 @@
     "message": "Expired"
   },
   "searchSends": {
-    "message": "Search Sends",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Search Shares",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendProtectedPassword": {
-    "message": "This Send is protected with a password. Please type the password below to continue.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "This Share is protected with a password. Please type the password below to continue.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendProtectedPasswordDontKnow": {
-    "message": "Don't know the password? Ask the Sender for the password needed to access this Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Don't know the password? Ask the sender for the password needed to access this Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendHiddenByDefault": {
-    "message": "This send is hidden by default. You can toggle its visibility using the button below.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "This share is hidden by default. You can toggle its visibility using the button below.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "downloadFile": {
     "message": "Download File"
   },
   "sendAccessUnavailable": {
-    "message": "The Send you are trying to access does not exist or is no longer available.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "The Share you are trying to access does not exist or is no longer available.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "missingSendFile": {
-    "message": "The file associated with this Send could not be found.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "The file associated with this Share could not be found.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "noSendsInList": {
-    "message": "There are no Sends to list.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "There are no Shares to list.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "emergencyAccess": {
     "message": "Emergency Access"
@@ -3744,7 +3744,7 @@
     "message": "Grant and manage emergency access for trusted contacts. Trusted contacts may request access to either View or Takeover your account in case of an emergency. Visit our help page for more information and details into how zero knowledge sharing works."
   },
   "emergencyAccessOwnerWarning": {
-    "message": "You are an Owner of one or more organizations. If you give takeover access to an emergency contact, they will be able to use all your permissions as Owner after a takeover."
+    "message": "You are an Owner of one or more teams. If you give takeover access to an emergency contact, they will be able to use all your permissions as Owner after a takeover."
   },
   "trustedEmergencyContacts": {
     "message": "Trusted emergency contacts"
@@ -3768,7 +3768,7 @@
     "message": "Edit emergency contact"
   },
   "inviteEmergencyContactDesc": {
-    "message": "Invite a new emergency contact by entering their Bitwarden account email address below. If they do not have a Bitwarden account already, they will be prompted to create a new account."
+    "message": "Invite a new emergency contact by entering their Bravura Safe account email address below. If they do not have a Bravura Safe account already, they will be prompted to create a new account."
   },
   "emergencyAccessRecoveryInitiated": {
     "message": "Emergency Access Initiated"
@@ -3807,7 +3807,7 @@
     "message": "Invited user."
   },
   "acceptEmergencyAccess": {
-    "message": "You've been invited to become an emergency contact for the user listed above. To accept the invitation, you need to log in or create a new Bitwarden account."
+    "message": "You've been invited to become an emergency contact for the user listed above. To accept the invitation, you need to log in or create a new Bravura Safe account."
   },
   "emergencyInviteAcceptFailed": {
     "message": "Unable to accept invitation. Ask the user to send a new invitation."
@@ -3817,7 +3817,7 @@
     "placeholders": {
       "description": {
         "content": "$1",
-        "example": "You must enable 2FA on your user account before you can join this organization."
+        "example": "You must enable 2FA on your user account before you can join this team."
       }
     }
   },
@@ -3883,53 +3883,53 @@
     "message": "Personal Ownership"
   },
   "personalOwnershipPolicyDesc": {
-    "message": "Require users to save vault items to an organization by removing the personal ownership option."
+    "message": "Require users to save vault items to a team by removing the personal ownership option."
   },
   "personalOwnershipExemption": {
-    "message": "Organization Owners and Administrators are exempt from this policy's enforcement."
+    "message": "Team Owners and Administrators are exempt from this policy's enforcement."
   },
   "personalOwnershipSubmitError": {
-    "message": "Due to an enterprise policy, you are restricted from saving items to your personal vault. Change the Ownership option to an organization and choose from available Collections."
+    "message": "Due to an enterprise policy, you are restricted from saving items to your personal vault. Change the Ownership option to a team and choose from available Collections."
   },
   "disableSend": {
-    "message": "Disable Send"
+    "message": "Disable Share"
   },
   "disableSendPolicyDesc": {
-    "message": "Do not allow users to create or edit a Bitwarden Send. Deleting an existing Send is still allowed.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Do not allow users to create or edit a Bravura Safe Share. Deleting an existing Share is still allowed.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "disableSendExemption": {
-    "message": "Organization users that can manage the organization's policies are exempt from this policy's enforcement."
+    "message": "Team users that can manage the team's policies are exempt from this policy's enforcement."
   },
   "sendDisabled": {
-    "message": "Send disabled",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share disabled",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "Due to an enterprise policy, you are only able to delete an existing Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Due to an enterprise policy, you are only able to delete an existing Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendOptions": {
-    "message": "Send Options",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share Options",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendOptionsPolicyDesc": {
-    "message": "Set options for creating and editing Sends.",
-    "description": "'Sends' is a plural noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Set options for creating and editing Shares.",
+    "description": "'Shares' is a plural noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendOptionsExemption": {
-    "message": "Organization users that can manage the organization's policies are exempt from this policy's enforcement."
+    "message": "Team users that can manage the team's policies are exempt from this policy's enforcement."
   },
   "disableHideEmail": {
-    "message": "Do not allow users to hide their email address from recipients when creating or editing a Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Do not allow users to hide their email address from recipients when creating or editing a Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "The following organization policies are currently in effect:"
+    "message": "The following team policies are currently in effect:"
   },
   "sendDisableHideEmailInEffect": {
-    "message": "Users are not allowed to hide their email address from recipients when creating or editing a Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Users are not allowed to hide their email address from recipients when creating or editing a Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "modifiedPolicyId": {
     "message": "Modified policy $ID$.",
@@ -4013,46 +4013,46 @@
     }
   },
   "personalOwnershipPolicyInEffect": {
-    "message": "An organization policy is affecting your ownership options."
+    "message": "A team policy is affecting your ownership options."
   },
   "personalOwnershipPolicyInEffectImports": {
-    "message": "An organization policy has disabled importing items into your personal vault."
+    "message": "A team policy has disabled importing items into your personal vault."
   },
   "personalOwnershipCheckboxDesc": {
-    "message": "Disable personal ownership for organization users"
+    "message": "Disable personal ownership for team users"
   },
   "textHiddenByDefault": {
-    "message": "When accessing the Send, hide the text by default",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "When accessing the Share, hide the text by default",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNameDesc": {
-    "message": "A friendly name to describe this Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "A friendly name to describe this Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
-    "message": "The text you want to send."
+    "message": "The text you want to share."
   },
   "sendFileDesc": {
-    "message": "The file you want to send."
+    "message": "The file you want to share."
   },
   "copySendLinkOnSave": {
-    "message": "Copy the link to share this Send to my clipboard upon save."
+    "message": "Copy the link to share this Share to my clipboard upon save."
   },
   "sendLinkLabel": {
-    "message": "Send link",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share link",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "send": {
-    "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendAccessTaglineProductDesc": {
-    "message": "Bitwarden Send transmits sensitive, temporary information to others easily and securely.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Bravura Safe Share transmits sensitive, temporary information to others easily and securely.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendAccessTaglineLearnMore": {
     "message": "Learn more about",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read '**Learn more about** Bitwarden Send or sign up to try it today.'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read '**Learn more about** Bravura Safe Share or sign up to try it today.'"
   },
   "sendVaultCardProductDesc": {
     "message": "Share text or files directly with anyone."
@@ -4079,18 +4079,18 @@
   },
   "sendAccessTaglineOr": {
     "message": "or",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Bitwarden Send **or** sign up to try it today.'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Bravura Safe Share **or** sign up to try it today.'"
   },
   "sendAccessTaglineSignUp": {
     "message": "sign up",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Bitwarden Send or **sign up** to try it today.'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Bravura Safe Share or **sign up** to try it today.'"
   },
   "sendAccessTaglineTryToday": {
     "message": "to try it today.",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Bitwarden Send or sign up to **try it today.**'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Bravura Safe Share or sign up to **try it today.**'"
   },
   "sendCreatorIdentifier": {
-    "message": "Bitwarden user $USER_IDENTIFIER$ shared the following with you",
+    "message": "Bravura Safe user $USER_IDENTIFIER$ shared the following with you",
     "placeholders": {
       "user_identifier": {
         "content": "$1",
@@ -4099,8 +4099,8 @@
     }
   },
   "viewSendHiddenEmailWarning": {
-    "message": "The Bitwarden user who created this Send has chosen to hide their email address. You should ensure you trust the source of this link before using or downloading its content.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "The Bravura Safe user who created this Share has chosen to hide their email address. You should ensure you trust the source of this link before using or downloading its content.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDateIsInvalid": {
     "message": "The expiration date provided is not valid."
@@ -4208,22 +4208,22 @@
     "message": "this user"
   },
   "resetPasswordMasterPasswordPolicyInEffect": {
-    "message": "One or more organization policies require the master password to meet the following requirements:"
+    "message": "One or more team policies require the master password to meet the following requirements:"
   },
   "resetPasswordSuccess": {
     "message": "Password reset success!"
   },
   "resetPasswordEnrollmentWarning": {
-    "message": "Enrollment will allow organization administrators to change your master password"
+    "message": "Enrollment will allow team administrators to change your master password. Are you sure you want to enroll?"
   },
   "resetPasswordPolicy": {
     "message": "Master Password Reset"
   },
   "resetPasswordPolicyDescription": {
-    "message": "Allow administrators in the organization to reset organization users' master password."
+    "message": "Allow administrators in the team to reset team users' master password."
   },
   "resetPasswordPolicyWarning": {
-    "message": "Users in the organization will need to self-enroll or be auto-enrolled before administrators can reset their master password."
+    "message": "Users in the team will need to self-enroll or be auto-enrolled before administrators can reset their master password."
   },
   "resetPasswordPolicyAutoEnroll": {
     "message": "Automatic Enrollment"
@@ -4232,16 +4232,16 @@
     "message": "All users will be automatically enrolled in password reset once their invite is accepted and will not be allowed to withdraw."
   },
   "resetPasswordPolicyAutoEnrollWarning": {
-    "message": "Users already in the organization will not be retroactively enrolled in password reset. They will need to self-enroll before administrators can reset their master password."
+    "message": "Users already in the team will not be retroactively enrolled in password reset. They will need to self-enroll before administrators can reset their master password."
   },
   "resetPasswordPolicyAutoEnrollCheckbox": {
     "message": "Require new users to be enrolled automatically"
   },
   "resetPasswordAutoEnrollInviteWarning": {
-    "message": "This organization has an enterprise policy that will automatically enroll you in password reset. Enrollment will allow organization administrators to change your master password."
+    "message": "This team has an enterprise policy that will automatically enroll you in password reset. Enrollment will allow team administrators to change your master password."
   },
   "resetPasswordOrgKeysError": {
-    "message": "Organization Keys response is null"
+    "message": "Team Keys response is null"
   },
   "resetPasswordDetailsError": {
     "message": "Reset Password Details response is null"
@@ -4271,10 +4271,10 @@
     "message": "Are you sure you want to remove the following users? The process may take a few seconds to complete and cannot be interrupted or canceled."
   },
   "deactivateUsersWarning": {
-    "message": "Are you sure you want to deactivate the following members? They will no longer have access to the organization, but will still have access to their individual vaults. The process may take a few seconds to complete and cannot be interrupted or canceled."
+    "message": "Are you sure you want to deactivate the following members? They will no longer have access to the team, but will still have access to their individual vaults. The process may take a few seconds to complete and cannot be interrupted or canceled."
   },
   "activateUsersWarning": {
-    "message": "Are you sure you want to activate the following members, granting them access to the organization? The process may take a few seconds to complete and cannot be interrupted or canceled."
+    "message": "Are you sure you want to activate the following members, granting them access to the team? The process may take a few seconds to complete and cannot be interrupted or canceled."
   },
   "theme": {
     "message": "Theme"
@@ -4337,7 +4337,7 @@
     "message": "Provider Setup"
   },
   "setupProviderLoginDesc": {
-    "message": "You've been invited to setup a new provider. To continue, you need to log in or create a new Bitwarden account."
+    "message": "You've been invited to setup a new provider. To continue, you need to log in or create a new Bravura Safe account."
   },
   "setupProviderDesc": {
     "message": "Please enter the details below to complete the provider setup. Contact Customer Support if you have any questions."
@@ -4355,22 +4355,22 @@
     "message": "Provider Admin"
   },
   "providerAdminDesc": {
-    "message": "The highest access user that can manage all aspects of your provider as well as access and manage client organizations."
+    "message": "The highest access user that can manage all aspects of your provider as well as access and manage client teams."
   },
   "serviceUser": {
     "message": "Service User"
   },
   "serviceUserDesc": {
-    "message": "Service users can access and manage all client organizations."
+    "message": "Service users can access and manage all client teams."
   },
   "providerInviteUserDesc": {
-    "message": "Invite a new user to your provider by entering their Bitwarden account email address below. If they do not have a Bitwarden account already, they will be prompted to create a new account."
+    "message": "Invite a new user to your provider by entering their Bravura Safe account email address below. If they do not have a Bravura Safe account already, they will be prompted to create a new account."
   },
   "joinProvider": {
     "message": "Join Provider"
   },
   "joinProviderDesc": {
-    "message": "You've been invited to join the provider listed above. To accept the invitation, you need to log in or create a new Bitwarden account."
+    "message": "You've been invited to join the provider listed above. To accept the invitation, you need to log in or create a new Bravura Safe account."
   },
   "providerInviteAcceptFailed": {
     "message": "Unable to accept invitation. Ask a provider admin to send a new invitation."
@@ -4385,13 +4385,13 @@
     "message": "Provider"
   },
   "newClientOrganization": {
-    "message": "New Client Organization"
+    "message": "New Client Team"
   },
   "newClientOrganizationDesc": {
-    "message": "Create a new client organization that will be associated with you as the provider. You will be able to access and manage this organization."
+    "message": "Create a new client team that will be associated with you as the provider. You will be able to access and manage this team."
   },
   "addExistingOrganization": {
-    "message": "Add Existing Organization"
+    "message": "Add Existing Team"
   },
   "myProvider": {
     "message": "My Provider"
@@ -4410,10 +4410,10 @@
     }
   },
   "organizationJoinedProvider": {
-    "message": "Organization was successfully added to the provider"
+    "message": "Team was successfully added to the provider"
   },
   "accessingUsingProvider": {
-    "message": "Accessing organization using provider $PROVIDER$",
+    "message": "Accessing team using provider $PROVIDER$",
     "placeholders": {
       "provider": {
         "content": "$1",
@@ -4428,7 +4428,7 @@
     "message": "Provider updated"
   },
   "yourProviderIs": {
-    "message": "Your provider is $PROVIDER$. They have administrative and billing privileges for your organization.",
+    "message": "Your provider is $PROVIDER$. They have administrative and billing privileges for your team.",
     "placeholders": {
       "provider": {
         "content": "$1",
@@ -4437,7 +4437,7 @@
     }
   },
   "detachedOrganization": {
-    "message": "The organization $ORGANIZATION$ has been detached from your provider.",
+    "message": "The team $ORGANIZATION$ has been detached from your provider.",
     "placeholders": {
       "organization": {
         "content": "$1",
@@ -4446,7 +4446,7 @@
     }
   },
   "detachOrganizationConfirmation": {
-    "message": "Are you sure you want to detach this organization? The organization will continue to exist but will no longer be managed by the provider."
+    "message": "Are you sure you want to detach this team? The team will continue to exist but will no longer be managed by the provider."
   },
   "add": {
     "message": "Add"
@@ -4458,16 +4458,16 @@
     "message": "Update Master Password"
   },
   "updateMasterPasswordWarning": {
-    "message": "Your Master Password was recently changed by an administrator in your organization. In order to access the vault, you must update your Master Password now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
+    "message": "Your Master Password was recently changed by an administrator in your team. In order to access the vault, you must update your Master Password now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
   },
   "masterPasswordInvalidWarning": {
-    "message": "Your Master Password does not meet the policy requirements of this organization. In order to join the organization, you must update your Master Password now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
+    "message": "Your Master Password does not meet the policy requirements of this team. In order to join the team, you must update your Master Password now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
   },
   "maximumVaultTimeout": {
-    "message": "Vault Timeout"
+    "message": "Vault Timeout"  
   },
   "maximumVaultTimeoutDesc": {
-    "message": "Configure a maximum vault timeout for all users."
+    "message": "Configure a maximum vault timeout for all users."  
   },
   "maximumVaultTimeoutLabel": {
     "message": "Maximum Vault Timeout"
@@ -4482,7 +4482,7 @@
     "message": "Minutes"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Your organization policies are affecting your vault timeout. Maximum allowed Vault Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
+    "message": "Your team policies are affecting your vault timeout. Maximum allowed Vault Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -4498,7 +4498,7 @@
     "message": "Custom Vault Timeout"
   },
   "vaultTimeoutToLarge": {
-    "message": "Your vault timeout exceeds the restriction set by your organization."
+    "message": "Your vault timeout exceeds the restriction set by your team."
   },
   "vaultCustomTimeoutMinimum": {
     "message": "Minimum custom timeout is 1 minute."
@@ -4516,7 +4516,7 @@
     "message": "Vault Export Disabled"
   },
   "personalVaultExportPolicyInEffect": {
-    "message": "One or more organization policies prevents you from exporting your personal vault."
+    "message": "One or more team policies prevents you from exporting your personal vault."
   },
   "selectType": {
     "message": "Select SSO Type"
@@ -4633,16 +4633,16 @@
     "message": "Single Sign-On configuration was saved."
   },
   "sponsoredFamilies": {
-    "message": "Free Bitwarden Families"
+    "message": "Free Bravura Safe Families"
   },
   "sponsoredFamiliesEligible": {
-    "message": "You and your family are eligible for Free Bitwarden Families. Redeem with your personal email to keep your data secure even when you are not at work."
+    "message": "You and your family are eligible for Free Bravura Safe Families. Redeem with your personal email to keep your data secure even when you are not at work."
   },
   "sponsoredFamiliesEligibleCard": {
-    "message": "Redeem your Free Bitwarden for Families plan today to keep your data secure even when you are not at work."
+    "message": "Redeem your Free Bravura Safe for Families plan today to keep your data secure even when you are not at work."
   },
   "sponsoredFamiliesInclude": {
-    "message": "The Bitwarden for Families plan include"
+    "message": "The Bravura Safe for Families plan include"
   },
   "sponsoredFamiliesPremiumAccess": {
     "message": "Premium access for up to 6 users"
@@ -4660,22 +4660,22 @@
     "message": "Redeem"
   },
   "sponsoredFamiliesSelectOffer": {
-    "message": "Select the organization you would like sponsored"
+    "message": "Select the team you would like sponsored"
   },
   "familiesSponsoringOrgSelect": {
     "message": "Which Free Families offer would you like to redeem?"
   },
   "sponsoredFamiliesEmail": {
-    "message": "Enter your personal email to redeem Bitwarden Families"
+    "message": "Enter your personal email to redeem Bravura Safe Families"
   },
   "sponsoredFamiliesLeaveCopy": {
-    "message": "If you remove an offer or are removed from the sponsoring organization, your Families sponsorship will expire at the next renewal date."
+    "message": "If you remove an offer or are removed from the sponsoring team, your Families sponsorship will expire at the next renewal date."
   },
   "acceptBitwardenFamiliesHelp": {
-    "message": "Accept offer for an existing organization or create a new Families organization."
+    "message": "Accept offer for an existing team or create a new Families team."
   },
   "setupSponsoredFamiliesLoginDesc": {
-    "message": "You've been offered a free Bitwarden Families Plan Organization. To continue, you need to log in to the account that received the offer."
+    "message": "You've been offered a free Bravura Safe Families Plan Team. To continue, you need to log in to the account that received the offer."
   },
   "sponsoredFamiliesAcceptFailed": {
     "message": "Unable to accept offer. Please resend the offer email from your enterprise account and try again."
@@ -4685,15 +4685,15 @@
     "placeholders": {
       "description": {
         "content": "$1",
-        "example": "You must have at least one existing Families Organization."
+        "example": "You must have at least one existing Families Team."
       }
     }
   },
   "sponsoredFamiliesOffer": {
-    "message": "Accept Free Bitwarden Families"
+    "message": "Accept Free Bravura Safe Families"
   },
   "sponsoredFamiliesOfferRedeemed": {
-    "message": "Free Bitwarden Families offer successfully redeemed"
+    "message": "Free Bravura Safe Families offer successfully redeemed"
   },
   "redeemed": {
     "message": "Redeemed"
@@ -4777,7 +4777,7 @@
     "message": "Invalid verification code"
   },
   "convertOrganizationEncryptionDesc": {
-    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this organization.",
+    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this team.",
     "placeholders": {
       "organization": {
         "content": "$1",
@@ -4786,7 +4786,7 @@
     }
   },
   "leaveOrganization": {
-    "message": "Leave Organization"
+    "message": "Leave Team"
   },
   "removeMasterPassword": {
     "message": "Remove Master Password"
@@ -4813,7 +4813,7 @@
     "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Enable the SSO Authentication policy to require all members to log in with SSO.'"
   },
   "ssoPolicyHelpKeyConnector": {
-    "message": "SSO Authentication and Single Organization policies are required to set up Key Connector decryption."
+    "message": "SSO Authentication and Single Team policies are required to set up Key Connector decryption."
   },
   "memberDecryptionOption": {
     "message": "Member Decryption Options"
@@ -4825,7 +4825,7 @@
     "message": "Key Connector"
   },
   "memberDecryptionKeyConnectorDesc": {
-    "message": "Connect Login with SSO to your self-hosted decryption key server. Using this option, members won’t need to use their Master Passwords to decrypt vault data. Contact Bitwarden Support for set up assistance."
+    "message": "Connect Login with SSO to your self-hosted decryption key server. Using this option, members won’t need to use their Master Passwords to decrypt vault data. Contact Bravura Safe Support for set up assistance."
   },
   "keyConnectorPolicyRestriction": {
     "message": "\"Login with SSO and Key Connector Decryption\" is enabled. This policy will only apply to Owners and Admins."
@@ -4843,25 +4843,25 @@
     "message": "Disabled Key Connector"
   },
   "keyConnectorWarning": {
-    "message": "Once members begin using Key Connector, your Organization cannot revert to Master Password decryption. Proceed only if you are comfortable deploying and managing a key server."
+    "message": "Once members begin using Key Connector, your Team cannot revert to Master Password decryption. Proceed only if you are comfortable deploying and managing a key server."
   },
   "migratedKeyConnector": {
     "message": "Migrated to Key Connector"
   },
   "paymentSponsored": {
-    "message": "Please provide a payment method to associate with the organization. Don't worry, we won't charge you anything unless you select additional features or your sponsorship expires. "
+    "message": "Please provide a payment method to associate with the team. Don't worry, we won't charge you anything unless you select additional features or your sponsorship expires. "
   },
   "orgCreatedSponsorshipInvalid": {
-    "message": "The sponsorship offer has expired. You may delete the organization you created to avoid a charge at the end of your 7 day trial. Otherwise you may close this prompt to keep the organization and assume billing responsibility."
+    "message": "The sponsorship offer has expired. You may delete the team you created to avoid a charge at the end of your 7 day trial. Otherwise you may close this prompt to keep the team and assume billing responsibility."
   },
   "newFamiliesOrganization": {
-    "message": "New Families Organization"
+    "message": "New Families Team"
   },
   "acceptOffer": {
     "message": "Accept Offer"
   },
   "sponsoringOrg": {
-    "message": "Sponsoring Organization"
+    "message": "Sponsoring Team"
   },
   "keyConnectorTest": {
     "message": "Test"
@@ -4885,10 +4885,10 @@
     "message": "Generate Billing Sync Token"
   },
   "copyPasteBillingSync": {
-    "message": "Copy and paste this token into the Billing Sync settings of your self-hosted organization."
+    "message": "Copy and paste this token into the Billing Sync settings of your self-hosted team."
   },
   "billingSyncCanAccess": {
-    "message": "Your Billing Sync token can access and edit this organization's subscription settings."
+    "message": "Your Billing Sync token can access and edit this team's subscription settings."
   },
   "manageBillingSync": {
     "message": "Manage Billing Sync"
@@ -4912,7 +4912,7 @@
     "message": "Self-Hosting"
   },
   "selfHostingEnterpriseOrganizationSectionCopy": {
-    "message": "To set-up your organization on your own server, you will need to upload your license file. To support Free Families plans and advanced billing capabilities for your self-hosted organization, you will need to set up billing sync."
+    "message": "To set-up your team on your own server, you will need to upload your license file. To support Free Families plans and advanced billing capabilities for your self-hosted team, you will need to set up billing sync."
   },
   "billingSyncApiKeyRotated": {
     "message": "Token rotated."
@@ -4921,10 +4921,10 @@
     "message": "Billing Sync"
   },
   "billingSyncDesc": {
-    "message": "Billing Sync provides Free Families plans for members and advanced billing capabilities by linking your self-hosted Bitwarden to the Bitwarden cloud server."
+    "message": "Billing Sync provides Free Families plans for members and advanced billing capabilities by linking your self-hosted Bravura Safe to the Bravura Safe cloud server."
   },
   "billingSyncKeyDesc": {
-    "message": "A Billing Sync Token from your cloud organization's subscription settings is required to complete this form."
+    "message": "A Billing Sync Token from your cloud team's subscription settings is required to complete this form."
   },
   "billingSyncKey": {
     "message": "Billing Sync Token"
@@ -4990,10 +4990,10 @@
     "message": "Exporting Personal Vault"
   },
   "exportingOrganizationVaultTitle": {
-    "message": "Exporting Organization Vault"
+    "message": "Exporting Team Vault"
   },
   "exportingPersonalVaultDescription": {
-    "message": "Only the personal vault items associated with $EMAIL$ will be exported. Organization vault items will not be included.",
+    "message": "Only the personal vault items associated with $EMAIL$ will be exported. Team vault items will not be included.",
     "placeholders": {
       "email": {
         "content": "$1",
@@ -5002,7 +5002,7 @@
     }
   },
   "exportingOrganizationVaultDescription": {
-    "message": "Only the organization vault associated with $ORGANIZATION$ will be exported. Personal vault items and items from other organizations will not be included.",
+    "message": "Only the team vault associated with $ORGANIZATION$ will be exported. Personal vault items and items from other teams will not be included.",
     "placeholders": {
       "organization": {
         "content": "$1",
@@ -5029,11 +5029,11 @@
     "message": "Back to Reports"
   },
   "organizationPicker": {
-    "message": "Organization picker"
+    "message": "Team picker"
   },
   "currentOrganization": {
-    "message": "Current organization",
-    "description": "This is used by screen readers to indicate the organization that is currently being shown to the user."
+    "message": "Current team",
+    "description": "This is used by screen readers to indicate the team that is currently being shown to the user."
   },
   "accountSettings": {
     "message": "Account Settings"
@@ -5091,11 +5091,11 @@
       "date": {
         "content": "$1",
         "example": "12/31/2020"
-      }
-    }
+  }
+}
   },
   "awaitingSyncSingular": {
-    "message": "Token rotated $DAYS$ day ago. Update the billing sync token in your self-hosted organization settings.",
+    "message": "Token rotated $DAYS$ day ago. Update the billing sync token in your self-hosted team settings.",
     "placeholders": {
       "days": {
         "content": "$1",
@@ -5104,7 +5104,7 @@
     }
   },
   "awaitingSyncPlural": {
-    "message": "Token rotated $DAYS$ days ago. Update the billing sync token in your self-hosted organization settings.",
+    "message": "Token rotated $DAYS$ days ago. Update the billing sync token in your self-hosted team settings.",
     "placeholders": {
       "days": {
         "content": "$1",
@@ -5130,7 +5130,7 @@
   },
   "billingContactProviderForAssistance": {
     "message": "Please reach out to them for further assistance",
-    "description": "This text is displayed if an organization's billing is managed by a Provider. It tells the user to contact the Provider for assistance."
+    "description": "This text is displayed if an team's billing is managed by a Provider. It tells the user to contact the Provider for assistance."
   },
   "forwardedEmail": {
     "message": "Forwarded Email Alias"

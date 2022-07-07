@@ -143,7 +143,7 @@ export class UserSubscriptionComponent implements OnInit {
       window,
       licenseString,
       null,
-      "bitwarden_premium_license.json"
+      "bravura_safe_premium_license.json"
     );
   }
 

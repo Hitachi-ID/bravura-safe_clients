@@ -24,7 +24,7 @@
               <li class="filter-option" [ngClass]="{ active: selectedAll }">
                 <span class="filter-buttons">
                   <button bitButton class="filter-button" appStopClick (click)="selectAll()">
-                    <i class="bwi bwi-fw bwi-filter"></i>{{ "allSends" | i18n }}
+                    <i class="fa fa-fw fa-filter"></i>{{ "allSends" | i18n }}
                   </button>
                 </span>
               </li>
@@ -32,7 +32,7 @@
           </div>
           <div class="filter">
             <div class="filter-heading">
-              <h3>{{ "types" | i18n }}</h3>
+              <h3 class="d-flex">{{ "types" | i18n }}</h3>
             </div>
             <ul class="filter-options">
               <li class="filter-option" [ngClass]="{ active: selectedType === sendType.Text }">
@@ -43,7 +43,7 @@
                     appStopClick
                     (click)="selectType(sendType.Text)"
                   >
-                    <i class="bwi bwi-fw bwi-file-text"></i>{{ "sendTypeText" | i18n }}
+                    <i class="fa fa-fw fa-file-text"></i>{{ "sendTypeText" | i18n }}
                   </button>
                 </span>
               </li>
@@ -55,7 +55,7 @@
                     appStopClick
                     (click)="selectType(sendType.File)"
                   >
-                    <i class="bwi bwi-fw bwi-file"></i>{{ "sendTypeFile" | i18n }}
+                    <i class="fa fa-fw fa-file"></i>{{ "sendTypeFile" | i18n }}
                   </button>
                 </span>
               </li>
@@ -71,7 +71,7 @@
           <small #actionSpinner [appApiAction]="actionPromise">
             <ng-container *ngIf="actionSpinner.loading">
               <i
-                class="bwi bwi-spinner bwi-spin text-muted"
+                class="fa fa-spinner fa-spin text-muted"
                 title="{{ 'loading' | i18n }}"
                 aria-hidden="true"
               ></i>
@@ -86,7 +86,7 @@
             (click)="addSend()"
             [disabled]="disableSend"
           >
-            <i class="bwi bwi-plus bwi-fw" aria-hidden="true"></i>{{ "createSend" | i18n }}
+            <i class="fa fa-plus fa-fw" aria-hidden="true"></i>{{ "createSend" | i18n }}
           </button>
         </div>
       </div>
@@ -96,15 +96,15 @@
           <tr *ngFor="let s of filteredSends">
             <td class="table-list-icon">
               <div class="icon" aria-hidden="true">
-                <i class="bwi bwi-fw bwi-lg bwi-file" *ngIf="s.type == sendType.File"></i>
-                <i class="bwi bwi-fw bwi-lg bwi-file-text" *ngIf="s.type == sendType.Text"></i>
+                <i class="fa fa-fw fa-lg fa-file-o" *ngIf="s.type == sendType.File"></i>
+                <i class="fa fa-fw fa-lg fa-file-text-o" *ngIf="s.type == sendType.Text"></i>
               </div>
             </td>
             <td class="reduced-lh wrap">
               <a href="#" appStopClick appStopProp (click)="editSend(s)">{{ s.name }}</a>
               <ng-container *ngIf="s.disabled">
                 <i
-                  class="bwi bwi-exclamation-triangle"
+                  class="fa fa-warning"
                   appStopProp
                   title="{{ 'disabled' | i18n }}"
                   aria-hidden="true"
@@ -113,7 +113,7 @@
               </ng-container>
               <ng-container *ngIf="s.password">
                 <i
-                  class="bwi bwi-key"
+                  class="fa fa-key"
                   appStopProp
                   title="{{ 'password' | i18n }}"
                   aria-hidden="true"
@@ -122,7 +122,7 @@
               </ng-container>
               <ng-container *ngIf="s.maxAccessCountReached">
                 <i
-                  class="bwi bwi-ban"
+                  class="fa fa-ban"
                   appStopProp
                   title="{{ 'maxAccessCountReached' | i18n }}"
                   aria-hidden="true"
@@ -131,7 +131,7 @@
               </ng-container>
               <ng-container *ngIf="s.expired">
                 <i
-                  class="bwi bwi-clock"
+                  class="fa fa-clock-o"
                   appStopProp
                   title="{{ 'expired' | i18n }}"
                   aria-hidden="true"
@@ -140,7 +140,7 @@
               </ng-container>
               <ng-container *ngIf="s.pendingDelete">
                 <i
-                  class="bwi bwi-trash"
+                  class="fa fa-trash"
                   appStopProp
                   title="{{ 'pendingDeletion' | i18n }}"
                   aria-hidden="true"
@@ -157,20 +157,20 @@
                 type="button"
                 appA11yTitle="{{ 'options' | i18n }}"
               >
-                <i class="bwi bwi-ellipsis-v bwi-lg" aria-hidden="true"></i>
+                <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
               </button>
               <bit-menu #sendOptions>
                 <button bitMenuItem (click)="copy(s)">
-                  <i class="bwi bwi-fw bwi-clone" aria-hidden="true"></i>
+                  <i class="fa fa-fw fa-clone" aria-hidden="true"></i>
                   {{ "copySendLink" | i18n }}
                 </button>
                 <button bitMenuItem (click)="removePassword(s)" *ngIf="s.password && !disableSend">
-                  <i class="bwi bwi-fw bwi-close" aria-hidden="true"></i>
+                  <i class="fa fa-fw fa-close" aria-hidden="true"></i>
                   {{ "removePassword" | i18n }}
                 </button>
                 <button bitMenuItem (click)="delete(s)">
                   <span class="tw-text-danger">
-                    <i class="bwi bwi-fw bwi-trash" aria-hidden="true"></i>
+                    <i class="fa fa-fw fa-trash" aria-hidden="true"></i>
                     {{ "delete" | i18n }}
                   </span>
                 </button>
@@ -182,7 +182,7 @@
       <div class="no-items" *ngIf="filteredSends && !filteredSends.length">
         <ng-container *ngIf="!loaded">
           <i
-            class="bwi bwi-spinner bwi-spin text-muted"
+            class="fa fa-spinner fa-spin text-muted"
             title="{{ 'loading' | i18n }}"
             aria-hidden="true"
           ></i>
@@ -191,10 +191,12 @@
         <ng-container *ngIf="loaded">
           <p>{{ "noSendsInList" | i18n }}</p>
           <button (click)="addSend()" class="btn btn-outline-primary" [disabled]="disableSend">
-            <i class="bwi bwi-plus bwi-fw"></i>{{ "createSend" | i18n }}
+            <i class="fa fa-plus fa-fw"></i>{{ "createSend" | i18n }}
           </button>
         </ng-container>
       </div>
+      <div class="vertical-spacer"></div>
+      <app-footer></app-footer>
     </div>
   </div>
 </div>

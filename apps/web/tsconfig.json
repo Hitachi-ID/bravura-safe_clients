@@ -15,8 +15,7 @@
   },
   "files": [
     "src/app/polyfills.ts",
-    "src/app/main.ts",
-    "../../bitwarden_license/bit-web/src/app/main.ts"
+    "src/app/main.ts"
   ],
   "include": [
     "src/connectors/*.ts",

@@ -161,11 +161,6 @@ export class AppComponent implements OnDestroy, OnInit {
               this.i18nService.t("learnMore"),
               this.i18nService.t("cancel")
             );
-            if (emailVerificationConfirmed) {
-              this.platformUtilsService.launchUri(
-                "https://bitwarden.com/help/create-bitwarden-account/"
-              );
-            }
             break;
           }
           case "showToast":
@@ -201,7 +196,7 @@ export class AppComponent implements OnDestroy, OnInit {
       new MasterPasswordPolicy(),
       new PasswordGeneratorPolicy(),
       new SingleOrgPolicy(),
-      new RequireSsoPolicy(),
+//      new RequireSsoPolicy(),
       new PersonalOwnershipPolicy(),
       new DisableSendPolicy(),
       new SendOptionsPolicy(),

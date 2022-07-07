@@ -1,7 +1,6 @@
-@import "../../../../libs/angular/src/scss/webfonts.css";
+@import "../../jslib/angular/src/scss/webfonts.css";
 @import "./variables";
-@import "../../../../libs/angular/src/scss/bwicons/styles/style.scss";
-@import "../../../../libs/angular/src/scss/icons.scss";
+@import "./mixins";
 @import "@angular/cdk/overlay-prebuilt.css";
 
 //@import "~bootstrap/scss/bootstrap";
@@ -44,6 +43,7 @@
 @import "~bootstrap/scss/_print";
 
 @import "~ngx-toastr/toastr";
+@import "~font-awesome/scss/font-awesome.scss";
 @import "~#sweetalert2";
 
 @import "./base";
@@ -58,3 +58,5 @@
 @import "./tables";
 @import "./toasts";
 @import "./vault-filters";
+
+@import "../../jslib/angular/src/scss/icons.scss"; // Needs to be after font-awesome

@@ -26,6 +26,90 @@
   }
 }
 
+
+app-vault div.vault-filters div.card-body,
+app-org-vault div.vault-filters div.card-body,
+app-send div.vault-filters div.card-body {
+  padding: 0 0 10px 0;
+  ul.card-ul {
+    margin-left: 0;
+  }
+}
+
+/** fix app-vault-bulk-actions alignment issue **/
+app-vault,
+app-org-vault {
+  app-vault-bulk-actions {
+    display: flex;
+    align-items: center;
+  }
+}
+
+app-vault {
+  .sidebar-panel {
+    .organizations {
+      .dropdown-toggle,
+      .dropdown-menu {
+        width: 100%;
+      }
+      .dropdown-menu {
+        overflow: auto;
+        @include themify($themes) {
+          background-color: themed("orgDropdownBackground");
+          box-shadow: 0 3px 10px themed("dropdownShadow");
+        }
+        app-organizations {
+          p {
+            margin: 5px 10px 10px;
+          }
+          p.text-muted {
+            i.fa.fa-spinner.fa-spin,
+            span.sr-only {
+              margin-left: 10px;
+            }
+          }
+          ul.fa-ul.card-ul {
+            margin-left: 0;
+            li.d-flex {
+              cursor: pointer;
+              &:hover {
+                @include themify($themes) {
+                  background-color: themed("filterPanelHoverBackgroundColor");
+                }
+              }
+              a.text-body {
+                margin: 5px 10px;
+                text-decoration: none;
+              }
+              i.fa-li {
+                position: relative;
+                left: 0;
+              }
+            }
+          }
+        }
+        a.btn.btn-block {
+          margin: 5px 10px;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+// add scrollable-menu to solve the organizations dropdown menu overlap issue
+@include media-breakpoint-up(md) {
+  .scrollable-menu {
+    max-height: calc(100vh - 200px);
+  } 
+}
+
+@include media-breakpoint-down(sm) {
+  .scrollable-menu {
+    max-height: calc(100vh - 240px);
+  }
+}
+
 app-generator {
   #lengthRange {
     width: 100%;
@@ -85,6 +169,38 @@ app-user-billing {
 app-sponsored-families {
   .inset-list {
     padding-left: 1.5rem;
+  }
+}
+
+.container.page-content {
+  padding-bottom: 20px;
+}
+
+.col-9 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  > * {
+    flex: 0 0 auto;
+  }
+
+  > .vertical-spacer {
+    flex: 1 1 auto;
+  }
+}
+
+.page-content > .row > .col-3:first-child {
+  height: calc(100vh - $navbar-height - $navbar-bottom-margin);
+  padding-top: $navbar-bottom-margin;
+  position: sticky;
+  top: $navbar-height;
+}
+
+app-organization-layout {
+  .page-content > .row > .col-3:first-child {
+    height: calc(100vh - $navbar-height - $navbar-bottom-margin - $org-header-height);
+    top: $navbar-height + $org-header-height;
   }
 }
 
@@ -174,6 +290,20 @@ app-sponsored-families {
     p {
       font-size: 1.5rem;
       margin: 10px 0 50px 0;
+    }
+  }
+}
+
+app-footer {
+  font-size: 0.9rem;
+  div.footer {
+    div.row {
+      div.col:first-child {
+        flex-basis: 70%;
+      }
+      div.col.text-right {
+        flex-basis: 30%;
+      }
     }
   }
 }

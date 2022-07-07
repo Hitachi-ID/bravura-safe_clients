@@ -92,11 +92,6 @@ export class ChangePasswordComponent extends BaseChangePasswordComponent {
           this.i18nService.t("close"),
           "warning"
         );
-        if (learnMore) {
-          this.platformUtilsService.launchUri(
-            "https://bitwarden.com/help/attachments/#add-storage-space"
-          );
-        }
         this.rotateEncKey = false;
         return;
       }

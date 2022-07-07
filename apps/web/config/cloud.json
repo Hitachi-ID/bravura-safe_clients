@@ -1,7 +1,7 @@
 {
   "urls": {
-    "icons": "https://icons.bitwarden.net",
-    "notifications": "https://notifications.bitwarden.com"
+    "icons": "https://icons.hitachi-id.net",
+    "notifications": "https://notifications.hitachi-id.com"
   },
   "stripeKey": "pk_live_bpN0P37nMxrMQkcaHXtAybJk",
   "braintreeKey": "production_qfbsv8kc_njj2zjtyngtjmbjd",
@@ -10,8 +10,8 @@
     "buttonAction": "https://www.paypal.com/cgi-bin/webscr"
   },
   "dev": {
-    "proxyApi": "https://api.bitwarden.com",
-    "proxyIdentity": "https://identity.bitwarden.com",
-    "proxyEvents": "https://events.bitwarden.com"
+    "proxyApi": "https://api.hitachi-id.com",
+    "proxyIdentity": "https://identity.hitachi-id.com",
+    "proxyEvents": "https://events.hitachi-id.com"
   }
 }

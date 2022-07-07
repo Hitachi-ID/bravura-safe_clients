@@ -38,7 +38,7 @@ export class DownloadLicenseComponent {
         window,
         licenseString,
         null,
-        "bitwarden_organization_license.json"
+        "bravura_safe_organization_license.json"
       );
       this.onDownloaded.emit();
     } catch (e) {

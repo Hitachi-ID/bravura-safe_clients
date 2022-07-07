@@ -19,7 +19,7 @@
       <div class="row">
         <div class="col-7">
           <img
-            alt="Bitwarden"
+            alt="Bravura Safe"
             class="logo mb-2"
             src="../../images/register-layout/logo-horizontal-white.svg"
           />
@@ -107,7 +107,7 @@
                 <app-callout
                   title="{{ 'createOrganizationStep1' | i18n }}"
                   type="info"
-                  icon="bwi bwi-thumb-tack"
+                  icon="fa-thumb-tack"
                   *ngIf="showCreateOrgMessage"
                 >
                   {{ "createOrganizationCreatePersonalAccount" | i18n }}
@@ -170,11 +170,11 @@
                         (click)="togglePassword(false)"
                       >
                         <i
-                          class="bwi bwi-lg"
+                          class="fa fa-lg"
                           aria-hidden="true"
                           [ngClass]="{
-                            'bwi-eye': !showPassword,
-                            'bwi-eye-slash': showPassword
+                            'fa-eye': !showPassword,
+                            'fa-eye-slash': showPassword
                           }"
                         ></i>
                       </button>
@@ -202,9 +202,9 @@
                       (click)="togglePassword(true)"
                     >
                       <i
-                        class="bwi bwi-lg"
+                        class="fa fa-lg"
                         aria-hidden="true"
-                        [ngClass]="{ 'bwi-eye': !showPassword, 'bwi-eye-slash': showPassword }"
+                        [ngClass]="{ 'fa-eye': !showPassword, 'fa-eye-slash': showPassword }"
                       ></i>
                     </button>
                   </div>
@@ -233,14 +233,7 @@
                       name="AcceptPolicies"
                     />
                     <label class="form-check-label small text-muted" for="acceptPolicies">
-                      {{ "acceptPolicies" | i18n }}<br />
-                      <a href="https://bitwarden.com/terms/" target="_blank" rel="noopener">{{
-                        "termsOfService" | i18n
-                      }}</a
-                      >,
-                      <a href="https://bitwarden.com/privacy/" target="_blank" rel="noopener">{{
-                        "privacyPolicy" | i18n
-                      }}</a>
+                      {{ "acceptPolicies" | i18n }}
                     </label>
                   </div>
                 </div>
@@ -253,7 +246,7 @@
                   >
                     <span>{{ "submit" | i18n }}</span>
                     <i
-                      class="bwi bwi-spinner bwi-spin"
+                      class="fa fa-spinner fa-spin"
                       title="{{ 'loading' | i18n }}"
                       aria-hidden="true"
                     ></i>

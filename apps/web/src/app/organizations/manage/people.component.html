@@ -63,11 +63,11 @@
         aria-expanded="false"
         appA11yTitle="{{ 'options' | i18n }}"
       >
-        <i class="bwi bwi-cog" aria-hidden="true"></i>
+        <i class="fa fa-cog" aria-hidden="true"></i>
       </button>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bulkActionsButton">
         <button class="dropdown-item" appStopClick (click)="bulkReinvite()">
-          <i class="bwi bwi-fw bwi-envelope" aria-hidden="true"></i>
+          <i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i>
           {{ "reinviteSelected" | i18n }}
         </button>
         <button
@@ -76,41 +76,41 @@
           (click)="bulkConfirm()"
           *ngIf="showBulkConfirmUsers"
         >
-          <i class="bwi bwi-fw bwi-check" aria-hidden="true"></i>
+          <i class="fa fa-fw fa-check" aria-hidden="true"></i>
           {{ "confirmSelected" | i18n }}
         </button>
         <button class="dropdown-item" appStopClick (click)="bulkActivate()">
-          <i class="bwi bwi-fw bwi-plus-circle" aria-hidden="true"></i>
+          <i class="fa fa-fw fa-plus-circle" aria-hidden="true"></i>
           {{ "activate" | i18n }}
         </button>
         <button class="dropdown-item" appStopClick (click)="bulkDeactivate()">
-          <i class="bwi bwi-fw bwi-minus-circle" aria-hidden="true"></i>
+          <i class="fa fa-fw fa-minus-circle" aria-hidden="true"></i>
           {{ "deactivate" | i18n }}
         </button>
         <button class="dropdown-item text-danger" appStopClick (click)="bulkRemove()">
-          <i class="bwi bwi-fw bwi-close" aria-hidden="true"></i>
+          <i class="fa fa-fw fa-remove" aria-hidden="true"></i>
           {{ "remove" | i18n }}
         </button>
         <div class="dropdown-divider"></div>
         <button class="dropdown-item" appStopClick (click)="selectAll(true)">
-          <i class="bwi bwi-fw bwi-check-square" aria-hidden="true"></i>
+          <i class="fa fa-fw fa-check-square-o" aria-hidden="true"></i>
           {{ "selectAll" | i18n }}
         </button>
         <button class="dropdown-item" appStopClick (click)="selectAll(false)">
-          <i class="bwi bwi-fw bwi-minus-square" aria-hidden="true"></i>
+          <i class="fa fa-fw fa-minus-square-o" aria-hidden="true"></i>
           {{ "unselectAll" | i18n }}
         </button>
       </div>
     </div>
     <button type="button" class="btn btn-sm btn-outline-primary ml-3" (click)="invite()">
-      <i class="bwi bwi-plus bwi-fw" aria-hidden="true"></i>
+      <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
       {{ "inviteUser" | i18n }}
     </button>
   </div>
 </div>
 <ng-container *ngIf="loading">
   <i
-    class="bwi bwi-spinner bwi-spin text-muted"
+    class="fa fa-spinner fa-spin text-muted"
     title="{{ 'loading' | i18n }}"
     aria-hidden="true"
   ></i>
@@ -127,7 +127,7 @@
     <app-callout
       type="info"
       title="{{ 'confirmUsers' | i18n }}"
-      icon="bwi bwi-check-circle"
+      icon="fa-check-circle"
       *ngIf="showConfirmUsers"
     >
       {{ "usersNeedConfirmed" | i18n }}
@@ -140,7 +140,7 @@
       (scrolled)="loadMore()"
     >
       <tbody>
-        <tr *ngFor="let u of searchedUsers">
+        <tr *ngFor="let u of searchedUsers" [ngClass]="{ 'table-active': u.checked }">
           <td (click)="checkUser(u)" class="table-list-checkbox">
             <input type="checkbox" [(ngModel)]="u.checked" appStopProp />
           </td>
@@ -170,7 +170,7 @@
           <td>
             <ng-container *ngIf="u.twoFactorEnabled">
               <i
-                class="bwi bwi-lock"
+                class="fa fa-lock"
                 title="{{ 'userUsingTwoStep' | i18n }}"
                 aria-hidden="true"
               ></i>
@@ -178,7 +178,7 @@
             </ng-container>
             <ng-container *ngIf="showEnrolledStatus(u)">
               <i
-                class="bwi bwi-key"
+                class="fa fa-key"
                 title="{{ 'enrolledPasswordReset' | i18n }}"
                 aria-hidden="true"
               ></i>
@@ -193,7 +193,7 @@
             <span *ngIf="u.type === userType.Custom">{{ "custom" | i18n }}</span>
           </td>
           <td class="table-list-options">
-            <div class="dropdown" appListDropdown>
+            <div appListDropdown>
               <button
                 class="btn btn-outline-secondary dropdown-toggle"
                 type="button"
@@ -202,7 +202,7 @@
                 aria-expanded="false"
                 appA11yTitle="{{ 'options' | i18n }}"
               >
-                <i class="bwi bwi-cog bwi-lg" aria-hidden="true"></i>
+                <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
               </button>
               <div class="dropdown-menu dropdown-menu-right">
                 <a
@@ -212,7 +212,7 @@
                   (click)="reinvite(u)"
                   *ngIf="u.status === userStatusType.Invited"
                 >
-                  <i class="bwi bwi-fw bwi-envelope" aria-hidden="true"></i>
+                  <i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i>
                   {{ "resendInvitation" | i18n }}
                 </a>
                 <a
@@ -222,7 +222,7 @@
                   (click)="confirm(u)"
                   *ngIf="u.status === userStatusType.Accepted"
                 >
-                  <i class="bwi bwi-fw bwi-check" aria-hidden="true"></i>
+                  <i class="fa fa-fw fa-check" aria-hidden="true"></i>
                   {{ "confirm" | i18n }}
                 </a>
                 <a
@@ -232,7 +232,7 @@
                   (click)="groups(u)"
                   *ngIf="accessGroups"
                 >
-                  <i class="bwi bwi-fw bwi-sitemap" aria-hidden="true"></i>
+                  <i class="fa fa-fw fa-sitemap" aria-hidden="true"></i>
                   {{ "groups" | i18n }}
                 </a>
                 <a
@@ -242,7 +242,7 @@
                   (click)="events(u)"
                   *ngIf="accessEvents && u.status === userStatusType.Confirmed"
                 >
-                  <i class="bwi bwi-fw bwi-file-text" aria-hidden="true"></i>
+                  <i class="fa fa-fw fa-file-text-o" aria-hidden="true"></i>
                   {{ "eventLogs" | i18n }}
                 </a>
                 <a
@@ -252,7 +252,7 @@
                   (click)="resetPassword(u)"
                   *ngIf="allowResetPassword(u)"
                 >
-                  <i class="bwi bwi-fw bwi-key" aria-hidden="true"></i>
+                  <i class="fa fa-fw fa-key" aria-hidden="true"></i>
                   {{ "resetPassword" | i18n }}
                 </a>
                 <a
@@ -262,7 +262,7 @@
                   (click)="activate(u)"
                   *ngIf="u.status === userStatusType.Deactivated"
                 >
-                  <i class="bwi bwi-fw bwi-plus-circle" aria-hidden="true"></i>
+                  <i class="fa fa-fw fa-plus-circle" aria-hidden="true"></i>
                   {{ "activate" | i18n }}
                 </a>
                 <a
@@ -272,11 +272,11 @@
                   (click)="deactivate(u)"
                   *ngIf="u.status !== userStatusType.Deactivated"
                 >
-                  <i class="bwi bwi-fw bwi-minus-circle" aria-hidden="true"></i>
+                  <i class="fa fa-fw fa-minus-circle" aria-hidden="true"></i>
                   {{ "deactivate" | i18n }}
                 </a>
                 <a class="dropdown-item text-danger" href="#" appStopClick (click)="remove(u)">
-                  <i class="bwi bwi-fw bwi-close" aria-hidden="true"></i>
+                  <i class="fa fa-fw fa-remove" aria-hidden="true"></i>
                   {{ "remove" | i18n }}
                 </a>
               </div>

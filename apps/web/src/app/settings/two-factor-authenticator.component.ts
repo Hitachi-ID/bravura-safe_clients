@@ -83,11 +83,11 @@ export class TwoFactorAuthenticatorComponent
       new (window as any).QRious({
         element: document.getElementById("qr"),
         value:
-          "otpauth://totp/Bitwarden:" +
+          "otpauth://totp/Bravura Safe:" +
           encodeURIComponent(email) +
           "?secret=" +
           encodeURIComponent(this.key) +
-          "&issuer=Bitwarden",
+          "&issuer=Hitachi+ID",
         size: 160,
       });
     }, 100);
