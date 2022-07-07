@@ -39,7 +39,7 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
       return this.baseUrl + "/notifications";
     }
 
-    return "https://notifications.bitwarden.com";
+    return "https://hitachi-id.safe.hitachi-id.net/notifications";
   }
 
   getWebVaultUrl() {
@@ -50,12 +50,12 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
     if (this.baseUrl) {
       return this.baseUrl;
     }
-    return "https://vault.bitwarden.com";
+    return "https://hitachi-id.com";
   }
 
   getSendUrl() {
-    return this.getWebVaultUrl() === "https://vault.bitwarden.com"
-      ? "https://send.bitwarden.com/#"
+    return this.getWebVaultUrl() === "https://hitachi-id.com"
+      ? "https://share.hitachi-id.com/#"
       : this.getWebVaultUrl() + "/#/send/";
   }
 
@@ -68,7 +68,7 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
       return this.baseUrl + "/icons";
     }
 
-    return "https://icons.bitwarden.net";
+    return "https://icons.hitachi-id.net";
   }
 
   getApiUrl() {
@@ -80,7 +80,7 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
       return this.baseUrl + "/api";
     }
 
-    return "https://api.bitwarden.com";
+    return "https://hitachi-id.safe.hitachi-id.net/api";
   }
 
   getIdentityUrl() {
@@ -92,7 +92,7 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
       return this.baseUrl + "/identity";
     }
 
-    return "https://identity.bitwarden.com";
+    return "https://hitachi-id.safe.hitachi-id.net/identity";
   }
 
   getEventsUrl() {
@@ -104,7 +104,7 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
       return this.baseUrl + "/events";
     }
 
-    return "https://events.bitwarden.com";
+    return "https://hitachi-id.safe.hitachi-id.net/events";
   }
 
   getKeyConnectorUrl() {

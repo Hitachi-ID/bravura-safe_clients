@@ -195,7 +195,7 @@ export class AttachmentsComponent implements OnInit {
         this.i18nService.t("cancel")
       );
       if (confirmed) {
-        this.platformUtilsService.launchUri("https://vault.bitwarden.com/#/?premium=purchase");
+        this.platformUtilsService.launchUri("https://safe.hitachi-id.com/#/?premium=purchase");
       }
     } else if (!this.hasUpdatedKey) {
       const confirmed = await this.platformUtilsService.showDialog(
@@ -207,7 +207,7 @@ export class AttachmentsComponent implements OnInit {
       );
       if (confirmed) {
         this.platformUtilsService.launchUri(
-          "https://bitwarden.com/help/account-encryption-key/#rotate-your-encryption-key"
+          "https://hitachi-id.com/help/account-encryption-key/#rotate-your-encryption-key"
         );
       }
     }

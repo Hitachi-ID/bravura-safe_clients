@@ -23,7 +23,7 @@ export class UpdateCommand {
     const currentVersion = await this.platformUtilsService.getApplicationVersion();
 
     const response = await fetch.default(
-      "https://api.github.com/repos/bitwarden/" + this.repoName + "/releases/latest"
+      "https://api.github.com/repos/hitachi-id/" + this.repoName + "/releases/latest"
     );
     if (response.status === 200) {
       const responseJson = await response.json();
@@ -72,7 +72,7 @@ export class UpdateCommand {
 
       res.title = "A new version is available: " + tagName;
       if (downloadUrl == null) {
-        downloadUrl = "https://github.com/bitwarden/" + this.repoName + "/releases";
+        downloadUrl = "https://github.com/hitachi-id/" + this.repoName + "/releases";
       } else {
         res.raw = downloadUrl;
       }

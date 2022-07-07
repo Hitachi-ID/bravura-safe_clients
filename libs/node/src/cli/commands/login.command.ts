@@ -430,7 +430,7 @@ export class LoginCommand {
     const badCaptcha = Response.badRequest(
       "Your authentication request has been flagged and will require user interaction to proceed.\n" +
         "Please use your API key to validate this request and ensure BW_CLIENTSECRET is correct, if set.\n" +
-        "(https://bitwarden.com/help/cli-auth-challenges)"
+        "(https://<instance>.safe.hitachi-id.net/help/cli-auth-challenges)"
     );
 
     try {
@@ -548,8 +548,8 @@ export class LoginCommand {
         if (code != null && receivedState != null && this.checkState(receivedState, state)) {
           res.writeHead(200);
           res.end(
-            "<html><head><title>Success | Bitwarden CLI</title></head><body>" +
-              "<h1>Successfully authenticated with the Bitwarden CLI</h1>" +
+            "<html><head><title>Success | Bravura Safe CLI</title></head><body>" +
+              "<h1>Successfully authenticated with the Bravura Safe CLI</h1>" +
               "<p>You may now close this tab and return to the terminal.</p>" +
               "</body></html>"
           );
@@ -562,8 +562,8 @@ export class LoginCommand {
         } else {
           res.writeHead(400);
           res.end(
-            "<html><head><title>Failed | Bitwarden CLI</title></head><body>" +
-              "<h1>Something went wrong logging into the Bitwarden CLI</h1>" +
+            "<html><head><title>Failed | Bravura Safe CLI</title></head><body>" +
+              "<h1>Something went wrong logging into the Bravura Safe CLI</h1>" +
               "<p>You may now close this tab and return to the terminal.</p>" +
               "</body></html>"
           );

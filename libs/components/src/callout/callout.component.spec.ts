@@ -33,7 +33,7 @@ describe("Callout", () => {
       component.type = "success";
       fixture.detectChanges();
       expect(component.title).toBeUndefined();
-      expect(component.icon).toBe("bwi-check");
+      expect(component.icon).toBe("fa-check");
       expect(component.headerClass).toBe("!tw-text-success");
     });
 
@@ -41,7 +41,7 @@ describe("Callout", () => {
       component.type = "info";
       fixture.detectChanges();
       expect(component.title).toBeUndefined();
-      expect(component.icon).toBe("bwi-info-circle");
+      expect(component.icon).toBe("fa-info-circle");
       expect(component.headerClass).toBe("!tw-text-info");
     });
 
@@ -49,7 +49,7 @@ describe("Callout", () => {
       component.type = "warning";
       fixture.detectChanges();
       expect(component.title).toBe("Warning");
-      expect(component.icon).toBe("bwi-exclamation-triangle");
+      expect(component.icon).toBe("fa-warning");
       expect(component.headerClass).toBe("!tw-text-warning");
     });
 
@@ -57,7 +57,7 @@ describe("Callout", () => {
       component.type = "danger";
       fixture.detectChanges();
       expect(component.title).toBe("Error");
-      expect(component.icon).toBe("bwi-error");
+      expect(component.icon).toBe("fa-bolt");
       expect(component.headerClass).toBe("!tw-text-danger");
     });
   });
