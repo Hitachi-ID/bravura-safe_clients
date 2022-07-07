@@ -98,7 +98,7 @@
     "artifactName": "${productName}-${version}-${arch}.${ext}",
     "backgroundColor": "#175DDC",
     "applicationId": "bravurasafedesktop",
-    "identityName": "HitachiIDSystemsInccom.hitachiid.safedesktop",
+    "identityName": "HitachiIDSystemsInc.desktop",
     "publisher": "CN=14D52771-DE3C-4886-B8BF-825BA7690418",
     "publisherDisplayName": "Hitachi ID Systems, Inc",
     "languages": ["en-US"]
