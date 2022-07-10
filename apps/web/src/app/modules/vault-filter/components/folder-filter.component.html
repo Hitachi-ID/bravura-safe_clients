@@ -8,11 +8,11 @@
       title="{{ 'toggleCollapse' | i18n }}"
     >
       <i
-        class="bwi bwi-fw"
+        class="fa fa-fw mr-0"
         aria-hidden="true"
         [ngClass]="{
-          'bwi-angle-right': isCollapsed(foldersGrouping),
-          'bwi-angle-down': !isCollapsed(foldersGrouping)
+          'fa-caret-right': isCollapsed(foldersGrouping),
+          'fa-caret-down': !isCollapsed(foldersGrouping)
         }"
       ></i>
     </button>
@@ -22,10 +22,10 @@
       (click)="addFolder()"
       appA11yTitle="{{ 'addFolder' | i18n }}"
     >
-      <i class="bwi bwi-plus bwi-fw" aria-hidden="true"></i>
+      <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
     </button>
   </div>
-  <ul id="folder-filters" *ngIf="!isCollapsed(foldersGrouping)" class="filter-options">
+  <ul id="folder-filters" *ngIf="!isCollapsed(foldersGrouping)" class="fa-ul card-ul ng-star-inserted">
     <ng-template #recursiveFolders let-folders>
       <li
         *ngFor="let f of folders"
@@ -44,16 +44,16 @@
             class="toggle-button"
           >
             <i
-              class="bwi bwi-fw"
+              class="fa fa-fw"
               [ngClass]="{
-                'bwi-angle-right': isCollapsed(f.node),
-                'bwi-angle-down': !isCollapsed(f.node)
+                'fa-caret-right': isCollapsed(f.node),
+                'fa-caret-down': !isCollapsed(f.node)
               }"
               aria-hidden="true"
             ></i>
           </button>
           <button class="filter-button" (click)="applyFilter(f.node)">
-            <i *ngIf="f.children.length === 0" class="bwi bwi-fw bwi-folder" aria-hidden="true"></i
+            <i *ngIf="f.children.length === 0" class="fa fa-folder-o" aria-hidden="true"></i
             >&nbsp;{{ f.node.name }}
           </button>
           <button
@@ -62,7 +62,7 @@
             appA11yTitle="{{ 'editFolder' | i18n }}"
             *ngIf="f.node.id"
           >
-            <i class="bwi bwi-pencil bwi-fw" aria-hidden="true"></i>
+            <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
           </button>
         </span>
         <ul

@@ -428,16 +428,16 @@
     "message": "Meu Cofre"
   },
   "allVaults": {
-    "message": "All Vaults"
+    "message": "All Safes"
   },
   "vault": {
     "message": "Cofre"
   },
   "vaults": {
-    "message": "Vaults"
+    "message": "Safes"
   },
   "vaultItems": {
-    "message": "Vault Items"
+    "message": "Safe Items"
   },
   "moveSelectedToOrg": {
     "message": "Mover Selecionados para a organização"

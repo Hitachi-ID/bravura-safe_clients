@@ -1,9 +1,9 @@
 <ng-container *ngIf="show">
-  <ul class="filter-options">
+  <ul class="fa-ul card-ul">
     <li class="filter-option" [ngClass]="{ active: activeFilter.status === 'all' }">
       <span class="filter-buttons">
         <button class="filter-button" (click)="applyFilter('all')">
-          <i class="bwi bwi-fw bwi-filter" aria-hidden="true"></i>&nbsp;{{ "allItems" | i18n }}
+          <i class="fa fa-li fa-fw fa-th" aria-hidden="true"></i>&nbsp;{{ "allItems" | i18n }}
         </button>
       </span>
     </li>
@@ -14,7 +14,7 @@
     >
       <span class="filter-buttons">
         <button class="filter-button" (click)="applyFilter('favorites')">
-          <i class="bwi bwi-fw bwi-star" aria-hidden="true"></i>&nbsp;{{ "favorites" | i18n }}
+          <i class="fa fa-li fa-fw fa-star" aria-hidden="true"></i>&nbsp;{{ "favorites" | i18n }}
         </button>
       </span>
     </li>
@@ -25,7 +25,7 @@
     >
       <span class="filter-buttons">
         <button class="filter-button" (click)="applyFilter('trash')">
-          <i class="bwi bwi-fw bwi-trash" aria-hidden="true"></i>&nbsp;{{ "trash" | i18n }}
+          <i class="fa fa-li fa-fw fa-trash-o" aria-hidden="true"></i>&nbsp;{{ "trash" | i18n }}
         </button>
       </span>
     </li>

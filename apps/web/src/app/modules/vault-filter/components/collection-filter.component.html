@@ -8,17 +8,17 @@
       class="toggle-button"
     >
       <i
-        class="bwi bwi-fw"
+        class="fa fa-fw mr-0"
         [ngClass]="{
-          'bwi-angle-right': isCollapsed(collectionsGrouping),
-          'bwi-angle-down': !isCollapsed(collectionsGrouping)
+          'fa-caret-right': isCollapsed(collectionsGrouping),
+          'fa-caret-down': !isCollapsed(collectionsGrouping)
         }"
         aria-hidden="true"
       ></i>
     </button>
     <h3 class="filter-title">&nbsp;{{ collectionsGrouping.name | i18n }}</h3>
   </div>
-  <ul id="collection-filters" *ngIf="!isCollapsed(collectionsGrouping)" class="filter-options">
+  <ul id="collection-filters" *ngIf="!isCollapsed(collectionsGrouping)" class="fa-ul card-ul ng-star-inserted">
     <ng-template #recursiveCollections let-collections>
       <li
         *ngFor="let c of collections"
@@ -37,10 +37,10 @@
             [attr.aria-controls]="c.node.name + '_children'"
           >
             <i
-              class="bwi bwi-fw"
+              class="fa fa-fw"
               [ngClass]="{
-                'bwi-angle-right': isCollapsed(c.node),
-                'bwi-angle-down': !isCollapsed(c.node)
+                'fa-caret-right': isCollapsed(c.node),
+                'fa-caret-down': !isCollapsed(c.node)
               }"
               aria-hidden="true"
             ></i>
@@ -48,7 +48,7 @@
           <button class="filter-button" (click)="applyFilter(c.node)">
             <i
               *ngIf="c.children.length === 0"
-              class="bwi bwi-collection bwi-fw"
+              class="fa fa-cube"
               aria-hidden="true"
             ></i
             >&nbsp;{{ c.node.name }}

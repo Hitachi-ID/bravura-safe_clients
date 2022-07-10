@@ -1,4 +1,4 @@
-@import "../../jslib/angular/src/scss/webfonts.css";
+@import "../../../../libs/angular/src/scss/webfonts.css";
 @import "./variables";
 @import "./mixins";
 @import "@angular/cdk/overlay-prebuilt.css";
@@ -59,4 +59,4 @@
 @import "./toasts";
 @import "./vault-filters";
 
-@import "../../jslib/angular/src/scss/icons.scss"; // Needs to be after font-awesome
+@import "../../../../libs/angular/src/scss/icons.scss"; // Needs to be after font-awesome

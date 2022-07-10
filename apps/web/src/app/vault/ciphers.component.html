@@ -18,10 +18,12 @@
         <td (click)="selectCipher(c)" class="reduced-lh wrap cursor-pointer" role="button">
           <a
             appStopProp
+            appStopClick
             [routerLink]="[]"
             [queryParams]="{ itemId: c.id }"
             queryParamsHandling="merge"
             title="{{ 'editItem' | i18n }}"
+            class="text-decoration-none text-body"
             >{{ c.name }}</a
           >
           <ng-container *ngIf="c.hasAttachments">
@@ -54,43 +56,111 @@
           </app-org-badge>
         </td>
         <td class="table-list-options reduced-lh">
-          <bit-menu #cipherOptions>
             <ng-container *ngIf="c.type === cipherType.Login && !c.isDeleted">
-              <button bitMenuItem (click)="copy(c, c.login.username, 'username', 'Username')">
-                <i class="fa fa-fw fa-clone" aria-hidden="true"></i>
-                {{ "copyUsername" | i18n }}
-              </button>
-              <button
+<!--              <button bitMenuItem (click)="copy(c, c.login.username, 'username', 'Username')"> -->
+              <a
+                class="list-options-item"
+                [ngClass]="{ 'list-options-item-disable': !c.login.username }"
+                href="#"
+                appStopClick
+                (click)="copy(c, c.login.username, 'username', 'Username')"
+              >
+                <i class="fa fa-fw fa-user fa-lg" aria-hidden="true" title="{{ 'copyUsername' | i18n }}"></i>
+              </a>
+<!--              </button> -->
+
+<!--              <button
                 bitMenuItem
                 (click)="copy(c, c.login.password, 'password', 'Password')"
                 *ngIf="c.viewPassword"
+              > -->
+              <a
+                class="list-options-item"
+                [ngClass]="{ 'list-options-item-disable': !c.login.password }"
+                href="#"
+                appStopClick
+                (click)="copy(c, c.login.password, 'password', 'Password')"
               >
-                <i class="fa fa-fw fa-clone" aria-hidden="true"></i>
-                {{ "copyPassword" | i18n }}
-              </button>
-              <button
+                <i class="fa fa-fw fa-key fa-lg" aria-hidden="true" title="{{ 'copyPassword' | i18n }}"></i>
+              </a>
+<!--              </button> -->
+
+<!--              <button
                 bitMenuItem
                 (click)="copy(c, c.login.totp, 'verificationCodeTotp', 'TOTP')"
                 *ngIf="displayTotpCopyButton(c)"
+              >-->
+              <a
+                class="list-options-item"
+                [ngClass]="{ 'list-options-item-disable': !displayTotpCopyButton(c) }"
+                href="#"
+                appStopClick
+                (click)="copy(c, c.login.totp, 'verificationCodeTotp', 'TOTP')"
               >
-                <i class="fa fa-fw fa-clone" aria-hidden="true"></i>
-                {{ "copyVerificationCode" | i18n }}
-              </button>
-              <button bitMenuItem *ngIf="c.login.canLaunch" (click)="launch(c.login.launchUri)">
-                <i class="fa fa-fw fa-share-square" aria-hidden="true"></i>
-                {{ "launch" | i18n }}
-              </button>
+                <i class="fa fa-fw fa-clock-o fa-lg" aria-hidden="true" title="{{ 'copyVerificationCode' | i18n }}"></i>
+              </a>
+<!--              </button> -->
+
+<!--              <button bitMenuItem *ngIf="c.login.canLaunch" (click)="launch(c.login.launchUri)"> -->
+              <a
+                class="list-options-item"
+                [ngClass]="{ 'list-options-item-disable': !c.login.canLaunch }"
+                href="#"
+                appStopClick
+                (click)="launch(c.login.launchUri)"
+              >
+                <i class="fa fa-fw fa-share-square-o fa-lg" aria-hidden="true" title="{{ 'launch' | i18n }}"></i>
+             </a>
+<!--              </button> -->
+
             </ng-container>
-            <button bitMenuItem (click)="attachments(c)">
-              <i class="fa fa-fw fa-paperclip" aria-hidden="true"></i>
-              {{ "attachments" | i18n }}
-            </button>
+
+<!--            <button bitMenuItem (click)="attachments(c)"> -->
+            <a
+              class="list-options-item"
+              href="#"
+              [ngClass]="{ 'list-options-item-disable': !c }"
+              appStopClick
+              (click)="attachments(c)"
+            >
+              <i class="fa fa-fw fa-paperclip fa-lg" aria-hidden="true" title="{{ 'attachments' | i18n }}"></i>
+            </a>
+<!--            </button> -->
+
+<!--            <button bitMenuItem (click)="restore(c)" *ngIf="c.isDeleted"> -->
+            <a
+              class="list-options-item"
+              href="#"
+              appStopClick
+              (click)="restore(c)"
+              *ngIf="c.isDeleted"
+            >
+              <i class="fa fa-fw fa-undo" aria-hidden="true" title=="{{ 'restore' | i18n }}"></i>
+            </a>
+<!--            </button> -->
+
+
+
+            <div appListDropdown>
+              <button
+                class="btn btn-outline-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                appA11yTitle="{{ 'options' | i18n }}"
+              >
+                <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+
             <button
               bitMenuItem
               *ngIf="((!organization && !c.organizationId) || organization) && !c.isDeleted"
               (click)="clone(c)"
             >
-              <i class="fa fa-fw fa-files" aria-hidden="true"></i>
+              <i class="fa fa-fw fa-files-o" aria-hidden="true"></i>
               {{ "clone" | i18n }}
             </button>
             <button
@@ -98,28 +168,29 @@
               *ngIf="!organization && !c.organizationId && !c.isDeleted"
               (click)="share(c)"
             >
-              <i class="fa fa-fw fa-arrow-circle-right" aria-hidden="true"></i>
+              <i class="fa fa-fw fa-arrow-circle-o-right" aria-hidden="true"></i>
               {{ "moveToOrganization" | i18n }}
             </button>
             <button bitMenuItem *ngIf="c.organizationId && !c.isDeleted" (click)="collections(c)">
-              <i class="fa fa-fw fa-collection" aria-hidden="true"></i>
+              <i class="fa fa-fw fa-cube" aria-hidden="true"></i>
               {{ "collections" | i18n }}
             </button>
             <button bitMenuItem *ngIf="c.organizationId && accessEvents" (click)="events(c)">
               <i class="fa fa-fw fa-file-text" aria-hidden="true"></i>
               {{ "eventLogs" | i18n }}
             </button>
-            <button bitMenuItem (click)="restore(c)" *ngIf="c.isDeleted">
-              <i class="fa fa-fw fa-undo" aria-hidden="true"></i>
-              {{ "restore" | i18n }}
-            </button>
             <button bitMenuItem (click)="delete(c)">
               <span class="tw-text-danger">
-                <i class="fa fa-fw fa-trash" aria-hidden="true"></i>
+                <i class="fa fa-fw fa-trash-o" aria-hidden="true"></i>
                 {{ (c.isDeleted ? "permanentlyDelete" : "delete") | i18n }}
               </span>
             </button>
-          </bit-menu>
+
+              </div>
+            </div>
+
+
+
         </td>
       </tr>
     </tbody>

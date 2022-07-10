@@ -10,13 +10,13 @@
     *ngIf="firstLoaded"
     [disabled]="loading"
   >
-    <i class="bwi bwi-refresh bwi-fw" [ngClass]="{ 'bwi-spin': loading }" aria-hidden="true"></i>
+    <i class="fa fa-refresh fa-fw" [ngClass]="{ 'fa-spin': loading }" aria-hidden="true"></i>
     {{ "refresh" | i18n }}
   </button>
 </div>
 <ng-container *ngIf="!firstLoaded && loading">
   <i
-    class="bwi bwi-spinner bwi-spin text-muted"
+    class="fa fa-spinner fa-spin text-muted"
     title="{{ 'loading' | i18n }}"
     aria-hidden="true"
   ></i>
@@ -42,14 +42,14 @@
   <ng-container *ngIf="paymentSource">
     <p>
       <i
-        class="bwi bwi-fw"
+        class="fa fa-fw"
         [ngClass]="{
-          'bwi-credit-card': paymentSource.type === paymentMethodType.Card,
-          'bwi-bank': paymentSource.type === paymentMethodType.BankAccount,
-          'bwi-money': paymentSource.type === paymentMethodType.Check,
-          'bwi-paypal text-primary': paymentSource.type === paymentMethodType.PayPal,
-          'bwi-apple text-muted': paymentSource.type === paymentMethodType.AppleInApp,
-          'bwi-google text-muted': paymentSource.type === paymentMethodType.GoogleInApp
+          'fa-credit-card': paymentSource.type === paymentMethodType.Card,
+          'fa-bank': paymentSource.type === paymentMethodType.BankAccount,
+          'fa-money': paymentSource.type === paymentMethodType.Check,
+          'fa-paypal text-primary': paymentSource.type === paymentMethodType.PayPal,
+          'fa-apple text-muted': paymentSource.type === paymentMethodType.AppleInApp,
+          'fa-google text-muted': paymentSource.type === paymentMethodType.GoogleInApp
         }"
       ></i>
       <span *ngIf="paymentSourceInApp">{{ "inAppPurchase" | i18n }}</span>

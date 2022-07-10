@@ -185,8 +185,8 @@
         }
       }
 
-      > .bwi,
-      > div > .bwi {
+      > .fa,
+      > div > .fa {
         @include themify($themes) {
           color: themed("linkColor");
         }
