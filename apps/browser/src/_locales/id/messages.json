@@ -3,7 +3,7 @@
     "message": "Bravura Safe"
   },
   "extName": {
-    "message": "Bravura Safe - Pengelola Sandi Gratis",
+    "message": "Bravura Safe - Pengelola Sandi",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
