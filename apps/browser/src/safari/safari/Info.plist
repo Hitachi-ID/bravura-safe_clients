@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.0.1</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>0.0.2</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSExtension</key>
@@ -35,7 +35,7 @@
 	<string>A secure password manager for all of your devices.</string>
 	<key>SFSafariAppExtensionBundleIdentifiersToReplace</key>
 	<array>
-		<string>com.bitwarden.desktop.safari</string>
+		<string>com.hitachiid.desktop.safari</string>
 	</array>
 </dict>
 </plist>

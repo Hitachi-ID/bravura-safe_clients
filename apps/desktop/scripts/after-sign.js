@@ -53,7 +53,7 @@ async function run(context) {
     const appleId = process.env.APPLE_ID_USERNAME || process.env.APPLEID;
     const appleIdPassword = process.env.APPLE_ID_PASSWORD || `@keychain:AC_PASSWORD`;
     return await notarize({
-      appBundleId: "com.bitwarden.desktop",
+      appBundleId: "com.hitachiid.desktop",
       appPath: appPath,
       appleId: appleId,
       appleIdPassword: appleIdPassword,
