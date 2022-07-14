@@ -312,7 +312,7 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("cancel")
     );
     if (confirmed) {
-      BrowserApi.createNewTab("http://docs.test.hitachi-id.net/safe/#/home/27069/10/10)");
+      BrowserApi.createNewTab("http://docs.hitachi-id.net/safe/#/home/27069/10/10)");
     }
   }
 
@@ -324,7 +324,7 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("cancel")
     );
     if (confirmed) {
-      BrowserApi.createNewTab("http://docs.test.hitachi-id.net/safe/#/home/27071/10/10");
+      BrowserApi.createNewTab("http://docs.hitachi-id.net/safe/#/home/27071/10/10");
     }
   }
 
@@ -336,7 +336,7 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("cancel")
     );
     if (confirmed) {
-      BrowserApi.createNewTab("https://docs.test.hitachi-id.net/safe/#/home/27454/10/11");
+      BrowserApi.createNewTab("https://docs.hitachi-id.net/safe/#/home/27454/10/11");
     }
   }
 
@@ -346,7 +346,7 @@ export class SettingsComponent implements OnInit {
   }
 
   import() {
-    BrowserApi.createNewTab("https://docs.test.hitachi-id.net/safe/#/home/27912/10/11");
+    BrowserApi.createNewTab("https://docs.hitachi-id.net/safe/#/home/27912/10/11");
   }
 
   export() {
@@ -354,7 +354,7 @@ export class SettingsComponent implements OnInit {
   }
 
   help() {
-    BrowserApi.createNewTab("https://docs.test.hitachi-id.net/safe/#/home/MY_SAFE_/10/11");
+    BrowserApi.createNewTab("https://docs.hitachi-id.net/safe/#/home/MY_SAFE_/10/11");
   }
 
   about() {
@@ -401,7 +401,7 @@ export class SettingsComponent implements OnInit {
 
     if (result.value) {
       this.platformUtilsService.launchUri(
-        "https://docs.test.hitachi-id.net/safe/#/home/27269/10/11"
+        "https://docs.hitachi-id.net/safe/#/home/27269/10/11"
       );
     }
   }
