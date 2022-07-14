@@ -1619,7 +1619,6 @@
     "message": "已移除密碼"
   },
   "deletedSend": {
-    "message": "Share 已刪除",
     "message": "已刪除 Share",
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
