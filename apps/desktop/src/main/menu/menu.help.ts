@@ -179,7 +179,7 @@ export class HelpMenu implements IMenubarMenu {
         click: () => {
           shell.openExternal(
             "https://chrome.google.com/webstore/detail/" +
-              "bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb"
+              "bravura-safe/cjidmfgdjckibjdfnglfdgohkaballnn"
           );
         },
       },
@@ -188,7 +188,8 @@ export class HelpMenu implements IMenubarMenu {
         label: "Firefox",
         click: () => {
           shell.openExternal(
-            "https://addons.mozilla.org/firefox/addon/" + "bitwarden-password-manager/"
+            "https://github.com/Hitachi-ID/bravura-safe_browser/releases/"
+
           );
         },
       },
@@ -197,7 +198,7 @@ export class HelpMenu implements IMenubarMenu {
         label: "Opera",
         click: () => {
           shell.openExternal(
-            "https://addons.opera.com/extensions/details/" + "bitwarden-free-password-manager/"
+            "https://addons.opera.com/extensions/details/" + "bravura-safe/"
           );
         },
       },

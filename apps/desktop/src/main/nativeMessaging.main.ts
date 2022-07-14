@@ -85,13 +85,13 @@ export class NativeMessagingMain {
 
     const firefoxJson = {
       ...baseJson,
-      ...{ allowed_extensions: ["{446900e4-71c2-419f-a6a7-df9c091e268b}"] },
+      ...{ allowed_extensions: ["{717ad7ea-6868-4be1-b6d4-31c3fbdddd91}"] },
     };
     const chromeJson = {
       ...baseJson,
       ...{
         allowed_origins: [
-          "chrome-extension://nngceckbapebfimnlniiiahkandclblb/",
+          "chrome-extension://cjidmfgdjckibjdfnglfdgohkaballnn/",
           "chrome-extension://jbkfoedolllekgbhcbcoahefnbanhhlh/",
           "chrome-extension://ccnckbpmaceehanjmeomladnmlffdjgn/",
         ],
