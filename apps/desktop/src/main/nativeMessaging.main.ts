@@ -78,7 +78,7 @@ export class NativeMessagingMain {
   generateManifests() {
     const baseJson = {
       name: "com.hitachiid.safe",
-      description: "Bitwarden desktop <-> browser bridge",
+      description: "Bravura Safe desktop <-> browser bridge",
       path: this.binaryPath(),
       type: "stdio",
     };
@@ -91,8 +91,8 @@ export class NativeMessagingMain {
       ...baseJson,
       ...{
         allowed_origins: [
-          "chrome-extension://cjidmfgdjckibjdfnglfdgohkaballnn/",
-          "chrome-extension://jbkfoedolllekgbhcbcoahefnbanhhlh/",
+          "chrome-extension://cjidmfgdjckibjdfnglfdgohkaballnn/", // Chrome
+          "chrome-extension://lgjgabmkhcjfpcmflkhmhjgmnnpfgmnc/", // Edge
           "chrome-extension://ccnckbpmaceehanjmeomladnmlffdjgn/",
         ],
       },

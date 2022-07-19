@@ -208,7 +208,7 @@ export class HelpMenu implements IMenubarMenu {
         click: () => {
           shell.openExternal(
             "https://microsoftedge.microsoft.com/addons/" +
-              "detail/jbkfoedolllekgbhcbcoahefnbanhhlh"
+              "detail/lgjgabmkhcjfpcmflkhmhjgmnnpfgmnc"
           );
         },
       },
@@ -216,7 +216,7 @@ export class HelpMenu implements IMenubarMenu {
         id: "safari",
         label: "Safari",
         click: () => {
-          shell.openExternal("https://bitwarden.com/download/");
+          shell.openExternal("https://github.com/Hitachi-ID/");
         },
       },
     ];
