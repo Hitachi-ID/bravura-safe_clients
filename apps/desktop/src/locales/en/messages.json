@@ -668,7 +668,7 @@
     "message": "Two-step Login Options"
   },
   "selfHostedEnvironment": {
-    "message": "Self-hosted Environment"
+    "message": "Cloud-hosted Environment"
   },
   "selfHostedEnvironmentFooter": {
     "message": "Specify the base URL of your on-premises hosted Bravura Safe installation."

@@ -912,7 +912,7 @@
     "message": "सत्यापन कोड आपको ईमेल किए जाएंगे।"
   },
   "selfHostedEnvironment": {
-    "message": "Self-hosted Environment"
+    "message": "Cloud-hosted Environment"
   },
   "selfHostedEnvironmentFooter": {
     "message": "Specify the base URL of your on-premise hosted bravura safe installation."
