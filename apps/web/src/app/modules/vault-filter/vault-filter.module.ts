@@ -6,6 +6,7 @@ import { CollectionFilterComponent } from "./components/collection-filter.compon
 import { FolderFilterComponent } from "./components/folder-filter.component";
 import { LinkSsoComponent } from "./components/link-sso.component";
 import { OrganizationFilterComponent } from "./components/organization-filter.component";
+import { OrganizationListComponent } from "./components/organization-list.component";
 import { OrganizationOptionsComponent } from "./components/organization-options.component";
 import { StatusFilterComponent } from "./components/status-filter.component";
 import { TypeFilterComponent } from "./components/type-filter.component";
@@ -20,6 +21,7 @@ import { VaultFilterService } from "./vault-filter.service";
     CollectionFilterComponent,
     FolderFilterComponent,
     OrganizationFilterComponent,
+    OrganizationListComponent,
     OrganizationOptionsComponent,
     StatusFilterComponent,
     TypeFilterComponent,

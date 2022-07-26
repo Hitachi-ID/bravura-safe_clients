@@ -1,11 +1,29 @@
+<div class="dropdown organizations flex-grow-0 flex-shrink-0" *ngIf="!hideOrganizations">
+  <button
+    class="btn btn-outline-secondary dropdown-toggle"
+    type="button"
+    id="dropdownMenuButton"
+    data-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="false"
+    appA11yTitle="{{ 'organizations' | i18n }}"
+  >
+    <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
+    {{ "organizations" | i18n }}
+  </button>
+  <div class="dropdown-menu dropdown-menu-right scrollable-menu" aria-labelledby="dropdownMenuButton">
+    <app-organization-list [organizations]="organizations"></app-organization-list>
+  </div>
+</div>
+
+<div class="groupings">
+  <div class="content">
+    <div class="inner-content">
 <div class="card vault-filters">
   <div class="container loading-spinner" *ngIf="!isLoaded">
     <i class="fa fa-spinner fa-spin fa-3x" aria-hidden="true"></i>
   </div>
   <div *ngIf="isLoaded">
-    <div class="card-header d-flex">
-      {{ "filters" | i18n }}
-    </div>
     <div class="card-body">
       <input
         type="search"
@@ -17,16 +35,6 @@
         autocomplete="off"
         appAutofocus
       />
-      <app-organization-filter
-        [hide]="hideOrganizations"
-        [activeFilter]="activeFilter"
-        [collapsedFilterNodes]="collapsedFilterNodes"
-        [organizations]="organizations"
-        [activePersonalOwnershipPolicy]="activePersonalOwnershipPolicy"
-        [activeSingleOrganizationPolicy]="activeSingleOrganizationPolicy"
-        (onNodeCollapseStateChange)="toggleFilterNodeCollapseState($event)"
-        (onFilterChange)="applyFilter($event)"
-      ></app-organization-filter>
       <div class="filter">
         <app-status-filter
           [hideFavorites]="hideFavorites"
@@ -57,6 +65,9 @@
           (onFilterChange)="applyFilter($event)"
         ></app-collection-filter>
       </div>
+    </div>
+  </div>
+</div>
     </div>
   </div>
 </div>

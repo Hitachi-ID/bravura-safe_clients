@@ -63,6 +63,13 @@
     {{ "rotateApiKey" | i18n }}
   </button>
 </ng-container>
+<p>
+  <div class="secondary-header border-0 mb-0">
+    <h1>{{ "leave" | i18n }}</h1>
+  </div>
+  <button type="button" class="btn btn-outline-danger" (click)="leaveOrganization()">
+    {{ "leave" | i18n }}
+  </button>
 <div *ngIf="!org || loading">
   <i
     class="fa fa-spinner fa-spin text-muted"

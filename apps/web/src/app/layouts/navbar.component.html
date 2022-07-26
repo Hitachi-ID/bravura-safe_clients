@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand navbar-dark" [ngClass]="{ 'nav-background-alt': selfHosted }">
-  <div class="container">
-    <a class="navbar-brand" routerLink="/" appA11yTitle="{{ 'pageTitle' | i18n: 'Bravura Safe' }}">
+<nav class="navbar navbar-expand navbar-dark position-sticky sticky-top" [ngClass]="{ 'nav-background-alt': selfHosted }">
+  <div class="container align-items-stretch">
+    <a class="navbar-brand d-flex align-items-center cursor-pointer mt-0 mr-3 mb-0" routerLink="/" appA11yTitle="{{ 'pageTitle' | i18n: 'Bravura Safe' }}">
       <img class="logo logo-themed-nav-bar" alt="Hitachi ID" />
     </a>
     <div class="collapse navbar-collapse">
@@ -38,12 +38,12 @@
       <li>
         <button
           [bitMenuTriggerFor]="accountMenu"
-          class="tw-border-0 tw-bg-transparent tw-text-alt2 tw-opacity-70 hover:tw-opacity-90"
+          class="tw-border-0 tw-bg-transparent tw-text-alt2 tw-opacity-70 hover:tw-opacity-90 nav-item nav-link"
         >
           <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
           <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i>
         </button>
-        <bit-menu class="dropdown-menu" #accountMenu>
+        <bit-menu class="dropdown-menu dropdown-menu-right" #accountMenu>
           <div class="tw-max-w-[300px] tw-min-w-[200px] tw-flex tw-flex-col">
             <div
               class="tw-flex tw-items-center tw-leading-tight tw-text-info tw-py-1 tw-px-4"

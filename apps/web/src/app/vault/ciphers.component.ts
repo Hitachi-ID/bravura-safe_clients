@@ -123,11 +123,11 @@ export class CiphersComponent extends BaseCiphersComponent implements OnDestroy 
   }
 
   launch(uri: string) {
-    this.platformUtilsService.launchUri(uri);
+    if (uri) this.platformUtilsService.launchUri(uri);
   }
 
   async attachments(c: CipherView) {
-    if (!(await this.repromptCipher(c))) {
+    if (!c || !(await this.repromptCipher(c))) {
       return;
     }
     this.onAttachmentsClicked.emit(c);

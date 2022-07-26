@@ -54,12 +54,20 @@ export class OrganizationLayoutComponent implements OnInit, OnDestroy {
     return NavigationPermissionsService.canAccessManage(this.organization);
   }
 
+  get showReportsTab(): boolean {
+    return NavigationPermissionsService.canAccessReports(this.organization);
+  }
+
   get showToolsTab(): boolean {
     return NavigationPermissionsService.canAccessTools(this.organization);
   }
 
   get showSettingsTab(): boolean {
     return NavigationPermissionsService.canAccessSettings(this.organization);
+  }
+
+  get reportsRoute(): string {
+    return "reports/exposed-passwords-report";
   }
 
   get toolsRoute(): string {

@@ -20,11 +20,6 @@ const routes: Routes = [
     children: [
       { path: "", pathMatch: "full", component: ReportListComponent, data: { homepage: true } },
       {
-        path: "breach-report",
-        component: BreachReportComponent,
-        data: { titleId: "dataBreachReport" },
-      },
-      {
         path: "reused-passwords-report",
         component: ReusedPasswordsReportComponent,
         data: { titleId: "reusedPasswordsReport" },

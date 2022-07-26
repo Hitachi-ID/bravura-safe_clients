@@ -20,15 +20,6 @@
     <div class="col-6">
       <div class="form-group mb-0">
         <label for="kdf">{{ "kdfAlgorithm" | i18n }}</label>
-        <a
-          class="ml-auto"
-          href="https://en.wikipedia.org/wiki/Key_derivation_function"
-          target="_blank"
-          rel="noopener"
-          appA11yTitle="{{ 'learnMore' | i18n }}"
-        >
-          <i class="fa fa-question-circle-o" aria-hidden="true"></i>
-        </a>
         <select id="kdf" name="Kdf" [(ngModel)]="kdf" class="form-control" required>
           <option *ngFor="let o of kdfOptions" [ngValue]="o.value">{{ o.name }}</option>
         </select>

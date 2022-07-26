@@ -1,9 +1,6 @@
 <div class="container page-content">
   <div class="row">
-    <div class="col-3">
-      <div class="groupings">
-        <div class="content">
-          <div class="inner-content">
+    <div class="col-3 sidebar-panel d-flex flex-column">
             <app-vault-filter
               #vaultFilter
               [activeFilter]="activeFilter"
@@ -12,9 +9,7 @@
               (onEditFolder)="editFolder($event.id)"
               (onSearchTextChanged)="filterSearchText($event)"
             ></app-vault-filter>
-          </div>
-        </div>
-      </div>
+
     </div>
     <div [ngClass]="{ 'col-6': isShowingCards, 'col-9': !isShowingCards }">
       <div class="page-header d-flex">
@@ -64,54 +59,9 @@
         (onOrganzationBadgeClicked)="applyOrganizationFilter($event)"
       >
       </app-vault-ciphers>
+      <div class="vertical-spacer"></div>
+      <app-footer></app-footer>
     </div>
-    <div class="col-3">
-      <div class="card border-warning mb-4" *ngIf="showUpdateKey">
-        <div class="card-header bg-warning text-white">
-          <i class="fa fa-exclamation-triangle fa-fw" aria-hidden="true"></i>
-          {{ "updateKeyTitle" | i18n }}
-        </div>
-        <div class="card-body">
-          <p>{{ "updateEncryptionKeyShortDesc" | i18n }}</p>
-          <button class="btn btn-block btn-outline-secondary" type="button" (click)="updateKey()">
-            {{ "updateEncryptionKey" | i18n }}
-          </button>
-        </div>
-      </div>
-      <app-verify-email *ngIf="showVerifyEmail" class="d-block mb-4"></app-verify-email>
-      <div class="card border-warning mb-4" *ngIf="showBrowserOutdated">
-        <div class="card-header bg-warning text-white">
-          <i class="fa fa-exclamation-triangle fa-fw" aria-hidden="true"></i>
-          {{ "updateBrowser" | i18n }}
-        </div>
-        <div class="card-body">
-          <p>{{ "updateBrowserDesc" | i18n }}</p>
-          <a
-            class="btn btn-block btn-outline-secondary"
-            target="_blank"
-            href="https://browser-update.org/update-browser.html"
-            rel="noopener"
-          >
-            {{ "updateBrowser" | i18n }}
-          </a>
-        </div>
-      </div>
-      <div class="card border-success mb-4" *ngIf="showPremiumCallout">
-        <div class="card-header bg-success text-white">
-          <i class="fa fa-star-f fa-fw" aria-hidden="true"></i> {{ "goPremium" | i18n }}
-        </div>
-        <div class="card-body">
-          <p>{{ "premiumUpgradeUnlockFeatures" | i18n }}</p>
-          <a
-            class="btn btn-block btn-outline-secondary"
-            routerLink="/settings/subscription/premium"
-          >
-            {{ "goPremium" | i18n }}
-          </a>
-        </div>
-      </div>
-    </div>
-    <app-footer></app-footer>
   </div>
 </div>
 <ng-template #attachments></ng-template>

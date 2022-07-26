@@ -84,7 +84,7 @@ export class TwoFactorAuthenticatorComponent
         element: document.getElementById("qr"),
         value:
           "otpauth://totp/Bravura Safe:" +
-          encodeURIComponent(email) +
+          encodeURIComponent("Bravura Safe:" + email) +
           "?secret=" +
           encodeURIComponent(this.key) +
           "&issuer=Hitachi+ID",

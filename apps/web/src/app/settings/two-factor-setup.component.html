@@ -18,7 +18,8 @@
   {{ "twoStepLoginPolicyUserWarning" | i18n }}
 </bit-callout>
 <ul class="list-group list-group-2fa">
-  <li *ngFor="let p of providers" class="list-group-item d-flex align-items-center">
+  <div *ngFor="let p of providers">
+    <li *ngIf="p.type === 0 || p.type === 1" class="list-group-item d-flex align-items-center">
     <div class="logo-2fa d-flex justify-content-center">
       <img [class]="'mfaType' + p.type" [alt]="p.name + ' logo'" />
     </div>
@@ -48,6 +49,7 @@
       </button>
     </div>
   </li>
+  </div>
 </ul>
 <form *ngIf="!loading" #form (ngSubmit)="submit()" [appApiAction]="formPromise" ngNativeValidate>
   <div class="row">

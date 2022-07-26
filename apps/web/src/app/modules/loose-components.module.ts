@@ -75,6 +75,7 @@ import { ImportComponent as OrgImportComponent } from "../organizations/tools/im
 import { InactiveTwoFactorReportComponent as OrgInactiveTwoFactorReportComponent } from "../organizations/tools/inactive-two-factor-report.component";
 import { ReusedPasswordsReportComponent as OrgReusedPasswordsReportComponent } from "../organizations/tools/reused-passwords-report.component";
 import { ToolsComponent as OrgToolsComponent } from "../organizations/tools/tools.component";
+import { ReportsComponent as OrgReportsComponent} from "../organizations/tools/reports.component";
 import { UnsecuredWebsitesReportComponent as OrgUnsecuredWebsitesReportComponent } from "../organizations/tools/unsecured-websites-report.component";
 import { WeakPasswordsReportComponent as OrgWeakPasswordsReportComponent } from "../organizations/tools/weak-passwords-report.component";
 import { AddEditComponent as OrgAddEditComponent } from "../organizations/vault/add-edit.component";
@@ -260,6 +261,7 @@ import { OrganizationBadgeModule } from "./vault/modules/organization-badge/orga
     OrgReusedPasswordsReportComponent,
     OrgSettingComponent,
     OrgToolsComponent,
+    OrgReportsComponent,
     OrgTwoFactorSetupComponent,
     OrgSubscriptionHiddenComponent,
     OrgUnsecuredWebsitesReportComponent,
@@ -420,6 +422,7 @@ import { OrganizationBadgeModule } from "./vault/modules/organization-badge/orga
     OrgReusedPasswordsReportComponent,
     OrgSettingComponent,
     OrgToolsComponent,
+    OrgReportsComponent,
     OrgTwoFactorSetupComponent,
     OrgUnsecuredWebsitesReportComponent,
     OrgUserAddEditComponent,

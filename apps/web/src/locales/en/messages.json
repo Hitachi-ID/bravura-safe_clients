@@ -2179,7 +2179,7 @@
     "message": "Your team has been upgraded."
   },
   "leave": {
-    "message": "Leave"
+    "message": "Leave team"
   },
   "leaveOrganizationConfirmation": {
     "message": "Are you sure you want to leave this team?"

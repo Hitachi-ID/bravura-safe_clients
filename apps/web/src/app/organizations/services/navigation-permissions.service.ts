@@ -14,7 +14,8 @@ const permissions = {
     Permissions.ManagePolicies,
     Permissions.ManageSso,
   ],
-  tools: [Permissions.AccessImportExport, Permissions.AccessReports],
+  reports: [Permissions.AccessReports],
+  tools: [Permissions.AccessImportExport],
   settings: [Permissions.ManageOrganization],
 };
 
@@ -33,6 +34,10 @@ export class NavigationPermissionsService {
       this.canAccessSettings(organization) ||
       this.canAccessManage(organization)
     );
+  }
+
+  static canAccessReports(organization: Organization): boolean {
+    return organization.hasAnyPermission(NavigationPermissionsService.getPermissions("reports"));
   }
 
   static canAccessTools(organization: Organization): boolean {

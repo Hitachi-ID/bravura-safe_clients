@@ -41,6 +41,15 @@ import { GeneratorComponent } from "./tools/generator.component";
 import { ImportComponent } from "./tools/import.component";
 import { ToolsComponent } from "./tools/tools.component";
 
+import { BreachReportComponent } from "./reports/breach-report.component";
+import { ExposedPasswordsReportComponent } from "./reports/exposed-passwords-report.component";
+import { InactiveTwoFactorReportComponent } from "./reports/inactive-two-factor-report.component";
+import { ReportListComponent } from "./reports/report-list.component";
+import { ReportsComponent } from "./reports/reports.component";
+import { ReusedPasswordsReportComponent } from "./reports/reused-passwords-report.component";
+import { UnsecuredWebsitesReportComponent } from "./reports/unsecured-websites-report.component";
+import { WeakPasswordsReportComponent } from "./reports/weak-passwords-report.component";
+
 const routes: Routes = [
   {
     path: "",
@@ -213,8 +222,36 @@ const routes: Routes = [
       },
       {
         path: "reports",
-        loadChildren: async () =>
-          (await import("./reports/reports-routing.module")).ReportsRoutingModule,
+        component: ReportsComponent,
+        canActivate: [AuthGuard],
+        children: [
+          { path: "", pathMatch: "full", redirectTo: "exposed-passwords-report" },
+          {
+            path: "reused-passwords-report",
+            component: ReusedPasswordsReportComponent,
+            data: { titleId: "reusedPasswordsReport" },
+          },
+          {
+            path: "unsecured-websites-report",
+            component: UnsecuredWebsitesReportComponent,
+            data: { titleId: "unsecuredWebsitesReport" },
+          },
+          {
+            path: "weak-passwords-report",
+            component: WeakPasswordsReportComponent,
+            data: { titleId: "weakPasswordsReport" },
+          },
+          {
+            path: "exposed-passwords-report",
+            component: ExposedPasswordsReportComponent,
+            data: { titleId: "exposedPasswordsReport" },
+          },
+          {
+            path: "inactive-two-factor-report",
+            component: InactiveTwoFactorReportComponent,
+            data: { titleId: "inactive2faReport" },
+          },
+        ],
       },
       { path: "setup/families-for-enterprise", component: FamiliesForEnterpriseSetupComponent },
     ],

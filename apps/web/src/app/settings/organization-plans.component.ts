@@ -262,17 +262,13 @@ export class OrganizationPlansComponent implements OnInit {
           const shareKey = await this.cryptoService.makeShareKey();
           const key = shareKey[0].encryptedString;
           const collection = await this.cryptoService.encrypt(
-            this.i18nService.t("defaultCollection"),
+            this.i18nService.t("defaultCollection") + " - " + this.name,
             shareKey[1]
           );
           const collectionCt = collection.encryptedString;
           const orgKeys = await this.cryptoService.makeKeyPair(shareKey[1]);
 
-          if (this.selfHosted) {
-            orgId = await this.createSelfHosted(key, collectionCt, orgKeys);
-          } else {
-            orgId = await this.createCloudHosted(key, collectionCt, orgKeys, shareKey[1]);
-          }
+          orgId = await this.createCloudHosted(key, collectionCt, orgKeys, shareKey[1]);
 
           this.platformUtilsService.showToast(
             "success",
@@ -349,29 +345,12 @@ export class OrganizationPlansComponent implements OnInit {
     request.billingEmail = this.billingEmail;
     request.keys = new OrganizationKeysRequest(orgKeys[0], orgKeys[1].encryptedString);
 
-    if (this.selectedPlan.type === PlanType.Free) {
-      request.planType = PlanType.Free;
-    } else {
-      const tokenResult = await this.paymentComponent.createPaymentToken();
+    request.businessName = this.ownedBusiness ? this.businessName : null;
+    request.additionalSeats = 32767;
+    request.additionalStorageGb = this.additionalStorage;
+    request.premiumAccessAddon = true;
+    request.planType = PlanType.Custom;
 
-      request.paymentToken = tokenResult[0];
-      request.paymentMethodType = tokenResult[1];
-      request.businessName = this.ownedBusiness ? this.businessName : null;
-      request.additionalSeats = this.additionalSeats;
-      request.additionalStorageGb = this.additionalStorage;
-      request.premiumAccessAddon =
-        this.selectedPlan.hasPremiumAccessOption && this.premiumAccessAddon;
-      request.planType = this.selectedPlan.type;
-      request.billingAddressPostalCode = this.taxComponent.taxInfo.postalCode;
-      request.billingAddressCountry = this.taxComponent.taxInfo.country;
-      if (this.taxComponent.taxInfo.includeTaxId) {
-        request.taxIdNumber = this.taxComponent.taxInfo.taxId;
-        request.billingAddressLine1 = this.taxComponent.taxInfo.line1;
-        request.billingAddressLine2 = this.taxComponent.taxInfo.line2;
-        request.billingAddressCity = this.taxComponent.taxInfo.city;
-        request.billingAddressState = this.taxComponent.taxInfo.state;
-      }
-    }
 
     if (this.providerId) {
       const providerRequest = new ProviderOrganizationCreateRequest(this.clientOwnerEmail, request);

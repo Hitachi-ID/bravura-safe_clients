@@ -155,4 +155,28 @@ export class AccountComponent {
       comp.apiKeyDescription = "apiKeyRotateDesc";
     });
   }
+
+  async leaveOrganization() {
+    const confirmed = await this.platformUtilsService.showDialog(
+      this.i18nService.t("leaveOrganizationConfirmation"),
+      this.org.name,
+      this.i18nService.t("yes"),
+      this.i18nService.t("no"),
+      "warning"
+    );
+    if (!confirmed) {
+      return false;
+    }
+
+    try {
+      this.formPromise = this.apiService.postLeaveOrganization(this.org.id).then(() => {
+        return this.syncService.fullSync(true);
+      });
+      await this.formPromise;
+      this.platformUtilsService.showToast("success", null, this.i18nService.t("leftOrganization"));
+      this.router.navigate(["/"]);
+    } catch (e) {
+      this.logService.error(e);
+    }
+  }
 }

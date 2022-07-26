@@ -53,7 +53,7 @@ app-org-vault-groupings,
       padding-bottom: 1px;
       position: relative;
       width: 100%;
-      &.type-label,
+      &.filter.type-label,
       &.folder-label.expand,
       &.collection-label.expand {
         &::after {
@@ -85,7 +85,7 @@ app-org-vault-groupings,
         }
       }
 
-      &.type-label {
+      &.filter.type-label {
         h3.d-flex {
           margin: 0 0 0 1.5rem;
           i {
