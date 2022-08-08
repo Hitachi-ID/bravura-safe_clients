@@ -3,7 +3,7 @@
     "message": "Bravura Safe"
   },
   "extName": {
-    "message": "Bravura Safe - Brezplačen upravitelj gesel",
+    "message": "Bravura Safe",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
@@ -918,7 +918,7 @@
     "message": "Potrditvene kode vam bodo posredovane po e-pošti."
   },
   "selfHostedEnvironment": {
-    "message": "Self-hosted Environment"
+    "message": "Cloud-hosted Environment"
   },
   "selfHostedEnvironmentFooter": {
     "message": "Specify the base URL of your on-premises hosted Bravura Safe installation."

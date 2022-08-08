@@ -3,7 +3,7 @@
     "name": "bitwarden"
   },
   "productName": "Bitwarden",
-  "appId": "com.bitwarden.desktop",
+  "appId": "com.hitachiid.desktop",
   "buildDependenciesFromSource": true,
   "copyright": "Copyright © 2015-2022 Bitwarden Inc.",
   "directories": {
@@ -133,10 +133,10 @@
   "appx": {
     "artifactName": "${productName}-${version}-${arch}.${ext}",
     "backgroundColor": "#175DDC",
-    "applicationId": "bitwardendesktop",
-    "identityName": "8bitSolutionsLLC.bitwardendesktop",
+    "applicationId": "bravurasafedesktop",
+    "identityName": "HitachiIDSystemsInc.desktop",
     "publisher": "CN=14D52771-DE3C-4886-B8BF-825BA7690418",
-    "publisherDisplayName": "8bit Solutions LLC",
+    "publisherDisplayName": "Hitachi ID Systems, Inc",
     "languages": ["en-US"]
   },
   "deb": {

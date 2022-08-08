@@ -36,7 +36,7 @@
   3. Unminify and format to meet Mozilla review requirements.
   4. Remove unnecessary input types from getFormElements query selector and limit number of elements returned.
   5. Remove fakeTested prop.
-  6. Rename com.agilebits.* stuff to com.bitwarden.*
+  6. Rename com.agilebits.* stuff to com.hitachiid.*
   7. Remove "some useful globals" on window
   8. Add ability to autofill span[data-bwautofill] elements
   */
@@ -50,7 +50,7 @@
       document.addEventListener('input', function (inputevent) {
           inputevent.a !== false &&
               inputevent.target.tagName.toLowerCase() === 'input' &&
-              (inputevent.target.dataset['com.bitwarden.browser.userEdited'] = 'yes');
+              (inputevent.target.dataset['com.hitachiid.browser.userEdited'] = 'yes');
       }, true);
 
       function getPageDetails(theDoc, oneShotId) {
