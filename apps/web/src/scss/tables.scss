@@ -31,14 +31,26 @@
     }
 
     small,
-    > .bwi,
+    > .fa,
     .icon {
       @include themify($themes) {
         color: themed("textMuted");
       }
     }
 
-    .bwi-globe {
+    input,
+    a,
+    button {
+      &.focus,
+      &:focus,
+      &:focus-visible {
+        box-shadow: none;
+        outline: solid 2px rgba(mix(color-yiq($primary), $primary, 15%), 0.5);
+        outline-style: auto;
+      }
+    }
+
+    .fa-globe {
       @include themify($themes) {
         color: themed("iconColor");
       }
@@ -51,23 +63,64 @@
 
   td.table-list-options {
     height: 50px;
-    max-width: 76px;
     text-align: right;
     width: 76px;
-
-    &.wider {
-      max-width: 100px;
-      width: 100px;
-    }
-
-    .btn {
+    &.reduced-lh {
+      height: auto;
       line-height: 1;
-      transition: initial;
     }
+  }
 
-    .dropdown-menu {
-      line-height: $line-height-base;
+  &.wider {
+    max-width: 100px;
+    width: 100px;
+  }
+
+  .btn {
+    line-height: 1;
+    transition: initial;
+  }
+
+  .list-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    a.list-options-item {
+      padding: 7px 3px;
+      @include themify($themes) {
+        color: themed("tableOptionsTextColor");
+      }
+      &:hover {
+        @include themify($themes) {
+          background: themed("tableOptionsHoverBackground");
+        }
+        border-radius: 100px;
+      }
+      &:last-of-type {
+        margin-right: 5px;
+      }
     }
+    a.list-options-item.list-options-item-disable {
+      @include themify($themes) {
+        color: themed("tableOptionsTextDisableColor");
+      }
+      cursor: default;
+      // themify will be delay, a.list-options-item:hover style will replace a.list-options-item.list-options-item-disable:hover
+      &:hover {
+        background: inherit !important;
+      }
+    }
+  }
+
+  button.btn-outline-secondary {
+    @include themify($themes) {
+      color: themed("tableOptionsTextColor");
+    }
+  }
+
+  .dropdown-menu {
+    line-height: $line-height-base;
   }
 
   td.table-action-right {
@@ -133,5 +186,11 @@
   @include themify($themes) {
     background-color: themed("tableRowHover");
     color: themed("tableColorHover");
+  }
+}
+
+.table.table-active {
+  tbody tr {
+    background: rgba(0, 122, 204, 0.1);
   }
 }

@@ -47,6 +47,14 @@
       }
     }
   }
+
+  h3.d-flex {
+    margin: 0 0 0 1.5rem;
+    i {
+      padding: 2px;
+      margin: 0 0 2px 0;
+    }
+  }
 }
 
 .filter-options {
@@ -112,7 +120,6 @@
   }
 
   .edit-button {
-    visibility: hidden;
     margin-left: auto;
 
     @include themify($themes) {
@@ -185,8 +192,8 @@
         }
       }
 
-      > .bwi,
-      > div > .bwi {
+      > .fa,
+      > div > .fa {
         @include themify($themes) {
           color: themed("linkColor");
         }

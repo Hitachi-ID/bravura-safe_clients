@@ -1,6 +1,6 @@
 .navbar {
-  padding-left: 0;
-  padding-right: 0;
+  z-index: 2;
+
   @include themify($themes) {
     background-color: themed("navBackground");
   }
@@ -11,8 +11,36 @@
     }
   }
 
+  .dropdown-menu {
+    max-width: 300px;
+    min-width: 200px;
+
+    .dropdown-item-text {
+      line-height: 1.3;
+      @include themify($themes) {
+        color: themed("dropdownTextColor");
+      }
+
+      span,
+      small {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &.text-muted {
+          @include themify($themes) {
+            color: themed("dropdownTextMuted") !important;
+          }
+        }
+      }
+    }
+  }
+
   .nav-item {
     > .nav-link {
+      padding-top: 0;
+      padding-bottom: 0;
+
       @include themify($themes) {
         font-weight: themed("navWeight");
       }
@@ -25,9 +53,33 @@
   }
 }
 
+.dropdown-item {
+  &:hover {
+    background-color: $navbar-bg;
+    color: #ffffff;
+  }
+}
+
 .navbar-brand {
   margin-bottom: -20px;
   margin-top: -20px;
+}
+
+ul.navbar-nav {
+  line-height: $navbar-height - 6px; // subtract border bottom and top of nav-item
+  padding: 0 10px;
+  li.nav-item {
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+
+    &:hover {
+      background-color: $navbar-bg;
+    }
+    &.active {
+      background-color: $navbar-bg;
+      border-bottom-color: $primary-accent;
+    }
+  }
 }
 
 .nav-tabs .nav-link.active {
@@ -38,8 +90,11 @@
 }
 
 .org-nav {
-  height: 100px;
-  min-height: 100px;
+  height: $org-header-height;
+  min-height: $org-header-height;
+  top: $navbar-height;
+  z-index: 1;
+
   @include themify($themes) {
     background-color: themed("navOrgBackgroundColor");
     border-bottom: 1px solid themed("borderColor");
@@ -98,6 +153,17 @@
         @include themify($themes) {
           color: themed("inputDisabledColor");
         }
+      }
+    }
+  }
+
+  .org-name {
+    line-height: 1;
+    span {
+      display: block;
+      font-size: $font-size-lg;
+      @include themify($themes) {
+        color: themed("textHeadingColor");
       }
     }
   }

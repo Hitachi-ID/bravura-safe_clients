@@ -1,9 +1,9 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
-import { AuthGuard } from "jslib-angular/guards/auth.guard";
-import { LockGuard } from "jslib-angular/guards/lock.guard";
-import { UnauthGuard } from "jslib-angular/guards/unauth.guard";
+import { AuthGuard } from "@bitwarden/angular/guards/auth.guard";
+import { LockGuard } from "@bitwarden/angular/guards/lock.guard";
+import { UnauthGuard } from "@bitwarden/angular/guards/unauth.guard";
 
 import { AcceptEmergencyComponent } from "./accounts/accept-emergency.component";
 import { AcceptOrganizationComponent } from "./accounts/accept-organization.component";
@@ -40,6 +40,15 @@ import { ExportComponent } from "./tools/export.component";
 import { GeneratorComponent } from "./tools/generator.component";
 import { ImportComponent } from "./tools/import.component";
 import { ToolsComponent } from "./tools/tools.component";
+
+import { BreachReportComponent } from "./reports/breach-report.component";
+import { ExposedPasswordsReportComponent } from "./reports/exposed-passwords-report.component";
+import { InactiveTwoFactorReportComponent } from "./reports/inactive-two-factor-report.component";
+import { ReportListComponent } from "./reports/report-list.component";
+import { ReportsComponent } from "./reports/reports.component";
+import { ReusedPasswordsReportComponent } from "./reports/reused-passwords-report.component";
+import { UnsecuredWebsitesReportComponent } from "./reports/unsecured-websites-report.component";
+import { WeakPasswordsReportComponent } from "./reports/weak-passwords-report.component";
 
 const routes: Routes = [
   {
@@ -95,18 +104,6 @@ const routes: Routes = [
         data: { titleId: "acceptEmergency", doNotSaveUrl: false },
       },
       {
-        path: "accept-families-for-enterprise",
-        component: AcceptFamilySponsorshipComponent,
-        data: { titleId: "acceptFamilySponsorship", doNotSaveUrl: false },
-      },
-      { path: "recover", pathMatch: "full", redirectTo: "recover-2fa" },
-      {
-        path: "recover-2fa",
-        component: RecoverTwoFactorComponent,
-        canActivate: [UnauthGuard],
-        data: { titleId: "recoverAccountTwoStep" },
-      },
-      {
         path: "recover-delete",
         component: RecoverDeleteComponent,
         canActivate: [UnauthGuard],
@@ -121,7 +118,7 @@ const routes: Routes = [
       {
         path: "send/:sendId/:key",
         component: AccessComponent,
-        data: { title: "Bitwarden Send" },
+        data: { title: "Bravura Safe Share" },
       },
       {
         path: "update-temp-password",
@@ -225,8 +222,36 @@ const routes: Routes = [
       },
       {
         path: "reports",
-        loadChildren: async () =>
-          (await import("./reports/reports-routing.module")).ReportsRoutingModule,
+        component: ReportsComponent,
+        canActivate: [AuthGuard],
+        children: [
+          { path: "", pathMatch: "full", redirectTo: "exposed-passwords-report" },
+          {
+            path: "reused-passwords-report",
+            component: ReusedPasswordsReportComponent,
+            data: { titleId: "reusedPasswordsReport" },
+          },
+          {
+            path: "unsecured-websites-report",
+            component: UnsecuredWebsitesReportComponent,
+            data: { titleId: "unsecuredWebsitesReport" },
+          },
+          {
+            path: "weak-passwords-report",
+            component: WeakPasswordsReportComponent,
+            data: { titleId: "weakPasswordsReport" },
+          },
+          {
+            path: "exposed-passwords-report",
+            component: ExposedPasswordsReportComponent,
+            data: { titleId: "exposedPasswordsReport" },
+          },
+          {
+            path: "inactive-two-factor-report",
+            component: InactiveTwoFactorReportComponent,
+            data: { titleId: "inactive2faReport" },
+          },
+        ],
       },
       { path: "setup/families-for-enterprise", component: FamiliesForEnterpriseSetupComponent },
     ],

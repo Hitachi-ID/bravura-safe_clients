@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 
-import { UserVerificationComponent } from "jslib-angular/components/user-verification.component";
+import { UserVerificationComponent } from "@bitwarden/angular/components/user-verification.component";
 
 import { AcceptEmergencyComponent } from "../accounts/accept-emergency.component";
 import { AcceptOrganizationComponent } from "../accounts/accept-organization.component";
@@ -30,6 +30,7 @@ import { NavbarComponent } from "../layouts/navbar.component";
 import { UserLayoutComponent } from "../layouts/user-layout.component";
 import { OrganizationLayoutComponent } from "../organizations/layouts/organization-layout.component";
 import { BulkConfirmComponent as OrgBulkConfirmComponent } from "../organizations/manage/bulk/bulk-confirm.component";
+import { BulkDeactivateComponent as OrgBulkDeactivateomponent } from "../organizations/manage/bulk/bulk-deactivate.component";
 import { BulkRemoveComponent as OrgBulkRemoveComponent } from "../organizations/manage/bulk/bulk-remove.component";
 import { BulkStatusComponent as OrgBulkStatusComponent } from "../organizations/manage/bulk/bulk-status.component";
 import { CollectionAddEditComponent as OrgCollectionAddEditComponent } from "../organizations/manage/collection-add-edit.component";
@@ -74,6 +75,7 @@ import { ImportComponent as OrgImportComponent } from "../organizations/tools/im
 import { InactiveTwoFactorReportComponent as OrgInactiveTwoFactorReportComponent } from "../organizations/tools/inactive-two-factor-report.component";
 import { ReusedPasswordsReportComponent as OrgReusedPasswordsReportComponent } from "../organizations/tools/reused-passwords-report.component";
 import { ToolsComponent as OrgToolsComponent } from "../organizations/tools/tools.component";
+import { ReportsComponent as OrgReportsComponent} from "../organizations/tools/reports.component";
 import { UnsecuredWebsitesReportComponent as OrgUnsecuredWebsitesReportComponent } from "../organizations/tools/unsecured-websites-report.component";
 import { WeakPasswordsReportComponent as OrgWeakPasswordsReportComponent } from "../organizations/tools/weak-passwords-report.component";
 import { AddEditComponent as OrgAddEditComponent } from "../organizations/vault/add-edit.component";
@@ -236,6 +238,7 @@ import { OrganizationBadgeModule } from "./vault/modules/organization-badge/orga
     OrganizationSubscriptionComponent,
     OrgAttachmentsComponent,
     OrgBulkConfirmComponent,
+    OrgBulkDeactivateomponent,
     OrgBulkRemoveComponent,
     OrgBulkStatusComponent,
     OrgCiphersComponent,
@@ -258,6 +261,7 @@ import { OrganizationBadgeModule } from "./vault/modules/organization-badge/orga
     OrgReusedPasswordsReportComponent,
     OrgSettingComponent,
     OrgToolsComponent,
+    OrgReportsComponent,
     OrgTwoFactorSetupComponent,
     OrgSubscriptionHiddenComponent,
     OrgUnsecuredWebsitesReportComponent,
@@ -395,6 +399,7 @@ import { OrganizationBadgeModule } from "./vault/modules/organization-badge/orga
     OrganizationSubscriptionComponent,
     OrgAttachmentsComponent,
     OrgBulkConfirmComponent,
+    OrgBulkDeactivateomponent,
     OrgBulkRemoveComponent,
     OrgBulkStatusComponent,
     OrgCiphersComponent,
@@ -417,6 +422,7 @@ import { OrganizationBadgeModule } from "./vault/modules/organization-badge/orga
     OrgReusedPasswordsReportComponent,
     OrgSettingComponent,
     OrgToolsComponent,
+    OrgReportsComponent,
     OrgTwoFactorSetupComponent,
     OrgUnsecuredWebsitesReportComponent,
     OrgUserAddEditComponent,

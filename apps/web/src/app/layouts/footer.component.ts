@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
-import { PlatformUtilsService } from "jslib-common/abstractions/platformUtils.service";
+import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
 
 @Component({
   selector: "app-footer",
@@ -9,11 +9,13 @@ import { PlatformUtilsService } from "jslib-common/abstractions/platformUtils.se
 export class FooterComponent implements OnInit {
   version: string;
   year = "2015";
+  internalVersion: string;
 
   constructor(private platformUtilsService: PlatformUtilsService) {}
 
   async ngOnInit() {
     this.year = new Date().getFullYear().toString();
     this.version = await this.platformUtilsService.getApplicationVersion();
+    this.internalVersion = await this.platformUtilsService.getInternalApplicationVersion();
   }
 }

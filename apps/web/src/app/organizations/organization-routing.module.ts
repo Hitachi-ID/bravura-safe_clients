@@ -1,8 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
-import { AuthGuard } from "jslib-angular/guards/auth.guard";
-import { Permissions } from "jslib-common/enums/permissions";
+import { AuthGuard } from "@bitwarden/angular/guards/auth.guard";
+import { Permissions } from "@bitwarden/common/enums/permissions";
 
 import { PermissionsGuard } from "./guards/permissions.guard";
 import { OrganizationLayoutComponent } from "./layouts/organization-layout.component";
@@ -19,6 +19,7 @@ import { OrganizationSubscriptionComponent } from "./settings/organization-subsc
 import { SettingsComponent } from "./settings/settings.component";
 import { TwoFactorSetupComponent } from "./settings/two-factor-setup.component";
 import { ExportComponent } from "./tools/export.component";
+import { ReportsComponent } from "./tools/reports.component";
 import { ExposedPasswordsReportComponent } from "./tools/exposed-passwords-report.component";
 import { ImportComponent } from "./tools/import.component";
 import { InactiveTwoFactorReportComponent } from "./tools/inactive-two-factor-report.component";
@@ -72,6 +73,13 @@ const routes: Routes = [
               permissions: [Permissions.AccessImportExport],
             },
           },
+        ]
+      },
+      {
+        path: "reports",
+        component: ReportsComponent,
+        canActivate: [PermissionsGuard],
+        children: [
           {
             path: "exposed-passwords-report",
             component: ExposedPasswordsReportComponent,

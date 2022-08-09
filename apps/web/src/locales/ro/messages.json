@@ -421,11 +421,23 @@
     "message": "Copiere URI",
     "description": "Copy URI to clipboard"
   },
+  "me": {
+    "message": "Eu"
+  },
   "myVault": {
     "message": "Seiful meu"
   },
+  "allVaults": {
+    "message": "Toate seifurile"
+  },
   "vault": {
     "message": "Seif"
+  },
+  "vaults": {
+    "message": "Seifuri"
+  },
+  "vaultItems": {
+    "message": "Articole de seif"
   },
   "moveSelectedToOrg": {
     "message": "Mutați cele selectate în organizație"
@@ -891,6 +903,20 @@
   "length": {
     "message": "Lungime"
   },
+  "uppercase": {
+    "message": "Majuscule (A-Z)",
+    "description": "Include uppercase letters in the password generator."
+  },
+  "lowercase": {
+    "message": "Minuscule (a-z)",
+    "description": "Include lowercase letters in the password generator."
+  },
+  "numbers": {
+    "message": "Numere (0-9)"
+  },
+  "specialCharacters": {
+    "message": "Caractere speciale (!@#$%^&*)"
+  },
   "numWords": {
     "message": "Număr de cuvinte"
   },
@@ -1110,11 +1136,14 @@
   "options": {
     "message": "Opțiuni"
   },
-  "optionsDesc": {
-    "message": "Personalizați-vă experiența în seiful web."
+  "preferences": {
+    "message": "Preferințe"
   },
-  "optionsUpdated": {
-    "message": "Opțiunile s-au actualizat"
+  "preferencesDesc": {
+    "message": "Personalizați-vă experiența seifului web."
+  },
+  "preferencesUpdated": {
+    "message": "Preferințe actualizate"
   },
   "language": {
     "message": "Limbă"
@@ -1122,21 +1151,21 @@
   "languageDesc": {
     "message": "Alegeți limba în care folosiți seiful web."
   },
-  "disableIcons": {
-    "message": "Dezactivare iconuri sait"
+  "enableFavicon": {
+    "message": "Afișare pictograme site web"
   },
-  "disableIconsDesc": {
-    "message": "Iconurile saiturilor oferă o imagine identificabilă lângă fiecare element de conectare din seiful dvs."
+  "faviconDesc": {
+    "message": "Afișează o imagine ușor de recunoscut lângă fiecare autentificare."
   },
   "enableGravatars": {
-    "message": "Activare Gravatars",
-    "description": "'Gravatar' is the name of a service. See www.gravatar.com"
+    "message": "Afișare Gravatars",
+    "description": "Use avatar images loaded from gravatar.com."
   },
   "enableGravatarsDesc": {
     "message": "Folosește imagini avatar încărcate de pe gravatar.com."
   },
   "enableFullWidth": {
-    "message": "Activare aspect seif cu lățimea completă",
+    "message": "Afișare aspect pe toată lățimea",
     "description": "Allows scaling the web vault UI's width"
   },
   "enableFullWidthDesc": {
@@ -1209,6 +1238,9 @@
   "enabled": {
     "message": "Activat"
   },
+  "activate": {
+    "message": "Activare"
+  },
   "premium": {
     "message": "Premium",
     "description": "Premium Membership"
@@ -1232,6 +1264,9 @@
     "message": "Gestionare"
   },
   "disable": {
+    "message": "Dezactivare"
+  },
+  "deactivate": {
     "message": "Dezactivare"
   },
   "twoStepLoginProviderEnabled": {
@@ -1431,7 +1466,8 @@
     "message": "Rapoarte"
   },
   "reportsDesc": {
-    "message": "Identificați și eliminați lacunele de securitate din conturile dvs. online făcând clic pe rapoartele de mai jos."
+    "message": "Identificați și eliminați lacunele de securitate din conturile dvs. online făcând clic pe rapoartele de mai jos.",
+    "description": "Vault Health Reports can be used to evaluate the security of your Bitwarden Personal or Organization Vault."
   },
   "unsecuredWebsitesReport": {
     "message": "Site-uri web nesigure"
@@ -2196,6 +2232,12 @@
   "removeUserConfirmation": {
     "message": "Sigur doriți să eliminați acest utilizator?"
   },
+  "deactivateUserConfirmation": {
+    "message": "Membrul nu va mai avea acces la organizație, dar va avea în continuare acces la seiful său individual."
+  },
+  "activateUserConfirmation": {
+    "message": "Sunteți sigur că doriți să activați acest utilizator, acordându-i acces la organizație?"
+  },
   "removeUserConfirmationKeyConnector": {
     "message": "Avertisment! Acest utilizator are nevoie de Conector Cheie pentru a-și gestiona criptarea. Eliminarea acestui utilizator din organizația dvs., îi va dezactiva permanent contul. Această acțiune nu poate fi anulată. Doriți să continuați?"
   },
@@ -2534,6 +2576,42 @@
   },
   "removedUserId": {
     "message": "Utilizatorul $ID$ a fost eliminat.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
+  "deactivatedUserId": {
+    "message": "S-a dezactivat utilizatorul $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
+  "activatedUserId": {
+    "message": "S-a activat utilizatorul $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
+  "deactivateUserId": {
+    "message": "Dezactivați utilizatorul $ID$?",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
+  "activateUserId": {
+    "message": "Activați utilizatorul $ID$?",
     "placeholders": {
       "id": {
         "content": "$1",
@@ -3094,10 +3172,10 @@
     "message": "Filtre"
   },
   "vaultTimeout": {
-    "message": "Expirare seif"
+    "message": "Timp de expirare seif"
   },
   "vaultTimeoutDesc": {
-    "message": "Determină când seiful dvs. va expira și va efectua acțiunea selectată."
+    "message": "Alegeți când se va efectua acțiunea selectată la expirarea seifului."
   },
   "oneMinute": {
     "message": "1 minut"
@@ -3118,7 +3196,7 @@
     "message": "4 ore"
   },
   "onRefresh": {
-    "message": "La reîmprospătarea browserului"
+    "message": "La împrospătarea browserului"
   },
   "dateUpdated": {
     "message": "S-a actualizat",
@@ -3328,10 +3406,10 @@
     "message": "Acțiune la expirarea seifului"
   },
   "vaultTimeoutActionLockDesc": {
-    "message": "Un seif blocat necesită reintroducerea parolei principale pentru a-l accesa din nou."
+    "message": "Este necesară parola principală sau o altă metodă de deblocare pentru a vă accesa din nou seiful."
   },
   "vaultTimeoutActionLogOutDesc": {
-    "message": "Un seif deconectat necesită reautentificarea pentru a-l accesa din nou."
+    "message": "Este necesară o nouă autentificare pentru a vă accesa din nou seiful."
   },
   "lock": {
     "message": "Blocare",
@@ -3586,6 +3664,9 @@
     "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "disabled": {
+    "message": "Dezactivat"
+  },
+  "deactivated": {
     "message": "Dezactivat"
   },
   "sendLink": {
@@ -4133,7 +4214,7 @@
     "message": "Parolă resetată cu succes!"
   },
   "resetPasswordEnrollmentWarning": {
-    "message": "Înscrierea va permite administratorilor organizației să vă schimbe parola principală. Sigur doriți să vă înscrieți?"
+    "message": "Înscrierea va permite administratorilor organizației să vă schimbe parola principală"
   },
   "resetPasswordPolicy": {
     "message": "Resetare parolă principală"
@@ -4189,6 +4270,12 @@
   "removeUsersWarning": {
     "message": "Sunteți sigur că doriți să eliminați următorii utilizatori? Finalizarea procesului poate dura câteva secunde și nu poate fi întrerupt sau anulat."
   },
+  "deactivateUsersWarning": {
+    "message": "Sunteți sigur că doriți să dezactivați următorii membri? Aceștia nu vor mai avea acces la organizație, dar vor avea în continuare acces la seifurile lor individuale. Procesul poate dura câteva secunde pentru a se finaliza și nu poate fi întrerupt sau anulat."
+  },
+  "activateUsersWarning": {
+    "message": "Sunteți sigur că doriți să activați următorii membri, acordându-le acces la organizație? Finalizarea procesului poate dura câteva secunde și nu poate fi întreruptă sau anulată."
+  },
   "theme": {
     "message": "Temă"
   },
@@ -4219,6 +4306,12 @@
   "bulkRemovedMessage": {
     "message": "Eliminat cu succes"
   },
+  "bulkDeactivatedMessage": {
+    "message": "S-a dezactivat cu succes"
+  },
+  "bulkActivatedMessage": {
+    "message": "S-a activat cu succes"
+  },
   "bulkFilteredMessage": {
     "message": "Exclus, nu se aplică pentru această acțiune."
   },
@@ -4227,6 +4320,12 @@
   },
   "removeUsers": {
     "message": "Eliminați utilizatorii"
+  },
+  "deactivateUsers": {
+    "message": "Dezactivare utilizatori"
+  },
+  "activateUsers": {
+    "message": "Activare utilizatori"
   },
   "error": {
     "message": "Eroare"
@@ -4401,6 +4500,12 @@
   "vaultTimeoutToLarge": {
     "message": "Timpul de expirare a seifului depășește restricția stabilită de organizația dvs."
   },
+  "vaultCustomTimeoutMinimum": {
+    "message": "Durata minimă de expirare personalizată este de 1 minut."
+  },
+  "vaultTimeoutRangeError": {
+    "message": "Expirarea seifului nu se încadrează în intervalul permis."
+  },
   "disablePersonalVaultExport": {
     "message": "Dezactivare a exportului seifului personal"
   },
@@ -4528,13 +4633,13 @@
     "message": "Configurația de conectare unică a fost salvată."
   },
   "sponsoredFamilies": {
-    "message": "Planul Bitwarden Familiile gratuit"
+    "message": "Planul Bitwarden Familii gratuit"
   },
   "sponsoredFamiliesEligible": {
-    "message": "Dumneavoastră și familia dvs., sunteți eligibili pentru planul Bitwarden Familiile gratuit. Revendicați-l cu e-mailul personal pentru a vă păstra datele în siguranță chiar și atunci când nu sunteți la locul de muncă."
+    "message": "Dumneavoastră și familia dvs., sunteți eligibili pentru planul Bitwarden Familii gratuit. Revendicați-l cu e-mailul personal pentru a vă păstra datele în siguranță chiar și atunci când nu sunteți la locul de muncă."
   },
   "sponsoredFamiliesEligibleCard": {
-    "message": "Schimbați-vă astăzi planul Bitwarden Gratuit pentru Familiile, pentru a vă păstra datele dvs. sigure, chiar și atunci când nu sunteți la locul de muncă."
+    "message": "Schimbați-vă astăzi planul Bitwarden Gratuit pentru Familii, pentru a vă păstra datele dvs. sigure, chiar și atunci când nu sunteți la locul de muncă."
   },
   "sponsoredFamiliesInclude": {
     "message": "Planul Bitwarden Familiile include"
@@ -4558,19 +4663,19 @@
     "message": "Selectați organizația pe care doriți să o sponsorizați"
   },
   "familiesSponsoringOrgSelect": {
-    "message": "Ce ofertă Gratuită Familiile ați dori să revendicați?"
+    "message": "Ce ofertă Gratuită Familii ați dori să revendicați?"
   },
   "sponsoredFamiliesEmail": {
     "message": "Introduceți e-mailul dvs. personal pentru a revendica planul Bitwarden Familiile"
   },
   "sponsoredFamiliesLeaveCopy": {
-    "message": "Dacă părăsiți sau sunteți exclus din organizația sponsor, planul dvs. Familiile va expira la sfârșitul perioadei de facturare."
+    "message": "Dacă eliminați o ofertă sau dacă sunteți eliminat din organizația care vă sponsorizează, sponsorizarea Familii va expira la următoarea dată de reînnoire."
   },
   "acceptBitwardenFamiliesHelp": {
     "message": "Acceptați oferta pentru o organizație existentă sau creați o nouă organizație Familiile."
   },
   "setupSponsoredFamiliesLoginDesc": {
-    "message": "Vi s-a oferit gratuit un plan de Organizație Bitwarden Familiile. Pentru a continua, trebuie să vă conectați la contul care a primit oferta."
+    "message": "Vi s-a oferit gratuit un plan de Organizație Bitwarden Familii. Pentru a continua, trebuie să vă conectați la contul care a primit oferta."
   },
   "sponsoredFamiliesAcceptFailed": {
     "message": "Imposibil de acceptat oferta. Vă rugăm să retrimiteți e-mailul ofertei din contul dvs. de întreprindere și încercați din nou."
@@ -4585,10 +4690,10 @@
     }
   },
   "sponsoredFamiliesOffer": {
-    "message": "Acceptați planul Bitwarden Familiile gratuit"
+    "message": "Acceptați planul Bitwarden Familii gratuit"
   },
   "sponsoredFamiliesOfferRedeemed": {
-    "message": "Oferta gratuită Bitwarden Familiile a fost revendicată cu succes"
+    "message": "Oferta gratuită Bitwarden Familii a fost revendicată cu succes"
   },
   "redeemed": {
     "message": "Revendicată"
@@ -4615,7 +4720,7 @@
     }
   },
   "freeFamiliesPlan": {
-    "message": "Planul Familiile gratuit"
+    "message": "Planul Familii gratuit"
   },
   "redeemNow": {
     "message": "Revendicați acum"
@@ -4639,13 +4744,13 @@
     "message": "E-mail trimis"
   },
   "revokeSponsorshipConfirmation": {
-    "message": "După eliminarea acestui cont, proprietarul organizației Familiile va fi responsabil pentru acest abonament și facturile aferente. Sigur doriți să continuați?"
+    "message": "După eliminarea acestui cont, sponsorizarea planului Familii va expira la sfârșitul perioadei de facturare. Nu veți putea revendica o nouă ofertă de sponsorizare până când nu expiră cea existentă. Sunteți sigur că doriți să continuați?"
   },
   "removeSponsorshipSuccess": {
     "message": "Sponsorizare eliminată"
   },
-  "ssoKeyConnectorUnavailable": {
-    "message": "Nu se poate accesa Conectorul Cheie. Vă rugăm să încercați din nou mai târziu."
+  "ssoKeyConnectorError": {
+    "message": "Eroare de Conector Cheie: asigurați-vă că aveți conectorul Cheie disponibil și că funcționează corect."
   },
   "keyConnectorUrl": {
     "message": "URL de Conector Cheie"
@@ -4773,6 +4878,75 @@
   "freeWithSponsorship": {
     "message": "GRATUIT cu sponsorizare"
   },
+  "viewBillingSyncToken": {
+    "message": "Vizualizare token de sincronizare a facturării"
+  },
+  "generateBillingSyncToken": {
+    "message": "Generare token de sincronizare a facturării"
+  },
+  "copyPasteBillingSync": {
+    "message": "Copiați și lipiți acest token în setările de sincronizare a facturării din organizația dvs. auto-găzduită."
+  },
+  "billingSyncCanAccess": {
+    "message": "Tokenul dvs. pentru sincronizarea facturării poate accesa și edita setările de abonament ale acestei organizații."
+  },
+  "manageBillingSync": {
+    "message": "Gestionarea sincronizării facturării"
+  },
+  "setUpBillingSync": {
+    "message": "Configurarea sincronizării facturării"
+  },
+  "generateToken": {
+    "message": "Generare token"
+  },
+  "rotateToken": {
+    "message": "Revocare token"
+  },
+  "rotateBillingSyncTokenWarning": {
+    "message": "Continuând, va trebui să reinițializați sincronizarea facturării pe serverul dvs. auto-găzduit."
+  },
+  "rotateBillingSyncTokenTitle": {
+    "message": "Revocarea tokenului de sincronizare a facturării va invalida tokenul anterior."
+  },
+  "selfHostingTitle": {
+    "message": "Auto-găzduire"
+  },
+  "selfHostingEnterpriseOrganizationSectionCopy": {
+    "message": "Pentru a vă configura organizația pe propriul server, va trebui să încărcați fișierul de licență. Pentru a susține planurile Familii gratuite și capacitățile avansate de facturare pentru organizația dvs. auto-găzduită, va trebui să configurați sincronizarea facturării."
+  },
+  "billingSyncApiKeyRotated": {
+    "message": "Token revocat."
+  },
+  "billingSync": {
+    "message": "Sincronizarea facturării"
+  },
+  "billingSyncDesc": {
+    "message": "Sincronizarea facturării oferă planuri Familii gratuite pentru membri și capabilități avansate de facturare prin conectarea Bitwarden auto-găzduit la serverul cloud Bitwarden."
+  },
+  "billingSyncKeyDesc": {
+    "message": "Pentru a completa acest formular este necesar un token pentru sincronizarea facturării din setările de abonament ale organizației dvs. cloud."
+  },
+  "billingSyncKey": {
+    "message": "Tokenul de sincronizare a facturării"
+  },
+  "active": {
+    "message": "Activ"
+  },
+  "inactive": {
+    "message": "Inactiv"
+  },
+  "sentAwaitingSync": {
+    "message": "Trimis (Așteptând sincronizarea)"
+  },
+  "sent": {
+    "message": "Trimis"
+  },
+  "requestRemoved": {
+    "message": "Eliminat (Așteptând sincronizarea)"
+  },
+  "requested": {
+    "message": "Solicitat"
+  },
   "formErrorSummaryPlural": {
     "message": "$COUNT$ câmpuri de mai sus necesită atenția dvs.",
     "placeholders": {
@@ -4836,8 +5010,33 @@
       }
     }
   },
+  "accessDenied": {
+    "message": "Acces refuzat. Nu aveți permisiunea de a vizualiza această pagină."
+  },
+  "masterPassword": {
+    "message": "Parola principală"
+  },
+  "security": {
+    "message": "Securitate"
+  },
+  "keys": {
+    "message": "Chei"
+  },
+  "billingHistory": {
+    "message": "Istoric de facturare"
+  },
   "backToReports": {
     "message": "Înapoi la rapoarte"
+  },
+  "organizationPicker": {
+    "message": "Selector de organizație"
+  },
+  "currentOrganization": {
+    "message": "Organizația actuală",
+    "description": "This is used by screen readers to indicate the organization that is currently being shown to the user."
+  },
+  "accountSettings": {
+    "message": "Setările contului"
   },
   "generator": {
     "message": "Generator"
@@ -4871,12 +5070,100 @@
     "message": "Utilizați inbox-ul catch-all configurat pentru domeniul dvs."
   },
   "random": {
-    "message": "Aleatoriu"
+    "message": "Aleatoriu",
+    "description": "Generates domain-based username using random letters"
   },
   "randomWord": {
     "message": "Cuvânt aleatoriu"
   },
   "service": {
     "message": "Serviciu"
+  },
+  "unknownCipher": {
+    "message": "Articol necunoscut, ar putea fi nevoie de solicitarea permisiunii de a accesa acest articol."
+  },
+  "cannotSponsorSelf": {
+    "message": "Nu puteți revendica pentru contul activ. Introduceți un alt e-mail."
+  },
+  "revokeWhenExpired": {
+    "message": "Expiră $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "12/31/2020"
+      }
+    }
+  },
+  "awaitingSyncSingular": {
+    "message": "Tokenul a fost revocat acum $DAYS$ zi. Actualizați tokenul pentru sincronizarea facturării în setările organizației auto-găzduite.",
+    "placeholders": {
+      "days": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "awaitingSyncPlural": {
+    "message": "Tokenul a fost revocat acum $DAYS$ zile. Actualizați tokenul pentru sincronizarea facturării în setările organizației auto-găzduite.",
+    "placeholders": {
+      "days": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "lastSync": {
+    "message": "Ultimul Sync",
+    "Description": "Used as a prefix to indicate the last time a sync occured. Example \"Last sync 1968-11-16 00:00:00\""
+  },
+  "sponsorshipsSynced": {
+    "message": "Sponsorizări auto-găzduite sincronizate."
+  },
+  "billingManagedByProvider": {
+    "message": "Gestionat de $PROVIDER$",
+    "placeholders": {
+      "provider": {
+        "content": "$1",
+        "example": "Managed Services Company"
+      }
+    }
+  },
+  "billingContactProviderForAssistance": {
+    "message": "Vă rugăm să luați legătura cu aceștia pentru asistență suplimentară",
+    "description": "This text is displayed if an organization's billing is managed by a Provider. It tells the user to contact the Provider for assistance."
+  },
+  "forwardedEmail": {
+    "message": "Alias de e-mail redirecționat"
+  },
+  "forwardedEmailDesc": {
+    "message": "Generați un alias de e-mail cu un serviciu de redirecționare extern."
+  },
+  "hostname": {
+    "message": "Nume gazdă",
+    "description": "Part of a URL."
+  },
+  "apiAccessToken": {
+    "message": "Token de acces API"
+  },
+  "deviceVerification": {
+    "message": "Verificarea dispozitivului"
+  },
+  "enableDeviceVerification": {
+    "message": "Activați verificarea dispozitivului"
+  },
+  "deviceVerificationDesc": {
+    "message": "Când este activat, codurile de verificare sunt trimise la adresa dvs. de e-mail atunci când vă conectați de pe un dispozitiv nerecunoscut"
+  },
+  "updatedDeviceVerification": {
+    "message": "Verificarea dispozitivului actualizată"
+  },
+  "areYouSureYouWantToEnableDeviceVerificationTheVerificationCodeEmailsWillArriveAtX": {
+    "message": "Sunteți sigur că doriți să activați Verificarea dispozitivului? E-mailurile cu codul de verificare vor ajunge la: $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "My Email"
+      }
+    }
   }
 }

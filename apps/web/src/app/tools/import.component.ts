@@ -3,13 +3,13 @@ import { Router } from "@angular/router";
 import * as JSZip from "jszip";
 import Swal, { SweetAlertIcon } from "sweetalert2";
 
-import { I18nService } from "jslib-common/abstractions/i18n.service";
-import { ImportService } from "jslib-common/abstractions/import.service";
-import { LogService } from "jslib-common/abstractions/log.service";
-import { PlatformUtilsService } from "jslib-common/abstractions/platformUtils.service";
-import { PolicyService } from "jslib-common/abstractions/policy.service";
-import { ImportOption, ImportType } from "jslib-common/enums/importOptions";
-import { PolicyType } from "jslib-common/enums/policyType";
+import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
+import { ImportService } from "@bitwarden/common/abstractions/import.service";
+import { LogService } from "@bitwarden/common/abstractions/log.service";
+import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
+import { PolicyService } from "@bitwarden/common/abstractions/policy.service";
+import { ImportOption, ImportType } from "@bitwarden/common/enums/importOptions";
+import { PolicyType } from "@bitwarden/common/enums/policyType";
 
 @Component({
   selector: "app-import",
@@ -165,7 +165,7 @@ export class ImportComponent implements OnInit {
       heightAuto: false,
       buttonsStyling: false,
       icon: "error" as SweetAlertIcon,
-      iconHtml: `<i class="swal-custom-icon bwi bwi-error text-danger"></i>`,
+      iconHtml: `<i class="swal-custom-icon fa fa-bolt text-danger"></i>`,
       input: "textarea",
       inputValue: error.message,
       inputAttributes: {

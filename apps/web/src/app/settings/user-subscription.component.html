@@ -8,7 +8,7 @@
     {{ title }}
     <small *ngIf="firstLoaded && loading">
       <i
-        class="bwi bwi-spinner bwi-spin text-muted"
+        class="fa fa-spinner fa-spin text-muted"
         title="{{ 'loading' | i18n }}"
         aria-hidden="true"
       ></i>
@@ -18,7 +18,7 @@
 </div>
 <ng-container *ngIf="!firstLoaded && loading">
   <i
-    class="bwi bwi-spinner bwi-spin text-muted"
+    class="fa fa-spinner fa-spin text-muted"
     title="{{ 'loading' | i18n }}"
     aria-hidden="true"
   ></i>
@@ -48,7 +48,7 @@
       [appApiAction]="reinstatePromise"
       [disabled]="reinstateBtn.loading"
     >
-      <i class="bwi bwi-spinner bwi-spin" title="{{ 'loading' | i18n }}" aria-hidden="true"></i>
+      <i class="fa fa-spinner fa-spin" title="{{ 'loading' | i18n }}" aria-hidden="true"></i>
       <span>{{ "reinstateSubscription" | i18n }}</span>
     </button>
   </bit-callout>
@@ -94,40 +94,7 @@
       </table>
     </div>
   </div>
-  <ng-container *ngIf="selfHosted">
-    <div>
-      <button type="button" bitButton buttonType="secondary" (click)="updateLicense()">
-        {{ "updateLicense" | i18n }}
-      </button>
-      <a
-        bitButton
-        buttonType="secondary"
-        href="https://vault.bitwarden.com/#/settings/subscription"
-        target="_blank"
-        rel="noopener"
-      >
-        {{ "manageSubscription" | i18n }}
-      </a>
-    </div>
-    <div class="card mt-3" *ngIf="showUpdateLicense">
-      <div class="card-body">
-        <button
-          type="button"
-          class="close"
-          appA11yTitle="{{ 'cancel' | i18n }}"
-          (click)="closeUpdateLicense(false)"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h3 class="card-body-header">{{ "updateLicense" | i18n }}</h3>
-        <app-update-license
-          (onUpdated)="closeUpdateLicense(true)"
-          (onCanceled)="closeUpdateLicense(false)"
-        >
-        </app-update-license>
-      </div>
-    </div>
-  </ng-container>
+
   <ng-container *ngIf="!selfHosted">
     <div class="d-flex">
       <button
@@ -150,7 +117,7 @@
         [disabled]="cancelBtn.loading"
         *ngIf="subscription && !subscription.cancelled && !subscriptionMarkedForCancel"
       >
-        <i class="bwi bwi-spinner bwi-spin" title="{{ 'loading' | i18n }}" aria-hidden="true"></i>
+        <i class="fa fa-spinner fa-spin" title="{{ 'loading' | i18n }}" aria-hidden="true"></i>
         <span>{{ "cancelSubscription" | i18n }}</span>
       </button>
     </div>

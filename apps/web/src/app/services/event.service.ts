@@ -1,11 +1,11 @@
 import { Injectable } from "@angular/core";
 
-import { I18nService } from "jslib-common/abstractions/i18n.service";
-import { PolicyService } from "jslib-common/abstractions/policy.service";
-import { DeviceType } from "jslib-common/enums/deviceType";
-import { EventType } from "jslib-common/enums/eventType";
-import { PolicyType } from "jslib-common/enums/policyType";
-import { EventResponse } from "jslib-common/models/response/eventResponse";
+import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
+import { PolicyService } from "@bitwarden/common/abstractions/policy.service";
+import { DeviceType } from "@bitwarden/common/enums/deviceType";
+import { EventType } from "@bitwarden/common/enums/eventType";
+import { PolicyType } from "@bitwarden/common/enums/policyType";
+import { EventResponse } from "@bitwarden/common/models/response/eventResponse";
 
 @Injectable()
 export class EventService {
@@ -384,50 +384,47 @@ export class EventService {
   private getAppInfo(deviceType: DeviceType): [string, string] {
     switch (deviceType) {
       case DeviceType.Android:
-        return ["bwi-android", this.i18nService.t("mobile") + " - Android"];
+        return ["fa-android", this.i18nService.t("mobile") + " - Android"];
       case DeviceType.iOS:
-        return ["bwi-apple", this.i18nService.t("mobile") + " - iOS"];
+        return ["fa-apple", this.i18nService.t("mobile") + " - iOS"];
       case DeviceType.UWP:
-        return ["bwi-windows", this.i18nService.t("mobile") + " - Windows"];
+        return ["fa-windows", this.i18nService.t("mobile") + " - Windows"];
       case DeviceType.ChromeExtension:
-        return ["bwi-chrome", this.i18nService.t("extension") + " - Chrome"];
+        return ["fa-chrome", this.i18nService.t("extension") + " - Chrome"];
       case DeviceType.FirefoxExtension:
-        return ["bwi-firefox", this.i18nService.t("extension") + " - Firefox"];
+        return ["fa-firefox", this.i18nService.t("extension") + " - Firefox"];
       case DeviceType.OperaExtension:
-        return ["bwi-opera", this.i18nService.t("extension") + " - Opera"];
+        return ["fa-opera", this.i18nService.t("extension") + " - Opera"];
       case DeviceType.EdgeExtension:
-        return ["bwi-edge", this.i18nService.t("extension") + " - Edge"];
+        return ["fa-edge", this.i18nService.t("extension") + " - Edge"];
       case DeviceType.VivaldiExtension:
-        return ["bwi-puzzle", this.i18nService.t("extension") + " - Vivaldi"];
+        return ["fa-puzzle-piece", this.i18nService.t("extension") + " - Vivaldi"];
       case DeviceType.SafariExtension:
-        return ["bwi-safari", this.i18nService.t("extension") + " - Safari"];
+        return ["fa-safari", this.i18nService.t("extension") + " - Safari"];
       case DeviceType.WindowsDesktop:
-        return ["bwi-windows", this.i18nService.t("desktop") + " - Windows"];
+        return ["fa-windows", this.i18nService.t("desktop") + " - Windows"];
       case DeviceType.MacOsDesktop:
-        return ["bwi-apple", this.i18nService.t("desktop") + " - macOS"];
+        return ["fa-apple", this.i18nService.t("desktop") + " - macOS"];
       case DeviceType.LinuxDesktop:
-        return ["bwi-linux", this.i18nService.t("desktop") + " - Linux"];
+        return ["fa-linux", this.i18nService.t("desktop") + " - Linux"];
       case DeviceType.ChromeBrowser:
-        return ["bwi-globe", this.i18nService.t("webVault") + " - Chrome"];
+        return ["fa-globe", this.i18nService.t("webVault") + " - Chrome"];
       case DeviceType.FirefoxBrowser:
-        return ["bwi-globe", this.i18nService.t("webVault") + " - Firefox"];
+        return ["fa-globe", this.i18nService.t("webVault") + " - Firefox"];
       case DeviceType.OperaBrowser:
-        return ["bwi-globe", this.i18nService.t("webVault") + " - Opera"];
+        return ["fa-globe", this.i18nService.t("webVault") + " - Opera"];
       case DeviceType.SafariBrowser:
-        return ["bwi-globe", this.i18nService.t("webVault") + " - Safari"];
+        return ["fa-globe", this.i18nService.t("webVault") + " - Safari"];
       case DeviceType.VivaldiBrowser:
-        return ["bwi-globe", this.i18nService.t("webVault") + " - Vivaldi"];
+        return ["fa-globe", this.i18nService.t("webVault") + " - Vivaldi"];
       case DeviceType.EdgeBrowser:
-        return ["bwi-globe", this.i18nService.t("webVault") + " - Edge"];
+        return ["fa-globe", this.i18nService.t("webVault") + " - Edge"];
       case DeviceType.IEBrowser:
-        return ["bwi-globe", this.i18nService.t("webVault") + " - IE"];
+        return ["fa-globe", this.i18nService.t("webVault") + " - IE"];
       case DeviceType.UnknownBrowser:
-        return [
-          "bwi-globe",
-          this.i18nService.t("webVault") + " - " + this.i18nService.t("unknown"),
-        ];
+        return ["fa-globe", this.i18nService.t("webVault") + " - " + this.i18nService.t("unknown")];
       default:
-        return ["bwi-globe", this.i18nService.t("unknown")];
+        return ["fa-globe", this.i18nService.t("unknown")];
     }
   }
 

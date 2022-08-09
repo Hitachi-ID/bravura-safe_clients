@@ -1,28 +1,15 @@
-> **Repository Reorganization in Progress**
->
-> We are currently migrating some projects over to a mono repository. For existing PR's we will be providing documentation on how to move/migrate them. To minimize the overhead we are actively reviewing open PRs. If possible please ensure any pending comments are resolved as soon as possible.
->
-> New pull requests created during this transition period may not get addressed —if needed, please create a new PR after the reorganization is complete.
+**Hitachi ID Bravura Safe is a modified version of Bitwarden®. It was developed using Bitwarden open source software.  
+Hitachi ID Systems, Inc. and Bravura Safe are not affiliated with or endorsed by Bitwarden or Bitwarden, Inc.  
+Bitwarden is a trademark or registered trademark of Bitwarden, Inc. in the United States and/or other countries.**
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/bitwarden/brand/master/screenshots/web-vault-macbook.png" alt="" width="600" height="358" />
-</p>
-<p align="center">
-    The Bitwarden web project is an Angular application that powers the web vault (https://vault.bitwarden.com/).
-</p>
-<p align="center">
-  <a href="https://github.com/bitwarden/web/actions?query=branch:master" target="_blank">
-    <img src="https://github.com/bitwarden/web/actions/workflows/build.yml/badge.svg?branch=master" alt="Github Workflow build on master" />
-  </a>
-  <a href="https://crowdin.com/project/bitwarden-web" target="_blank">
-    <img src="https://d322cqt584bo4o.cloudfront.net/bitwarden-web/localized.svg" alt="Crowdin" />
-  </a>
-  <a href="https://hub.docker.com/u/bitwarden/" target="_blank">
-    <img src="https://img.shields.io/docker/pulls/bitwarden/web.svg" alt="DockerHub" />
-  </a>
-  <a href="https://gitter.im/bitwarden/Lobby" target="_blank">
-    <img src="https://badges.gitter.im/bitwarden/Lobby.svg" alt="gitter chat" />
-  </a>
+The original work is available at [https://github.com/bitwarden/server].
+The original documentation is available at [https://bitwarden.com/help/].
+A complete list of all changes is available in the git history of this project.
+
+This project contains the user interface elements and other core infrastructure items needed for the "web" portion of all bitwarden client applications.
+
+The server project is written in Angular/Node JS. The codebase can be developed, built, run, and deployed cross-platform on Windows, macOS, and Linux distributions.
+
 </p>
 
 ## Build/Run
@@ -65,15 +52,11 @@ You can also manually adjusting your API endpoint settings by adding `config/loc
 }
 ```
 
-Where the `urls` object is defined by the [Urls type in jslib](https://github.com/bitwarden/jslib/blob/master/common/src/abstractions/environment.service.ts).
-
-## We're Hiring!
-
-Interested in contributing in a big way? Consider joining our team! We're hiring for many positions. Please take a look at our [Careers page](https://bitwarden.com/careers/) to see what opportunities are currently open as well as what it's like to work at Bitwarden.
+Where the `urls` object is defined by the [Urls type in jslib](https://github.com/hitachi-id/bravura-safe_jslib/blob/master/common/src/abstractions/environment.service.ts).
 
 ## Contribute
 
-Code contributions are welcome! Please commit any pull requests against the `master` branch. Learn more about how to contribute by reading the [`CONTRIBUTING.md`](CONTRIBUTING.md) file.
+Code contributions to this fork are not required! Please consider contributing to the original project.
 
 Security audits and feedback are welcome. Please open an issue or email us privately if the report is sensitive in nature. You can read our security policy in the [`SECURITY.md`](SECURITY.md) file.
 

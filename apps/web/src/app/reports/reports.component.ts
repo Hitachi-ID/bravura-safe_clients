@@ -1,25 +1,25 @@
-import { Component, OnDestroy } from "@angular/core";
-import { NavigationEnd, Router } from "@angular/router";
-import { Subscription } from "rxjs";
-import { filter } from "rxjs/operators";
+import { Component, OnInit } from "@angular/core";
+
+import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
+import { StateService } from "@bitwarden/common/abstractions/state.service";
 
 @Component({
   selector: "app-reports",
   templateUrl: "reports.component.html",
 })
-export class ReportsComponent implements OnDestroy {
-  homepage = true;
-  subscription: Subscription;
+export class ReportsComponent implements OnInit {
+  canAccessPremium = false;
 
-  constructor(router: Router) {
-    this.subscription = router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe((event) => {
-        this.homepage = (event as NavigationEnd).url == "/reports";
-      });
+  constructor(private stateService: StateService, private messagingService: MessagingService) {}
+
+  async ngOnInit() {
+    this.canAccessPremium = await this.stateService.getCanAccessPremium();
   }
 
-  ngOnDestroy(): void {
-    this.subscription?.unsubscribe();
+  premiumRequired() {
+    if (!this.canAccessPremium) {
+      this.messagingService.send("premiumRequired");
+      return;
+    }
   }
 }

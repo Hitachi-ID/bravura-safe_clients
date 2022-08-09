@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 
-import { PlatformUtilsService } from "jslib-common/abstractions/platformUtils.service";
+import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
 
 @Component({
   selector: "app-frontend-layout",
@@ -9,12 +9,14 @@ import { PlatformUtilsService } from "jslib-common/abstractions/platformUtils.se
 export class FrontendLayoutComponent implements OnInit, OnDestroy {
   version: string;
   year = "2015";
+  internalVersion: string;
 
   constructor(private platformUtilsService: PlatformUtilsService) {}
 
   async ngOnInit() {
     this.year = new Date().getFullYear().toString();
     this.version = await this.platformUtilsService.getApplicationVersion();
+    this.internalVersion = await this.platformUtilsService.getInternalApplicationVersion();
     document.body.classList.add("layout_frontend");
   }
 

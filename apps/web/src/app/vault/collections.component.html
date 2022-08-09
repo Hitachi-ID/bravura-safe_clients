@@ -33,7 +33,11 @@
         </div>
         <table class="table table-hover table-list mb-0" *ngIf="collections && collections.length">
           <tbody>
-            <tr *ngFor="let c of collections; let i = index" (click)="check(c)">
+            <tr
+              *ngFor="let c of collections; let i = index"
+              (click)="check(c)"
+              [ngClass]="{ 'table-active': c.checked }"
+            >
               <td class="table-list-checkbox">
                 <input
                   type="checkbox"
@@ -51,7 +55,7 @@
       </div>
       <div class="modal-footer">
         <button type="submit" class="btn btn-primary btn-submit" [disabled]="form.loading">
-          <i class="bwi bwi-spinner bwi-spin" title="{{ 'loading' | i18n }}" aria-hidden="true"></i>
+          <i class="fa fa-spinner fa-spin" title="{{ 'loading' | i18n }}" aria-hidden="true"></i>
           <span>{{ "save" | i18n }}</span>
         </button>
         <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">

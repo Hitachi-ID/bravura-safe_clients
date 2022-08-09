@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "Bravura Safe"
       }
     }
   },
@@ -16,11 +16,11 @@
     "message": "Name"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -210,11 +210,11 @@
   },
   "matchDetection": {
     "message": "Übereinstimmungserkennung",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Standard Übereinstimmungserkennung",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "never": {
     "message": "Niemals"
@@ -418,14 +418,26 @@
     "description": "Copy credit card security code (CVV)"
   },
   "copyUri": {
-    "message": "URI kopieren",
-    "description": "Copy URI to clipboard"
+    "message": "URL kopieren",
+    "description": "Copy URL to clipboard"
+  },
+  "me": {
+    "message": "Ich"
   },
   "myVault": {
     "message": "Mein Tresor"
   },
+  "allVaults": {
+    "message": "Alle Tresore"
+  },
   "vault": {
     "message": "Tresor"
+  },
+  "vaults": {
+    "message": "Tresore"
+  },
+  "vaultItems": {
+    "message": "Tresor-Einträge"
   },
   "moveSelectedToOrg": {
     "message": "Auswahl zur Organisation verschieben"
@@ -647,7 +659,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -855,7 +867,7 @@
     "message": "Dieser Export verschlüsselt Ihre Daten mit dem Verschlüsselungscode Ihres Kontos. Falls Sie Ihren Verschlüsselungscode erneuern, sollten Sie den Export erneut durchführen, da Sie die zuvor erstellte Datei ansonsten nicht mehr entschlüsseln können."
   },
   "encExportAccountWarningDesc": {
-    "message": "Die Verschlüsselungscodes eines Kontos sind für jedes Bitwarden Benutzerkonto einzigartig, deshalb können Sie keinen verschlüsselten Export in ein anderes Konto importieren."
+    "message": "Die Verschlüsselungscodes eines Kontos sind für jedes Bravura Safe Benutzerkonto einzigartig, deshalb können Sie keinen verschlüsselten Export in ein anderes Konto importieren."
   },
   "export": {
     "message": "Export"
@@ -890,6 +902,20 @@
   },
   "length": {
     "message": "Länge"
+  },
+  "uppercase": {
+    "message": "Großbuchstaben (A-Z)",
+    "description": "Include uppercase letters in the password generator."
+  },
+  "lowercase": {
+    "message": "Kleinbuchstaben (a-z)",
+    "description": "Include lowercase letters in the password generator."
+  },
+  "numbers": {
+    "message": "Zahlen (0-9)"
+  },
+  "specialCharacters": {
+    "message": "Sonderzeichen (!@#$%^&*)"
   },
   "numWords": {
     "message": "Anzahl der Wörter"
@@ -948,7 +974,7 @@
     "message": "Bitte melden Sie sich erneut an."
   },
   "logBackInOthersToo": {
-    "message": "Bitte melden Sie sich wieder an. Wenn Sie andere Bitwarden-Anwendungen verwenden, melden Sie sich auch dort ab und wieder neu an."
+    "message": "Bitte melden Sie sich wieder an. Wenn Sie andere Bravura Safe-Anwendungen verwenden, melden Sie sich auch dort ab und wieder neu an."
   },
   "changeMasterPassword": {
     "message": "Master-Passwort ändern"
@@ -984,7 +1010,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "Wenn du die Anzahl der KDF-Iterationen zu hoch setzt, kann es sein, dass das Einloggen in Bitwarden (und Entsperren) auf langsameren Geräten länger dauert. Wir empfehlen, dass du den Wert um $INCREMENT$ Schrittweise anhebest und es auf allen Geräten testest.",
+    "message": "Wenn du die Anzahl der KDF-Iterationen zu hoch setzt, kann es sein, dass das Einloggen in Bravura Safe (und Entsperren) auf langsameren Geräten länger dauert. Wir empfehlen, dass du den Wert um $INCREMENT$ Schrittweise anhebest und es auf allen Geräten testest.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -1110,11 +1136,14 @@
   "options": {
     "message": "Optionen"
   },
-  "optionsDesc": {
-    "message": "Passen Sie den Web-Tresor Ihren Bedürfnissen an."
+  "preferences": {
+    "message": "Einstellungen"
   },
-  "optionsUpdated": {
-    "message": "Optionen aktualisiert"
+  "preferencesDesc": {
+    "message": "Passe den Web-Tresor deinen Bedürfnissen an."
+  },
+  "preferencesUpdated": {
+    "message": "Einstellungen aktualisiert"
   },
   "language": {
     "message": "Sprache"
@@ -1122,15 +1151,15 @@
   "languageDesc": {
     "message": "Ändern Sie die Sprache für den Web-Tresor."
   },
-  "disableIcons": {
-    "message": "Website-Icons deaktivieren"
+  "enableFavicon": {
+    "message": "Show website icons"
   },
-  "disableIconsDesc": {
-    "message": "Website-Icons zeigen ein wiedererkennbares Bild neben jedem Eintrag in Ihrem Tresor."
+  "faviconDesc": {
+    "message": "Show a recognizable image next to each login."
   },
   "enableGravatars": {
-    "message": "Aktiviere Gravatare",
-    "description": "'Gravatar' is the name of a service. See www.gravatar.com"
+    "message": "Gravatare aktivieren",
+    "description": "Use avatar images loaded from gravatar.com."
   },
   "enableGravatarsDesc": {
     "message": "Nutze Profilbilder von gravatar.com."
@@ -1149,7 +1178,7 @@
     "message": "Domain-Regeln"
   },
   "domainRulesDesc": {
-    "message": "Wenn Sie die gleiche Anmeldung über mehrere verschiedene Webseitendomänen hinweg haben, können Sie die Webseite als \"gleichwertig\" markieren. \"Globale\" Domänen wurden bereits von Bitwarden für Sie angelegt."
+    "message": "Wenn Sie die gleiche Anmeldung über mehrere verschiedene Webseitendomänen hinweg haben, können Sie die Webseite als \"gleichwertig\" markieren. \"Globale\" Domänen wurden bereits von Bravura Safe für Sie angelegt."
   },
   "globalEqDomains": {
     "message": "Globale gleichwertige Domains"
@@ -1194,7 +1223,7 @@
     "message": "Zwei-Faktor-Authentifizierung für die Benutzer Ihrer Organisation verlangen, indem Sie Anbieter auf Organisationsebene konfigurieren."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "Durch die Aktivierung der Zwei-Faktor-Authentifizierung könnten Sie sich dauerhaft aus Ihrem Bitwarden-Konto aussperren. Ein Wiederherstellungscode ermöglicht es Ihnen, auf Ihr Konto zuzugreifen, falls Sie Ihren normalen Zwei-Faktor-Anbieter nicht mehr verwenden können (z.B. wenn Sie Ihr Gerät verlieren). Der Bitwarden-Support kann Ihnen nicht helfen, wenn Sie den Zugang zu Ihrem Konto verlieren. Wir empfehlen Ihnen, den Wiederherstellungscode aufzuschreiben oder auszudrucken und an einem sicheren Ort aufzubewahren."
+    "message": "Durch die Aktivierung der Zwei-Faktor-Authentifizierung könnten Sie sich dauerhaft aus Ihrem Bravura Safe-Konto aussperren. Ein Wiederherstellungscode ermöglicht es Ihnen, auf Ihr Konto zuzugreifen, falls Sie Ihren normalen Zwei-Faktor-Anbieter nicht mehr verwenden können (z.B. wenn Sie Ihr Gerät verlieren). Der Bravura Safe-Support kann Ihnen nicht helfen, wenn Sie den Zugang zu Ihrem Konto verlieren. Wir empfehlen Ihnen, den Wiederherstellungscode aufzuschreiben oder auszudrucken und an einem sicheren Ort aufzubewahren."
   },
   "viewRecoveryCode": {
     "message": "Wiederherstellungscode anzeigen"
@@ -1208,6 +1237,9 @@
   },
   "enabled": {
     "message": "Aktiviert"
+  },
+  "activate": {
+    "message": "Aktivieren"
   },
   "premium": {
     "message": "Premium",
@@ -1232,6 +1264,9 @@
     "message": "Verwalten"
   },
   "disable": {
+    "message": "Deaktivieren"
+  },
+  "deactivate": {
     "message": "Deaktivieren"
   },
   "twoStepLoginProviderEnabled": {
@@ -1295,7 +1330,7 @@
     "message": "Speichern des Formulars"
   },
   "twoFactorYubikeyWarning": {
-    "message": "Aufgrund von Plattformbeschränkungen können YubiKeys nicht in allen Bitwarden-Anwendungen verwendet werden. Sie sollten einen anderen Zwei-Faktor-Authentifizierungsanbieter aktivieren, damit Sie auf Ihr Konto zugreifen können, wenn YubiKeys nicht verwendet werden können. Unterstützte Plattformen:"
+    "message": "Aufgrund von Plattformbeschränkungen können YubiKeys nicht in allen Bravura Safe-Anwendungen verwendet werden. Sie sollten einen anderen Zwei-Faktor-Authentifizierungsanbieter aktivieren, damit Sie auf Ihr Konto zugreifen können, wenn YubiKeys nicht verwendet werden können. Unterstützte Plattformen:"
   },
   "twoFactorYubikeySupportUsb": {
     "message": "Web-Tresor, Desktop-Anwendung, CLI und alle Browser-Erweiterungen auf einem Gerät mit USB-Anschluss, das Ihren YubiKey erkennen kann."
@@ -1346,7 +1381,7 @@
     "message": "Alle Schlüssel deaktivieren"
   },
   "twoFactorDuoDesc": {
-    "message": "Geben Sie die Bitwarden-Anwendungsinformationen aus Ihrem Duo Admin-Panel ein."
+    "message": "Geben Sie die Bravura Safe-Anwendungsinformationen aus Ihrem Duo Admin-Panel ein."
   },
   "twoFactorDuoIntegrationKey": {
     "message": "Integrationsschlüssel"
@@ -1397,7 +1432,7 @@
     "message": "Formular speichern."
   },
   "twoFactorU2fWarning": {
-    "message": "Aufgrund von Plattformbeschränkungen kann FIDO U2F nicht mit allen Bitwarden-Anwendungen verwendet werden. Sie sollten einen anderen Zwei-Faktor-Authentifizierungsanbieter aktivieren, damit Sie auf Ihr Konto zugreifen können, wenn FIDO U2F nicht verwendet werden kann. Unterstützte Plattformen sind:"
+    "message": "Aufgrund von Plattformbeschränkungen kann FIDO U2F nicht mit allen Bravura Safe-Anwendungen verwendet werden. Sie sollten einen anderen Zwei-Faktor-Authentifizierungsanbieter aktivieren, damit Sie auf Ihr Konto zugreifen können, wenn FIDO U2F nicht verwendet werden kann. Unterstützte Plattformen sind:"
   },
   "twoFactorU2fSupportWeb": {
     "message": "Web-Tresor und Browser-Erweiterungen auf einem Desktop/Laptop mit einem U2F fähigen Browser (Chrome, Opera, Vivaldi oder Firefox mit FIDO U2F aktiviert)."
@@ -1412,13 +1447,13 @@
     "message": "Es gab ein Problem beim lesen des Sicherheitsschlüssels, bitte erneut versuchen."
   },
   "twoFactorWebAuthnWarning": {
-    "message": "Aufgrund von Plattformbeschränkungen kann WebAuthn nicht in allen Bitwarden-Anwendungen verwendet werden. Sie sollten einen anderen Zwei-Faktor-Authentifizierungsanbieter aktivieren, damit Sie auf Ihr Konto zugreifen können, wenn WebAuthn nicht verwendet werden kann. Unterstützte Plattformen:"
+    "message": "Aufgrund von Plattformbeschränkungen kann WebAuthn nicht in allen Bravura Safe-Anwendungen verwendet werden. Sie sollten einen anderen Zwei-Faktor-Authentifizierungsanbieter aktivieren, damit Sie auf Ihr Konto zugreifen können, wenn WebAuthn nicht verwendet werden kann. Unterstützte Plattformen:"
   },
   "twoFactorWebAuthnSupportWeb": {
     "message": "Web-Tresor und Browser-Erweiterungen auf einem Desktop/Laptop mit einem WebAuthn-fähigen Browser (Chrome, Opera, Vivaldi oder Firefox mit aktiviertem FIDO U2F)."
   },
   "twoFactorRecoveryYourCode": {
-    "message": "Ihr Wiederherstellungsschlüssel für die Zwei-Faktor-Anmeldung in Bitwarden"
+    "message": "Ihr Wiederherstellungsschlüssel für die Zwei-Faktor-Anmeldung in Bravura Safe"
   },
   "twoFactorRecoveryNoCode": {
     "message": "Sie haben noch keine Variante der Zwei-Faktor-Anmeldung aktiviert. Nachdem Sie eine Zwei-Faktor-Anmeldung aktiviert haben, finden Sie hier Ihren Wiederherstellungs-Code."
@@ -1431,7 +1466,8 @@
     "message": "Berichte"
   },
   "reportsDesc": {
-    "message": "Identifiziere und schließe Sicherheitslücken in deinen Online-Konten, indem du auf die Berichte unten klickst."
+    "message": "Identifiziere und schließe Sicherheitslücken in deinen Online-Konten, indem du auf die Berichte unten klickst.",
+    "description": "Vault Health Reports can be used to evaluate the security of your Bravura Safe Personal or Team Vault."
   },
   "unsecuredWebsitesReport": {
     "message": "Bericht über ungesicherte Websites"
@@ -1443,7 +1479,7 @@
     "message": "Ungesicherte Webseiten gefunden"
   },
   "unsecuredWebsitesFoundDesc": {
-    "message": "Wir haben $COUNT$ Elemente in Ihrem Tresor mit ungesicherten URIs gefunden. Sie sollten ihr URI-Präfix auf https:// ändern, wenn die Webseite dies zulässt.",
+    "message": "Wir haben $COUNT$ Elemente in Ihrem Tresor mit ungesicherten URLs gefunden. Sie sollten ihr URL-Präfix auf https:// ändern, wenn die Webseite dies zulässt.",
     "placeholders": {
       "count": {
         "content": "$1",
@@ -1452,7 +1488,7 @@
     }
   },
   "noUnsecuredWebsites": {
-    "message": "Es gibt keine Einträge in Ihrem Tresor, die unsichere URIs benutzen."
+    "message": "Es gibt keine Einträge in Ihrem Tresor, die unsichere URLs benutzen."
   },
   "inactive2faReport": {
     "message": "Bericht über inaktive 2FA"
@@ -1515,7 +1551,7 @@
     "message": "Bericht über schwache Passwörter"
   },
   "weakPasswordsReportDesc": {
-    "message": "Schwache Passwörter können von Angreifern und automatisierten Prozessen, die Passwörter knacken, leicht erraten werden. Der Passwortgenerator von Bitwarden kann Ihnen helfen, starke und sichere Passwörter zu generieren."
+    "message": "Schwache Passwörter können von Angreifern und automatisierten Prozessen, die Passwörter knacken, leicht erraten werden. Der Passwortgenerator von Bravura Safe kann Ihnen helfen, starke und sichere Passwörter zu generieren."
   },
   "weakPasswordsFound": {
     "message": "Schwache Passwörter gefunden"
@@ -1626,11 +1662,11 @@
   },
   "accountCredit": {
     "message": "Kontoguthaben",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of Bravura Safe, a positive balance means that you owe money, while a negative balance means that you have a credit (Bravura Safe owes you money)."
   },
   "accountBalance": {
     "message": "Kontostand",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of Bravura Safe, a positive balance means that you owe money, while a negative balance means that you have a credit (Bravura Safe owes you money)."
   },
   "addCredit": {
     "message": "Guthaben hinzufügen",
@@ -1935,7 +1971,7 @@
     "placeholders": {
       "file_name": {
         "content": "$1",
-        "example": "bitwarden_premium_license.json"
+        "example": "bravura_safe_premium_license.json"
       }
     }
   },
@@ -2158,7 +2194,7 @@
     "message": "Hilfe erhalten"
   },
   "getApps": {
-    "message": "Die Apps erhalten"
+    "message": "Die Apps beziehen"
   },
   "loggedInAs": {
     "message": "angemeldet als"
@@ -2195,6 +2231,12 @@
   },
   "removeUserConfirmation": {
     "message": "Sind Sie sich sicher, dass Sie diesen Benutzer löschen wollen?"
+  },
+  "deactivateUserConfirmation": {
+    "message": "Das Mitglied wird keinen Zugriff mehr zur Organisation haben, aber weiterhin Zugriff auf seinen persönlichen Tresor."
+  },
+  "activateUserConfirmation": {
+    "message": "Bist du sicher, dass du diesen Benutzer aktivieren und ihm Zugriff zur Organisation gewähren möchtest?"
   },
   "removeUserConfirmationKeyConnector": {
     "message": "Warnung! Dieser Benutzer benötigt Key Connector, um seine Verschlüsselung zu verwalten. Das Entfernen dieses Benutzers aus deiner Organisation wird sein Konto dauerhaft deaktivieren. Diese Aktion kann nicht rückgängig gemacht werden. Möchtest du fortfahren?"
@@ -2236,7 +2278,7 @@
     "message": "Benutzer einladen"
   },
   "inviteUserDesc": {
-    "message": "Lade einen neuen Benutzer zu deinem Anbieter ein, indem du die E-Mail-Adresse seines Bitwarden-Kontos unten einträgst. Falls dieser noch kein Bitwarden-Konto besitzt, wird er/sie zur Erstellung eines neuen Kontos aufgefordert."
+    "message": "Lade einen neuen Benutzer zu deinem Anbieter ein, indem du die E-Mail-Adresse seines Bravura Safe-Kontos unten einträgst. Falls dieser noch kein Bravura Safe-Konto besitzt, wird er/sie zur Erstellung eines neuen Kontos aufgefordert."
   },
   "inviteMultipleEmailDesc": {
     "message": "Sie können bis zu $COUNT$ Benutzer auf einmal einladen, indem Sie eine Liste von E-Mail-Adressen mit je einem Komma trennen.",
@@ -2541,6 +2583,42 @@
       }
     }
   },
+  "deactivatedUserId": {
+    "message": "Benutzer $ID$ deaktiviert.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
+  "activatedUserId": {
+    "message": "Benutzer $ID$ aktiviert.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
+  "deactivateUserId": {
+    "message": "Benutzer $ID$ deaktivieren?",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
+  "activateUserId": {
+    "message": "Benutzer $ID$ aktivieren?",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
   "createdAttachmentForItem": {
     "message": "Anhang zum Eintrag $ID$ erstellt.",
     "placeholders": {
@@ -2752,7 +2830,7 @@
     "message": "Organisation beitreten"
   },
   "joinOrganizationDesc": {
-    "message": "Du wurdest eingeladen, dem oben genannten Anbieter beizutreten. Um die Einladung anzunehmen, musst du ein Bitwarden-Konto erstellen, oder dich mit deinem bestehenden Bitwarden-Konto anmelden."
+    "message": "Du wurdest eingeladen, dem oben genannten Anbieter beizutreten. Um die Einladung anzunehmen, musst du ein Bravura Safe-Konto erstellen, oder dich mit deinem bestehenden Bravura Safe-Konto anmelden."
   },
   "inviteAccepted": {
     "message": "Einladung angenommen"
@@ -2768,7 +2846,7 @@
     "placeholders": {
       "description": {
         "content": "$1",
-        "example": "You must enable 2FA on your user account before you can join this organization."
+        "example": "You must enable 2FA on your user account before you can join this team."
       }
     }
   },
@@ -2794,7 +2872,7 @@
     "message": "Wir haben Ihnen eine E-Mail mit weiteren Anweisungen gesendet, sofern Ihr Konto existiert."
   },
   "deleteRecoverConfirmDesc": {
-    "message": "Sie haben die Löschung Ihres Bitwarden-Kontos angefragt. Klicken Sie diesen Button, um die Löschung zu bestätigen."
+    "message": "Sie haben die Löschung Ihres Bravura Safe-Kontos angefragt. Klicken Sie diesen Button, um die Löschung zu bestätigen."
   },
   "myOrganization": {
     "message": "Meine Organisation"
@@ -3046,7 +3124,7 @@
     "message": "Wir sind auf größere Verschlüsselungscodes umgestiegen, welche bessere Sicherheit und Zugang zu neuen Features bieten. Das Update Ihres Verschlüsselungscodes ist schnell und einfach. Geben Sie einfach hier Ihr Master-Passwort ein. Das Update wird irgendwann verpflichtend."
   },
   "updateEncryptionKeyWarning": {
-    "message": "Nach der Aktualisierung Ihres Verschlüsselungscodes, müssen Sie sich bei allen Bitwarden-Anwendungen, welche Sie momentan benutzen, erneut anmelden (wie z. B. die mobile App oder die Browser-Erweiterungen). Fehler bei Ab- und Anmeldung (welche Ihren neuen Verschlüsselungscode bezieht) könnte zu einer Beschädigung der Daten führen. Wir werden versuchen Sie automatisch auszuloggen, was jedoch verzögert geschehen kann."
+    "message": "Nach der Aktualisierung Ihres Verschlüsselungscodes, müssen Sie sich bei allen Bravura Safe-Anwendungen, welche Sie momentan benutzen, erneut anmelden (wie z. B. die mobile App oder die Browser-Erweiterungen). Fehler bei Ab- und Anmeldung (welche Ihren neuen Verschlüsselungscode bezieht) könnte zu einer Beschädigung der Daten führen. Wir werden versuchen Sie automatisch auszuloggen, was jedoch verzögert geschehen kann."
   },
   "updateEncryptionKeyExportWarning": {
     "message": "Alle verschlüsselten Exporte, die Sie gespeichert haben, werden ebenfalls ungültig."
@@ -3166,7 +3244,7 @@
     "message": "Schwaches Master-Passwort"
   },
   "weakMasterPasswordDesc": {
-    "message": "Das Master-Passwort, welches Sie gewählt haben, ist schwach. Sie sollten ein starkes Master-Passwort auswählen, um Ihr Bitwarden-Konto ausreichend zu schützen. Sind Sie sicher, dass Sie dieses Master-Passwort verwenden wollen?"
+    "message": "Das Master-Passwort, welches Sie gewählt haben, ist schwach. Sie sollten ein starkes Master-Passwort auswählen, um Ihr Bravura Safe-Konto ausreichend zu schützen. Sind Sie sicher, dass Sie dieses Master-Passwort verwenden wollen?"
   },
   "rotateAccountEncKey": {
     "message": "Auch den Verschlüsselungscode meines Kontos aktualisieren"
@@ -3210,7 +3288,7 @@
     "message": "API-Schlüssel"
   },
   "apiKeyDesc": {
-    "message": "Dein API-Schlüssel kann zur Authentifizierung für die öffentlichen Bitwarden-API benutzt werden."
+    "message": "Dein API-Schlüssel kann zur Authentifizierung für die öffentlichen Bravura Safe-API benutzt werden."
   },
   "apiKeyRotateDesc": {
     "message": "Mit der Erneuerung des API-Schlüssels wird der bisherige Schlüssel ungültig. Sie können Ihren API-Schlüssel erneuern, wenn die sichere Verwendung Ihres aktuellen Schlüssel nicht mehr gewährleistet ist."
@@ -3219,7 +3297,7 @@
     "message": "Ihr API-Schlüssel hat vollen Zugriff auf die Organisation. Er sollte geheim gehalten werden."
   },
   "userApiKeyDesc": {
-    "message": "Ihr API-Schlüssel kann zur Authentifizierung im Bitwarden CLI verwendet werden."
+    "message": "Ihr API-Schlüssel kann zur Authentifizierung im Bravura Safe CLI verwendet werden."
   },
   "userApiKeyWarning": {
     "message": "Ihr API-Schlüssel ist ein alternativer Authentifizierungsmechanismus. Er sollte geheim gehalten werden."
@@ -3492,7 +3570,7 @@
     "message": "Benutzern verbieten, anderen Organisationen beizutreten."
   },
   "singleOrgBlockCreateMessage": {
-    "message": "Ihre aktuelle Organisation hat eine Richtlinie, die es Ihnen nicht erlaubt, mehr als einer Organisation beizutreten. Bitte kontaktieren Sie die Administratoren Ihrer Organisation oder melden Sie sich mit einem anderen Bitwarden-Konto an."
+    "message": "Ihre aktuelle Organisation hat eine Richtlinie, die es Ihnen nicht erlaubt, mehr als einer Organisation beizutreten. Bitte kontaktieren Sie die Administratoren Ihrer Organisation oder melden Sie sich mit einem anderen Bravura Safe-Konto an."
   },
   "singleOrgPolicyWarning": {
     "message": "Organisationsmitglieder, die nicht Eigentümer oder Administratoren sind und bereits Mitglied einer anderen Organisation sind, werden aus Ihrer Organisation entfernt."
@@ -3522,79 +3600,79 @@
     "message": "Text"
   },
   "createSend": {
-    "message": "Neues Send erstellen",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Neues Share erstellen",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Send bearbeiten",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share bearbeiten",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Send erstellt",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share erstellt",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "Send bearbeitet",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share bearbeitet",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
-    "message": "Send gelöscht",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share gelöscht",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deleteSend": {
-    "message": "Send löschen",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share löschen",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deleteSendConfirmation": {
-    "message": "Bist du sicher, dass du dieses Send löschen möchtest?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Bist du sicher, dass du dieses Share löschen möchtest?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "whatTypeOfSend": {
-    "message": "Welche Art von Send ist das?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Welche Art von Share ist das?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletionDate": {
     "message": "Löschdatum"
   },
   "deletionDateDesc": {
-    "message": "Das Send wird am angegebenen Datum zur angegebenen Uhrzeit dauerhaft gelöscht.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Das Share wird am angegebenen Datum zur angegebenen Uhrzeit dauerhaft gelöscht.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Ablaufdatum"
   },
   "expirationDateDesc": {
-    "message": "Falls aktiviert, verfällt der Zugriff auf dieses Send am angegebenen Datum zur angegebenen Uhrzeit.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Falls aktiviert, verfällt der Zugriff auf dieses Share am angegebenen Datum zur angegebenen Uhrzeit.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "Maximale Zugriffsanzahl"
   },
   "maxAccessCountDesc": {
-    "message": "Falls aktiviert, können Benutzer nicht mehr auf dieses Send zugreifen, sobald die maximale Zugriffsanzahl erreicht ist.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Falls aktiviert, können Benutzer nicht mehr auf dieses Share zugreifen, sobald die maximale Zugriffsanzahl erreicht ist.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Aktuelle Zugriffsanzahl"
   },
   "sendPasswordDesc": {
-    "message": "Optional ein Passwort verlangen, damit Benutzer auf dieses Send zugreifen können.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Optional ein Passwort verlangen, damit Benutzer auf dieses Share zugreifen können.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "Private Notizen zu diesem Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Private Notizen zu diesem Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "disabled": {
     "message": "Deaktiviert"
   },
   "sendLink": {
-    "message": "Send Link",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share Link",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLink": {
-    "message": "Send Link kopieren",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share Link kopieren",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "removePassword": {
     "message": "Passwort entfernen"
@@ -3609,15 +3687,15 @@
     "message": "Meine E-Mail-Adresse vor den Empfängern ausblenden."
   },
   "disableThisSend": {
-    "message": "Dieses Send deaktivieren, damit niemand darauf zugreifen kann.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Dieses Share deaktivieren, damit niemand darauf zugreifen kann.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "allSends": {
-    "message": "Alle Sends"
+    "message": "Alle Shares"
   },
   "maxAccessCountReached": {
     "message": "Maximale Zugriffsanzahl erreicht",
-    "description": "This text will be displayed after a Send has been accessed the maximum amount of times."
+    "description": "This text will be displayed after a Share has been accessed the maximum amount of times."
   },
   "pendingDeletion": {
     "message": "Ausstehende Löschung"
@@ -3626,35 +3704,35 @@
     "message": "Abgelaufen"
   },
   "searchSends": {
-    "message": "Sends suchen",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Shares suchen",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendProtectedPassword": {
-    "message": "Dieses Send ist mit einem Passwort geschützt. Bitte geben Sie unten das Passwort ein, um fortzufahren.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Dieses Share ist mit einem Passwort geschützt. Bitte geben Sie unten das Passwort ein, um fortzufahren.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendProtectedPasswordDontKnow": {
-    "message": "Kennen Sie das Passwort nicht? Fragen Sie den Absender nach dem benötigten Passwort, um auf dieses Send zuzugreifen.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Kennen Sie das Passwort nicht? Fragen Sie den Absender nach dem benötigten Passwort, um auf dieses Share zuzugreifen.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendHiddenByDefault": {
-    "message": "Dieses Send ist standardmäßig ausgeblendet. Sie können die Sichtbarkeit mit dem Button unten umschalten.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Dieses Share ist standardmäßig ausgeblendet. Sie können die Sichtbarkeit mit dem Button unten umschalten.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "downloadFile": {
     "message": "Datei herunterladen"
   },
   "sendAccessUnavailable": {
-    "message": "Das Send, auf das Sie zugreifen möchten, existiert nicht oder ist nicht mehr verfügbar.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Das Share, auf das Sie zugreifen möchten, existiert nicht oder ist nicht mehr verfügbar.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "missingSendFile": {
-    "message": "Die mit diesem Send verbundene Datei konnte nicht gefunden werden.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Die mit diesem Share verbundene Datei konnte nicht gefunden werden.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "noSendsInList": {
-    "message": "Keine Sends zu finden.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Keine Shares zu finden.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "emergencyAccess": {
     "message": "Notfallzugriff"
@@ -3687,7 +3765,7 @@
     "message": "Notfallkontakt bearbeiten"
   },
   "inviteEmergencyContactDesc": {
-    "message": "Laden Sie einen neuen Notfallkontakt ein, indem Sie die E-Mail-Adresse seines Bitwarden-Kontos unten eintragen. Falls dieser noch kein Bitwarden-Konto besitzt, wird er/sie zur Erstellung eines neuen Kontos aufgefordert."
+    "message": "Laden Sie einen neuen Notfallkontakt ein, indem Sie die E-Mail-Adresse seines Bravura Safe-Kontos unten eintragen. Falls dieser noch kein Bravura Safe-Konto besitzt, wird er/sie zur Erstellung eines neuen Kontos aufgefordert."
   },
   "emergencyAccessRecoveryInitiated": {
     "message": "Notfallzugriff ausgelöst"
@@ -3726,7 +3804,7 @@
     "message": "Eingeladener Benutzer."
   },
   "acceptEmergencyAccess": {
-    "message": "Sie wurden eingeladen, ein Notfallkontakt für den oben genannten Benutzer zu werden. Um die Einladung anzunehmen, müssen Sie sich einloggen oder ein neues Bitwarden-Konto erstellen."
+    "message": "Sie wurden eingeladen, ein Notfallkontakt für den oben genannten Benutzer zu werden. Um die Einladung anzunehmen, müssen Sie sich einloggen oder ein neues Bravura Safe-Konto erstellen."
   },
   "emergencyInviteAcceptFailed": {
     "message": "Die Einladung konnte nicht angenommen werden. Bitten Sie den Benutzer, eine neue Einladung zu versenden."
@@ -3736,7 +3814,7 @@
     "placeholders": {
       "description": {
         "content": "$1",
-        "example": "You must enable 2FA on your user account before you can join this organization."
+        "example": "You must enable 2FA on your user account before you can join this team."
       }
     }
   },
@@ -3811,44 +3889,44 @@
     "message": "Aufgrund einer Unternehmensrichtlinie dürfen Sie keine Einträge in Ihrem persönlichen Tresor speichern. Ändern Sie die Eigentümer-Option in eine Organisation und wählen Sie aus den verfügbaren Sammlungen."
   },
   "disableSend": {
-    "message": "Send deaktivieren"
+    "message": "Share deaktivieren"
   },
   "disableSendPolicyDesc": {
-    "message": "Benutzern das Erstellen oder Bearbeiten eines Bitwarden Sends nicht gestatten. Das Löschen eines bestehenden Sends ist weiterhin erlaubt.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Benutzern das Erstellen oder Bearbeiten eines Bravura Safe Shares nicht gestatten. Das Löschen eines bestehenden Shares ist weiterhin erlaubt.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "disableSendExemption": {
     "message": "Benutzer der Organisation, die die Richtlinien der Organisation verwalten können, sind von der Durchsetzung dieser Richtlinie ausgenommen."
   },
   "sendDisabled": {
-    "message": "Send deaktiviert",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share deaktiviert",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "Aufgrund einer Unternehmensrichtlinie können Sie nur ein bestehendes Send löschen.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Aufgrund einer Unternehmensrichtlinie können Sie nur ein bestehendes Share löschen.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendOptions": {
-    "message": "Send Einstellungen",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share Einstellungen",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendOptionsPolicyDesc": {
-    "message": "Einstellungen zum Erstellen und Bearbeiten von Sends.",
-    "description": "'Sends' is a plural noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Einstellungen zum Erstellen und Bearbeiten von Shares.",
+    "description": "'Shares' is a plural noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendOptionsExemption": {
     "message": "Benutzer der Organisation, die die Richtlinien der Organisation verwalten können, sind von der Durchsetzung dieser Richtlinie ausgenommen."
   },
   "disableHideEmail": {
-    "message": "Benutzern nicht gestatten, ihre E-Mail-Adresse vor Empfängern zu verstecken, wenn sie ein Send erstellen oder bearbeiten.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Benutzern nicht gestatten, ihre E-Mail-Adresse vor Empfängern zu verstecken, wenn sie ein Share erstellen oder bearbeiten.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendOptionsPolicyInEffect": {
     "message": "Die folgenden Organisationsrichtlinien sind derzeit gültig:"
   },
   "sendDisableHideEmailInEffect": {
-    "message": "Benutzer dürfen ihre E-Mail-Adresse beim Erstellen oder Bearbeiten eines Sends nicht vor den Empfängern verstecken.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Benutzer dürfen ihre E-Mail-Adresse beim Erstellen oder Bearbeiten eines Shares nicht vor den Empfängern verstecken.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "modifiedPolicyId": {
     "message": "Richtlinie $ID$ geändert.",
@@ -3941,12 +4019,12 @@
     "message": "Persönliches Eigentum für Organisationsbenutzer deaktivieren"
   },
   "textHiddenByDefault": {
-    "message": "Beim Zugriff auf dieses Send den Text standardmäßig ausblenden",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Beim Zugriff auf dieses Share den Text standardmäßig ausblenden",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNameDesc": {
-    "message": "Ein eigener Name, um dieses Send zu beschreiben.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Ein eigener Name, um dieses Share zu beschreiben.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Der Text, den Sie senden möchten."
@@ -3955,23 +4033,23 @@
     "message": "Die Datei, die Sie senden möchten."
   },
   "copySendLinkOnSave": {
-    "message": "Den Link zum Teilen dieses Sends beim Speichern in meine Zwischenablage kopieren."
+    "message": "Den Link zum Teilen dieses Shares beim Speichern in meine Zwischenablage kopieren."
   },
   "sendLinkLabel": {
-    "message": "Send-Link",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share-Link",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "send": {
-    "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendAccessTaglineProductDesc": {
-    "message": "Bitwarden Send überträgt einfach und sicher sensible, temporäre Informationen an andere.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Bravura Safe Share überträgt einfach und sicher sensible, temporäre Informationen an andere.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendAccessTaglineLearnMore": {
     "message": "Mehr erfahren über",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read '**Learn more about** Bitwarden Send or sign up to try it today.'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read '**Learn more about** Bravura Safe Share or sign up to try it today.'"
   },
   "sendVaultCardProductDesc": {
     "message": "Teile Text oder Dateien direkt mit jedermann."
@@ -3998,18 +4076,18 @@
   },
   "sendAccessTaglineOr": {
     "message": "oder",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Bitwarden Send **or** sign up to try it today.'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Bravura Safe Share **or** sign up to try it today.'"
   },
   "sendAccessTaglineSignUp": {
     "message": "registrieren Sie sich",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Bitwarden Send or **sign up** to try it today.'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Bravura Safe Share or **sign up** to try it today.'"
   },
   "sendAccessTaglineTryToday": {
     "message": "um es heute auszuprobieren.",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Bitwarden Send or sign up to **try it today.**'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Bravura Safe Share or sign up to **try it today.**'"
   },
   "sendCreatorIdentifier": {
-    "message": "Bitwarden Benutzer $USER_IDENTIFIER$ hat Folgendes mit Ihnen geteilt",
+    "message": "Bravura Safe Benutzer $USER_IDENTIFIER$ hat Folgendes mit Ihnen geteilt",
     "placeholders": {
       "user_identifier": {
         "content": "$1",
@@ -4018,8 +4096,8 @@
     }
   },
   "viewSendHiddenEmailWarning": {
-    "message": "Der Bitwarden Benutzer, der dieses Send erstellt hat, hat sich entschieden, seine E-Mail-Adresse zu verstecken. Sie sollten sicherstellen, dass Sie der Quelle dieses Links vertrauen, bevor Sie dessen Inhalt verwenden oder herunterladen.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Der Bravura Safe Benutzer, der dieses Share erstellt hat, hat sich entschieden, seine E-Mail-Adresse zu verstecken. Sie sollten sicherstellen, dass Sie der Quelle dieses Links vertrauen, bevor Sie dessen Inhalt verwenden oder herunterladen.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDateIsInvalid": {
     "message": "Das angegebene Verfallsdatum ist nicht gültig."
@@ -4189,6 +4267,12 @@
   "removeUsersWarning": {
     "message": "Bist du sicher, dass du die folgenden Benutzer entfernen möchtest? Der Prozess kann einige Sekunden dauern und kann nicht unterbrochen oder abgebrochen werden."
   },
+  "deactivateUsersWarning": {
+    "message": "Bist du sicher, dass du die folgenden Mitglieder deaktivieren möchtest? Sie werden keinen Zugang mehr zur Organisation haben, aber weiterhin Zugang auf ihre persönlichen Tresore haben. Der Prozess kann einige Sekunden dauern und kann nicht unterbrochen oder abgebrochen werden."
+  },
+  "activateUsersWarning": {
+    "message": "Bist du sicher, dass du die folgenden Mitglieder aktivieren möchtest, um ihnen den Zugriff auf die Organisation zu gewähren? Der Prozess kann einige Sekunden dauern und kann nicht unterbrochen oder abgebrochen werden."
+  },
   "theme": {
     "message": "Design"
   },
@@ -4219,6 +4303,12 @@
   "bulkRemovedMessage": {
     "message": "Erfolgreich entfernt"
   },
+  "bulkDeactivatedMessage": {
+    "message": "Erfolgreich deaktiviert"
+  },
+  "bulkActivatedMessage": {
+    "message": "Erfolgreich aktiviert"
+  },
   "bulkFilteredMessage": {
     "message": "Ausgeschlossen, nicht anwendbar für diese Aktion."
   },
@@ -4227,6 +4317,12 @@
   },
   "removeUsers": {
     "message": "Benutzer entfernen"
+  },
+  "deactivateUsers": {
+    "message": "Benutzer deaktivieren"
+  },
+  "activateUsers": {
+    "message": "Benutzer aktivieren"
   },
   "error": {
     "message": "Fehler"
@@ -4238,7 +4334,7 @@
     "message": "Anbieter-Einrichtung"
   },
   "setupProviderLoginDesc": {
-    "message": "Du wurdest eingeladen, einen neuen Anbieter einzurichten. Um fortzufahren, musst du dich anmelden oder ein neues Bitwarden-Konto erstellen."
+    "message": "Du wurdest eingeladen, einen neuen Anbieter einzurichten. Um fortzufahren, musst du dich anmelden oder ein neues Bravura Safe-Konto erstellen."
   },
   "setupProviderDesc": {
     "message": "Bitte gib unten die Details ein, um die Anbieter-Einrichtung abzuschließen. Kontaktiere den Kundenservice, falls du Fragen hast."
@@ -4265,13 +4361,13 @@
     "message": "Service Benutzer können auf alle Kunden-Organisationen zugreifen und sie verwalten."
   },
   "providerInviteUserDesc": {
-    "message": "Lade einen neuen Benutzer zu deinem Anbieter ein, indem du die E-Mail-Adresse seines Bitwarden-Kontos unten einträgst. Falls dieser noch kein Bitwarden-Konto besitzt, wird er/sie zur Erstellung eines neuen Kontos aufgefordert."
+    "message": "Lade einen neuen Benutzer zu deinem Anbieter ein, indem du die E-Mail-Adresse seines Bravura Safe-Kontos unten einträgst. Falls dieser noch kein Bravura Safe-Konto besitzt, wird er/sie zur Erstellung eines neuen Kontos aufgefordert."
   },
   "joinProvider": {
     "message": "Anbieter beitreten"
   },
   "joinProviderDesc": {
-    "message": "Du wurdest eingeladen, dem oben genannten Anbieter beizutreten. Um die Einladung anzunehmen, musst du ein Bitwarden-Konto erstellen, oder dich mit deinem bestehenden Bitwarden-Konto anmelden."
+    "message": "Du wurdest eingeladen, dem oben genannten Anbieter beizutreten. Um die Einladung anzunehmen, musst du ein Bravura Safe-Konto erstellen, oder dich mit deinem bestehenden Bravura Safe-Konto anmelden."
   },
   "providerInviteAcceptFailed": {
     "message": "Einladung konnte nicht angenommen werden. Bitte einen Anbieter-Administrator darum, eine neue Einladung zu versenden."
@@ -4401,6 +4497,12 @@
   "vaultTimeoutToLarge": {
     "message": "Dein Tresor-Timeout überschreitet die von deinem Unternehmen festgelegte Beschränkung."
   },
+  "vaultCustomTimeoutMinimum": {
+    "message": "Minimales benutzerdefiniertes Timeout beträgt 1 Minute."
+  },
+  "vaultTimeoutRangeError": {
+    "message": "Tresor-Timeout ist außerhalb des zulässigen Bereichs."
+  },
   "disablePersonalVaultExport": {
     "message": "Persönlichen Tresor-Export deaktivieren"
   },
@@ -4528,16 +4630,16 @@
     "message": "Single Sign-On Konfiguration wurde gespeichert."
   },
   "sponsoredFamilies": {
-    "message": "Kostenloses Bitwarden Familienabo"
+    "message": "Kostenloses Bravura Safe Familienabo"
   },
   "sponsoredFamiliesEligible": {
-    "message": "Du und deine Familie haben Anspruch auf ein kostenloses Bitwarden Familienabo. Mit deiner persönlichen E-Mail einlösen, um deine Daten zu schützen, auch wenn du nicht am Arbeitsplatz bist."
+    "message": "Du und deine Familie haben Anspruch auf ein kostenloses Bravura Safe Familienabo. Mit deiner persönlichen E-Mail einlösen, um deine Daten zu schützen, auch wenn du nicht am Arbeitsplatz bist."
   },
   "sponsoredFamiliesEligibleCard": {
-    "message": "Löse dein kostenloses Bitwarden für Familien Abo heute ein, um deine Daten zu schützen, auch wenn du nicht am Arbeitsplatz bist."
+    "message": "Löse dein kostenloses Bravura Safe für Familien Abo heute ein, um deine Daten zu schützen, auch wenn du nicht am Arbeitsplatz bist."
   },
   "sponsoredFamiliesInclude": {
-    "message": "Das Bitwarden für Familien Abo beinhaltet"
+    "message": "Das Bravura Safe für Familien Abo beinhaltet"
   },
   "sponsoredFamiliesPremiumAccess": {
     "message": "Premium-Zugang für bis zu 6 Benutzer"
@@ -4561,16 +4663,16 @@
     "message": "Welches kostenlose Familienangebot möchtest du einlösen?"
   },
   "sponsoredFamiliesEmail": {
-    "message": "Gebe deine persönliche E-Mail ein, um Bitwarden Familien einlösen zu können"
+    "message": "Gebe deine persönliche E-Mail ein, um Bravura Safe Familien einlösen zu können"
   },
   "sponsoredFamiliesLeaveCopy": {
-    "message": "Wenn du diese Organisation verlässt oder aus ihr entfernt wirst, läuft dein Familien-Abo am Ende des Abrechnungszeitraums ab."
+    "message": "Wenn du ein Angebot entfernst oder von der Patenschaft-Organisation entfernt wirst, verfällt deine Patenschaft am nächsten Verlängerungsdatum."
   },
   "acceptBitwardenFamiliesHelp": {
     "message": "Angebot für eine bestehende Organisation akzeptieren oder eine neue Familien-Organisation erstellen."
   },
   "setupSponsoredFamiliesLoginDesc": {
-    "message": "Dir wurde ein kostenloses Bitwarden Familien-Organisationsabo angeboten. Um fortzufahren, musst du dich in das Konto einloggen, das das Angebot erhalten hat."
+    "message": "Dir wurde ein kostenloses Bravura Safe Familien-Organisationsabo angeboten. Um fortzufahren, musst du dich in das Konto einloggen, das das Angebot erhalten hat."
   },
   "sponsoredFamiliesAcceptFailed": {
     "message": "Angebot kann nicht angenommen werden. Bitte sende die Angebotsmail von deinem Unternehmenskonto erneut und versuche es noch einmal."
@@ -4580,15 +4682,15 @@
     "placeholders": {
       "description": {
         "content": "$1",
-        "example": "You must have at least one existing Families Organization."
+        "example": "You must have at least one existing Families Team."
       }
     }
   },
   "sponsoredFamiliesOffer": {
-    "message": "Kostenloses Bitwarden Familien-Organisationsangebot einlösen"
+    "message": "Kostenloses Bravura Safe Familien-Organisationsangebot einlösen"
   },
   "sponsoredFamiliesOfferRedeemed": {
-    "message": "Kostenloses Bitwarden Familien-Angebot erfolgreich eingelöst"
+    "message": "Kostenloses Bravura Safe Familien-Angebot erfolgreich eingelöst"
   },
   "redeemed": {
     "message": "Eingelöst"
@@ -4606,7 +4708,7 @@
     }
   },
   "resendEmailLabel": {
-    "message": "Sponsoring-E-Mail erneut an $NAME$ Sponsoring senden",
+    "message": "Patenschaft-E-Mail erneut an $NAME$ Patenschaft senden",
     "placeholders": {
       "name": {
         "content": "$1",
@@ -4624,13 +4726,13 @@
     "message": "Empfänger"
   },
   "removeSponsorship": {
-    "message": "Sponsoring entfernen"
+    "message": "Patenschaft entfernen"
   },
   "removeSponsorshipConfirmation": {
-    "message": "Nachdem du eine Förderung entfernt hast, bist du für dieses Abo und die damit verbundenen Rechnungen verantwortlich. Bist du sicher, dass du fortfahren möchtest?"
+    "message": "Nachdem du eine Patenschaft entfernt hast, bist du für dieses Abo und die damit verbundenen Rechnungen verantwortlich. Bist du sicher, dass du fortfahren möchtest?"
   },
   "sponsorshipCreated": {
-    "message": "Förderung erstellt"
+    "message": "Patenschaft erstellt"
   },
   "revoke": {
     "message": "Zurückziehen"
@@ -4639,13 +4741,13 @@
     "message": "E-Mail gesendet"
   },
   "revokeSponsorshipConfirmation": {
-    "message": "Nach dem Entfernen dieses Kontos ist der Besitzer der Familienorganisation für dieses Abo und die damit verbundenen Rechnungen verantwortlich. Bist du sicher, dass du fortfahren möchtest?"
+    "message": "Nach dem Entfernen dieses Kontos läuft Förderung des Familien-Abos am Ende des Abrechnungszeitraums ab. Du wirst kein neues Patenschaftsangebot einlösen können, bis das bestehende abläuft. Bist du sicher, dass du fortfahren möchtest?"
   },
   "removeSponsorshipSuccess": {
-    "message": "Förderung entfernt"
+    "message": "Patenschaft entfernt"
   },
-  "ssoKeyConnectorUnavailable": {
-    "message": "Der Key Connector konnte nicht erreicht werden. Versuche es später erneut."
+  "ssoKeyConnectorError": {
+    "message": "Key Connector Fehler: Stelle sicher, dass der Key Connector verfügbar ist und einwandfrei funktioniert."
   },
   "keyConnectorUrl": {
     "message": "Key Connector URL"
@@ -4744,10 +4846,10 @@
     "message": "Zum Key Connector migriert"
   },
   "paymentSponsored": {
-    "message": "Bitte gib eine Zahlungsmethode an, die mit der Organisation verbunden wird. Keine Sorge, wir werden dir nichts berechnen, es sei denn, du wählst zusätzliche Funktionen aus oder deine Förderung läuft ab. "
+    "message": "Bitte gib eine Zahlungsmethode an, die mit der Organisation verbunden wird. Keine Sorge, wir werden dir nichts berechnen, es sei denn, du wählst zusätzliche Funktionen aus oder deine Patenschaft läuft ab. "
   },
   "orgCreatedSponsorshipInvalid": {
-    "message": "Das Förderangebot ist abgelaufen. Du kannst die Organisation, die du erstellt hast, löschen, um eine Gebühr am Ende deiner 7-Tage-Testversion zu vermeiden. Andernfalls kannst du diese Meldung schließen, um die Organisation zu behalten und die Rechnungsverantwortung zu übernehmen."
+    "message": "Das Patenschaftsangebot ist abgelaufen. Du kannst die Organisation, die du erstellt hast, löschen, um eine Gebühr am Ende deiner 7-Tage-Testversion zu vermeiden. Andernfalls kannst du diese Meldung schließen, um die Organisation zu behalten und die Rechnungsverantwortung zu übernehmen."
   },
   "newFamiliesOrganization": {
     "message": "Neue Familien-Organisation"
@@ -4768,10 +4870,79 @@
     "message": "Key Connector nicht erreichbar. URL überprüfen."
   },
   "sponsorshipTokenHasExpired": {
-    "message": "Das Förderangebot ist abgelaufen."
+    "message": "Das Patenschaftsangbot ist abgelaufen."
   },
   "freeWithSponsorship": {
-    "message": "KOSTENLOS mit Förderung"
+    "message": "KOSTENLOS mit Patenschaft"
+  },
+  "viewBillingSyncToken": {
+    "message": "Rechnungssynchronisierungs-Token ansehen"
+  },
+  "generateBillingSyncToken": {
+    "message": "Rechnungssynchronisierungs-Token generieren"
+  },
+  "copyPasteBillingSync": {
+    "message": "Kopiere dieses Token und füge es in die Rechnungssynchronisations-Einstellungen deiner selbst gehosteten Organisation ein."
+  },
+  "billingSyncCanAccess": {
+    "message": "Dein Rechnungssynchronisations-Token kann auf die Abonnement-Einstellungen dieser Organisation zugreifen und diese bearbeiten."
+  },
+  "manageBillingSync": {
+    "message": "Rechnungssynchronisation verwalten"
+  },
+  "setUpBillingSync": {
+    "message": "Rechnungssynchronisation einrichten"
+  },
+  "generateToken": {
+    "message": "Token generieren"
+  },
+  "rotateToken": {
+    "message": "Token erneuern"
+  },
+  "rotateBillingSyncTokenWarning": {
+    "message": "Wenn du fortfährt, musst du die Rechnungssynchronisation auf deinem selbst gehosteten Server neu einrichten."
+  },
+  "rotateBillingSyncTokenTitle": {
+    "message": "Durch Erneuerung des Rechnungssynchroniserungs-Token wird der vorherige Token ungültig."
+  },
+  "selfHostingTitle": {
+    "message": "Selbst gehostet"
+  },
+  "selfHostingEnterpriseOrganizationSectionCopy": {
+    "message": "Um deine Organisation auf deinem eigenen Server einzurichten, musst du deine Lizenzdatei hochladen. Um kostenlose Familien-Abos und erweiterte Abrechnungsmöglichkeiten für deine selbst gehostete Organisation anzubieten, musst du die Rechnungssynchronisation einrichten."
+  },
+  "billingSyncApiKeyRotated": {
+    "message": "Token erneuert."
+  },
+  "billingSync": {
+    "message": "Rechnungssynchronisation"
+  },
+  "billingSyncDesc": {
+    "message": "Die Rechnungssynchronisation bietet ein kostenloses Familien-Abo für Mitglieder und erweiterte Abrechnungsmöglichkeiten, indem du dein selbst gehostetes Bravura Safe mit dem Bravura Safe Cloud-Server verbindest."
+  },
+  "billingSyncKeyDesc": {
+    "message": "Um dieses Formular auszufüllen, ist ein Rechnungssynchronisations-Token aus den Abo-Einstellungen deiner Cloud-Organisation erforderlich."
+  },
+  "billingSyncKey": {
+    "message": "Rechnungssynchronisations-Token"
+  },
+  "active": {
+    "message": "Aktiv"
+  },
+  "inactive": {
+    "message": "Inaktiv"
+  },
+  "sentAwaitingSync": {
+    "message": "Gesendet (Warte auf Synchronisation)"
+  },
+  "sent": {
+    "message": "Gesendet"
+  },
+  "requestRemoved": {
+    "message": "Entfernt (Warte auf Synchronisation)"
+  },
+  "requested": {
+    "message": "Beantragt"
   },
   "formErrorSummaryPlural": {
     "message": "$COUNT$ Felder oben müssen beachtet werden.",
@@ -4836,8 +5007,33 @@
       }
     }
   },
+  "accessDenied": {
+    "message": "Zugriff verweigert. Du hast keine Berechtigung, um diese Seite anzuzeigen."
+  },
+  "masterPassword": {
+    "message": "Master-Passwort"
+  },
+  "security": {
+    "message": "Sicherheit"
+  },
+  "keys": {
+    "message": "Schlüssel"
+  },
+  "billingHistory": {
+    "message": "Rechnungsverlauf"
+  },
   "backToReports": {
     "message": "Zurück zu den Berichten"
+  },
+  "organizationPicker": {
+    "message": "Organisationsauswahl"
+  },
+  "currentOrganization": {
+    "message": "Aktuelle Organisation",
+    "description": "This is used by screen readers to indicate the team that is currently being shown to the user."
+  },
+  "accountSettings": {
+    "message": "Kontoeinstellungen"
   },
   "generator": {
     "message": "Generator"
@@ -4858,11 +5054,11 @@
     "message": "Benutzernamentyp"
   },
   "plusAddressedEmail": {
-    "message": "Plus Addressed Email",
+    "message": "Mit Plus adressierte E-Mail",
     "description": "Username generator option that appends a random sub-address to the username. For example: address+subaddress@email.com"
   },
   "plusAddressedEmailDesc": {
-    "message": "Use your email provider's sub-addressing capabilities."
+    "message": "Verwende die Unteradressierungsmöglichkeiten deines E-Mail-Providers."
   },
   "catchallEmail": {
     "message": "Catch-all-E-Mail-Adresse"
@@ -4871,12 +5067,100 @@
     "message": "Verwenden Sie den konfigurierten Catch-All-Posteingang Ihrer Domain."
   },
   "random": {
-    "message": "Zufällig"
+    "message": "Zufällig",
+    "description": "Generates domain-based username using random letters"
   },
   "randomWord": {
     "message": "Zufälliges Wort"
   },
   "service": {
     "message": "Dienst"
+  },
+  "unknownCipher": {
+    "message": "Unbekannter Eintrag, du musst dich möglicherweise mit einem anderen Konto anmelden, um auf diesen Eintrag zuzugreifen."
+  },
+  "cannotSponsorSelf": {
+    "message": "Du kannst nicht für das aktive Konto einlösen. Gebe eine andere E-Mail ein."
+  },
+  "revokeWhenExpired": {
+    "message": "Läuft ab am $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "12/31/2020"
+  }
+}
+  },
+  "awaitingSyncSingular": {
+    "message": "Token vor $DAYS$ Tag erneuert. Aktualisiere den Rechnungssynchronsierungs-Token in deinen selbst gehosteten Organisationseinstellungen.",
+    "placeholders": {
+      "days": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "awaitingSyncPlural": {
+    "message": "Token vor $DAYS$ Tagen erneuert. Aktualisiere den Rechnungssynchronsierungs-Token in deinen selbst gehosteten Organisationseinstellungen.",
+    "placeholders": {
+      "days": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "lastSync": {
+    "message": "Letzte Synchronisierung",
+    "Description": "Used as a prefix to indicate the last time a sync occured. Example \"Last sync 1968-11-16 00:00:00\""
+  },
+  "sponsorshipsSynced": {
+    "message": "Selbst-gehostete Patenschaft synchronisiert."
+  },
+  "billingManagedByProvider": {
+    "message": "Verwaltet von $PROVIDER$",
+    "placeholders": {
+      "provider": {
+        "content": "$1",
+        "example": "Managed Services Company"
+      }
+    }
+  },
+  "billingContactProviderForAssistance": {
+    "message": "Bitte kontaktiere deinen Anbieter für weitere Hilfe",
+    "description": "This text is displayed if an team's billing is managed by a Provider. It tells the user to contact the Provider for assistance."
+  },
+  "forwardedEmail": {
+    "message": "Weitergeleitetes E-Mail-Alias"
+  },
+  "forwardedEmailDesc": {
+    "message": "Generiere ein E-Mail-Alias mit einem externen Weiterleitungsdienst."
+  },
+  "hostname": {
+    "message": "Hostname",
+    "description": "Part of a URL."
+  },
+  "apiAccessToken": {
+    "message": "API-Zugangs-Token"
+  },
+  "deviceVerification": {
+    "message": "Geräteverifizierung"
+  },
+  "enableDeviceVerification": {
+    "message": "Aktiviere Geräteverifizierung"
+  },
+  "deviceVerificationDesc": {
+    "message": "Falls aktiviert, werden Verifizierungscodes an deine E-Mail-Adresse gesendet, wenn du dich von einem unbekannten Gerät einloggst"
+  },
+  "updatedDeviceVerification": {
+    "message": "Aktualisierte Geräteverifizierung"
+  },
+  "areYouSureYouWantToEnableDeviceVerificationTheVerificationCodeEmailsWillArriveAtX": {
+    "message": "Bist du sicher, dass du die Geräteverifizierung aktivieren möchtest? Der Verifizierungsscode wird an folgende E-Mails versendet: $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "My Email"
+      }
+    }
   }
 }

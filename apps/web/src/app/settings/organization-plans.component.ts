@@ -1,26 +1,26 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
 
-import { ApiService } from "jslib-common/abstractions/api.service";
-import { CryptoService } from "jslib-common/abstractions/crypto.service";
-import { I18nService } from "jslib-common/abstractions/i18n.service";
-import { LogService } from "jslib-common/abstractions/log.service";
-import { MessagingService } from "jslib-common/abstractions/messaging.service";
-import { OrganizationService } from "jslib-common/abstractions/organization.service";
-import { PlatformUtilsService } from "jslib-common/abstractions/platformUtils.service";
-import { PolicyService } from "jslib-common/abstractions/policy.service";
-import { SyncService } from "jslib-common/abstractions/sync.service";
-import { PaymentMethodType } from "jslib-common/enums/paymentMethodType";
-import { PlanType } from "jslib-common/enums/planType";
-import { PolicyType } from "jslib-common/enums/policyType";
-import { ProductType } from "jslib-common/enums/productType";
-import { EncString } from "jslib-common/models/domain/encString";
-import { SymmetricCryptoKey } from "jslib-common/models/domain/symmetricCryptoKey";
-import { OrganizationCreateRequest } from "jslib-common/models/request/organizationCreateRequest";
-import { OrganizationKeysRequest } from "jslib-common/models/request/organizationKeysRequest";
-import { OrganizationUpgradeRequest } from "jslib-common/models/request/organizationUpgradeRequest";
-import { ProviderOrganizationCreateRequest } from "jslib-common/models/request/provider/providerOrganizationCreateRequest";
-import { PlanResponse } from "jslib-common/models/response/planResponse";
+import { ApiService } from "@bitwarden/common/abstractions/api.service";
+import { CryptoService } from "@bitwarden/common/abstractions/crypto.service";
+import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
+import { LogService } from "@bitwarden/common/abstractions/log.service";
+import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
+import { OrganizationService } from "@bitwarden/common/abstractions/organization.service";
+import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
+import { PolicyService } from "@bitwarden/common/abstractions/policy.service";
+import { SyncService } from "@bitwarden/common/abstractions/sync.service";
+import { PaymentMethodType } from "@bitwarden/common/enums/paymentMethodType";
+import { PlanType } from "@bitwarden/common/enums/planType";
+import { PolicyType } from "@bitwarden/common/enums/policyType";
+import { ProductType } from "@bitwarden/common/enums/productType";
+import { EncString } from "@bitwarden/common/models/domain/encString";
+import { SymmetricCryptoKey } from "@bitwarden/common/models/domain/symmetricCryptoKey";
+import { OrganizationCreateRequest } from "@bitwarden/common/models/request/organizationCreateRequest";
+import { OrganizationKeysRequest } from "@bitwarden/common/models/request/organizationKeysRequest";
+import { OrganizationUpgradeRequest } from "@bitwarden/common/models/request/organizationUpgradeRequest";
+import { ProviderOrganizationCreateRequest } from "@bitwarden/common/models/request/provider/providerOrganizationCreateRequest";
+import { PlanResponse } from "@bitwarden/common/models/response/planResponse";
 
 import { PaymentComponent } from "./payment.component";
 import { TaxInfoComponent } from "./tax-info.component";
@@ -262,17 +262,13 @@ export class OrganizationPlansComponent implements OnInit {
           const shareKey = await this.cryptoService.makeShareKey();
           const key = shareKey[0].encryptedString;
           const collection = await this.cryptoService.encrypt(
-            this.i18nService.t("defaultCollection"),
+            this.i18nService.t("defaultCollection") + " - " + this.name,
             shareKey[1]
           );
           const collectionCt = collection.encryptedString;
           const orgKeys = await this.cryptoService.makeKeyPair(shareKey[1]);
 
-          if (this.selfHosted) {
-            orgId = await this.createSelfHosted(key, collectionCt, orgKeys);
-          } else {
-            orgId = await this.createCloudHosted(key, collectionCt, orgKeys, shareKey[1]);
-          }
+          orgId = await this.createCloudHosted(key, collectionCt, orgKeys, shareKey[1]);
 
           this.platformUtilsService.showToast(
             "success",
@@ -349,29 +345,12 @@ export class OrganizationPlansComponent implements OnInit {
     request.billingEmail = this.billingEmail;
     request.keys = new OrganizationKeysRequest(orgKeys[0], orgKeys[1].encryptedString);
 
-    if (this.selectedPlan.type === PlanType.Free) {
-      request.planType = PlanType.Free;
-    } else {
-      const tokenResult = await this.paymentComponent.createPaymentToken();
+    request.businessName = this.ownedBusiness ? this.businessName : null;
+    request.additionalSeats = 32767;
+    request.additionalStorageGb = this.additionalStorage;
+    request.premiumAccessAddon = true;
+    request.planType = PlanType.Custom;
 
-      request.paymentToken = tokenResult[0];
-      request.paymentMethodType = tokenResult[1];
-      request.businessName = this.ownedBusiness ? this.businessName : null;
-      request.additionalSeats = this.additionalSeats;
-      request.additionalStorageGb = this.additionalStorage;
-      request.premiumAccessAddon =
-        this.selectedPlan.hasPremiumAccessOption && this.premiumAccessAddon;
-      request.planType = this.selectedPlan.type;
-      request.billingAddressPostalCode = this.taxComponent.taxInfo.postalCode;
-      request.billingAddressCountry = this.taxComponent.taxInfo.country;
-      if (this.taxComponent.taxInfo.includeTaxId) {
-        request.taxIdNumber = this.taxComponent.taxInfo.taxId;
-        request.billingAddressLine1 = this.taxComponent.taxInfo.line1;
-        request.billingAddressLine2 = this.taxComponent.taxInfo.line2;
-        request.billingAddressCity = this.taxComponent.taxInfo.city;
-        request.billingAddressState = this.taxComponent.taxInfo.state;
-      }
-    }
 
     if (this.providerId) {
       const providerRequest = new ProviderOrganizationCreateRequest(this.clientOwnerEmail, request);

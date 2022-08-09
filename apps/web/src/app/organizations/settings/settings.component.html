@@ -7,9 +7,6 @@
           <a routerLink="account" class="list-group-item" routerLinkActive="active">
             {{ "myOrganization" | i18n }}
           </a>
-          <a routerLink="subscription" class="list-group-item" routerLinkActive="active">
-            {{ "subscription" | i18n }}
-          </a>
           <a
             routerLink="billing"
             class="list-group-item"
@@ -31,6 +28,8 @@
     </div>
     <div class="col-9">
       <router-outlet></router-outlet>
+      <div class="vertical-spacer"></div>
+      <app-footer></app-footer>
     </div>
   </div>
 </div>

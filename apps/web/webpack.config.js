@@ -15,9 +15,12 @@ const pjson = require("./package.json");
 
 const ENV = process.env.ENV == null ? "development" : process.env.ENV;
 const NODE_ENV = process.env.NODE_ENV == null ? "development" : process.env.NODE_ENV;
+const LOGGING = process.env.LOGGING != "false";
 
 const envConfig = config.load(ENV);
-config.log(envConfig);
+if (LOGGING) {
+  config.log(envConfig);
+}
 
 const moduleRules = [
   {
@@ -26,7 +29,7 @@ const moduleRules = [
   },
   {
     test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-    exclude: /loading(|-white).svg/,
+    exclude: /(loading(|-white)|hitachi-id-logo-(dark|white)).svg/,
     generator: {
       filename: "fonts/[name][ext]",
     },
@@ -34,7 +37,7 @@ const moduleRules = [
   },
   {
     test: /\.(jpe?g|png|gif|svg|webp|avif)$/i,
-    exclude: /.*(bwi-font)\.svg/,
+    exclude: /.*(fontawesome-webfont)\.svg/,
     generator: {
       filename: "images/[name][ext]",
     },
@@ -133,6 +136,14 @@ const plugins = [
           return content.toString().replace("process.env.APPLICATION_VERSION", pjson.version);
         },
       },
+      {
+        from: "./src/internalVersion.json",
+        transform(content, path) {
+          return content
+            .toString()
+            .replace("process.env.INTERNAL_APPLICATION_VERSION", pjson.internalVersion);
+        },
+      },
     ],
   }),
   new MiniCssExtractPlugin({
@@ -143,6 +154,7 @@ const plugins = [
     ENV: ENV,
     NODE_ENV: NODE_ENV === "production" ? "production" : "development",
     APPLICATION_VERSION: pjson.version,
+    INTERNAL_APPLICATION_VERSION: pjson.internalVersion,
     CACHE_TAG: Math.random().toString(36).substring(7),
     URLS: envConfig["urls"] ?? {},
     STRIPE_KEY: envConfig["stripeKey"] ?? "",
@@ -205,8 +217,8 @@ const devServer =
               {
                 key: "Content-Security-Policy",
                 value: `
-                  default-src 'self'; 
-                  script-src 
+                  default-src 'self';
+                  script-src
                     'self'
                     'sha256-ryoU+5+IUZTuUyTElqkrQGBJXr1brEv6r2CA62WUw8w='
                     https://js.stripe.com
@@ -255,7 +267,7 @@ const devServer =
                     https://*.blob.core.windows.net
                     https://app.simplelogin.io/api/alias/random/new
                     https://app.anonaddy.com/api/v1/aliases;
-                  object-src 
+                  object-src
                     'self'
                     blob:;`,
               },
