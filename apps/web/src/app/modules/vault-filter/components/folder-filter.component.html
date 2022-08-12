@@ -1,7 +1,11 @@
 <ng-container *ngIf="!hide">
-  <div class="filter-heading">
+  <div class="filter-heading"
+    [ngClass]="{
+      'expandedGrouping': !isCollapsed(foldersGrouping)
+    }"
+  >
     <button
-      class="toggle-button"
+      class="toggle-button text-muted"
       (click)="toggleCollapse(foldersGrouping)"
       [attr.aria-expanded]="!isCollapsed(foldersGrouping)"
       aria-controls="folder-filters"
@@ -25,23 +29,25 @@
       <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
     </button>
   </div>
-  <ul id="folder-filters" *ngIf="!isCollapsed(foldersGrouping)" class="fa-ul card-ul ng-star-inserted">
+  <ul id="folder-filters" *ngIf="!isCollapsed(foldersGrouping)" class="filter-options">
     <ng-template #recursiveFolders let-folders>
       <li
         *ngFor="let f of folders"
         [ngClass]="{
-          active: f.node.id === activeFilter.selectedFolderId && activeFilter.selectedFolder
+          active: f.node.id === activeFilter.selectedFolderId && activeFilter.selectedFolder,
+          expand: f.children.length && !isCollapsed(f.node)
         }"
         class="filter-option"
       >
         <span class="filter-buttons">
+        <i *ngIf="f.children.length === 0" class="text-muted invisible"></i>
           <button
             *ngIf="f.children.length"
             title="{{ 'toggleCollapse' | i18n }}"
             (click)="toggleCollapse(f.node)"
             [attr.aria-expanded]="!isCollapsed(f.node)"
             [attr.aria-controls]="f.node.name + '_children'"
-            class="toggle-button"
+            class="toggle-button text-muted"
           >
             <i
               class="fa fa-fw"
@@ -53,11 +59,14 @@
             ></i>
           </button>
           <button class="filter-button" (click)="applyFilter(f.node)">
-            <i *ngIf="f.children.length === 0" class="fa fa-folder-o" aria-hidden="true"></i
-            >&nbsp;{{ f.node.name }}
+            <i class="fa fa-folder-o text-muted" aria-hidden="true"></i>
           </button>
+          <button class="filter-button text-muted" (click)="applyFilter(f.node)" style="text-align: left;width: 150px;">
+            {{ f.node.name }}
+          </button>
+          
           <button
-            class="edit-button"
+            class="edit-button text-muted"
             (click)="editFolder(f.node)"
             appA11yTitle="{{ 'editFolder' | i18n }}"
             *ngIf="f.node.id"

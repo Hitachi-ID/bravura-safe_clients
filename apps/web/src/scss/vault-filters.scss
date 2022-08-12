@@ -3,9 +3,12 @@
 }
 
 .filter-heading {
-  display: flex;
-  text-transform: uppercase;
-  align-items: center;
+  display: inline-flex;
+  position: relative;
+  margin-bottom: 0.25rem;
+  padding-bottom: 1px;
+  width: 100%;
+  margin-top: 10px;
 
   * {
     @include themify($themes) {
@@ -18,10 +21,13 @@
     @extend .no-btn;
   }
 
+  h3.d-flex {
+    margin-left: 21px;
+  }
+
   h3,
   button.filter-button {
-    margin: 0;
-    @include themify($themes) {
+      @include themify($themes) {
       color: themed("textMuted");
     }
   }
@@ -47,13 +53,30 @@
       }
     }
   }
+}
 
-  h3.d-flex {
-    margin: 0 0 0 1.5rem;
-    i {
-      padding: 2px;
-      margin: 0 0 2px 0;
+.filter-heading.expandedGrouping {
+  $c: &;
+  @at-root {
+    #{$c}::after {
+      background-color: #c00;
+      bottom: 0;
+      content: "";
+      height: 2px;
+      left: 1.5rem;
+      margin-left: 1px;
+      position: absolute;
+      width: 4ch;
     }
+  }
+}
+
+.card .card-body > ul.filter-options {
+  & > li:not(.expand).active {
+    @include filterPanelActive;
+  }
+  & > li:not(.expand):hover {
+    @include filterPanelHover;
   }
 }
 
@@ -66,6 +89,72 @@
     margin-bottom: 0px;
     padding-left: 0.85em;
   }
+
+  li{
+    word-break: keep-all;
+
+    line-height: 30px;
+    span.filter-buttons {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: baseline;
+      line-height: 1.5rem;
+      padding-bottom: 5px;
+      button.filter-button {
+        margin-top: 3px;
+      }
+      button.filter-button > i.text-muted {
+        align-self: flex-start;
+      }
+    }
+    &.active {
+      @include filterPanelActive;
+    }
+    &:hover {
+      @include filterPanelHover;
+    }
+    & > button > i {
+      padding-left: 1.5rem;
+    }
+    &.expand {
+      ul.folder-filters.carets {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0 !important;
+      }
+    }
+  }
+
+  .fa-folder-o,
+  .fa-cube,
+  .fa-pencil,
+  .fa-file-o,
+  .fa-file-text-o {
+    align-self: flex-start;
+    margin: 8px 3px 0 0;
+    width: 1.2857142857em;
+    text-align: left;
+  }
+
+  &.carets {
+    margin-left: 1.1em;
+  }
+
+  &.no-margin {
+    margin-left: 0;
+  }
+
+  .fa-li {
+    align-self: flex-start;
+    position: static;
+    margin-top: 8px;
+    text-align: center;
+    width: 1.2857142857em;
+  }
+}
+
+span.filter-buttons {
+  @include recursiveIndent();
 }
 
 .filter-option {
@@ -200,4 +289,8 @@
       }
     }
   }
+}
+
+.text-muted.invisible {
+  margin-left: 1.5rem;
 }

@@ -12,6 +12,7 @@ import { SyncService } from "@bitwarden/common/abstractions/sync.service";
 import { OrganizationKeysRequest } from "@bitwarden/common/models/request/organizationKeysRequest";
 import { OrganizationUpdateRequest } from "@bitwarden/common/models/request/organizationUpdateRequest";
 import { OrganizationResponse } from "@bitwarden/common/models/response/organizationResponse";
+import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
 
 import { ApiKeyComponent } from "../../settings/api-key.component";
 import { PurgeVaultComponent } from "../../settings/purge-vault.component";
@@ -54,7 +55,8 @@ export class AccountComponent {
     private cryptoService: CryptoService,
     private logService: LogService,
     private router: Router,
-    private organizationService: OrganizationService
+    private organizationService: OrganizationService,
+    private messagingService: MessagingService
   ) {}
 
   async ngOnInit() {
@@ -94,6 +96,7 @@ export class AccountComponent {
         return this.syncService.fullSync(true);
       });
       await this.formPromise;
+      this.messagingService.send("organizationUpdated");
       this.platformUtilsService.showToast(
         "success",
         null,

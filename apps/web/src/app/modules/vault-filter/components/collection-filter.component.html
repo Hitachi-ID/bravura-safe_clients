@@ -1,11 +1,15 @@
 <ng-container *ngIf="show">
-  <div class="filter-heading">
+  <div class="filter-heading"
+    [ngClass]="{
+      'expandedGrouping': !isCollapsed(collectionsGrouping)
+    }"
+  >
     <button
       (click)="toggleCollapse(collectionsGrouping)"
       [attr.aria-expanded]="!isCollapsed(collectionsGrouping)"
       aria-controls="collection-filters"
       title="{{ 'toggleCollapse' | i18n }}"
-      class="toggle-button"
+      class="toggle-button text-muted"
     >
       <i
         class="fa fa-fw mr-0"
@@ -18,18 +22,20 @@
     </button>
     <h3 class="filter-title">&nbsp;{{ collectionsGrouping.name | i18n }}</h3>
   </div>
-  <ul id="collection-filters" *ngIf="!isCollapsed(collectionsGrouping)" class="fa-ul card-ul ng-star-inserted">
+  <ul id="collection-filters" *ngIf="!isCollapsed(collectionsGrouping)" class="filter-options">
     <ng-template #recursiveCollections let-collections>
       <li
         *ngFor="let c of collections"
         [ngClass]="{
-          active: c.node.id === activeFilter.selectedCollectionId
+          active: c.node.id === activeFilter.selectedCollectionId,
+          expand: c.children.length && !isCollapsed(c.node)
         }"
         class="filter-option"
       >
         <span class="filter-buttons">
+        <i class="text-muted invisible"></i>
           <button
-            class="toggle-button"
+            class="toggle-button text-muted"
             *ngIf="c.children.length"
             (click)="toggleCollapse(c.node)"
             title="{{ 'toggleCollapse' | i18n }}"
@@ -48,10 +54,12 @@
           <button class="filter-button" (click)="applyFilter(c.node)">
             <i
               *ngIf="c.children.length === 0"
-              class="fa fa-cube"
+              class="fa fa-cube text-muted"
               aria-hidden="true"
-            ></i
-            >&nbsp;{{ c.node.name }}
+            ></i>
+          </button>
+          <button class="filter-button" (click)="applyFilter(c.node)" style="text-align: left; width: 167px;">
+            {{ c.node.name }}
           </button>
         </span>
         <ul
