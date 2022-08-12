@@ -20,10 +20,11 @@
             appAutofocus
           />
           <div class="filter">
-            <ul class="filter-options fa-ul card-ul">
+            <ul class="filter-options">
               <li class="filter-option" [ngClass]="{ active: selectedAll }">
                 <span class="filter-buttons">
-                  <button bitButton class="filter-button" appStopClick (click)="selectAll()">
+                  <button class="filter-button" appStopClick (click)="selectAll()">
+                    <i class="text-muted invisible"></i>
                     <i class="fa-li fa fa-fw fa-th"></i>{{ "allSends" | i18n }}
                   </button>
                 </span>
@@ -31,31 +32,31 @@
             </ul>
           </div>
           <div class="filter">
-            <div class="filter-heading">
+            <div class="filter-heading expandedGrouping">
               <h3 class="d-flex">{{ "types" | i18n }}</h3>
             </div>
-            <ul class="filter-options fa-ul card-ul">
+            <ul class="filter-options">
               <li class="filter-option" [ngClass]="{ active: selectedType === sendType.Text }">
                 <span class="filter-buttons">
+                  <i class="text-muted invisible"></i>
                   <button
-                    bitButton
                     class="filter-button"
                     appStopClick
                     (click)="selectType(sendType.Text)"
                   >
-                    <i class="fa-li fa fa-fw fa-file-text-o"></i>{{ "sendTypeText" | i18n }}
+                    <i class="fa-li fa fa-fw fa-file-text-o text-muted"></i>{{ "sendTypeText" | i18n }}
                   </button>
                 </span>
               </li>
               <li class="filter-option" [ngClass]="{ active: selectedType === sendType.File }">
                 <span class="filter-buttons">
+                  <i class="text-muted invisible"></i>
                   <button
-                    bitButton
                     class="filter-button"
                     appStopClick
                     (click)="selectType(sendType.File)"
                   >
-                    <i class="fa-li fa fa-fw fa-file-o"></i>{{ "sendTypeFile" | i18n }}
+                    <i class="fa-li fa fa-fw fa-file-o text-muted"></i>{{ "sendTypeFile" | i18n }}
                   </button>
                 </span>
               </li>

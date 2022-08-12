@@ -5,7 +5,7 @@
     color: themed("filterPanelActiveColor");
   }
   // make sure filter panel color won't be replaced by a child link color
-  & a {
+  & span {
     font-weight: 700;
     @include themify($themes) {
       color: themed("filterPanelActiveColor") !important;
@@ -21,7 +21,7 @@
     color: themed("filterPanelHoverColor");
   }
   // make sure filter panel color won't be replaced by a child link color
-  & a {
+  & span {
     @include themify($themes) {
       color: themed("filterPanelHoverColor");
     }
@@ -31,7 +31,7 @@
 @mixin recursiveIndent($default: 2) {
   padding-left: $default * 1px;
   @if $default <= 85 {
-    & + ul.fa-ul.card-ul.carets > li > div.d-flex {
+    & + span.filter-buttons {
       @include recursiveIndent($default + 17);
     }
   }

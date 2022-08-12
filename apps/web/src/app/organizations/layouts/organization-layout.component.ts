@@ -37,6 +37,9 @@ export class OrganizationLayoutComponent implements OnInit, OnDestroy {
           case "updatedOrgLicense":
             await this.load();
             break;
+          case "organizationUpdated":
+            await this.load();
+            break;
         }
       });
     });
