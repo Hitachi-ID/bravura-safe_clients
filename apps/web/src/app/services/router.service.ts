@@ -4,16 +4,17 @@ import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
 import { filter } from "rxjs";
 
 import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
+import { StateService } from "@bitwarden/common/abstractions/state.service";
 
 @Injectable()
 export class RouterService {
-  private previousUrl: string = undefined;
   private currentUrl: string = undefined;
 
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
+    private stateService: StateService,
     i18nService: I18nService
   ) {
     this.currentUrl = this.router.url;
@@ -46,11 +47,11 @@ export class RouterService {
       });
   }
 
-  getPreviousUrl() {
-    return this.previousUrl;
+  async getPreviousUrl() {
+    return await this.stateService.getPreviousUrl();
   }
 
-  setPreviousUrl(url: string) {
-    this.previousUrl = url;
+  async setPreviousUrl(url: string) {
+    await this.stateService.setPreviousUrl(url);
   }
 }

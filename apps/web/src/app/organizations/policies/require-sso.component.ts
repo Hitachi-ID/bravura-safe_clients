@@ -28,11 +28,6 @@ export class RequireSsoPolicyComponent extends BasePolicyComponent {
   }
 
   buildRequest(policiesEnabledMap: Map<PolicyType, boolean>): Promise<PolicyRequest> {
-    const singleOrgEnabled = policiesEnabledMap.get(PolicyType.SingleOrg) ?? false;
-    if (this.enabled.value && !singleOrgEnabled) {
-      throw new Error(this.i18nService.t("requireSsoPolicyReqError"));
-    }
-
     return super.buildRequest(policiesEnabledMap);
   }
 }

@@ -64,6 +64,96 @@
   "securityCode": {
     "message": "Código de seguridad (CVV)"
   },
+  "sso_bindingType_HttpRedirect": {
+    "message": "Redirect"
+  },
+  "sso_bindingType_HttpPost": {
+    "message": "Post"
+  },
+  "sso_enabled": {
+    "message": "Enable SSO"
+  },
+  "sso_enabled_tooltip": {
+    "message": "Allow SAML2 authentication"
+  },
+  "sso_encryptionType_SHA_1": {
+    "message": "Secure Hash Algorithm - 1 (SHA-1)"
+  },
+  "sso_encryptionType_SHA_256": {
+    "message": "Secure Hash Algorithm - 256 (SHA-256)"
+  },
+  "sso_encryptionType_SHA_384": {
+    "message": "Secure Hash Algorithm - 384 (SHA-384)"
+  },
+  "sso_encryptionType_SHA_512": {
+    "message": "Secure Hash Algorithm - 512 (SHA-512)"
+  },
+  "sso_serviceProviderConfiguration": {
+    "message": "SAML 2.0 Service Provider Configuration"
+  },
+  "sso_serviceProviderEntityID": {
+    "message": "Service Provider Entity ID"
+  },
+  "sso_serviceProviderMetadataUrl": {
+    "message": "SAML Metadata URL"
+  },
+  "sso_serviceProviderACSUrl": {
+    "message": "Assertion Consumer Service URL (ACS)"
+  },
+  "sso_signingEncryptionAlgorithm": {
+    "message": "Signing Algorithm"
+  },
+  "sso_signingType": {
+    "message": "IdP Signing Behavior"
+  },
+  "sso_signedAssertions": {
+    "message": "Signed Assertions"
+  },
+  "sso_certificateValidation": {
+    "message": "Certificate Validation"
+  },
+  "sso_identityProviderConfiguration": {
+    "message": "SAML 2.0 Identity Provider Configuration"
+  },
+  "sso_samlMappingType": {
+    "message": "Name ID Format"
+  },
+  "sso_samlMappingType_NotConfigured": {
+    "message": "Not configured"
+  },
+  "sso_samlMappingType_EmailAddress": {
+    "message": "Email Address"
+  },
+  "sso_samlMappingType_KerberosPrincipalName": {
+    "message": "Kerberos"
+  },
+  "sso_samlMappingType_X509SubjectName": {
+    "message": "X509"
+  },
+  "sso_samlMappingType_WindowsDomainQualifiedName": {
+    "message": "Windows Domain Name"
+  },
+  "sso_samlMappingType_EntityIdentifier": {
+    "message": "Entity Identifier"
+  },
+  "sso_samlMappingType_Persistent": {
+    "message": "Persistent"
+  },
+  "sso_samlMappingType_Transient": {
+    "message": "Transient"
+  },
+  "sso_samlMappingType_Unspecified": {
+    "message": "Unspecified"
+  },
+  "sso_signingType_IfIdpWantAuthnRequestsSigned": {
+    "message": "IdP managed"
+  },
+  "sso_signingType_Always": {
+    "message": "Always"
+  },
+  "sso_signingType_Never": {
+    "message": "Never"
+  },
   "identityName": {
     "message": "Nombre de la identidad"
   },

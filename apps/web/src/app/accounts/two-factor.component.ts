@@ -76,7 +76,7 @@ export class TwoFactorComponent extends BaseTwoFactorComponent {
   }
 
   async goAfterLogIn() {
-    const previousUrl = this.routerService.getPreviousUrl();
+    const previousUrl = await this.routerService.getPreviousUrl();
     if (previousUrl) {
       this.router.navigateByUrl(previousUrl);
     } else {

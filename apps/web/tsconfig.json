@@ -15,7 +15,8 @@
   },
   "files": [
     "src/app/polyfills.ts",
-    "src/app/main.ts"
+    "src/app/main.ts",
+    "bravura_src/web/sso/src/app/main.ts"
   ],
   "include": [
     "src/connectors/*.ts",
