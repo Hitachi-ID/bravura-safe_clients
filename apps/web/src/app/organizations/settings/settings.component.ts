@@ -21,7 +21,7 @@ export class SettingsComponent {
   ngOnInit() {
     this.route.parent.params.subscribe(async (params) => {
       const organization = await this.organizationService.get(params.organizationId);
-      this.showBilling = !this.platformUtilsService.isSelfHost() && organization.canManageBilling;
+      this.showBilling = !this.platformUtilsService.isSelfHost(); // && organization.canManageBilling;
       this.access2fa = organization.use2fa;
     });
   }
