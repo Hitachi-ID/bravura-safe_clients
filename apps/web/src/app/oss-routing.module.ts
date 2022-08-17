@@ -176,11 +176,6 @@ const routes: Routes = [
             data: { titleId: "domainRules" },
           },
           {
-            path: "subscription",
-            loadChildren: async () =>
-              (await import("./settings/subscription-routing.module")).SubscriptionRoutingModule,
-          },
-          {
             path: "emergency-access",
             children: [
               {
