@@ -11,7 +11,6 @@ import { HintComponent } from "./accounts/hint.component";
 import { LockComponent } from "./accounts/lock.component";
 import { LoginComponent } from "./accounts/login.component";
 import { RecoverDeleteComponent } from "./accounts/recover-delete.component";
-import { RecoverTwoFactorComponent } from "./accounts/recover-two-factor.component";
 import { RegisterComponent } from "./accounts/register.component";
 import { RemovePasswordComponent } from "./accounts/remove-password.component";
 import { SetPasswordComponent } from "./accounts/set-password.component";
@@ -24,7 +23,6 @@ import { VerifyRecoverDeleteComponent } from "./accounts/verify-recover-delete.c
 import { HomeGuard } from "./guards/home.guard";
 import { FrontendLayoutComponent } from "./layouts/frontend-layout.component";
 import { UserLayoutComponent } from "./layouts/user-layout.component";
-import { AcceptFamilySponsorshipComponent } from "./organizations/sponsorships/accept-family-sponsorship.component";
 import { FamiliesForEnterpriseSetupComponent } from "./organizations/sponsorships/families-for-enterprise-setup.component";
 import { AccessComponent } from "./send/access.component";
 import { SendComponent } from "./send/send.component";
@@ -35,7 +33,6 @@ import { EmergencyAccessViewComponent } from "./settings/emergency-access-view.c
 import { EmergencyAccessComponent } from "./settings/emergency-access.component";
 import { PreferencesComponent } from "./settings/preferences.component";
 import { SettingsComponent } from "./settings/settings.component";
-import { SponsoredFamiliesComponent } from "./settings/sponsored-families.component";
 import { ExportComponent } from "./tools/export.component";
 import { GeneratorComponent } from "./tools/generator.component";
 import { ImportComponent } from "./tools/import.component";
@@ -179,11 +176,6 @@ const routes: Routes = [
             data: { titleId: "domainRules" },
           },
           {
-            path: "subscription",
-            loadChildren: async () =>
-              (await import("./settings/subscription-routing.module")).SubscriptionRoutingModule,
-          },
-          {
             path: "emergency-access",
             children: [
               {
@@ -197,11 +189,6 @@ const routes: Routes = [
                 data: { titleId: "emergencyAccess" },
               },
             ],
-          },
-          {
-            path: "sponsored-families",
-            component: SponsoredFamiliesComponent,
-            data: { titleId: "sponsoredFamilies" },
           },
         ],
       },

@@ -64,9 +64,10 @@ export class AccountComponent {
 
     this.route.parent.parent.params.subscribe(async (params) => {
       this.organizationId = params.organizationId;
-      this.canManageBilling = (
+/*      this.canManageBilling = (
         await this.organizationService.get(this.organizationId)
-      ).canManageBilling;
+      ).canManageBilling;*/
+      this.canManageBilling = false;
       try {
         this.org = await this.apiService.getOrganization(this.organizationId);
         this.canUseApi = this.org.useApi;

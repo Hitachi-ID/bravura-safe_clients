@@ -11,8 +11,7 @@ import { GlobalState } from "../models/globalState";
 
 export class StateService
   extends BaseStateService<GlobalState, Account>
-  implements StateServiceAbstraction
-{
+  implements StateServiceAbstraction {
   async addAccount(account: Account) {
     // Apply web overides to default account values
     account = new Account(account);
@@ -34,6 +33,13 @@ export class StateService
       globals,
       this.reconcileOptions(options, await this.defaultOnDiskLocalOptions())
     );
+  }
+  async getPreviousUrl(options?: StorageOptions): Promise<string> {
+    return super.getPreviousUrl();
+  }
+
+  async setPreviousUrl(value: string, options?: StorageOptions): Promise<void> {
+    super.setPreviousUrl(value, options);
   }
 
   async getEncryptedCiphers(options?: StorageOptions): Promise<{ [id: string]: CipherData }> {

@@ -82,7 +82,7 @@ async function start() {
 
 function captchaSuccess(response: string) {
   if (mobileResponse) {
-    document.location.replace("bitwarden://captcha-callback?token=" + encodeURIComponent(response));
+    document.location.replace("bravurasafe://captcha-callback?token=" + encodeURIComponent(response));
   } else {
     success(response);
   }

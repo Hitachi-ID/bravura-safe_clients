@@ -206,17 +206,8 @@ export class Organization {
       (permissions.includes(Permissions.ManagePolicies) && this.canManagePolicies) ||
       (permissions.includes(Permissions.ManageUsers) && this.canManageUsers) ||
       (permissions.includes(Permissions.ManageUsersPassword) && this.canManageUsersPassword) ||
-      (permissions.includes(Permissions.ManageSso) && this.canManageSso) ||
-      (permissions.includes(Permissions.ManageBilling) && this.canManageBilling);
+      (permissions.includes(Permissions.ManageSso) && this.canManageSso);
 
     return specifiedPermissions && (this.enabled || this.isOwner);
-  }
-
-  get canManageBilling() {
-    return this.isOwner && (this.isProviderUser || !this.hasProvider);
-  }
-
-  get hasProvider() {
-    return this.providerId != null || this.providerName != null;
   }
 }

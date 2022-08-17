@@ -2079,6 +2079,23 @@ export class StateService<
     );
   }
 
+  async getPreviousUrl(options?: StorageOptions): Promise<string> {
+    return (
+      await this.getGlobals(this.reconcileOptions(options, await this.defaultOnDiskLocalOptions()))
+    )?.previousUrl;
+  }
+
+  async setPreviousUrl(value: string, options?: StorageOptions): Promise<void> {
+    const globals = await this.getGlobals(
+      this.reconcileOptions(options, await this.defaultOnDiskLocalOptions())
+    );
+    globals.previousUrl = value;
+    await this.saveGlobals(
+      globals,
+      this.reconcileOptions(options, await this.defaultOnDiskLocalOptions())
+    );
+  }
+
   async getSecurityStamp(options?: StorageOptions): Promise<string> {
     return (
       await this.getAccount(this.reconcileOptions(options, await this.defaultInMemoryOptions()))

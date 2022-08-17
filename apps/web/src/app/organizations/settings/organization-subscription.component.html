@@ -16,13 +16,13 @@
   <span class="sr-only">{{ "loading" | i18n }}</span>
 </ng-container>
 
-<ng-container *ngIf="firstLoaded && !userOrg.canManageBilling">
+<!-- <ng-container *ngIf="firstLoaded && !userOrg.canManageBilling">
   <div class="tw-flex tw-flex-col tw-items-center tw-text-info">
     <app-image-org-subscription-hidden></app-image-org-subscription-hidden>
     <p class="tw-font-bold">{{ "billingManagedByProvider" | i18n: this.userOrg.providerName }}</p>
     <p>{{ "billingContactProviderForAssistance" | i18n }}</p>
   </div>
-</ng-container>
+</ng-container> -->
 
 <ng-container *ngIf="sub">
   <app-callout
@@ -203,14 +203,14 @@
       >
         {{ "downloadLicense" | i18n }}
       </button>
-      <button
+<!--      <button
         type="button"
         class="btn btn-outline-secondary ml-1"
         (click)="manageBillingSync()"
         *ngIf="canManageBillingSync"
       >
         {{ (hasBillingSyncToken ? "manageBillingSync" : "setUpBillingSync") | i18n }}
-      </button>
+      </button> -->
     </div>
     <div class="mt-3" *ngIf="showDownloadLicense">
       <app-download-license
