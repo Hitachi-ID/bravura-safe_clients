@@ -524,10 +524,10 @@
     "message": "Cofre"
   },
   "vaults": {
-    "message": "Safes"
+    "message": "My Safe"
   },
   "vaultItems": {
-    "message": "Safe Items"
+    "message": "My Safe Items"
   },
   "moveSelectedToOrg": {
     "message": "Mover Selecionados para a organização"

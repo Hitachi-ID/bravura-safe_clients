@@ -524,10 +524,10 @@
     "message": "Safe"
   },
   "vaults": {
-    "message": "Safes"
+    "message": "My Safe"
   },
   "vaultItems": {
-    "message": "Safe Items"
+    "message": "My Safe Items"
   },
   "moveSelectedToOrg": {
     "message": "Move Selected to Team"
