@@ -57,8 +57,11 @@ then
 
 else
     echo "Run build for open source, selfhosted, production level:"
+	pushd .
+	cd ../../
     nvm use
     npm install
+	popd
     npm run build:bravura:selfhost:prod
     docker build -t bravura_vault/web . --label com.hitachi.web.hash="$(git rev-parse HEAD)"
 fi

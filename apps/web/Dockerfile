@@ -38,9 +38,12 @@ RUN set -eux; \
         apk add --upgrade --no-cache \
                 linux-pam \
                 shadow \
-                tzdata
+                tzdata \
+                icu-libs
 
 ENV ASPNETCORE_URLS http://+:5000
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
+
 WORKDIR /app
 EXPOSE 5000
 COPY ./build .
