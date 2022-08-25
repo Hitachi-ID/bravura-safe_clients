@@ -72,6 +72,7 @@ function distOpera() {
 
 function distChrome() {
   return dist("chrome", (manifest) => {
+    delete manifest.internalVersion;
     delete manifest.applications;
     delete manifest.content_security_policy;
     delete manifest.sidebar_action;
