@@ -187,6 +187,10 @@ span.filter-buttons {
     @extend .no-btn;
   }
 
+  .contents {
+    display: contents;
+  }
+
   .toggle-button {
     &:hover,
     &:focus {
@@ -221,6 +225,10 @@ span.filter-buttons {
         color: themed("iconHover") !important;
       }
     }
+  }
+
+  .org-options {
+    padding: 0 2px;
   }
 }
 

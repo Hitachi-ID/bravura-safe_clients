@@ -18,6 +18,8 @@ export class AccountMenu implements IMenubarMenu {
       this.changeMasterPassword,
       this.twoStepLogin,
       this.fingerprintPhrase,
+      this.separator,
+      this.deleteAccount,
     ];
   }
 
@@ -102,6 +104,19 @@ export class AccountMenu implements IMenubarMenu {
       click: () => this.sendMessage("showFingerprintPhrase"),
       enabled: !this._isLocked,
     };
+  }
+
+  private get deleteAccount(): MenuItemConstructorOptions {
+    return {
+      label: this.localize("deleteAccount"),
+      id: "deleteAccount",
+      click: () => this.sendMessage("deleteAccount"),
+      enabled: !this._isLocked,
+    };
+  }
+
+  private get separator(): MenuItemConstructorOptions {
+    return { type: "separator" };
   }
 
   private localize(s: string) {

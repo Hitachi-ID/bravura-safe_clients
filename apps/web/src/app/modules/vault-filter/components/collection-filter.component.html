@@ -27,7 +27,7 @@
       <li
         *ngFor="let c of collections"
         [ngClass]="{
-          active: c.node.id === activeFilter.selectedCollectionId,
+          active: c.node.id === activeFilter.selectedCollectionId && activeFilter.selectedCollection,
           expand: c.children.length && !isCollapsed(c.node)
         }"
         class="filter-option"

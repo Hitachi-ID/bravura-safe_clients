@@ -32,7 +32,7 @@
             [attr.aria-expanded]="!isCollapsed(c.node)"
             [attr.aria-controls]="c.node.name + '_children'"
             (click)="toggleCollapse(c.node)"
-            appA11yTitle="{{ 'toggleCollapse' | i18n }}"
+            appA11yTitle="{{ 'toggleCollapse' | i18n }} {{ c.node.name }}"
           >
             <i
               class="fa fa-fw"

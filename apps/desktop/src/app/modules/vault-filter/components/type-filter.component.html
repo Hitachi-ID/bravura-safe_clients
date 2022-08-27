@@ -26,7 +26,7 @@
       <button
         class="filter-button"
         (click)="applyFilter(cipherTypeEnum.Login)"
-        [attr.aria-pressed]="activeFilter.selectedType === cipherTypeEnum.Login"
+        [attr.aria-pressed]="activeFilter.cipherType === cipherTypeEnum.Login"
       >
         <i class="fa fa-fw fa-globe" aria-hidden="true"></i>&nbsp;{{ "typeLogin" | i18n }}
       </button>
@@ -37,7 +37,7 @@
       <button
         class="filter-button"
         (click)="applyFilter(cipherTypeEnum.Card)"
-        [attr.aria-pressed]="activeFilter.selectedType === cipherTypeEnum.Card"
+        [attr.aria-pressed]="activeFilter.cipherType === cipherTypeEnum.Card"
       >
         <i class="fa fa-fw fa-credit-card" aria-hidden="true"></i>&nbsp;{{ "typeCard" | i18n }}
       </button>
@@ -51,7 +51,7 @@
       <button
         class="filter-button"
         (click)="applyFilter(cipherTypeEnum.Identity)"
-        [attr.aria-pressed]="activeFilter.selectedType === cipherTypeEnum.Identity"
+        [attr.aria-pressed]="activeFilter.cipherType === cipherTypeEnum.Identity"
       >
         <i class="fa fa-fw fa-id-card-o" aria-hidden="true"></i>&nbsp;{{ "typeIdentity" | i18n }}
       </button>
@@ -65,7 +65,7 @@
       <button
         class="filter-button"
         (click)="applyFilter(cipherTypeEnum.SecureNote)"
-        [attr.aria-pressed]="activeFilter.selectedType === cipherTypeEnum.SecureNote"
+        [attr.aria-pressed]="activeFilter.cipherType === cipherTypeEnum.SecureNote"
       >
         <i class="fa fa-fw fa-sticky-note-o" aria-hidden="true"></i>&nbsp;{{
           "typeSecureNote" | i18n
