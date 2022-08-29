@@ -156,7 +156,7 @@ ul.filter-options > li.filter-option > span.filter-buttons {
 
   &.active {
     > .filter-buttons {
-      .filter-button {
+      .filter-button, .edit-button {
         @include themify($themes) {
           color: themed("linkColor") !important;
         }
