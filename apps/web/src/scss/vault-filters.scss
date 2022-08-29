@@ -71,14 +71,6 @@
   }
 }
 
-.card .card-body > ul.filter-options {
-  & > li:not(.expand).active {
-    @include filterPanelActive;
-  }
-  & > li:not(.expand):hover {
-    @include filterPanelHover;
-  }
-}
 
 .filter-options {
   padding: 0;
@@ -87,7 +79,7 @@
   .nested-filter-options {
     list-style: none;
     margin-bottom: 0px;
-    padding-left: 0.85em;
+    padding-left: 0;
   }
 
   li{
@@ -107,10 +99,10 @@
         align-self: flex-start;
       }
     }
-    &.active {
+    &.active > span{
       @include filterPanelActive;
     }
-    &:hover {
+    > span:hover {
       @include filterPanelHover;
     }
     & > button > i {
@@ -153,7 +145,7 @@
   }
 }
 
-span.filter-buttons {
+ul.filter-options > li.filter-option > span.filter-buttons {
   @include recursiveIndent();
 }
 
