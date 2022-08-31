@@ -1,4 +1,4 @@
-<div class="dropdown organizations flex-grow-0 flex-shrink-0" *ngIf="!hideOrganizations">
+<div class="dropdown organizations flex-grow-0 flex-shrink-0 org-dropdown-container" *ngIf="!hideOrganizations">
   <button
     class="btn btn-outline-secondary dropdown-toggle"
     type="button"
@@ -28,45 +28,50 @@
         </div>
         <div *ngIf="isLoaded">
           <div class="card-body">
-            <input
-              type="search"
-              placeholder="{{ (searchPlaceholder | i18n) || ('searchVault' | i18n) }}"
-              id="search"
-              class="form-control"
-              [(ngModel)]="searchText"
-              (input)="searchTextChanged()"
-              autocomplete="off"
-              appAutofocus
-            />
-            <div class="filter">
-              <app-status-filter
-                [hideFavorites]="hideFavorites"
-                [hideTrash]="hideTrash"
-                [activeFilter]="activeFilter"
-                (onFilterChange)="applyFilter($event)"
-              ></app-status-filter>
+            
+            <div class="search-container">
+              <input
+                type="search"
+                placeholder="{{ (searchPlaceholder | i18n) || ('searchVault' | i18n) }}"
+                id="search"
+                class="form-control"
+                [(ngModel)]="searchText"
+                (input)="searchTextChanged()"
+                autocomplete="off"
+                appAutofocus
+              />
             </div>
-            <div class="filter">
-              <app-folder-filter
-                [hide]="hideFolders"
-                [activeFilter]="activeFilter"
-                [collapsedFilterNodes]="collapsedFilterNodes"
-                [folderNodes]="folders"
-                (onNodeCollapseStateChange)="toggleFilterNodeCollapseState($event)"
-                (onFilterChange)="applyFilter($event)"
-                (onAddFolder)="addFolder()"
-                (onEditFolder)="editFolder($event)"
-              ></app-folder-filter>
-            </div>
-            <div class="filter">
-              <app-collection-filter
-                [hide]="hideCollections"
-                [activeFilter]="activeFilter"
-                [collapsedFilterNodes]="collapsedFilterNodes"
-                [collectionNodes]="collections"
-                (onNodeCollapseStateChange)="toggleFilterNodeCollapseState($event)"
-                (onFilterChange)="applyFilter($event)"
-              ></app-collection-filter>
+            <div class="filter-container">
+              <div class="filter">
+                <app-status-filter
+                  [hideFavorites]="hideFavorites"
+                  [hideTrash]="hideTrash"
+                  [activeFilter]="activeFilter"
+                  (onFilterChange)="applyFilter($event)"
+                ></app-status-filter>
+              </div>
+              <div class="filter">
+                <app-folder-filter
+                  [hide]="hideFolders"
+                  [activeFilter]="activeFilter"
+                  [collapsedFilterNodes]="collapsedFilterNodes"
+                  [folderNodes]="folders"
+                  (onNodeCollapseStateChange)="toggleFilterNodeCollapseState($event)"
+                  (onFilterChange)="applyFilter($event)"
+                  (onAddFolder)="addFolder()"
+                  (onEditFolder)="editFolder($event)"
+                ></app-folder-filter>
+              </div>
+              <div class="filter">
+                <app-collection-filter
+                  [hide]="hideCollections"
+                  [activeFilter]="activeFilter"
+                  [collapsedFilterNodes]="collapsedFilterNodes"
+                  [collectionNodes]="collections"
+                  (onNodeCollapseStateChange)="toggleFilterNodeCollapseState($event)"
+                  (onFilterChange)="applyFilter($event)"
+                ></app-collection-filter>
+              </div>
             </div>
           </div>
         </div>

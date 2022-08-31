@@ -31,7 +31,6 @@ app-org-vault-groupings,
 .groupings {
   .card {
     #search {
-      margin: 0.5rem;
       width: calc(100% - 1rem);
       @include themify($themes) {
         background-color: themed("inputBackgroundColor");
@@ -169,7 +168,7 @@ app-org-vault-groupings,
 app-vault div.vault-filters div.card-body,
 app-org-vault div.vault-filters div.card-body,
 app-send div.vault-filters div.card-body {
-  padding: 0 0 10px 0;
+  padding: 0;
   ul.card-ul {
     margin-left: 0;
   }
@@ -240,7 +239,7 @@ app-vault {
 @include media-breakpoint-up(md) {
   .scrollable-menu {
     max-height: calc(100vh - 200px);
-  } 
+  }
 }
 
 @include media-breakpoint-down(sm) {
@@ -311,10 +310,6 @@ app-sponsored-families {
   }
 }
 
-.container.page-content {
-  padding-bottom: 20px;
-}
-
 .col-9 {
   display: flex;
   flex-direction: column;
@@ -330,15 +325,18 @@ app-sponsored-families {
 }
 
 .page-content > .row > .col-3:first-child {
-  height: calc(100vh - $navbar-height - $navbar-bottom-margin);
-  padding-top: $navbar-bottom-margin;
+  height: calc(100vh - $navbar-height - $sidebar-padding-top);
+  padding-top: $sidebar-padding-top;
   position: sticky;
   top: $navbar-height;
+  .card {
+    margin: 0;
+  }
 }
 
 app-organization-layout {
   .page-content > .row > .col-3:first-child {
-    height: calc(100vh - $navbar-height - $navbar-bottom-margin - $org-header-height);
+    height: calc(100vh - $navbar-height - $sidebar-padding-top - $org-header-height);
     top: $navbar-height + $org-header-height;
   }
 }
@@ -496,4 +494,28 @@ app-footer {
       font-weight: bold;
     }
   }
+}
+
+.filter-container {
+  max-height: calc(
+    100vh - $navbar-height - $sidebar-padding-top * 2 - $search-container-height -
+      $org-dropdown-container-height
+  );
+  overflow: auto;
+  border-top: 1px solid $secondary;
+  padding: 10px 0;
+}
+
+app-organization-layout {
+  .filter-container {
+    max-height: calc(
+      100vh - $navbar-height - $sidebar-padding-top * 2 - $org-header-height - $search-container-height
+    );
+  }
+}
+.search-container {
+  height: $search-container-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

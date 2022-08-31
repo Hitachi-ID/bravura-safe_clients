@@ -1,18 +1,12 @@
 <div class="container page-content">
   <div class="row">
     <div class="col-3">
-      <div class="groupings">
-        <div class="content">
-          <div class="inner-content">
-            <app-organization-vault-filter
-              #vaultFilter
-              [activeFilter]="activeFilter"
-              (onFilterChange)="applyVaultFilter($event)"
-              (onSearchTextChanged)="filterSearchText($event)"
-            ></app-organization-vault-filter>
-          </div>
-        </div>
-      </div>
+      <app-organization-vault-filter
+        #vaultFilter
+        [activeFilter]="activeFilter"
+        (onFilterChange)="applyVaultFilter($event)"
+        (onSearchTextChanged)="filterSearchText($event)"
+      ></app-organization-vault-filter>
     </div>
     <div class="col-9">
       <div class="page-header d-flex">

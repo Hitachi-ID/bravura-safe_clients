@@ -41,7 +41,7 @@ $code-font-size: 100%;
 $navbar-padding-y: 0;
 $navbar-padding-x: 0;
 $navbar-height: 50px;
-$navbar-bottom-margin: 20px;
+
 $grid-gutter-width: 20px;
 $card-spacer-y: 0.6rem;
 
@@ -60,6 +60,7 @@ $navbar-dark-hover-color: rgba($white, 0.9);
 $navbar-nav-link-padding-x: 0.8rem;
 
 $org-header-height: 100px;
+$org-dropdown-container-height: 45px;
 
 $dropdown-link-color: $navbar-dark-color;
 $dropdown-link-hover-bg: rgba(#000000, 0.06);
@@ -123,6 +124,10 @@ $darkDarkBlue1: #2f343d;
 $darkDarkBlue2: #1f242e;
 $darkInputColor: $white;
 $darkInputPlaceholderColor: $darkGrey1;
+
+$vertical-content-padding: 20px;
+$search-container-height:46px;
+$sidebar-padding-top: $vertical-content-padding;
 
 $themes: (
   light: (

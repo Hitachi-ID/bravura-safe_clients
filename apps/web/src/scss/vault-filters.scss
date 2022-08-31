@@ -27,7 +27,7 @@
 
   h3,
   button.filter-button {
-      @include themify($themes) {
+    @include themify($themes) {
       color: themed("textMuted");
     }
   }
@@ -71,7 +71,6 @@
   }
 }
 
-
 .filter-options {
   padding: 0;
   list-style: none;
@@ -82,7 +81,7 @@
     padding-left: 0;
   }
 
-  li{
+  li {
     word-break: keep-all;
 
     line-height: 30px;
@@ -99,7 +98,7 @@
         align-self: flex-start;
       }
     }
-    &.active > span{
+    &.active > span {
       @include filterPanelActive;
     }
     > span:hover {
@@ -156,7 +155,8 @@ ul.filter-options > li.filter-option > span.filter-buttons {
 
   &.active {
     > .filter-buttons {
-      .filter-button, .edit-button {
+      .filter-button,
+      .edit-button {
         @include themify($themes) {
           color: themed("linkColor") !important;
         }
@@ -219,7 +219,6 @@ ul.filter-options > li.filter-option > span.filter-buttons {
 .groupings {
   .card {
     #search {
-      margin-bottom: 1rem;
       @include themify($themes) {
         background-color: themed("inputBackgroundColor");
         border-color: themed("inputBorderColor");
@@ -285,4 +284,12 @@ ul.filter-options > li.filter-option > span.filter-buttons {
 
 .text-muted.invisible {
   margin-left: 1.5rem;
+}
+
+.org-dropdown-container {
+  height: $org-dropdown-container-height;
+}
+
+.vault-filters.card {
+  margin: 0;
 }
