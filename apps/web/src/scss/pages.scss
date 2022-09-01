@@ -325,7 +325,7 @@ app-sponsored-families {
 }
 
 .page-content > .row > .col-3:first-child {
-  height: calc(100vh - $navbar-height - $sidebar-padding-top);
+  height: calc(100vh - $navbar-height);
   padding-top: $sidebar-padding-top;
   position: sticky;
   top: $navbar-height;
@@ -336,7 +336,7 @@ app-sponsored-families {
 
 app-organization-layout {
   .page-content > .row > .col-3:first-child {
-    height: calc(100vh - $navbar-height - $sidebar-padding-top - $org-header-height);
+    height: calc(100vh - $navbar-height - $org-header-height);
     top: $navbar-height + $org-header-height;
   }
 }
