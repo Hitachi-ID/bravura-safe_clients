@@ -1,5 +1,6 @@
 html {
   font-size: 14px;
+  overflow-y: scroll;
 }
 
 body {
@@ -41,14 +42,9 @@ body {
 .page-header,
 .secondary-header,
 .tabbed-header {
-  padding-top: $navbar-bottom-margin;
+  padding-top: $sidebar-padding-top;
 
-  // Attempted to make page-header float, but it causes issues with the
-  // layering of nested dialogs in bulk actions, so will require a
-  // greater restructure to support.
-  // position: sticky;
-  // top: $navbar-height;
-  // z-index: 1;
+
 
   @include themify($themes) {
     background: themed("backgroundColor");
@@ -113,7 +109,7 @@ img.logo {
 }
 
 .footer {
-  margin-top: 40px;
+  margin-bottom: 13px;
   padding: 5px 0;
   @include themify($themes) {
     border-top: 1px solid themed("separator");
