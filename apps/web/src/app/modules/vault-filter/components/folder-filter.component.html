@@ -58,10 +58,10 @@
               aria-hidden="true"
             ></i>
           </button>
-          <button class="filter-button" (click)="applyFilter(f.node)">
+          <button class="filter-button flex-shrink-0" (click)="applyFilter(f.node)">
             <i class="fa fa-folder-o text-muted" aria-hidden="true"></i>
           </button>
-          <button class="filter-button text-muted" (click)="applyFilter(f.node)" style="text-align: left;width: 150px;">
+          <button class="filter-button text-muted flex-grow-1 text-left" (click)="applyFilter(f.node)">
             {{ f.node.name }}
           </button>
           

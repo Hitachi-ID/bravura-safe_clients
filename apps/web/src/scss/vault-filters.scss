@@ -198,6 +198,10 @@ ul.filter-options > li.filter-option > span.filter-buttons {
       text-decoration: none;
     }
     max-width: 90%;
+    &.flex-grow-align {
+      flex-grow: 1;
+      text-align: left;
+    }
   }
 
   .edit-button {
