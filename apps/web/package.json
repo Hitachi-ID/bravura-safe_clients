@@ -1,7 +1,7 @@
 {
   "name": "@bitwarden/web-vault",
   "version": "2022.7.0",
-  "internalVersion": "2022-07",
+  "internalVersion": "2022-08",
   "scripts": {
     "build:oss": "webpack",
     "build:bit": "webpack -c ../../bitwarden_license/bit-web/webpack.config.js",
