@@ -100,6 +100,12 @@ import { UserNamePipe } from "./pipes/user-name.pipe";
     TrueFalseValueDirective,
     UserNamePipe,
   ],
-  providers: [CreditCardNumberPipe, DatePipe, I18nPipe, SearchPipe, UserNamePipe /*, RouterService*/ ],
+  providers: [
+    CreditCardNumberPipe,
+    DatePipe,
+    I18nPipe,
+    SearchPipe,
+    UserNamePipe /*, RouterService*/,
+  ],
 })
-export class JslibModule { }
+export class JslibModule {}
