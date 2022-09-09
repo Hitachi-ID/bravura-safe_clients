@@ -313,7 +313,11 @@ const webpackConfig = {
     },
     minimizer: [
       new TerserPlugin({
+        extractComments: false,
         terserOptions: {
+          format: {
+            comments: false,
+          },
           safari10: true,
           // Replicate Angular CLI behaviour
           compress: {
