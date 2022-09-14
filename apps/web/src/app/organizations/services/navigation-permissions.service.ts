@@ -30,9 +30,11 @@ export class NavigationPermissionsService {
 
   static canAccessAdmin(organization: Organization): boolean {
     return (
+      organization.canAccess ||
       this.canAccessTools(organization) ||
       this.canAccessSettings(organization) ||
-      this.canAccessManage(organization)
+      this.canAccessManage(organization) ||
+      this.canAccessReports(organization)
     );
   }
 

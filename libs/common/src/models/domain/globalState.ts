@@ -13,7 +13,7 @@ export class GlobalState {
   ssoOrganizationIdentifier?: string;
   ssoState?: string;
   rememberedEmail?: string;
-  previousUrl?:string;
+  previousUrl?: string;
   theme?: ThemeType = ThemeType.System;
   window?: WindowState = new WindowState();
   twoFactorToken?: string;

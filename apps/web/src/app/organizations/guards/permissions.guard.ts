@@ -39,6 +39,7 @@ export class PermissionsGuard implements CanActivate {
       return this.router.createUrlTree(["/"]);
     }
 
+    if( !org.canAccess ) {
     const permissions = route.data == null ? [] : (route.data.permissions as Permissions[]);
     if (permissions != null && !org.hasAnyPermission(permissions)) {
       // Handle linkable ciphers for organizations the user only has view access to
@@ -55,6 +56,7 @@ export class PermissionsGuard implements CanActivate {
 
       this.platformUtilsService.showToast("error", null, this.i18nService.t("accessDenied"));
       return this.router.createUrlTree(["/"]);
+    }
     }
 
     return true;

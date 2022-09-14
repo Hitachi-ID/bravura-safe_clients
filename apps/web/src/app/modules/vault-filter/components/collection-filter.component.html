@@ -51,14 +51,14 @@
               aria-hidden="true"
             ></i>
           </button>
-          <button class="filter-button" (click)="applyFilter(c.node)">
+          <button class="filter-button flex-shrink-0" (click)="applyFilter(c.node)">
             <i
               *ngIf="c.children.length === 0"
               class="fa fa-cube text-muted"
               aria-hidden="true"
             ></i>
           </button>
-          <button class="filter-button" (click)="applyFilter(c.node)" style="text-align: left; width: 167px;">
+          <button class="filter-button flex-grow-1 text-left" (click)="applyFilter(c.node)">
             {{ c.node.name }}
           </button>
         </span>

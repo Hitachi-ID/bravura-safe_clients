@@ -103,6 +103,12 @@ import { PasswordStrengthComponent } from "./shared/components/password-strength
     UserNamePipe,
     PasswordStrengthComponent,
   ],
-  providers: [CreditCardNumberPipe, DatePipe, I18nPipe, SearchPipe, UserNamePipe /*, RouterService*/ ],
+  providers: [
+    CreditCardNumberPipe,
+    DatePipe,
+    I18nPipe,
+    SearchPipe,
+    UserNamePipe /*, RouterService*/,
+  ],
 })
-export class JslibModule { }
+export class JslibModule {}

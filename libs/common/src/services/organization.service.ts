@@ -1,12 +1,13 @@
 import { Observable, Subject } from "rxjs";
+
 import { OrganizationService as OrganizationServiceAbstraction } from "../abstractions/organization.service";
 import { StateService } from "../abstractions/state.service";
 import { OrganizationData } from "../models/data/organizationData";
 import { Organization } from "../models/domain/organization";
 
 export class OrganizationService implements OrganizationServiceAbstraction {
-  public organizationUpdate: Subject<void> = new Subject<void>();
-  public orgUpdate: Observable<void> = this.organizationUpdate.asObservable();
+  organizationUpdate: Subject<void> = new Subject<void>();
+  orgUpdate: Observable<void> = this.organizationUpdate.asObservable();
 
   constructor(private stateService: StateService) {}
 

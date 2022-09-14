@@ -27,7 +27,7 @@
 
   h3,
   button.filter-button {
-      @include themify($themes) {
+    @include themify($themes) {
       color: themed("textMuted");
     }
   }
@@ -71,15 +71,6 @@
   }
 }
 
-.card .card-body > ul.filter-options {
-  & > li:not(.expand).active {
-    @include filterPanelActive;
-  }
-  & > li:not(.expand):hover {
-    @include filterPanelHover;
-  }
-}
-
 .filter-options {
   padding: 0;
   list-style: none;
@@ -87,10 +78,10 @@
   .nested-filter-options {
     list-style: none;
     margin-bottom: 0px;
-    padding-left: 0.85em;
+    padding-left: 0;
   }
 
-  li{
+  li {
     word-break: keep-all;
 
     line-height: 30px;
@@ -107,10 +98,10 @@
         align-self: flex-start;
       }
     }
-    &.active {
+    &.active > span {
       @include filterPanelActive;
     }
-    &:hover {
+    > span:hover {
       @include filterPanelHover;
     }
     & > button > i {
@@ -153,7 +144,7 @@
   }
 }
 
-span.filter-buttons {
+ul.filter-options > li.filter-option > span.filter-buttons {
   @include recursiveIndent();
 }
 
@@ -164,7 +155,8 @@ span.filter-buttons {
 
   &.active {
     > .filter-buttons {
-      .filter-button {
+      .filter-button,
+      .edit-button {
         @include themify($themes) {
           color: themed("linkColor") !important;
         }
@@ -210,6 +202,10 @@ span.filter-buttons {
       text-decoration: none;
     }
     max-width: 90%;
+    &.flex-grow-align {
+      flex-grow: 1;
+      text-align: left;
+    }
   }
 
   .edit-button {
@@ -235,7 +231,6 @@ span.filter-buttons {
 .groupings {
   .card {
     #search {
-      margin-bottom: 1rem;
       @include themify($themes) {
         background-color: themed("inputBackgroundColor");
         border-color: themed("inputBorderColor");
@@ -301,4 +296,12 @@ span.filter-buttons {
 
 .text-muted.invisible {
   margin-left: 1.5rem;
+}
+
+.org-dropdown-container {
+  height: $org-dropdown-container-height;
+}
+
+.vault-filters.card {
+  margin: 0;
 }

@@ -1,5 +1,6 @@
 .navbar {
   z-index: 2;
+  height: $navbar-height;
 
   @include themify($themes) {
     background-color: themed("navBackground");
