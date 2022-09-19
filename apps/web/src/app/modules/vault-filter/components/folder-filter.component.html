@@ -1,7 +1,8 @@
 <ng-container *ngIf="!hide">
-  <div class="filter-heading"
+  <div
+    class="filter-heading"
     [ngClass]="{
-      'expandedGrouping': !isCollapsed(foldersGrouping)
+      expandedGrouping: !isCollapsed(foldersGrouping)
     }"
   >
     <button
@@ -11,14 +12,16 @@
       aria-controls="folder-filters"
       title="{{ 'toggleCollapse' | i18n }}"
     >
-      <i
-        class="fa fa-fw mr-0"
-        aria-hidden="true"
-        [ngClass]="{
-          'fa-caret-right': isCollapsed(foldersGrouping),
-          'fa-caret-down': !isCollapsed(foldersGrouping)
-        }"
-      ></i>
+      <h3>
+        <i
+          class="fa fa-fw mr-0"
+          aria-hidden="true"
+          [ngClass]="{
+            'fa-caret-right': isCollapsed(foldersGrouping),
+            'fa-caret-down': !isCollapsed(foldersGrouping)
+          }"
+        ></i>
+      </h3>
     </button>
     <h3 class="filter-title">&nbsp;{{ "folders" | i18n }}</h3>
     <button
@@ -26,7 +29,7 @@
       (click)="addFolder()"
       appA11yTitle="{{ 'addFolder' | i18n }}"
     >
-      <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
+      <h3><i class="fa fa-plus fa-fw" aria-hidden="true"></i></h3>
     </button>
   </div>
   <ul id="folder-filters" *ngIf="!isCollapsed(foldersGrouping)" class="filter-options">
@@ -40,7 +43,7 @@
         class="filter-option"
       >
         <span class="filter-buttons">
-        <i *ngIf="f.children.length === 0" class="text-muted invisible"></i>
+          <i *ngIf="f.children.length === 0" class="text-muted invisible"></i>
           <button
             *ngIf="f.children.length"
             title="{{ 'toggleCollapse' | i18n }}"
@@ -61,10 +64,13 @@
           <button class="filter-button flex-shrink-0" (click)="applyFilter(f.node)">
             <i class="fa fa-folder-o text-muted" aria-hidden="true"></i>
           </button>
-          <button class="filter-button text-muted flex-grow-1 text-left" (click)="applyFilter(f.node)">
+          <button
+            class="filter-button text-muted flex-grow-1 text-left"
+            (click)="applyFilter(f.node)"
+          >
             {{ f.node.name }}
           </button>
-          
+
           <button
             class="edit-button text-muted"
             (click)="editFolder(f.node)"
