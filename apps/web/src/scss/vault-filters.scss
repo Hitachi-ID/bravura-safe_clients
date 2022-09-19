@@ -112,17 +112,6 @@
     }
   }
 
-  .fa-folder-o,
-  .fa-cube,
-  .fa-pencil,
-  .fa-file-o,
-  .fa-file-text-o {
-    align-self: flex-start;
-    margin: 8px 3px 0 0;
-    width: 1.2857142857em;
-    text-align: left;
-  }
-
   &.carets {
     margin-left: 1.1em;
   }
@@ -300,10 +289,6 @@ ul.filter-options li.filter-option {
       }
     }
   }
-}
-
-.text-muted.invisible {
-  margin-left: 1.5rem;
 }
 
 .org-dropdown-container {
