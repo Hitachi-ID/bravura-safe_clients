@@ -158,10 +158,6 @@ app-org-vault-groupings,
         }
       }
     }
-
-    i.fa {
-      margin-right: 5px;
-    }
   }
 }
 
@@ -509,7 +505,8 @@ app-footer {
 app-organization-layout {
   .filter-container {
     max-height: calc(
-      100vh - $navbar-height - $sidebar-padding-top * 2 - $org-header-height - $search-container-height
+      100vh - $navbar-height - $sidebar-padding-top * 2 - $org-header-height -
+        $search-container-height
     );
   }
 }
@@ -518,4 +515,10 @@ app-organization-layout {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.text-muted.invisible {
+   @extend .fa;
+   @extend .fa-fw;
+   @extend .flex-shrink-0;
 }
