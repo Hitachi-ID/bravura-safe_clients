@@ -92,12 +92,12 @@ export class Program extends BaseProgram {
       );
       writeLn("    bsafe delete item 99ee88d2-6046-4ea7-92c2-acac464b1412");
       writeLn("    bsafe generate -lusn --length 18");
-      writeLn("    bsafe config server https://hitachi-id.com");
+      writeLn("    bsafe config server https://bravurasecurity.com");
       writeLn("    bsafe share -f ./file.ext");
       writeLn('    bsafe share "text to share"');
       writeLn('    echo "text to share" | bsafe share');
       writeLn(
-        "    bsafe receive https://hitachi-id.com/#/send/rg3iuoS_Akm2gqy6ADRHmg/Ht7dYjsqjmgqUM3rjzZDSQ"
+        "    bsafe receive https://bravurasecurity.com/#/send/rg3iuoS_Akm2gqy6ADRHmg/Ht7dYjsqjmgqUM3rjzZDSQ"
       );
       writeLn("", true);
     });
@@ -371,8 +371,8 @@ export class Program extends BaseProgram {
         writeLn("  Examples:");
         writeLn("");
         writeLn("    bsafe config server");
-        writeLn("    bsafe config server https://hitachi-id.com");
-        writeLn("    bsafe config server hitachi-id.com");
+        writeLn("    bsafe config server https://bravurasecurity.com");
+        writeLn("    bsafe config server bravurasecurity.com");
         writeLn(
           "    bsafe config server --api http://localhost:4000 --identity http://localhost:33656"
         );
@@ -413,7 +413,7 @@ export class Program extends BaseProgram {
         writeLn("  Example return value:");
         writeLn("");
         writeLn("    {");
-        writeLn('      "serverUrl": "https://hitachi-id.com",');
+        writeLn('      "serverUrl": "https://bravurasecurity.com",');
         writeLn('      "lastSync": "2020-06-16T06:33:51.419Z",');
         writeLn('      "userEmail": "user@example.com",');
         writeLn('      "userId": "00000000-0000-0000-0000-000000000000",');

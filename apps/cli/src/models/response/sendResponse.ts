@@ -95,7 +95,7 @@ export class SendResponse implements BaseResponse {
     this.accessId = o.accessId;
     let sendLinkBaseUrl = webVaultUrl;
     if (sendLinkBaseUrl == null) {
-      sendLinkBaseUrl = "https://send.hitachi-id.com/#";
+      sendLinkBaseUrl = "https://send.bravurasecurity.com/#";
     } else {
       sendLinkBaseUrl += "/#/send/";
     }

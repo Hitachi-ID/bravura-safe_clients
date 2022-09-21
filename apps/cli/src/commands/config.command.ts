@@ -31,13 +31,13 @@ export class ConfigCommand {
       const stringRes = new StringResponse(
         this.environmentService.hasBaseUrl()
           ? this.environmentService.getUrls().base
-          : "https://hitachi-id.com"
+          : "https://bravurasecurity.com"
       );
       return Response.success(stringRes);
     }
 
     url =
-      url === "null" || url === "hitachi-id.com" || url === "https://hitachi-id.com" ? null : url;
+      url === "null" || url === "bravurasecurity.com" || url === "https://bravurasecurity.com" ? null : url;
     await this.environmentService.setUrls({
       base: url,
       webVault: options.webVault || null,

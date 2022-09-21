@@ -10,11 +10,11 @@
     "password manager",
     "cli"
   ],
-  "author": "Hitachi ID Systems Inc. <hello@hitachi-id.com> (https://www.hitachi-id.com)",
-  "homepage": "https://www.hitachi-id.com",
+  "author": "Bravura Security Inc. <hello@bravurasecurity.com> (https://www.bravurasecurity.com)",
+  "homepage": "https://www.bravurasecurity.com",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.hitachi-id.com/product/bravura-safe/cli"
+    "url": "https://gitlab.bravurasecurity.com/product/bravura-safe/cli"
   },
   "license": "GPL-3.0-only",
   "scripts": {

@@ -108,8 +108,8 @@ export class SendReceiveCommand extends DownloadCommand {
 
   private getApiUrl(url: URL) {
     const urls = this.environmentService.getUrls();
-    if (url.origin === "https://send.hitachi-id.com") {
-      return "https://vault.hitachi-id.com/api";
+    if (url.origin === "https://send.bravurasecurity.com") {
+      return "https://vault.bravurasecurity.com/api";
     } else if (url.origin === urls.api) {
       return url.origin;
     } else if (this.platformUtilsService.isDev() && url.origin === urls.webVault) {
