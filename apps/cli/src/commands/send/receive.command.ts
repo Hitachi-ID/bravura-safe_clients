@@ -41,14 +41,14 @@ export class SendReceiveCommand extends DownloadCommand {
     try {
       urlObject = new URL(url);
     } catch (e) {
-      return Response.badRequest("Failed to parse the provided Send url");
+      return Response.badRequest("Failed to parse the provided Share url");
     }
 
     const apiUrl = this.getApiUrl(urlObject);
     const [id, key] = this.getIdAndKey(urlObject);
 
     if (Utils.isNullOrWhitespace(id) || Utils.isNullOrWhitespace(key)) {
-      return Response.badRequest("Failed to parse url, the url provided is not a valid Send url");
+      return Response.badRequest("Failed to parse url, the url provided is not a valid Share url");
     }
 
     const keyArray = Utils.fromUrlB64ToArray(key);
@@ -108,8 +108,8 @@ export class SendReceiveCommand extends DownloadCommand {
 
   private getApiUrl(url: URL) {
     const urls = this.environmentService.getUrls();
-    if (url.origin === "https://send.bitwarden.com") {
-      return "https://vault.bitwarden.com/api";
+    if (url.origin === "https://send.bravurasecurity.com") {
+      return "https://vault.bravurasecurity.com/api";
     } else if (url.origin === urls.api) {
       return url.origin;
     } else if (this.platformUtilsService.isDev() && url.origin === urls.webVault) {

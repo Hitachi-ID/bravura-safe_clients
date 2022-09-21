@@ -2,32 +2,33 @@
   "name": "@bitwarden/cli",
   "description": "A secure and free password manager for all of your devices.",
   "version": "1.22.1",
+  "internalVersion": "2022-08",
   "keywords": [
-    "bitwarden",
+    "bravura safe",
     "password",
     "vault",
     "password manager",
     "cli"
   ],
-  "author": "Bitwarden Inc. <hello@bitwarden.com> (https://bitwarden.com)",
-  "homepage": "https://bitwarden.com",
+  "author": "Bravura Security Inc. <hello@bravurasecurity.com> (https://www.bravurasecurity.com)",
+  "homepage": "https://www.bravurasecurity.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitwarden/cli"
+    "url": "https://gitlab.bravurasecurity.com/product/bravura-safe/cli"
   },
   "license": "GPL-3.0-only",
   "scripts": {
     "clean": "rimraf dist/**/*",
     "build": "webpack",
-    "build:debug": "npm run build && node --inspect ./build/bw.js",
+    "build:debug": "npm run build && node --inspect ./build/bsafe.js",
     "build:watch": "webpack --watch",
     "build:prod": "cross-env NODE_ENV=production webpack",
     "build:prod:watch": "cross-env NODE_ENV=production webpack --watch",
     "package": "npm run package:win && npm run package:mac && npm run package:lin",
-    "package:win": "pkg . --targets win-x64 --output ./dist/windows/bw.exe --build",
-    "package:mac": "pkg . --targets macos-x64 --output ./dist/macos/bw",
-    "package:lin": "pkg . --targets linux-x64 --output ./dist/linux/bw",
-    "debug": "node --inspect ./build/bw.js",
+    "package:win": "pkg . --targets win-x64 --output ./dist/windows/bsafe.exe --build",
+    "package:mac": "pkg . --targets macos-x64 --output ./dist/macos/bsafe",
+    "package:lin": "pkg . --targets linux-x64 --output ./dist/linux/bsafe",
+    "debug": "node --inspect ./build/bsafe.js",
     "dist": "npm run build:prod && npm run clean && npm run package",
     "dist:win": "npm run build:prod && npm run clean && npm run package:win",
     "dist:mac": "npm run build:prod && npm run clean && npm run package:mac",
@@ -38,7 +39,7 @@
     "test:watch:all": "jest --watchAll"
   },
   "bin": {
-    "bw": "build/bw.js"
+    "bsafe": "build/bsafe.js"
   },
   "pkg": {
     "assets": "./build/**/*"

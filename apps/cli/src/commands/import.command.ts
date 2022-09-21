@@ -27,13 +27,13 @@ export class ImportCommand {
 
       if (organization == null) {
         return Response.badRequest(
-          `You do not belong to an organization with the ID of ${organizationId}. Check the organization ID and sync your vault.`
+          `You do not belong to a team with the ID of ${organizationId}. Check the team ID and sync your vault.`
         );
       }
 
       if (!organization.canAccessImportExport) {
         return Response.badRequest(
-          "You are not authorized to import into the provided organization."
+          "You are not authorized to import into the provided team."
         );
       }
     }

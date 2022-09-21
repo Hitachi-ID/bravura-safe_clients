@@ -23,7 +23,7 @@ export class ConvertToKeyConnectorCommand {
       await this.logout();
       return Response.error(
         new MessageResponse(
-          "An organization you are a member of is using Key Connector. " +
+          "A team you are a member of is using Key Connector. " +
             "In order to access the vault, you must opt-in to Key Connector now via the web vault. You have been logged out.",
           null
         )
@@ -37,14 +37,14 @@ export class ConvertToKeyConnectorCommand {
       name: "convert",
       message:
         organization.name +
-        " is using a self-hosted key server. A master password is no longer required to log in for members of this organization. ",
+        " is using a self-hosted key server. A master password is no longer required to log in for members of this team. ",
       choices: [
         {
           name: "Remove master password and unlock",
           value: "remove",
         },
         {
-          name: "Leave organization and unlock",
+          name: "Leave team and unlock",
           value: "leave",
         },
         {

@@ -113,7 +113,7 @@ export class UnlockCommand {
         process.env.BW_SESSION +
         '"\n\n' +
         "You can also pass the session key to any command with the `--session` option. ex:\n" +
-        "$ bw list items --session " +
+        "$ bsafe list items --session " +
         process.env.BW_SESSION
     );
     res.raw = process.env.BW_SESSION;

@@ -52,7 +52,7 @@ export class SendEditCommand {
     }
 
     if (send.type !== req.type) {
-      return Response.badRequest("Cannot change a Send's type");
+      return Response.badRequest("Cannot change a Share's type");
     }
 
     if (send.type === SendType.File && !(await this.stateService.getCanAccessPremium())) {
