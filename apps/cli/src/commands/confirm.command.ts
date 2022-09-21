@@ -34,11 +34,11 @@ export class ConfirmCommand {
     try {
       const orgKey = await this.cryptoService.getOrgKey(options.organizationId);
       if (orgKey == null) {
-        throw new Error("No encryption key for this organization.");
+        throw new Error("No encryption key for this team.");
       }
       const orgUser = await this.apiService.getOrganizationUser(options.organizationId, id);
       if (orgUser == null) {
-        throw new Error("Member id does not exist for this organization.");
+        throw new Error("Member id does not exist for this team.");
       }
       const publicKeyResponse = await this.apiService.getUserPublicKey(orgUser.userId);
       const publicKey = Utils.fromB64ToArray(publicKeyResponse.publicKey);

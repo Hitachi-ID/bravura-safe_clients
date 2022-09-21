@@ -18,7 +18,7 @@ export class ExportCommand {
       (await this.policyService.policyAppliesToUser(PolicyType.DisablePersonalVaultExport))
     ) {
       return Response.badRequest(
-        "One or more organization policies prevents you from exporting your personal vault."
+        "One or more team policies prevents you from exporting your personal vault."
       );
     }
 

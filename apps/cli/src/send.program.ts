@@ -32,17 +32,17 @@ export class SendProgram extends Program {
 
   async register() {
     program.addCommand(this.sendCommand());
-    // receive is accessible both at `bw receive` and `bw send receive`
+    // receive is accessible both at `bsafe receive` and `bsafe share receive`
     program.addCommand(this.receiveCommand());
   }
 
   private sendCommand(): program.Command {
-    return new program.Command("send")
+    return new program.Command("share")
       .arguments("<data>")
       .description(
-        "Work with Bitwarden sends. A Send can be quickly created using this command or subcommands can be used to fine-tune the Send",
+        "Work with Bravura Safe shares. A Share can be quickly created using this command or subcommands can be used to fine-tune the Share.",
         {
-          data: "The data to Send. Specify as a filepath with the --file option",
+          data: "The data to Share. Specify as a filepath with the --file option",
         }
       )
       .option("-f, --file", "Specifies that <data> is a filepath")
@@ -55,12 +55,12 @@ export class SendProgram extends Program {
       .option("--hidden", "Hide <data> in web by default. Valid only if --file is not set.")
       .option(
         "-n, --name <name>",
-        "The name of the Send. Defaults to a guid for text Sends and the filename for files."
+        "The name of the Share. Defaults to a guid for text Shares and the filename for files."
       )
-      .option("--notes <notes>", "Notes to add to the Send.")
+      .option("--notes <notes>", "Notes to add to the Share.")
       .option(
         "--fullObject",
-        "Specifies that the full Send object should be returned rather than just the access url."
+        "Specifies that the full Share object should be returned rather than just the access url."
       )
       .addCommand(this.listCommand())
       .addCommand(this.templateCommand())
@@ -87,15 +87,15 @@ export class SendProgram extends Program {
   private receiveCommand(): program.Command {
     return new program.Command("receive")
       .arguments("<url>")
-      .description("Access a Bitwarden Send from a url")
-      .option("--password <password>", "Password needed to access the Send.")
-      .option("--passwordenv <passwordenv>", "Environment variable storing the Send's password")
+      .description("Access a Bravura Safe Share from a url.")
+      .option("--password <password>", "Password needed to access the Share.")
+      .option("--passwordenv <passwordenv>", "Environment variable storing the Share's password")
       .option(
         "--passwordfile <passwordfile>",
-        "Path to a file containing the Sends password as its first line"
+        "Path to a file containing the Shares password as its first line"
       )
-      .option("--obj", "Return the Send's json object rather than the Send's content")
-      .option("--output <location>", "Specify a file path to save a File-type Send to")
+      .option("--obj", "Return the Share's json object rather than the Share's content")
+      .option("--output <location>", "Specify a file path to save a File-type Share to")
       .on("--help", () => {
         writeLn("");
         writeLn(
@@ -119,7 +119,7 @@ export class SendProgram extends Program {
   private listCommand(): program.Command {
     return new program.Command("list")
 
-      .description("List all the Sends owned by you")
+      .description("List all the Shares owned by you")
       .on("--help", () => {
         writeLn(chalk("This is in the list command"));
       })
@@ -138,8 +138,8 @@ export class SendProgram extends Program {
   private templateCommand(): program.Command {
     return new program.Command("template")
       .arguments("<object>")
-      .description("Get json templates for send objects", {
-        object: "Valid objects are: send, send.text, send.file",
+      .description("Get json templates for share objects", {
+        object: "Valid objects are: send.text, send.file",
       })
       .action(async (object) => {
         const cmd = new GetCommand(
@@ -162,26 +162,26 @@ export class SendProgram extends Program {
   private getCommand(): program.Command {
     return new program.Command("get")
       .arguments("<id>")
-      .description("Get Sends owned by you.")
+      .description("Get Shares owned by you.")
       .option("--output <output>", "Output directory or filename for attachment.")
-      .option("--text", "Specifies to return the text content of a Send")
+      .option("--text", "Specifies to return the text content of a Share")
       .on("--help", () => {
         writeLn("");
         writeLn("  Id:");
         writeLn("");
-        writeLn("    Search term or Send's globally unique `id`.");
+        writeLn("    Search term or Share's globally unique `id`.");
         writeLn("");
         writeLn("    If raw output is specified and no output filename or directory is given for");
         writeLn("    an attachment query, the attachment content is written to stdout.");
         writeLn("");
         writeLn("  Examples:");
         writeLn("");
-        writeLn("    bw get send searchText");
-        writeLn("    bw get send id");
-        writeLn("    bw get send searchText --text");
-        writeLn("    bw get send searchText --file");
-        writeLn("    bw get send searchText --file --output ../Photos/photo.jpg");
-        writeLn("    bw get send searchText --file --raw");
+        writeLn("    bsafe get share searchText");
+        writeLn("    bsafe get share id");
+        writeLn("    bsafe get share searchText --text");
+        writeLn("    bsafe get share searchText --file");
+        writeLn("    bsafe get share searchText --file --output ../Photos/photo.jpg");
+        writeLn("    bsafe get share searchText --file --raw");
         writeLn("", true);
       })
       .action(async (id: string, options: program.OptionValues) => {
@@ -200,15 +200,15 @@ export class SendProgram extends Program {
   private createCommand(): program.Command {
     return new program.Command("create")
       .arguments("[encodedJson]")
-      .description("create a Send", {
+      .description("create a Share", {
         encodedJson: "JSON object to upload. Can also be piped in through stdin.",
       })
-      .option("--file <path>", "file to Send. Can also be specified in parent's JSON.")
-      .option("--text <text>", "text to Send. Can also be specified in parent's JSON.")
+      .option("--file <path>", "file to Share. Can also be specified in parent's JSON.")
+      .option("--text <text>", "text to Share. Can also be specified in parent's JSON.")
       .option("--hidden", "text hidden flag. Valid only with the --text option.")
       .option(
         "--password <password>",
-        "optional password to access this Send. Can also be specified in JSON"
+        "optional password to access this Share. Can also be specified in JSON"
       )
       .on("--help", () => {
         writeLn("");
@@ -222,7 +222,7 @@ export class SendProgram extends Program {
           options: program.OptionValues,
           args: { parent: program.Command }
         ) => {
-          // Work-around to support `--fullObject` option for `send create --fullObject`
+          // Work-around to support `--fullObject` option for `share create --fullObject`
           // Calling `option('--fullObject', ...)` above won't work due to Commander doesn't like same option
           // to be defind on both parent-command and sub-command
           const { fullObject = false } = args.parent.opts();
@@ -240,7 +240,7 @@ export class SendProgram extends Program {
   private editCommand(): program.Command {
     return new program.Command("edit")
       .arguments("[encodedJson]")
-      .description("edit a Send", {
+      .description("edit a Share", {
         encodedJson:
           "Updated JSON object to save. If not provided, encodedJson is read from stdin.",
       })
@@ -248,7 +248,7 @@ export class SendProgram extends Program {
       .on("--help", () => {
         writeLn("");
         writeLn("Note:");
-        writeLn("  You cannot update a File-type Send's file. Just delete and remake it");
+        writeLn("  You cannot update a File-type Share's file. Just delete and remake it");
         writeLn("", true);
       })
       .action(async (encodedJson: string, options: program.OptionValues) => {
@@ -268,8 +268,8 @@ export class SendProgram extends Program {
   private deleteCommand(): program.Command {
     return new program.Command("delete")
       .arguments("<id>")
-      .description("delete a Send", {
-        id: "The id of the Send to delete.",
+      .description("delete a Share", {
+        id: "The id of the Share to delete.",
       })
       .action(async (id: string) => {
         await this.exitIfLocked();
@@ -282,8 +282,8 @@ export class SendProgram extends Program {
   private removePasswordCommand(): program.Command {
     return new program.Command("remove-password")
       .arguments("<id>")
-      .description("removes the saved password from a Send.", {
-        id: "The id of the Send to alter.",
+      .description("removes the saved password from a Share.", {
+        id: "The id of the Share to alter.",
       })
       .action(async (id: string) => {
         await this.exitIfLocked();

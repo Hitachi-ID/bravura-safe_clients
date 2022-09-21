@@ -127,7 +127,7 @@ export class CreateCommand {
     if (encKey == null) {
       return Response.error(
         "You must update your encryption key before you can use this feature. " +
-          "See https://help.bitwarden.com/article/update-encryption-key/"
+          "See https://help.hitachi-id.com/article/update-encryption-key/"
       );
     }
 
@@ -171,7 +171,7 @@ export class CreateCommand {
     try {
       const orgKey = await this.cryptoService.getOrgKey(req.organizationId);
       if (orgKey == null) {
-        throw new Error("No encryption key for this organization.");
+        throw new Error("No encryption key for this team.");
       }
 
       const groups =

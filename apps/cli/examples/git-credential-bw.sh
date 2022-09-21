@@ -31,14 +31,14 @@ if [[ "$1" == "get" ]]; then
     fi
 
     if ! bw list items --search "asdf" > /dev/null 2>&1; then
-        echo "Please login to Bitwarden to use git credential helper" > /dev/stderr
+        echo "Please login to Bravura Safe to use git credential helper" > /dev/stderr
         exit
     fi
 
     id=$(bw list items --search "${params["host"]}"|jq ".[] | select(.name == \"${params["host"]}\").id" -r)
 
     if [[ -z "$id" ]]; then
-        echo "Couldn't find item id in Bitwarden DB." > /dev/stderr
+        echo "Couldn't find item id in Bravura Safe DB." > /dev/stderr
         echo "${params}"
         exit
     fi
@@ -47,7 +47,7 @@ if [[ "$1" == "get" ]]; then
     pass=$(bw get password "${id}")
 
     if [[ -z "$user" ]] || [[ -z "$pass" ]]; then
-        echo "Couldn't find host in Bitwarden DB." > /dev/stderr
+        echo "Couldn't find host in Bravura Safe DB." > /dev/stderr
         exit
     fi
 

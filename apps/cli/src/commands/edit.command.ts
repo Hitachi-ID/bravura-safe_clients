@@ -99,7 +99,7 @@ export class EditCommand {
     }
     if (cipher.organizationId == null) {
       return Response.badRequest(
-        "Item does not belong to an organization. Consider moving it first."
+        "Item does not belong to a team. Consider moving it first."
       );
     }
 
@@ -155,7 +155,7 @@ export class EditCommand {
     try {
       const orgKey = await this.cryptoService.getOrgKey(req.organizationId);
       if (orgKey == null) {
-        throw new Error("No encryption key for this organization.");
+        throw new Error("No encryption key for this team.");
       }
 
       const groups =
