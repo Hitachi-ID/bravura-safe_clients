@@ -197,14 +197,9 @@ const routes: Routes = [
         component: ToolsComponent,
         canActivate: [AuthGuard],
         children: [
-          { path: "", pathMatch: "full", redirectTo: "generator" },
+          { path: "", pathMatch: "full", redirectTo: "import" },
           { path: "import", component: ImportComponent, data: { titleId: "importData" } },
           { path: "export", component: ExportComponent, data: { titleId: "exportVault" } },
-          {
-            path: "generator",
-            component: GeneratorComponent,
-            data: { titleId: "generator" },
-          },
         ],
       },
       {
