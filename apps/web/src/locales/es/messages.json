@@ -5255,5 +5255,8 @@
         "example": "My Email"
       }
     }
+  },
+  "domainNameRequired": {
+    "message": "Domain name is required."
   }
 }

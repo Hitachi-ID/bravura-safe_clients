@@ -64,4 +64,23 @@ export class GeneratorComponent extends BaseGeneratorComponent {
   minSpecialChanged() {
     document.getElementById("min-special").focus();
   }
+
+  preRegenerate(){
+    if((document.getElementById("usernameType_subaddress") as HTMLInputElement).checked){
+      let email = (document.getElementById("subaddress-email") as HTMLInputElement).value;
+      if(email===null || email===""){
+        this.platformUtilsService.showToast("error", null, this.i18nService.t("emailRequired"));
+        return;
+      }
+    }
+    if((document.getElementById("usernameType_catchall") as HTMLInputElement).checked){
+      let domain = (document.getElementById("catchall-domain") as HTMLInputElement).value;
+      if(domain===null || domain===""){
+        this.platformUtilsService.showToast("error", null, this.i18nService.t("domainNameRequired"));
+        return;
+      }
+    }
+
+    this.regenerate();
+  }
 }
