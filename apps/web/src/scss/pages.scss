@@ -518,7 +518,12 @@ app-organization-layout {
 }
 
 .text-muted.invisible {
-   @extend .fa;
-   @extend .fa-fw;
-   @extend .flex-shrink-0;
+  @extend .fa;
+  @extend .fa-fw;
+  @extend .flex-shrink-0;
+}
+
+.bit-menu-panel [role="menu"] {
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
 }
