@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -753,7 +753,7 @@
     "message": "Halda Premium versiooni"
   },
   "premiumManageAlert": {
-    "message": "Saad Premium versiooni hallata hitachi-id.com veebihoidlas. Soovid seda kohe teha?"
+    "message": "Saad Premium versiooni hallata bravurasecurity.com veebihoidlas. Soovid seda kohe teha?"
   },
   "premiumRefresh": {
     "message": "Uuenda tellimust"
@@ -786,7 +786,7 @@
     "message": "Osta Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Bravura Safei premium versiooni saab osta hitachi-id.com veebihoidlas. Avan veebihoidla?"
+    "message": "Bravura Safei premium versiooni saab osta bravurasecurity.com veebihoidlas. Avan veebihoidla?"
   },
   "premiumCurrentMember": {
     "message": "Oled premium kasutaja!"

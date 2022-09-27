@@ -6,8 +6,8 @@
   "internalVersion": "2022-06",
   "description": "__MSG_extDesc__",
   "default_locale": "en",
-  "author": "Hitachid ID Systems",
-  "homepage_url": "https://www.hitachi-id.com/",
+  "author": "Bravura Security",
+  "homepage_url": "https://www.bravurasecurity.com/",
   "icons": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",

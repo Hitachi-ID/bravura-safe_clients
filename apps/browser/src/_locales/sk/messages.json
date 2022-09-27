@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -753,7 +753,7 @@
     "message": "Spravovať členstvo"
   },
   "premiumManageAlert": {
-    "message": "Svoje členstvo môžete spravovať vo webovom trezore hitachi-id.com. Chcete navštíviť túto stránku teraz?"
+    "message": "Svoje členstvo môžete spravovať vo webovom trezore bravurasecurity.com. Chcete navštíviť túto stránku teraz?"
   },
   "premiumRefresh": {
     "message": "Obnoviť členstvo"
@@ -786,7 +786,7 @@
     "message": "Zakúpiť Prémiový účet"
   },
   "premiumPurchaseAlert": {
-    "message": "Svoje prémiové členstvo môžete zakúpiť vo webovom trezore hitachi-id.com. Chcete navštíviť túto stránku teraz?"
+    "message": "Svoje prémiové členstvo môžete zakúpiť vo webovom trezore bravurasecurity.com. Chcete navštíviť túto stránku teraz?"
   },
   "premiumCurrentMember": {
     "message": "Ste prémiovým členom!"

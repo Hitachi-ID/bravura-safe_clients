@@ -209,7 +209,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1310;
-				ORGANIZATIONNAME = "Hitachi ID Systems, Inc";
+				ORGANIZATIONNAME = "Bravura Security, Inc.";
 				TargetAttributes = {
 					55E037472577FA6B00979016 = {
 						CreatedOnToolsVersion = 12.2;

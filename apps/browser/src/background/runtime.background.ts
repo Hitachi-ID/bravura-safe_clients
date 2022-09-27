@@ -226,7 +226,7 @@ export default class RuntimeBackground {
       if (this.onInstalledReason != null) {
         /*
         if (this.onInstalledReason === "install") {
-          BrowserApi.createNewTab("https://safe.hitachi-id.net/browser-start/");
+          BrowserApi.createNewTab("https://safe.bravurasecurity.net/browser-start/");
         }
         */
 

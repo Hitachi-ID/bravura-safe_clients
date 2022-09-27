@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -753,7 +753,7 @@
     "message": "Quản lý Thành viên"
   },
   "premiumManageAlert": {
-    "message": "Bạn có thể quản lý các thành viên trong trang web Bravura Safe. Bạn có muốn truy cập hitachi-id.com bây giờ?"
+    "message": "Bạn có thể quản lý các thành viên trong trang web Bravura Safe. Bạn có muốn truy cập bravurasecurity.com bây giờ?"
   },
   "premiumRefresh": {
     "message": "Làm mới thành viên"
@@ -786,7 +786,7 @@
     "message": "Mua bản Cao Cấp"
   },
   "premiumPurchaseAlert": {
-    "message": "Bạn có thể nâng cấp làm thành viên cao cấp trong trang web Bravura Safe. Bạn có muốn truy cập hitachi-id.com bây giờ?"
+    "message": "Bạn có thể nâng cấp làm thành viên cao cấp trong trang web Bravura Safe. Bạn có muốn truy cập bravurasecurity.com bây giờ?"
   },
   "premiumCurrentMember": {
     "message": "Bạn là một thành viên cao cấp!"

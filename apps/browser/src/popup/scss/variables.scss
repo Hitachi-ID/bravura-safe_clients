@@ -20,7 +20,7 @@ $gray: #555;
 $gray-light: #777;
 $text-muted: $gray-light;
 
-$brand-primary: #414141;
+$brand-primary: #3F3F3F;
 $brand-danger: #dd4b39;
 $brand-success: #00a65a;
 $brand-info: #555555;
@@ -72,7 +72,7 @@ $themes: (
     headerColor: #ffffff,
     headerBackgroundColor: #414141,
     headerBackgroundHoverColor: rgba(255, 255, 255, 0.1),
-    headerBorderColor: #cc0000,
+    headerBorderColor: #E4682B,
     headerInputBackgroundColor: darken(#414141, 8%),
     headerInputBackgroundFocusColor: darken(#414141, 10%),
     headerInputColor: #ffffff,
@@ -123,7 +123,7 @@ $themes: (
     headerColor: #ffffff,
     headerBackgroundColor: #2f343d,
     headerBackgroundHoverColor: #3c424e,
-    headerBorderColor: #cc0000,
+    headerBorderColor: #E4682B,
     headerInputBackgroundColor: #3c424e,
     headerInputBackgroundFocusColor: #4c525f,
     headerInputColor: #ffffff,
@@ -174,7 +174,7 @@ $themes: (
     headerColor: $nord5,
     headerBackgroundColor: $nord1,
     headerBackgroundHoverColor: $nord2,
-    headerBorderColor: #cc0000,
+    headerBorderColor: #E4682B,
     headerInputBackgroundColor: $nord6,
     headerInputBackgroundFocusColor: $nord5,
     headerInputColor: $nord2,
@@ -225,7 +225,7 @@ $themes: (
     headerColor: $solarizedDarkBase1,
     headerBackgroundColor: $solarizedDarkBase02,
     headerBackgroundHoverColor: $solarizedDarkBase01,
-    headerBorderColor: #cc0000,
+    headerBorderColor: #E4682B,
     headerInputBackgroundColor: $solarizedDarkBase2,
     headerInputBackgroundFocusColor: $solarizedDarkBase1,
     headerInputColor: $solarizedDarkBase01,

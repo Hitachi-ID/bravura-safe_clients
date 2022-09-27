@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -753,7 +753,7 @@
     "message": "Upravljaj članstvom"
   },
   "premiumManageAlert": {
-    "message": "Svojim članstvom možeš upravljati na web trezoru. Želiš li sada posjetiti hitachi-id.com?"
+    "message": "Svojim članstvom možeš upravljati na web trezoru. Želiš li sada posjetiti bravurasecurity.com?"
   },
   "premiumRefresh": {
     "message": "Osvježi status članstva"
@@ -786,7 +786,7 @@
     "message": "Kupi premium članstvo"
   },
   "premiumPurchaseAlert": {
-    "message": "Možeš kupiti premium članstvo na web trezoru. Želiš li sada posjetiti hitachi-id.com?"
+    "message": "Možeš kupiti premium članstvo na web trezoru. Želiš li sada posjetiti bravurasecurity.com?"
   },
   "premiumCurrentMember": {
     "message": "Ti si premium član!"

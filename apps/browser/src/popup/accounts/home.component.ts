@@ -43,7 +43,7 @@ export class HomeComponent {
 
     let url = this.environmentService.getWebVaultUrl();
     if (url == null) {
-      url = "https://replaceme.safe.hitachi-id.net";
+      url = "https://replaceme.safe.bravurasecurity.net";
     }
 
     const redirectUri = url + "/sso-connector.html";
