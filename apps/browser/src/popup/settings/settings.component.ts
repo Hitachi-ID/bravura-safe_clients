@@ -3,16 +3,16 @@ import { FormControl } from "@angular/forms";
 import { Router } from "@angular/router";
 import Swal from "sweetalert2";
 
-import { ModalService } from "jslib-angular/services/modal.service";
-import { CryptoService } from "jslib-common/abstractions/crypto.service";
-import { EnvironmentService } from "jslib-common/abstractions/environment.service";
-import { I18nService } from "jslib-common/abstractions/i18n.service";
-import { KeyConnectorService } from "jslib-common/abstractions/keyConnector.service";
-import { MessagingService } from "jslib-common/abstractions/messaging.service";
-import { PlatformUtilsService } from "jslib-common/abstractions/platformUtils.service";
-import { StateService } from "jslib-common/abstractions/state.service";
-import { VaultTimeoutService } from "jslib-common/abstractions/vaultTimeout.service";
-import { DeviceType } from "jslib-common/enums/deviceType";
+import { ModalService } from "@bitwarden/angular/services/modal.service";
+import { CryptoService } from "@bitwarden/common/abstractions/crypto.service";
+import { EnvironmentService } from "@bitwarden/common/abstractions/environment.service";
+import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
+import { KeyConnectorService } from "@bitwarden/common/abstractions/keyConnector.service";
+import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
+import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
+import { StateService } from "@bitwarden/common/abstractions/state.service";
+import { VaultTimeoutService } from "@bitwarden/common/abstractions/vaultTimeout.service";
+import { DeviceType } from "@bitwarden/common/enums/deviceType";
 
 import { BrowserApi } from "../../browser/browserApi";
 import { BiometricErrors, BiometricErrorTypes } from "../../models/biometricErrors";
@@ -20,17 +20,13 @@ import { SetPinComponent } from "../components/set-pin.component";
 import { PopupUtilsService } from "../services/popup-utils.service";
 
 const RateUrls = {
-  [DeviceType.ChromeExtension]:
-    "https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb/reviews",
-  [DeviceType.FirefoxExtension]:
-    "https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/#reviews",
+  [DeviceType.ChromeExtension]: "https://chrome.google.com/webstore/detail/***/***/reviews",
+  [DeviceType.FirefoxExtension]: "https://addons.mozilla.org/en-US/firefox/addon/***/#reviews",
   [DeviceType.OperaExtension]:
-    "https://addons.opera.com/en/extensions/details/bitwarden-free-password-manager/#feedback-container",
-  [DeviceType.EdgeExtension]:
-    "https://microsoftedge.microsoft.com/addons/detail/jbkfoedolllekgbhcbcoahefnbanhhlh",
-  [DeviceType.VivaldiExtension]:
-    "https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb/reviews",
-  [DeviceType.SafariExtension]: "https://apps.apple.com/app/bitwarden/id1352778147",
+    "https://addons.opera.com/en/extensions/details/***/#feedback-container",
+  [DeviceType.EdgeExtension]: "https://microsoftedge.microsoft.com/addons/detail/***",
+  [DeviceType.VivaldiExtension]: "https://chrome.google.com/webstore/detail/***/***/reviews",
+  [DeviceType.SafariExtension]: "https://apps.apple.com/app/***/***",
 };
 
 @Component({
@@ -46,7 +42,7 @@ export class SettingsComponent implements OnInit {
   pin: boolean = null;
   supportsBiometric: boolean;
   biometric = false;
-  disableAutoBiometricsPrompt = true;
+  enableAutoBiometricsPrompt = true;
   previousVaultTimeout: number = null;
   showChangeMasterPass = true;
 
@@ -114,8 +110,9 @@ export class SettingsComponent implements OnInit {
 
     this.supportsBiometric = await this.platformUtilsService.supportsBiometric();
     this.biometric = await this.vaultTimeoutService.isBiometricLockSet();
-    this.disableAutoBiometricsPrompt =
+    const disableAutoBiometricsPrompt =
       (await this.stateService.getDisableAutoBiometricsPrompt()) ?? true;
+    this.enableAutoBiometricsPrompt = !disableAutoBiometricsPrompt;
     this.showChangeMasterPass = !(await this.keyConnectorService.getUsesKeyConnector());
   }
 
@@ -134,8 +131,14 @@ export class SettingsComponent implements OnInit {
       }
     }
 
-    if (!this.vaultTimeout.valid) {
-      this.platformUtilsService.showToast("error", null, this.i18nService.t("vaultTimeoutToLarge"));
+    // The minTimeoutError does not apply to browser because it supports Immediately
+    // So only check for the policyError
+    if (this.vaultTimeout.hasError("policyError")) {
+      this.platformUtilsService.showToast(
+        "error",
+        null,
+        this.i18nService.t("vaultTimeoutTooLarge")
+      );
       return;
     }
 
@@ -170,8 +173,12 @@ export class SettingsComponent implements OnInit {
       }
     }
 
-    if (!this.vaultTimeout.valid) {
-      this.platformUtilsService.showToast("error", null, this.i18nService.t("vaultTimeoutToLarge"));
+    if (this.vaultTimeout.hasError("policyError")) {
+      this.platformUtilsService.showToast(
+        "error",
+        null,
+        this.i18nService.t("vaultTimeoutTooLarge")
+      );
       return;
     }
 
@@ -236,7 +243,7 @@ export class SettingsComponent implements OnInit {
         titleText: this.i18nService.t("awaitDesktop"),
         text: this.i18nService.t("awaitDesktopDesc"),
         icon: "info",
-        iconHtml: '<i class="swal-custom-icon bwi bwi-info-circle text-info"></i>',
+        iconHtml: '<i class="swal-custom-icon fa fa-info-circle text-info"></i>',
         showCancelButton: true,
         cancelButtonText: this.i18nService.t("cancel"),
         showConfirmButton: false,
@@ -289,7 +296,7 @@ export class SettingsComponent implements OnInit {
   }
 
   async updateAutoBiometricsPrompt() {
-    await this.stateService.setDisableAutoBiometricsPrompt(this.disableAutoBiometricsPrompt);
+    await this.stateService.setDisableAutoBiometricsPrompt(!this.enableAutoBiometricsPrompt);
   }
 
   async lock() {
@@ -316,9 +323,7 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("cancel")
     );
     if (confirmed) {
-      BrowserApi.createNewTab(
-        "https://bitwarden.com/help/master-password/#change-your-master-password"
-      );
+      BrowserApi.createNewTab("http://docs.hitachi-id.net/safe/#/home/27069/10/10)");
     }
   }
 
@@ -330,7 +335,7 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("cancel")
     );
     if (confirmed) {
-      BrowserApi.createNewTab("https://bitwarden.com/help/setup-two-step-login/");
+      BrowserApi.createNewTab("http://docs.hitachi-id.net/safe/#/home/27071/10/10");
     }
   }
 
@@ -342,7 +347,7 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("cancel")
     );
     if (confirmed) {
-      BrowserApi.createNewTab("https://bitwarden.com/help/about-organizations/");
+      BrowserApi.createNewTab("https://docs.hitachi-id.net/safe/#/home/27454/10/11");
     }
   }
 
@@ -352,7 +357,7 @@ export class SettingsComponent implements OnInit {
   }
 
   import() {
-    BrowserApi.createNewTab("https://bitwarden.com/help/import-data/");
+    BrowserApi.createNewTab("https://docs.hitachi-id.net/safe/#/home/27912/10/11");
   }
 
   export() {
@@ -360,20 +365,17 @@ export class SettingsComponent implements OnInit {
   }
 
   help() {
-    BrowserApi.createNewTab("https://bitwarden.com/help/");
+    BrowserApi.createNewTab("https://docs.hitachi-id.net/safe/#/home/MY_SAFE_/10/11");
   }
 
   about() {
     const year = new Date().getFullYear();
     const versionText = document.createTextNode(
-      this.i18nService.t("version") + ": " + BrowserApi.getApplicationVersion()
+      this.i18nService.t("version") + ": " + BrowserApi.getInternalApplicationVersion()
     );
     const div = document.createElement("div");
-    div.innerHTML =
-      `<p class="text-center"><i class="bwi bwi-shield bwi-3x" aria-hidden="true"></i></p>
-            <p class="text-center"><b>Bitwarden</b><br>&copy; Bitwarden Inc. 2015-` +
-      year +
-      `</p>`;
+    div.innerHTML = `<p class="text-center"><img src="../../images/icon38.png" alt="Hitachi ID" /></p>
+            <p class="text-center">&copy; 2022, Bitwarden Inc., with modifications &copy; 2022, Hitachi ID Systems, Inc.</p>`;
     div.appendChild(versionText);
 
     Swal.fire({
@@ -409,7 +411,9 @@ export class SettingsComponent implements OnInit {
     });
 
     if (result.value) {
-      this.platformUtilsService.launchUri("https://bitwarden.com/help/fingerprint-phrase/");
+      this.platformUtilsService.launchUri(
+        "https://docs.hitachi-id.net/safe/#/home/27269/10/11"
+      );
     }
   }
 

@@ -1,8 +1,8 @@
 import { BrowserWindow, clipboard, dialog, MenuItemConstructorOptions } from "electron";
 
-import { I18nService } from "jslib-common/abstractions/i18n.service";
-import { UpdaterMain } from "jslib-electron/updater.main";
-import { isMacAppStore, isSnapStore, isWindowsStore } from "jslib-electron/utils";
+import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
+import { UpdaterMain } from "@bitwarden/electron/updater.main";
+import { isMacAppStore, isSnapStore, isWindowsStore } from "@bitwarden/electron/utils";
 
 import { IMenubarMenu } from "./menubar";
 
@@ -14,7 +14,7 @@ export class AboutMenu implements IMenubarMenu {
   }
 
   get items(): MenuItemConstructorOptions[] {
-    return [this.separator, this.checkForUpdates, this.aboutBitwarden];
+    return [this.separator, this.aboutBitwarden];
   }
 
   private readonly _i18nService: I18nService;
@@ -63,8 +63,8 @@ export class AboutMenu implements IMenubarMenu {
           "\nArchitecture " +
           process.arch;
         const result = await dialog.showMessageBox(this._window, {
-          title: "Bitwarden",
-          message: "Bitwarden",
+          title: "Bravura Safe",
+          message: "Bravura Safe",
           detail: aboutInformation,
           type: "info",
           noLink: true,

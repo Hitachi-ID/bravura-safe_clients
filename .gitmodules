@@ -1,14 +1,4 @@
-[submodule "apps/browser/jslib"]
-	path = apps/browser/jslib
-	url = https://github.com/bitwarden/jslib.git
-	branch = master
-
-[submodule "apps/desktop/jslib"]
-	path = apps/desktop/jslib
-	url = https://github.com/bitwarden/jslib.git
-	branch = master
-
-[submodule "apps/cli/jslib"]
-	path = apps/cli/jslib
-	url = https://github.com/bitwarden/jslib.git
-	branch = master
+[submodule "apps/web/bravura_src"]
+  path = apps/web/bravura_src
+  url = https://gitlab.hitachi-id.com/product/bravura-safe/bravura_src.git
+  branch = develop

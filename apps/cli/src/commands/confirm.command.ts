@@ -1,8 +1,8 @@
-import { ApiService } from "jslib-common/abstractions/api.service";
-import { CryptoService } from "jslib-common/abstractions/crypto.service";
-import { Utils } from "jslib-common/misc/utils";
-import { OrganizationUserConfirmRequest } from "jslib-common/models/request/organizationUserConfirmRequest";
-import { Response } from "jslib-node/cli/models/response";
+import { ApiService } from "@bitwarden/common/abstractions/api.service";
+import { CryptoService } from "@bitwarden/common/abstractions/crypto.service";
+import { Utils } from "@bitwarden/common/misc/utils";
+import { OrganizationUserConfirmRequest } from "@bitwarden/common/models/request/organizationUserConfirmRequest";
+import { Response } from "@bitwarden/node/cli/models/response";
 
 export class ConfirmCommand {
   constructor(private apiService: ApiService, private cryptoService: CryptoService) {}
@@ -34,11 +34,11 @@ export class ConfirmCommand {
     try {
       const orgKey = await this.cryptoService.getOrgKey(options.organizationId);
       if (orgKey == null) {
-        throw new Error("No encryption key for this organization.");
+        throw new Error("No encryption key for this team.");
       }
       const orgUser = await this.apiService.getOrganizationUser(options.organizationId, id);
       if (orgUser == null) {
-        throw new Error("Member id does not exist for this organization.");
+        throw new Error("Member id does not exist for this team.");
       }
       const publicKeyResponse = await this.apiService.getUserPublicKey(orgUser.userId);
       const publicKey = Utils.fromB64ToArray(publicKeyResponse.publicKey);

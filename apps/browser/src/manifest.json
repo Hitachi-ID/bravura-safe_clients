@@ -2,11 +2,12 @@
   "manifest_version": 2,
   "name": "__MSG_extName__",
   "short_name": "__MSG_appName__",
-  "version": "1.58.0",
+  "version": "2022.6.2",
+  "internalVersion": "2022-06",
   "description": "__MSG_extDesc__",
   "default_locale": "en",
-  "author": "Bitwarden Inc.",
-  "homepage_url": "https://bitwarden.com",
+  "author": "Hitachid ID Systems",
+  "homepage_url": "https://www.hitachi-id.com/",
   "icons": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",
@@ -54,7 +55,7 @@
       "19": "images/icon19.png",
       "38": "images/icon38.png"
     },
-    "default_title": "Bitwarden",
+    "default_title": "Bravura Safe",
     "default_popup": "popup/index.html"
   },
   "permissions": [
@@ -111,12 +112,12 @@
   ],
   "applications": {
     "gecko": {
-      "id": "{446900e4-71c2-419f-a6a7-df9c091e268b}",
-      "strict_min_version": "42.0"
+      "id": "{717ad7ea-6868-4be1-b6d4-31c3fbdddd91}",
+      "strict_min_version": "90.0"
     }
   },
   "sidebar_action": {
-    "default_title": "Bitwarden",
+    "default_title": "Bravura Safe",
     "default_panel": "popup/index.html?uilocation=sidebar",
     "default_icon": "images/icon19.png"
   }

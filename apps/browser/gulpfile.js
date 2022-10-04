@@ -25,9 +25,8 @@ const filters = {
   fonts: [
     "!build/popup/fonts/*",
     "build/popup/fonts/Open_Sans*.woff",
-    "build/popup/fonts/bwi-font.woff2",
-    "build/popup/fonts/bwi-font.woff",
-    "build/popup/fonts/bwi-font.ttf",
+    "build/popup/fonts/fontawesome*.woff2",
+    "build/popup/fonts/fontawesome*.woff",
   ],
   safari: ["!build/safari/**/*"],
 };
@@ -123,7 +122,7 @@ function distSafariApp(cb, subBuildPath) {
     "-o",
     "runtime",
     "--sign",
-    "Developer ID Application: 8bit Solutions LLC",
+    "Developer ID Application: Hitachi ID Systems, Inc",
     "--entitlements",
     entitlementsPath,
   ];
@@ -133,7 +132,7 @@ function distSafariApp(cb, subBuildPath) {
       "--force",
       "--sign",
       subBuildPath === "mas"
-        ? "3rd Party Mac Developer Application: 8bit Solutions LLC"
+        ? "3rd Party Mac Developer Application: Hitachi ID Systems, Inc"
         : "6B287DD81FF922D86FD836128B0F62F358B38726",
       "--entitlements",
       entitlementsPath,

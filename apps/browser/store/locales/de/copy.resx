@@ -118,38 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bitwarden - Kostenloser Passwort-Manager</value>
+    <value>Bravura Safe - Kostenloser Passwort-Manager</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>Ein sicherer und kostenloser Passwort-Manager für all deine Geräte</value>
   </data>
   <data name="Description" xml:space="preserve">
-    <value>Bitwarden, Inc. ist die Muttergesellschaft von 8bit Solutions LLC.
-
-NAMED BEST PASSWORD MANAGER DY THE VERGE, U.S. NEWS &amp; WORLD REPORT, CNET UND MORE.
-
-Verwalte, speichere, sichere und teile unbegrenzte Passwörter von überall auf unbegrenzten Geräten. Bitwarden liefert Open-Source-Passwort-Management-Lösungen für jedermann, sei es zu Hause, am Arbeitsplatz oder unterwegs.
-
-Generiere starke, einzigartige und zufällige Passwörter basierend auf Sicherheitsanforderungen für jede Website, die du häufig besuchst.
-
-Bitwarden Send überträgt schnell verschlüsselte Informationen - Dateien und Klartext - direkt an jeden.
-
-Bitwarden bietet Teams und Enterprise Pläne für Unternehmen an, damit du Passwörter sicher mit Kollegen teilen kannst.
-
-Warum Bitwarden:
-
-Weltklasse Verschlüsselung
-Passwörter sind durch erweiterte Ende-zu-Ende-Verschlüsselung (AES-256 Bit, salted hashtag und PBKDF2 SHA-256) so bleiben deine Daten sicher und privat.
-
-Integrierter Passwortgenerator
-Generiere starke, einzigartige und zufällige Passwörter basierend auf Sicherheitsanforderungen für jede Website, die du häufig besuchst.
-
-Globale Übersetzungen 
-Bitwarden Übersetzungen existieren in 40 Sprachen und wachsen dank unserer globalen Gemeinschaft.
-
-Plattformübergreifende Anwendungen 
-Sichere und teile vertrauliche Daten in deinem Bitwarden Vault von jedem Browser, jedem mobilen Gerät oder Desktop-Betriebssystem und mehr.
-</value>
+    <value>Hitachi ID Systems Inc.</value>
   </data>
   <data name="AssetTitle" xml:space="preserve">
     <value>Ein sicherer und kostenloser Passwort-Manager für all deine Geräte</value>

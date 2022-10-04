@@ -1,6 +1,6 @@
 {
   "bitwarden": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "filters": {
     "message": "フィルター"
@@ -73,11 +73,11 @@
     "message": "名前"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -86,7 +86,7 @@
     }
   },
   "newUri": {
-    "message": "新しい URI"
+    "message": "新しい URL"
   },
   "username": {
     "message": "ユーザー名"
@@ -392,13 +392,25 @@
     "message": "パスワードのコピー"
   },
   "copyUri": {
-    "message": "URI のコピー"
+    "message": "URL のコピー"
   },
   "copyVerificationCodeTotp": {
     "message": "認証コード (TOTP) をコピー"
   },
   "length": {
     "message": "長さ"
+  },
+  "uppercase": {
+    "message": "大文字（A-Z）"
+  },
+  "lowercase": {
+    "message": "小文字（a-z）"
+  },
+  "numbers": {
+    "message": "数字 (0～9)"
+  },
+  "specialCharacters": {
+    "message": "特殊文字（!@#$%^&*)"
   },
   "numWords": {
     "message": "単語数"
@@ -659,7 +671,7 @@
     "message": "セルフホスティング環境"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "セルフホスティングしている Bitwarden のベース URL を指定してください。"
+    "message": "セルフホスティングしている Bravura Safe のベース URL を指定してください。"
   },
   "customEnvironment": {
     "message": "カスタム環境"
@@ -764,7 +776,7 @@
     "message": "マスターパスワードの変更"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "マスターパスワードは bitwarden.com ウェブ保管庫で変更できます。ウェブサイトを開きますか？"
+    "message": "マスターパスワードは hitachi-id.com ウェブ保管庫で変更できます。ウェブサイトを開きますか？"
   },
   "fingerprintPhrase": {
     "message": "パスフレーズ",
@@ -804,7 +816,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -812,7 +824,7 @@
     "message": "マスターパスワードが間違っています"
   },
   "twoStepLoginConfirmation": {
-    "message": "2段階認証を使うと、ログイン時にセキュリティキーや認証アプリ、SMS、電話やメールでの認証を必要にすることでアカウントをさらに安全に出来ます。2段階認証は bitwarden.com ウェブ保管庫で有効化できます。ウェブサイトを開きますか？"
+    "message": "2段階認証を使うと、ログイン時にセキュリティキーや認証アプリ、SMS、電話やメールでの認証を必要にすることでアカウントをさらに安全に出来ます。2段階認証は hitachi-id.com ウェブ保管庫で有効化できます。ウェブサイトを開きますか？"
   },
   "twoStepLogin": {
     "message": "2段階認証"
@@ -882,11 +894,11 @@
     "message": "選択した時間が経過した後、自動的にクリップボードを消去します。",
     "description": "Clipboard is the operating system thing where you copy/paste data to on your device."
   },
-  "disableFavicon": {
-    "message": "ウェブサイトアイコンの無効化"
+  "enableFavicon": {
+    "message": "ウェブサイトのアイコンを表示"
   },
-  "disableFaviconDesc": {
-    "message": "保管庫のアイテム毎にウェブサイトのアイコンを表示します。"
+  "faviconDesc": {
+    "message": "ログイン情報の隣にアイコン画像を表示します"
   },
   "enableMinToTray": {
     "message": "トレイアイコンに最小化"
@@ -934,13 +946,13 @@
     "message": "ログイン時に自動的に起動"
   },
   "openAtLoginDesc": {
-    "message": "Bitwarden デスクトップアプリケーションをログイン時に自動的に起動します。"
+    "message": "Bravura Safe デスクトップアプリケーションをログイン時に自動的に起動します。"
   },
   "alwaysShowDock": {
     "message": "常にドックに表示"
   },
   "alwaysShowDockDesc": {
-    "message": "メニューバーに最小化した場合でも、Bitwarden アイコンを表示します。"
+    "message": "メニューバーに最小化した場合でも、Bravura Safe アイコンを表示します。"
   },
   "confirmTrayTitle": {
     "message": "トレイの無効化の確認"
@@ -1035,7 +1047,7 @@
     "message": "会員情報の管理"
   },
   "premiumManageAlert": {
-    "message": "会員情報は bitwarden.com ウェブ保管庫で管理できます。ウェブサイトを開きますか？"
+    "message": "会員情報は hitachi-id.com ウェブ保管庫で管理できます。ウェブサイトを開きますか？"
   },
   "premiumRefresh": {
     "message": "会員情報の更新"
@@ -1068,13 +1080,13 @@
     "message": "プレミアム会員に加入"
   },
   "premiumPurchaseAlert": {
-    "message": "プレミアム会員権は bitwarden.com ウェブ保管庫で購入できます。ウェブサイトを開きますか？"
+    "message": "プレミアム会員権は hitachi-id.com ウェブ保管庫で購入できます。ウェブサイトを開きますか？"
   },
   "premiumCurrentMember": {
     "message": "あなたはプレミアム会員です！"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Bitwarden を支援いただき、ありがとうございます。"
+    "message": "Bravura Safe を支援いただき、ありがとうございます。"
   },
   "premiumPrice": {
     "message": "全部で年間たった$PRICE$！",
@@ -1145,13 +1157,13 @@
     "description": "Bring all windows to front (foreground)"
   },
   "aboutBitwarden": {
-    "message": "Bitwarden について"
+    "message": "Bravura Safe について"
   },
   "services": {
     "message": "サービス"
   },
   "hideBitwarden": {
-    "message": "Bitwarden を隠す"
+    "message": "Bravura Safe を隠す"
   },
   "hideOthers": {
     "message": "他を隠す"
@@ -1160,7 +1172,7 @@
     "message": "すべて表示"
   },
   "quitBitwarden": {
-    "message": "Bitwarden の終了"
+    "message": "Bravura Safe の終了"
   },
   "valueCopied": {
     "message": "$VALUE$ をコピーしました",
@@ -1217,18 +1229,18 @@
   },
   "matchDetection": {
     "message": "一致検出方法",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "デフォルトの一致検出方法",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "オプションの切り替え"
   },
   "organization": {
     "message": "組織",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "default": {
     "message": "デフォルト"
@@ -1261,6 +1273,40 @@
   "fileFormat": {
     "message": "ファイル形式"
   },
+  "hCaptchaUrl": {
+    "message": "hCaptcha URL",
+    "description": "hCaptcha is the name of a website, should not be translated"
+  },
+  "loadAccessibilityCookie": {
+    "message": "アクセシビリティクッキーを読み込む"
+  },
+  "registerAccessibilityUser": {
+    "message": "アクセシビリティユーザーとして登録する",
+    "description": "ex. Register as an accessibility user at hcaptcha.com"
+  },
+  "copyPasteLink": {
+    "message": "以下のメールに送信されたリンクをコピーして貼り付けてください"
+  },
+  "enterhCaptchaUrl": {
+    "message": "hCaptcha のアクセシビリティクッキーを読み込むための URL を入力してください",
+    "description": "hCaptcha is the name of a website, should not be translated"
+  },
+  "hCaptchaUrlRequired": {
+    "message": "hCaptcha URL が必要です",
+    "description": "hCaptcha is the name of a website, should not be translated"
+  },
+  "invalidUrl": {
+    "message": "無効な URL"
+  },
+  "done": {
+    "message": "完了"
+  },
+  "accessibilityCookieSaved": {
+    "message": "アクセシビリティクッキーを保存しました！"
+  },
+  "noAccessibilityCookieSaved": {
+    "message": "アクセシビリティクッキーが保存されていません"
+  },
   "warning": {
     "message": "警告",
     "description": "WARNING (should stay in capitalized letters if the language permits)"
@@ -1275,7 +1321,7 @@
     "message": "このエクスポートは、アカウントの暗号化キーを使用してデータを暗号化します。 暗号化キーをローテーションした場合は、このエクスポートファイルを復号することはできなくなるため、もう一度エクスポートする必要があります。"
   },
   "encExportAccountWarningDesc": {
-    "message": "アカウント暗号化キーは各 Bitwarden ユーザーアカウントに固有であるため、暗号化されたエクスポートを別のアカウントにインポートすることはできません。"
+    "message": "アカウント暗号化キーは各 Bravura Safe ユーザーアカウントに固有であるため、暗号化されたエクスポートを別のアカウントにインポートすることはできません。"
   },
   "noOrganizationsList": {
     "message": "あなたはどの組織にも属していません。組織では他のユーザーとアイテムを安全に共有できます。"
@@ -1305,7 +1351,7 @@
     "message": "脆弱なマスターパスワード"
   },
   "weakMasterPasswordDesc": {
-    "message": "設定されたマスターパスワードの強度は脆弱です。Bitwarden アカウントを適切に保護するために、強力なマスターパスワード（またはパスフレーズ）を使用すべきです。本当にこのマスターパスワードを使用しますか？"
+    "message": "設定されたマスターパスワードの強度は脆弱です。Bravura Safe アカウントを適切に保護するために、強力なマスターパスワード（またはパスフレーズ）を使用すべきです。本当にこのマスターパスワードを使用しますか？"
   },
   "pin": {
     "message": "PIN",
@@ -1315,7 +1361,7 @@
     "message": "PIN でロック解除"
   },
   "setYourPinCode": {
-    "message": "Bitwarden のロックを解除するための PIN コードを設定します。アプリから完全にログアウトすると、PIN 設定はリセットされます。"
+    "message": "Bravura Safe のロックを解除するための PIN コードを設定します。アプリから完全にログアウトすると、PIN 設定はリセットされます。"
   },
   "pinRequired": {
     "message": "PIN コードが必要です。"
@@ -1327,19 +1373,19 @@
     "message": "Windows Hello でロック解除"
   },
   "windowsHelloConsentMessage": {
-    "message": "Bitwarden の認証を行います。"
+    "message": "Bravura Safe の認証を行います。"
   },
   "unlockWithTouchId": {
     "message": "Touch ID でロック解除"
   },
   "touchIdConsentMessage": {
-    "message": "Bitwarden の認証を行います。"
+    "message": "Bravura Safe の認証を行います。"
   },
-  "noAutoPromptWindowsHello": {
-    "message": "起動時に Windows Hello のプロンプトを表示しない"
+  "autoPromptWindowsHello": {
+    "message": "起動時に Windows Hello を要求する"
   },
-  "noAutoPromptTouchId": {
-    "message": "起動時に Touch ID を要求しない"
+  "autoPromptTouchId": {
+    "message": "起動時に Touch ID を要求する"
   },
   "lockWithMasterPassOnRestart": {
     "message": "再起動時にマスターパスワードでロック"
@@ -1506,17 +1552,17 @@
   "enableBrowserIntegrationDesc": {
     "message": "ブラウザでの生体認証のためにブラウザ統合を使用します。"
   },
-  "browserIntegrationMasOnlyTitle": {
-    "message": "ブラウザ統合はサポートされていません"
+  "browserIntegrationUnsupportedTitle": {
+    "message": "ブラウザー統合はサポートされていません"
   },
   "browserIntegrationMasOnlyDesc": {
     "message": "残念ながら、ブラウザ統合は、Mac App Storeのバージョンでのみサポートされています。"
   },
-  "browserIntegrationWindowsStoreTitle": {
-    "message": "ブラウザ統合に対応していません"
-  },
   "browserIntegrationWindowsStoreDesc": {
     "message": "残念ながらお使いの Microsoft Store のバージョンではブラウザの統合に対応していません。"
+  },
+  "browserIntegrationLinuxDesc": {
+    "message": "残念ながら、Linux バージョンではブラウザー統合は現在サポートされていません。"
   },
   "enableBrowserIntegrationFingerprint": {
     "message": "ブラウザ統合には認証を必要とする。"
@@ -1549,8 +1595,8 @@
     "message": "組織のポリシーは、所有者のオプションに影響を与えています。"
   },
   "allSends": {
-    "message": "すべての Send",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "すべての Share",
+    "description": "'Shares' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "ファイル"
@@ -1559,12 +1605,12 @@
     "message": "テキスト"
   },
   "searchSends": {
-    "message": "Send を検索",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share を検索",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Send を編集",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share を編集",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "myVault": {
     "message": "保管庫"
@@ -1576,72 +1622,73 @@
     "message": "削除日時"
   },
   "deletionDateDesc": {
-    "message": "Send は指定された日時に完全に削除されます。",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share は指定された日時に完全に削除されます。",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "有効期限"
   },
   "expirationDateDesc": {
-    "message": "設定されている場合、この Send へのアクセスは指定された日時に失効します。",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "設定されている場合、この Share へのアクセスは指定された日時に失効します。",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
-    "message": "最大アクセス数"
+    "message": "最大アクセス数",
+    "description": "This text will be displayed after a Send has been accessed the maximum amount of times."
   },
   "maxAccessCountDesc": {
-    "message": "設定されている場合、最大アクセス数に達するとユーザーはこの Send にアクセスできなくなります。",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "設定されている場合、最大アクセス数に達するとユーザーはこの Share にアクセスできなくなります。",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "現在のアクセス数"
   },
   "disableSend": {
-    "message": "誰もアクセスできないように、この Send を無効にする",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "誰もアクセスできないように、この Share を無効にする",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
-    "message": "必要に応じて、ユーザーがこの Send にアクセスするためのパスワードを要求します。",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "必要に応じて、ユーザーがこの Share にアクセスするためのパスワードを要求します。",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "この Send に関するプライベートメモ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "この Share に関するプライベートメモ",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
-    "message": "Send リンク",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share リンク",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinkLabel": {
-    "message": "Send リンク",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share リンク",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "textHiddenByDefault": {
-    "message": "Send へのアクセス時に既定でテキストを非表示にする",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share へのアクセス時に既定でテキストを非表示にする",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "作成した Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "作成した Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "編集済みの Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "編集済みの Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
-    "message": "削除した Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "削除した Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "新しいパスワード"
   },
   "whatTypeOfSend": {
-    "message": "この Send の種類は何ですか？",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "この Share の種類は何ですか？",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createSend": {
-    "message": "Send を作成",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share を作成",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "送信するテキスト"
@@ -1665,23 +1712,23 @@
     "message": "カスタム"
   },
   "deleteSendConfirmation": {
-    "message": "この Send を削除してもよろしいですか?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "この Share を削除してもよろしいですか?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkToClipboard": {
-    "message": "Send リンクをクリップボードにコピー",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share リンクをクリップボードにコピー",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkOnSave": {
-    "message": "Send の保存時にクリップボードへリンクをコピーします。"
+    "message": "Share の保存時にクリップボードへリンクをコピーします。"
   },
   "sendDisabled": {
-    "message": "Send 無効",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share 無効",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "組織のポリシーにより、既存の Send のみを削除できます。",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "組織のポリシーにより、既存の Share のみを削除できます。",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copyLink": {
     "message": "リンクをコピー"
@@ -1705,7 +1752,7 @@
     "message": "メールアドレスを受信者に表示しない"
   },
   "sendOptionsPolicyInEffect": {
-    "message": "一つ以上の組織ポリシーが Send の設定に影響しています。"
+    "message": "一つ以上の組織ポリシーが Share の設定に影響しています。"
   },
   "emailVerificationRequired": {
     "message": "メールアドレスの確認が必要です"
@@ -1792,8 +1839,8 @@
   "leftOrganization": {
     "message": "組織から脱退しました。"
   },
-  "ssoKeyConnectorUnavailable": {
-    "message": "キーコネクターに到達できません。後でもう一度お試しください。"
+  "ssoKeyConnectorError": {
+    "message": "キーコネクターエラー: キーコネクターが使用可能で、正常に動作しているか確認してください。"
   },
   "lockAllVaults": {
     "message": "すべての保管庫をロック"
@@ -1840,6 +1887,12 @@
       }
     }
   },
+  "locked": {
+    "message": "ロック中"
+  },
+  "unlocked": {
+    "message": "ロック解除済み"
+  },
   "generator": {
     "message": "ジェネレーター"
   },
@@ -1859,7 +1912,8 @@
     "message": "ユーザー名の種類"
   },
   "plusAddressedEmail": {
-    "message": "プラス付きのメールアドレス"
+    "message": "プラス付きのメールアドレス",
+    "description": "Username generator option that appends a random sub-address to the username. For example: address+subaddress@email.com"
   },
   "plusAddressedEmailDesc": {
     "message": "メールプロバイダのエイリアス機能を使用します。"
@@ -1881,5 +1935,30 @@
   },
   "service": {
     "message": "サービス"
+  },
+  "allVaults": {
+    "message": "すべての保管庫"
+  },
+  "searchOrganization": {
+    "message": "組織の検索"
+  },
+  "searchMyVault": {
+    "message": "保管庫を検索"
+  },
+  "forwardedEmail": {
+    "message": "転送されたメールエイリアス"
+  },
+  "forwardedEmailDesc": {
+    "message": "外部転送サービスを使用してメールエイリアスを生成します。"
+  },
+  "hostname": {
+    "message": "ホスト名",
+    "description": "Part of a URL."
+  },
+  "apiAccessToken": {
+    "message": "API アクセストークン"
+  },
+  "apiKey": {
+    "message": "API キー"
   }
 }

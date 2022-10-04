@@ -118,37 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bitwarden – Gestore di password gratuito</value>
+    <value>Bravura Safe – Gestore di password gratuito</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>Un gestore di password sicuro e gratuito per tutti i tuoi dispositivi</value>
   </data>
   <data name="Description" xml:space="preserve">
-    <value>Bitwarden, Inc. è la società madre di 8bit Solutions LLC.
-
-NOMINATO MIGLIOR PASSWORD MANAGER DA THE VERGE, US NEWS &amp; WORLD REPORT, CNET E ALTRO.
-
-Gestisci, archivia, proteggi e condividi password illimitate su dispositivi illimitati da qualsiasi luogo. Bitwarden offre soluzioni di gestione delle password open source a tutti, a casa, al lavoro o in viaggio.
-
-Genera password complesse, uniche e casuali in base ai requisiti di sicurezza per ogni sito web che frequenti.
-
-Bitwarden Send trasmette rapidamente informazioni cifrate --- file e testo in chiaro - direttamente a chiunque.
-
-Bitwarden offre piani Teams ed Enterprise per le aziende in modo da poter condividere le password in modo sicuro con i colleghi.
-
-Perché scegliere Bitwarden:
-
-Crittografia di livello mondiale
-Le password sono protette con cifratura end-to-end avanzata (AES-256 bit, hashtag con sale e PBKDF2 SHA-256) in modo che i tuoi dati rimangano al sicuro e privati.
-
-Generatore di password integrato
-Genera password complesse, uniche e casuali in base ai requisiti di sicurezza per ogni sito web che frequenti.
-
-Traduzioni globali
-Le traduzioni di Bitwarden esistono in 40 lingue e sono in crescita, grazie alla nostra comunità globale.
-
-Applicazioni multipiattaforma
-Proteggi e condividi i dati sensibili all'interno del tuo Bitwarden Vault da qualsiasi browser, dispositivo mobile o sistema operativo desktop e altro ancora.</value>
+    <value>Hitachi ID Systems Inc.</value>
   </data>
   <data name="AssetTitle" xml:space="preserve">
     <value>Un gestore di password sicuro e gratuito per tutti i tuoi dispositivi</value>

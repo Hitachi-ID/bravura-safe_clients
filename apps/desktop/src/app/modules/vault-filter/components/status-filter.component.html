@@ -8,7 +8,7 @@
           (click)="applyFilter('all')"
           [attr.aria-pressed]="activeFilter.status === 'all'"
         >
-          <i class="bwi bwi-fw bwi-filter" aria-hidden="true"></i>&nbsp;{{ "allItems" | i18n }}
+          <i class="fa fa-fw fa-th" aria-hidden="true"></i>&nbsp;{{ "allItems" | i18n }}
         </button>
       </span>
     </li>
@@ -23,7 +23,7 @@
           (click)="applyFilter('favorites')"
           [attr.aria-pressed]="activeFilter.status === 'favorites'"
         >
-          <i class="bwi bwi-fw bwi-star" aria-hidden="true"></i>&nbsp;{{ "favorites" | i18n }}
+          <i class="fa fa-fw fa-star" aria-hidden="true"></i>&nbsp;{{ "favorites" | i18n }}
         </button>
       </span>
     </li>
@@ -38,7 +38,7 @@
           (click)="applyFilter('trash')"
           [attr.aria-pressed]="activeFilter.status === 'trash'"
         >
-          <i class="bwi bwi-fw bwi-trash" aria-hidden="true"></i>&nbsp;{{ "trash" | i18n }}
+          <i class="fa fa-fw fa-trash" aria-hidden="true"></i>&nbsp;{{ "trash" | i18n }}
         </button>
       </span>
     </li>

@@ -1,0 +1,529 @@
+.generated-wrapper {
+  min-width: 0;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.password-row {
+  min-width: 0;
+}
+
+.password-letter {
+  @include themify($themes) {
+    color: themed("pwLetter");
+  }
+}
+
+.password-number {
+  @include themify($themes) {
+    color: themed("pwNumber");
+  }
+}
+
+.password-special {
+  @include themify($themes) {
+    color: themed("pwSpecial");
+  }
+}
+
+app-vault-groupings,
+app-org-vault-groupings,
+.groupings {
+  .card {
+    #search {
+      width: calc(100% - 1rem);
+      @include themify($themes) {
+        background-color: themed("inputBackgroundColor");
+        border-color: themed("inputBorderColor");
+        color: themed("inputTextColor");
+      }
+
+      &::placeholder {
+        @include themify($themes) {
+          color: themed("inputPlaceholderColor");
+        }
+      }
+    }
+
+    div.card-body > span {
+      display: inline-block;
+      margin-bottom: 0.25rem;
+      margin-bottom: 0.25rem;
+      padding-bottom: 1px;
+      position: relative;
+      width: 100%;
+      &.filter.type-label,
+      &.folder-label.expand,
+      &.collection-label.expand {
+        &::after {
+          background-color: #c00;
+          bottom: 0;
+          content: "";
+          height: 2px;
+          left: 1.5rem;
+          margin-left: 1px;
+          position: absolute;
+          width: 4ch;
+        }
+      }
+      h3 {
+        font-weight: normal;
+        line-height: 2.5rem;
+        padding: 0 5px 0 1px;
+        text-transform: uppercase;
+        a {
+          text-align: center;
+          width: 1.5rem;
+
+          fa {
+            pointer-events: none; // Prevent the cursor swapping from pointer hand to text edit when on icons
+          }
+        }
+        @include themify($themes) {
+          color: themed("textMuted");
+        }
+      }
+
+      &.filter.type-label {
+        h3.d-flex {
+          margin: 0 0 0 1.5rem;
+          i {
+            padding: 2px;
+            margin: 0 0 2px 0;
+          }
+        }
+      }
+      &.folder-label,
+      &.collection-label {
+        h3.d-flex {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    ul:last-child {
+      margin-bottom: 5px;
+    }
+
+    .card-body a {
+      @include themify($themes) {
+        color: themed("textHeadingColor");
+        font-weight: themed("linkWeight");
+      }
+
+      display: block;
+      margin-right: 0;
+
+      &:hover {
+        text-decoration: none;
+        &.text-muted {
+          @include themify($themes) {
+            color: themed("iconHover") !important;
+          }
+        }
+      }
+    }
+
+    .show-active {
+      display: none;
+    }
+
+    li {
+      > .fa,
+      > div > .fa {
+        cursor: pointer;
+      }
+    }
+
+    li.active {
+      > .show-active,
+      > div .show-active {
+        display: inline;
+      }
+    }
+
+    li.active {
+      > a:first-of-type,
+      > div a:first-of-type {
+        font-weight: bold;
+        @include themify($themes) {
+          color: themed("linkColor");
+        }
+      }
+
+      > .fa,
+      > div > .fa {
+        @include themify($themes) {
+          color: themed("linkColor");
+        }
+      }
+    }
+  }
+}
+
+app-vault div.vault-filters div.card-body,
+app-org-vault div.vault-filters div.card-body,
+app-send div.vault-filters div.card-body {
+  padding: 0;
+  ul.card-ul {
+    margin-left: 0;
+  }
+}
+
+/** fix app-vault-bulk-actions alignment issue **/
+app-vault,
+app-org-vault {
+  app-vault-bulk-actions {
+    display: flex;
+    align-items: center;
+  }
+}
+
+app-vault {
+  .sidebar-panel {
+    .organizations {
+      .dropdown-toggle,
+      .dropdown-menu {
+        width: 100%;
+      }
+      .dropdown-menu {
+        overflow: auto;
+        @include themify($themes) {
+          background-color: themed("orgDropdownBackground");
+          box-shadow: 0 3px 10px themed("dropdownShadow");
+        }
+        app-organization-list {
+          p {
+            margin: 5px 10px 10px;
+          }
+          p.text-muted {
+            i.fa.fa-spinner.fa-spin,
+            span.sr-only {
+              margin-left: 10px;
+            }
+          }
+          ul.fa-ul.card-ul {
+            margin-left: 0;
+            li.d-flex {
+              cursor: pointer;
+              &:hover {
+                @include themify($themes) {
+                  background-color: themed("filterPanelHoverBackgroundColor");
+                }
+              }
+              a.text-body {
+                margin: 5px 10px;
+                text-decoration: none;
+              }
+              i.fa-li {
+                position: relative;
+                left: 0;
+              }
+            }
+          }
+        }
+        a.btn.btn-block {
+          margin: 5px 10px;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+// add scrollable-menu to solve the organizations dropdown menu overlap issue
+@include media-breakpoint-up(md) {
+  .scrollable-menu {
+    max-height: calc(100vh - 200px);
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .scrollable-menu {
+    max-height: calc(100vh - 240px);
+  }
+}
+
+app-generator {
+  #lengthRange {
+    width: 100%;
+  }
+
+  .card-generated {
+    .card-body {
+      @include themify($themes) {
+        background: themed("foregroundColor");
+      }
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      font-family: $font-family-monospace;
+      font-size: $font-size-lg;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+
+app-password-generator-history {
+  .list-group-item {
+    line-height: 1;
+    @include themify($themes) {
+      background: themed("backgroundColor");
+    }
+
+    .password {
+      font-family: $font-family-monospace;
+    }
+  }
+}
+
+app-import {
+  textarea {
+    height: 150px;
+  }
+}
+
+app-avatar {
+  img {
+    @extend .rounded;
+  }
+}
+
+app-user-billing {
+  .progress {
+    height: 20px;
+
+    .progress-bar {
+      min-width: 50px;
+    }
+  }
+}
+
+app-sponsored-families {
+  .inset-list {
+    padding-left: 1.5rem;
+  }
+}
+
+.col-9 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  > * {
+    flex: 0 0 auto;
+  }
+
+  > .vertical-spacer {
+    flex: 1 1 auto;
+  }
+}
+
+.page-content > .row > .col-3:first-child {
+  height: calc(100vh - $navbar-height);
+  padding-top: $sidebar-padding-top;
+  position: sticky;
+  top: $navbar-height;
+  .card {
+    margin: 0;
+  }
+}
+
+app-organization-layout {
+  .page-content > .row > .col-3:first-child {
+    height: calc(100vh - $navbar-height - $org-header-height);
+    top: $navbar-height + $org-header-height;
+  }
+}
+
+/* Register Layout Page */
+.layout {
+  &.default,
+  &.teams,
+  &.teams1,
+  &.teams2,
+  &.enterprise,
+  &.enterprise1,
+  &.enterprise2,
+  &.cnetcmpgnent,
+  &.cnetcmpgnteams,
+  &.cnetcmpgnind {
+    header {
+      background: #175ddc;
+      color: #ced4da;
+      height: 70px;
+
+      &:before {
+        background: #175ddc;
+        content: "";
+        height: 520px;
+        left: 0;
+        position: absolute;
+        top: -80px;
+        transform: skewY(-3deg);
+        width: 100%;
+        z-index: -1;
+      }
+      img.logo {
+        height: 57px;
+        margin: 12px 0 0;
+        max-width: 284px;
+        width: 284px;
+      }
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 3.5rem;
+      margin: 50px 0 0;
+    }
+
+    h2 {
+      color: #ffffff;
+      font-size: 2rem;
+      line-height: 1.5;
+      margin: 20px 0 140px;
+    }
+
+    p {
+      font-size: 2rem;
+      margin: 10px 0 70px 0;
+
+      &:before {
+        content: "/";
+        padding-right: 12px;
+      }
+      &:not(.highlight) {
+        &:before {
+          color: #1252a3;
+        }
+      }
+
+      b {
+        &:after {
+          content: "⟶";
+          font-size: 2rem;
+          padding-left: 6px;
+        }
+      }
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    blockquote {
+      font-size: 1.4rem;
+      margin: 20px 0 0;
+    }
+  }
+
+  &.cnetcmpgnind {
+    p {
+      font-size: 1.5rem;
+      margin: 10px 0 50px 0;
+    }
+  }
+}
+
+app-footer {
+  font-size: 0.9rem;
+  div.footer {
+    div.row {
+      div.col:first-child {
+        flex-basis: 70%;
+      }
+      div.col.text-right {
+        flex-basis: 30%;
+      }
+    }
+  }
+}
+
+.collapsable-row {
+  display: flex;
+  padding-top: 15px;
+  i {
+    margin-top: 3px;
+  }
+  .filter-title {
+    padding-left: 5px;
+  }
+  &.active {
+    @include themify($themes) {
+      color: themed("primary");
+    }
+  }
+}
+
+.vault-filter-option {
+  padding-bottom: 3px;
+  &.active {
+    @include themify($themes) {
+      color: themed("primary");
+      font-weight: bold;
+    }
+  }
+  button.org-options {
+    background: none;
+    border: none;
+    padding: 0;
+
+    &:hover,
+    &:focus {
+      @include themify($themes) {
+        color: themed("iconHover") !important;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.org-filter-heading {
+  @include themify($themes) {
+    color: themed("textColor");
+  }
+  &.active {
+    @include themify($themes) {
+      color: themed("primary");
+      font-weight: bold;
+    }
+  }
+}
+
+.filter-container {
+  max-height: calc(
+    100vh - $navbar-height - $sidebar-padding-top * 2 - $search-container-height -
+      $org-dropdown-container-height
+  );
+  overflow: auto;
+  border-top: 1px solid $secondary;
+  padding: 10px 0;
+}
+
+app-organization-layout {
+  .filter-container {
+    max-height: calc(
+      100vh - $navbar-height - $sidebar-padding-top * 2 - $org-header-height -
+        $search-container-height
+    );
+  }
+}
+.search-container {
+  height: $search-container-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-muted.invisible {
+  @extend .fa;
+  @extend .fa-fw;
+  @extend .flex-shrink-0;
+}
+
+.bit-menu-panel [role="menu"] {
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+}

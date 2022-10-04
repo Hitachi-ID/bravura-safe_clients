@@ -1,6 +1,6 @@
 {
   "bitwarden": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "filters": {
     "message": "Фильтры"
@@ -73,11 +73,11 @@
     "message": "Название"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -86,7 +86,7 @@
     }
   },
   "newUri": {
-    "message": "Новый URI"
+    "message": "Новый URL"
   },
   "username": {
     "message": "Имя пользователя"
@@ -392,13 +392,25 @@
     "message": "Скопировать пароль"
   },
   "copyUri": {
-    "message": "Скопировать URI"
+    "message": "Скопировать URL"
   },
   "copyVerificationCodeTotp": {
     "message": "Скопировать код подтверждения (TOTP)"
   },
   "length": {
     "message": "Длина"
+  },
+  "uppercase": {
+    "message": "Прописные буквы (A-Z)"
+  },
+  "lowercase": {
+    "message": "Строчные буквы (a-z)"
+  },
+  "numbers": {
+    "message": "Цифры (0-9)"
+  },
+  "specialCharacters": {
+    "message": "Специальные символы (!@#$%^&*)"
   },
   "numWords": {
     "message": "Количество слов"
@@ -659,7 +671,7 @@
     "message": "Среда собственного хостинга"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Укажите URL-адрес Bitwarden на вашем сервере."
+    "message": "Укажите URL-адрес Bravura Safe на вашем сервере."
   },
   "customEnvironment": {
     "message": "Пользовательское окружение"
@@ -716,7 +728,7 @@
     "message": "Вы действительно хотите выйти?"
   },
   "logOut": {
-    "message": "Выйти"
+    "message": "Выход"
   },
   "addNewLogin": {
     "message": "Добавить новый логин"
@@ -764,7 +776,7 @@
     "message": "Изменить мастер-пароль"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Вы можете изменить свой мастер-пароль на bitwarden.com. Перейти на сайт сейчас?"
+    "message": "Вы можете изменить свой мастер-пароль на hitachi-id.com. Перейти на сайт сейчас?"
   },
   "fingerprintPhrase": {
     "message": "Фраза отпечатка",
@@ -804,7 +816,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -812,7 +824,7 @@
     "message": "Неверный мастер-пароль"
   },
   "twoStepLoginConfirmation": {
-    "message": "Двухфакторная аутентификация делает ваш аккаунт более защищенным, требуя подтверждения входа на другом устройстве, например, ключом безопасности, приложением-аутентификатором, SMS, телефонным звонком или письмом. Двухфакторная аутентификация включается на bitwarden.com. Перейти на сайт сейчас?"
+    "message": "Двухфакторная аутентификация делает ваш аккаунт более защищенным, требуя подтверждения входа на другом устройстве, например, ключом безопасности, приложением-аутентификатором, SMS, телефонным звонком или письмом. Двухфакторная аутентификация включается на hitachi-id.com. Перейти на сайт сейчас?"
   },
   "twoStepLogin": {
     "message": "Двухфакторная аутентификация"
@@ -875,18 +887,18 @@
     "message": "Безопасность"
   },
   "clearClipboard": {
-    "message": "Очистка буфера обмена",
+    "message": "Очистить буфер обмена",
     "description": "Clipboard is the operating system thing where you copy/paste data to on your device."
   },
   "clearClipboardDesc": {
-    "message": "Автоматически очищать скопированные значения в вашем буфере обмена.",
+    "message": "Автоматически удалять скопированные значения из буфера обмена.",
     "description": "Clipboard is the operating system thing where you copy/paste data to on your device."
   },
-  "disableFavicon": {
-    "message": "Отключить значки веб-сайтов"
+  "enableFavicon": {
+    "message": "Показать значки веб-сайтов"
   },
-  "disableFaviconDesc": {
-    "message": "Значки веб-сайтов отображаются рядом с каждым элементом в вашем хранилище."
+  "faviconDesc": {
+    "message": "Отображать узнаваемое изображение рядом с каждым логином."
   },
   "enableMinToTray": {
     "message": "Сворачивать в область уведомлений"
@@ -934,13 +946,13 @@
     "message": "Запускать автоматически при входе в систему"
   },
   "openAtLoginDesc": {
-    "message": "Автоматически запускать приложение Bitwarden для компьютера при входе в систему."
+    "message": "Автоматически запускать приложение Bravura Safe для компьютера при входе в систему."
   },
   "alwaysShowDock": {
     "message": "Всегда показывать в Dock"
   },
   "alwaysShowDockDesc": {
-    "message": "Показывать значок Bitwarden на панели Dock, даже если он свернут в панель меню."
+    "message": "Показывать значок Bravura Safe на панели Dock, даже если он свернут в панель меню."
   },
   "confirmTrayTitle": {
     "message": "Подтвердить отключение области уведомлений"
@@ -973,7 +985,7 @@
     "description": "Copy to clipboard"
   },
   "checkForUpdates": {
-    "message": "Проверка наличия обновлений"
+    "message": "Проверка обновлений…"
   },
   "version": {
     "message": "Версия $VERSION_NUM$",
@@ -985,10 +997,10 @@
     }
   },
   "restartToUpdate": {
-    "message": "Перезапуск для обновления"
+    "message": "Перезапустить для обновления"
   },
   "restartToUpdateDesc": {
-    "message": "Версия $VERSION_NUM$ готова к установке. Для завершения установки необходимо перезапустить Bitwarden. Сделать это сейчас?",
+    "message": "Версия $VERSION_NUM$ готова к установке. Для завершения установки необходимо перезапустить Bravura Safe. Сделать это сейчас?",
     "placeholders": {
       "version_num": {
         "content": "$1",
@@ -1035,7 +1047,7 @@
     "message": "Управление Премиум"
   },
   "premiumManageAlert": {
-    "message": "Вы можете управлять Премиум на bitwarden.com. Перейти на сайт сейчас?"
+    "message": "Вы можете управлять Премиум на hitachi-id.com. Перейти на сайт сейчас?"
   },
   "premiumRefresh": {
     "message": "Обновить Премиум"
@@ -1068,13 +1080,13 @@
     "message": "Купить Премиум"
   },
   "premiumPurchaseAlert": {
-    "message": "Вы можете купить Премиум на bitwarden.com. Перейти на сайт сейчас?"
+    "message": "Вы можете купить Премиум на hitachi-id.com. Перейти на сайт сейчас?"
   },
   "premiumCurrentMember": {
     "message": "У вас есть Премиум!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Благодарим вас за поддержку Bitwarden."
+    "message": "Благодарим вас за поддержку Bravura Safe."
   },
   "premiumPrice": {
     "message": "Всего лишь $PRICE$ в год!",
@@ -1145,13 +1157,13 @@
     "description": "Bring all windows to front (foreground)"
   },
   "aboutBitwarden": {
-    "message": "О Bitwarden"
+    "message": "О Bravura Safe"
   },
   "services": {
     "message": "Службы"
   },
   "hideBitwarden": {
-    "message": "Скрыть Bitwarden"
+    "message": "Скрыть Bravura Safe"
   },
   "hideOthers": {
     "message": "Скрыть другие"
@@ -1160,7 +1172,7 @@
     "message": "Показать все"
   },
   "quitBitwarden": {
-    "message": "Выйти из Bitwarden"
+    "message": "Выйти из Bravura Safe"
   },
   "valueCopied": {
     "message": "$VALUE$ скопирован(о)",
@@ -1217,18 +1229,18 @@
   },
   "matchDetection": {
     "message": "Обнаружение совпадений",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Метод обнаружения по умолчанию",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Переключить настройки"
   },
   "organization": {
     "message": "Организация",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "default": {
     "message": "По умолчанию"
@@ -1256,10 +1268,44 @@
     "description": "ex. Date this password was updated"
   },
   "exportVault": {
-    "message": "Экспорт хранилища"
+    "message": "Экспортировать хранилище"
   },
   "fileFormat": {
     "message": "Формат файла"
+  },
+  "hCaptchaUrl": {
+    "message": "URL hCaptcha",
+    "description": "hCaptcha is the name of a website, should not be translated"
+  },
+  "loadAccessibilityCookie": {
+    "message": "Загрузить cookie специальных возможностей"
+  },
+  "registerAccessibilityUser": {
+    "message": "Зарегистрироваться как пользователь специальных возможностей на",
+    "description": "ex. Register as an accessibility user at hcaptcha.com"
+  },
+  "copyPasteLink": {
+    "message": "Скопируйте и вставьте ниже ссылку, отправленную на вашу почту"
+  },
+  "enterhCaptchaUrl": {
+    "message": "Введите URL для загрузки cookie специальных возможностей для hCaptcha",
+    "description": "hCaptcha is the name of a website, should not be translated"
+  },
+  "hCaptchaUrlRequired": {
+    "message": "Требуется URL hCaptcha",
+    "description": "hCaptcha is the name of a website, should not be translated"
+  },
+  "invalidUrl": {
+    "message": "Неверный URL"
+  },
+  "done": {
+    "message": "Готово"
+  },
+  "accessibilityCookieSaved": {
+    "message": "Cookie специальных возможностей сохранены!"
+  },
+  "noAccessibilityCookieSaved": {
+    "message": "Отсутствуют сохраненные cookie специальных возможностей"
   },
   "warning": {
     "message": "ВНИМАНИЕ",
@@ -1275,7 +1321,7 @@
     "message": "При экспорте данные шифруются при помощи ключа шифрования учетной записи. Если вы решите сменить ключ шифрования, вам следует экспортировать данные повторно, поскольку вы не сможете расшифровать этот файл экспорта."
   },
   "encExportAccountWarningDesc": {
-    "message": "Ключи шифрования уникальны для каждой учетной записи Bitwarden, поэтому нельзя импортировать зашифрованное хранилище в другой аккаунт."
+    "message": "Ключи шифрования уникальны для каждой учетной записи Bravura Safe, поэтому нельзя импортировать зашифрованное хранилище в другой аккаунт."
   },
   "noOrganizationsList": {
     "message": "Вы не являетесь членом какой-либо организации. Организации позволяют безопасно обмениваться элементами с другими пользователями."
@@ -1305,7 +1351,7 @@
     "message": "Слабый мастер-пароль"
   },
   "weakMasterPasswordDesc": {
-    "message": "Вы выбрали слабый мастер-пароль. Для надежной защиты аккаунта Bitwarden следует использовать сильный мастер-пароль (или парольную фразу). Вы действительно хотите использовать этот мастер-пароль?"
+    "message": "Вы выбрали слабый мастер-пароль. Для надежной защиты аккаунта Bravura Safe следует использовать сильный мастер-пароль (или парольную фразу). Вы действительно хотите использовать этот мастер-пароль?"
   },
   "pin": {
     "message": "PIN-код",
@@ -1315,7 +1361,7 @@
     "message": "Разблокировка PIN-кодом"
   },
   "setYourPinCode": {
-    "message": "Установите PIN-код для разблокировки Bitwarden. Настройки PIN-кода будут сброшены, если вы когда-либо полностью выйдете из приложения."
+    "message": "Установите PIN-код для разблокировки Bravura Safe. Настройки PIN-кода будут сброшены, если вы когда-либо полностью выйдете из приложения."
   },
   "pinRequired": {
     "message": "Требуется PIN-код."
@@ -1327,7 +1373,7 @@
     "message": "Разблокировать с Windows Hello"
   },
   "windowsHelloConsentMessage": {
-    "message": "Верификация для Bitwarden."
+    "message": "Верификация для Bravura Safe."
   },
   "unlockWithTouchId": {
     "message": "Разблокировать с Touch ID"
@@ -1335,11 +1381,11 @@
   "touchIdConsentMessage": {
     "message": "разблокировать ваше хранилище"
   },
-  "noAutoPromptWindowsHello": {
-    "message": "Не запрашивать Windows Hello при запуске."
+  "autoPromptWindowsHello": {
+    "message": "Запрашивать Windows Hello при запуске"
   },
-  "noAutoPromptTouchId": {
-    "message": "Не запрашивать Touch ID при запуске."
+  "autoPromptTouchId": {
+    "message": "Запрашивать Touch ID при запуске"
   },
   "lockWithMasterPassOnRestart": {
     "message": "Блокировать мастер-паролем при перезапуске"
@@ -1394,10 +1440,10 @@
     "message": "Действие по тайм-ауту хранилища"
   },
   "vaultTimeoutActionLockDesc": {
-    "message": "Заблокированное хранилище потребует повторного ввода мастер-пароля для получения доступа к нему."
+    "message": "Чтобы снова получить доступ к заблокированному хранилищу, нужно повторно ввести мастер-пароль."
   },
   "vaultTimeoutActionLogOutDesc": {
-    "message": "Выход из хранилища потребует повторную аутентификацию для получения доступа к нему."
+    "message": "Чтобы получить доступ к хранилищу после выхода из него требуется повторная авторизация."
   },
   "lock": {
     "message": "Заблокировать",
@@ -1501,28 +1547,28 @@
     "message": "Условия предоставления услуг и Политика конфиденциальности не были подтверждены."
   },
   "enableBrowserIntegration": {
-    "message": "Включить интеграцию с браузером"
+    "message": "Разрешить интеграцию с браузером"
   },
   "enableBrowserIntegrationDesc": {
     "message": "Интеграция с браузером используется для биометрии в браузере."
   },
-  "browserIntegrationMasOnlyTitle": {
+  "browserIntegrationUnsupportedTitle": {
     "message": "Интеграция с браузером не поддерживается"
   },
   "browserIntegrationMasOnlyDesc": {
     "message": "К сожалению, интеграция браузера пока поддерживается только в версии Mac App Store."
   },
-  "browserIntegrationWindowsStoreTitle": {
-    "message": "Интеграция с браузером не поддерживается"
-  },
   "browserIntegrationWindowsStoreDesc": {
     "message": "К сожалению, интеграция с браузером на текущий момент не поддерживается в версии из магазина Windows."
+  },
+  "browserIntegrationLinuxDesc": {
+    "message": "К сожалению, интеграция с браузером на текущий момент не поддерживается в версии для linux."
   },
   "enableBrowserIntegrationFingerprint": {
     "message": "Требовать верификацию для интеграции с браузером"
   },
   "enableBrowserIntegrationFingerprintDesc": {
-    "message": "Включите дополнительный уровень безопасности, используя проверку отпечатка фразы при установлении соединения между компьютером и браузером. Когда эта функция включена, она требует участия пользователя и верификации каждый раз при установлении соединения."
+    "message": "Добавьте дополнительный уровень безопасности, требуя подтверждения отпечатка фразы при установлении связи между компьютером и браузером. Это потребует действий пользователя и подтверждения при каждом создании соединения."
   },
   "approve": {
     "message": "Принять"
@@ -1549,8 +1595,8 @@
     "message": "Политика организации влияет на ваши варианты владения."
   },
   "allSends": {
-    "message": "Все Send’ы",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Все Share’ы",
+    "description": "'Shares' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "Файл"
@@ -1559,12 +1605,12 @@
     "message": "Текст"
   },
   "searchSends": {
-    "message": "Поиск Send’ов",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Поиск Share’ов",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Изменить Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Изменить Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "myVault": {
     "message": "Хранилище"
@@ -1576,72 +1622,73 @@
     "message": "Срок удаления"
   },
   "deletionDateDesc": {
-    "message": "Эта Send будет окончательно удалена в указанные дату и время.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Эта Share будет окончательно удалена в указанные дату и время.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Срок истечения"
   },
   "expirationDateDesc": {
-    "message": "Если задано, доступ к этой Send истечет в указанные дату и время.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Если задано, доступ к этой Share истечет в указанные дату и время.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
-    "message": "Максимум обращений"
+    "message": "Максимум обращений",
+    "description": "This text will be displayed after a Send has been accessed the maximum amount of times."
   },
   "maxAccessCountDesc": {
-    "message": "Если задано, пользователи больше не смогут получить доступ к этой Send, как только будет достигнуто максимальное количество обращений.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Если задано, пользователи больше не смогут получить доступ к этой Share, как только будет достигнуто максимальное количество обращений.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Текущих обращений"
   },
   "disableSend": {
-    "message": "Отключить эту Send, чтобы никто не мог получить к ней доступ.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Отключить эту Share, чтобы никто не мог получить к ней доступ.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
-    "message": "По возможности запрашивать у пользователей пароль для доступа к этой Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "По возможности запрашивать у пользователей пароль для доступа к этой Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "Личные заметки об этой Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Личные заметки об этой Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
-    "message": "Ссылка на Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Ссылка на Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinkLabel": {
-    "message": "Ссылка на Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Ссылка на Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "textHiddenByDefault": {
-    "message": "При доступе к Send скрывать текст по умолчанию",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "При доступе к Share скрывать текст по умолчанию",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Созданная Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Созданная Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "Измененная Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Измененная Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
-    "message": "Удаленная Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Удаленная Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "Новый пароль"
   },
   "whatTypeOfSend": {
-    "message": "Выберите тип Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Выберите тип Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createSend": {
-    "message": "Создать Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Создать Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Текст, который вы хотите отправить."
@@ -1665,23 +1712,23 @@
     "message": "Пользовательский"
   },
   "deleteSendConfirmation": {
-    "message": "Вы действительно хотите удалить эту Send?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Вы действительно хотите удалить эту Share?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkToClipboard": {
-    "message": "Скопировать ссылку на Send в буфер обмена",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Скопировать ссылку на Share в буфер обмена",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkOnSave": {
-    "message": "Скопировать ссылку в буфер обмена после сохранения, чтобы поделиться этой Send."
+    "message": "Скопировать ссылку в буфер обмена после сохранения, чтобы поделиться этой Share."
   },
   "sendDisabled": {
-    "message": "Send отключена",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share отключена",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "В соответствии с корпоративной политикой вы можете удалить только существующую Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "В соответствии с корпоративной политикой вы можете удалить только существующую Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copyLink": {
     "message": "Скопировать ссылку"
@@ -1705,7 +1752,7 @@
     "message": "Скрыть мой адрес email от получателей."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "На параметры Send влияют одна или несколько политик организации."
+    "message": "На параметры Share влияют одна или несколько политик организации."
   },
   "emailVerificationRequired": {
     "message": "Требуется подтверждение электронной почты"
@@ -1792,8 +1839,8 @@
   "leftOrganization": {
     "message": "Вы покинули организацию."
   },
-  "ssoKeyConnectorUnavailable": {
-    "message": "Не удается подключиться к соединителю ключей, повторите попытку позже."
+  "ssoKeyConnectorError": {
+    "message": "Ошибка соединителя ключей: убедитесь, что он доступен и работает корректно."
   },
   "lockAllVaults": {
     "message": "Заблокировать все хранилища"
@@ -1840,6 +1887,12 @@
       }
     }
   },
+  "locked": {
+    "message": "Заблокировано"
+  },
+  "unlocked": {
+    "message": "Разблокировано"
+  },
   "generator": {
     "message": "Генератор"
   },
@@ -1859,7 +1912,8 @@
     "message": "Тип имени пользователя"
   },
   "plusAddressedEmail": {
-    "message": "Плюс-адресованные email"
+    "message": "Плюс-адресованные email",
+    "description": "Username generator option that appends a random sub-address to the username. For example: address+subaddress@email.com"
   },
   "plusAddressedEmailDesc": {
     "message": "Использовать возможности суб-адресации вашего провайдера электронной почты."
@@ -1881,5 +1935,30 @@
   },
   "service": {
     "message": "Служба"
+  },
+  "allVaults": {
+    "message": "Все хранилища"
+  },
+  "searchOrganization": {
+    "message": "Поиск организации"
+  },
+  "searchMyVault": {
+    "message": "Поиск в моем хранилище"
+  },
+  "forwardedEmail": {
+    "message": "Псевдоним электронной почты для пересылки"
+  },
+  "forwardedEmailDesc": {
+    "message": "Создать псевдоним электронной почты для внешней службы пересылки."
+  },
+  "hostname": {
+    "message": "Имя хоста",
+    "description": "Part of a URL."
+  },
+  "apiAccessToken": {
+    "message": "Токен доступа к API"
+  },
+  "apiKey": {
+    "message": "Ключ API"
   }
 }

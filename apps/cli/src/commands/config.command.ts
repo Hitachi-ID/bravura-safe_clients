@@ -1,9 +1,9 @@
 import * as program from "commander";
 
-import { EnvironmentService } from "jslib-common/abstractions/environment.service";
-import { Response } from "jslib-node/cli/models/response";
-import { MessageResponse } from "jslib-node/cli/models/response/messageResponse";
-import { StringResponse } from "jslib-node/cli/models/response/stringResponse";
+import { EnvironmentService } from "@bitwarden/common/abstractions/environment.service";
+import { Response } from "@bitwarden/node/cli/models/response";
+import { MessageResponse } from "@bitwarden/node/cli/models/response/messageResponse";
+import { StringResponse } from "@bitwarden/node/cli/models/response/stringResponse";
 
 export class ConfigCommand {
   constructor(private environmentService: EnvironmentService) {}
@@ -31,12 +31,13 @@ export class ConfigCommand {
       const stringRes = new StringResponse(
         this.environmentService.hasBaseUrl()
           ? this.environmentService.getUrls().base
-          : "https://bitwarden.com"
+          : "https://bravurasecurity.com"
       );
       return Response.success(stringRes);
     }
 
-    url = url === "null" || url === "bitwarden.com" || url === "https://bitwarden.com" ? null : url;
+    url =
+      url === "null" || url === "bravurasecurity.com" || url === "https://bravurasecurity.com" ? null : url;
     await this.environmentService.setUrls({
       base: url,
       webVault: options.webVault || null,

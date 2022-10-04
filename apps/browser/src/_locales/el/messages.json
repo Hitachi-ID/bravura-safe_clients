@@ -1,9 +1,9 @@
 {
   "appName": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "extName": {
-    "message": "Bitwarden - Δωρεάν Διαχειριστής Κωδικών",
+    "message": "Bravura Safe - Διαχειριστής Κωδικών",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
@@ -52,8 +52,14 @@
   "tab": {
     "message": "Καρτέλα"
   },
+  "vault": {
+    "message": "Vault"
+  },
   "myVault": {
-    "message": "Το Vault μου"
+    "message": "Το Safe μου"
+  },
+  "allVaults": {
+    "message": "Όλα τα Vaults"
   },
   "tools": {
     "message": "Εργαλεία"
@@ -71,7 +77,7 @@
     "message": "Αντιγραφή Σημείωσης"
   },
   "copyUri": {
-    "message": "Αντιγραφή URI"
+    "message": "Αντιγραφή URL"
   },
   "copyUsername": {
     "message": "Αντιγραφή Ονόματος Χρήστη"
@@ -209,7 +215,7 @@
     "message": "Δημιουργήστε αυτόματα ισχυρούς και μοναδικούς κωδικούς πρόσβασης για τις συνδέσεις σας."
   },
   "bitWebVault": {
-    "message": "Bitwarden Web Vault"
+    "message": "Bravura Safe Web Safe"
   },
   "importItems": {
     "message": "Εισαγωγή στοιχείων"
@@ -264,7 +270,7 @@
     "message": "Αποφυγή Αμφιλεγόμενων Χαρακτήρων"
   },
   "searchVault": {
-    "message": "Αναζήτηση στο vault"
+    "message": "Αναζήτηση στο item"
   },
   "edit": {
     "message": "Επεξεργασία"
@@ -350,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -358,7 +364,7 @@
     "message": "Μη έγκυρος κύριος κωδικός πρόσβασης"
   },
   "vaultTimeout": {
-    "message": "Χρόνος Λήξης Vault"
+    "message": "Χρόνος Λήξης Safe"
   },
   "lockNow": {
     "message": "Κλείδωμα Τώρα"
@@ -479,10 +485,10 @@
     "message": "Αλλαγή Κύριου Κωδικού"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Μπορείτε να αλλάξετε τον κύριο κωδικό στο bitwarden.com. Θέλετε να επισκεφθείτε την ιστοσελίδα τώρα;"
+    "message": "Μπορείτε να αλλάξετε τον κύριο κωδικό στο Bravura Safe. Θέλετε να επισκεφθείτε την ιστοσελίδα τώρα;"
   },
   "twoStepLoginConfirmation": {
-    "message": "Η σύνδεση σε δύο βήματα καθιστά πιο ασφαλή τον λογαριασμό σας, απαιτώντας να επαληθεύσετε τα στοιχεία σας με μια άλλη συσκευή, όπως κλειδί ασφαλείας, εφαρμογή επαλήθευσης, μήνυμα SMS, τηλεφωνική κλήση ή email. Μπορείτε να ενεργοποιήσετε τη σύνδεση σε δύο βήματα στο bitwarden.com. Θέλετε να επισκεφθείτε την ιστοσελίδα τώρα;"
+    "message": "Η σύνδεση σε δύο βήματα καθιστά πιο ασφαλή τον λογαριασμό σας, απαιτώντας να επαληθεύσετε τα στοιχεία σας με μια άλλη συσκευή, όπως κλειδί ασφαλείας, εφαρμογή επαλήθευσης, μήνυμα SMS, τηλεφωνική κλήση ή email. Μπορείτε να ενεργοποιήσετε τη σύνδεση σε δύο βήματα στο Bravura Safe. Θέλετε να επισκεφθείτε την ιστοσελίδα τώρα;"
   },
   "editedFolder": {
     "message": "Επεξεργασμένος φάκελος"
@@ -509,11 +515,11 @@
     "message": "Ο κωδικός αντιγράφηκε"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -522,7 +528,7 @@
     }
   },
   "newUri": {
-    "message": "Νέο URI"
+    "message": "Νέο URL"
   },
   "addedItem": {
     "message": "Προστέθηκε στοιχείο"
@@ -561,23 +567,23 @@
     "message": "Χωρίς Φάκελο",
     "description": "This is the folder for uncategorized items"
   },
-  "disableAddLoginNotification": {
-    "message": "Απενεργοποιήστε την Προσθήκη Ειδοποίησης Σύνδεσης"
+  "enableAddLoginNotification": {
+    "message": "Ask to add login"
   },
   "addLoginNotificationDesc": {
     "message": "Η \"Προσθήκη Ειδοποίησης Σύνδεσης\" σας προτρέπει αυτόματα να αποθηκεύσετε νέες συνδέσεις στο vault σας κάθε φορά που θα συνδεθείτε για πρώτη φορά."
   },
-  "dontShowCardsCurrentTab": {
-    "message": "Να μην Εμφανίζονται Κάρτες στη Σελίδα Καρτέλας"
+  "showCardsCurrentTab": {
+    "message": "Show cards on Tab page"
   },
-  "dontShowCardsCurrentTabDesc": {
-    "message": "Τα στοιχεία καρτών από το vault σας παρατίθενται στη σελίδα \"Τρέχουσα καρτέλα\" για εύκολη πρόσβαση με αυτόματη συμπλήρωση."
+  "showCardsCurrentTabDesc": {
+    "message": "List card items on the Tab page for easy auto-fill."
   },
-  "dontShowIdentitiesCurrentTab": {
-    "message": "Να μην εμφανίζονται ταυτότητες στην καρτέλα"
+  "showIdentitiesCurrentTab": {
+    "message": "Show identities on Tab page"
   },
-  "dontShowIdentitiesCurrentTabDesc": {
-    "message": "Στοιχεία ταυτότητας από το vault σας, παρατίθενται στη σελίδα \"Τρέχουσα καρτέλα\" για εύκολη πρόσβαση με αυτόματη συμπλήρωση."
+  "showIdentitiesCurrentTabDesc": {
+    "message": "List identity items on the Tab page for easy auto-fill."
   },
   "clearClipboard": {
     "message": "Εκκαθάριση Πρόχειρου",
@@ -588,35 +594,35 @@
     "description": "Clipboard is the operating system thing where you copy/paste data to on your device."
   },
   "notificationAddDesc": {
-    "message": "Πρέπει το Bitwarden να θυμάται αυτόν τον κωδικό πρόσβασης για εσάς;"
+    "message": "Πρέπει το Bravura Safe να θυμάται αυτόν τον κωδικό πρόσβασης για εσάς;"
   },
   "notificationAddSave": {
     "message": "Ναι, Αποθήκευση Τώρα"
   },
-  "disableChangedPasswordNotification": {
-    "message": "Απενεργοποίηση ειδοποίησης αλλαγής κωδικού πρόσβασης"
+  "enableChangedPasswordNotification": {
+    "message": "Ask to update existing login"
   },
-  "disableChangedPasswordNotificationDesc": {
-    "message": "Η \"Ειδοποίηση Αλλαγής Κωδικού\" σας ζητά αυτόματα να ενημερώσετε τον κωδικό πρόσβασης του εισερχόμενου στο vault σας κάθε φορά που εντοπίζει ότι το έχετε αλλάξει σε έναν ιστότοπο."
+  "changedPasswordNotificationDesc": {
+    "message": "Ask to update a login's password when a change is detected on a website."
   },
   "notificationChangeDesc": {
-    "message": "Θέλετε να ενημερώσετε αυτό τον κωδικό στο Bitwarden ;"
+    "message": "Θέλετε να ενημερώσετε αυτό τον κωδικό στο Bravura Safe ;"
   },
   "notificationChangeSave": {
     "message": "Ναι, Ενημέρωση Τώρα"
   },
-  "disableContextMenuItem": {
-    "message": "Απενεργοποιήστε τις Επιλογές του Μενού Περιβάλλοντος"
+  "enableContextMenuItem": {
+    "message": "Show context menu options"
   },
-  "disableContextMenuItemDesc": {
-    "message": "Οι επιλογές του μενού περιβάλλοντος παρέχουν γρήγορη πρόσβαση στην δημιουργία και σύνδεση κωδικών πρόσβασης για τον ιστότοπο στην τρέχουσα καρτέλα."
+  "contextMenuItemDesc": {
+    "message": "Use a secondary click to access password generation and matching logins for the website. "
   },
   "defaultUriMatchDetection": {
-    "message": "Προεπιλεγμένη ανίχνευση αντιστοιχίας URI",
-    "description": "Default URI match detection for auto-fill."
+    "message": "Προεπιλεγμένη ανίχνευση αντιστοιχίας URL",
+    "description": "Default URL match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "Επιλέξτε τον προκαθορισμένο τρόπο με τον οποίο αντιμετωπίζεται η ανίχνευση αντιστοίχισης URI για τις συνδέσεις κατά την εκτέλεση ενεργειών όπως η αυτόματη συμπλήρωση."
+    "message": "Επιλέξτε τον προκαθορισμένο τρόπο με τον οποίο αντιμετωπίζεται η ανίχνευση αντιστοίχισης URL για τις συνδέσεις κατά την εκτέλεση ενεργειών όπως η αυτόματη συμπλήρωση."
   },
   "theme": {
     "message": "Θέμα"
@@ -637,7 +643,7 @@
     "description": "'Solarized' is a noun and the name of a color scheme. It should not be translated."
   },
   "exportVault": {
-    "message": "Εξαγωγή Vault"
+    "message": "Εξαγωγή Safe"
   },
   "fileFormat": {
     "message": "Μορφή Αρχείου"
@@ -647,7 +653,7 @@
     "description": "WARNING (should stay in capitalized letters if the language permits)"
   },
   "confirmVaultExport": {
-    "message": "Επιβεβαίωση εξαγωγής Vault"
+    "message": "Επιβεβαίωση εξαγωγής Safe"
   },
   "exportWarningDesc": {
     "message": "Αυτή η εξαγωγή περιέχει τα δεδομένα σε μη κρυπτογραφημένη μορφή. Δεν πρέπει να αποθηκεύετε ή να στείλετε το εξαγόμενο αρχείο μέσω μη ασφαλών τρόπων (όπως μέσω email). Διαγράψτε το αμέσως μόλις τελειώσετε με τη χρήση του."
@@ -656,7 +662,7 @@
     "message": "Αυτή η εξαγωγή κρυπτογραφεί τα δεδομένα σας χρησιμοποιώντας το κλειδί κρυπτογράφησης του λογαριασμού σας. Εάν ποτέ περιστρέψετε το κλειδί κρυπτογράφησης του λογαριασμού σας, θα πρέπει να κάνετε εξαγωγή ξανά, καθώς δεν θα μπορείτε να αποκρυπτογραφήσετε αυτό το αρχείο εξαγωγής."
   },
   "encExportAccountWarningDesc": {
-    "message": "Τα κλειδιά κρυπτογράφησης λογαριασμού είναι μοναδικά για κάθε λογαριασμό χρήστη Bitwarden, οπότε δεν μπορείτε να εισάγετε μια κρυπτογραφημένη εξαγωγή σε διαφορετικό λογαριασμό."
+    "message": "Τα κλειδιά κρυπτογράφησης λογαριασμού είναι μοναδικά για κάθε λογαριασμό χρήστη Bravura Safe, οπότε δεν μπορείτε να εισάγετε μια κρυπτογραφημένη εξαγωγή σε διαφορετικό λογαριασμό."
   },
   "exportMasterPassword": {
     "message": "Πληκτρολογήστε τον κύριο κωδικό για εξαγωγή δεδομένων vault."
@@ -668,7 +674,7 @@
     "message": "Μάθετε για τους Οργανισμούς"
   },
   "learnOrgConfirmation": {
-    "message": "Το Bitwarden επιτρέπει να μοιράζεστε τα στοιχεία του vault σας με άλλους χρησιμοποιώντας ένα λογαριασμό οργανισμού. Θέλετε να επισκεφθείτε την ιστοσελίδα bitwarden.com για να μάθετε περισσότερα;"
+    "message": "Το Bravura Safe επιτρέπει να μοιράζεστε τα στοιχεία του vault σας με άλλους χρησιμοποιώντας ένα λογαριασμό οργανισμού. Θέλετε να επισκεφθείτε την ιστοσελίδα Bravura Safe για να μάθετε περισσότερα;"
   },
   "moveToOrganization": {
     "message": "Μετακίνηση στον Οργανισμό"
@@ -747,7 +753,7 @@
     "message": "Διαχείριση Συνδρομής"
   },
   "premiumManageAlert": {
-    "message": "Μπορείτε να διαχειριστείτε την ιδιότητά σας ως μέλος στο bitwarden.com web vault. Θέλετε να επισκεφθείτε την ιστοσελίδα τώρα;"
+    "message": "Μπορείτε να διαχειριστείτε την ιδιότητά σας ως μέλος στο hitachi-id.com web vault. Θέλετε να επισκεφθείτε την ιστοσελίδα τώρα;"
   },
   "premiumRefresh": {
     "message": "Ανανέωση Συνδρομής"
@@ -780,13 +786,13 @@
     "message": "Αγορά Premium έκδοσης"
   },
   "premiumPurchaseAlert": {
-    "message": "Μπορείτε να αγοράσετε συνδρομή premium στο bitwarden.com web vault. Θέλετε να επισκεφθείτε την ιστοσελίδα τώρα;"
+    "message": "Μπορείτε να αγοράσετε συνδρομή premium στο hitachi-id.com web vault. Θέλετε να επισκεφθείτε την ιστοσελίδα τώρα;"
   },
   "premiumCurrentMember": {
     "message": "Είστε ένα premium μέλος!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Ευχαριστούμε που υποστηρίζετε το Bitwarden."
+    "message": "Ευχαριστούμε που υποστηρίζετε το Bravura Safe."
   },
   "premiumPrice": {
     "message": "Όλα για μόνο $PRICE$ /έτος!",
@@ -800,14 +806,14 @@
   "refreshComplete": {
     "message": "Επιτυχής ανανέωση"
   },
-  "disableAutoTotpCopy": {
-    "message": "Απενεργοποίηση Aυτόματης Aντιγραφής TOTP"
+  "enableAutoTotpCopy": {
+    "message": "Copy TOTP automatically"
   },
   "disableAutoTotpCopyDesc": {
     "message": "Εάν η σύνδεση έχει συνημμένο κάποιο κλειδί επαλήθευσης, ο κωδικός επαλήθευσης TOTP αντιγράφεται αυτόματα στο πρόχειρο κάθε φορά που συμπληρώνετε αυτόματα τα στοιχεία σύνδεσης."
   },
-  "disableAutoBiometricsPrompt": {
-    "message": "Μην ζητάτε βιομετρικά στοιχεία κατά την εκκίνηση"
+  "enableAutoBiometricsPrompt": {
+    "message": "Ask for biometrics on launch"
   },
   "premiumRequired": {
     "message": "Απαιτείται Έκδοση Premium"
@@ -915,7 +921,7 @@
     "message": "Αυτο-φιλοξενούμενο περιβάλλον"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Καθορίστε τη βασική διεύθυνση URL, της εγκατάστασης του Bitwarden που φιλοξενείται στο χώρο σας."
+    "message": "Καθορίστε τη βασική διεύθυνση URL, της εγκατάστασης του Bravura Safe που φιλοξενείται στο χώρο σας."
   },
   "customEnvironment": {
     "message": "Προσαρμοσμένο περιβάλλον"
@@ -930,7 +936,7 @@
     "message": "URL Διακομιστή API"
   },
   "webVaultUrl": {
-    "message": "Web Vault Server URL"
+    "message": "Web Safe Server URL"
   },
   "identityUrl": {
     "message": "URL Ταυτότητας Διακομιστή"
@@ -1027,17 +1033,17 @@
   "popupU2fCloseMessage": {
     "message": "Αυτό το πρόγραμμα περιήγησης δεν μπορεί να επεξεργαστεί αιτήματα του U2F σε αυτό το αναδυόμενο παράθυρο. Θέλετε να ανοίξετε το αναδυόμενο σε νέο παράθυρο, ώστε να μπορείτε να συνδεθείτε χρησιμοποιώντας U2F;"
   },
-  "disableFavicon": {
-    "message": "Απενεργοποίηση Εικονιδίων Ιστοσελίδας"
+  "enableFavicon": {
+    "message": "Show website icons"
   },
-  "disableFaviconDesc": {
-    "message": "Τα εικονίδια ιστοσελίδων παρέχουν μια αναγνωρίσιμη εικόνα δίπλα σε κάθε στοιχείο σύνδεσης της λίστας σας."
+  "faviconDesc": {
+    "message": "Show a recognizable image next to each login."
   },
-  "disableBadgeCounter": {
-    "message": "Απενεργοποίηση Μετρητή Σημάτων"
+  "enableBadgeCounter": {
+    "message": "Show badge counter"
   },
-  "disableBadgeCounterDesc": {
-    "message": "Ο μετρητής εμβλημάτων δείχνει πόσες συνδέσεις έχετε για την τρέχουσα σελίδα στο vault σας."
+  "badgeCounterDesc": {
+    "message": "Indicate how many logins you have for the current web page."
   },
   "cardholderName": {
     "message": "Όνομα κατόχου της κάρτας"
@@ -1262,26 +1268,26 @@
   },
   "matchDetection": {
     "message": "Εντοπισμός Αντιστοίχισης",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Προεπιλεγμένος εντοπισμός αντιστοίχισης",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Επιλογές Εναλλαγής"
   },
   "toggleCurrentUris": {
-    "message": "Εναλλαγή τρεχόντων URI",
-    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
+    "message": "Εναλλαγή τρεχόντων URL",
+    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
   },
   "currentUri": {
-    "message": "Τρεχόν URI",
-    "description": "The URI of one of the current open tabs in the browser."
+    "message": "Τρεχόν URL",
+    "description": "The URL of one of the current open tabs in the browser."
   },
   "organization": {
     "message": "Οργανισμός",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "types": {
     "message": "Τύποι"
@@ -1337,7 +1343,7 @@
     "message": "Αδύναμος Κύριος Κωδικός"
   },
   "weakMasterPasswordDesc": {
-    "message": "Ο κύριος κωδικός που έχετε επιλέξει είναι αδύναμος. Θα πρέπει να χρησιμοποιήσετε έναν ισχυρό κύριο κωδικό (ή μια φράση) για την κατάλληλη προστασία του λογαριασμού Bitwarden. Είστε βέβαιοι ότι θέλετε να χρησιμοποιήσετε αυτόν τον κύριο κωδικό;"
+    "message": "Ο κύριος κωδικός που έχετε επιλέξει είναι αδύναμος. Θα πρέπει να χρησιμοποιήσετε έναν ισχυρό κύριο κωδικό (ή μια φράση) για την κατάλληλη προστασία του λογαριασμού Bravura Safe. Είστε βέβαιοι ότι θέλετε να χρησιμοποιήσετε αυτόν τον κύριο κωδικό;"
   },
   "pin": {
     "message": "PIN",
@@ -1347,7 +1353,7 @@
     "message": "Ξεκλείδωμα με PIN"
   },
   "setYourPinCode": {
-    "message": "Ορίστε τον κωδικό PIN για να ξεκλειδώσετε το Bitwarden. Οι ρυθμίσεις PIN θα επαναρυθμιστούν αν αποσυνδεθείτε πλήρως από την εφαρμογή."
+    "message": "Ορίστε τον κωδικό PIN για να ξεκλειδώσετε το Bravura Safe. Οι ρυθμίσεις PIN θα επαναρυθμιστούν αν αποσυνδεθείτε πλήρως από την εφαρμογή."
   },
   "pinRequired": {
     "message": "Απαιτείται κωδικός PIN."
@@ -1362,7 +1368,7 @@
     "message": "Αναμονή επιβεβαίωσης από την επιφάνεια εργασίας"
   },
   "awaitDesktopDesc": {
-    "message": "Παρακαλώ επιβεβαιώστε τη χρήση βιομετρικών στοιχείων στην εφαρμογή Bitwarden Desktop για να ενεργοποιήσετε τα βιομετρικά στοιχεία για το πρόγραμμα περιήγησης."
+    "message": "Παρακαλώ επιβεβαιώστε τη χρήση βιομετρικών στοιχείων στην εφαρμογή Bravura Safe Desktop για να ενεργοποιήσετε τα βιομετρικά στοιχεία για το πρόγραμμα περιήγησης."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Κλείδωμα με κύριο κωδικό πρόσβασης στην επανεκκίνηση του προγράμματος περιήγησης"
@@ -1380,7 +1386,7 @@
     "message": "Μία ή περισσότερες πολιτικές του οργανισμού επηρεάζουν τις ρυθμίσεις της γεννήτριας."
   },
   "vaultTimeoutAction": {
-    "message": "Ενέργεια Χρόνου Λήξης Vault"
+    "message": "Ενέργεια Χρόνου Λήξης Safe"
   },
   "lock": {
     "message": "Κλείδωμα",
@@ -1421,7 +1427,7 @@
     "message": "Αυτόματη συμπλήρωση και αποθήκευση"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "Αυτόματη συμπλήρωση στοιχείου και αποθηκευμένο URI"
+    "message": "Αυτόματη συμπλήρωση στοιχείου και αποθηκευμένο URL"
   },
   "autoFillSuccess": {
     "message": "Αυτόματη συμπλήρωση αντικειμένου"
@@ -1499,13 +1505,13 @@
     "message": "Η ενσωμάτωση του περιηγητή δεν είναι ενεργοποιημένη"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "Η ενσωμάτωση του προγράμματος περιήγησης δεν είναι ενεργοποιημένη στην εφαρμογή Bitwarden Desktop. Παρακαλώ ενεργοποιήστε την στις ρυθμίσεις της εφαρμογής desktop."
+    "message": "Η ενσωμάτωση του προγράμματος περιήγησης δεν είναι ενεργοποιημένη στην εφαρμογή Bravura Safe Desktop. Παρακαλώ ενεργοποιήστε την στις ρυθμίσεις της εφαρμογής desktop."
   },
   "startDesktopTitle": {
-    "message": "Ξεκινήστε την εφαρμογή Bitwarden Επιφάνεια εργασίας"
+    "message": "Ξεκινήστε την εφαρμογή Bravura Safe Επιφάνεια εργασίας"
   },
   "startDesktopDesc": {
-    "message": "Η εφαρμογή Bitwarden Desktop πρέπει να ξεκινήσει για να μπορεί να χρησιμοποιηθεί αυτή η λειτουργία."
+    "message": "Η εφαρμογή Bravura Safe Desktop πρέπει να ξεκινήσει για να μπορεί να χρησιμοποιηθεί αυτή η λειτουργία."
   },
   "errorEnableBiometricTitle": {
     "message": "Αδυναμία ενεργοποίησης βιομετρικών στοιχείων"
@@ -1541,7 +1547,7 @@
     "message": "Δεν Έχει Χορηγηθεί Άδεια"
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "Χωρίς άδεια επικοινωνίας με την εφαρμογή Bitwarden Desktop δεν μπορούμε να παρέχουμε βιομετρικά στοιχεία στην επέκταση του προγράμματος περιήγησης. Παρακαλώ δοκιμάστε ξανά."
+    "message": "Χωρίς άδεια επικοινωνίας με την εφαρμογή Bravura Safe Desktop δεν μπορούμε να παρέχουμε βιομετρικά στοιχεία στην επέκταση του προγράμματος περιήγησης. Παρακαλώ δοκιμάστε ξανά."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Σφάλμα αιτήματος άδειας"
@@ -1559,7 +1565,7 @@
     "message": "Εξαιρούμενοι Τομείς"
   },
   "excludedDomainsDesc": {
-    "message": "Το Bitwarden δεν θα ζητήσει να αποθηκεύσετε τα στοιχεία σύνδεσης για αυτούς τους τομείς. Πρέπει να ανανεώσετε τη σελίδα για να τεθούν σε ισχύ οι αλλαγές."
+    "message": "Το Bravura Safe δεν θα ζητήσει να αποθηκεύσετε τα στοιχεία σύνδεσης για αυτούς τους τομείς. Πρέπει να ανανεώσετε τη σελίδα για να τεθούν σε ισχύ οι αλλαγές."
   },
   "excludedDomainsInvalidDomain": {
     "message": "Το $DOMAIN$ δεν είναι έγκυρος τομέας",
@@ -1571,16 +1577,16 @@
     }
   },
   "send": {
-    "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "searchSends": {
     "message": "Αναζήτηση Sends",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "addSend": {
-    "message": "Προσθήκη Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Προσθήκη Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeText": {
     "message": "Κείμενο"
@@ -1590,7 +1596,7 @@
   },
   "allSends": {
     "message": "Όλα τα Sends",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "Φτάσατε στον μέγιστο αριθμό πρόσβασης",
@@ -1606,8 +1612,8 @@
     "message": "Προστατευμένο με κωδικό"
   },
   "copySendLink": {
-    "message": "Αντιγραφή συνδέσμου Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Αντιγραφή συνδέσμου Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "removePassword": {
     "message": "Αφαίρεση Κωδικού"
@@ -1619,12 +1625,12 @@
     "message": "Καταργήθηκε ο Κωδικός Πρόσβασης"
   },
   "deletedSend": {
-    "message": "Το Send Διαγράφηκε",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Το Share Διαγράφηκε",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
-    "message": "Σύνδεσμος Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Σύνδεσμος Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "disabled": {
     "message": "Απενεργοποιημένο"
@@ -1633,24 +1639,24 @@
     "message": "Είστε βέβαιοι ότι θέλετε να καταργήσετε τον κωδικό πρόσβασης;"
   },
   "deleteSend": {
-    "message": "Διαγραφή Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Διαγραφή Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deleteSendConfirmation": {
-    "message": "Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το Send;",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το Share;",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Επεξεργασία Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Επεξεργασία Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeHeader": {
-    "message": "Τι είδους Send είναι αυτό;",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Τι είδους Share είναι αυτό;",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNameDesc": {
-    "message": "Ένα φιλικό όνομα για την περιγραφή αυτού του Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Ένα φιλικό όνομα για την περιγραφή αυτού του Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendFileDesc": {
     "message": "Το αρχείο που θέλετε να στείλετε."
@@ -1659,15 +1665,15 @@
     "message": "Ημερομηνία Διαγραφής"
   },
   "deletionDateDesc": {
-    "message": "Το Send θα διαγραφεί οριστικά την καθορισμένη ημερομηνία και ώρα.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Το Share θα διαγραφεί οριστικά την καθορισμένη ημερομηνία και ώρα.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Ημερομηνία Λήξης"
   },
   "expirationDateDesc": {
-    "message": "Εάν οριστεί, η πρόσβαση σε αυτό το Send θα λήξει την καθορισμένη ημερομηνία και ώρα.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Εάν οριστεί, η πρόσβαση σε αυτό το Share θα λήξει την καθορισμένη ημερομηνία και ώρα.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "oneDay": {
     "message": "1 ημέρα"
@@ -1689,56 +1695,56 @@
   },
   "maximumAccessCountDesc": {
     "message": "Εάν οριστεί, οι χρήστες δεν θα μπορούν πλέον να έχουν πρόσβαση σε αυτό το send μόλις επιτευχθεί ο μέγιστος αριθμός πρόσβασης.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
-    "message": "Προαιρετικά απαιτείται κωδικός πρόσβασης για τους χρήστες για να έχουν πρόσβαση σε αυτό το Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Προαιρετικά απαιτείται κωδικός πρόσβασης για τους χρήστες για να έχουν πρόσβαση σε αυτό το Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "Ιδιωτικές σημειώσεις σχετικά με αυτό το Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Ιδιωτικές σημειώσεις σχετικά με αυτό το Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisableDesc": {
-    "message": "Απενεργοποιήστε αυτό το Send έτσι ώστε κανείς να μην μπορεί να έχει πρόσβαση σε αυτό.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Απενεργοποιήστε αυτό το Share έτσι ώστε κανείς να μην μπορεί να έχει πρόσβαση σε αυτό.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendShareDesc": {
-    "message": "Αντιγραφή του συνδέσμου για αυτό το Send στο πρόχειρο κατά την αποθήκευση.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Αντιγραφή του συνδέσμου για αυτό το Share στο πρόχειρο κατά την αποθήκευση.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Το κείμενο που θέλετε να στείλετε."
   },
   "sendHideText": {
-    "message": "Απόκρυψη του κειμένου αυτού του Send από προεπιλογή.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Απόκρυψη του κειμένου αυτού του Share από προεπιλογή.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Τρέχων Αριθμός Πρόσβασης"
   },
   "createSend": {
-    "message": "Δημιουργία Νέου Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Δημιουργία Νέου Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "Νέος Κωδικός Πρόσβασης"
   },
   "sendDisabled": {
-    "message": "Το Send Απενεργοποιήθηκε",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Το Share Απενεργοποιήθηκε",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "Λόγω μιας επιχειρηματικής πολιτικής, είστε σε θέση να διαγράψετε μόνο ένα υπάρχον Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Λόγω μιας επιχειρηματικής πολιτικής, είστε σε θέση να διαγράψετε μόνο ένα υπάρχον Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Το Send Δημιουργήθηκε",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Το Share Δημιουργήθηκε",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "Το Send Επεξεργάστηκε",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Το Share Επεξεργάστηκε",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinuxChromiumFileWarning": {
     "message": "Για να επιλέξετε ένα αρχείο, ανοίξτε την επέκταση στην πλαϊνή μπάρα (αν είναι δυνατόν) ή βγείτε σε ένα νέο παράθυρο κάνοντας κλικ σε αυτή τη διαφήμιση."
@@ -1828,7 +1834,7 @@
     "message": "Λεπτά"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Οι πολιτικές του οργανισμού σας επηρεάζουν το χρονικό όριο vault σας. Το μέγιστο επιτρεπόμενο Χρονικό όριο Vault είναι $HOURS$ ώρα(ες) και $MINUTES$ λεπτό(ά)",
+    "message": "Οι πολιτικές του οργανισμού σας επηρεάζουν το χρονικό όριο vault σας. Το μέγιστο επιτρεπόμενο Χρονικό όριο Safe είναι $HOURS$ ώρα(ες) και $MINUTES$ λεπτό(ά)",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1939,5 +1945,24 @@
   },
   "service": {
     "message": "Υπηρεσία"
+  },
+  "forwardedEmail": {
+    "message": "Προωθημένο Email Alias"
+  },
+  "forwardedEmailDesc": {
+    "message": "Δημιουργήστε ένα alias email με μια εξωτερική υπηρεσία προώθησης."
+  },
+  "hostname": {
+    "message": "Hostname",
+    "description": "Part of a URL."
+  },
+  "apiAccessToken": {
+    "message": "API Access Token"
+  },
+  "apiKey": {
+    "message": "Kλειδί API"
+  },
+  "ssoKeyConnectorError": {
+    "message": "Σφάλμα Key Connector: βεβαιωθείτε ότι το Key Connector είναι διαθέσιμο και λειτουργεί σωστά."
   }
 }

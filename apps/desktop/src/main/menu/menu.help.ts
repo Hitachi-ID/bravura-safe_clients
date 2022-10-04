@@ -1,7 +1,7 @@
 import { shell, MenuItemConstructorOptions } from "electron";
 
-import { I18nService } from "jslib-common/abstractions/i18n.service";
-import { isMacAppStore, isWindowsStore } from "jslib-electron/utils";
+import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
+import { isMacAppStore, isWindowsStore } from "@bitwarden/electron/utils";
 
 import { AboutMenu } from "./menu.about";
 import { IMenubarMenu } from "./menubar";
@@ -16,16 +16,9 @@ export class HelpMenu implements IMenubarMenu {
   get items(): MenuItemConstructorOptions[] {
     const items = [
       this.getHelp,
-      this.contactUs,
-      this.fileBugReport,
       this.legal,
       this.separator,
-      this.followUs,
-      this.separator,
       this.goToWebVault,
-      this.separator,
-      this.getMobileApp,
-      this.getBrowserExtension,
     ];
 
     if (this._aboutMenu != null) {
@@ -48,7 +41,7 @@ export class HelpMenu implements IMenubarMenu {
     return {
       id: "contactUs",
       label: this.localize("contactUs"),
-      click: () => shell.openExternal("https://bitwarden.com/contact"),
+      click: () => shell.openExternal("https://hitachi-id.com/contact"),
     };
   }
 
@@ -56,7 +49,7 @@ export class HelpMenu implements IMenubarMenu {
     return {
       id: "getHelp",
       label: this.localize("getHelp"),
-      click: () => shell.openExternal("https://bitwarden.com/help"),
+      click: () => shell.openExternal("https://docs.hitachi-id.net/safe/#/home/2202/10/11"),
     };
   }
 
@@ -64,7 +57,7 @@ export class HelpMenu implements IMenubarMenu {
     return {
       id: "fileBugReport",
       label: this.localize("fileBugReport"),
-      click: () => shell.openExternal("https://github.com/bitwarden/clients/issues"),
+      click: () => shell.openExternal("https://hitachi-id.com/bitwarden/clients/issues"),
     };
   }
 
@@ -82,12 +75,12 @@ export class HelpMenu implements IMenubarMenu {
       {
         id: "termsOfService",
         label: this.localize("termsOfService"),
-        click: () => shell.openExternal("https://bitwarden.com/terms/"),
+        click: () => shell.openExternal("https://hitachi-id.com/terms/"),
       },
       {
         id: "privacyPolicy",
         label: this.localize("privacyPolicy"),
-        click: () => shell.openExternal("https://bitwarden.com/privacy/"),
+        click: () => shell.openExternal("https://hitachi-id.com/privacy/"),
       },
     ];
   }
@@ -162,7 +155,7 @@ export class HelpMenu implements IMenubarMenu {
         label: "Android",
         click: () => {
           shell.openExternal(
-            "https://play.google.com/store/apps/" + "details?id=com.x8bit.bitwarden"
+            "https://play.google.com/store/apps/" + "details?id=com.hitachi_id.safe"
           );
         },
       },
@@ -186,7 +179,7 @@ export class HelpMenu implements IMenubarMenu {
         click: () => {
           shell.openExternal(
             "https://chrome.google.com/webstore/detail/" +
-              "bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb"
+              "bravura-safe/cjidmfgdjckibjdfnglfdgohkaballnn"
           );
         },
       },
@@ -195,7 +188,8 @@ export class HelpMenu implements IMenubarMenu {
         label: "Firefox",
         click: () => {
           shell.openExternal(
-            "https://addons.mozilla.org/firefox/addon/" + "bitwarden-password-manager/"
+            "https://github.com/Hitachi-ID/bravura-safe_browser/releases/"
+
           );
         },
       },
@@ -204,7 +198,7 @@ export class HelpMenu implements IMenubarMenu {
         label: "Opera",
         click: () => {
           shell.openExternal(
-            "https://addons.opera.com/extensions/details/" + "bitwarden-free-password-manager/"
+            "https://addons.opera.com/extensions/details/" + "bravura-safe/"
           );
         },
       },
@@ -214,7 +208,7 @@ export class HelpMenu implements IMenubarMenu {
         click: () => {
           shell.openExternal(
             "https://microsoftedge.microsoft.com/addons/" +
-              "detail/jbkfoedolllekgbhcbcoahefnbanhhlh"
+              "detail/lgjgabmkhcjfpcmflkhmhjgmnnpfgmnc"
           );
         },
       },
@@ -222,7 +216,7 @@ export class HelpMenu implements IMenubarMenu {
         id: "safari",
         label: "Safari",
         click: () => {
-          shell.openExternal("https://bitwarden.com/download/");
+          shell.openExternal("https://github.com/Hitachi-ID/");
         },
       },
     ];

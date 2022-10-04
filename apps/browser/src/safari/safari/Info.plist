@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Bitwarden</string>
+	<string>Bravura Safe</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.0.1</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>0.0.2</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSExtension</key>
@@ -30,12 +30,12 @@
 		<string>$(PRODUCT_MODULE_NAME).SafariWebExtensionHandler</string>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2015-2022 Bitwarden Inc. All rights reserved.</string>
+	<string>Copyright © 2015-2022 Bitwarden Inc., with modifications © 2022, Hitachi ID Systems Inc.</string>
 	<key>NSHumanReadableDescription</key>
-	<string>A secure and free password manager for all of your devices.</string>
+	<string>A secure password manager for all of your devices.</string>
 	<key>SFSafariAppExtensionBundleIdentifiersToReplace</key>
 	<array>
-		<string>com.bitwarden.desktop.safari</string>
+		<string>com.hitachiid.desktop.safari</string>
 	</array>
 </dict>
 </plist>

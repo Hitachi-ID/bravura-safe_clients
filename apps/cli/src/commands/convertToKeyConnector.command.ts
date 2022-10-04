@@ -1,11 +1,11 @@
 import * as inquirer from "inquirer";
 
-import { ApiService } from "jslib-common/abstractions/api.service";
-import { EnvironmentService } from "jslib-common/abstractions/environment.service";
-import { KeyConnectorService } from "jslib-common/abstractions/keyConnector.service";
-import { SyncService } from "jslib-common/abstractions/sync.service";
-import { Response } from "jslib-node/cli/models/response";
-import { MessageResponse } from "jslib-node/cli/models/response/messageResponse";
+import { ApiService } from "@bitwarden/common/abstractions/api.service";
+import { EnvironmentService } from "@bitwarden/common/abstractions/environment.service";
+import { KeyConnectorService } from "@bitwarden/common/abstractions/keyConnector.service";
+import { SyncService } from "@bitwarden/common/abstractions/sync.service";
+import { Response } from "@bitwarden/node/cli/models/response";
+import { MessageResponse } from "@bitwarden/node/cli/models/response/messageResponse";
 
 export class ConvertToKeyConnectorCommand {
   constructor(
@@ -23,7 +23,7 @@ export class ConvertToKeyConnectorCommand {
       await this.logout();
       return Response.error(
         new MessageResponse(
-          "An organization you are a member of is using Key Connector. " +
+          "A team you are a member of is using Key Connector. " +
             "In order to access the vault, you must opt-in to Key Connector now via the web vault. You have been logged out.",
           null
         )
@@ -37,14 +37,14 @@ export class ConvertToKeyConnectorCommand {
       name: "convert",
       message:
         organization.name +
-        " is using a self-hosted key server. A master password is no longer required to log in for members of this organization. ",
+        " is using a self-hosted key server. A master password is no longer required to log in for members of this team. ",
       choices: [
         {
           name: "Remove master password and unlock",
           value: "remove",
         },
         {
-          name: "Leave organization and unlock",
+          name: "Leave team and unlock",
           value: "leave",
         },
         {

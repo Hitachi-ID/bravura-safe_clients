@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 
-import { I18nService } from "jslib-common/abstractions/i18n.service";
+import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
 
 @Component({
   selector: "app-nav",
@@ -10,12 +10,12 @@ export class NavComponent {
   items: any[] = [
     {
       link: "/vault",
-      icon: "bwi-lock-f",
+      icon: "fa-lock",
       label: this.i18nService.translate("myVault"),
     },
     {
       link: "/send",
-      icon: "bwi-send-f",
+      icon: "fa-paper-plane",
       label: "Send",
     },
   ];

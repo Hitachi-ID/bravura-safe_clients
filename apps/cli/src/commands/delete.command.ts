@@ -1,9 +1,9 @@
-import { ApiService } from "jslib-common/abstractions/api.service";
-import { CipherService } from "jslib-common/abstractions/cipher.service";
-import { FolderService } from "jslib-common/abstractions/folder.service";
-import { StateService } from "jslib-common/abstractions/state.service";
-import { Utils } from "jslib-common/misc/utils";
-import { Response } from "jslib-node/cli/models/response";
+import { ApiService } from "@bitwarden/common/abstractions/api.service";
+import { CipherService } from "@bitwarden/common/abstractions/cipher.service";
+import { FolderService } from "@bitwarden/common/abstractions/folder.service";
+import { StateService } from "@bitwarden/common/abstractions/state.service";
+import { Utils } from "@bitwarden/common/misc/utils";
+import { Response } from "@bitwarden/node/cli/models/response";
 
 import { CliUtils } from "src/utils";
 
@@ -101,7 +101,7 @@ export class DeleteCommand {
 
   private async deleteOrganizationCollection(id: string, options: Options) {
     if (options.organizationId == null || options.organizationId === "") {
-      return Response.badRequest("`organizationid` options is required.");
+      return Response.badRequest("`organizationid` option is required.");
     }
     if (!Utils.isGuid(id)) {
       return Response.badRequest("`" + id + "` is not a GUID.");

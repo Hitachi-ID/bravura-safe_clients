@@ -1,0 +1,97 @@
+<ng-container *ngIf="!hide">
+  <div
+    class="filter-heading"
+    [ngClass]="{
+      expandedGrouping: !isCollapsed(foldersGrouping)
+    }"
+  >
+    <button
+      class="toggle-button text-muted"
+      (click)="toggleCollapse(foldersGrouping)"
+      [attr.aria-expanded]="!isCollapsed(foldersGrouping)"
+      aria-controls="folder-filters"
+      title="{{ 'toggleCollapse' | i18n }}"
+    >
+      <h3>
+        <i
+          class="fa fa-fw mr-0"
+          aria-hidden="true"
+          [ngClass]="{
+            'fa-caret-right': isCollapsed(foldersGrouping),
+            'fa-caret-down': !isCollapsed(foldersGrouping)
+          }"
+        ></i>
+      </h3>
+    </button>
+    <h3 class="filter-title">&nbsp;{{ "folders" | i18n }}</h3>
+    <button
+      class="text-muted ml-auto add-button"
+      (click)="addFolder()"
+      appA11yTitle="{{ 'addFolder' | i18n }}"
+    >
+      <h3><i class="fa fa-plus fa-fw" aria-hidden="true"></i></h3>
+    </button>
+  </div>
+  <ul id="folder-filters" *ngIf="!isCollapsed(foldersGrouping)" class="filter-options">
+    <ng-template #recursiveFolders let-folders>
+      <li
+        *ngFor="let f of folders"
+        [ngClass]="{
+          active: f.node.id === activeFilter.selectedFolderId && activeFilter.selectedFolder,
+          expand: f.children.length && !isCollapsed(f.node)
+        }"
+        class="filter-option"
+      >
+        <span class="filter-buttons">
+          <i *ngIf="f.children.length === 0" class="text-muted invisible"></i>
+          <button
+            *ngIf="f.children.length"
+            title="{{ 'toggleCollapse' | i18n }}"
+            (click)="toggleCollapse(f.node)"
+            [attr.aria-expanded]="!isCollapsed(f.node)"
+            [attr.aria-controls]="f.node.name + '_children'"
+            class="toggle-button text-muted flex-shrink-0"
+          >
+            <i
+              class="fa fa-fw"
+              [ngClass]="{
+                'fa-caret-right': isCollapsed(f.node),
+                'fa-caret-down': !isCollapsed(f.node)
+              }"
+              aria-hidden="true"
+            ></i>
+          </button>
+          <button class="filter-button flex-shrink-0" (click)="applyFilter(f.node)">
+            <i class="fa fa-fw fa-folder-o text-muted" aria-hidden="true"></i>
+          </button>
+          <button
+            class="filter-button text-muted flex-grow-1 text-left"
+            (click)="applyFilter(f.node)"
+          >
+            {{ f.node.name }}
+          </button>
+
+          <button
+            class="edit-button text-muted flex-shrink-0"
+            (click)="editFolder(f.node)"
+            appA11yTitle="{{ 'editFolder' | i18n }}"
+            *ngIf="f.node.id"
+          >
+            <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+          </button>
+        </span>
+        <ul
+          [id]="f.node.name + '_children'"
+          class="nested-filter-options"
+          *ngIf="f.children.length && !isCollapsed(f.node)"
+        >
+          <ng-container *ngTemplateOutlet="recursiveFolders; context: { $implicit: f.children }">
+          </ng-container>
+        </ul>
+      </li>
+    </ng-template>
+    <ng-container
+      *ngTemplateOutlet="recursiveFolders; context: { $implicit: nestedFolders }"
+    ></ng-container>
+  </ul>
+</ng-container>

@@ -1,0 +1,71 @@
+<ng-container [ngSwitch]="displayMode">
+  <ng-container *ngSwitchCase="'noOrganizations'">
+    <p>{{ "noOrganizationsList" | i18n }}</p>
+    <a href="#" routerLink="/create-organization" class="btn btn-block btn-outline-primary">
+      <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
+      {{ "newOrganization" | i18n }}
+    </a>
+  </ng-container>
+  <ng-container *ngSwitchCase="'personalOwnershipPolicy'">
+    <ul class="fa-ul card-ul carets" *ngIf="organizations && organizations.length">
+      <li *ngFor="let o of organizations" class="d-flex" (click)="navigateOrg(o.id)">
+        <a [routerLink]="['/organizations', o.id]" class="text-body text-break">
+          {{ o.name }}
+          <ng-container *ngIf="!o.enabled">
+            <i
+              class="fa fa-exclamation-triangle text-danger"
+              title="{{ 'organizationIsDisabled' | i18n }}"
+              aria-hidden="true"
+            ></i>
+            <span class="sr-only">{{ "organizationIsDisabled" | i18n }}</span>
+          </ng-container>
+        </a>
+      </li>
+    </ul>
+    <p *ngIf="!organizations || !organizations.length">{{ "noOrganizationsList" | i18n }}</p>
+    <a href="#" routerLink="/create-organization" class="btn btn-block btn-outline-primary">
+      <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
+      {{ "newOrganization" | i18n }}
+    </a>
+  </ng-container>
+  <ng-container *ngSwitchCase="'singleOrganizationAndPersonalOwnershipPolicies'">
+    <ul class="fa-ul card-ul carets" *ngIf="organizations && organizations.length">
+      <li *ngFor="let o of organizations" class="d-flex" (click)="navigateOrg(o.id)">
+        <a [routerLink]="['/organizations', o.id]" class="text-body text-break">
+          {{ o.name }}
+          <ng-container *ngIf="!o.enabled">
+            <i
+              class="fa fa-exclamation-triangle text-danger"
+              title="{{ 'organizationIsDisabled' | i18n }}"
+              aria-hidden="true"
+            ></i>
+            <span class="sr-only">{{ "organizationIsDisabled" | i18n }}</span>
+          </ng-container>
+        </a>
+      </li>
+    </ul>
+    <p *ngIf="!organizations || !organizations.length">{{ "noOrganizationsList" | i18n }}</p>
+  </ng-container>
+  <ng-container *ngSwitchDefault>
+    <ul class="fa-ul card-ul carets" *ngIf="organizations && organizations.length">
+      <li *ngFor="let o of organizations" class="d-flex" (click)="navigateOrg(o.id)">
+        <a [routerLink]="['/organizations', o.id]" class="text-body text-break">
+          {{ o.name }}
+          <ng-container *ngIf="!o.enabled">
+            <i
+              class="fa fa-exclamation-triangle text-danger"
+              title="{{ 'organizationIsDisabled' | i18n }}"
+              aria-hidden="true"
+            ></i>
+            <span class="sr-only">{{ "organizationIsDisabled" | i18n }}</span>
+          </ng-container>
+        </a>
+      </li>
+    </ul>
+    <p *ngIf="!organizations || !organizations.length">{{ "noOrganizationsList" | i18n }}</p>
+    <a href="#" routerLink="/create-organization" class="btn btn-block btn-outline-primary">
+      <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
+      {{ "newOrganization" | i18n }}
+    </a>
+  </ng-container>
+</ng-container>

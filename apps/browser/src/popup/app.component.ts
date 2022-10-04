@@ -1,14 +1,22 @@
-import { ChangeDetectorRef, Component, NgZone, OnInit, SecurityContext } from "@angular/core";
+import {
+  ChangeDetectorRef,
+  Component,
+  NgZone,
+  OnDestroy,
+  OnInit,
+  SecurityContext,
+} from "@angular/core";
 import { DomSanitizer } from "@angular/platform-browser";
 import { NavigationEnd, Router, RouterOutlet } from "@angular/router";
 import { IndividualConfig, ToastrService } from "ngx-toastr";
+import { Subject, takeUntil } from "rxjs";
 import Swal, { SweetAlertIcon } from "sweetalert2";
 
-import { AuthService } from "jslib-common/abstractions/auth.service";
-import { BroadcasterService } from "jslib-common/abstractions/broadcaster.service";
-import { I18nService } from "jslib-common/abstractions/i18n.service";
-import { MessagingService } from "jslib-common/abstractions/messaging.service";
-import { PlatformUtilsService } from "jslib-common/abstractions/platformUtils.service";
+import { AuthService } from "@bitwarden/common/abstractions/auth.service";
+import { BroadcasterService } from "@bitwarden/common/abstractions/broadcaster.service";
+import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
+import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
+import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
 
 import { BrowserApi } from "../browser/browserApi";
 import { StateService } from "../services/abstractions/state.service";
@@ -23,9 +31,11 @@ import { routerTransition } from "./app-routing.animations";
     <router-outlet #o="outlet"></router-outlet>
   </div>`,
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   private lastActivity: number = null;
   private activeUserId: string;
+
+  private destroy$: Subject<void> = new Subject<void>();
 
   constructor(
     private toastrService: ToastrService,
@@ -46,7 +56,7 @@ export class AppComponent implements OnInit {
     // Clear them aggressively to make sure this doesn't occur
     await this.clearComponentStates();
 
-    this.stateService.activeAccount.subscribe((userId) => {
+    this.stateService.activeAccount.pipe(takeUntil(this.destroy$)).subscribe((userId) => {
       this.activeUserId = userId;
     });
 
@@ -121,7 +131,7 @@ export class AppComponent implements OnInit {
 
     BrowserApi.messageListener("app.component", (window as any).bitwardenPopupMainMessageListener);
 
-    this.router.events.subscribe(async (event) => {
+    this.router.events.pipe(takeUntil(this.destroy$)).subscribe(async (event) => {
       if (event instanceof NavigationEnd) {
         const url = event.urlAfterRedirects || event.url || "";
         if (
@@ -144,6 +154,11 @@ export class AppComponent implements OnInit {
         }
       }
     });
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   getState(outlet: RouterOutlet) {
@@ -212,16 +227,16 @@ export class AppComponent implements OnInit {
       // If you add custom types to this part, the type to SweetAlertIcon cast below needs to be changed.
       switch (type) {
         case "success":
-          iconClasses = "bwi-check text-success";
+          iconClasses = "fa-check text-success";
           break;
         case "warning":
-          iconClasses = "bwi-exclamation-triangle text-warning";
+          iconClasses = "fa-warning text-warning";
           break;
         case "error":
-          iconClasses = "bwi-error text-danger";
+          iconClasses = "fa-bolt text-danger";
           break;
         case "info":
-          iconClasses = "bwi-info-circle text-info";
+          iconClasses = "fa-info-circle text-info";
           break;
         default:
           break;
@@ -235,7 +250,7 @@ export class AppComponent implements OnInit {
       buttonsStyling: false,
       icon: type as SweetAlertIcon, // required to be any of the SweetAlertIcons to output the iconHtml.
       iconHtml:
-        iconClasses != null ? `<i class="swal-custom-icon bwi ${iconClasses}"></i>` : undefined,
+        iconClasses != null ? `<i class="swal-custom-icon fa ${iconClasses}"></i>` : undefined,
       text: msg.text,
       html: msg.html,
       titleText: msg.title,

@@ -49,9 +49,9 @@
                 (click)="togglePassword(false)"
               >
                 <i
-                  class="bwi bwi-lg"
+                  class="fa fa-lg"
                   aria-hidden="true"
-                  [ngClass]="{ 'bwi-eye': !showPassword, 'bwi-eye-slash': showPassword }"
+                  [ngClass]="{ 'fa-eye': !showPassword, 'fa-eye-slash': showPassword }"
                 ></i>
               </button>
             </div>
@@ -98,9 +98,9 @@
               (click)="togglePassword(true)"
             >
               <i
-                class="bwi bwi-lg"
+                class="fa fa-lg"
                 aria-hidden="true"
-                [ngClass]="{ 'bwi-eye': !showPassword, 'bwi-eye-slash': showPassword }"
+                [ngClass]="{ 'fa-eye': !showPassword, 'fa-eye-slash': showPassword }"
               ></i>
             </button>
           </div>
@@ -109,38 +109,26 @@
           <label for="hint">{{ "masterPassHint" | i18n }}</label>
           <input id="hint" type="text" name="Hint" [(ngModel)]="hint" />
         </div>
-        <div class="box-content-row" [hidden]="!showCaptcha()">
-          <iframe id="hcaptcha_iframe" height="80"></iframe>
+        <div class="box last" [hidden]="!showCaptcha()">
+          <div class="box-content">
+            <div class="box-content-row">
+              <iframe id="hcaptcha_iframe" height="80"></iframe>
+              <button class="btn block" type="button" routerLink="/accessibility-cookie">
+                <i class="bwi bwi-universal-access" aria-hidden="true"></i>
+                {{ "loadAccessibilityCookie" | i18n }}
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="box-footer">
         {{ "masterPassHintDesc" | i18n }}
       </div>
     </div>
-    <div class="box last" *ngIf="showTerms">
-      <div class="box-footer checkbox">
-        <input
-          type="checkbox"
-          id="acceptPolicies"
-          [(ngModel)]="acceptPolicies"
-          name="AcceptPolicies"
-        />
-        <label for="acceptPolicies">
-          {{ "acceptPolicies" | i18n }}<br />
-          <a href="https://bitwarden.com/terms/" target="_blank" rel="noopener">{{
-            "termsOfService" | i18n
-          }}</a
-          >,
-          <a href="https://bitwarden.com/privacy/" target="_blank" rel="noopener">{{
-            "privacyPolicy" | i18n
-          }}</a>
-        </label>
-      </div>
-    </div>
     <div class="buttons">
       <button type="submit" class="btn primary block" [disabled]="form.loading">
         <b [hidden]="form.loading">{{ "submit" | i18n }}</b>
-        <i class="bwi bwi-spinner bwi-spin" [hidden]="!form.loading" aria-hidden="true"></i>
+        <i class="fa fa-spinner fa-spin" [hidden]="!form.loading" aria-hidden="true"></i>
       </button>
       <button type="button" routerLink="/login" class="btn block">{{ "cancel" | i18n }}</button>
     </div>

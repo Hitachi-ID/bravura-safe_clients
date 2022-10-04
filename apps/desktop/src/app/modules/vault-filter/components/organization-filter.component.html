@@ -10,11 +10,11 @@
           aria-controls="organization-filters"
         >
           <i
-            class="bwi bwi-fw"
+            class="fa fa-fw"
             aria-hidden="true"
             [ngClass]="{
-              'bwi-angle-right': isCollapsed,
-              'bwi-angle-down': !isCollapsed
+              'fa-chevron-right': isCollapsed,
+              'fa-chevron-down': !isCollapsed
             }"
           ></i>
         </button>
@@ -38,14 +38,14 @@
               (click)="applyOrganizationFilter(organization)"
               [attr.aria-pressed]="activeFilter.myVaultOnly"
             >
-              <i class="bwi bwi-fw bwi-business" aria-hidden="true"></i>
+              <i class="fa fa-fw fa-users" aria-hidden="true"></i>
               &nbsp;{{ organization.name }}
             </button>
           </span>
         </li>
       </ul>
     </ng-container>
-    <ng-container *ngSwitchCase="'organizationMember'">
+    <ng-container *ngSwitchDefault>
       <div class="filter-heading" [ngClass]="{ active: !hasActiveFilter }">
         <button
           appA11yTitle="{{ 'toggleCollapse' | i18n }}"
@@ -54,11 +54,11 @@
           aria-controls="organization-filters"
         >
           <i
-            class="bwi bwi-fw"
+            class="fa fa-fw"
             aria-hidden="true"
             [ngClass]="{
-              'bwi-angle-right': isCollapsed,
-              'bwi-angle-down': !isCollapsed
+              'fa-chevron-right': isCollapsed,
+              'fa-chevron-down': !isCollapsed
             }"
           ></i>
         </button>
@@ -74,7 +74,7 @@
               (click)="applyMyVaultFilter()"
               [attr.aria-pressed]="activeFilter.myVaultOnly"
             >
-              <i class="bwi bwi-fw bwi-user" aria-hidden="true"></i>
+              <i class="fa fa-fw fa-user" aria-hidden="true"></i>
               &nbsp;{{ "myVault" | i18n }}
             </button>
           </span>
@@ -90,7 +90,7 @@
               (click)="applyOrganizationFilter(organization)"
               [attr.aria-pressed]="activeFilter.selectedOrganizationId === organization.id"
             >
-              <i class="bwi bwi-fw bwi-business" aria-hidden="true"></i>
+              <i class="fa fa-fw fa-users" aria-hidden="true"></i>
               &nbsp;{{ organization.name }}
             </button>
           </span>

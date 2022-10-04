@@ -1,9 +1,9 @@
 {
   "appName": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "extName": {
-    "message": "Bitwarden",
+    "message": "Bravura Safe",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
@@ -47,13 +47,19 @@
     "message": "Torneu a escriure la contrasenya mestra"
   },
   "masterPassHint": {
-    "message": "Suggeriment de la contrasenya mestra (opcional)"
+    "message": "Pista de la contrasenya mestra (opcional)"
   },
   "tab": {
     "message": "Pestanya"
   },
+  "vault": {
+    "message": "Caixa forta"
+  },
   "myVault": {
     "message": "La meua caixa forta"
+  },
+  "allVaults": {
+    "message": "Totes les caixes fortes"
   },
   "tools": {
     "message": "Eines"
@@ -71,7 +77,7 @@
     "message": "Copia nota"
   },
   "copyUri": {
-    "message": "Copia URI"
+    "message": "Copia URL"
   },
   "copyUsername": {
     "message": "Copia el nom d'usuari"
@@ -209,7 +215,7 @@
     "message": "Genera automàticament contrasenyes fortes i úniques per als vostres inicis de sessió."
   },
   "bitWebVault": {
-    "message": "Caixa forta web de Bitwarden"
+    "message": "Caixa forta web de Bravura Safe"
   },
   "importItems": {
     "message": "Importa elements"
@@ -350,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -479,10 +485,10 @@
     "message": "Canvia la contrasenya mestra"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Podeu canviar la contrasenya mestra a la caixa forta web de bitwarden.com. Voleu visitar el lloc web ara?"
+    "message": "Podeu canviar la contrasenya mestra a la caixa forta web de Bravura Safe. Voleu visitar el lloc web ara?"
   },
   "twoStepLoginConfirmation": {
-    "message": "L'inici de sessió en dues passes fa que el vostre compte siga més segur, ja que obliga a verificar el vostre inici de sessió amb un altre dispositiu, com ara una clau de seguretat, una aplicació autenticadora, un SMS, una trucada telefònica o un correu electrònic. Es pot habilitar l'inici de sessió en dues passes a la caixa forta web de bitwarden.com. Voleu visitar el lloc web ara?"
+    "message": "L'inici de sessió en dues passes fa que el vostre compte siga més segur, ja que obliga a verificar el vostre inici de sessió amb un altre dispositiu, com ara una clau de seguretat, una aplicació autenticadora, un SMS, una trucada telefònica o un correu electrònic. Es pot habilitar l'inici de sessió en dues passes a la caixa forta web de Bravura Safe. Voleu visitar el lloc web ara?"
   },
   "editedFolder": {
     "message": "Carpeta editada"
@@ -509,11 +515,11 @@
     "message": "S'ha copiat la contrasenya"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -522,7 +528,7 @@
     }
   },
   "newUri": {
-    "message": "Nova URI"
+    "message": "Nova URL"
   },
   "addedItem": {
     "message": "Element afegit"
@@ -561,23 +567,23 @@
     "message": "Cap carpeta",
     "description": "This is the folder for uncategorized items"
   },
-  "disableAddLoginNotification": {
-    "message": "Deshabilita la notificació per afegir inicis de sessió"
+  "enableAddLoginNotification": {
+    "message": "Ask to add login"
   },
   "addLoginNotificationDesc": {
     "message": "La \"Notificació per afegir inicis de sessió\" demana automàticament que guardeu els nous inicis de sessió a la vostra caixa forta quan inicieu la sessió per primera vegada."
   },
-  "dontShowCardsCurrentTab": {
-    "message": "No mostres les targetes a la pàgina de la pestanya"
+  "showCardsCurrentTab": {
+    "message": "Show cards on Tab page"
   },
-  "dontShowCardsCurrentTabDesc": {
-    "message": "Els elements de targeta de la vostra caixa forta es detallen a la pàgina \"Fitxa actual\" per obtenir un fàcil accés amb l'emplenat automàtic."
+  "showCardsCurrentTabDesc": {
+    "message": "List card items on the Tab page for easy auto-fill."
   },
-  "dontShowIdentitiesCurrentTab": {
-    "message": "No mostres les identitats a la pàgina de la pestanya"
+  "showIdentitiesCurrentTab": {
+    "message": "Show identities on Tab page"
   },
-  "dontShowIdentitiesCurrentTabDesc": {
-    "message": "Els elements d'identitat de la vostra caixa forta es detallen a la pàgina \"Fitxa actual\" per obtenir un fàcil accés amb l'emplenat automàtic."
+  "showIdentitiesCurrentTabDesc": {
+    "message": "List identity items on the Tab page for easy auto-fill."
   },
   "clearClipboard": {
     "message": "Neteja el porta-retalls",
@@ -588,35 +594,35 @@
     "description": "Clipboard is the operating system thing where you copy/paste data to on your device."
   },
   "notificationAddDesc": {
-    "message": "Bitwarden ha de recordar aquesta contrasenya per a vosaltres?"
+    "message": "Bravura Safe ha de recordar aquesta contrasenya per a vosaltres?"
   },
   "notificationAddSave": {
     "message": "Guarda"
   },
-  "disableChangedPasswordNotification": {
-    "message": "Deshabilita la notificació de contrasenya modificada"
+  "enableChangedPasswordNotification": {
+    "message": "Ask to update existing login"
   },
-  "disableChangedPasswordNotificationDesc": {
-    "message": "La \"Notificació de contrasenya modificada\" us demanarà automàticament que actualitzeu la contrasenya d'inici de sessió a la vostra caixa forta cada vegada que detecte que s'ha canviat en un lloc web."
+  "changedPasswordNotificationDesc": {
+    "message": "Ask to update a login's password when a change is detected on a website."
   },
   "notificationChangeDesc": {
-    "message": "Voleu actualitzar aquesta contrasenya a Bitwarden?"
+    "message": "Voleu actualitzar aquesta contrasenya a Bravura Safe?"
   },
   "notificationChangeSave": {
     "message": "Actualitza"
   },
-  "disableContextMenuItem": {
-    "message": "Inhabilita opcions del menú contextual"
+  "enableContextMenuItem": {
+    "message": "Show context menu options"
   },
-  "disableContextMenuItemDesc": {
-    "message": "Les opcions del menú contextual proporcionen accés ràpid a la generació de contrasenyes i inici de sessió al lloc web en la vostra pestanya actual."
+  "contextMenuItemDesc": {
+    "message": "Use a secondary click to access password generation and matching logins for the website. "
   },
   "defaultUriMatchDetection": {
-    "message": "Detecció de coincidències URI per defecte",
-    "description": "Default URI match detection for auto-fill."
+    "message": "Detecció de coincidències URL per defecte",
+    "description": "Default URL match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "Trieu la manera predeterminada en que es gestiona la detecció de coincidència d'URI per als inicis de sessió en realitzar accions com l'emplenament automàtic."
+    "message": "Trieu la manera predeterminada en que es gestiona la detecció de coincidència d'URL per als inicis de sessió en realitzar accions com l'emplenament automàtic."
   },
   "theme": {
     "message": "Tema"
@@ -656,7 +662,7 @@
     "message": "Aquesta exportació xifra les vostres dades mitjançant la clau de xifratge del vostre compte. Si alguna vegada gireu eixa clau, hauríeu d'exportar de nou, ja que no podreu desxifrar aquest fitxer d'exportació."
   },
   "encExportAccountWarningDesc": {
-    "message": "Les claus de xifratge són exclusives de cada compte d'usuari Bitwarden, de manera que no podeu importar una exportació xifrada a un compte diferent."
+    "message": "Les claus de xifratge són exclusives de cada compte d'usuari Bravura Safe, de manera que no podeu importar una exportació xifrada a un compte diferent."
   },
   "exportMasterPassword": {
     "message": "Introduïu la contrasenya mestra per exportar les dades de la caixa forta."
@@ -668,7 +674,7 @@
     "message": "Més informació sobre les organitzacions"
   },
   "learnOrgConfirmation": {
-    "message": "Bitwarden us permet compartir els elements de la vostra caixa forta amb altres usuaris mitjançant una organització. Voleu visitar el lloc web de bitwarden.com per obtenir més informació?"
+    "message": "Bravura Safe us permet compartir els elements de la vostra caixa forta amb altres usuaris mitjançant una organització. Voleu visitar el lloc web de Bravura Safe per obtenir més informació?"
   },
   "moveToOrganization": {
     "message": "Desplaça a l'organització"
@@ -747,7 +753,7 @@
     "message": "Administra la subscripció"
   },
   "premiumManageAlert": {
-    "message": "Podeu administrar la vostra subscripció a la caixa forta web de bitwarden.com. Voleu visitar el lloc web ara?"
+    "message": "Podeu administrar la vostra subscripció a la caixa forta web de hitachi-id.com. Voleu visitar el lloc web ara?"
   },
   "premiumRefresh": {
     "message": "Actualitza la subscripció"
@@ -780,13 +786,13 @@
     "message": "Compra Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Podeu comprar la vostra subscripció a la caixa forta web de bitwarden.com. Voleu visitar el lloc web ara?"
+    "message": "Podeu comprar la vostra subscripció a la caixa forta web de hitachi-id.com. Voleu visitar el lloc web ara?"
   },
   "premiumCurrentMember": {
     "message": "Sou un membre premium!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Gràcies per donar suport a Bitwarden."
+    "message": "Gràcies per donar suport a Bravura Safe."
   },
   "premiumPrice": {
     "message": "Tot per només $PRICE$ / any!",
@@ -800,14 +806,14 @@
   "refreshComplete": {
     "message": "Actualització completa"
   },
-  "disableAutoTotpCopy": {
-    "message": "Deshabilita la còpia TOTP automàtica"
+  "enableAutoTotpCopy": {
+    "message": "Copy TOTP automatically"
   },
   "disableAutoTotpCopyDesc": {
     "message": "Si el vostre inici de sessió té una clau d'autenticació associada, el codi de verificació TOTP es copiarà al vostre porta-retalls quan s'òmpliga automàticament l'inici de sessió."
   },
-  "disableAutoBiometricsPrompt": {
-    "message": "No sol·liciteu biomètrica en iniciar."
+  "enableAutoBiometricsPrompt": {
+    "message": "Ask for biometrics on launch"
   },
   "premiumRequired": {
     "message": "Premium requerit"
@@ -915,7 +921,7 @@
     "message": "Entorn d'allotjament propi"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Especifiqueu l'URL base de la vostra instal·lació de Bitwarden allotjada en un entorn propi."
+    "message": "Especifiqueu l'URL base de la vostra instal·lació de Bravura Safe allotjada en un entorn propi."
   },
   "customEnvironment": {
     "message": "Entorn personalitzat"
@@ -1027,17 +1033,17 @@
   "popupU2fCloseMessage": {
     "message": "Aquest navegador no pot processar sol·licituds U2F en aquesta finestra emergent. Voleu obrir l'emergent en una finestra nova per poder iniciar la sessió mitjançant U2F?"
   },
-  "disableFavicon": {
-    "message": "Deshabilitar icones del lloc web"
+  "enableFavicon": {
+    "message": "Show website icons"
   },
-  "disableFaviconDesc": {
-    "message": "Les icones del lloc web proporcionen una imatge que es pot reconèixer al costat de cada element d'inici de sessió a la vostra caixa forta."
+  "faviconDesc": {
+    "message": "Show a recognizable image next to each login."
   },
-  "disableBadgeCounter": {
-    "message": "Deshabilita el comptador d'insígnies"
+  "enableBadgeCounter": {
+    "message": "Show badge counter"
   },
-  "disableBadgeCounterDesc": {
-    "message": "El comptador d’insígnies indica quants inicis de sessió teniu de la pàgina actual en la vostra caixa forta."
+  "badgeCounterDesc": {
+    "message": "Indicate how many logins you have for the current web page."
   },
   "cardholderName": {
     "message": "Nom del titular de la targeta"
@@ -1262,26 +1268,26 @@
   },
   "matchDetection": {
     "message": "Detecció de coincidències",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Detecció de coincidències per defecte",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Commuta opcions"
   },
   "toggleCurrentUris": {
-    "message": "Commuta URI actuals",
-    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
+    "message": "Commuta URL actuals",
+    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
   },
   "currentUri": {
-    "message": "URI actual",
-    "description": "The URI of one of the current open tabs in the browser."
+    "message": "URL actual",
+    "description": "The URL of one of the current open tabs in the browser."
   },
   "organization": {
     "message": "Organització",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "types": {
     "message": "Tipus"
@@ -1337,7 +1343,7 @@
     "message": "Contrasenya mestra poc segura"
   },
   "weakMasterPasswordDesc": {
-    "message": "La contrasenya mestra que heu triat és poc segura. Heu d'utilitzar una contrasenya mestra segura (o una frase de pas) per protegir correctament el vostre compte de Bitwarden. Esteu segur que voleu utilitzar aquesta contrasenya mestra?"
+    "message": "La contrasenya mestra que heu triat és poc segura. Heu d'utilitzar una contrasenya mestra segura (o una frase de pas) per protegir correctament el vostre compte de Bravura Safe. Esteu segur que voleu utilitzar aquesta contrasenya mestra?"
   },
   "pin": {
     "message": "PIN",
@@ -1347,7 +1353,7 @@
     "message": "Desbloqueja amb codi PIN"
   },
   "setYourPinCode": {
-    "message": "Configureu el vostre codi PIN per desbloquejar Bitwarden. La configuració del PIN es restablirà si tanqueu la sessió definitivament."
+    "message": "Configureu el vostre codi PIN per desbloquejar Bravura Safe. La configuració del PIN es restablirà si tanqueu la sessió definitivament."
   },
   "pinRequired": {
     "message": "Es necessita el codi PIN."
@@ -1362,7 +1368,7 @@
     "message": "S’espera confirmació des de l’escriptori"
   },
   "awaitDesktopDesc": {
-    "message": "Confirmeu que utilitzeu la biomètrica a l'aplicació Bitwarden Desktop per habilitar la biomètrica per al navegador."
+    "message": "Confirmeu que utilitzeu la biomètrica a l'aplicació Bravura Safe Desktop per habilitar la biomètrica per al navegador."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Bloqueja amb la contrasenya mestra en reiniciar el navegador"
@@ -1421,7 +1427,7 @@
     "message": "Ompli automàticament i guarda"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "Element emplenat automàticament i URI guardat"
+    "message": "Element emplenat automàticament i URL guardat"
   },
   "autoFillSuccess": {
     "message": "Element emplenat automàticament "
@@ -1499,13 +1505,13 @@
     "message": "La integració en el navegador no està habilitada"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "La integració del navegador no està habilitada a l'aplicació Bitwarden Desktop. Activeu-la a la configuració de l'aplicació d'escriptori."
+    "message": "La integració del navegador no està habilitada a l'aplicació Bravura Safe Desktop. Activeu-la a la configuració de l'aplicació d'escriptori."
   },
   "startDesktopTitle": {
-    "message": "Inicia l'aplicació Bitwarden Desktop"
+    "message": "Inicia l'aplicació Bravura Safe Desktop"
   },
   "startDesktopDesc": {
-    "message": "Per poder utilitzar aquesta funció, cal iniciar l'aplicació Bitwarden Desktop."
+    "message": "L'aplicació Bravura Safe Desktop s'ha d'iniciar abans que es puga utilitzar el desbloqueig amb biometria."
   },
   "errorEnableBiometricTitle": {
     "message": "No es pot habilitar la biomètrica"
@@ -1541,7 +1547,7 @@
     "message": "No s'ha proporcionat el permís"
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "Sense permís per comunicar-nos amb l’aplicació d’escriptori Bitwarden, no podem proporcionar dades biomètriques a l’extensió del navegador. Torneu-ho a provar."
+    "message": "Sense permís per comunicar-nos amb l’aplicació d’escriptori Bravura Safe, no podem proporcionar dades biomètriques a l’extensió del navegador. Torneu-ho a provar."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Error de sol·licitud de permís"
@@ -1559,7 +1565,7 @@
     "message": "Dominis exclosos"
   },
   "excludedDomainsDesc": {
-    "message": "Bitwarden no demanarà que es guarden les dades d’inici de sessió d’aquests dominis. Heu d'actualitzar la pàgina perquè els canvis tinguen efecte."
+    "message": "Bravura Safe no demanarà que es guarden les dades d’inici de sessió d’aquests dominis. Heu d'actualitzar la pàgina perquè els canvis tinguen efecte."
   },
   "excludedDomainsInvalidDomain": {
     "message": "$DOMAIN$ no és un domini vàlid",
@@ -1571,16 +1577,16 @@
     }
   },
   "send": {
-    "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "searchSends": {
-    "message": "Cerca Sends",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Cerca Shares",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "addSend": {
-    "message": "Afig Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Afig Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeText": {
     "message": "Text"
@@ -1589,8 +1595,8 @@
     "message": "Fitxer"
   },
   "allSends": {
-    "message": "Tots els Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Tots els Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "S'ha assolit el recompte màxim d'accesos",
@@ -1606,8 +1612,8 @@
     "message": "Protegit amb contrasenya"
   },
   "copySendLink": {
-    "message": "Copia l'enllaç Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Copia l'enllaç Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "removePassword": {
     "message": "Suprimeix la contrasenya"
@@ -1619,12 +1625,12 @@
     "message": "Contrasenya suprimida"
   },
   "deletedSend": {
-    "message": "Send suprimit",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share suprimit",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
-    "message": "Enllaç Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Enllaç Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "disabled": {
     "message": "Deshabilitat"
@@ -1633,24 +1639,24 @@
     "message": "Esteu segur que voleu suprimir la contrasenya?"
   },
   "deleteSend": {
-    "message": "Suprimeix el Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Suprimeix el Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deleteSendConfirmation": {
-    "message": "Esteu segur que voleu suprimir aquest Send?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Esteu segur que voleu suprimir aquest Share?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Edita Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Edita Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeHeader": {
-    "message": "Quin tipus de Send és aquest?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Quin tipus de Share és aquest?",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNameDesc": {
-    "message": "Un nom apropiat per descriure aquest Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Un nom apropiat per descriure aquest Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendFileDesc": {
     "message": "El fitxer que voleu enviar."
@@ -1660,14 +1666,14 @@
   },
   "deletionDateDesc": {
     "message": "L'enviament se suprimirà permanentment a la data i hora especificades.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "Data de caducitat"
   },
   "expirationDateDesc": {
     "message": "Si s'estableix, l'accés a aquest enviament caducarà en la data i hora especificades.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "oneDay": {
     "message": "1 dia"
@@ -1688,57 +1694,57 @@
     "message": "Recompte màxim d'accessos"
   },
   "maximumAccessCountDesc": {
-    "message": "Si s’estableix, els usuaris ja no podran accedir a aquest Send una vegada s’assolisca el nombre màxim d’accessos.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Si s’estableix, els usuaris ja no podran accedir a aquest Share una vegada s’assolisca el nombre màxim d’accessos.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
-    "message": "Opcionalment, necessiteu una contrasenya perquè els usuaris accedisquen a aquest Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Opcionalment, necessiteu una contrasenya perquè els usuaris accedisquen a aquest Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "Notes privades sobre aquest Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Notes privades sobre aquest Share.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisableDesc": {
-    "message": "Desactiveu aquest Send perquè ningú no hi puga accedir.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Desactiveu aquest Share perquè ningú no hi puga accedir.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendShareDesc": {
-    "message": "Copieu l'enllaç d'aquest Send al porta-retalls després de guardar-lo.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Copieu l'enllaç d'aquest Share al porta-retalls després de guardar-lo.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "El text que voleu enviar."
   },
   "sendHideText": {
-    "message": "Amaga el text d'aquest Send per defecte.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Amaga el text d'aquest Share per defecte.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Recompte d’accessos actual"
   },
   "createSend": {
-    "message": "Crea un nou Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Crea un nou Share",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "Contrasenya nova"
   },
   "sendDisabled": {
-    "message": "Send desactivat",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share desactivat",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "A causa d'una política empresarial, només podeu suprimir un Send existent.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "A causa d'una política empresarial, només podeu suprimir un Share existent.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Send creat",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share creat",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "Send editat",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share editat",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinuxChromiumFileWarning": {
     "message": "Per triar un fitxer, obriu l'extensió a la barra lateral (si és possible) o eixiu a una finestra nova fent clic a aquest bàner."
@@ -1783,7 +1789,7 @@
     "message": "Amagueu la meua adreça de correu electrònic als destinataris."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "Una o més polítiques d'organització afecten les vostres opcions del Send."
+    "message": "Una o més polítiques d'organització afecten les vostres opcions del Share."
   },
   "passwordPrompt": {
     "message": "Sol·licitud de la contrasenya mestra"
@@ -1914,13 +1920,13 @@
     "description": "Username generator option that appends a random sub-address to the username. For example: address+subaddress@email.com"
   },
   "plusAddressedEmailDesc": {
-    "message": "Use your email provider's sub-addressing capabilities."
+    "message": "Utilitzeu les capacitats de subadreçament del vostre proveïdor de correu electrònic."
   },
   "catchallEmail": {
-    "message": "Catch-all Email"
+    "message": "Captura tot correu electrònic"
   },
   "catchallEmailDesc": {
-    "message": "Use your domain's configured catch-all inbox."
+    "message": "Utilitzeu la safata d'entrada global configurada del vostre domini."
   },
   "random": {
     "message": "Aleatori"
@@ -1939,5 +1945,24 @@
   },
   "service": {
     "message": "Servei"
+  },
+  "forwardedEmail": {
+    "message": "Àlies de correu electrònic reenviat"
+  },
+  "forwardedEmailDesc": {
+    "message": "Genera un àlies de correu electrònic amb un servei de reenviament extern."
+  },
+  "hostname": {
+    "message": "Nom de l'amfitrió",
+    "description": "Part of a URL."
+  },
+  "apiAccessToken": {
+    "message": "Token d'accés a l'API"
+  },
+  "apiKey": {
+    "message": "Clau de l'API"
+  },
+  "ssoKeyConnectorError": {
+    "message": "Error del connector de claus: assegureu-vos que el connector de claus està disponible i funcionant correctament."
   }
 }

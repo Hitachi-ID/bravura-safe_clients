@@ -1,6 +1,6 @@
-import { SendType } from "jslib-common/enums/sendType";
-import { SendAccessView } from "jslib-common/models/view/sendAccessView";
-import { BaseResponse } from "jslib-node/cli/models/response/baseResponse";
+import { SendType } from "@bitwarden/common/enums/sendType";
+import { SendAccessView } from "@bitwarden/common/models/view/sendAccessView";
+import { BaseResponse } from "@bitwarden/node/cli/models/response/baseResponse";
 
 import { SendFileResponse } from "./sendFileResponse";
 import { SendTextResponse } from "./sendTextResponse";
@@ -8,7 +8,7 @@ import { SendTextResponse } from "./sendTextResponse";
 export class SendAccessResponse implements BaseResponse {
   static template(): SendAccessResponse {
     const req = new SendAccessResponse();
-    req.name = "Send name";
+    req.name = "Share name";
     req.type = SendType.Text;
     req.text = null;
     req.file = null;

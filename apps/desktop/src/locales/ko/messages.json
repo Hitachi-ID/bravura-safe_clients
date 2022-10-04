@@ -1,6 +1,6 @@
 {
   "bitwarden": {
-    "message": "Bitwarden"
+    "message": "Bravura Safe"
   },
   "filters": {
     "message": "필터"
@@ -73,11 +73,11 @@
     "message": "이름"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -86,7 +86,7 @@
     }
   },
   "newUri": {
-    "message": "새 URI"
+    "message": "새 URL"
   },
   "username": {
     "message": "사용자 이름"
@@ -392,13 +392,25 @@
     "message": "비밀번호 복사"
   },
   "copyUri": {
-    "message": "URI 복사"
+    "message": "URL 복사"
   },
   "copyVerificationCodeTotp": {
     "message": "인증 코드 (TOTP) 복사"
   },
   "length": {
     "message": "길이"
+  },
+  "uppercase": {
+    "message": "대문자 (A-Z)"
+  },
+  "lowercase": {
+    "message": "소문자 (a-z)"
+  },
+  "numbers": {
+    "message": "숫자 (0-9)"
+  },
+  "specialCharacters": {
+    "message": "특수 문자 (!@#$%^&*)"
   },
   "numWords": {
     "message": "단어 수"
@@ -764,7 +776,7 @@
     "message": "마스터 비밀번호 변경"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "bitwarden.com 웹 보관함에서 마스터 비밀번호를 바꿀 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
+    "message": "hitachi-id.com 웹 보관함에서 마스터 비밀번호를 바꿀 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
   },
   "fingerprintPhrase": {
     "message": "지문 구절",
@@ -804,7 +816,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bitwarden.com"
+        "example": "hitachi-id.com"
       }
     }
   },
@@ -812,7 +824,7 @@
     "message": "잘못된 마스터 비밀번호"
   },
   "twoStepLoginConfirmation": {
-    "message": "2단계 인증은 보안 키, 인증 앱, SMS, 전화 통화 등의 다른 기기로 사용자의 로그인 시도를 검증하여 사용자의 계정을 더욱 안전하게 만듭니다. 2단계 인증은 bitwarden.com 웹 보관함에서 활성화할 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
+    "message": "2단계 인증은 보안 키, 인증 앱, SMS, 전화 통화 등의 다른 기기로 사용자의 로그인 시도를 검증하여 사용자의 계정을 더욱 안전하게 만듭니다. 2단계 인증은 hitachi-id.com 웹 보관함에서 활성화할 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
   },
   "twoStepLogin": {
     "message": "2단계 인증"
@@ -882,11 +894,11 @@
     "message": "자동으로 클립보드에 복사된 값을 제거합니다.",
     "description": "Clipboard is the operating system thing where you copy/paste data to on your device."
   },
-  "disableFavicon": {
-    "message": "웹 사이트 아이콘 사용 안 함"
+  "enableFavicon": {
+    "message": "Show website icons"
   },
-  "disableFaviconDesc": {
-    "message": "웹 사이트 아이콘을 사용하면 보관함 각 항목 옆에 이미지를 보여줍니다."
+  "faviconDesc": {
+    "message": "Show a recognizable image next to each login."
   },
   "enableMinToTray": {
     "message": "알림 영역으로 최소화"
@@ -934,13 +946,13 @@
     "message": "로그인할 때 자동으로 실행"
   },
   "openAtLoginDesc": {
-    "message": "로그인할 때 Bitwarden 데스크톱 앱을 자동으로 실행합니다."
+    "message": "로그인할 때 Bravura Safe 데스크톱 앱을 자동으로 실행합니다."
   },
   "alwaysShowDock": {
     "message": "Dock에 항상 표시하기"
   },
   "alwaysShowDockDesc": {
-    "message": "메뉴 막대에 숨겨진 경우에도 Bitwarden 아이콘을 Dock에 표시합니다."
+    "message": "메뉴 막대에 숨겨진 경우에도 Bravura Safe 아이콘을 Dock에 표시합니다."
   },
   "confirmTrayTitle": {
     "message": "알림 영역 비활성화 확인"
@@ -1035,7 +1047,7 @@
     "message": "멤버십 관리"
   },
   "premiumManageAlert": {
-    "message": "bitwarden.com 웹 보관함에서 멤버십을 관리할 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
+    "message": "hitachi-id.com 웹 보관함에서 멤버십을 관리할 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
   },
   "premiumRefresh": {
     "message": "멤버십 새로 고침"
@@ -1068,7 +1080,7 @@
     "message": "프리미엄 멤버십 구입"
   },
   "premiumPurchaseAlert": {
-    "message": "bitwarden.com 웹 보관함에서 프리미엄 멤버십을 구입할 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
+    "message": "hitachi-id.com 웹 보관함에서 프리미엄 멤버십을 구입할 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
   },
   "premiumCurrentMember": {
     "message": "프리미엄 사용자입니다!"
@@ -1145,13 +1157,13 @@
     "description": "Bring all windows to front (foreground)"
   },
   "aboutBitwarden": {
-    "message": "Bitwarden 정보"
+    "message": "Bravura Safe 정보"
   },
   "services": {
     "message": "서비스"
   },
   "hideBitwarden": {
-    "message": "Bitwarden 숨기기"
+    "message": "Bravura Safe 숨기기"
   },
   "hideOthers": {
     "message": "다른 항목 숨기기"
@@ -1160,7 +1172,7 @@
     "message": "모두 보기"
   },
   "quitBitwarden": {
-    "message": "Bitwarden 종료"
+    "message": "Bravura Safe 종료"
   },
   "valueCopied": {
     "message": "$VALUE$를 클립보드에 복사함",
@@ -1217,18 +1229,18 @@
   },
   "matchDetection": {
     "message": "일치 인식",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "기본 일치 인식",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "표시 / 숨기기"
   },
   "organization": {
     "message": "조직",
-    "description": "An entity of multiple related people (ex. a team or business organization)."
+    "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "default": {
     "message": "기본값"
@@ -1261,6 +1273,40 @@
   "fileFormat": {
     "message": "파일 형식"
   },
+  "hCaptchaUrl": {
+    "message": "hCaptcha Url",
+    "description": "hCaptcha is the name of a website, should not be translated"
+  },
+  "loadAccessibilityCookie": {
+    "message": "Load Accessibility Cookie"
+  },
+  "registerAccessibilityUser": {
+    "message": "Register as an accessibility user at",
+    "description": "ex. Register as an accessibility user at hcaptcha.com"
+  },
+  "copyPasteLink": {
+    "message": "Copy and paste the link sent to your email below"
+  },
+  "enterhCaptchaUrl": {
+    "message": "Enter URL to load accessibility cookie for hCaptcha",
+    "description": "hCaptcha is the name of a website, should not be translated"
+  },
+  "hCaptchaUrlRequired": {
+    "message": "hCaptcha Url is required",
+    "description": "hCaptcha is the name of a website, should not be translated"
+  },
+  "invalidUrl": {
+    "message": "Invalid Url"
+  },
+  "done": {
+    "message": "Done"
+  },
+  "accessibilityCookieSaved": {
+    "message": "Accessibility cookie saved!"
+  },
+  "noAccessibilityCookieSaved": {
+    "message": "No accessibility cookie saved"
+  },
   "warning": {
     "message": "경고",
     "description": "WARNING (should stay in capitalized letters if the language permits)"
@@ -1275,7 +1321,7 @@
     "message": "이 내보내기는 계정의 암호화 키를 사용하여 데이터를 암호화합니다. 추후 계정의 암호화 키를 교체할 경우 다시 내보내기를 진행해야 합니다. 그러지 않을 경우 이 내보내기 파일을 해독할 수 없게 됩니다."
   },
   "encExportAccountWarningDesc": {
-    "message": "모든 Bitwarden 사용자 계정은 고유한 계정 암호화 키를 가지고 있습니다. 따라서, 다른 계정에서는 암호화된 내보내기를 가져올 수 없습니다."
+    "message": "모든 Bravura Safe 사용자 계정은 고유한 계정 암호화 키를 가지고 있습니다. 따라서, 다른 계정에서는 암호화된 내보내기를 가져올 수 없습니다."
   },
   "noOrganizationsList": {
     "message": "속해 있는 조직이 없습니다. 조직에 속하면 다른 사용자들과 항목을 안전하게 공유할 수 있습니다."
@@ -1305,7 +1351,7 @@
     "message": "취약한 마스터 비밀번호"
   },
   "weakMasterPasswordDesc": {
-    "message": "선택한 마스터 비밀번호는 취약합니다. Bitwarden 계정을 확실히 보호하려면 강력한 마스터 비밀번호(혹은 패스프레이즈)를 사용해야 합니다. 정말 이 마스터 비밀번호를 사용하시겠습니까?"
+    "message": "선택한 마스터 비밀번호는 취약합니다. Bravura Safe 계정을 확실히 보호하려면 강력한 마스터 비밀번호(혹은 패스프레이즈)를 사용해야 합니다. 정말 이 마스터 비밀번호를 사용하시겠습니까?"
   },
   "pin": {
     "message": "PIN",
@@ -1315,7 +1361,7 @@
     "message": "PIN 코드를 사용하여 잠금 해제"
   },
   "setYourPinCode": {
-    "message": "Bitwarden 잠금해제에 사용될 PIN 코드를 설정합니다. 이 애플리케이션에서 완전히 로그아웃할 경우 PIN 설정이 초기화됩니다."
+    "message": "Bravura Safe 잠금해제에 사용될 PIN 코드를 설정합니다. 이 애플리케이션에서 완전히 로그아웃할 경우 PIN 설정이 초기화됩니다."
   },
   "pinRequired": {
     "message": "PIN 코드가 필요합니다."
@@ -1335,11 +1381,11 @@
   "touchIdConsentMessage": {
     "message": "보관함 잠금 해제"
   },
-  "noAutoPromptWindowsHello": {
-    "message": "시작할 때 Windows Hello 요구하지 않음"
+  "autoPromptWindowsHello": {
+    "message": "Ask for Windows Hello on launch"
   },
-  "noAutoPromptTouchId": {
-    "message": "시작할 때 Touch ID 요구하지 않음"
+  "autoPromptTouchId": {
+    "message": "Ask for Touch ID on launch"
   },
   "lockWithMasterPassOnRestart": {
     "message": "다시 시작 시 마스터 비밀번호로 잠금"
@@ -1506,17 +1552,17 @@
   "enableBrowserIntegrationDesc": {
     "message": "브라우저와 연결하면 브라우저에서 생체 인식을 사용할 수 있습니다."
   },
-  "browserIntegrationMasOnlyTitle": {
-    "message": "브라우저와 연결 지원되지 않음"
+  "browserIntegrationUnsupportedTitle": {
+    "message": "Browser integration not supported"
   },
   "browserIntegrationMasOnlyDesc": {
     "message": "브라우저와 연결은 현재 Mac App Store 버전에서만 지원됩니다."
   },
-  "browserIntegrationWindowsStoreTitle": {
-    "message": "브라우저와 연결 지원되지 않음"
-  },
   "browserIntegrationWindowsStoreDesc": {
     "message": "현재 Microsoft Store 버전에서는 브라우저와 연결이 지원되지 않습니다."
+  },
+  "browserIntegrationLinuxDesc": {
+    "message": "Unfortunately browser integration is currently not supported in the linux version."
   },
   "enableBrowserIntegrationFingerprint": {
     "message": "브라우저와 연결을 위해 인증이 필요함"
@@ -1549,8 +1595,8 @@
     "message": "조직의 정책이 소유권 설정에 영향을 미치고 있습니다."
   },
   "allSends": {
-    "message": "모든 Send",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "모든 Share",
+    "description": "'Shares' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "파일"
@@ -1559,12 +1605,12 @@
     "message": "텍스트"
   },
   "searchSends": {
-    "message": "Send 검색",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share 검색",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editSend": {
-    "message": "Send 편집",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share 편집",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "myVault": {
     "message": "내 보관함"
@@ -1577,71 +1623,72 @@
   },
   "deletionDateDesc": {
     "message": "이 Send가 정해진 일시에 영구적으로 삭제됩니다.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
     "message": "만료 날짜"
   },
   "expirationDateDesc": {
     "message": "설정할 경우, 이 Send에 대한 접근 권한이 정해진 일시에 만료됩니다.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCount": {
-    "message": "최대 접근 횟수"
+    "message": "최대 접근 횟수",
+    "description": "This text will be displayed after a Send has been accessed the maximum amount of times."
   },
   "maxAccessCountDesc": {
     "message": "설정할 경우, 최대 접근 횟수에 도달할 때 이 Send에 접근할 수 없게 됩니다.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "현재 접근 횟수"
   },
   "disableSend": {
     "message": "이 Send를 비활성화하여 아무도 접근할 수 없게 합니다.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendPasswordDesc": {
     "message": "이 Send에 접근하기 위해 암호를 입력하도록 선택적으로 요구합니다.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendNotesDesc": {
     "message": "이 Send에 대한 비공개 메모",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLink": {
     "message": "링크 보내기",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendLinkLabel": {
     "message": "링크 보내기",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "textHiddenByDefault": {
     "message": "Send에 접근할 때 기본적으로 텍스트를 숨김",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createdSend": {
-    "message": "Send 생성함",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share 생성함",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "editedSend": {
-    "message": "Send 수정함",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share 수정함",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "deletedSend": {
-    "message": "Send 삭제함",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share 삭제함",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "newPassword": {
     "message": "새 비밀번호"
   },
   "whatTypeOfSend": {
     "message": "어떤 유형의 Send인가요?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "createSend": {
-    "message": "Send 생성",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share 생성",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "전송하려는 텍스트"
@@ -1666,22 +1713,22 @@
   },
   "deleteSendConfirmation": {
     "message": "정말 이 Send를 삭제하시겠습니까?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkToClipboard": {
-    "message": "Send 링크를 클립보드에 복사",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share 링크를 클립보드에 복사",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copySendLinkOnSave": {
     "message": "저장할 때 이 Send를 공유하기 위한 링크를 클립보드에 복사합니다."
   },
   "sendDisabled": {
-    "message": "Send 비활성화됨",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share 비활성화됨",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "엔터프라이즈 정책으로 인해 이미 생성된 Send를 삭제하는 것만 허용됩니다.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "copyLink": {
     "message": "링크 복사"
@@ -1705,7 +1752,7 @@
     "message": "받는 사람으로부터 나의 이메일 주소 숨기기"
   },
   "sendOptionsPolicyInEffect": {
-    "message": "하나 이상의 단체 정책이 Send 설정에 영향을 미치고 있습니다."
+    "message": "하나 이상의 단체 정책이 Share 설정에 영향을 미치고 있습니다."
   },
   "emailVerificationRequired": {
     "message": "이메일 인증 필요함"
@@ -1792,8 +1839,8 @@
   "leftOrganization": {
     "message": "조직을 떠났습니다."
   },
-  "ssoKeyConnectorUnavailable": {
-    "message": "키 제공자와 통신할 수 없습니다. 다시 시도해보세요."
+  "ssoKeyConnectorError": {
+    "message": "키 커넥터 오류: 키 커넥터가 사용 가능한지 및 정상적으로 작동하고 있는지 확인해주세요."
   },
   "lockAllVaults": {
     "message": "모든 보관함 잠그기"
@@ -1832,13 +1879,19 @@
     "message": "개인 보관함을 내보내는 중"
   },
   "exportingPersonalVaultDescription": {
-    "message": "Only the personal vault items associated with $EMAIL$ will be exported. Organization vault items will not be included.",
+    "message": "$EMAIL$ 이메일과 관련이 있는 개인 보관함 항목만 내보내집니다. 조직의 보관함 항목은 포함되지 않습니다.",
     "placeholders": {
       "email": {
         "content": "$1",
         "example": "name@example.com"
       }
     }
+  },
+  "locked": {
+    "message": "잠김"
+  },
+  "unlocked": {
+    "message": "잠금 해제됨"
   },
   "generator": {
     "message": "생성기"
@@ -1859,16 +1912,17 @@
     "message": "아이디 유형"
   },
   "plusAddressedEmail": {
-    "message": "Plus Addressed Email"
+    "message": "플러스 주소 이메일",
+    "description": "Username generator option that appends a random sub-address to the username. For example: address+subaddress@email.com"
   },
   "plusAddressedEmailDesc": {
-    "message": "Use your email provider's sub-addressing capabilities."
+    "message": "이메일 제공업체의 하위 이메일 주소 생성을 사용하세요."
   },
   "catchallEmail": {
-    "message": "Catch-all Email"
+    "message": "Catch-all 이메일"
   },
   "catchallEmailDesc": {
-    "message": "Use your domain's configured catch-all inbox."
+    "message": "catch-all이 설정된 내 도메인의 메일함을 사용하세요."
   },
   "random": {
     "message": "무작위"
@@ -1881,5 +1935,30 @@
   },
   "service": {
     "message": "서비스"
+  },
+  "allVaults": {
+    "message": "모든 보관함"
+  },
+  "searchOrganization": {
+    "message": "조직 검색"
+  },
+  "searchMyVault": {
+    "message": "내 보관함 검색"
+  },
+  "forwardedEmail": {
+    "message": "포워딩된 이메일 별칭"
+  },
+  "forwardedEmailDesc": {
+    "message": "외부 포워딩 서비스를 사용해서 이메일 주소 별칭을 만들어보세요."
+  },
+  "hostname": {
+    "message": "호스트 이름",
+    "description": "Part of a URL."
+  },
+  "apiAccessToken": {
+    "message": "API 액세스 토큰"
+  },
+  "apiKey": {
+    "message": "API 키"
   }
 }

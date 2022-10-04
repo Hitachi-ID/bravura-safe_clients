@@ -17,7 +17,7 @@ const common = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        exclude: /.*(bwi-font)\.svg/,
+        exclude: /.*(fontawesome-webfont)\.svg/,
         generator: {
           filename: "images/[name][ext]",
         },
@@ -28,11 +28,8 @@ const common = {
   plugins: [],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
-    alias: {
-      jslib: path.join(__dirname, "jslib/src"),
-    },
     symlinks: false,
-    modules: [path.resolve("node_modules")],
+    modules: [path.resolve("../../node_modules")],
   },
   output: {
     filename: "[name].js",

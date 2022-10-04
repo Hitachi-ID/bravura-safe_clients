@@ -1,0 +1,299 @@
+.filter {
+  padding-bottom: 10px;
+}
+
+.filter-heading {
+  display: inline-flex;
+  position: relative;
+  margin-bottom: 0.25rem;
+  padding-bottom: 1px;
+  width: 100%;
+  margin-top: 10px;
+
+  * {
+    @include themify($themes) {
+      color: themed("headingColor");
+    }
+    font-size: $font-size-base;
+  }
+
+  button {
+    @extend .no-btn;
+  }
+
+  h3.d-flex {
+    margin-left: 21px;
+  }
+
+  h3,
+  button.filter-button {
+    @include themify($themes) {
+      color: themed("textMuted");
+    }
+  }
+
+  button.filter-button {
+    &:hover,
+    &:focus,
+    &.active {
+      @include themify($themes) {
+        color: themed("linkColor") !important;
+      }
+    }
+    &.active {
+      font-weight: bold;
+    }
+  }
+
+  button.toggle-button {
+    &:hover,
+    &:focus {
+      @include themify($themes) {
+        color: themed("iconHover") !important;
+      }
+    }
+  }
+}
+
+.filter-heading.expandedGrouping {
+  $c: &;
+  @at-root {
+    #{$c}::after {
+      background-color: #c00;
+      bottom: 0;
+      content: "";
+      height: 2px;
+      left: 1.5rem;
+      margin-left: 1px;
+      position: absolute;
+      width: 4ch;
+    }
+  }
+}
+
+.filter-options {
+  padding: 0;
+  list-style: none;
+  margin: 0 0 15px 0;
+  .nested-filter-options {
+    list-style: none;
+    margin-bottom: 0px;
+    padding-left: 0;
+  }
+
+  li {
+    word-break: keep-all;
+
+    line-height: 30px;
+    span.filter-buttons {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: baseline;
+      line-height: 1.5rem;
+      button.filter-button > i.text-muted {
+        align-self: flex-start;
+      }
+    }
+    &.active > span {
+      @include filterPanelActive;
+    }
+    > span:hover {
+      @include filterPanelHover;
+    }
+    & > button > i {
+      padding-left: 1.5rem;
+    }
+    &.expand {
+      ul.folder-filters.carets {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0 !important;
+      }
+    }
+  }
+
+  &.carets {
+    margin-left: 1.1em;
+  }
+
+  &.no-margin {
+    margin-left: 0;
+  }
+
+  .fa-li {
+    align-self: flex-start;
+    position: static;
+    text-align: center;
+    width: 1.2857142857em;
+  }
+}
+
+ul.filter-options > li.filter-option > span.filter-buttons {
+  @include recursiveIndent();
+}
+
+.filter-option {
+  @include themify($themes) {
+    color: themed("textColor");
+  }
+
+  &.active {
+    > .filter-buttons {
+      .filter-button,
+      .edit-button {
+        @include themify($themes) {
+          color: themed("linkColor") !important;
+        }
+        font-weight: bold;
+      }
+
+      .edit-button {
+        visibility: visible;
+      }
+    }
+  }
+}
+// filter options and buttons vertical spacing
+// filter-button containers should have no spacing
+// filter-button vertical margin should set height to container 'li'
+ul.filter-options li.filter-option {
+  span.filter-buttons {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    .filter-button {
+      margin: 6px 0;
+      // Icons in buttons should have no vertica padding
+      .fa {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.filter-buttons {
+  display: flex;
+  align-items: center;
+
+  button,
+  a {
+    @extend .no-btn;
+  }
+
+  .toggle-button {
+    &:hover,
+    &:focus {
+      @include themify($themes) {
+        color: themed("iconHover") !important;
+      }
+    }
+  }
+
+  .filter-button {
+    &:hover,
+    &:focus,
+    &:active {
+      @include themify($themes) {
+        color: themed("linkColor") !important;
+      }
+      text-decoration: none;
+    }
+    &.flex-grow-align {
+      flex-grow: 1;
+      text-align: left;
+    }
+  }
+
+  .edit-button {
+    margin-left: auto;
+
+    @include themify($themes) {
+      color: themed("headingButtonColor");
+    }
+
+    &:hover,
+    &:focus {
+      @include themify($themes) {
+        color: themed("iconHover") !important;
+      }
+    }
+  }
+}
+
+.groupings {
+  .card {
+    #search {
+      @include themify($themes) {
+        background-color: themed("inputBackgroundColor");
+        border-color: themed("inputBorderColor");
+        color: themed("inputTextColor");
+      }
+
+      &::placeholder {
+        @include themify($themes) {
+          color: themed("inputPlaceholderColor");
+        }
+      }
+    }
+
+    h3 {
+      font-weight: normal;
+      text-transform: uppercase;
+      @include themify($themes) {
+        color: themed("textMuted");
+      }
+    }
+
+    ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .card-body a {
+      @include themify($themes) {
+        color: themed("textHeadingColor");
+        font-weight: themed("linkWeight");
+      }
+
+      &:hover {
+        &.text-muted {
+        }
+      }
+    }
+    .show-active {
+      display: none;
+    }
+    li.active {
+      > .show-active,
+      > div .show-active {
+        display: inline;
+      }
+    }
+    li.active {
+      > button:first-of-type,
+      > div button:first-of-type {
+        @include themify($themes) {
+          color: themed("linkColor");
+        }
+      }
+
+      > .fa,
+      > div > .fa {
+        @include themify($themes) {
+          color: themed("linkColor");
+        }
+      }
+    }
+  }
+}
+
+.org-dropdown-container {
+  height: $org-dropdown-container-height;
+}
+
+.vault-filters.card {
+  margin: 0;
+}

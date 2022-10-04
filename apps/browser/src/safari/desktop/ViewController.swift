@@ -2,8 +2,8 @@ import Cocoa
 import SafariServices.SFSafariApplication
 import SafariServices.SFSafariExtensionManager
 
-let appName = "desktop"
-let extensionBundleIdentifier = "com.bitwarden.desktop.Extension"
+let appName = "Bravura Safe"
+let extensionBundleIdentifier = "com.hitachiid.desktop"
 
 class ViewController: NSViewController {
 

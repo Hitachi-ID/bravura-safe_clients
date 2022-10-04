@@ -1,33 +1,33 @@
-import { ApiService } from "jslib-common/abstractions/api.service";
-import { AuditService } from "jslib-common/abstractions/audit.service";
-import { CipherService } from "jslib-common/abstractions/cipher.service";
-import { CollectionService } from "jslib-common/abstractions/collection.service";
-import { CryptoService } from "jslib-common/abstractions/crypto.service";
-import { FolderService } from "jslib-common/abstractions/folder.service";
-import { OrganizationService } from "jslib-common/abstractions/organization.service";
-import { SearchService } from "jslib-common/abstractions/search.service";
-import { StateService } from "jslib-common/abstractions/state.service";
-import { TotpService } from "jslib-common/abstractions/totp.service";
-import { CipherType } from "jslib-common/enums/cipherType";
-import { SendType } from "jslib-common/enums/sendType";
-import { Utils } from "jslib-common/misc/utils";
-import { EncString } from "jslib-common/models/domain/encString";
-import { Organization } from "jslib-common/models/domain/organization";
-import { CardExport } from "jslib-common/models/export/cardExport";
-import { CipherExport } from "jslib-common/models/export/cipherExport";
-import { CollectionExport } from "jslib-common/models/export/collectionExport";
-import { FieldExport } from "jslib-common/models/export/fieldExport";
-import { FolderExport } from "jslib-common/models/export/folderExport";
-import { IdentityExport } from "jslib-common/models/export/identityExport";
-import { LoginExport } from "jslib-common/models/export/loginExport";
-import { LoginUriExport } from "jslib-common/models/export/loginUriExport";
-import { SecureNoteExport } from "jslib-common/models/export/secureNoteExport";
-import { ErrorResponse } from "jslib-common/models/response/errorResponse";
-import { CipherView } from "jslib-common/models/view/cipherView";
-import { CollectionView } from "jslib-common/models/view/collectionView";
-import { FolderView } from "jslib-common/models/view/folderView";
-import { Response } from "jslib-node/cli/models/response";
-import { StringResponse } from "jslib-node/cli/models/response/stringResponse";
+import { ApiService } from "@bitwarden/common/abstractions/api.service";
+import { AuditService } from "@bitwarden/common/abstractions/audit.service";
+import { CipherService } from "@bitwarden/common/abstractions/cipher.service";
+import { CollectionService } from "@bitwarden/common/abstractions/collection.service";
+import { CryptoService } from "@bitwarden/common/abstractions/crypto.service";
+import { FolderService } from "@bitwarden/common/abstractions/folder.service";
+import { OrganizationService } from "@bitwarden/common/abstractions/organization.service";
+import { SearchService } from "@bitwarden/common/abstractions/search.service";
+import { StateService } from "@bitwarden/common/abstractions/state.service";
+import { TotpService } from "@bitwarden/common/abstractions/totp.service";
+import { CipherType } from "@bitwarden/common/enums/cipherType";
+import { SendType } from "@bitwarden/common/enums/sendType";
+import { Utils } from "@bitwarden/common/misc/utils";
+import { EncString } from "@bitwarden/common/models/domain/encString";
+import { Organization } from "@bitwarden/common/models/domain/organization";
+import { CardExport } from "@bitwarden/common/models/export/cardExport";
+import { CipherExport } from "@bitwarden/common/models/export/cipherExport";
+import { CollectionExport } from "@bitwarden/common/models/export/collectionExport";
+import { FieldExport } from "@bitwarden/common/models/export/fieldExport";
+import { FolderExport } from "@bitwarden/common/models/export/folderExport";
+import { IdentityExport } from "@bitwarden/common/models/export/identityExport";
+import { LoginExport } from "@bitwarden/common/models/export/loginExport";
+import { LoginUriExport } from "@bitwarden/common/models/export/loginUriExport";
+import { SecureNoteExport } from "@bitwarden/common/models/export/secureNoteExport";
+import { ErrorResponse } from "@bitwarden/common/models/response/errorResponse";
+import { CipherView } from "@bitwarden/common/models/view/cipherView";
+import { CollectionView } from "@bitwarden/common/models/view/collectionView";
+import { FolderView } from "@bitwarden/common/models/view/folderView";
+import { Response } from "@bitwarden/node/cli/models/response";
+import { StringResponse } from "@bitwarden/node/cli/models/response/stringResponse";
 
 import { OrganizationCollectionRequest } from "../models/request/organizationCollectionRequest";
 import { CipherResponse } from "../models/response/cipherResponse";
@@ -206,7 +206,7 @@ export class GetCommand extends DownloadCommand {
       cipher.login.uris.length === 0 ||
       cipher.login.uris[0].uri === ""
     ) {
-      return Response.error("No uri available for this login.");
+      return Response.error("No url available for this login.");
     }
 
     const res = new StringResponse(cipher.login.uris[0].uri);
@@ -413,7 +413,7 @@ export class GetCommand extends DownloadCommand {
     try {
       const orgKey = await this.cryptoService.getOrgKey(options.organizationId);
       if (orgKey == null) {
-        throw new Error("No encryption key for this organization.");
+        throw new Error("No encryption key for this team.");
       }
 
       const response = await this.apiService.getCollectionDetails(options.organizationId, id);

@@ -1,4 +1,4 @@
-import { Utils } from "jslib-common/misc/utils";
+import { Utils } from "@bitwarden/common/misc/utils";
 
 import { SafariApp } from "./safariApp";
 
@@ -100,6 +100,10 @@ export class BrowserApi {
     return chrome.runtime.getManifest().version;
   }
 
+  static getInternalApplicationVersion(): string {
+    return chrome.runtime.getManifest().internalVersion;
+  }
+
   static async isPopupOpen(): Promise<boolean> {
     return Promise.resolve(chrome.extension.getViews({ type: "popup" }).length > 0);
   }
@@ -122,7 +126,7 @@ export class BrowserApi {
   static async closeLoginTab() {
     const tabs = await BrowserApi.tabsQuery({
       active: true,
-      title: "Bitwarden",
+      title: "Bravura Safe",
       windowType: "normal",
       currentWindow: true,
     });

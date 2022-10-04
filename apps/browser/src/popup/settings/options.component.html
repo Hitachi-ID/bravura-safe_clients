@@ -1,7 +1,7 @@
 <header>
   <div class="left">
     <a routerLink="/tabs/settings">
-      <span class="header-icon"><i class="bwi bwi-angle-left" aria-hidden="true"></i></span>
+      <span class="header-icon"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
       <span>{{ "back" | i18n }}</span>
     </a>
   </div>
@@ -20,8 +20,8 @@
         [attr.aria-expanded]="showGeneral"
       >
         General
-        <i *ngIf="!showGeneral" class="bwi bwi-angle-down bwi-sm icon" aria-hidden="true"></i>
-        <i *ngIf="showGeneral" class="bwi bwi-chevron-up bwi-sm icon" aria-hidden="true"></i>
+        <i *ngIf="!showGeneral" class="fa fa-chevron-down fa-sm icon" aria-hidden="true"></i>
+        <i *ngIf="showGeneral" class="fa fa-chevron-up fa-sm icon" aria-hidden="true"></i>
       </button>
     </h2>
   </div>
@@ -63,12 +63,12 @@
     <div class="box">
       <div class="box-content">
         <div class="box-content-row box-content-row-checkbox" appBoxRow>
-          <label for="totp">{{ "disableAutoTotpCopy" | i18n }}</label>
+          <label for="totp">{{ "enableAutoTotpCopy" | i18n }}</label>
           <input
             id="totp"
             type="checkbox"
             (change)="updateAutoTotpCopy()"
-            [(ngModel)]="disableAutoTotpCopy"
+            [(ngModel)]="enableAutoTotpCopy"
           />
         </div>
       </div>
@@ -77,12 +77,12 @@
     <div class="box">
       <div class="box-content">
         <div class="box-content-row box-content-row-checkbox" appBoxRow>
-          <label for="addlogin-notification-bar">{{ "disableAddLoginNotification" | i18n }}</label>
+          <label for="addlogin-notification-bar">{{ "enableAddLoginNotification" | i18n }}</label>
           <input
             id="addlogin-notification-bar"
             type="checkbox"
             (change)="updateAddLoginNotification()"
-            [(ngModel)]="disableAddLoginNotification"
+            [(ngModel)]="enableAddLoginNotification"
           />
         </div>
       </div>
@@ -92,31 +92,31 @@
       <div class="box-content">
         <div class="box-content-row box-content-row-checkbox" appBoxRow>
           <label for="changedpass-notification-bar">{{
-            "disableChangedPasswordNotification" | i18n
+            "enableChangedPasswordNotification" | i18n
           }}</label>
           <input
             id="changedpass-notification-bar"
             type="checkbox"
             (change)="updateChangedPasswordNotification()"
-            [(ngModel)]="disableChangedPasswordNotification"
+            [(ngModel)]="enableChangedPasswordNotification"
           />
         </div>
       </div>
-      <div class="box-footer">{{ "disableChangedPasswordNotificationDesc" | i18n }}</div>
+      <div class="box-footer">{{ "changedPasswordNotificationDesc" | i18n }}</div>
     </div>
     <div class="box">
       <div class="box-content">
         <div class="box-content-row box-content-row-checkbox" appBoxRow>
-          <label for="context-menu">{{ "disableContextMenuItem" | i18n }}</label>
+          <label for="context-menu">{{ "enableContextMenuItem" | i18n }}</label>
           <input
             id="context-menu"
             type="checkbox"
-            (change)="updateDisableContextMenuItem()"
-            [(ngModel)]="disableContextMenuItem"
+            (change)="updateContextMenuItem()"
+            [(ngModel)]="enableContextMenuItem"
           />
         </div>
       </div>
-      <div class="box-footer">{{ "disableContextMenuItemDesc" | i18n }}</div>
+      <div class="box-footer">{{ "contextMenuItemDesc" | i18n }}</div>
     </div>
   </ng-container>
   <div class="box box-section-divider">
@@ -128,8 +128,8 @@
         [attr.aria-expanded]="showDisplay"
       >
         Display
-        <i *ngIf="!showDisplay" class="bwi bwi-angle-down bwi-sm icon" aria-hidden="true"></i>
-        <i *ngIf="showDisplay" class="bwi bwi-chevron-up bwi-sm icon" aria-hidden="true"></i>
+        <i *ngIf="!showDisplay" class="fa fa-chevron-down fa-sm icon" aria-hidden="true"></i>
+        <i *ngIf="showDisplay" class="fa fa-chevron-up fa-sm icon" aria-hidden="true"></i>
       </button>
     </h2>
   </div>
@@ -137,58 +137,58 @@
     <div class="box">
       <div class="box-content">
         <div class="box-content-row box-content-row-checkbox" appBoxRow>
-          <label for="dontShowCards">{{ "dontShowCardsCurrentTab" | i18n }}</label>
+          <label for="showCardsCurrentTab">{{ "showCardsCurrentTab" | i18n }}</label>
           <input
-            id="dontShowCards"
+            id="showCardsCurrentTab"
             type="checkbox"
-            (change)="updateShowCards()"
-            [(ngModel)]="dontShowCards"
+            (change)="updateShowCardsCurrentTab()"
+            [(ngModel)]="showCardsCurrentTab"
           />
         </div>
       </div>
-      <div class="box-footer">{{ "dontShowCardsCurrentTabDesc" | i18n }}</div>
+      <div class="box-footer">{{ "showCardsCurrentTabDesc" | i18n }}</div>
     </div>
     <div class="box">
       <div class="box-content">
         <div class="box-content-row box-content-row-checkbox" appBoxRow>
-          <label for="dontShowIdentities">{{ "dontShowIdentitiesCurrentTab" | i18n }}</label>
+          <label for="showIdentitiesCurrentTab">{{ "showIdentitiesCurrentTab" | i18n }}</label>
           <input
-            id="dontShowIdentities"
+            id="showIdentitiesCurrentTab"
             type="checkbox"
-            (change)="updateShowIdentities()"
-            [(ngModel)]="dontShowIdentities"
+            (change)="updateShowIdentitiesCurrentTab()"
+            [(ngModel)]="showIdentitiesCurrentTab"
           />
         </div>
       </div>
-      <div class="box-footer">{{ "dontShowIdentitiesCurrentTabDesc" | i18n }}</div>
+      <div class="box-footer">{{ "showIdentitiesCurrentTabDesc" | i18n }}</div>
     </div>
     <div class="box">
       <div class="box-content">
         <div class="box-content-row box-content-row-checkbox" appBoxRow>
-          <label for="favicon">{{ "disableFavicon" | i18n }}</label>
+          <label for="favicon">{{ "enableFavicon" | i18n }}</label>
           <input
             id="favicon"
             type="checkbox"
-            (change)="updateDisableFavicon()"
-            [(ngModel)]="disableFavicon"
+            (change)="updateFavicon()"
+            [(ngModel)]="enableFavicon"
           />
         </div>
       </div>
-      <div class="box-footer">{{ "disableFaviconDesc" | i18n }}</div>
+      <div class="box-footer">{{ "faviconDesc" | i18n }}</div>
     </div>
     <div class="box">
       <div class="box-content">
         <div class="box-content-row box-content-row-checkbox" appBoxRow>
-          <label for="badge">{{ "disableBadgeCounter" | i18n }}</label>
+          <label for="badge">{{ "enableBadgeCounter" | i18n }}</label>
           <input
             id="badge"
             type="checkbox"
-            (change)="updateDisableBadgeCounter()"
-            [(ngModel)]="disableBadgeCounter"
+            (change)="updateBadgeCounter()"
+            [(ngModel)]="enableBadgeCounter"
           />
         </div>
       </div>
-      <div class="box-footer">{{ "disableBadgeCounterDesc" | i18n }}</div>
+      <div class="box-footer">{{ "badgeCounterDesc" | i18n }}</div>
     </div>
     <div class="box">
       <div class="box-content">
@@ -211,8 +211,8 @@
         [attr.aria-expanded]="showAutofill"
       >
         Autofill
-        <i *ngIf="!showAutofill" class="bwi bwi-angle-down bwi-sm icon" aria-hidden="true"></i>
-        <i *ngIf="showAutofill" class="bwi bwi-chevron-up bwi-sm icon" aria-hidden="true"></i>
+        <i *ngIf="!showAutofill" class="fa fa-chevron-down fa-sm icon" aria-hidden="true"></i>
+        <i *ngIf="showAutofill" class="fa fa-chevron-up fa-sm icon" aria-hidden="true"></i>
       </button>
     </h2>
   </div>

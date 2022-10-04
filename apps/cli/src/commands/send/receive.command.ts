@@ -1,20 +1,20 @@
 import * as program from "commander";
 import * as inquirer from "inquirer";
 
-import { ApiService } from "jslib-common/abstractions/api.service";
-import { CryptoService } from "jslib-common/abstractions/crypto.service";
-import { CryptoFunctionService } from "jslib-common/abstractions/cryptoFunction.service";
-import { EnvironmentService } from "jslib-common/abstractions/environment.service";
-import { PlatformUtilsService } from "jslib-common/abstractions/platformUtils.service";
-import { SendType } from "jslib-common/enums/sendType";
-import { NodeUtils } from "jslib-common/misc/nodeUtils";
-import { Utils } from "jslib-common/misc/utils";
-import { SendAccess } from "jslib-common/models/domain/sendAccess";
-import { SymmetricCryptoKey } from "jslib-common/models/domain/symmetricCryptoKey";
-import { SendAccessRequest } from "jslib-common/models/request/sendAccessRequest";
-import { ErrorResponse } from "jslib-common/models/response/errorResponse";
-import { SendAccessView } from "jslib-common/models/view/sendAccessView";
-import { Response } from "jslib-node/cli/models/response";
+import { ApiService } from "@bitwarden/common/abstractions/api.service";
+import { CryptoService } from "@bitwarden/common/abstractions/crypto.service";
+import { CryptoFunctionService } from "@bitwarden/common/abstractions/cryptoFunction.service";
+import { EnvironmentService } from "@bitwarden/common/abstractions/environment.service";
+import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
+import { SendType } from "@bitwarden/common/enums/sendType";
+import { NodeUtils } from "@bitwarden/common/misc/nodeUtils";
+import { Utils } from "@bitwarden/common/misc/utils";
+import { SendAccess } from "@bitwarden/common/models/domain/sendAccess";
+import { SymmetricCryptoKey } from "@bitwarden/common/models/domain/symmetricCryptoKey";
+import { SendAccessRequest } from "@bitwarden/common/models/request/sendAccessRequest";
+import { ErrorResponse } from "@bitwarden/common/models/response/errorResponse";
+import { SendAccessView } from "@bitwarden/common/models/view/sendAccessView";
+import { Response } from "@bitwarden/node/cli/models/response";
 
 import { SendAccessResponse } from "../../models/response/sendAccessResponse";
 import { DownloadCommand } from "../download.command";
@@ -41,14 +41,14 @@ export class SendReceiveCommand extends DownloadCommand {
     try {
       urlObject = new URL(url);
     } catch (e) {
-      return Response.badRequest("Failed to parse the provided Send url");
+      return Response.badRequest("Failed to parse the provided Share url");
     }
 
     const apiUrl = this.getApiUrl(urlObject);
     const [id, key] = this.getIdAndKey(urlObject);
 
     if (Utils.isNullOrWhitespace(id) || Utils.isNullOrWhitespace(key)) {
-      return Response.badRequest("Failed to parse url, the url provided is not a valid Send url");
+      return Response.badRequest("Failed to parse url, the url provided is not a valid Share url");
     }
 
     const keyArray = Utils.fromUrlB64ToArray(key);
@@ -108,8 +108,8 @@ export class SendReceiveCommand extends DownloadCommand {
 
   private getApiUrl(url: URL) {
     const urls = this.environmentService.getUrls();
-    if (url.origin === "https://send.bitwarden.com") {
-      return "https://vault.bitwarden.com/api";
+    if (url.origin === "https://send.bravurasecurity.com") {
+      return "https://vault.bravurasecurity.com/api";
     } else if (url.origin === urls.api) {
       return url.origin;
     } else if (this.platformUtilsService.isDev() && url.origin === urls.webVault) {

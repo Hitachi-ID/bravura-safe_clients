@@ -1,13 +1,13 @@
 import * as chalk from "chalk";
 import * as program from "commander";
 
-import { AuthenticationStatus } from "jslib-common/enums/authenticationStatus";
-import { KeySuffixOptions } from "jslib-common/enums/keySuffixOptions";
-import { BaseProgram } from "jslib-node/cli/baseProgram";
-import { LogoutCommand } from "jslib-node/cli/commands/logout.command";
-import { UpdateCommand } from "jslib-node/cli/commands/update.command";
-import { Response } from "jslib-node/cli/models/response";
-import { MessageResponse } from "jslib-node/cli/models/response/messageResponse";
+import { AuthenticationStatus } from "@bitwarden/common/enums/authenticationStatus";
+import { KeySuffixOptions } from "@bitwarden/common/enums/keySuffixOptions";
+import { BaseProgram } from "@bitwarden/node/cli/baseProgram";
+import { LogoutCommand } from "@bitwarden/node/cli/commands/logout.command";
+import { UpdateCommand } from "@bitwarden/node/cli/commands/update.command";
+import { Response } from "@bitwarden/node/cli/models/response";
+import { MessageResponse } from "@bitwarden/node/cli/models/response/messageResponse";
 
 import { Main } from "./bw";
 import { CompletionCommand } from "./commands/completion.command";
@@ -39,7 +39,7 @@ export class Program extends BaseProgram {
       .option("--quiet", "Don't return anything to stdout.")
       .option("--nointeraction", "Do not prompt for interactive user input.")
       .option("--session <session>", "Pass session key instead of reading from env.")
-      .version(await this.main.platformUtilsService.getApplicationVersion(), "-v, --version");
+      .version(await this.main.platformUtilsService.getInternalApplicationVersion(), "-v, --version");
 
     program.on("option:pretty", () => {
       process.env.BW_PRETTY = "true";
@@ -78,26 +78,26 @@ export class Program extends BaseProgram {
     program.on("--help", () => {
       writeLn("\n  Examples:");
       writeLn("");
-      writeLn("    bw login");
-      writeLn("    bw lock");
-      writeLn("    bw unlock myPassword321");
-      writeLn("    bw list --help");
-      writeLn("    bw list items --search google");
-      writeLn("    bw get item 99ee88d2-6046-4ea7-92c2-acac464b1412");
-      writeLn("    bw get password google.com");
-      writeLn('    echo \'{"name":"My Folder"}\' | bw encode');
-      writeLn("    bw create folder eyJuYW1lIjoiTXkgRm9sZGVyIn0K");
+      writeLn("    bsafe login");
+      writeLn("    bsafe lock");
+      writeLn("    bsafe unlock myPassword321");
+      writeLn("    bsafe list --help");
+      writeLn("    bsafe list items --search google");
+      writeLn("    bsafe get item 99ee88d2-6046-4ea7-92c2-acac464b1412");
+      writeLn("    bsafe get password google.com");
+      writeLn('    echo {"name":"My Folder"} | bsafe encode');
+      writeLn("    bsafe create folder eyJuYW1lIjoiTXkgRm9sZGVyIn0K");
       writeLn(
-        "    bw edit folder c7c7b60b-9c61-40f2-8ccd-36c49595ed72 eyJuYW1lIjoiTXkgRm9sZGVyMiJ9Cg=="
+        "    bsafe edit folder c7c7b60b-9c61-40f2-8ccd-36c49595ed72 eyJuYW1lIjoiTXkgRm9sZGVyMiJ9Cg=="
       );
-      writeLn("    bw delete item 99ee88d2-6046-4ea7-92c2-acac464b1412");
-      writeLn("    bw generate -lusn --length 18");
-      writeLn("    bw config server https://bitwarden.example.com");
-      writeLn("    bw send -f ./file.ext");
-      writeLn('    bw send "text to send"');
-      writeLn('    echo "text to send" | bw send');
+      writeLn("    bsafe delete item 99ee88d2-6046-4ea7-92c2-acac464b1412");
+      writeLn("    bsafe generate -lusn --length 18");
+      writeLn("    bsafe config server https://bravurasecurity.com");
+      writeLn("    bsafe share -f ./file.ext");
+      writeLn('    bsafe share "text to share"');
+      writeLn('    echo "text to share" | bsafe share');
       writeLn(
-        "    bw receive https://vault.bitwarden.com/#/send/rg3iuoS_Akm2gqy6ADRHmg/Ht7dYjsqjmgqUM3rjzZDSQ"
+        "    bsafe receive https://bravurasecurity.com/#/send/rg3iuoS_Akm2gqy6ADRHmg/Ht7dYjsqjmgqUM3rjzZDSQ"
       );
       writeLn("", true);
     });
@@ -107,7 +107,6 @@ export class Program extends BaseProgram {
       .description("Log into a user account.")
       .option("--method <method>", "Two-step login method.")
       .option("--code <code>", "Two-step login code.")
-      .option("--sso", "Log in with Single-Sign On.")
       .option("--apikey", "Log in with an Api Key.")
       .option("--passwordenv <passwordenv>", "Environment variable storing your password")
       .option(
@@ -131,10 +130,9 @@ export class Program extends BaseProgram {
         writeLn("");
         writeLn("  Examples:");
         writeLn("");
-        writeLn("    bw login");
-        writeLn("    bw login john@example.com myPassword321 --raw");
-        writeLn("    bw login john@example.com myPassword321 --method 1 --code 249213");
-        writeLn("    bw login --sso");
+        writeLn("    bsafe login");
+        writeLn("    bsafe login john@example.com myPassword321 --raw");
+        writeLn("    bsafe login john@example.com myPassword321 --method 1 --code 249213");
         writeLn("", true);
       })
       .action(async (email: string, password: string, options: program.OptionValues) => {
@@ -167,7 +165,7 @@ export class Program extends BaseProgram {
       .on("--help", () => {
         writeLn("\n  Examples:");
         writeLn("");
-        writeLn("    bw logout");
+        writeLn("    bsafe logout");
         writeLn("", true);
       })
       .action(async (cmd) => {
@@ -187,7 +185,7 @@ export class Program extends BaseProgram {
       .on("--help", () => {
         writeLn("\n  Examples:");
         writeLn("");
-        writeLn("    bw lock");
+        writeLn("    bsafe lock");
         writeLn("", true);
       })
       .action(async (cmd) => {
@@ -227,9 +225,9 @@ export class Program extends BaseProgram {
         writeLn("");
         writeLn("  Examples:");
         writeLn("");
-        writeLn("    bw unlock");
-        writeLn("    bw unlock myPassword321");
-        writeLn("    bw unlock myPassword321 --raw");
+        writeLn("    bsafe unlock");
+        writeLn("    bsafe unlock myPassword321");
+        writeLn("    bsafe unlock myPassword321 --raw");
         writeLn("", true);
       })
       .option("--check", "Check lock status.", async () => {
@@ -275,9 +273,9 @@ export class Program extends BaseProgram {
       .on("--help", () => {
         writeLn("\n  Examples:");
         writeLn("");
-        writeLn("    bw sync");
-        writeLn("    bw sync -f");
-        writeLn("    bw sync --last");
+        writeLn("    bsafe sync");
+        writeLn("    bsafe sync -f");
+        writeLn("    bsafe sync --last");
         writeLn("", true);
       })
       .action(async (cmd) => {
@@ -311,12 +309,12 @@ export class Program extends BaseProgram {
         writeLn("");
         writeLn("  Examples:");
         writeLn("");
-        writeLn("    bw generate");
-        writeLn("    bw generate -u -l --length 18");
-        writeLn("    bw generate -ulns --length 25");
-        writeLn("    bw generate -ul");
-        writeLn("    bw generate -p --separator _");
-        writeLn("    bw generate -p --words 5 --separator space");
+        writeLn("    bsafe generate");
+        writeLn("    bsafe generate -u -l --length 18");
+        writeLn("    bsafe generate -ulns --length 25");
+        writeLn("    bsafe generate -ul");
+        writeLn("    bsafe generate -p --separator _");
+        writeLn("    bsafe generate -p --words 5 --separator space");
         writeLn("", true);
       })
       .action(async (options) => {
@@ -338,7 +336,7 @@ export class Program extends BaseProgram {
         writeLn("");
         writeLn("  Examples:");
         writeLn("");
-        writeLn('    echo \'{"name":"My Folder"}\' | bw encode');
+        writeLn('    echo {"name":"My Folder"} | bsafe encode');
         writeLn("", true);
       })
       .action(async () => {
@@ -365,7 +363,6 @@ export class Program extends BaseProgram {
         "Provides a custom notifications URL that differs from the base URL."
       )
       .option("--events <url>", "Provides a custom events URL that differs from the base URL.")
-      .option("--key-connector <url>", "Provides the URL for your Key Connector server.")
       .on("--help", () => {
         writeLn("\n  Settings:");
         writeLn("");
@@ -373,45 +370,17 @@ export class Program extends BaseProgram {
         writeLn("");
         writeLn("  Examples:");
         writeLn("");
-        writeLn("    bw config server");
-        writeLn("    bw config server https://bw.company.com");
-        writeLn("    bw config server bitwarden.com");
+        writeLn("    bsafe config server");
+        writeLn("    bsafe config server https://bravurasecurity.com");
+        writeLn("    bsafe config server bravurasecurity.com");
         writeLn(
-          "    bw config server --api http://localhost:4000 --identity http://localhost:33656"
+          "    bsafe config server --api http://localhost:4000 --identity http://localhost:33656"
         );
         writeLn("", true);
       })
       .action(async (setting, value, options) => {
         const command = new ConfigCommand(this.main.environmentService);
         const response = await command.run(setting, value, options);
-        this.processResponse(response);
-      });
-
-    program
-      .command("update")
-      .description("Check for updates.")
-      .on("--help", () => {
-        writeLn("\n  Notes:");
-        writeLn("");
-        writeLn("    Returns the URL to download the newest version of this CLI tool.");
-        writeLn("");
-        writeLn("    Use the `--raw` option to return only the download URL for the update.");
-        writeLn("");
-        writeLn("  Examples:");
-        writeLn("");
-        writeLn("    bw update");
-        writeLn("    bw update --raw");
-        writeLn("", true);
-      })
-      .action(async () => {
-        const command = new UpdateCommand(
-          this.main.platformUtilsService,
-          this.main.i18nService,
-          "cli",
-          "bw",
-          true
-        );
-        const response = await command.run();
         this.processResponse(response);
       });
 
@@ -426,7 +395,7 @@ export class Program extends BaseProgram {
         writeLn("");
         writeLn("  Examples:");
         writeLn("");
-        writeLn("    bw completion --shell zsh");
+        writeLn("    bsafe completion --shell zsh");
         writeLn("", true);
       })
       .action(async (options: program.OptionValues, cmd: program.Command) => {
@@ -444,9 +413,9 @@ export class Program extends BaseProgram {
         writeLn("  Example return value:");
         writeLn("");
         writeLn("    {");
-        writeLn('      "serverUrl": "https://bitwarden.example.com",');
+        writeLn('      "serverUrl": "https://bravurasecurity.com",');
         writeLn('      "lastSync": "2020-06-16T06:33:51.419Z",');
-        writeLn('      "userEmail": "user@example.com,');
+        writeLn('      "userEmail": "user@example.com",');
         writeLn('      "userId": "00000000-0000-0000-0000-000000000000",');
         writeLn('      "status": "locked"');
         writeLn("    }");
@@ -485,9 +454,9 @@ export class Program extends BaseProgram {
           writeLn("");
           writeLn("  Examples:");
           writeLn("");
-          writeLn("    bw serve");
-          writeLn("    bw serve --port 8080");
-          writeLn("    bw serve --hostname bwapi.mydomain.com --port 80");
+          writeLn("    bsafe serve");
+          writeLn("    bsafe serve --port 8080");
+          writeLn("    bsafe serve --hostname bwapi.mydomain.com --port 80");
           writeLn("", true);
         })
         .action(async (cmd) => {

@@ -1,0 +1,38 @@
+@mixin filterPanelActive {
+  border-radius: 0 10px 10px 0;
+  @include themify($themes) {
+    background-color: themed("filterPanelActiveBackgroundColor");
+    color: themed("filterPanelActiveColor");
+  }
+  // make sure filter panel color won't be replaced by a child link color
+  & span {
+    font-weight: 700;
+    @include themify($themes) {
+      color: themed("filterPanelActiveColor") !important;
+    }
+  }
+}
+
+@mixin filterPanelHover {
+  border-left-color: rgba(103, 103, 103, 0.4);
+  border-radius: 0 10px 10px 0;
+  @include themify($themes) {
+    background-color: themed("filterPanelHoverBackgroundColor");
+    color: themed("filterPanelHoverColor");
+  }
+  // make sure filter panel color won't be replaced by a child link color
+  & span {
+    @include themify($themes) {
+      color: themed("filterPanelHoverColor");
+    }
+  }
+}
+
+@mixin recursiveIndent($default: 0) {
+  padding-left: $default * 1px;
+  @if $default <= 85 {
+    & + ul.nested-filter-options > li.filter-option > span.filter-buttons {
+      @include recursiveIndent($default + 17);
+    }
+  }
+}
