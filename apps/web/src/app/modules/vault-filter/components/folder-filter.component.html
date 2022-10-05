@@ -50,7 +50,7 @@
             (click)="toggleCollapse(f.node)"
             [attr.aria-expanded]="!isCollapsed(f.node)"
             [attr.aria-controls]="f.node.name + '_children'"
-            class="toggle-button text-muted"
+            class="toggle-button text-muted flex-shrink-0"
           >
             <i
               class="fa fa-fw"
@@ -72,7 +72,7 @@
           </button>
 
           <button
-            class="edit-button text-muted"
+            class="edit-button text-muted flex-shrink-0"
             (click)="editFolder(f.node)"
             appA11yTitle="{{ 'editFolder' | i18n }}"
             *ngIf="f.node.id"
