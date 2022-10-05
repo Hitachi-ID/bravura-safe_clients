@@ -1,6 +1,6 @@
 $dark-icon-themes: "theme_dark";
-$primary: #0064a7;
-$primary-accent: #c00;
+$primary: #008080;
+$primary-accent: #f65e0a;
 $secondary: #ced4da;
 $secondary-alt: #414141;
 $success: #00a65a;
@@ -178,7 +178,7 @@ $themes: (
     btnOutlineSecondaryTextHover: #333333,
     btnPrimary: $primary,
     btnPrimaryBorderHover: #1249ae,
-    btnPrimaryHover: #134eb9,
+    btnPrimaryHover: #469292,
     btnPrimaryText: $white,
     btnSecondary: $secondary,
     btnSecondaryBorder: $secondary,
@@ -196,7 +196,7 @@ $themes: (
     dropdownTextMuted: #6c757d,
     dropdownShadow: rgba($black, 0.4),
     filterPanelActiveBackgroundColor: #c7e2f4,
-    filterPanelActiveColor: #0064a7,
+    filterPanelActiveColor: #008080,
     filterPanelHoverBackgroundColor: #d6eaf7,
     filterPanelHoverColor: #333,
     focus: rgb(23 93 220 / 25%),
