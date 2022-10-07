@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -753,7 +753,7 @@
     "message": "Abonnement beheren"
   },
   "premiumManageAlert": {
-    "message": "Je kunt je abonnement aanpassen in de webkluis op hitachi-id.com. Wil je de website nu bezoeken?"
+    "message": "Je kunt je abonnement aanpassen in de webkluis op bravurasecurity.com. Wil je de website nu bezoeken?"
   },
   "premiumRefresh": {
     "message": "Abonnement vernieuwen"
@@ -786,7 +786,7 @@
     "message": "Premium aanschaffen"
   },
   "premiumPurchaseAlert": {
-    "message": "Je kunt een Premium-abonnement aanschaffen in de webkluis op hitachi-id.com. Wil je de website nu bezoeken?"
+    "message": "Je kunt een Premium-abonnement aanschaffen in de webkluis op bravurasecurity.com. Wil je de website nu bezoeken?"
   },
   "premiumCurrentMember": {
     "message": "Je bent Premium-lid!"

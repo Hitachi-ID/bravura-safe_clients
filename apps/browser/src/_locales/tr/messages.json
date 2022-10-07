@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -753,7 +753,7 @@
     "message": "Üyeliğimi yönet"
   },
   "premiumManageAlert": {
-    "message": "Üyeliğinizi hitachi-id.com web kasası üzerinden yönetebilirsiniz. Şimdi siteye gitmek ister misiniz?"
+    "message": "Üyeliğinizi bravurasecurity.com web kasası üzerinden yönetebilirsiniz. Şimdi siteye gitmek ister misiniz?"
   },
   "premiumRefresh": {
     "message": "Üyeliğimi yenile"
@@ -786,7 +786,7 @@
     "message": "Premium satın al"
   },
   "premiumPurchaseAlert": {
-    "message": "Premium üyeliği hitachi-id.com web kasası üzerinden satın alabilirsiniz. Şimdi siteye gitmek ister misiniz?"
+    "message": "Premium üyeliği bravurasecurity.com web kasası üzerinden satın alabilirsiniz. Şimdi siteye gitmek ister misiniz?"
   },
   "premiumCurrentMember": {
     "message": "Premium üyesiniz!"

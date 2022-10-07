@@ -326,7 +326,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -717,7 +717,7 @@
     "message": "Gerir adesão"
   },
   "premiumManageAlert": {
-    "message": "Pode gerir a sua adesão premium no cofre web hitachi-id.com. Pretende visitar o website agora?"
+    "message": "Pode gerir a sua adesão premium no cofre web bravurasecurity.com. Pretende visitar o website agora?"
   },
   "premiumRefresh": {
     "message": "Atualizar adesão"
@@ -750,7 +750,7 @@
     "message": "Comprar Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Pode comprar adesão premium no cofre web hitachi-id.com. Pretende visitar o website agora?"
+    "message": "Pode comprar adesão premium no cofre web bravurasecurity.com. Pretende visitar o website agora?"
   },
   "premiumCurrentMember": {
     "message": "É um membro premium!"

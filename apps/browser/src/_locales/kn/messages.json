@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -753,7 +753,7 @@
     "message": "ಸದಸ್ಯತ್ವವನ್ನು ನಿರ್ವಹಿಸಿ"
   },
   "premiumManageAlert": {
-    "message": "ನಿಮ್ಮ ಸದಸ್ಯತ್ವವನ್ನು ನೀವು hitachi-id.com ವೆಬ್ ವಾಲ್ಟ್‌ನಲ್ಲಿ ನಿರ್ವಹಿಸಬಹುದು. ನೀವು ಈಗ ವೆಬ್‌ಸೈಟ್‌ಗೆ ಭೇಟಿ ನೀಡಲು ಬಯಸುವಿರಾ?"
+    "message": "ನಿಮ್ಮ ಸದಸ್ಯತ್ವವನ್ನು ನೀವು bravurasecurity.com ವೆಬ್ ವಾಲ್ಟ್‌ನಲ್ಲಿ ನಿರ್ವಹಿಸಬಹುದು. ನೀವು ಈಗ ವೆಬ್‌ಸೈಟ್‌ಗೆ ಭೇಟಿ ನೀಡಲು ಬಯಸುವಿರಾ?"
   },
   "premiumRefresh": {
     "message": "ಸದಸ್ಯತ್ವವನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಿ"

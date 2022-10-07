@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -753,7 +753,7 @@
     "message": "সদস্যতা পরিচালনা"
   },
   "premiumManageAlert": {
-    "message": "আপনি hitachi-id.com ওয়েব ভল্টে আপনার সদস্যপদ পরিচালনা করতে পারেন। আপনি কি এখনই ওয়েবসাইটটি দেখতে চান?"
+    "message": "আপনি bravurasecurity.com ওয়েব ভল্টে আপনার সদস্যপদ পরিচালনা করতে পারেন। আপনি কি এখনই ওয়েবসাইটটি দেখতে চান?"
   },
   "premiumRefresh": {
     "message": "সদস্যতা সতেজ করুন"
@@ -786,7 +786,7 @@
     "message": "প্রিমিয়াম কিনুন"
   },
   "premiumPurchaseAlert": {
-    "message": "আপনি hitachi-id.com ওয়েব ভল্টে প্রিমিয়াম সদস্যতা কিনতে পারেন। আপনি কি এখনই ওয়েবসাইটটি দেখতে চান?"
+    "message": "আপনি bravurasecurity.com ওয়েব ভল্টে প্রিমিয়াম সদস্যতা কিনতে পারেন। আপনি কি এখনই ওয়েবসাইটটি দেখতে চান?"
   },
   "premiumCurrentMember": {
     "message": "আপনি প্রিমিয়াম সদস্য!"
