@@ -108,14 +108,14 @@ $lightInputPlaceholderColor: #b6b8b8;
 
 // Dark
 
-$darkPrimary: #6a99f0;
-$darkPrimary-alt: #b4ccf9;
+$darkPrimary: #008080;
+$darkPrimary-alt: #469292;
 $darkDanger: #ff8d85;
 $darkDangerHover: #ffbfbb;
 $darkSuccess: #52e07c;
 $darkWarning: #ffeb66;
 $darkInfo: #a4b0c6;
-$darkLinks: #6a99f0;
+$darkLinks: #008080;
 $darkGrey1: #bac0ce;
 $darkGrey2: #8d94a5;
 $darkBlue1: #4c525f;
@@ -144,7 +144,7 @@ $themes: (
     badgeInfoBackground: #555555,
     badgeInfoText: $white,
     badgePrimaryBackground: $primary,
-    badgePrimaryBackgroundHover: #134eb9,
+    badgePrimaryBackgroundHover: #469292,
     badgePrimaryText: $white,
     badgeSecondaryBackground: #ced4da,
     badgeSecondaryText: #212529,
