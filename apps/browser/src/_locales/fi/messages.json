@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -756,7 +756,7 @@
     "message": "Hallitse jäsenyyttä"
   },
   "premiumManageAlert": {
-    "message": "Voit hallita jäsenyyttäsi hitachi-id.com-verkkoholvissa. Haluatko käydä sivustolla nyt?"
+    "message": "Voit hallita jäsenyyttäsi bravurasecurity.com-verkkoholvissa. Haluatko käydä sivustolla nyt?"
   },
   "premiumRefresh": {
     "message": "Päivitä jäsenyys"
@@ -789,7 +789,7 @@
     "message": "Osta Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Voit ostaa Premium-jäsenyyden hitachi-id.com-verkkoholvissa. Haluatko käydä sivustolla nyt?"
+    "message": "Voit ostaa Premium-jäsenyyden bravurasecurity.com-verkkoholvissa. Haluatko käydä sivustolla nyt?"
   },
   "premiumCurrentMember": {
     "message": "Olet Premium-jäsen!"

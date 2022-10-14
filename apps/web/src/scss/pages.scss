@@ -56,7 +56,7 @@ app-org-vault-groupings,
       &.folder-label.expand,
       &.collection-label.expand {
         &::after {
-          background-color: #c00;
+          background-color: #f65e0a;
           bottom: 0;
           content: "";
           height: 2px;
@@ -157,10 +157,6 @@ app-org-vault-groupings,
           color: themed("linkColor");
         }
       }
-    }
-
-    i.fa {
-      margin-right: 5px;
     }
   }
 }
@@ -509,7 +505,8 @@ app-footer {
 app-organization-layout {
   .filter-container {
     max-height: calc(
-      100vh - $navbar-height - $sidebar-padding-top * 2 - $org-header-height - $search-container-height
+      100vh - $navbar-height - $sidebar-padding-top * 2 - $org-header-height -
+        $search-container-height
     );
   }
 }
@@ -518,4 +515,15 @@ app-organization-layout {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.text-muted.invisible {
+  @extend .fa;
+  @extend .fa-fw;
+  @extend .flex-shrink-0;
+}
+
+.bit-menu-panel [role="menu"] {
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
 }

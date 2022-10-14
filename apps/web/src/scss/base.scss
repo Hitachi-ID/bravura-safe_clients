@@ -89,7 +89,7 @@ img.logo {
 
   &.logo-themed {
     @include themify($themes) {
-      content: url("../images/hitachi-id-logo-" + themed("logoSuffix") + ".svg");
+      content: url("../images/bravura-safe-logo-" + themed("logoSuffix") + ".svg");
     }
   }
 
@@ -99,7 +99,7 @@ img.logo {
     width: 136px;
 
     @include themify($themes) {
-      content: url("../images/hitachi-id-logo-" + themed("logoNavSuffix") + ".svg");
+      content: url("../images/bravura-safe-logo-" + themed("logoNavSuffix") + ".svg");
     }
   }
 }
@@ -321,6 +321,7 @@ code {
 }
 
 button i.fa,
-a i.fa {
+a i.fa,
+.text-muted.invisible {
   margin-right: 0.25rem;
 }

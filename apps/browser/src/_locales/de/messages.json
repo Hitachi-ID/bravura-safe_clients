@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -677,7 +677,7 @@
     "message": "Erfahre mehr über Organisationen"
   },
   "learnOrgConfirmation": {
-    "message": "Bravura Safe erlaubt es dir deine Tresor Einträge mit anderen zu teilen, wenn du einen Teams Account hast. Möchtest du hitachi-id.com besuchen, um mehr zu erfahren?"
+    "message": "Bravura Safe erlaubt es dir deine Tresor Einträge mit anderen zu teilen, wenn du einen Teams Account hast. Möchtest du bravurasecurity.com besuchen, um mehr zu erfahren?"
   },
   "moveToOrganization": {
     "message": "In Organisation verschieben"

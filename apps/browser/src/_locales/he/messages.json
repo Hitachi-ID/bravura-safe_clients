@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -756,7 +756,7 @@
     "message": "נהל חשבון"
   },
   "premiumManageAlert": {
-    "message": "באפשרותך לנהל את החשבון שלך דרך הכספת באתר hitachi-id.com. האם ברצונך לפתוח את האתר כעת?"
+    "message": "באפשרותך לנהל את החשבון שלך דרך הכספת באתר bravurasecurity.com. האם ברצונך לפתוח את האתר כעת?"
   },
   "premiumRefresh": {
     "message": "רענן פרטי חשבון"
@@ -789,7 +789,7 @@
     "message": "רכוש פרימיום"
   },
   "premiumPurchaseAlert": {
-    "message": "באפשרותך לרכוש מנוי פרימיום בכספת באתר hitachi-id.com. האם ברצונך לפתוח את האתר כעת?"
+    "message": "באפשרותך לרכוש מנוי פרימיום בכספת באתר bravurasecurity.com. האם ברצונך לפתוח את האתר כעת?"
   },
   "premiumCurrentMember": {
     "message": "אתה מנוי פרימיום!"

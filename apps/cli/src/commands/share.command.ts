@@ -43,7 +43,7 @@ export class ShareCommand {
       return Response.notFound();
     }
     if (cipher.organizationId != null) {
-      return Response.badRequest("This item already belongs to an organization.");
+      return Response.badRequest("This item already belongs to a team.");
     }
     const cipherView = await cipher.decrypt();
     try {

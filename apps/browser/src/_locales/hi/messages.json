@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -488,10 +488,10 @@
     "message": "Change Master Password"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "आप वेब वॉल्ट hitachi-id.com पर अपना मास्टर पासवर्ड बदल सकते हैं।क्या आप अब वेबसाइट पर जाना चाहते हैं?"
+    "message": "आप वेब वॉल्ट bravurasecurity.com पर अपना मास्टर पासवर्ड बदल सकते हैं।क्या आप अब वेबसाइट पर जाना चाहते हैं?"
   },
   "twoStepLoginConfirmation": {
-    "message": "Two-step login makes your account more secure by requiring you to enter a security code from an authenticator app whenever you log in. Two-step login can be enabled on the hitachi-id.com web vault. Do you want to visit the website now?"
+    "message": "Two-step login makes your account more secure by requiring you to enter a security code from an authenticator app whenever you log in. Two-step login can be enabled on the bravurasecurity.com web vault. Do you want to visit the website now?"
   },
   "editedFolder": {
     "message": "Edited Folder"
@@ -677,7 +677,7 @@
     "message": "संगठनों के बारे में जानें"
   },
   "learnOrgConfirmation": {
-    "message": "बिटवर्डन आपको एक संगठन का उपयोग करके अपनी तिजोरी वस्तुओं को दूसरों के साथ साझा करने की अनुमति देता है।क्या आप अधिक जानने के लिए hitachi-id.com वेबसाइट पर जाना चाहेंगे?"
+    "message": "बिटवर्डन आपको एक संगठन का उपयोग करके अपनी तिजोरी वस्तुओं को दूसरों के साथ साझा करने की अनुमति देता है।क्या आप अधिक जानने के लिए bravurasecurity.com वेबसाइट पर जाना चाहेंगे?"
   },
   "moveToOrganization": {
     "message": "संगठन में ले जाएँ"
@@ -756,7 +756,7 @@
     "message": "Manage Membership"
   },
   "premiumManageAlert": {
-    "message": "आप वेब वॉल्ट hitachi-id.com पर अपनी सदस्यता का प्रबंधन कर सकते हैं।क्या आप अब वेबसाइट पर जाना चाहते हैं?"
+    "message": "आप वेब वॉल्ट bravurasecurity.com पर अपनी सदस्यता का प्रबंधन कर सकते हैं।क्या आप अब वेबसाइट पर जाना चाहते हैं?"
   },
   "premiumRefresh": {
     "message": "Refresh Membership"
@@ -789,7 +789,7 @@
     "message": "Purchase Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "आप hitachi-id.com वेब वॉल्ट पर प्रीमियम सदस्यता खरीद सकते हैं।क्या आप अब वेबसाइट पर जाना चाहते हैं?"
+    "message": "आप bravurasecurity.com वेब वॉल्ट पर प्रीमियम सदस्यता खरीद सकते हैं।क्या आप अब वेबसाइट पर जाना चाहते हैं?"
   },
   "premiumCurrentMember": {
     "message": "आप एक प्रीमियम सदस्य हैं!"

@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -756,7 +756,7 @@
     "message": "Tagság kezelése"
   },
   "premiumManageAlert": {
-    "message": "Prémium tagságod a hitachi-id.com webes széfén tudod kezelni. Szeretnéd meglátogatni a most a weboldalt?"
+    "message": "Prémium tagságod a bravurasecurity.com webes széfén tudod kezelni. Szeretnéd meglátogatni a most a weboldalt?"
   },
   "premiumRefresh": {
     "message": "Tagság frissítése"
@@ -789,7 +789,7 @@
     "message": "Prémium funkció megvásárlása"
   },
   "premiumPurchaseAlert": {
-    "message": "Prémium tagságot a hitachi-id.com webes széfén tudsz venni. Szeretnéd meglátogatni a most a weboldalt?"
+    "message": "Prémium tagságot a bravurasecurity.com webes széfén tudsz venni. Szeretnéd meglátogatni a most a weboldalt?"
   },
   "premiumCurrentMember": {
     "message": "Te egy prémium tag vagy!"

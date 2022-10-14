@@ -206,7 +206,7 @@ export class GetCommand extends DownloadCommand {
       cipher.login.uris.length === 0 ||
       cipher.login.uris[0].uri === ""
     ) {
-      return Response.error("No uri available for this login.");
+      return Response.error("No url available for this login.");
     }
 
     const res = new StringResponse(cipher.login.uris[0].uri);
@@ -413,7 +413,7 @@ export class GetCommand extends DownloadCommand {
     try {
       const orgKey = await this.cryptoService.getOrgKey(options.organizationId);
       if (orgKey == null) {
-        throw new Error("No encryption key for this organization.");
+        throw new Error("No encryption key for this team.");
       }
 
       const response = await this.apiService.getCollectionDetails(options.organizationId, id);

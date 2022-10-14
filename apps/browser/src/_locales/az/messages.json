@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -677,7 +677,7 @@
     "message": "Təşkilatlar barədə daha ətraflı"
   },
   "learnOrgConfirmation": {
-    "message": "Bravura Safe, bir təşkilat hesabı istifadə edərək anbar elementlərinizi başqaları ilə paylaşmağınıza icazə verər. Daha ətraflı məlumat üçün hitachi-id.com saytını ziyarət etmək istəyirsiniz?"
+    "message": "Bravura Safe, bir təşkilat hesabı istifadə edərək anbar elementlərinizi başqaları ilə paylaşmağınıza icazə verər. Daha ətraflı məlumat üçün bravurasecurity.com saytını ziyarət etmək istəyirsiniz?"
   },
   "moveToOrganization": {
     "message": "Təşkilata daşı"
@@ -756,7 +756,7 @@
     "message": "Üzvlüyü idarə edin"
   },
   "premiumManageAlert": {
-    "message": "Üzvlüyünüzü hitachi-id.com veb anbarında idarə edə bilərsiniz. İndi saytı ziyarət etmək istəyirsiniz?"
+    "message": "Üzvlüyünüzü bravurasecurity.com veb anbarında idarə edə bilərsiniz. İndi saytı ziyarət etmək istəyirsiniz?"
   },
   "premiumRefresh": {
     "message": "Üzvlüyü təzələ"
@@ -789,7 +789,7 @@
     "message": "Premium satın al"
   },
   "premiumPurchaseAlert": {
-    "message": "Premium üzvlüyü hitachi-id.com veb anbarında satın ala bilərsiniz. İndi saytı ziyarət etmək istəyirsiniz?"
+    "message": "Premium üzvlüyü bravurasecurity.com veb anbarında satın ala bilərsiniz. İndi saytı ziyarət etmək istəyirsiniz?"
   },
   "premiumCurrentMember": {
     "message": "Premium üzvsünüz!"

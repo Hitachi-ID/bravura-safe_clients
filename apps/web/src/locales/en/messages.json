@@ -5376,6 +5376,9 @@
       "count": {
         "content": "$1",
         "example": "8"
+  },
+  "domainNameRequired": {
+    "message": "Domain name is required."
       }
     }
   },

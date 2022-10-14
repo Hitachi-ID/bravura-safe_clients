@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -756,7 +756,7 @@
     "message": "مدیریت عضویت"
   },
   "premiumManageAlert": {
-    "message": "شما میتوانید عضویت خود را در نسخه وب گاوصندوق در hitachi-id.com مدیریت کنید. آیا مایل به دیدن وبسایت هستید؟"
+    "message": "شما میتوانید عضویت خود را در نسخه وب گاوصندوق در bravurasecurity.com مدیریت کنید. آیا مایل به دیدن وبسایت هستید؟"
   },
   "premiumRefresh": {
     "message": "نوسازی عضویت"
@@ -789,7 +789,7 @@
     "message": "خرید پرمیوم"
   },
   "premiumPurchaseAlert": {
-    "message": "شما میوانید عضویت پرمیوم را از وب گاوصندوق hitachi-id.com خریداری کنید. مایلید اکنون از وبسایت بازید کنید؟"
+    "message": "شما میوانید عضویت پرمیوم را از وب گاوصندوق bravurasecurity.com خریداری کنید. مایلید اکنون از وبسایت بازید کنید؟"
   },
   "premiumCurrentMember": {
     "message": "شما یک عضو پرمیوم هستید!"

@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -756,7 +756,7 @@
     "message": "Håndtér medlemsskab"
   },
   "premiumManageAlert": {
-    "message": "Du kan håndtere dit medlemskab i hitachi-id.com web-boksen. Vil du besøge hjemmesiden nu?"
+    "message": "Du kan håndtere dit medlemskab i bravurasecurity.com web-boksen. Vil du besøge hjemmesiden nu?"
   },
   "premiumRefresh": {
     "message": "Opdatér medlemskab"
@@ -789,7 +789,7 @@
     "message": "Køb premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Du kan købe premium-medlemskab i hitachi-id.com web-boksen. Vil du besøge hjemmesiden nu?"
+    "message": "Du kan købe premium-medlemskab i bravurasecurity.com web-boksen. Vil du besøge hjemmesiden nu?"
   },
   "premiumCurrentMember": {
     "message": "Du er premium-medlem!"

@@ -165,7 +165,7 @@ export class ListCommand {
     }
     const organization = await this.organizationService.get(options.organizationId);
     if (organization == null) {
-      return Response.error("Organization not found.");
+      return Response.error("Team not found.");
     }
 
     try {
@@ -198,7 +198,7 @@ export class ListCommand {
     }
     const organization = await this.organizationService.get(options.organizationId);
     if (organization == null) {
-      return Response.error("Organization not found.");
+      return Response.error("Team not found.");
     }
 
     try {

@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -756,7 +756,7 @@
     "message": "Управление Премиум"
   },
   "premiumManageAlert": {
-    "message": "Вы можете управлять Премиум на hitachi-id.com. Перейти на сайт сейчас?"
+    "message": "Вы можете управлять Премиум на bravurasecurity.com. Перейти на сайт сейчас?"
   },
   "premiumRefresh": {
     "message": "Обновить Премиум"
@@ -789,7 +789,7 @@
     "message": "Купить Премиум"
   },
   "premiumPurchaseAlert": {
-    "message": "Вы можете купить Премиум на hitachi-id.com. Перейти на сайт сейчас?"
+    "message": "Вы можете купить Премиум на bravurasecurity.com. Перейти на сайт сейчас?"
   },
   "premiumCurrentMember": {
     "message": "У вас есть Премиум!"

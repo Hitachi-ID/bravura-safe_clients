@@ -429,6 +429,12 @@
     }
   }
 
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="range"] {
+    accent-color: #008080;
+  }
+
   input:not([type="checkbox"]):not([type="radio"]),
   textarea {
     border: none;

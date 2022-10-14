@@ -67,7 +67,7 @@ export class LoginCommand extends BaseLoginCommand {
       ) {
         const res = new MessageResponse(
           "You are logged in!",
-          "\n" + "To unlock your vault, use the `unlock` command. ex:\n" + "$ bw unlock"
+          "\n" + "To unlock your vault, use the `unlock` command. ex:\n" + "$ bsafe unlock"
         );
         return res;
       } else {
@@ -82,7 +82,7 @@ export class LoginCommand extends BaseLoginCommand {
             process.env.BW_SESSION +
             '"\n\n' +
             "You can also pass the session key to any command with the `--session` option. ex:\n" +
-            "$ bw list items --session " +
+            "$ bsafe list items --session " +
             process.env.BW_SESSION
         );
         res.raw = process.env.BW_SESSION;

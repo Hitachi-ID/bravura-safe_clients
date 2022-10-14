@@ -14,8 +14,8 @@ const dateProperties: string[] = [
 export class SendResponse implements BaseResponse {
   static template(sendType?: SendType, deleteInDays = 7): SendResponse {
     const req = new SendResponse();
-    req.name = "Send name";
-    req.notes = "Some notes about this send.";
+    req.name = "Share name";
+    req.notes = "Some notes about this share.";
     req.type = sendType === SendType.File ? SendType.File : SendType.Text;
     req.text = sendType === SendType.Text ? SendTextResponse.template() : null;
     req.file = sendType === SendType.File ? SendFileResponse.template() : null;
@@ -95,7 +95,7 @@ export class SendResponse implements BaseResponse {
     this.accessId = o.accessId;
     let sendLinkBaseUrl = webVaultUrl;
     if (sendLinkBaseUrl == null) {
-      sendLinkBaseUrl = "https://send.bitwarden.com/#";
+      sendLinkBaseUrl = "https://send.bravurasecurity.com/#";
     } else {
       sendLinkBaseUrl += "/#/send/";
     }

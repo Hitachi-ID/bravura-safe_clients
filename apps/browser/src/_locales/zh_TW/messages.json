@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -488,10 +488,10 @@
     "message": "變更主密碼"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "您可以在 hitachi-id.com 網頁版密碼庫變更主密碼。現在要前往嗎？"
+    "message": "您可以在 bravurasecurity.com 網頁版密碼庫變更主密碼。現在要前往嗎？"
   },
   "twoStepLoginConfirmation": {
-    "message": "兩步驟登入需要您從其他裝置（例如安全金鑰、驗證器程式、SMS、手機或電子郵件）來驗證您的登入，這使您的帳戶更加安全。兩步驟登入可以在 hitachi-id.com 網頁版密碼庫啟用。現在要前往嗎？"
+    "message": "兩步驟登入需要您從其他裝置（例如安全金鑰、驗證器程式、SMS、手機或電子郵件）來驗證您的登入，這使您的帳戶更加安全。兩步驟登入可以在 bravurasecurity.com 網頁版密碼庫啟用。現在要前往嗎？"
   },
   "editedFolder": {
     "message": "已編輯資料夾"
@@ -677,7 +677,7 @@
     "message": "瞭解組織"
   },
   "learnOrgConfirmation": {
-    "message": "Bravura Safe 允許您使用組織與他人分享您的密碼庫項目。您想造訪 hitachi-id.com 網站以深入了解內容嗎？"
+    "message": "Bravura Safe 允許您使用組織與他人分享您的密碼庫項目。您想造訪 bravurasecurity.com 網站以深入了解內容嗎？"
   },
   "moveToOrganization": {
     "message": "移動至組織 "
@@ -756,7 +756,7 @@
     "message": "管理會員資格"
   },
   "premiumManageAlert": {
-    "message": "您可以在 hitachi-id.com 網頁版密碼庫管理您的會員資格。現在要前往嗎？"
+    "message": "您可以在 bravurasecurity.com 網頁版密碼庫管理您的會員資格。現在要前往嗎？"
   },
   "premiumRefresh": {
     "message": "更新會員資格狀態"
@@ -789,7 +789,7 @@
     "message": "升級為進階會員"
   },
   "premiumPurchaseAlert": {
-    "message": "您可以在 hitachi-id.com 網頁版密碼庫購買進階會員資格。現在要前往嗎？"
+    "message": "您可以在 bravurasecurity.com 網頁版密碼庫購買進階會員資格。現在要前往嗎？"
   },
   "premiumCurrentMember": {
     "message": "您目前為進階會員！"

@@ -8,7 +8,7 @@ import { SendTextResponse } from "./sendTextResponse";
 export class SendAccessResponse implements BaseResponse {
   static template(): SendAccessResponse {
     const req = new SendAccessResponse();
-    req.name = "Send name";
+    req.name = "Share name";
     req.type = SendType.Text;
     req.text = null;
     req.file = null;

@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -756,7 +756,7 @@
     "message": "Administra la subscripció"
   },
   "premiumManageAlert": {
-    "message": "Podeu administrar la vostra subscripció a la caixa forta web de hitachi-id.com. Voleu visitar el lloc web ara?"
+    "message": "Podeu administrar la vostra subscripció a la caixa forta web de bravurasecurity.com. Voleu visitar el lloc web ara?"
   },
   "premiumRefresh": {
     "message": "Actualitza la subscripció"
@@ -789,7 +789,7 @@
     "message": "Compra Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Podeu comprar la vostra subscripció a la caixa forta web de hitachi-id.com. Voleu visitar el lloc web ara?"
+    "message": "Podeu comprar la vostra subscripció a la caixa forta web de bravurasecurity.com. Voleu visitar el lloc web ara?"
   },
   "premiumCurrentMember": {
     "message": "Sou un membre premium!"

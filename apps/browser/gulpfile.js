@@ -72,6 +72,7 @@ function distOpera() {
 
 function distChrome() {
   return dist("chrome", (manifest) => {
+    delete manifest.internalVersion;
     delete manifest.applications;
     delete manifest.content_security_policy;
     delete manifest.sidebar_action;
@@ -122,7 +123,7 @@ function distSafariApp(cb, subBuildPath) {
     "-o",
     "runtime",
     "--sign",
-    "Developer ID Application: Hitachi ID Systems, Inc",
+    "Developer ID Application: Bravura Security, Inc.",
     "--entitlements",
     entitlementsPath,
   ];
@@ -132,7 +133,7 @@ function distSafariApp(cb, subBuildPath) {
       "--force",
       "--sign",
       subBuildPath === "mas"
-        ? "3rd Party Mac Developer Application: Hitachi ID Systems, Inc"
+        ? "3rd Party Mac Developer Application: Bravura Security, Inc."
         : "6B287DD81FF922D86FD836128B0F62F358B38726",
       "--entitlements",
       entitlementsPath,

@@ -1,7 +1,8 @@
 <ng-container *ngIf="show">
-  <div class="filter-heading"
+  <div
+    class="filter-heading"
     [ngClass]="{
-      'expandedGrouping': !isCollapsed(collectionsGrouping)
+      expandedGrouping: !isCollapsed(collectionsGrouping)
     }"
   >
     <button
@@ -9,7 +10,7 @@
       [attr.aria-expanded]="!isCollapsed(collectionsGrouping)"
       aria-controls="collection-filters"
       title="{{ 'toggleCollapse' | i18n }}"
-      class="toggle-button text-muted"
+      class="toggle-button text-muted flex-shrink-0"
     >
       <i
         class="fa fa-fw mr-0"
@@ -33,9 +34,9 @@
         class="filter-option"
       >
         <span class="filter-buttons">
-        <i class="text-muted invisible"></i>
+          <i class="text-muted invisible" *ngIf="c.children.length === 0"></i>
           <button
-            class="toggle-button text-muted"
+            class="toggle-button text-muted flex-shrink-0"
             *ngIf="c.children.length"
             (click)="toggleCollapse(c.node)"
             title="{{ 'toggleCollapse' | i18n }}"
@@ -52,11 +53,7 @@
             ></i>
           </button>
           <button class="filter-button flex-shrink-0" (click)="applyFilter(c.node)">
-            <i
-              *ngIf="c.children.length === 0"
-              class="fa fa-cube text-muted"
-              aria-hidden="true"
-            ></i>
+            <i class="fa fa-fw fa-cube text-muted" aria-hidden="true"></i>
           </button>
           <button class="filter-button flex-grow-1 text-left" (click)="applyFilter(c.node)">
             {{ c.node.name }}

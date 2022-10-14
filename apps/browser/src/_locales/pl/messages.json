@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -756,7 +756,7 @@
     "message": "Zarządzaj kontem Premium"
   },
   "premiumManageAlert": {
-    "message": "Kontem Premium możesz zarządzać na stronie sejfu hitachi-id.com. Czy chcesz otworzyć tę stronę?"
+    "message": "Kontem Premium możesz zarządzać na stronie sejfu bravurasecurity.com. Czy chcesz otworzyć tę stronę?"
   },
   "premiumRefresh": {
     "message": "Odśwież konto Premium"
@@ -789,7 +789,7 @@
     "message": "Kup konto Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Konto Premium możesz zakupić na stronie sejfu hitachi-id.com. Czy chcesz otworzyć tę stronę?"
+    "message": "Konto Premium możesz zakupić na stronie sejfu bravurasecurity.com. Czy chcesz otworzyć tę stronę?"
   },
   "premiumCurrentMember": {
     "message": "Posiadasz konto Premium!"

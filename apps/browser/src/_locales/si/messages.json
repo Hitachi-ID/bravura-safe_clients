@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -789,7 +789,7 @@
     "message": "වාරික මිලදී"
   },
   "premiumPurchaseAlert": {
-    "message": "ඔබට hitachi-id.com වෙබ් සුරක්ෂිතාගාරයේ වාරික සාමාජිකත්වය මිලදී ගත හැකිය. ඔබට දැන් වෙබ් අඩවියට පිවිසීමට අවශ්යද?"
+    "message": "ඔබට bravurasecurity.com වෙබ් සුරක්ෂිතාගාරයේ වාරික සාමාජිකත්වය මිලදී ගත හැකිය. ඔබට දැන් වෙබ් අඩවියට පිවිසීමට අවශ්යද?"
   },
   "premiumCurrentMember": {
     "message": "ඔබ වාරික සාමාජිකයෙක්!"

@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -756,7 +756,7 @@
     "message": "会員情報の管理"
   },
   "premiumManageAlert": {
-    "message": "会員情報は hitachi-id.com ウェブ保管庫で管理できます。ウェブサイトを開きますか？"
+    "message": "会員情報は bravurasecurity.com ウェブ保管庫で管理できます。ウェブサイトを開きますか？"
   },
   "premiumRefresh": {
     "message": "会員情報の更新"
@@ -789,7 +789,7 @@
     "message": "プレミアム会員に加入"
   },
   "premiumPurchaseAlert": {
-    "message": "プレミアム会員権は hitachi-id.com ウェブ保管庫で購入できます。ウェブサイトを開きますか？"
+    "message": "プレミアム会員権は bravurasecurity.com ウェブ保管庫で購入できます。ウェブサイトを開きますか？"
   },
   "premiumCurrentMember": {
     "message": "あなたはプレミアム会員です！"

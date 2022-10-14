@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -756,7 +756,7 @@
     "message": "Pārvaldīt dalību"
   },
   "premiumManageAlert": {
-    "message": "Dalību ir iespējams pārvaldīt hitachi-id.com tīmekļa glabātavā. Vai apmeklēt tīmekļa vietni?"
+    "message": "Dalību ir iespējams pārvaldīt bravurasecurity.com tīmekļa glabātavā. Vai apmeklēt tīmekļa vietni?"
   },
   "premiumRefresh": {
     "message": "Atjaunot dalību"
@@ -789,7 +789,7 @@
     "message": "Iegādāties Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Premium dalību ir iespējams iegādāties hitachi-id.com tīmekļa glabātavā. Vai apmeklēt tīmekļa vietni?"
+    "message": "Premium dalību ir iespējams iegādāties bravurasecurity.com tīmekļa glabātavā. Vai apmeklēt tīmekļa vietni?"
   },
   "premiumCurrentMember": {
     "message": "Tu esi Premium dalībnieks!"

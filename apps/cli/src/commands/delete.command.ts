@@ -103,7 +103,7 @@ export class DeleteCommand {
 
   private async deleteOrganizationCollection(id: string, options: Options) {
     if (options.organizationId == null || options.organizationId === "") {
-      return Response.badRequest("`organizationid` options is required.");
+      return Response.badRequest("`organizationid` option is required.");
     }
     if (!Utils.isGuid(id)) {
       return Response.badRequest("`" + id + "` is not a GUID.");

@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -756,7 +756,7 @@
     "message": "Управление на абонамента"
   },
   "premiumManageAlert": {
-    "message": "Можете да управлявате абонамента си през сайта hitachi-id.com. Искате ли да го посетите сега?"
+    "message": "Можете да управлявате абонамента си през сайта bravurasecurity.com. Искате ли да го посетите сега?"
   },
   "premiumRefresh": {
     "message": "Опресняване на абонамента"
@@ -789,7 +789,7 @@
     "message": "Покупка на платен абонамент"
   },
   "premiumPurchaseAlert": {
-    "message": "Може да платите абонамента си през сайта hitachi-id.com. Искате ли да го посетите сега?"
+    "message": "Може да платите абонамента си през сайта bravurasecurity.com. Искате ли да го посетите сега?"
   },
   "premiumCurrentMember": {
     "message": "Честито, ползвате платен абонамент!"
