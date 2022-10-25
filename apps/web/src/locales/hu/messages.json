@@ -774,6 +774,12 @@
     "message": "Ellenőrzés szervezeti Duo Security segítségével a Duo Mobile alkalmazás, SMS, telefonhívás vagy U2F biztonsági kulcs használatával.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with HYPR using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with HYPR for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "Bármilyen FIDO U2F által engedélyezett biztonsági kulcs használata a fiók eléréséhez."
   },
@@ -1391,6 +1397,15 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "API kiszolgálónév"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your HYPR Admin panel."
+  },
+  "twoFactorHyprApiKey": {
+    "message": "Api Key"
+  },
+  "twoFactorHyprApiServerUrl": {
+    "message": "API Server URL"
   },
   "twoFactorEmailDesc": {
     "message": "Kövessük a következő lépéseket a kétlépcsős bejelentkezés beállításához email segítségével:"
@@ -2147,6 +2162,9 @@
   },
   "enforce2faDuo": {
     "message": "2FA Duo erőltetése"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with HYPR"
   },
   "priorityCustomerSupport": {
     "message": "Elsőbbségi felhasználói támogatás"

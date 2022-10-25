@@ -774,6 +774,12 @@
     "message": "Ověřit pomocí Duo Security pro vaši organizaci prostřednictvím aplikace Duo Mobile, SMS, telefonního hovoru nebo U2F bezpečnostního kódu.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with HYPR using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with HYPR for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "Použít jakýkoliv FIDO U2F bezpečnostní klíč pro přístup k vašemu trezoru."
   },
@@ -1391,6 +1397,15 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "Host API"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your HYPR Admin panel."
+  },
+  "twoFactorHyprApiKey": {
+    "message": "Api Key"
+  },
+  "twoFactorHyprApiServerUrl": {
+    "message": "API Server URL"
   },
   "twoFactorEmailDesc": {
     "message": "Postupujte podle následujících kroků pro nastavení dvoufázového přihlášení pomocí e-mailu:"
@@ -2147,6 +2162,9 @@
   },
   "enforce2faDuo": {
     "message": "Vynutit 2FA s Duo"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with HYPR"
   },
   "priorityCustomerSupport": {
     "message": "Přednostní zákaznická podpora"

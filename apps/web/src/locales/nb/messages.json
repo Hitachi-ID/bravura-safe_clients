@@ -774,6 +774,12 @@
     "message": "Verifiser med Duo Security for din organisasjon gjennom Duo Mobile-appen, SMS, telefonsamtale, eller en U2F-sikkerhetsnøkkel.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with HYPR using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with HYPR for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "Bruk enhver FIDO U2F-aktivert sikkerhetsnøkkel til å få tilgang til kontoen din."
   },
@@ -1391,6 +1397,15 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "API-vertsnavn"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your HYPR Admin panel."
+  },
+  "twoFactorHyprApiKey": {
+    "message": "Api Key"
+  },
+  "twoFactorHyprApiServerUrl": {
+    "message": "API Server URL"
   },
   "twoFactorEmailDesc": {
     "message": "Følg disse trinnene for å sette opp 2-trinnsinnlogging med E-post:"
@@ -2147,6 +2162,9 @@
   },
   "enforce2faDuo": {
     "message": "Krev 2FA med Duo"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with HYPR"
   },
   "priorityCustomerSupport": {
     "message": "Prioritert kundestøtte"

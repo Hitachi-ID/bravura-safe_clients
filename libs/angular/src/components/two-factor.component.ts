@@ -1,6 +1,7 @@
 import { Directive, OnDestroy, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import * as DuoWebSDK from "duo_web_sdk";
+import * as HyprWebSDK from "hypr_web_sdk";
 import { first } from "rxjs/operators";
 
 import { ApiService } from "@bitwarden/common/abstractions/api.service";
@@ -134,6 +135,22 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
       case TwoFactorProviderType.OrganizationDuo:
         setTimeout(() => {
           DuoWebSDK.init({
+            iframe: undefined,
+            host: providerData.Host,
+            sig_request: providerData.Signature,
+            submit_callback: async (f: HTMLFormElement) => {
+              const sig = f.querySelector('input[name="sig_response"]') as HTMLInputElement;
+              if (sig != null) {
+                this.token = sig.value;
+                await this.submit();
+              }
+            },
+          });
+        }, 0);
+        break;
+      case TwoFactorProviderType.OrganizationHypr:
+        setTimeout(() => {
+          HyprWebSDK.init({
             iframe: undefined,
             host: providerData.Host,
             sig_request: providerData.Signature,

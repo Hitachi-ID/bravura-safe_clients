@@ -97,6 +97,7 @@ import { UpdateProfileRequest } from "../models/request/updateProfileRequest";
 import { UpdateTempPasswordRequest } from "../models/request/updateTempPasswordRequest";
 import { UpdateTwoFactorAuthenticatorRequest } from "../models/request/updateTwoFactorAuthenticatorRequest";
 import { UpdateTwoFactorDuoRequest } from "../models/request/updateTwoFactorDuoRequest";
+import { UpdateTwoFactorHyprRequest } from "../models/request/updateTwoFactorHyprRequest";
 import { UpdateTwoFactorEmailRequest } from "../models/request/updateTwoFactorEmailRequest";
 import { UpdateTwoFactorWebAuthnDeleteRequest } from "../models/request/updateTwoFactorWebAuthnDeleteRequest";
 import { UpdateTwoFactorWebAuthnRequest } from "../models/request/updateTwoFactorWebAuthnRequest";
@@ -179,6 +180,7 @@ import { TaxInfoResponse } from "../models/response/taxInfoResponse";
 import { TaxRateResponse } from "../models/response/taxRateResponse";
 import { TwoFactorAuthenticatorResponse } from "../models/response/twoFactorAuthenticatorResponse";
 import { TwoFactorDuoResponse } from "../models/response/twoFactorDuoResponse";
+import { TwoFactorHyprResponse } from "../models/response/twoFactorHyprResponse";
 import { TwoFactorEmailResponse } from "../models/response/twoFactorEmailResponse";
 import { TwoFactorProviderResponse } from "../models/response/twoFactorProviderResponse";
 import { TwoFactorRecoverResponse } from "../models/response/twoFactorRescoverResponse";
@@ -1500,6 +1502,20 @@ export class ApiService implements ApiServiceAbstraction {
     return new TwoFactorDuoResponse(r);
   }
 
+  async getTwoFactorOrganizationHypr(
+    organizationId: string,
+    request: SecretVerificationRequest
+  ): Promise<TwoFactorHyprResponse> {
+    const r = await this.send(
+      "POST",
+      "/organizations/" + organizationId + "/two-factor/get-hypr",
+      request,
+      true,
+      true
+    );
+    return new TwoFactorHyprResponse(r);
+  }
+
   async getTwoFactorYubiKey(request: SecretVerificationRequest): Promise<TwoFactorYubiKeyResponse> {
     const r = await this.send("POST", "/two-factor/get-yubikey", request, true, true);
     return new TwoFactorYubiKeyResponse(r);
@@ -1553,6 +1569,20 @@ export class ApiService implements ApiServiceAbstraction {
       true
     );
     return new TwoFactorDuoResponse(r);
+  }
+
+  async putTwoFactorOrganizationHypr(
+    organizationId: string,
+    request: UpdateTwoFactorHyprRequest
+  ): Promise<TwoFactorHyprResponse> {
+    const r = await this.send(
+      "PUT",
+      "/organizations/" + organizationId + "/two-factor/hypr",
+      request,
+      true,
+      true
+    );
+    return new TwoFactorHyprResponse(r);
   }
 
   async putTwoFactorYubiKey(

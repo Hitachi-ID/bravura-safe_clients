@@ -9,6 +9,7 @@ import { SecretVerificationRequest } from "@bitwarden/common/models/request/secr
 import { TwoFactorAuthenticatorResponse } from "@bitwarden/common/models/response/twoFactorAuthenticatorResponse";
 import { TwoFactorDuoResponse } from "@bitwarden/common/models/response/twoFactorDuoResponse";
 import { TwoFactorEmailResponse } from "@bitwarden/common/models/response/twoFactorEmailResponse";
+import { TwoFactorHyprResponse } from "@bitwarden/common/models/response/twoFactorHyprResponse";
 import { TwoFactorRecoverResponse } from "@bitwarden/common/models/response/twoFactorRescoverResponse";
 import { TwoFactorWebAuthnResponse } from "@bitwarden/common/models/response/twoFactorWebAuthnResponse";
 import { TwoFactorYubiKeyResponse } from "@bitwarden/common/models/response/twoFactorYubiKeyResponse";
@@ -18,6 +19,7 @@ type TwoFactorResponse =
   | TwoFactorRecoverResponse
   | TwoFactorDuoResponse
   | TwoFactorEmailResponse
+  | TwoFactorHyprResponse
   | TwoFactorWebAuthnResponse
   | TwoFactorAuthenticatorResponse
   | TwoFactorYubiKeyResponse;
@@ -74,6 +76,9 @@ export class TwoFactorVerifyComponent {
         } else {
           return this.apiService.getTwoFactorDuo(request);
         }
+      case TwoFactorProviderType.OrganizationHypr:
+        // need to handle if (this.organizationId != null)
+        return this.apiService.getTwoFactorOrganizationHypr(this.organizationId, request);
       case TwoFactorProviderType.Email:
         return this.apiService.getTwoFactorEmail(request);
       case TwoFactorProviderType.WebAuthn:

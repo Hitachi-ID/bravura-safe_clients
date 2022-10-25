@@ -12,7 +12,8 @@
       [ngClass]="{
         'col-9':
           selectedProviderType === providerType.Duo ||
-          selectedProviderType === providerType.OrganizationDuo
+          selectedProviderType === providerType.OrganizationDuo ||
+          selectedProviderType === providerType.OrganizationHypr
       }"
     >
       <p class="lead text-center mb-4">{{ title }}</p>
@@ -86,7 +87,8 @@
           <ng-container
             *ngIf="
               selectedProviderType === providerType.Duo ||
-              selectedProviderType === providerType.OrganizationDuo
+              selectedProviderType === providerType.OrganizationDuo ||
+              selectedProviderType === providerType.OrganizationHypr
             "
           >
             <div id="duo-frame" class="mb-3">
@@ -126,6 +128,7 @@
                 selectedProviderType != null &&
                 selectedProviderType !== providerType.Duo &&
                 selectedProviderType !== providerType.OrganizationDuo &&
+                selectedProviderType !== providerType.OrganizationHypr &&
                 selectedProviderType !== providerType.WebAuthn
               "
             >

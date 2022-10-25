@@ -774,6 +774,12 @@
     "message": "為您的組織使用 Duo Security 的 Duo Mobile 程式、SMS、撥打電話或 U2F 安全金鑰進行驗證。",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with HYPR using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with HYPR for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "使用任何啟用了 FIDO U2F 的安全金鑰來存取您的帳戶。"
   },
@@ -1391,6 +1397,15 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "API 主機名稱"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your HYPR Admin panel."
+  },
+  "twoFactorHyprApiKey": {
+    "message": "Api Key"
+  },
+  "twoFactorHyprApiServerUrl": {
+    "message": "API Server URL"
   },
   "twoFactorEmailDesc": {
     "message": "請依照下列步驟設定使用電子郵件的兩步驟登入："
@@ -2147,6 +2162,9 @@
   },
   "enforce2faDuo": {
     "message": "強制使用 Duo 2FA"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with HYPR"
   },
   "priorityCustomerSupport": {
     "message": "優先客戶支援"

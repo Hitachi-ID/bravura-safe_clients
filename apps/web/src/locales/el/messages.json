@@ -774,6 +774,12 @@
     "message": "Επαληθεύστε με το Duo Security για τον οργανισμό σας χρησιμοποιώντας την εφαρμογή Duo Mobile, μήνυμα SMS, τηλεφωνική κλήση ή κλειδί ασφαλείας U2F.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with HYPR using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with HYPR for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "Χρησιμοποιήστε οποιοδήποτε κλειδί ασφαλείας με δυνατότητα FIDO U2F για πρόσβαση στον λογαριασμό σας."
   },
@@ -1391,6 +1397,15 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "API Hostname"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your HYPR Admin panel."
+  },
+  "twoFactorHyprApiKey": {
+    "message": "Api Key"
+  },
+  "twoFactorHyprApiServerUrl": {
+    "message": "API Server URL"
   },
   "twoFactorEmailDesc": {
     "message": "Ακολουθήστε αυτά τα βήματα για να ρυθμίσετε τη σύνδεση δύο βημάτων μέσω email:"
@@ -2147,6 +2162,9 @@
   },
   "enforce2faDuo": {
     "message": "Επιβολή 2FA με Duo"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with HYPR"
   },
   "priorityCustomerSupport": {
     "message": "Προτεραιότητα υποστήριξης πελατών"

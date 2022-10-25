@@ -1,4 +1,5 @@
-#duo-frame {
+#duo-frame,
+#hypr-frame {
   height: 330px;
   @include themify($themes) {
     background: themed("imgLoading") 0 0 no-repeat;

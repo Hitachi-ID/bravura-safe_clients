@@ -774,6 +774,12 @@
     "message": "Удостоверяване чрез Duo Security за организацията ви, с ползване на приложението Duo Mobile, SMS, телефонен разговор или устройство U2F.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with HYPR using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with HYPR for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "Използвайте всяко устройство, поддържащо FIDO U2F, за да влезете в абонамента си."
   },
@@ -1391,6 +1397,15 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "Адрес на сървъра за API"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your HYPR Admin panel."
+  },
+  "twoFactorHyprApiKey": {
+    "message": "Api Key"
+  },
+  "twoFactorHyprApiServerUrl": {
+    "message": "API Server URL"
   },
   "twoFactorEmailDesc": {
     "message": "Следвайте следните стъпки, за да настроите двустепенно удостоверяване с електронна поща:"
@@ -2147,6 +2162,9 @@
   },
   "enforce2faDuo": {
     "message": "Задължително ползване на двустепенна защита с Duo"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with HYPR"
   },
   "priorityCustomerSupport": {
     "message": "Поддръжка с приоритет"

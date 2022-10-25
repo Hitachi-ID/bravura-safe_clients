@@ -864,6 +864,12 @@
     "message": "組織の Duo Security を Duo Mobile アプリや SMS、電話、U2F セキュリティーキーを使用して認証します。",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with HYPR using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with HYPR for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "FIDO U2F が有効なセキュリティキーを使ってアカウントにアクセスできます。"
   },
@@ -1481,6 +1487,15 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "API のホスト名"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your HYPR Admin panel."
+  },
+  "twoFactorHyprApiKey": {
+    "message": "Api Key"
+  },
+  "twoFactorHyprApiServerUrl": {
+    "message": "API Server URL"
   },
   "twoFactorEmailDesc": {
     "message": "Eメールによる二段階認証を設定するために必要な手順:"
@@ -2237,6 +2252,9 @@
   },
   "enforce2faDuo": {
     "message": "Duoによる二段階認証を強制"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with HYPR"
   },
   "priorityCustomerSupport": {
     "message": "優先カスタマーサポート"

@@ -864,6 +864,12 @@
     "message": "Nutzen Sie Duo Security um sich mit der Duo Mobile App, SMS, per Anruf oder U2F Sicherheitsschlüssel Ihrer Organisation gegenüber zu verifizieren.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with HYPR using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with HYPR for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "Benutzen Sie einen FIDO U2F-kompatiblen Sicherheitsschlüssel um auf Ihr Konto zuzugreifen."
   },
@@ -1481,6 +1487,15 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "API-Hostname"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your HYPR Admin panel."
+  },
+  "twoFactorHyprApiKey": {
+    "message": "Api Key"
+  },
+  "twoFactorHyprApiServerUrl": {
+    "message": "API Server URL"
   },
   "twoFactorEmailDesc": {
     "message": "Folgen Sie diesen Schritten, um eine Zwei-Faktor-Anmeldung per E-Mail einzurichten:"
@@ -2237,6 +2252,9 @@
   },
   "enforce2faDuo": {
     "message": "Zwei-Faktor mit Duo erzwingen"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with HYPR"
   },
   "priorityCustomerSupport": {
     "message": "Vorrangiger Kundenservice"

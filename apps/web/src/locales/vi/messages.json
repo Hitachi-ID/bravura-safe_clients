@@ -774,6 +774,12 @@
     "message": "Xác minh với Duo Security cho tổ chức của bạn dùng ứng dụng Duo Mobile, SMS, điện thoại, hoặc mật khẩu U2F.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with HYPR using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with HYPR for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "Sử dụng bất kỳ mật khẩu FIDO U2F nào để truy cập tài khoản của bạn."
   },
@@ -1391,6 +1397,15 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "API Hostname"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your HYPR Admin panel."
+  },
+  "twoFactorHyprApiKey": {
+    "message": "Api Key"
+  },
+  "twoFactorHyprApiServerUrl": {
+    "message": "API Server URL"
   },
   "twoFactorEmailDesc": {
     "message": "Follow these steps to set up two-step login with email:"
@@ -2147,6 +2162,9 @@
   },
   "enforce2faDuo": {
     "message": "Enforce 2FA with Duo"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with HYPR"
   },
   "priorityCustomerSupport": {
     "message": "Priority customer support"

@@ -774,6 +774,12 @@
     "message": "Təşkilatınızını Duo Security ilə təsdiqləmək üçün Duo Mobile tətbiqi, SMS, telefon zəngi və ya U2F təhlükəsizlik açarını istifadə edin.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with HYPR using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with HYPR for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "Hesabınıza müraciət etmək üçün hər hansısa bir FIDO U2F fəallaşdırılan təhlükəsizlik açarı istifadə edin."
   },
@@ -1391,6 +1397,15 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "API Host adı"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your HYPR Admin panel."
+  },
+  "twoFactorHyprApiKey": {
+    "message": "Api Key"
+  },
+  "twoFactorHyprApiServerUrl": {
+    "message": "API Server URL"
   },
   "twoFactorEmailDesc": {
     "message": "E-poçt ilə iki mərhələli girişi quraşdırmaq üçün aşağıdakı addımları izləyin:"
@@ -2147,6 +2162,9 @@
   },
   "enforce2faDuo": {
     "message": "Duo ilə 2FA-nı məcburi et"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with HYPR"
   },
   "priorityCustomerSupport": {
     "message": "Prioritet müştəri dəstəyi"

@@ -1,0 +1,90 @@
+<div class="modal fade" role="dialog" aria-modal="true" aria-labelledby="2faHyprTitle">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" title="2faHyprTitle">
+          {{ "twoStepLogin" | i18n }}
+          <small>HYPR</small>
+        </h2>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          appA11yTitle="{{ 'close' | i18n }}"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <app-two-factor-verify
+        [organizationId]="organizationId"
+        [type]="type"
+        (onAuthed)="auth($event)"
+        *ngIf="!authed"
+      >
+      </app-two-factor-verify>
+      <form
+        #form
+        (ngSubmit)="submit()"
+        [appApiAction]="formPromise"
+        ngNativeValidate
+        *ngIf="authed"
+        autocomplete="off"
+      >
+        <div class="modal-body">
+          <ng-container *ngIf="enabled">
+            <app-callout type="success" title="{{ 'enabled' | i18n }}" icon="fa-check-circle">
+              {{ "twoStepLoginProviderEnabled" | i18n }}
+            </app-callout>
+            <img class="float-right ml-3 mfaType2" alt="HYPR logo" />
+            <strong>{{ "twoFactorHyprApiKey" | i18n }}:</strong> {{ akey }}
+            <br />
+            <strong>{{ "twoFactorHyprApiServerUrl" | i18n }}:</strong> {{ serverURL }}
+          </ng-container>
+          <ng-container *ngIf="!enabled">
+            <img class="float-right ml-3 mfaType2" alt="HYPR logo" />
+            <p>{{ "twoFactorHyprDesc" | i18n }}</p>
+            <div class="form-group">
+              <label for="akey">{{ "twoFactorHyprApiKey" | i18n }}</label>
+              <input
+                id="akey"
+                type="text"
+                name="IntegrationKey"
+                class="form-control"
+                [(ngModel)]="akey"
+                required
+                appInputVerbatim
+              />
+            </div>
+            <div class="form-group">
+              <label for="host">{{ "twoFactorHyprApiServerUrl" | i18n }}</label>
+              <input
+                id="host"
+                type="text"
+                name="Host"
+                class="form-control"
+                [(ngModel)]="host"
+                placeholder="{{ 'ex' | i18n }} api-xxxxxxxx.hypr.com"
+                required
+                appInputVerbatim
+              />
+            </div>
+          </ng-container>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary btn-submit" [disabled]="form.loading">
+            <i
+              class="fa fa-spinner fa-spin"
+              title="{{ 'loading' | i18n }}"
+              aria-hidden="true"
+            ></i>
+            <span *ngIf="!enabled">{{ "enable" | i18n }}</span>
+            <span *ngIf="enabled">{{ "disable" | i18n }}</span>
+          </button>
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">
+            {{ "close" | i18n }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
