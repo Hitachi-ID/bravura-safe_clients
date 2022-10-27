@@ -865,10 +865,10 @@
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
   "hyprDesc": {
-    "message": "Verify with HYPR using the HYPR Mobile app."
+    "message": "Verify with Bravura OneAuth using the HYPR Mobile app."
   },
   "hyprOrganizationDesc": {
-    "message": "Verify with HYPR for your team using the HYPR Mobile app."
+    "message": "Verify with Bravura OneAuth for your team using the HYPR Mobile app."
   },
   "u2fDesc": {
     "message": "Utilize qualquer chave de segurança ativada por FIDO U2F para acessar a sua conta."
@@ -1489,13 +1489,13 @@
     "message": "Servidor API"
   },
   "twoFactorHyprDesc": {
-    "message": "Enter the Bravura Safe application information from your HYPR Admin panel."
+    "message": "Enter the Bravura Safe application information from your Bravura OneAuth Admin panel."
   },
-  "twoFactorHyprApiKey": {
-    "message": "Api Key"
+  "twoFactorHyprApiToken": {
+    "message": "API Token"
   },
-  "twoFactorHyprApiServerUrl": {
-    "message": "API Server URL"
+  "twoFactorHyprServerUrl": {
+    "message": "Server URL"
   },
   "twoFactorEmailDesc": {
     "message": "Siga estas etapas para configurar o login em duas etapas com e-mail:"
@@ -2254,7 +2254,7 @@
     "message": "Reforçar o 2FA com o Duo"
   },
   "enforce2faHypr": {
-    "message": "Enforce 2FA with HYPR"
+    "message": "Enforce 2FA with Bravura OneAuth"
   },
   "priorityCustomerSupport": {
     "message": "Suporte prioritário ao cliente"

@@ -1,4 +1,4 @@
-import * as HyprWebSDK from "hypr_web_sdk";
+//import * as HyprWebSDK from "hypr_web_sdk";
 
 import { getQsParam } from "./common";
 
@@ -20,14 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  HyprWebSDK.init({
+  /*HyprWebSDK.init({
     iframe: "hypr_iframe",
     host: hostParam,
     sig_request: requestParam,
     submit_callback: (form: any) => {
       invokeCSCode(form.elements.sig_response.value);
     },
-  });
+  });*/
 
   window.onresize = setFrameHeight;
 

@@ -45,7 +45,7 @@ export const TwoFactorProviders: Partial<Record<TwoFactorProviderType, TwoFactor
       type: TwoFactorProviderType.OrganizationHypr,
       name: "HYPR (Organization)",
       description: null as string,
-      priority: 10,
+      priority: 11,
       sort: 7,
       premium: false,
     },

@@ -4,7 +4,7 @@
       <div class="modal-header">
         <h2 class="modal-title" title="2faHyprTitle">
           {{ "twoStepLogin" | i18n }}
-          <small>HYPR</small>
+          <small>Bravura OneAuth</small>
         </h2>
         <button
           type="button"
@@ -35,16 +35,16 @@
             <app-callout type="success" title="{{ 'enabled' | i18n }}" icon="fa-check-circle">
               {{ "twoStepLoginProviderEnabled" | i18n }}
             </app-callout>
-            <img class="float-right ml-3 mfaType2" alt="HYPR logo" />
-            <strong>{{ "twoFactorHyprApiKey" | i18n }}:</strong> {{ akey }}
+            <img class="float-right ml-3 mfaType8" alt="Bravura OneAuth logo" />
+            <strong>{{ "twoFactorHyprApiToken" | i18n }}:</strong> {{ akey }}
             <br />
-            <strong>{{ "twoFactorHyprApiServerUrl" | i18n }}:</strong> {{ serverURL }}
+            <strong>{{ "twoFactorHyprServerUrl" | i18n }}:</strong> {{ serverURL }}
           </ng-container>
           <ng-container *ngIf="!enabled">
-            <img class="float-right ml-3 mfaType2" alt="HYPR logo" />
+            <img class="float-right ml-3 mfaType8" alt="Bravura OneAuth logo" />
             <p>{{ "twoFactorHyprDesc" | i18n }}</p>
             <div class="form-group">
-              <label for="akey">{{ "twoFactorHyprApiKey" | i18n }}</label>
+              <label for="akey">{{ "twoFactorHyprApiToken" | i18n }}</label>
               <input
                 id="akey"
                 type="text"
@@ -56,14 +56,14 @@
               />
             </div>
             <div class="form-group">
-              <label for="host">{{ "twoFactorHyprApiServerUrl" | i18n }}</label>
+              <label for="host">{{ "twoFactorHyprServerUrl" | i18n }}</label>
               <input
                 id="host"
                 type="text"
                 name="Host"
                 class="form-control"
                 [(ngModel)]="host"
-                placeholder="{{ 'ex' | i18n }} api-xxxxxxxx.hypr.com"
+                placeholder="{{ 'ex' | i18n }} xxxxxxxx.hypr.com"
                 required
                 appInputVerbatim
               />

@@ -1,7 +1,7 @@
 import { Directive, OnDestroy, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import * as DuoWebSDK from "duo_web_sdk";
-import * as HyprWebSDK from "hypr_web_sdk";
+//import * as HyprWebSDK from "hypr_web_sdk";
 import { first } from "rxjs/operators";
 
 import { ApiService } from "@bitwarden/common/abstractions/api.service";
@@ -149,7 +149,7 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
         }, 0);
         break;
       case TwoFactorProviderType.OrganizationHypr:
-        setTimeout(() => {
+        /*setTimeout(() => {
           HyprWebSDK.init({
             iframe: undefined,
             host: providerData.Host,
@@ -162,7 +162,7 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
               }
             },
           });
-        }, 0);
+        }, 0);*/
         break;
       case TwoFactorProviderType.Email:
         this.twoFactorEmail = providerData.Email;

@@ -1399,13 +1399,13 @@
     "message": "API Host adı"
   },
   "twoFactorHyprDesc": {
-    "message": "Enter the Bravura Safe application information from your HYPR Admin panel."
+    "message": "Enter the Bravura Safe application information from your Bravura OneAuth Admin panel."
   },
-  "twoFactorHyprApiKey": {
-    "message": "Api Key"
+  "twoFactorHyprApiToken": {
+    "message": "API Token"
   },
-  "twoFactorHyprApiServerUrl": {
-    "message": "API Server URL"
+  "twoFactorHyprServerUrl": {
+    "message": "Server URL"
   },
   "twoFactorEmailDesc": {
     "message": "E-poçt ilə iki mərhələli girişi quraşdırmaq üçün aşağıdakı addımları izləyin:"
@@ -2164,7 +2164,7 @@
     "message": "Duo ilə 2FA-nı məcburi et"
   },
   "enforce2faHypr": {
-    "message": "Enforce 2FA with HYPR"
+    "message": "Enforce 2FA with Bravura OneAuth"
   },
   "priorityCustomerSupport": {
     "message": "Prioritet müştəri dəstəyi"
