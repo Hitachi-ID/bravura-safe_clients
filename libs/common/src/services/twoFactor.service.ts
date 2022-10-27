@@ -35,7 +35,7 @@ export const TwoFactorProviders: Partial<Record<TwoFactorProviderType, TwoFactor
     },
     [TwoFactorProviderType.OrganizationDuo]: {
       type: TwoFactorProviderType.OrganizationDuo,
-      name: "Duo (Organization)",
+      name: "Duo (Team)",
       description: null as string,
       priority: 10,
       sort: 4,
@@ -43,7 +43,7 @@ export const TwoFactorProviders: Partial<Record<TwoFactorProviderType, TwoFactor
     },
     [TwoFactorProviderType.OrganizationHypr]: {
       type: TwoFactorProviderType.OrganizationHypr,
-      name: "HYPR (Organization)",
+      name: "Bravura OneAuth (Team)",
       description: null as string,
       priority: 11,
       sort: 7,
@@ -93,7 +93,7 @@ export class TwoFactorService implements TwoFactorServiceAbstraction {
       this.i18nService.t("duoOrganizationDesc");
 
     TwoFactorProviders[TwoFactorProviderType.OrganizationHypr].name =
-      "HYPR (" + this.i18nService.t("organization") + ")";
+      "Bravura OneAuth (" + this.i18nService.t("organization") + ")";
     TwoFactorProviders[TwoFactorProviderType.OrganizationHypr].description =
       this.i18nService.t("hyprOrganizationDesc");
 

@@ -48,7 +48,7 @@
               <input
                 id="akey"
                 type="text"
-                name="IntegrationKey"
+                name="ApiKey"
                 class="form-control"
                 [(ngModel)]="akey"
                 required
@@ -58,11 +58,11 @@
             <div class="form-group">
               <label for="host">{{ "twoFactorHyprServerUrl" | i18n }}</label>
               <input
-                id="host"
+                id="serverUrl"
                 type="text"
-                name="Host"
+                name="ServerURL"
                 class="form-control"
-                [(ngModel)]="host"
+                [(ngModel)]="serverUrl"
                 placeholder="{{ 'ex' | i18n }} xxxxxxxx.hypr.com"
                 required
                 appInputVerbatim
