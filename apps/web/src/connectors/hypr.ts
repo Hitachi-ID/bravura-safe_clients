@@ -10,10 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
   setFrameHeight();
   document.body.appendChild(frameElement);
 
-  const hostParam = getQsParam("host");
+  const aKeyParam = getQsParam("aKey");
+  const serverUrlParam = getQsParam("serverUrl");
   const requestParam = getQsParam("request");
 
-  const hostUrl = new URL("https://" + hostParam);
+  if (!aKeyParam.startsWith("hypap-")) {
+    return;
+  }
+
+  const hostUrl = new URL("https://" + serverUrlParam);
   if (
     !hostUrl.hostname.endsWith(".hypr.com")
   ) {
@@ -22,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /*HyprWebSDK.init({
     iframe: "hypr_iframe",
-    host: hostParam,
+    host: serverUrlParam,
     sig_request: requestParam,
     submit_callback: (form: any) => {
       invokeCSCode(form.elements.sig_response.value);

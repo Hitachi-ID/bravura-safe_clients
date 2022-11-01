@@ -84,14 +84,13 @@ export class TwoFactorSetupComponent implements OnInit {
       }
 
       // for accounts settings show [Authenticator, Email]
-      // for organization settings show [OrganizationDuo, OrganizationHypr]
+      // for organization settings show [OrganizationHypr]
       if( (!this.organizationId &&
-            ( p.type === TwoFactorProviderType.Authenticator ||
-              p.type === TwoFactorProviderType.Email))
+            (p.type === TwoFactorProviderType.Authenticator ||
+             p.type === TwoFactorProviderType.Email))
           ||// OR
           (this.organizationId &&
-            ( p.type === TwoFactorProviderType.OrganizationDuo ||
-              p.type === TwoFactorProviderType.OrganizationHypr))
+            (p.type === TwoFactorProviderType.OrganizationHypr))
         ) {
         this.providers.push({
           type: p.type,
