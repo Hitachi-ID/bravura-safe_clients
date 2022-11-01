@@ -13,7 +13,6 @@ import { A11yInvalidDirective } from "./directives/a11y-invalid.directive";
 import { A11yTitleDirective } from "./directives/a11y-title.directive";
 import { ApiActionDirective } from "./directives/api-action.directive";
 import { AutofocusDirective } from "./directives/autofocus.directive";
-import { BlurClickDirective } from "./directives/blur-click.directive";
 import { BoxRowDirective } from "./directives/box-row.directive";
 import { FallbackSrcDirective } from "./directives/fallback-src.directive";
 import { InputStripSpacesDirective } from "./directives/input-strip-spaces.directive";
@@ -50,7 +49,6 @@ import { PasswordStrengthComponent } from "./shared/components/password-strength
     ApiActionDirective,
     AutofocusDirective,
     AvatarComponent,
-    BlurClickDirective,
     BoxRowDirective,
     CalloutComponent,
     ColorPasswordCountPipe,
@@ -80,7 +78,6 @@ import { PasswordStrengthComponent } from "./shared/components/password-strength
     AutofocusDirective,
     AvatarComponent,
     BitwardenToastModule,
-    BlurClickDirective,
     BoxRowDirective,
     CalloutComponent,
     ColorPasswordCountPipe,

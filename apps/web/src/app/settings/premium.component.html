@@ -58,9 +58,9 @@
         "licenseFileDesc" | i18n: "bravura_safe_premium_license.json"
       }}</small>
     </div>
-    <bit-submit-button [loading]="form.loading">
+    <button type="submit" buttonType="primary" bitButton [loading]="form.loading">
       {{ "submit" | i18n }}
-    </bit-submit-button>
+    </button>
   </form>
 </ng-container>
 <form #form (ngSubmit)="submit()" [appApiAction]="formPromise" ngNativeValidate *ngIf="!selfHosted">
@@ -108,7 +108,7 @@
     </p>
   </div>
   <small class="text-muted font-italic">{{ "paymentChargedAnnually" | i18n }}</small>
-  <bit-submit-button [loading]="form.loading">
+  <button type="submit" bitButton [loading]="form.loading">
     {{ "submit" | i18n }}
-  </bit-submit-button>
+  </button>
 </form>

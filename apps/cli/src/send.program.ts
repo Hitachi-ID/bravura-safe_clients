@@ -176,12 +176,12 @@ export class SendProgram extends Program {
         writeLn("");
         writeLn("  Examples:");
         writeLn("");
-        writeLn("    bsafe get share searchText");
-        writeLn("    bsafe get share id");
-        writeLn("    bsafe get share searchText --text");
-        writeLn("    bsafe get share searchText --file");
-        writeLn("    bsafe get share searchText --file --output ../Photos/photo.jpg");
-        writeLn("    bsafe get share searchText --file --raw");
+        writeLn("    bsafe share get searchText");
+        writeLn("    bsafe share get id");
+        writeLn("    bsafe share get searchText --text");
+        writeLn("    bsafe share get searchText --file");
+        writeLn("    bsafe share get searchText --file --output ../Photos/photo.jpg");
+        writeLn("    bsafe share get searchText --file --raw");
         writeLn("", true);
       })
       .action(async (id: string, options: program.OptionValues) => {

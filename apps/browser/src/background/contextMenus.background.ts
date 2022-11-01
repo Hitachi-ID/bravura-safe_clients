@@ -66,7 +66,7 @@ export default class ContextMenusBackground {
   }
 
   private async generatePasswordToClipboard() {
-    const options = (await this.passwordGenerationService.getOptions())[0];
+    const options = (await this.passwordGenerationService.getOptions())?.[0] ?? {};
     const password = await this.passwordGenerationService.generatePassword(options);
     this.platformUtilsService.copyToClipboard(password, { window: window });
     this.passwordGenerationService.addHistory(password);
@@ -81,6 +81,10 @@ export default class ContextMenusBackground {
   }
 
   private async cipherAction(tab: chrome.tabs.Tab, info: chrome.contextMenus.OnClickData) {
+    if (typeof info.menuItemId !== "string") {
+      return;
+    }
+
     const id = info.menuItemId.split("_")[1];
 
     if ((await this.authService.getAuthStatus()) < AuthenticationStatus.Unlocked) {

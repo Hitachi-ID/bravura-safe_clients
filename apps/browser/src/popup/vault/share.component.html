@@ -1,4 +1,5 @@
 <form #form (ngSubmit)="submit()" [appApiAction]="formPromise">
+  <ng-container *ngIf="organizations$ | async as organizations">
   <header>
     <div class="left">
       <button type="button" (click)="cancel()">{{ "cancel" | i18n }}</button>
@@ -13,7 +14,11 @@
         *ngIf="organizations && organizations.length"
       >
         <span [hidden]="form.loading">{{ "move" | i18n }}</span>
-        <i class="fa fa-spinner fa-lg fa-spin" [hidden]="!form.loading" aria-hidden="true"></i>
+        <i
+          class="fa fa-spinner fa-lg fa-spin"
+          [hidden]="!form.loading"
+          aria-hidden="true"
+        ></i>
       </button>
     </div>
   </header>
@@ -67,4 +72,5 @@
       </div>
     </div>
   </main>
+  </ng-container>
 </form>

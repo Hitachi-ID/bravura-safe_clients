@@ -39,3 +39,5 @@ coverage
 
 # Storybook
 documentation.json
+.eslintcache
+storybook-static

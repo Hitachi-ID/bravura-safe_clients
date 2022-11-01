@@ -1,6 +1,5 @@
 import { OrganizationUserStatusType } from "../../enums/organizationUserStatusType";
 import { OrganizationUserType } from "../../enums/organizationUserType";
-import { Permissions } from "../../enums/permissions";
 import { ProductType } from "../../enums/productType";
 import { PermissionsApi } from "../api/permissionsApi";
 import { OrganizationData } from "../data/organizationData";
@@ -114,7 +113,7 @@ export class Organization {
   }
 
   get canAccessEventLogs() {
-    return this.isAdmin || this.permissions.accessEventLogs;
+    return (this.isAdmin || this.permissions.accessEventLogs) && this.useEvents;
   }
 
   get canAccessImportExport() {
@@ -168,19 +167,19 @@ export class Organization {
   }
 
   get canManageGroups() {
-    return this.isAdmin || this.permissions.manageGroups;
+    return (this.isAdmin || this.permissions.manageGroups) && this.useGroups;
   }
 
   get canManageSso() {
-    return this.isAdmin || this.permissions.manageSso;
+    return (this.isAdmin || this.permissions.manageSso) && this.useSso;
   }
 
   get canManageScim() {
-    return this.isAdmin || this.permissions.manageScim;
+    return (this.isAdmin || this.permissions.manageScim) && this.useScim;
   }
 
   get canManagePolicies() {
-    return this.isAdmin || this.permissions.managePolicies;
+    return (this.isAdmin || this.permissions.managePolicies) && this.usePolicies;
   }
 
   get canManageUsers() {
@@ -195,7 +194,7 @@ export class Organization {
     return this.canManagePolicies;
   }
 
-  hasAnyPermission(permissions: Permissions[]) {
+/*  hasAnyPermission(permissions: Permissions[]) {
     const specifiedPermissions =
       (permissions.includes(Permissions.AccessEventLogs) && this.canAccessEventLogs) ||
       (permissions.includes(Permissions.AccessImportExport) && this.canAccessImportExport) ||
@@ -216,5 +215,5 @@ export class Organization {
       (permissions.includes(Permissions.ManageScim) && this.canManageScim);
 
     return specifiedPermissions && (this.enabled || this.isOwner);
-  }
+  }*/
 }

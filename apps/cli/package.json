@@ -1,7 +1,7 @@
 {
   "name": "@bitwarden/cli",
   "description": "A secure and free password manager for all of your devices.",
-  "version": "2022.6.2",
+  "version": "2022.9.0",
   "internalVersion": "2022-08",
   "keywords": [
     "bravura safe",
@@ -14,7 +14,7 @@
   "homepage": "https://www.bravurasecurity.com",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.bravurasecurity.com/product/bravura-safe/cli"
+    "url": "https://gitlab.bravurasecurity.com/product/bravura-safe/clients"
   },
   "license": "GPL-3.0-only",
   "scripts": {

@@ -78,7 +78,7 @@
     <app-private-mode-warning></app-private-mode-warning>
     <app-callout *ngIf="biometricError" type="error">{{ biometricError }}</app-callout>
     <p class="text-center text-muted" *ngIf="pendingBiometric">
-      <i class="bwi bwi-spinner bwi-spin" aria-hidden="true"></i> {{ "awaitDesktop" | i18n }}
+      <i class="fa fa-spinner fa-spin" aria-hidden="true"></i> {{ "awaitDesktop" | i18n }}
     </p>
   </main>
 </form>

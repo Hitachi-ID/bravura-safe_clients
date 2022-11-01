@@ -121,19 +121,19 @@
     <value>Bravura Safe – Ödənişsiz Parol Meneceri</value>
   </data>
   <data name="Summary" xml:space="preserve">
-    <value>Bütün cihazlarınız üçün təhlükəsiz və ödənişsiz bir parol meneceri</value>
+    <value>Bütün cihazlarınız üçün güvənli və ödənişsiz bir parol meneceri</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Bravura Security Inc.</value>
   </data>
   <data name="AssetTitle" xml:space="preserve">
-    <value>Bütün cihazlarınız üçün təhlükəsiz və ödənişsiz bir parol meneceri</value>
+    <value>Bütün cihazlarınız üçün güvənli və ödənişsiz bir parol meneceri</value>
   </data>
   <data name="ScreenshotSync" xml:space="preserve">
     <value>Anbarınıza bir neçə cihazdan eyniləşdirərək müraciət edin</value>
   </data>
   <data name="ScreenshotVault" xml:space="preserve">
-    <value>Bütün giriş məlumatlarınızı və parollarınızı təhlükəsiz bir anbardan idarə edin</value>
+    <value>Bütün giriş məlumatlarınızı və parollarınızı güvənli bir anbardan idarə edin</value>
   </data>
   <data name="ScreenshotAutofill" xml:space="preserve">
     <value>Giriş kimlik məlumatlarınızı ziyarət etdiyiniz istənilən veb sayta dərhal avtomatik doldurun</value>
@@ -142,9 +142,9 @@
     <value>Anbarınıza sağ klikləmə menyusundan da asanlıqla müraciət edə bilərsiniz</value>
   </data>
   <data name="ScreenshotPassword" xml:space="preserve">
-    <value>Güclü, təsadüfi və etibarlı parolların avtomatik yaradılması</value>
+    <value>Güclü, təsadüfi və güvənli parolların avtomatik yaradılması</value>
   </data>
   <data name="ScreenshotEdit" xml:space="preserve">
-    <value>Məlumatlarınız AES-256 bit şifrələmə istifadə edilərək təhlükəsiz şəkildə idarə olunur</value>
+    <value>Məlumatlarınız AES-256 bit şifrələmə istifadə edilərək güvənli şəkildə idarə olunur</value>
   </data>
 </root>

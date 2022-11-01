@@ -198,6 +198,9 @@ ul.filter-options li.filter-option {
   }
 
   .filter-button {
+    max-width: 90%;
+    white-space: nowrap;
+
     &:hover,
     &:focus,
     &:active {
@@ -205,6 +208,10 @@ ul.filter-options li.filter-option {
         color: themed("linkColor") !important;
       }
       text-decoration: none;
+    }
+
+    &.disabled-organization {
+      max-width: 78%;
     }
     &.flex-grow-align {
       flex-grow: 1;

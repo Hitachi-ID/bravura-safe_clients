@@ -2,10 +2,10 @@
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <form class="modal-content" #form (ngSubmit)="submit()" [appApiAction]="formPromise">
       <div class="modal-header">
-        <h2 class="modal-title" id="shareTitle">
+        <h1 class="modal-title" id="shareTitle">
           {{ "moveToOrganization" | i18n }}
           <small *ngIf="cipher">{{ cipher.name }}</small>
-        </h2>
+        </h1>
         <button
           type="button"
           class="close"
@@ -15,6 +15,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <ng-container *ngIf="organizations$ | async as organizations">
       <div class="modal-body" *ngIf="!organizations || !organizations.length">
         {{ "noOrganizationsList" | i18n }}
       </div>
@@ -46,7 +47,10 @@
         <div *ngIf="!collections || !collections.length">
           {{ "noCollectionsInList" | i18n }}
         </div>
-        <table class="table table-hover table-list mb-0" *ngIf="collections && collections.length">
+          <table
+            class="table table-hover table-list mb-0"
+            *ngIf="collections && collections.length"
+          >
           <tbody>
             <tr
               *ngFor="let c of collections; let i = index"
@@ -76,7 +80,11 @@
           [ngClass]="{ loading: form.loading }"
           *ngIf="organizations && organizations.length"
         >
-          <i class="fa fa-spinner fa-spin" title="{{ 'loading' | i18n }}" aria-hidden="true"></i>
+            <i
+              class="fa fa-spinner fa-spin"
+              title="{{ 'loading' | i18n }}"
+              aria-hidden="true"
+            ></i>
           <span>{{ "save" | i18n }}</span>
         </button>
         <a
@@ -91,6 +99,7 @@
           {{ "cancel" | i18n }}
         </button>
       </div>
+      </ng-container>
     </form>
   </div>
 </div>

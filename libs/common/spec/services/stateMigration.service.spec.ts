@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-restricted-imports
 import { Arg, Substitute, SubstituteOf } from "@fluffy-spoon/substitute";
 
 import { AbstractStorageService } from "@bitwarden/common/abstractions/storage.service";
@@ -116,8 +117,8 @@ describe("State Migration Service", () => {
                 key: "orgThreeEncKey",
               },
             },
-          },
-        },
+          } as any,
+        } as any,
       });
 
       const migratedAccount = await (stateMigrationService as any).migrateAccountFrom4To5(
@@ -125,6 +126,22 @@ describe("State Migration Service", () => {
       );
 
       expect(migratedAccount).toEqual(expectedAccount);
+    });
+  });
+
+  describe("StateVersion 5 to 6 migration", () => {
+    it("deletes account.keys.legacyEtmKey value", async () => {
+      const accountVersion5 = new Account({
+        keys: {
+          legacyEtmKey: "legacy key",
+        },
+      } as any);
+
+      const migratedAccount = await (stateMigrationService as any).migrateAccountFrom5To6(
+        accountVersion5
+      );
+
+      expect(migratedAccount.keys.legacyEtmKey).toBeUndefined();
     });
   });
 });

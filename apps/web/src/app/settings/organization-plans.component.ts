@@ -1,16 +1,26 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from "@angular/core";
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnDestroy,
+  OnInit,
+  Output,
+  ViewChild,
+} from "@angular/core";
 import { UntypedFormBuilder, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
+import { Subject, takeUntil } from "rxjs";
 
 import { ApiService } from "@bitwarden/common/abstractions/api.service";
 import { CryptoService } from "@bitwarden/common/abstractions/crypto.service";
 import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
 import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
-import { OrganizationService } from "@bitwarden/common/abstractions/organization.service";
+import { OrganizationApiServiceAbstraction } from "@bitwarden/common/abstractions/organization/organization-api.service.abstraction";
+import { OrganizationService } from "@bitwarden/common/abstractions/organization/organization.service.abstraction";
 import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
-import { PolicyService } from "@bitwarden/common/abstractions/policy.service";
-import { SyncService } from "@bitwarden/common/abstractions/sync.service";
+import { PolicyService } from "@bitwarden/common/abstractions/policy/policy.service.abstraction";
+import { SyncService } from "@bitwarden/common/abstractions/sync/sync.service.abstraction";
 import { PaymentMethodType } from "@bitwarden/common/enums/paymentMethodType";
 import { PlanType } from "@bitwarden/common/enums/planType";
 import { PolicyType } from "@bitwarden/common/enums/policyType";
@@ -26,11 +36,15 @@ import { PlanResponse } from "@bitwarden/common/models/response/planResponse";
 import { PaymentComponent } from "./payment.component";
 import { TaxInfoComponent } from "./tax-info.component";
 
+interface OnSuccessArgs {
+  organizationId: string;
+}
+
 @Component({
   selector: "app-organization-plans",
   templateUrl: "organization-plans.component.html",
 })
-export class OrganizationPlansComponent implements OnInit {
+export class OrganizationPlansComponent implements OnInit, OnDestroy {
   @ViewChild(PaymentComponent) paymentComponent: PaymentComponent;
   @ViewChild(TaxInfoComponent) taxComponent: TaxInfoComponent;
 
@@ -41,14 +55,14 @@ export class OrganizationPlansComponent implements OnInit {
   @Input() product: ProductType = ProductType.Free;
   @Input() plan: PlanType = PlanType.Free;
   @Input() providerId: string;
-  @Output() onSuccess = new EventEmitter();
-  @Output() onCanceled = new EventEmitter();
+  @Output() onSuccess = new EventEmitter<OnSuccessArgs>();
+  @Output() onCanceled = new EventEmitter<void>();
   @Output() onTrialBillingSuccess = new EventEmitter();
 
   loading = true;
   selfHosted = false;
   productTypes = ProductType;
-  formPromise: Promise<any>;
+  formPromise: Promise<string>;
   singleOrgPolicyBlock = false;
   isInTrialFlow = false;
   discount = 0;
@@ -68,6 +82,8 @@ export class OrganizationPlansComponent implements OnInit {
 
   plans: PlanResponse[];
 
+  private destroy$ = new Subject<void>();
+
   constructor(
     private apiService: ApiService,
     private i18nService: I18nService,
@@ -79,7 +95,8 @@ export class OrganizationPlansComponent implements OnInit {
     private organizationService: OrganizationService,
     private logService: LogService,
     private messagingService: MessagingService,
-    private formBuilder: UntypedFormBuilder
+    private formBuilder: UntypedFormBuilder,
+    private organizationApiService: OrganizationApiServiceAbstraction
   ) {
     this.selfHosted = platformUtilsService.isSelfHost();
   }
@@ -108,7 +125,19 @@ export class OrganizationPlansComponent implements OnInit {
       this.formGroup.controls.billingEmail.addValidators(Validators.required);
     }
 
+    this.policyService
+      .policyAppliesToActiveUser$(PolicyType.SingleOrg)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((policyAppliesToActiveUser) => {
+        this.singleOrgPolicyBlock = policyAppliesToActiveUser;
+      });
+
     this.loading = false;
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   get createOrganization() {
@@ -282,8 +311,6 @@ export class OrganizationPlansComponent implements OnInit {
   }
 
   async submit() {
-    this.singleOrgPolicyBlock = await this.userHasBlockingSingleOrgPolicy();
-
     if (this.singleOrgPolicyBlock) {
       return;
     }
@@ -343,10 +370,6 @@ export class OrganizationPlansComponent implements OnInit {
     }
   }
 
-  private async userHasBlockingSingleOrgPolicy() {
-    return this.policyService.policyAppliesToUser(PolicyType.SingleOrg);
-  }
-
   private async updateOrganization(orgId: string) {
     const request = new OrganizationUpgradeRequest();
     request.businessName = this.formGroup.controls.businessOwned.value
@@ -368,7 +391,7 @@ export class OrganizationPlansComponent implements OnInit {
       request.keys = new OrganizationKeysRequest(orgKeys[0], orgKeys[1].encryptedString);
     }
 
-    const result = await this.apiService.postOrganizationUpgrade(this.organizationId, request);
+    const result = await this.organizationApiService.upgrade(this.organizationId, request);
     if (!result.success && result.paymentIntentClientSecret != null) {
       await this.paymentComponent.handleStripeCardPayment(result.paymentIntentClientSecret, null);
     }
@@ -410,7 +433,7 @@ export class OrganizationPlansComponent implements OnInit {
 
       return orgId;
     } else {
-      return (await this.apiService.postOrganization(request)).id;
+      return (await this.organizationApiService.create(request)).id;
     }
   }
 
@@ -425,14 +448,14 @@ export class OrganizationPlansComponent implements OnInit {
     fd.append("license", files[0]);
     fd.append("key", key);
     fd.append("collectionName", collectionCt);
-    const response = await this.apiService.postOrganizationLicense(fd);
+    const response = await this.organizationApiService.createLicense(fd);
     const orgId = response.id;
 
     await this.apiService.refreshIdentityToken();
 
     // Org Keys live outside of the OrganizationLicense - add the keys to the org here
     const request = new OrganizationKeysRequest(orgKeys[0], orgKeys[1].encryptedString);
-    await this.apiService.postOrganizationKeys(orgId, request);
+    await this.organizationApiService.updateKeys(orgId, request);
 
     return orgId;
   }

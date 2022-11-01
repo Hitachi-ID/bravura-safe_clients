@@ -1,4 +1,14 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from "@angular/core";
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnDestroy,
+  OnInit,
+  Output,
+  ViewChild,
+} from "@angular/core";
+import { Subject, takeUntil } from "rxjs";
+import zxcvbn from "zxcvbn";
 
 import { PasswordStrengthComponent } from "@bitwarden/angular/shared/components/password-strength/password-strength.component";
 import { ApiService } from "@bitwarden/common/abstractions/api.service";
@@ -7,7 +17,7 @@ import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
 import { PasswordGenerationService } from "@bitwarden/common/abstractions/passwordGeneration.service";
 import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
-import { PolicyService } from "@bitwarden/common/abstractions/policy.service";
+import { PolicyService } from "@bitwarden/common/abstractions/policy/policy.service.abstraction";
 import { EncString } from "@bitwarden/common/models/domain/encString";
 import { MasterPasswordPolicyOptions } from "@bitwarden/common/models/domain/masterPasswordPolicyOptions";
 import { SymmetricCryptoKey } from "@bitwarden/common/models/domain/symmetricCryptoKey";
@@ -17,7 +27,7 @@ import { OrganizationUserResetPasswordRequest } from "@bitwarden/common/models/r
   selector: "app-reset-password",
   templateUrl: "reset-password.component.html",
 })
-export class ResetPasswordComponent implements OnInit {
+export class ResetPasswordComponent implements OnInit, OnDestroy {
   @Input() name: string;
   @Input() email: string;
   @Input() id: string;
@@ -28,8 +38,10 @@ export class ResetPasswordComponent implements OnInit {
   enforcedPolicyOptions: MasterPasswordPolicyOptions;
   newPassword: string = null;
   showPassword = false;
-  masterPasswordScore: number;
+  passwordStrengthResult: zxcvbn.ZXCVBNResult;
   formPromise: Promise<any>;
+
+  private destroy$ = new Subject<void>();
 
   constructor(
     private apiService: ApiService,
@@ -42,8 +54,18 @@ export class ResetPasswordComponent implements OnInit {
   ) {}
 
   async ngOnInit() {
-    // Get Enforced Policy Options
-    this.enforcedPolicyOptions = await this.policyService.getMasterPasswordPolicyOptions();
+    this.policyService
+      .masterPasswordPolicyOptions$()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(
+        (enforcedPasswordPolicyOptions) =>
+          (this.enforcedPolicyOptions = enforcedPasswordPolicyOptions)
+      );
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   get loggedOutWarningName() {
@@ -51,7 +73,7 @@ export class ResetPasswordComponent implements OnInit {
   }
 
   async generatePassword() {
-    const options = (await this.passwordGenerationService.getOptions())[0];
+    const options = (await this.passwordGenerationService.getOptions())?.[0] ?? {};
     this.newPassword = await this.passwordGenerationService.generatePassword(options);
     this.passwordStrengthComponent.updatePasswordStrength(this.newPassword);
   }
@@ -80,7 +102,7 @@ export class ResetPasswordComponent implements OnInit {
       this.platformUtilsService.showToast(
         "error",
         this.i18nService.t("errorOccurred"),
-        this.i18nService.t("masterPassRequired")
+        this.i18nService.t("masterPasswordRequired")
       );
       return false;
     }
@@ -89,7 +111,7 @@ export class ResetPasswordComponent implements OnInit {
       this.platformUtilsService.showToast(
         "error",
         this.i18nService.t("errorOccurred"),
-        this.i18nService.t("masterPassLength")
+        this.i18nService.t("masterPasswordMinlength")
       );
       return false;
     }
@@ -97,7 +119,7 @@ export class ResetPasswordComponent implements OnInit {
     if (
       this.enforcedPolicyOptions != null &&
       !this.policyService.evaluateMasterPassword(
-        this.masterPasswordScore,
+        this.passwordStrengthResult.score,
         this.newPassword,
         this.enforcedPolicyOptions
       )
@@ -110,7 +132,7 @@ export class ResetPasswordComponent implements OnInit {
       return;
     }
 
-    if (this.masterPasswordScore < 3) {
+    if (this.passwordStrengthResult.score < 3) {
       const result = await this.platformUtilsService.showDialog(
         this.i18nService.t("weakMasterPasswordDesc"),
         this.i18nService.t("weakMasterPassword"),
@@ -183,5 +205,9 @@ export class ResetPasswordComponent implements OnInit {
     } catch (e) {
       this.logService.error(e);
     }
+  }
+
+  getStrengthResult(result: zxcvbn.ZXCVBNResult) {
+    this.passwordStrengthResult = result;
   }
 }

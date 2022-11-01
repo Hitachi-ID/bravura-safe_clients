@@ -29,12 +29,6 @@
     },
     {
       "all_frames": false,
-      "js": ["content/shortcuts.js"],
-      "matches": ["http://*/*", "https://*/*", "file:///*"],
-      "run_at": "document_start"
-    },
-    {
-      "all_frames": false,
       "js": ["content/message_handler.js"],
       "matches": ["http://*/*", "https://*/*", "file:///*"],
       "run_at": "document_start"
@@ -47,7 +41,8 @@
     }
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "action": {
     "default_icon": {
@@ -124,5 +119,8 @@
     "default_title": "Bravura Safe",
     "default_panel": "popup/index.html?uilocation=sidebar",
     "default_icon": "images/icon19.png"
+  },
+  "storage": {
+    "managed_schema": "managed_schema.json"
   }
 }

@@ -3,7 +3,7 @@ import { firstValueFrom } from "rxjs";
 import { AuthService } from "@bitwarden/common/abstractions/auth.service";
 import { CipherService } from "@bitwarden/common/abstractions/cipher.service";
 import { FolderService } from "@bitwarden/common/abstractions/folder/folder.service.abstraction";
-import { PolicyService } from "@bitwarden/common/abstractions/policy.service";
+import { PolicyService } from "@bitwarden/common/abstractions/policy/policy.service.abstraction";
 import { AuthenticationStatus } from "@bitwarden/common/enums/authenticationStatus";
 import { CipherType } from "@bitwarden/common/enums/cipherType";
 import { PolicyType } from "@bitwarden/common/enums/policyType";
@@ -446,6 +446,8 @@ export default class NotificationBackground {
   }
 
   private async allowPersonalOwnership(): Promise<boolean> {
-    return !(await this.policyService.policyAppliesToUser(PolicyType.PersonalOwnership));
+    return !(await firstValueFrom(
+      this.policyService.policyAppliesToActiveUser$(PolicyType.PersonalOwnership)
+    ));
   }
 }

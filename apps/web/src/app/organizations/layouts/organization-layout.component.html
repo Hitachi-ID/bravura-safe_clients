@@ -1,5 +1,6 @@
 <app-navbar></app-navbar>
-<div class="org-nav position-sticky" *ngIf="organization">
+<ng-container *ngIf="organization$ | async as organization">
+  <div class="org-nav position-sticky" *ngIf="organization">
   <div class="container d-flex">
     <div class="d-flex flex-column">
       <app-organization-switcher
@@ -13,25 +14,37 @@
             {{ "vault" | i18n }}
           </a>
         </li>
-        <li class="nav-item" *ngIf="showManageTab">
-          <a class="nav-link" [routerLink]="manageRoute" routerLinkActive="active">
+        <li class="nav-item" *ngIf="canShowManageTab(organization)">
+          <a
+            class="nav-link"
+            [routerLink]="getManageRoute(organization)"
+            routerLinkActive="active"
+          >
             <i class="fa fa-sliders" aria-hidden="true"></i>
             {{ "manage" | i18n }}
           </a>
         </li>
-        <li class="nav-item" *ngIf="showReportsTab">
-          <a class="nav-link" [routerLink]="reportsRoute" routerLinkActive="active">
+        <li class="nav-item" *ngIf="canShowReportsTab(organization)">
+          <a
+            class="nav-link"
+            [routerLink]="getReportsRoute(organization)"
+            routerLinkActive="active"
+          >
             <i class="fa fa-file" aria-hidden="true"></i>
             {{ "reports" | i18n }}
           </a>
         </li>
-        <li class="nav-item" *ngIf="showToolsTab">
-          <a class="nav-link" [routerLink]="toolsRoute" routerLinkActive="active">
+        <li class="nav-item" *ngIf="canShowToolsTab(organization)">
+          <a
+            class="nav-link"
+            [routerLink]="getToolsRoute(organization)"
+            routerLinkActive="active"
+          >
             <i class="fa fa-wrench" aria-hidden="true"></i>
             {{ "tools" | i18n }}
           </a>
         </li>
-        <li class="nav-item" *ngIf="showSettingsTab">
+        <li class="nav-item" *ngIf="canShowSettingsTab(organization)">
           <a class="nav-link" routerLink="settings" routerLinkActive="active">
             <i class="fa fa-cogs" aria-hidden="true"></i>
             {{ "settings" | i18n }}
@@ -41,4 +54,5 @@
     </div>
   </div>
 </div>
+</ng-container>
 <router-outlet></router-outlet>

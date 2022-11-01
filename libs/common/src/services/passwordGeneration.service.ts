@@ -1,8 +1,9 @@
+import { firstValueFrom, map } from "rxjs";
 import * as zxcvbn from "zxcvbn";
 
 import { CryptoService } from "../abstractions/crypto.service";
 import { PasswordGenerationService as PasswordGenerationServiceAbstraction } from "../abstractions/passwordGeneration.service";
-import { PolicyService } from "../abstractions/policy.service";
+import { PolicyService } from "../abstractions/policy/policy.service.abstraction";
 import { StateService } from "../abstractions/state.service";
 import { PolicyType } from "../enums/policyType";
 import { EEFLongWordList } from "../misc/wordlist";
@@ -258,7 +259,11 @@ export class PasswordGenerationService implements PasswordGenerationServiceAbstr
     const policies: Policy[] =
       this.policyService == null
         ? null
-        : await this.policyService.getAll(PolicyType.PasswordGenerator);
+        : await firstValueFrom(
+            this.policyService.policies$.pipe(
+              map((p) => p.filter((policy) => policy.type === PolicyType.PasswordGenerator))
+            )
+          );
     let enforcedOptions: PasswordGeneratorPolicyOptions = null;
 
     if (policies == null || policies.length === 0) {

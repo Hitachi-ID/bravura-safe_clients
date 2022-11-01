@@ -1,31 +1,40 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import * as JSZip from "jszip";
+import { firstValueFrom, Subject } from "rxjs";
 import Swal, { SweetAlertIcon } from "sweetalert2";
 
+import { ModalService } from "@bitwarden/angular/services/modal.service";
 import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
 import { ImportService } from "@bitwarden/common/abstractions/import.service";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
 import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
-import { PolicyService } from "@bitwarden/common/abstractions/policy.service";
+import { PolicyService } from "@bitwarden/common/abstractions/policy/policy.service.abstraction";
 import { ImportOption, ImportType } from "@bitwarden/common/enums/importOptions";
 import { PolicyType } from "@bitwarden/common/enums/policyType";
+import { ImportError } from "@bitwarden/common/importers/importError";
+
+import { FilePasswordPromptComponent } from "./file-password-prompt.component";
 
 @Component({
   selector: "app-import",
   templateUrl: "import.component.html",
 })
-export class ImportComponent implements OnInit {
+export class ImportComponent implements OnInit, OnDestroy {
   featuredImportOptions: ImportOption[];
   importOptions: ImportOption[];
   format: ImportType = null;
   fileContents: string;
-  formPromise: Promise<Error>;
+  formPromise: Promise<ImportError>;
   loading = false;
-  importBlockedByPolicy = false;
+  importBlockedByPolicy$ = this.policyService.policyAppliesToActiveUser$(
+    PolicyType.PersonalOwnership
+  );
 
   protected organizationId: string = null;
   protected successNavigate: any[] = ["vault"];
+
+  private destroy$ = new Subject<void>();
 
   constructor(
     protected i18nService: I18nService,
@@ -33,19 +42,21 @@ export class ImportComponent implements OnInit {
     protected router: Router,
     protected platformUtilsService: PlatformUtilsService,
     protected policyService: PolicyService,
-    private logService: LogService
+    private logService: LogService,
+    protected modalService: ModalService
   ) {}
 
   async ngOnInit() {
     this.setImportOptions();
+  }
 
-    this.importBlockedByPolicy = await this.policyService.policyAppliesToUser(
-      PolicyType.PersonalOwnership
-    );
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   async submit() {
-    if (this.importBlockedByPolicy) {
+    if (await firstValueFrom(this.importBlockedByPolicy$)) {
       this.platformUtilsService.showToast(
         "error",
         null,
@@ -106,12 +117,25 @@ export class ImportComponent implements OnInit {
 
     try {
       this.formPromise = this.importService.import(importer, fileContents, this.organizationId);
-      const error = await this.formPromise;
+      let error = await this.formPromise;
+
+      if (error?.passwordRequired) {
+        const filePassword = await this.getFilePassword();
+        if (filePassword == null) {
+          this.loading = false;
+          return;
+        }
+
+        error = await this.doPasswordProtectedImport(filePassword, fileContents);
+      }
+
       if (error != null) {
         this.error(error);
         this.loading = false;
         return;
       }
+
+      //No errors, display success message
       this.platformUtilsService.showToast("success", null, this.i18nService.t("importSuccess"));
       this.router.navigate(this.successNavigate);
     } catch (e) {
@@ -224,5 +248,30 @@ export class ImportComponent implements OnInit {
           return "";
         }
       );
+  }
+
+  async getFilePassword(): Promise<string> {
+    const ref = this.modalService.open(FilePasswordPromptComponent, {
+      allowMultipleModals: true,
+    });
+
+    if (ref == null) {
+      return null;
+    }
+
+    return await ref.onClosedPromise();
+  }
+
+  async doPasswordProtectedImport(
+    filePassword: string,
+    fileContents: string
+  ): Promise<ImportError> {
+    const passwordProtectedImporter = this.importService.getImporter(
+      "bitwardenpasswordprotected",
+      this.organizationId,
+      filePassword
+    );
+
+    return this.importService.import(passwordProtectedImporter, fileContents, this.organizationId);
   }
 }

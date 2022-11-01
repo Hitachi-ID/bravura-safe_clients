@@ -15,7 +15,7 @@
     <app-vault-icon [cipher]="cipher"></app-vault-icon>
     <div class="row-main-content">
       <span class="text">
-        {{ cipher.name }}
+        {{ cipher.name | ellipsis: 20 }}
         <ng-container *ngIf="cipher.organizationId">
           <i class="fa fa-cube text-muted" title="{{ 'shared' | i18n }}" aria-hidden="true"></i>
           <span class="sr-only">{{ "shared" | i18n }}</span>

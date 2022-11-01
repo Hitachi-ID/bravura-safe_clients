@@ -4,7 +4,7 @@ import { Router, ActivatedRoute } from "@angular/router";
 import { Organization } from "@bitwarden/common/models/domain/organization";
 
 import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
-import { OrganizationService } from "@bitwarden/common/abstractions/organization.service";
+import { OrganizationService } from "@bitwarden/common/abstractions/organization/organization.service.abstraction";
 
 @Component({
   selector: "app-org-reports",

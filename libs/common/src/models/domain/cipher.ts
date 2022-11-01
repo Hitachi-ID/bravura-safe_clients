@@ -1,6 +1,9 @@
+import { Jsonify } from "type-fest";
+
 import { CipherRepromptType } from "../../enums/cipherRepromptType";
 import { CipherType } from "../../enums/cipherType";
 import { CipherData } from "../data/cipherData";
+import { LocalData } from "../data/localData";
 import { CipherView } from "../view/cipherView";
 
 import { Attachment } from "./attachment";
@@ -26,7 +29,7 @@ export class Cipher extends Domain {
   edit: boolean;
   viewPassword: boolean;
   revisionDate: Date;
-  localData: any;
+  localData: LocalData;
   login: Login;
   identity: Identity;
   card: Card;
@@ -38,7 +41,7 @@ export class Cipher extends Domain {
   deletedDate: Date;
   reprompt: CipherRepromptType;
 
-  constructor(obj?: CipherData, localData: any = null) {
+  constructor(obj?: CipherData, localData: LocalData = null) {
     super();
     if (obj == null) {
       return;
@@ -232,5 +235,49 @@ export class Cipher extends Domain {
       c.passwordHistory = this.passwordHistory.map((ph) => ph.toPasswordHistoryData());
     }
     return c;
+  }
+
+  static fromJSON(obj: Jsonify<Cipher>) {
+    if (obj == null) {
+      return null;
+    }
+
+    const domain = new Cipher();
+    const name = EncString.fromJSON(obj.name);
+    const notes = EncString.fromJSON(obj.notes);
+    const revisionDate = obj.revisionDate == null ? null : new Date(obj.revisionDate);
+    const deletedDate = obj.deletedDate == null ? null : new Date(obj.deletedDate);
+    const attachments = obj.attachments?.map((a: any) => Attachment.fromJSON(a));
+    const fields = obj.fields?.map((f: any) => Field.fromJSON(f));
+    const passwordHistory = obj.passwordHistory?.map((ph: any) => Password.fromJSON(ph));
+
+    Object.assign(domain, obj, {
+      name,
+      notes,
+      revisionDate,
+      deletedDate,
+      attachments,
+      fields,
+      passwordHistory,
+    });
+
+    switch (obj.type) {
+      case CipherType.Card:
+        domain.card = Card.fromJSON(obj.card);
+        break;
+      case CipherType.Identity:
+        domain.identity = Identity.fromJSON(obj.identity);
+        break;
+      case CipherType.Login:
+        domain.login = Login.fromJSON(obj.login);
+        break;
+      case CipherType.SecureNote:
+        domain.secureNote = SecureNote.fromJSON(obj.secureNote);
+        break;
+      default:
+        break;
+    }
+
+    return domain;
   }
 }

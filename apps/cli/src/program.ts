@@ -258,6 +258,7 @@ export class Program extends BaseProgram {
             this.main.keyConnectorService,
             this.main.environmentService,
             this.main.syncService,
+            this.main.organizationApiService,
             async () => await this.main.logout()
           );
           const response = await command.run(password, cmd);
@@ -279,7 +280,7 @@ export class Program extends BaseProgram {
         writeLn("", true);
       })
       .action(async (cmd) => {
-        await this.exitIfLocked();
+        await this.exitIfNotAuthed();
         const command = new SyncCommand(this.main.syncService);
         const response = await command.run(cmd);
         this.processResponse(response);
@@ -439,12 +440,15 @@ export class Program extends BaseProgram {
         this.processResponse(response);
       });
 
-    if (CliUtils.flagEnabled("serve")) {
       program
         .command("serve")
         .description("Start a RESTful API webserver.")
         .option("--hostname <hostname>", "The hostname to bind your API webserver to.")
         .option("--port <port>", "The port to run your API webserver on.")
+      .option(
+        "--disable-origin-protection",
+        "If set, allows requests with origin header. Not recommended!"
+      )
         .on("--help", () => {
           writeLn("\n  Notes:");
           writeLn("");
@@ -465,7 +469,6 @@ export class Program extends BaseProgram {
           await command.run(cmd);
         });
     }
-  }
 
   protected processResponse(response: Response, exitImmediately = false) {
     super.processResponse(response, exitImmediately, () => {
@@ -501,6 +504,7 @@ export class Program extends BaseProgram {
           this.main.keyConnectorService,
           this.main.environmentService,
           this.main.syncService,
+          this.main.organizationApiService,
           this.main.logout
         );
         const response = await command.run(null, null);

@@ -3,7 +3,6 @@ import { Directive, ViewChild, ViewContainerRef } from "@angular/core";
 import { SearchPipe } from "@bitwarden/angular/pipes/search.pipe";
 import { UserNamePipe } from "@bitwarden/angular/pipes/user-name.pipe";
 import { ModalService } from "@bitwarden/angular/services/modal.service";
-import { ValidationService } from "@bitwarden/angular/services/validation.service";
 import { ApiService } from "@bitwarden/common/abstractions/api.service";
 import { CryptoService } from "@bitwarden/common/abstractions/crypto.service";
 import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
@@ -11,6 +10,7 @@ import { LogService } from "@bitwarden/common/abstractions/log.service";
 import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
 import { SearchService } from "@bitwarden/common/abstractions/search.service";
 import { StateService } from "@bitwarden/common/abstractions/state.service";
+import { ValidationService } from "@bitwarden/common/abstractions/validation.service";
 import { OrganizationUserStatusType } from "@bitwarden/common/enums/organizationUserStatusType";
 import { OrganizationUserType } from "@bitwarden/common/enums/organizationUserType";
 import { ProviderUserStatusType } from "@bitwarden/common/enums/providerUserStatusType";
@@ -85,7 +85,7 @@ export abstract class BasePeopleComponent<
   users: UserType[] = [];
   pagedUsers: UserType[] = [];
   searchText: string;
-  actionPromise: Promise<any>;
+  actionPromise: Promise<void>;
 
   protected allUsers: UserType[] = [];
   protected activeUsers: UserType[] = [];
@@ -111,11 +111,11 @@ export abstract class BasePeopleComponent<
 
   abstract edit(user: UserType): void;
   abstract getUsers(): Promise<ListResponse<UserType>>;
-  abstract deleteUser(id: string): Promise<any>;
-  abstract revokeUser(id: string): Promise<any>;
-  abstract restoreUser(id: string): Promise<any>;
-  abstract reinviteUser(id: string): Promise<any>;
-  abstract confirmUser(user: UserType, publicKey: Uint8Array): Promise<any>;
+  abstract deleteUser(id: string): Promise<void>;
+  abstract revokeUser(id: string): Promise<void>;
+  abstract restoreUser(id: string): Promise<void>;
+  abstract reinviteUser(id: string): Promise<void>;
+  abstract confirmUser(user: UserType, publicKey: Uint8Array): Promise<void>;
 
   async load() {
     const response = await this.getUsers();
@@ -126,7 +126,12 @@ export abstract class BasePeopleComponent<
     }
 
     this.allUsers = response.data != null && response.data.length > 0 ? response.data : [];
-    this.allUsers.sort(Utils.getSortFunction(this.i18nService, "email"));
+    this.allUsers.sort(
+      Utils.getSortFunction<ProviderUserUserDetailsResponse | OrganizationUserUserDetailsResponse>(
+        this.i18nService,
+        "email"
+      )
+    );
     this.allUsers.forEach((u) => {
       if (!this.statusMap.has(u.status)) {
         this.statusMap.set(u.status, [u]);
@@ -343,6 +348,7 @@ export abstract class BasePeopleComponent<
             comp.name = this.userNamePipe.transform(user);
             comp.userId = user != null ? user.userId : null;
             comp.publicKey = publicKey;
+            // eslint-disable-next-line rxjs/no-async-subscribe
             comp.onConfirmedUser.subscribe(async () => {
               try {
                 comp.formPromise = confirmUser(publicKey);

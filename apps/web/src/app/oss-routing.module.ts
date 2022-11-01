@@ -5,18 +5,20 @@ import { AuthGuard } from "@bitwarden/angular/guards/auth.guard";
 import { LockGuard } from "@bitwarden/angular/guards/lock.guard";
 import { UnauthGuard } from "@bitwarden/angular/guards/unauth.guard";
 
-import { flagEnabled, FlagName } from "../utils/flags";
+import { flagEnabled, Flags } from "../utils/flags";
 
 import { AcceptEmergencyComponent } from "./accounts/accept-emergency.component";
 import { AcceptOrganizationComponent } from "./accounts/accept-organization.component";
 import { HintComponent } from "./accounts/hint.component";
 import { LockComponent } from "./accounts/lock.component";
-import { LoginComponent } from "./accounts/login.component";
+import { LoginWithDeviceComponent } from "./accounts/login/login-with-device.component";
+import { LoginComponent } from "./accounts/login/login.component";
 import { RecoverDeleteComponent } from "./accounts/recover-delete.component";
 import { RegisterComponent } from "./accounts/register.component";
 import { RemovePasswordComponent } from "./accounts/remove-password.component";
 import { SetPasswordComponent } from "./accounts/set-password.component";
 import { SsoComponent } from "./accounts/sso.component";
+import { TrialInitiationComponent } from "./accounts/trial-initiation/trial-initiation.component";
 import { TwoFactorComponent } from "./accounts/two-factor.component";
 import { UpdatePasswordComponent } from "./accounts/update-password.component";
 import { UpdateTempPasswordComponent } from "./accounts/update-temp-password.component";
@@ -25,12 +27,10 @@ import { VerifyRecoverDeleteComponent } from "./accounts/verify-recover-delete.c
 import { HomeGuard } from "./guards/home.guard";
 import { FrontendLayoutComponent } from "./layouts/frontend-layout.component";
 import { UserLayoutComponent } from "./layouts/user-layout.component";
-import { TrialInitiationComponent } from "./modules/trial-initiation/trial-initiation.component";
-import { IndividualVaultModule } from "./modules/vault/modules/individual-vault/individual-vault.module";
 import { OrganizationsRoutingModule } from "./organizations/organization-routing.module";
 import { AcceptFamilySponsorshipComponent } from "./organizations/sponsorships/accept-family-sponsorship.component";
 import { FamiliesForEnterpriseSetupComponent } from "./organizations/sponsorships/families-for-enterprise-setup.component";
-import { ReportsRoutingModule } from "./reports/reports-routing.module";
+import { ReportsModule } from "./reports";
 import { AccessComponent } from "./send/access.component";
 import { SendComponent } from "./send/send.component";
 import { AccountComponent } from "./settings/account.component";
@@ -44,15 +44,16 @@ import { SettingsComponent } from "./settings/settings.component";
 import { SubscriptionRoutingModule } from "./settings/subscription-routing.module";
 import { GeneratorComponent } from "./tools/generator.component";
 import { ToolsComponent } from "./tools/tools.component";
+import { VaultModule } from "./vault/vault.module";
 
-import { BreachReportComponent } from "./reports/breach-report.component";
-import { ExposedPasswordsReportComponent } from "./reports/exposed-passwords-report.component";
-import { InactiveTwoFactorReportComponent } from "./reports/inactive-two-factor-report.component";
-import { ReportListComponent } from "./reports/report-list.component";
-import { ReportsComponent } from "./reports/reports.component";
-import { ReusedPasswordsReportComponent } from "./reports/reused-passwords-report.component";
-import { UnsecuredWebsitesReportComponent } from "./reports/unsecured-websites-report.component";
-import { WeakPasswordsReportComponent } from "./reports/weak-passwords-report.component";
+import { BreachReportComponent } from "./reports/pages/breach-report.component";
+import { ExposedPasswordsReportComponent } from "./reports/pages/exposed-passwords-report.component";
+import { InactiveTwoFactorReportComponent } from "./reports/pages/inactive-two-factor-report.component";
+import { ReportListComponent } from "./reports/report-list/report-list.component";
+import { ReportsLayoutComponent } from "./reports/reports-layout.component";
+import { ReusedPasswordsReportComponent } from "./reports/pages/reused-passwords-report.component";
+import { UnsecuredWebsitesReportComponent } from "./reports/pages/unsecured-websites-report.component";
+import { WeakPasswordsReportComponent } from "./reports/pages/weak-passwords-report.component";
 
 const routes: Routes = [
   {
@@ -67,6 +68,11 @@ const routes: Routes = [
         canActivate: [HomeGuard], // Redirects either to vault, login or lock page.
       },
       { path: "login", component: LoginComponent, canActivate: [UnauthGuard] },
+      {
+        path: "login-with-device",
+        component: LoginWithDeviceComponent,
+        data: { titleId: "loginWithDevice" },
+      },
       { path: "2fa", component: TwoFactorComponent, canActivate: [UnauthGuard] },
       {
         path: "register",
@@ -157,7 +163,7 @@ const routes: Routes = [
     children: [
       {
         path: "vault",
-        loadChildren: () => IndividualVaultModule,
+        loadChildren: () => VaultModule,
       },
       { path: "sends", component: SendComponent, data: { title: "Send" } },
       {
@@ -224,7 +230,7 @@ const routes: Routes = [
       },
       {
         path: "reports",
-        component: ReportsComponent,
+        component: ReportsLayoutComponent,
         canActivate: [AuthGuard],
         children: [
           { path: "", pathMatch: "full", redirectTo: "exposed-passwords-report" },
@@ -276,7 +282,7 @@ const routes: Routes = [
 })
 export class OssRoutingModule {}
 
-export function buildFlaggedRoute(flagName: FlagName, route: Route): Route {
+export function buildFlaggedRoute(flagName: keyof Flags, route: Route): Route {
   return flagEnabled(flagName)
     ? route
     : {

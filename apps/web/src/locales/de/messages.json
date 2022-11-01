@@ -659,14 +659,26 @@
   "loginOrCreateNewAccount": {
     "message": "Sie müssen sich anmelden oder ein neues Konto erstellen, um auf den Tresor zugreifen zu können."
   },
+  "loginWithDevice": {
+    "message": "Mit Gerät anmelden"
+  },
+  "loginWithDeviceEnabledInfo": {
+    "message": "Mit Gerät anmelden muss in den Einstellungen der Bravura Safe Mobile App aktiviert sein. Brauchst du eine andere Möglichkeit?"
+  },
   "createAccount": {
     "message": "Konto erstellen"
+  },
+  "newAroundHere": {
+    "message": "Neu hier?"
   },
   "startTrial": {
     "message": "Probephase starten"
   },
   "logIn": {
     "message": "Anmelden"
+  },
+  "logInInitiated": {
+    "message": "Anmeldung initiiert"
   },
   "submit": {
     "message": "Absenden"
@@ -725,7 +737,7 @@
   "confirmMasterPasswordRequired": {
     "message": "Erneute Eingabe des Master-Passworts ist erforderlich."
   },
-  "masterPasswordMinLength": {
+  "masterPasswordMinlength": {
     "message": "Das Master-Passwort muss mindestens 8 Zeichen lang sein."
   },
   "masterPassDoesntMatch": {
@@ -768,6 +780,9 @@
   "invalidMasterPassword": {
     "message": "Ungültiges Master-Passwort"
   },
+  "invalidFilePassword": {
+    "message": "Ungültiges Dateipasswort. Bitte verwende das Passwort, das du beim Erstellen der Exportdatei eingegeben hast."
+  },
   "lockNow": {
     "message": "Jetzt sperren"
   },
@@ -791,6 +806,9 @@
   },
   "noOrganizationsList": {
     "message": "Sie gehören keiner Organisation an. Organisationen erlauben es Ihnen Passwörter sicher mit anderen zu teilen."
+  },
+  "notificationSentDevice": {
+    "message": "Eine Benachrichtigung wurde an dein Gerät gesendet."
   },
   "versionNumber": {
     "message": "Version $VERSION_NUMBER$",
@@ -979,6 +997,48 @@
   },
   "fileFormat": {
     "message": "Dateiformat"
+  },
+  "fileEncryptedExportWarningDesc": {
+    "message": "Dieser Datei-Export ist passwortgeschützt und erfordert das Dateipasswort zum Entschlüsseln."
+  },
+  "exportPasswordDescription": {
+    "message": "Dieses Passwort wird verwendet, um diese Datei zu exportieren und zu importieren"
+  },
+  "confirmMasterPassword": {
+    "message": "Master-Passwort bestätigen"
+  },
+  "confirmFormat": {
+    "message": "Format bestätigen"
+  },
+  "filePassword": {
+    "message": "Dateipasswort"
+  },
+  "confirmFilePassword": {
+    "message": "Dateipasswort bestätigen"
+  },
+  "accountBackupOptionDescription": {
+    "message": "Nutze den Verschlüsselungscode deines Kontos, um den Export zu verschlüsseln und den Import allein auf das aktuelle Bravura Safe-Konto zu beschränken."
+  },
+  "passwordProtectedOptionDescription": {
+    "message": "Lege ein Passwort fest, um den Export zu verschlüsseln und ihn in ein beliebiges Bravura Safe-Konto zu importieren, wobei das Passwort zum Entschlüsseln genutzt wird."
+  },
+  "fileTypeHeading": {
+    "message": "Dateityp"
+  },
+  "accountBackup": {
+    "message": "Konto-Sicherung"
+  },
+  "passwordProtected": {
+    "message": "Passwortgeschützt"
+  },
+  "filePasswordAndConfirmFilePasswordDoNotMatch": {
+    "message": "„Dateipasswort“ und „Dateipasswort bestätigen“ stimmen nicht überein."
+  },
+  "confirmVaultImport": {
+    "message": "Tresor-Import bestätigen"
+  },
+  "confirmVaultImportDesc": {
+    "message": "Diese Datei ist passwortgeschützt. Bitte gebe das Dateipasswort ein, um Daten zu importieren."
   },
   "exportSuccess": {
     "message": "Ihre Daten wurden exportiert."
@@ -1569,7 +1629,7 @@
   },
   "reportsDesc": {
     "message": "Identifiziere und schließe Sicherheitslücken in deinen Online-Konten, indem du auf die Berichte unten klickst.",
-    "description": "Vault Health Reports can be used to evaluate the security of your Bravura Safe Personal or Team Vault."
+    "description": "Vault Health Reports can be used to evaluate the security of your Bravura Safe Personal or Team Safe."
   },
   "unsecuredWebsitesReport": {
     "message": "Bericht über ungesicherte Websites"
@@ -2577,6 +2637,9 @@
       }
     }
   },
+  "viewAllLoginOptions": {
+    "message": "Alle Anmelde-Optionen anzeigen"
+  },
   "viewedItemId": {
     "message": "Eintrag $ID$ angesehen.",
     "placeholders": {
@@ -3417,6 +3480,12 @@
     "message": "Um die Sicherheit ihres Verschlüsselungscodes zu gewähren, bestätigen Sie bitte den Prüfschlüssel des Benutzers.",
     "description": "A 'fingerprint phrase' is a unique word phrase (similar to a passphrase) that a user can use to authenticate their public key with another user, for the purposes of sharing."
   },
+  "fingerprintMatchInfo": {
+    "message": "Bitte stelle sicher, dass dein Tresor entsperrt ist und die Fingerabdruck-Phrase mit dem anderen Gerät übereinstimmt."
+  },
+  "fingerprintPhraseHeader": {
+    "message": "Fingerabdruck-Phrase"
+  },
   "dontAskFingerprintAgain": {
     "message": "Nicht erneut nach dem Prüfschlüssel fragen",
     "description": "A 'fingerprint phrase' is a unique word phrase (similar to a passphrase) that a user can use to authenticate their public key with another user, for the purposes of sharing."
@@ -4102,6 +4171,12 @@
   "permissions": {
     "message": "Berechtigungen"
   },
+  "managerPermissions": {
+    "message": "Manager-Berechtigungen"
+  },
+  "adminPermissions": {
+    "message": "Administrator-Berechtigungen"
+  },
   "accessEventLogs": {
     "message": "Zugriff auf Ereignisprotokolle"
   },
@@ -4410,6 +4485,9 @@
   },
   "reinviteSelected": {
     "message": "Einladungen erneut senden"
+  },
+  "resendNotification": {
+    "message": "Benachrichtigung erneut senden"
   },
   "noSelectedUsersApplicable": {
     "message": "Diese Aktion ist für keinen der ausgewählten Benutzer anwendbar."
@@ -5309,6 +5387,9 @@
         "example": "My Email"
       }
     }
+  },
+  "premiumSubcriptionRequired": {
+    "message": "Premium-Abonnement erforderlich"
   },
   "scim": {
     "message": "SCIM-Bereitstellung",

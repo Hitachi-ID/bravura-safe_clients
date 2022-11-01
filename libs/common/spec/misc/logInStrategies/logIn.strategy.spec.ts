@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-restricted-imports
 import { Arg, Substitute, SubstituteOf } from "@fluffy-spoon/substitute";
 
 import { ApiService } from "@bitwarden/common/abstractions/api.service";
@@ -139,7 +140,6 @@ describe("LogInStrategy", () => {
       cryptoService.received(1).setEncKey(encKey);
       cryptoService.received(1).setEncPrivateKey(privateKey);
 
-      stateService.received(1).setBiometricLocked(false);
       messagingService.received(1).send("loggedIn");
     });
 
