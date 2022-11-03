@@ -1494,6 +1494,9 @@
   "twoFactorHyprApiToken": {
     "message": "API Token"
   },
+  "twoFactorHyprAppId": {
+    "message": "Application ID"
+  },
   "twoFactorHyprServerUrl": {
     "message": "Server URL"
   },

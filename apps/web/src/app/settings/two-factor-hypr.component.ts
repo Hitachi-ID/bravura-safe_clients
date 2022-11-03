@@ -18,6 +18,7 @@ import { TwoFactorBaseComponent } from "./two-factor-base.component";
 export class TwoFactorHyprComponent extends TwoFactorBaseComponent {
   type = TwoFactorProviderType.OrganizationHypr;
   akey: string;
+  appId: string;
   serverUrl: string;
   formPromise: Promise<any>;
 
@@ -47,6 +48,7 @@ export class TwoFactorHyprComponent extends TwoFactorBaseComponent {
   protected async enable() {
     const request = await this.buildRequestModel(UpdateTwoFactorHyprRequest);
     request.apiKey = this.akey;
+    request.appId = this.appId;
     request.serverUrl = this.serverUrl;
 
     return super.enable(async () => {
@@ -63,6 +65,7 @@ export class TwoFactorHyprComponent extends TwoFactorBaseComponent {
 
   private processResponse(response: TwoFactorHyprResponse) {
     this.akey = response.apiKey;
+    this.appId = response.appId;
     this.serverUrl = response.serverUrl;
     this.enabled = response.enabled;
   }

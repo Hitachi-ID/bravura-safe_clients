@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(frameElement);
 
   const aKeyParam = getQsParam("aKey");
+  const appIdParam = getQsParam("appId");
   const serverUrlParam = getQsParam("serverUrl");
   const requestParam = getQsParam("request");
 

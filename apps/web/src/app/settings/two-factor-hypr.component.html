@@ -38,6 +38,8 @@
             <img class="float-right ml-3 mfaType8" alt="Bravura OneAuth logo" />
             <strong>{{ "twoFactorHyprApiToken" | i18n }}:</strong> {{ akey }}
             <br />
+            <strong>{{ "twoFactorHyprAppId" | i18n }}:</strong> {{ appID }}
+            <br />
             <strong>{{ "twoFactorHyprServerUrl" | i18n }}:</strong> {{ serverURL }}
           </ng-container>
           <ng-container *ngIf="!enabled">
@@ -57,9 +59,21 @@
               />
             </div>
             <div class="form-group">
-              <label for="serverUrl">{{ "twoFactorHyprServerUrl" | i18n }}</label>
+              <label for="appID">{{ "twoFactorHyprAppId" | i18n }}</label>
               <input
-                id="serverUrl"
+                id="appID"
+                type="text"
+                name="AppID"
+                class="form-control"
+                [(ngModel)]="appId"
+                required
+                appInputVerbatim
+              />
+            </div>
+            <div class="form-group">
+              <label for="serverURL">{{ "twoFactorHyprServerUrl" | i18n }}</label>
+              <input
+                id="serverURL"
                 type="text"
                 name="ServerURL"
                 class="form-control"
