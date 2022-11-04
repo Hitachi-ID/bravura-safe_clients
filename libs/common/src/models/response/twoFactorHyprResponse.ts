@@ -8,9 +8,9 @@ export class TwoFactorHyprResponse extends BaseResponse {
 
   constructor(response: any) {
     super(response);
-    this.enabled = this.getResponseProperty("Enabled");
-    this.serverUrl = this.getResponseProperty("ServerUrl");
-    this.appId = this.getResponseProperty("AppID");
-    this.apiKey = this.getResponseProperty("ApiKey");
+    this.enabled = this.getResponseProperty("enabled");
+    this.serverUrl = this.getResponseProperty("serverURL");
+    this.appId = this.getResponseProperty("appID");
+    this.apiKey = this.getResponseProperty("apiKey");
   }
 }
