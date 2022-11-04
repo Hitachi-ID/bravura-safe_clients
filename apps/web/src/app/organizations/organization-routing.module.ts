@@ -32,6 +32,9 @@ import { UnsecuredWebsitesReportComponent } from "./tools/unsecured-websites-rep
 import { WeakPasswordsReportComponent } from "./tools/weak-passwords-report.component";
 import { VaultModule } from "./vault/vault.module";
 
+import { OptionsComponent } from "./options/options.component";
+import { AccountComponent as AccountOptionsComponent } from "./options/account.component";
+
 const routes: Routes = [
   {
     path: ":organizationId",
@@ -199,6 +202,14 @@ const routes: Routes = [
             component: OrganizationSubscriptionComponent,
             data: { titleId: "subscription" },
           },
+        ],
+      },
+      {
+        path: "options",
+        component: OptionsComponent,
+        children: [
+          { path: "", pathMatch: "full", redirectTo: "account" },
+          { path: "account", component: AccountOptionsComponent, data: { titleId: "myOrganization" } },
         ],
       },
     ],
