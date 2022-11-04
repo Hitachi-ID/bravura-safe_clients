@@ -1,25 +1,26 @@
-import { Component, OnInit } from "@angular/core";
-
-import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
-import { StateService } from "@bitwarden/common/abstractions/state.service";
+import { Component, OnDestroy } from "@angular/core";
+import { NavigationEnd, Router } from "@angular/router";
+import { Subscription } from "rxjs";
+import { filter } from "rxjs/operators";
 
 @Component({
   selector: "app-reports-layout",
   templateUrl: "reports-layout.component.html",
 })
-export class ReportsLayoutComponent implements OnInit {
-  canAccessPremium = false;
+export class ReportsLayoutComponent implements OnDestroy {
+  homepage = true;
+  subscription: Subscription;
 
-  constructor(private stateService: StateService, private messagingService: MessagingService) {}
-
-  async ngOnInit() {
-    this.canAccessPremium = await this.stateService.getCanAccessPremium();
+  constructor(router: Router) {
+    this.subscription = router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      // eslint-disable-next-line rxjs-angular/prefer-takeuntil
+      .subscribe((event) => {
+        this.homepage = (event as NavigationEnd).url == "/reports";
+      });
   }
 
-  premiumRequired() {
-    if (!this.canAccessPremium) {
-      this.messagingService.send("premiumRequired");
-      return;
-    }
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
   }
 }

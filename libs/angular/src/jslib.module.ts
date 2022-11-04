@@ -2,8 +2,6 @@ import { CommonModule, DatePipe } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-// import { RouterService } from "../../../src/app/services/router.service";
-
 import { AvatarComponent } from "./components/avatar.component";
 import { CalloutComponent } from "./components/callout.component";
 import { ExportScopeCalloutComponent } from "./components/export-scope-callout.component";
@@ -105,7 +103,7 @@ import { PasswordStrengthComponent } from "./shared/components/password-strength
     DatePipe,
     I18nPipe,
     SearchPipe,
-    UserNamePipe /*, RouterService*/,
+    UserNamePipe,
   ],
 })
 export class JslibModule {}

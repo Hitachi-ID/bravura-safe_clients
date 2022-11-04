@@ -1,8 +1,7 @@
-import { Component, OnInit } from "@angular/core";
-import { Router, ActivatedRoute } from "@angular/router";
+import { Component } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 
 import { Organization } from "@bitwarden/common/models/domain/organization";
-
 import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
 import { OrganizationService } from "@bitwarden/common/abstractions/organization/organization.service.abstraction";
 
@@ -10,7 +9,7 @@ import { OrganizationService } from "@bitwarden/common/abstractions/organization
   selector: "app-org-reports",
   templateUrl: "reports.component.html",
 })
-export class ReportsComponent implements OnInit {
+export class ReportsComponent {
   organization: Organization;
   accessReports = false;
   loading = true;

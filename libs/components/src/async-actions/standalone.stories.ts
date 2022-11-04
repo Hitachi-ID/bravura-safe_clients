@@ -14,7 +14,7 @@ const template = `
   <button bitButton buttonType="primary" [bitAction]="action" class="tw-mr-2">
     Perform action
   </button>
-  <button bitIconButton="bwi-trash" buttonType="danger" [bitAction]="action"></button>`;
+  <button bitIconButton="fa-trash" buttonType="danger" [bitAction]="action"></button>`;
 
 @Component({
   template,

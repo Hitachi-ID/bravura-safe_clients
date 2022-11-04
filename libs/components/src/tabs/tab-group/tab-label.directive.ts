@@ -7,7 +7,7 @@ import { Directive, TemplateRef } from "@angular/core";
  * ```
  * <bit-tab>
  *   <ng-template bitTabLabel>
- *     <i class="bwi bwi-search"></i> Search
+ *     <i class="fa fa-search"></i> Search
  *   </ng-template>
  *
  *   <p>Tab Content</p>

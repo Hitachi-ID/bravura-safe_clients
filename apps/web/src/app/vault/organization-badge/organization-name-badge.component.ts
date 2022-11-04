@@ -15,6 +15,7 @@ export class OrganizationNameBadgeComponent implements OnInit {
 
   color: string;
   textColor: string;
+  class: string;
 
   constructor(private i18nService: I18nService) {}
 
@@ -26,7 +27,8 @@ export class OrganizationNameBadgeComponent implements OnInit {
     if (this.color == null) {
       this.color = Utils.stringToColor(this.organizationName.toUpperCase());
     }
-    this.textColor = Utils.pickTextColorBasedOnBgColor(this.color);
+    this.textColor = 'black !important';
+    this.class = 'badge-secondary';
   }
 
   emitOnOrganizationClicked() {

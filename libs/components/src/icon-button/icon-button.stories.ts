@@ -15,7 +15,7 @@ export default {
   title: "Component Library/Icon Button",
   component: BitIconButtonComponent,
   args: {
-    bitIconButton: "bwi-plus",
+    bitIconButton: "fa-plus",
     size: "default",
     disabled: false,
   },

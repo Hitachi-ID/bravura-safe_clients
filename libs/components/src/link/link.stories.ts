@@ -25,12 +25,12 @@ const ButtonTemplate: Story<LinkDirective> = (args: LinkDirective) => ({
   <div class="tw-p-2" [ngClass]="{ 'tw-bg-transparent': linkType != 'contrast', 'tw-bg-primary-500': linkType === 'contrast' }">
     <button bitLink [linkType]="linkType" class="tw-mb-2 tw-block">Button</button>
     <button bitLink [linkType]="linkType" class="tw-mb-2 tw-block">
-      <i class="bwi bwi-fw bwi-plus-circle" aria-hidden="true"></i>
+      <i class="fa fa-fw fa-plus-circle" aria-hidden="true"></i>
       Add Icon Button
     </button>
     <button bitLink [linkType]="linkType" class="tw-mb-2 tw-block">
       Chevron Icon Button
-      <i class="bwi bwi-fw bwi-sm bwi-angle-down" aria-hidden="true"></i>
+      <i class="fa fa-fw fa-sm fa-chevron-down" aria-hidden="true"></i>
     </button>
     <button bitLink [linkType]="linkType" class="tw-text-sm tw-block">Small Button</button>
   </div>
@@ -46,14 +46,14 @@ const AnchorTemplate: Story<LinkDirective> = (args: LinkDirective) => ({
     </div>
     <div class="tw-block tw-p-2">
       <a bitLink [linkType]="linkType" href="#">
-        <i class="bwi bwi-fw bwi-plus-circle" aria-hidden="true"></i>
+        <i class="fa fa-fw fa-plus-circle" aria-hidden="true"></i>
         Add Icon Anchor
       </a>
     </div>
     <div class="tw-block tw-p-2">
       <a bitLink [linkType]="linkType" href="#">
         Chevron Icon Anchor
-        <i class="bwi bwi-fw bwi-sm bwi-angle-down" aria-hidden="true"></i>
+        <i class="fa fa-fa fa-sm fa-chevron-down" aria-hidden="true"></i>
       </a>
     </div>
     <div class="tw-block tw-p-2">

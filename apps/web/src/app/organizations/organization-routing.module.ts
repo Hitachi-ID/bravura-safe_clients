@@ -194,15 +194,6 @@ const routes: Routes = [
         children: [
           { path: "", pathMatch: "full", redirectTo: "account" },
           { path: "account", component: AccountComponent, data: { titleId: "myOrganization" } },
-/*          {
-            path: "billing",
-            component: OrganizationBillingComponent,
-            canActivate: [OrganizationPermissionsGuard],
-            data: {
-              titleId: "billing",
-              organizationPermissions: (org: Organization) => org.canManageBilling,
-            },
-          },*/
           {
             path: "subscription",
             component: OrganizationSubscriptionComponent,

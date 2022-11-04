@@ -1,7 +1,16 @@
 <div class="container page-content">
+  <ng-container *ngIf="loading">
+    <i
+      class="fa fa-spinner fa-spin text-muted"
+      title="{{ 'loading' | i18n }}"
+      aria-hidden="true"
+    ></i>
+    <span class="sr-only">{{ "loading" | i18n }}</span>
+  </ng-container>
+  <ng-container *ngIf="!loading">
   <div class="row">
     <div class="col-3">
-      <div class="card" *ngIf="organization">
+      <div class="card mb-4" *ngIf="organization.canAccessReports">
         <div class="card-header">
           {{ "reports" | i18n }}
         </div>
@@ -46,4 +55,5 @@
       <app-footer></app-footer>
     </div>
   </div>
+  </ng-container>
 </div>

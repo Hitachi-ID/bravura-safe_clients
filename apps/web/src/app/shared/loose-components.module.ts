@@ -81,7 +81,6 @@ import { AddEditComponent as OrgAddEditComponent } from "../organizations/vault/
 import { AttachmentsComponent as OrgAttachmentsComponent } from "../organizations/vault/attachments.component";
 import { CollectionsComponent as OrgCollectionsComponent } from "../organizations/vault/collections.component";
 import { ProvidersComponent } from "../providers/providers.component";
-
 import { AccessComponent } from "../send/access.component";
 import { AddEditComponent as SendAddEditComponent } from "../send/add-edit.component";
 import { EffluxDatesComponent as SendEffluxDatesComponent } from "../send/efflux-dates.component";

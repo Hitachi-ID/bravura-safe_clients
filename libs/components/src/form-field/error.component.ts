@@ -9,7 +9,7 @@ let nextId = 0;
   selector: "bit-error",
   template: `<i class="fa fa-error"></i> {{ displayError }}`,
   host: {
-    class: "tw-block tw-mt-1 tw-text-danger",
+    class: "tw-block small tw-text-danger",
     "aria-live": "assertive",
   },
 })

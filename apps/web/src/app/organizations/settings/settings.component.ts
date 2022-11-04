@@ -23,7 +23,7 @@ export class SettingsComponent {
     // eslint-disable-next-line rxjs-angular/prefer-takeuntil, rxjs/no-async-subscribe
     this.route.parent.params.subscribe(async (params) => {
       const organization = await this.organizationService.get(params.organizationId);
-      this.showBilling = !this.platformUtilsService.isSelfHost(); // && organization.canManageBilling;
+      this.showBilling = !this.platformUtilsService.isSelfHost();
       this.access2fa = organization.use2fa;
     });
   }

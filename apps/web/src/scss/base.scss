@@ -44,8 +44,6 @@ body {
 .tabbed-header {
   padding-top: $sidebar-padding-top;
 
-
-
   @include themify($themes) {
     background: themed("backgroundColor");
   }

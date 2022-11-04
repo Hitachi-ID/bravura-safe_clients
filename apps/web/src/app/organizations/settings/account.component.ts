@@ -11,7 +11,6 @@ import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUti
 import { OrganizationKeysRequest } from "@bitwarden/common/models/request/organizationKeysRequest";
 import { OrganizationUpdateRequest } from "@bitwarden/common/models/request/organizationUpdateRequest";
 import { OrganizationResponse } from "@bitwarden/common/models/response/organizationResponse";
-import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
 
 import { ApiKeyComponent } from "../../settings/api-key.component";
 import { PurgeVaultComponent } from "../../settings/purge-vault.component";
@@ -54,8 +53,7 @@ export class AccountComponent {
     private logService: LogService,
     private router: Router,
     private organizationService: OrganizationService,
-    private organizationApiService: OrganizationApiServiceAbstraction,
-    private messagingService: MessagingService
+    private organizationApiService: OrganizationApiServiceAbstraction
   ) {}
 
   async ngOnInit() {
@@ -64,7 +62,6 @@ export class AccountComponent {
     // eslint-disable-next-line rxjs-angular/prefer-takeuntil, rxjs/no-async-subscribe
     this.route.parent.parent.params.subscribe(async (params) => {
       this.organizationId = params.organizationId;
-/*      this.canManageBilling = this.organizationService.get(this.organizationId).canManageBilling;*/
       this.canManageBilling = false;
       try {
         this.org = await this.organizationApiService.get(this.organizationId);
@@ -93,7 +90,6 @@ export class AccountComponent {
 
       this.formPromise = this.organizationApiService.save(this.organizationId, request);
       await this.formPromise;
-      this.messagingService.send("organizationUpdated");
       this.platformUtilsService.showToast(
         "success",
         null,

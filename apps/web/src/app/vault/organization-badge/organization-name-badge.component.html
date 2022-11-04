@@ -1,9 +1,8 @@
-<button
+<span
   bitBadge
   [style.color]="textColor"
-  [style.background-color]="color"
+  [class]="class"
   appA11yTitle="{{ organizationName }}"
-  (click)="emitOnOrganizationClicked()"
 >
   {{ organizationName | ellipsis: 13 }}
-</button>
+</span>

@@ -1,6 +1,6 @@
 import { DragDropModule } from "@angular/cdk/drag-drop";
 import { LayoutModule } from "@angular/cdk/layout";
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
+import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
@@ -25,6 +25,5 @@ import { WildcardRoutingModule } from "./wildcard-routing.module";
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}

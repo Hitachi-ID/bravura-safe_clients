@@ -60,7 +60,7 @@ const Template: Story<DialogComponent> = (args: DialogComponent) => ({
       <button bitButton buttonType="secondary">Cancel</button>
       <button
         class="tw-ml-auto"
-        bitIconButton="bwi-trash"
+        bitIconButton="fa-trash"
         buttonType="danger"
         size="default"
         title="Delete"

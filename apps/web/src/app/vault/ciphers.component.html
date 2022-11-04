@@ -49,9 +49,12 @@
           <small appStopProp>{{ c.subTitle }}</small>
         </td>
         <td *ngIf="organizations.length > 0 && !organization" class="tw-w-28">
-          <span class="badge badge-secondary" [title]="c.organizationId | orgNameFromId: organizations" *ngIf="c.organizationId | orgNameFromId: organizations">
-            {{ c.organizationId | orgNameFromId: organizations | ellipsis: 13 }}
-          </span>
+          <app-org-badge
+            organizationName="{{ c.organizationId | orgNameFromId: organizations }}"
+            profileName="{{ profileName }}"
+            *ngIf="c.organizationId | orgNameFromId: organizations"
+          >
+          </app-org-badge>
         </td>
         <td class="table-list-options reduced-lh">
           <div class="list-options">
