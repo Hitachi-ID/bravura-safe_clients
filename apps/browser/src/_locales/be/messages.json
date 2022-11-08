@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -753,7 +753,7 @@
     "message": "Кіраванне статусам"
   },
   "premiumManageAlert": {
-    "message": "Вы можаце кіраваць сваім статусам на hitachi-id.com. Перайсці на сайт зараз?"
+    "message": "Вы можаце кіраваць сваім статусам на bravurasecurity.com. Перайсці на сайт зараз?"
   },
   "premiumRefresh": {
     "message": "Абнавіць статус"
@@ -786,7 +786,7 @@
     "message": "Купіць прэміяльны статус"
   },
   "premiumPurchaseAlert": {
-    "message": "Вы можаце купіць прэміяльны статус на hitachi-id.com. Перайсці на сайт зараз?"
+    "message": "Вы можаце купіць прэміяльны статус на bravurasecurity.com. Перайсці на сайт зараз?"
   },
   "premiumCurrentMember": {
     "message": "У вас прэміяльны статус!"

@@ -56,6 +56,7 @@ import { ResetPasswordPolicyComponent } from "../organizations/policies/reset-pa
 import { SendOptionsPolicyComponent } from "../organizations/policies/send-options.component";
 import { SingleOrgPolicyComponent } from "../organizations/policies/single-org.component";
 import { TwoFactorAuthenticationPolicyComponent } from "../organizations/policies/two-factor-authentication.component";
+import { AccountComponent as OrgAccountOptionsComponent } from "../organizations/options/account.component";
 import { AccountComponent as OrgAccountComponent } from "../organizations/settings/account.component";
 import { AdjustSubscription } from "../organizations/settings/adjust-subscription.component";
 import { BillingSyncApiKeyComponent } from "../organizations/settings/billing-sync-api-key.component";
@@ -65,6 +66,7 @@ import { DownloadLicenseComponent } from "../organizations/settings/download-lic
 import { ImageSubscriptionHiddenComponent as OrgSubscriptionHiddenComponent } from "../organizations/settings/image-subscription-hidden.component";
 import { OrganizationBillingComponent } from "../organizations/settings/organization-billing.component";
 import { OrganizationSubscriptionComponent } from "../organizations/settings/organization-subscription.component";
+import { OptionsComponent as OrgOptionsComponent } from "../organizations/options/options.component";
 import { SettingsComponent as OrgSettingComponent } from "../organizations/settings/settings.component";
 import { TwoFactorSetupComponent as OrgTwoFactorSetupComponent } from "../organizations/settings/two-factor-setup.component";
 import { AcceptFamilySponsorshipComponent } from "../organizations/sponsorships/accept-family-sponsorship.component";
@@ -231,6 +233,7 @@ import { OrganizationBadgeModule } from "./vault/modules/organization-badge/orga
     NestedCheckboxComponent,
     OrganizationSwitcherComponent,
     OrgAccountComponent,
+    OrgAccountOptionsComponent,
     OrgAddEditComponent,
     OrganizationBillingComponent,
     OrganizationLayoutComponent,
@@ -254,6 +257,7 @@ import { OrganizationBadgeModule } from "./vault/modules/organization-badge/orga
     OrgInactiveTwoFactorReportComponent,
     OrgManageCollectionsComponent,
     OrgManageComponent,
+    OrgOptionsComponent,
     OrgPeopleComponent,
     OrgPoliciesComponent,
     OrgPolicyEditComponent,
@@ -392,6 +396,7 @@ import { OrganizationBadgeModule } from "./vault/modules/organization-badge/orga
     NestedCheckboxComponent,
     OrganizationSwitcherComponent,
     OrgAccountComponent,
+    OrgAccountOptionsComponent,
     OrgAddEditComponent,
     OrganizationBillingComponent,
     OrganizationLayoutComponent,
@@ -415,6 +420,7 @@ import { OrganizationBadgeModule } from "./vault/modules/organization-badge/orga
     OrgInactiveTwoFactorReportComponent,
     OrgManageCollectionsComponent,
     OrgManageComponent,
+    OrgOptionsComponent,
     OrgPeopleComponent,
     OrgPoliciesComponent,
     OrgPolicyEditComponent,

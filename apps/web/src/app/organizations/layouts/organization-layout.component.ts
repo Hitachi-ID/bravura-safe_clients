@@ -103,4 +103,8 @@ export class OrganizationLayoutComponent implements OnInit, OnDestroy {
     }
     return route;
   }
+
+  get optionsRoute(): string {
+    return "options/account";
+  }
 }

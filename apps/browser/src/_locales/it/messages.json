@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -753,7 +753,7 @@
     "message": "Gestisci abbonamento"
   },
   "premiumManageAlert": {
-    "message": "Puoi gestire il tuo abbonamento premium online su hitachi-id.com. Vuoi visitare ora il sito?"
+    "message": "Puoi gestire il tuo abbonamento premium online su bravurasecurity.com. Vuoi visitare ora il sito?"
   },
   "premiumRefresh": {
     "message": "Aggiorna abbonamento"
@@ -786,7 +786,7 @@
     "message": "Acquista Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Puoi acquistare il tuo abbonamento premium online su hitachi-id.com. Vuoi visitare ora il sito?"
+    "message": "Puoi acquistare il tuo abbonamento premium online su bravurasecurity.com. Vuoi visitare ora il sito?"
   },
   "premiumCurrentMember": {
     "message": "Sei un membro premium!"

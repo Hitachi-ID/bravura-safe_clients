@@ -29,7 +29,7 @@ const moduleRules = [
   },
   {
     test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-    exclude: /(loading(|-white)|hitachi-id-logo-(dark|white)).svg/,
+    exclude: /(loading(|-white)|bravura-safe-logo-(dark|white)).svg/,
     generator: {
       filename: "fonts/[name][ext]",
     },

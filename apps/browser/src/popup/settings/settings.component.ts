@@ -374,8 +374,8 @@ export class SettingsComponent implements OnInit {
       this.i18nService.t("version") + ": " + BrowserApi.getInternalApplicationVersion()
     );
     const div = document.createElement("div");
-    div.innerHTML = `<p class="text-center"><img src="../../images/icon38.png" alt="Hitachi ID" /></p>
-            <p class="text-center">&copy; 2022, Bitwarden Inc., with modifications &copy; 2022, Hitachi ID Systems, Inc.</p>`;
+    div.innerHTML = `<p class="text-center"><img src="../../images/icon38.png" alt="Bravura Safe" /></p>
+            <p class="text-center">&copy; 2022, Bitwarden Inc., with modifications &copy; 2022, Bravura Security, Inc.</p>`;
     div.appendChild(versionText);
 
     Swal.fire({
