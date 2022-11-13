@@ -91,6 +91,7 @@ import { UpdateTwoFactorAuthenticatorRequest } from "../models/request/updateTwo
 import { UpdateTwoFactorDuoRequest } from "../models/request/updateTwoFactorDuoRequest";
 import { UpdateTwoFactorEmailRequest } from "../models/request/updateTwoFactorEmailRequest";
 import { UpdateTwoFactorHyprRequest } from "../models/request/updateTwoFactorHyprRequest";
+import { HyprAuthenticationRequestModel } from "../models/request/hyprAuthenticationRequestModel";
 import { UpdateTwoFactorWebAuthnDeleteRequest } from "../models/request/updateTwoFactorWebAuthnDeleteRequest";
 import { UpdateTwoFactorWebAuthnRequest } from "../models/request/updateTwoFactorWebAuthnRequest";
 import { UpdateTwoFactorYubioOtpRequest } from "../models/request/updateTwoFactorYubioOtpRequest";
@@ -173,6 +174,7 @@ import { TwoFactorAuthenticatorResponse } from "../models/response/twoFactorAuth
 import { TwoFactorDuoResponse } from "../models/response/twoFactorDuoResponse";
 import { TwoFactorEmailResponse } from "../models/response/twoFactorEmailResponse";
 import { TwoFactorHyprResponse } from "../models/response/twoFactorHyprResponse";
+import { TwoFactorHyprAuthResponse} from "../models/response/twoFactorHyprAuthResponse";
 import { TwoFactorProviderResponse } from "../models/response/twoFactorProviderResponse";
 import { TwoFactorRecoverResponse } from "../models/response/twoFactorRescoverResponse";
 import {
@@ -498,6 +500,9 @@ export abstract class ApiService {
     organizationId: string,
     request: UpdateTwoFactorHyprRequest
   ) => Promise<TwoFactorHyprResponse>;
+  postTwoFactorHyprAuthReq: (
+     request: HyprAuthenticationRequestModel
+  ) => Promise<TwoFactorHyprAuthResponse>;
   putTwoFactorYubiKey: (
     request: UpdateTwoFactorYubioOtpRequest
   ) => Promise<TwoFactorYubiKeyResponse>;

@@ -98,6 +98,7 @@ import { UpdateTempPasswordRequest } from "../models/request/updateTempPasswordR
 import { UpdateTwoFactorAuthenticatorRequest } from "../models/request/updateTwoFactorAuthenticatorRequest";
 import { UpdateTwoFactorDuoRequest } from "../models/request/updateTwoFactorDuoRequest";
 import { UpdateTwoFactorHyprRequest } from "../models/request/updateTwoFactorHyprRequest";
+import { HyprAuthenticationRequestModel } from "../models/request/hyprAuthenticationRequestModel";
 import { UpdateTwoFactorEmailRequest } from "../models/request/updateTwoFactorEmailRequest";
 import { UpdateTwoFactorWebAuthnDeleteRequest } from "../models/request/updateTwoFactorWebAuthnDeleteRequest";
 import { UpdateTwoFactorWebAuthnRequest } from "../models/request/updateTwoFactorWebAuthnRequest";
@@ -181,6 +182,7 @@ import { TaxRateResponse } from "../models/response/taxRateResponse";
 import { TwoFactorAuthenticatorResponse } from "../models/response/twoFactorAuthenticatorResponse";
 import { TwoFactorDuoResponse } from "../models/response/twoFactorDuoResponse";
 import { TwoFactorHyprResponse } from "../models/response/twoFactorHyprResponse";
+import { TwoFactorHyprAuthResponse } from "../models/response/twoFactorHyprAuthResponse";
 import { TwoFactorEmailResponse } from "../models/response/twoFactorEmailResponse";
 import { TwoFactorProviderResponse } from "../models/response/twoFactorProviderResponse";
 import { TwoFactorRecoverResponse } from "../models/response/twoFactorRescoverResponse";
@@ -1583,6 +1585,19 @@ export class ApiService implements ApiServiceAbstraction {
       true
     );
     return new TwoFactorHyprResponse(r);
+  }
+
+  async postTwoFactorHyprAuthReq(
+    request: HyprAuthenticationRequestModel
+  ): Promise<TwoFactorHyprAuthResponse> {
+    const r = await this.send(
+      "POST",
+      "/two-factor/hypr/push-authentication",
+      request,
+      false,
+      true
+    );
+    return new TwoFactorHyprAuthResponse(r);
   }
 
   async putTwoFactorYubiKey(

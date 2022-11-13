@@ -87,12 +87,16 @@
           <ng-container
             *ngIf="
               selectedProviderType === providerType.Duo ||
-              selectedProviderType === providerType.OrganizationDuo ||
-              selectedProviderType === providerType.OrganizationHypr
+              selectedProviderType === providerType.OrganizationDuo
             "
           >
             <div id="duo-frame" class="mb-3">
               <iframe id="duo_iframe"></iframe>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="selectedProviderType === providerType.OrganizationHypr">
+            <div id="hypr-frame" class="mb-3">
+              <iframe id="hypr_iframe"></iframe>
             </div>
           </ng-container>
           <i
