@@ -1,6 +1,6 @@
 import { BaseResponse } from "./baseResponse";
 
-export class TwoFactorHyprAuthResponse extends BaseResponse {
+export class HyprAuthTokenResponse extends BaseResponse {
   signature: string;
   status: number;
 

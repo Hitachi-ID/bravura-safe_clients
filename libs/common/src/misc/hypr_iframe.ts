@@ -1,4 +1,9 @@
 import { HyprAuthenticationRequestModel } from "../models/request/hyprAuthenticationRequestModel";
+import { AuthTxCookies } from "../models/request/authTxCookies";
+import { TwoFactorProviderType } from "../enums/twoFactorProviderType";
+import { HyprAuthTokenResponse } from "../models/response/hyprAuthTokenResponse";
+import { TokenRequestTwoFactor } from "../models/request/identityToken/tokenRequestTwoFactor";
+import { ApiTokenRequest } from "../models/request/identityToken/apiTokenRequest";
 
 import { I18nService } from "../abstractions/i18n.service";
 import { PlatformUtilsService } from "../abstractions/platformUtils.service";
@@ -25,7 +30,7 @@ export class HyprIFrame {
     this.connectorLink = win.document.createElement("a");
   }
 
-  init(data: any): void {
+  async init(data: any) {
     const params = new URLSearchParams({
       data: this.base64Encode(JSON.stringify(data)),
       parent: encodeURIComponent(this.win.document.location.href),
@@ -52,7 +57,34 @@ export class HyprIFrame {
       Signature: this.signature,
       Team: this.teamID
     };
-    this.apiService.postTwoFactorHyprAuthReq(hyprAuthenticationRequestModel);
+    const hyprAuthRes = await this.apiService.postTwoFactorHyprAuthReq(hyprAuthenticationRequestModel);
+
+    if (hyprAuthRes.status !== 200) {
+      return;
+    }
+
+    const concatenatedAuthTx = hyprAuthRes.signature + "|" + this.signature;
+    //concatenated: AUTH:|TX:
+    //put AUTH in "twoFactorToken"
+    const twoFactorInfo = new TokenRequestTwoFactor(
+      TwoFactorProviderType.OrganizationHypr,
+      concatenatedAuthTx,
+      false//todo fix later
+    );
+    const token = new ApiTokenRequest(
+      "web",
+      "",
+      twoFactorInfo
+    );
+    await this.apiService.postIdentityToken(token);
+    /*const authTxCookies: AuthTxCookies = {
+      Signature: concatenatedAuthTx
+    };
+    const hyprAuthTokenResponse = await this.apiService.postTwoFactorHyprTokenReq(authTxCookies);
+
+    if (hyprAuthTokenResponse.status !== 200) {
+      return;
+    }*/
   }
 
   stop() {

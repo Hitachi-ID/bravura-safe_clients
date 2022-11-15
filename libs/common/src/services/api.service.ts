@@ -6,6 +6,7 @@ import { TokenService } from "../abstractions/token.service";
 import { DeviceType } from "../enums/deviceType";
 import { OrganizationConnectionType } from "../enums/organizationConnectionType";
 import { PolicyType } from "../enums/policyType";
+import { TwoFactorProviderType } from "../enums/twoFactorProviderType";
 import { Utils } from "../misc/utils";
 import { SetKeyConnectorKeyRequest } from "../models/request/account/setKeyConnectorKeyRequest";
 import { VerifyOTPRequest } from "../models/request/account/verifyOTPRequest";
@@ -99,6 +100,7 @@ import { UpdateTwoFactorAuthenticatorRequest } from "../models/request/updateTwo
 import { UpdateTwoFactorDuoRequest } from "../models/request/updateTwoFactorDuoRequest";
 import { UpdateTwoFactorHyprRequest } from "../models/request/updateTwoFactorHyprRequest";
 import { HyprAuthenticationRequestModel } from "../models/request/hyprAuthenticationRequestModel";
+import { AuthTxCookies } from "../models/request/authTxCookies";
 import { UpdateTwoFactorEmailRequest } from "../models/request/updateTwoFactorEmailRequest";
 import { UpdateTwoFactorWebAuthnDeleteRequest } from "../models/request/updateTwoFactorWebAuthnDeleteRequest";
 import { UpdateTwoFactorWebAuthnRequest } from "../models/request/updateTwoFactorWebAuthnRequest";
@@ -183,6 +185,7 @@ import { TwoFactorAuthenticatorResponse } from "../models/response/twoFactorAuth
 import { TwoFactorDuoResponse } from "../models/response/twoFactorDuoResponse";
 import { TwoFactorHyprResponse } from "../models/response/twoFactorHyprResponse";
 import { TwoFactorHyprAuthResponse } from "../models/response/twoFactorHyprAuthResponse";
+import { HyprAuthTokenResponse } from "../models/response/hyprAuthTokenResponse";
 import { TwoFactorEmailResponse } from "../models/response/twoFactorEmailResponse";
 import { TwoFactorProviderResponse } from "../models/response/twoFactorProviderResponse";
 import { TwoFactorRecoverResponse } from "../models/response/twoFactorRescoverResponse";
@@ -1598,6 +1601,22 @@ export class ApiService implements ApiServiceAbstraction {
       true
     );
     return new TwoFactorHyprAuthResponse(r);
+  }
+
+  async postTwoFactorHyprTokenReq(
+    concatenatedCookies: AuthTxCookies
+  ): Promise<HyprAuthTokenResponse> {
+    const r = await this.send(
+      "POST",
+      this.environmentService.getIdentityUrl() + "/connect/token",
+      this.qsStringify({
+        twoFactorToken: concatenatedCookies.Signature,
+        twoFactorProvider: TwoFactorProviderType.OrganizationHypr
+      }),
+      false,
+      true
+    );
+    return new HyprAuthTokenResponse(r);
   }
 
   async putTwoFactorYubiKey(

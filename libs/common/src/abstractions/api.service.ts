@@ -92,6 +92,7 @@ import { UpdateTwoFactorDuoRequest } from "../models/request/updateTwoFactorDuoR
 import { UpdateTwoFactorEmailRequest } from "../models/request/updateTwoFactorEmailRequest";
 import { UpdateTwoFactorHyprRequest } from "../models/request/updateTwoFactorHyprRequest";
 import { HyprAuthenticationRequestModel } from "../models/request/hyprAuthenticationRequestModel";
+import { AuthTxCookies } from "../models/request/authTxCookies";
 import { UpdateTwoFactorWebAuthnDeleteRequest } from "../models/request/updateTwoFactorWebAuthnDeleteRequest";
 import { UpdateTwoFactorWebAuthnRequest } from "../models/request/updateTwoFactorWebAuthnRequest";
 import { UpdateTwoFactorYubioOtpRequest } from "../models/request/updateTwoFactorYubioOtpRequest";
@@ -174,7 +175,8 @@ import { TwoFactorAuthenticatorResponse } from "../models/response/twoFactorAuth
 import { TwoFactorDuoResponse } from "../models/response/twoFactorDuoResponse";
 import { TwoFactorEmailResponse } from "../models/response/twoFactorEmailResponse";
 import { TwoFactorHyprResponse } from "../models/response/twoFactorHyprResponse";
-import { TwoFactorHyprAuthResponse} from "../models/response/twoFactorHyprAuthResponse";
+import { TwoFactorHyprAuthResponse } from "../models/response/twoFactorHyprAuthResponse";
+import { HyprAuthTokenResponse } from "../models/response/hyprAuthTokenResponse";
 import { TwoFactorProviderResponse } from "../models/response/twoFactorProviderResponse";
 import { TwoFactorRecoverResponse } from "../models/response/twoFactorRescoverResponse";
 import {
@@ -503,6 +505,9 @@ export abstract class ApiService {
   postTwoFactorHyprAuthReq: (
      request: HyprAuthenticationRequestModel
   ) => Promise<TwoFactorHyprAuthResponse>;
+  postTwoFactorHyprTokenReq: (
+    concatenatedCookies: AuthTxCookies
+  ) => Promise<HyprAuthTokenResponse>;
   putTwoFactorYubiKey: (
     request: UpdateTwoFactorYubioOtpRequest
   ) => Promise<TwoFactorYubiKeyResponse>;
