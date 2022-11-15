@@ -13,6 +13,7 @@ export class HyprIFrame {
   private iframe: HTMLIFrameElement = null;
   private connectorLink: HTMLAnchorElement;
   private parseFunction = this.parseMessage.bind(this);
+  //private authTxToken: string = null;
 
   constructor(
     private signature: string,
@@ -29,6 +30,10 @@ export class HyprIFrame {
   ) {
     this.connectorLink = win.document.createElement("a");
   }
+
+  /*getAuthTxToken(): string {
+    return this.authTxToken;
+  }*/
 
   async init(data: any) {
     const params = new URLSearchParams({
@@ -64,9 +69,11 @@ export class HyprIFrame {
     }
 
     const concatenatedAuthTx = hyprAuthRes.signature + ":" + this.signature;
+    //this.authTxToken = concatenatedAuthTx;
+    this.successCallback(concatenatedAuthTx);
     //concatenated: AUTH:TX
     //put AUTH in "twoFactorToken"
-    const twoFactorInfo = new TokenRequestTwoFactor(
+    /*const twoFactorInfo = new TokenRequestTwoFactor(
       TwoFactorProviderType.OrganizationHypr,
       concatenatedAuthTx,
       false//todo fix later
@@ -76,7 +83,7 @@ export class HyprIFrame {
       "",
       twoFactorInfo
     );
-    await this.apiService.postIdentityToken(token);
+    await this.apiService.postIdentityToken(token);*/
     /*const authTxCookies: AuthTxCookies = {
       Signature: concatenatedAuthTx
     };
