@@ -63,8 +63,8 @@ export class HyprIFrame {
       return;
     }
 
-    const concatenatedAuthTx = hyprAuthRes.signature + "|" + this.signature;
-    //concatenated: AUTH:|TX:
+    const concatenatedAuthTx = hyprAuthRes.signature + ":" + this.signature;
+    //concatenated: AUTH:TX
     //put AUTH in "twoFactorToken"
     const twoFactorInfo = new TokenRequestTwoFactor(
       TwoFactorProviderType.OrganizationHypr,
