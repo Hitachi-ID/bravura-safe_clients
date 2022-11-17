@@ -169,11 +169,6 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
           },
           (error: string) => {
             this.platformUtilsService.showToast("error", this.i18nService.t("errorOccurred"), error);
-          },
-          (info: string) => {
-            if (info === "ready") {
-              //this.webAuthnReady = true;
-            }
           }
         );
         setTimeout(() => {

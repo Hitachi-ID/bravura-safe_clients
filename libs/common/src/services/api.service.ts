@@ -100,7 +100,6 @@ import { UpdateTwoFactorAuthenticatorRequest } from "../models/request/updateTwo
 import { UpdateTwoFactorDuoRequest } from "../models/request/updateTwoFactorDuoRequest";
 import { UpdateTwoFactorHyprRequest } from "../models/request/updateTwoFactorHyprRequest";
 import { HyprAuthenticationRequestModel } from "../models/request/hyprAuthenticationRequestModel";
-import { AuthTxCookies } from "../models/request/authTxCookies";
 import { UpdateTwoFactorEmailRequest } from "../models/request/updateTwoFactorEmailRequest";
 import { UpdateTwoFactorWebAuthnDeleteRequest } from "../models/request/updateTwoFactorWebAuthnDeleteRequest";
 import { UpdateTwoFactorWebAuthnRequest } from "../models/request/updateTwoFactorWebAuthnRequest";
@@ -185,7 +184,6 @@ import { TwoFactorAuthenticatorResponse } from "../models/response/twoFactorAuth
 import { TwoFactorDuoResponse } from "../models/response/twoFactorDuoResponse";
 import { TwoFactorHyprResponse } from "../models/response/twoFactorHyprResponse";
 import { TwoFactorHyprAuthResponse } from "../models/response/twoFactorHyprAuthResponse";
-import { HyprAuthTokenResponse } from "../models/response/hyprAuthTokenResponse";
 import { TwoFactorEmailResponse } from "../models/response/twoFactorEmailResponse";
 import { TwoFactorProviderResponse } from "../models/response/twoFactorProviderResponse";
 import { TwoFactorRecoverResponse } from "../models/response/twoFactorRescoverResponse";
@@ -1593,30 +1591,24 @@ export class ApiService implements ApiServiceAbstraction {
   async postTwoFactorHyprAuthReq(
     request: HyprAuthenticationRequestModel
   ): Promise<TwoFactorHyprAuthResponse> {
-    const r = await this.send(
-      "POST",
-      "/two-factor/hypr/push-authentication",
-      request,
-      false,
-      true
-    );
-    return new TwoFactorHyprAuthResponse(r);
-  }
-
-  async postTwoFactorHyprTokenReq(
-    concatenatedCookies: AuthTxCookies
-  ): Promise<HyprAuthTokenResponse> {
-    const r = await this.send(
-      "POST",
-      this.environmentService.getIdentityUrl() + "/connect/token",
-      this.qsStringify({
-        twoFactorToken: concatenatedCookies.Signature,
-        twoFactorProvider: TwoFactorProviderType.OrganizationHypr
-      }),
-      false,
-      true
-    );
-    return new HyprAuthTokenResponse(r);
+    try {
+      const r = await this.send(
+        "POST",
+        "/two-factor/hypr/push-authentication",
+        request,
+        false,
+        true
+      );
+      return new TwoFactorHyprAuthResponse(r);
+    } catch (e) {
+      if( e instanceof ErrorResponse ) {
+        const r = {
+          message: e.message,
+          status: e.statusCode
+        };
+        return new TwoFactorHyprAuthResponse(r);
+      } else throw e;
+    }
   }
 
   async putTwoFactorYubiKey(

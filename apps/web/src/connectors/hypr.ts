@@ -1,9 +1,12 @@
-import { getQsParam } from "./common";
+import { TwoFactorProviderType } from '@bitwarden/common/enums/twoFactorProviderType';
 
 require("./hypr.scss");
 
 document.addEventListener("DOMContentLoaded", () => {
-  // nothing needed yet
+  const img = document.getElementById("img");
+  const num : number = TwoFactorProviderType.OrganizationHypr;
+  img.classList.add('mfaType' + num.toString());
+  img.setAttribute('src', '../images/' + num.toString() + '.png');
 });
 
 function invokeCSCode(data: string) {
