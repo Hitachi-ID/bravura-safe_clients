@@ -12,8 +12,7 @@
       [ngClass]="{
         'col-9':
           selectedProviderType === providerType.Duo ||
-          selectedProviderType === providerType.OrganizationDuo ||
-          selectedProviderType === providerType.OrganizationHypr
+          selectedProviderType === providerType.OrganizationDuo
       }"
     >
       <ng-container *ngIf="selectedProviderType === providerType.OrganizationHypr; else otherProviders">
@@ -103,9 +102,9 @@
             <div id="hypr-frame" class="text-center mb-3">
               <h1>Check for a OneAuth Push</h1>
               <p>Verify it is you by approving the notification sent to your device</p>
-              <span class="fa-stack fa-2x" style="font-size: 500%;">
-                <i class="fa fa fa-solid fa-mobile fa-stack-2x"></i>
-                <i class="fa fa-spinner fa-spin" data-fa-transform="up-48" style="
+              <span id="iconsFaStack" class="fa-stack fa-2x" style="font-size: 500%;">
+                <i id="mobile" class="fa fa fa-solid fa-mobile fa-stack-2x"></i>
+                <i id="innerIcon" class="fa fa-spinner fa-spin" data-fa-transform="up-48" style="
                   font-size: 50%;
                   position: relative;
                   top: -10%;

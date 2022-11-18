@@ -33,6 +33,8 @@ export class HyprIFrame {
       Team: this.teamID
     };
     const hyprAuthRes = await this.apiService.postTwoFactorHyprAuthReq(hyprAuthenticationRequestModel);
+    if (!this.win.document.getElementById('hypr-frame'))
+      return;
 
     let gotError: boolean = true;
     let m: string;
@@ -57,7 +59,8 @@ export class HyprIFrame {
         break;
     }
     if (gotError) {
-      this.win.document.getElementsByClassName('fa-spinner')[0].className = 'fa fa-times';
+      this.win.document.getElementById('innerIcon').className = 'fa fa-times';
+      this.win.document.getElementById('iconsFaStack').style.color = 'red';
       this.win.document.getElementById('messagePlaceHolder').innerHTML = m;
       this.errorCallback(m);
       return;
