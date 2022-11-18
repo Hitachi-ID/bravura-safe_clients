@@ -63,6 +63,11 @@ then
     echo "Building docker and npm only -- open source, selfhosted, production level:"
     npm run build:bravura:selfhost:prod
     docker build -t bravura_vault/web . --label com.hitachi.web.hash="$(git rev-parse HEAD)"
+elif [ $# -eq 1 -a "$1" == "debug" ]
+then
+    echo "Building docker and npm only -- for debugging:"
+    npm run build:bravura
+    docker build -t bravura_vault/web . --label com.hitachi.web.hash="$(git rev-parse HEAD)"
 else
     echo "Run build for open source, selfhosted, production level:"
 	pushd .
