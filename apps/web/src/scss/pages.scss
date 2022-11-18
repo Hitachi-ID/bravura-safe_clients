@@ -316,6 +316,7 @@ app-sponsored-families {
   }
 
   > .vertical-spacer {
+    &:before { content: "\00a0"; }
     flex: 1 1 auto;
   }
 }

@@ -529,6 +529,9 @@
   "vaultItems": {
     "message": "保管庫のアイテム"
   },
+  "organizationVaultItems": {
+    "message": "保管庫のアイテム"
+  },
   "moveSelectedToOrg": {
     "message": "選択したものを組織に移動"
   },

@@ -529,6 +529,9 @@
   "vaultItems": {
     "message": "Elementos de la caja fuerte"
   },
+  "organizationVaultItems": {
+    "message": "Elementos de la caja fuerte"
+  },
   "moveSelectedToOrg": {
     "message": "Mover los seleccionados a la organización"
   },

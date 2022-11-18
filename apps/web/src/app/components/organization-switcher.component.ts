@@ -22,9 +22,7 @@ export class OrganizationSwitcherComponent implements OnInit {
   loaded = false;
 
   async ngOnInit() {
-    this.organizations$ = this.organizationService.organizations$.pipe(
-      canAccessAdmin(this.i18nService)
-    );
+    this.organizations$ = this.organizationService.organizations$;
     this.loaded = true;
   }
 }

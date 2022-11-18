@@ -15,7 +15,7 @@
       <tr *ngIf="p.display(organization)">
         <td>
           <a href="#" appStopClick (click)="edit(p)">{{ p.name | i18n }}</a>
-          <span class="badge badge-success" *ngIf="policiesEnabledMap.get(p.type)">{{
+          <span bitBadge [class]="badge-success" *ngIf="policiesEnabledMap.get(p.type)">{{
             "on" | i18n
           }}</span>
           <small class="text-muted d-block">{{ p.description | i18n }}</small>

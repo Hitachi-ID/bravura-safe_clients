@@ -529,6 +529,9 @@
   "vaultItems": {
     "message": "Tresor-Einträge"
   },
+  "organizationVaultItems": {
+    "message": "Tresor-Einträge"
+  },
   "moveSelectedToOrg": {
     "message": "Auswahl zur Organisation verschieben"
   },

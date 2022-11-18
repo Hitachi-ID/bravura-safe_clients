@@ -529,6 +529,9 @@
   "vaultItems": {
     "message": "My Safe Items"
   },
+  "organizationVaultItems": {
+    "message": "Safe Items"
+  },
   "moveSelectedToOrg": {
     "message": "Move Selected to Team"
   },
@@ -4099,7 +4102,7 @@
     "message": "Remove individual vault"
   },
   "personalOwnershipPolicyDesc": {
-    "message": "Require members to save items to an team by removing the individual vault option."
+    "message": "Require members to save items to a team by removing the individual vault option."
   },
   "personalOwnershipExemption": {
     "message": "Team Owners and Administrators are exempt from this policy's enforcement."
@@ -4111,7 +4114,7 @@
     "message": "Remove Share"
   },
   "disableSendPolicyDesc": {
-    "message": "Do not allow members to create or edit shares.",
+    "message": "Do not allow members to create or edit Shares.",
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "disableSendExemption": {

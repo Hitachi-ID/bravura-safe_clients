@@ -529,6 +529,9 @@
   "vaultItems": {
     "message": "密码库项目"
   },
+  "organizationVaultItems": {
+    "message": "密码库项目"
+  },
   "moveSelectedToOrg": {
     "message": "移动所选项目到组织"
   },
@@ -4111,7 +4114,7 @@
     "message": "禁用 Share"
   },
   "disableSendPolicyDesc": {
-    "message": "不允许成员创建或编辑 Send。",
+    "message": "不允许成员创建或编辑 Share。",
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "disableSendExemption": {

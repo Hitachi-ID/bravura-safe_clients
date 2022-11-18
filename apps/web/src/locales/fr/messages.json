@@ -529,6 +529,9 @@
   "vaultItems": {
     "message": "Objets du Coffre"
   },
+  "organizationVaultItems": {
+    "message": "Objets du Coffre"
+  },
   "moveSelectedToOrg": {
     "message": "Déplacer la sélection vers l'organisation"
   },
