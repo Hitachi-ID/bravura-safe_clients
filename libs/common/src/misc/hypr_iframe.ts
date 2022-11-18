@@ -1,13 +1,11 @@
-import { TokenRequestTwoFactor } from './../models/request/identityToken/tokenRequestTwoFactor';
 import { HyprAuthenticationRequestModel } from "../models/request/hyprAuthenticationRequestModel";
 
 import { I18nService } from "../abstractions/i18n.service";
 import { PlatformUtilsService } from "../abstractions/platformUtils.service";
 import { ApiService } from "../abstractions/api.service";
+import { TwoFactorProviderType } from '../enums/twoFactorProviderType';
 
 export class HyprIFrame {
-  private iframe: HTMLIFrameElement = null;
-  private connectorLink: HTMLAnchorElement;
   private parseFunction = this.parseMessage.bind(this);
 
   constructor(
@@ -21,22 +19,14 @@ export class HyprIFrame {
     private successCallback: Function, // eslint-disable-line
     private errorCallback: Function // eslint-disable-line
   ) {
-    this.connectorLink = win.document.createElement("a");
   }
 
   async init(data: any) {
-    const params = new URLSearchParams({
-      data: this.base64Encode(JSON.stringify(data)),
-      parent: encodeURIComponent(this.win.document.location.href),
-      TX: this.signature,
-      v: "1",
-    });
-
-    this.connectorLink.href = `${this.webVaultUrl}/hypr-connector.html?${params}`;
-    this.iframe = this.win.document.getElementById("hypr_iframe") as HTMLIFrameElement;
-    this.iframe.src = this.connectorLink.href;
-
     this.win.addEventListener("message", this.parseFunction, false);
+
+    const img = this.win.document.getElementById("img");
+    const num : number = TwoFactorProviderType.OrganizationHypr;
+    img.setAttribute('src', '../images/' + num.toString() + '.png');
 
     const hyprAuthenticationRequestModel: HyprAuthenticationRequestModel = {
       Signature: this.signature,
@@ -55,18 +45,22 @@ export class HyprIFrame {
         // no errors, break to continue with the login sequence
         gotError = false
         break;
+      //case 40000:
+        // get magic link [send email] or [pop up new tab]
+        // break;
       case 401:
         m = `Authentication denied [${hyprAuthRes.message}]`;
         break;
       case 400:
       default:
-        m = `Failed to authenticate [${hyprAuthRes.message}]`;
+        m = `Failed to authenticate via HYPR [${hyprAuthRes.message}]`;
         break;
     }
     if (gotError) {
-      this.iframe.contentDocument.getElementById('messagePlaceHolder').innerHTML = m;
-        this.errorCallback(m);
-        return;
+      this.win.document.getElementsByClassName('fa-spinner')[0].className = 'fa fa-times';
+      this.win.document.getElementById('messagePlaceHolder').innerHTML = m;
+      this.errorCallback(m);
+      return;
     }
 
     //concatenate AUTH:TX and pass it back as the token for TokenRequestTwoFactor
@@ -83,11 +77,7 @@ export class HyprIFrame {
   }
 
   sendMessage(message: any) {
-    if (!this.iframe || !this.iframe.src || !this.iframe.contentWindow) {
-      return;
-    }
-
-    this.iframe.contentWindow.postMessage(message, this.iframe.src);
+    this.win.postMessage(message, this.win.location.href);
   }
 
   base64Encode(str: string): string {
@@ -119,7 +109,6 @@ export class HyprIFrame {
     if (
       event.origin == null ||
       event.origin === "" ||
-      event.origin !== (this.connectorLink as any).origin ||
       event.data == null ||
       typeof event.data !== "string"
     ) {

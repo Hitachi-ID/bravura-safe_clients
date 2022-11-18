@@ -3,10 +3,6 @@ import { TwoFactorProviderType } from '@bitwarden/common/enums/twoFactorProvider
 require("./hypr.scss");
 
 document.addEventListener("DOMContentLoaded", () => {
-  const img = document.getElementById("img");
-  const num : number = TwoFactorProviderType.OrganizationHypr;
-  img.classList.add('mfaType' + num.toString());
-  img.setAttribute('src', '../images/' + num.toString() + '.png');
 });
 
 function invokeCSCode(data: string) {
