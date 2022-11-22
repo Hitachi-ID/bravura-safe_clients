@@ -1392,6 +1392,9 @@
   "twoFactorDuoApiHostname": {
     "message": "API Име хоста"
   },
+  "twoFactorHyprCheckDevice": {
+    "message": "Check device for notification"
+  },
   "twoFactorHyprDesc": {
     "message": "Enter the Bravura Safe application information from your Bravura OneAuth Admin panel."
   },
@@ -1399,10 +1402,13 @@
     "message": "API Token"
   },
   "twoFactorHyprAppId": {
-    "message": "Application ID"
+    "message": "Application ID (case sensitive)"
   },
   "twoFactorHyprServerUrl": {
-    "message": "Server URL"
+    "message": "Server Name"
+  },
+  "twoFactorHyprVerifyItIsYou": {
+  "message": "Verify it is you by approving the notification sent to your registered device"
   },
   "twoFactorEmailDesc": {
     "message": "Следите ове кораке за подешавање пријаве у два корака путем имејла:"

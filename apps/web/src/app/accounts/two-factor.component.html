@@ -100,9 +100,9 @@
           </ng-container>
           <ng-container *ngIf="selectedProviderType === providerType.OrganizationHypr">
             <div id="hypr-frame" class="text-center mb-3">
-              <h1>Check for a OneAuth Push</h1>
-              <p>Verify it is you by approving the notification sent to your device</p>
-              <span id="iconsFaStack" class="fa-stack fa-2x" style="font-size: 500%;">
+              <h1>{{ "twoFactorHyprCheckDevice" | i18n }}</h1>
+              <p style="margin-bottom: -1em;">{{ "twoFactorHyprVerifyItIsYou" | i18n }}</p>
+              <span id="iconsFaStack" class="fa-stack fa-2x" style="font-size: 750%;">
                 <i id="mobile" class="fa fa fa-solid fa-mobile fa-stack-2x"></i>
                 <i id="innerIcon" class="fa fa-spinner fa-spin" data-fa-transform="up-48" style="
                   font-size: 50%;

@@ -1398,6 +1398,9 @@
   "twoFactorDuoApiHostname": {
     "message": "API 호스트 이름"
   },
+  "twoFactorHyprCheckDevice": {
+    "message": "Check device for notification"
+  },
   "twoFactorHyprDesc": {
     "message": "Enter the Bravura Safe application information from your Bravura OneAuth Admin panel."
   },
@@ -1405,10 +1408,13 @@
     "message": "API Token"
   },
   "twoFactorHyprAppId": {
-    "message": "Application ID"
+    "message": "Application ID (case sensitive)"
   },
   "twoFactorHyprServerUrl": {
-    "message": "Server URL"
+    "message": "Server Name"
+  },
+  "twoFactorHyprVerifyItIsYou": {
+  "message": "Verify it is you by approving the notification sent to your registered device"
   },
   "twoFactorEmailDesc": {
     "message": "다음 단계에 따라 이메일로 2단계 로그인 설정:"

@@ -1488,14 +1488,23 @@
   "twoFactorDuoApiHostname": {
     "message": "API hostname"
   },
+  "twoFactorHyprCheckDevice": {
+    "message": "Check device for notification"
+  },
   "twoFactorHyprDesc": {
     "message": "Enter the Bravura Safe application information from your Bravura OneAuth Admin panel."
   },
   "twoFactorHyprApiToken": {
     "message": "API Token"
   },
+  "twoFactorHyprAppId": {
+    "message": "Application ID (case sensitive)"
+  },
   "twoFactorHyprServerUrl": {
-    "message": "Server URL"
+    "message": "Server Name"
+  },
+  "twoFactorHyprVerifyItIsYou": {
+  "message": "Verify it is you by approving the notification sent to your registered device"
   },
   "twoFactorEmailDesc": {
     "message": "Follow these steps to set up two-step login with email:"

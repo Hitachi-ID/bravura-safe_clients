@@ -22,7 +22,17 @@ export class HyprIFrame {
   }
 
   async init(data: any) {
+    /*
+    const params = new URLSearchParams({
+      data: this.base64Encode(JSON.stringify(data)),
+    });
+    console.log(`${this.webVaultUrl}/hypr-connector.html?${params}`);
+    */
     this.win.addEventListener("message", this.parseFunction, false);
+
+    this.win.document.getElementById('innerIcon').className = 'fa fa-spinner fa-spin';
+    this.win.document.getElementById('iconsFaStack').style.color = '';
+    this.win.document.getElementById('messagePlaceHolder').innerHTML = '';
 
     const img = this.win.document.getElementById("img");
     const num : number = TwoFactorProviderType.OrganizationHypr;
@@ -51,18 +61,18 @@ export class HyprIFrame {
         // get magic link [send email] or [pop up new tab]
         // break;
       case 401:
-        m = `Authentication denied [${hyprAuthRes.message}]`;
+        m = "Authentication denied";
         break;
       case 400:
       default:
-        m = `Failed to authenticate via HYPR [${hyprAuthRes.message}]`;
+        m = "Failed to authenticate via HYPR";
         break;
     }
     if (gotError) {
       this.win.document.getElementById('innerIcon').className = 'fa fa-times';
       this.win.document.getElementById('iconsFaStack').style.color = 'red';
-      this.win.document.getElementById('messagePlaceHolder').innerHTML = m;
-      this.errorCallback(m);
+      this.win.document.getElementById('messagePlaceHolder').innerHTML = `${m}<br />[${hyprAuthRes.message}]`;
+      this.errorCallback(`${m} [${hyprAuthRes.message}]`);
       return;
     }
 
