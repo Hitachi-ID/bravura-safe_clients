@@ -774,6 +774,12 @@
     "message": "Verifikasi dengan Duo Security untuk organisasi Anda menggunakan aplikasi Duo Mobile, SMS, panggilan telepon, atau kunci keamanan U2F.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with Bravura OneAuth using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with Bravura OneAuth for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "Menggunakan FIDO U2F mengaktifkan kunci keamanan untuk mengakses akun anda."
   },
@@ -1391,6 +1397,24 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "Nama Host API"
+  },
+  "twoFactorHyprCheckDevice": {
+    "message": "Check device for notification"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your Bravura OneAuth Admin panel."
+  },
+  "twoFactorHyprApiToken": {
+    "message": "API Token"
+  },
+  "twoFactorHyprAppId": {
+    "message": "Application ID (case sensitive)"
+  },
+  "twoFactorHyprServerUrl": {
+    "message": "Server Name"
+  },
+  "twoFactorHyprVerifyItIsYou": {
+  "message": "Verify it is you by approving the notification sent to your registered device"
   },
   "twoFactorEmailDesc": {
     "message": "Ikuti langkah-langkah berikut untuk menyiapkan login dua langkah dengan email:"
@@ -2147,6 +2171,9 @@
   },
   "enforce2faDuo": {
     "message": "Terapkan 2FA dengan Duo"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with Bravura OneAuth"
   },
   "priorityCustomerSupport": {
     "message": "Dukungan pelanggan prioritas"

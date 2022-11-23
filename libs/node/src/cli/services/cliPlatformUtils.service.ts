@@ -112,6 +112,10 @@ export class CliPlatformUtilsService implements PlatformUtilsService {
     return false;
   }
 
+  supportsHypr(): boolean {
+    return false;
+  }
+
   showToast(
     type: "error" | "success" | "warning" | "info",
     title: string,

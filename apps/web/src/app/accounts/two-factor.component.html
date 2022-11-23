@@ -15,7 +15,12 @@
           selectedProviderType === providerType.OrganizationDuo
       }"
     >
-      <p class="lead text-center mb-4">{{ title }}</p>
+      <ng-container *ngIf="selectedProviderType === providerType.OrganizationHypr; else otherProviders">
+        <img class="mb-4 two-factor-top" id="img" alt="Bravura OneAuth (Team) logo">
+      </ng-container>
+      <ng-template #otherProviders>
+        <p class="lead text-center mb-4">{{ title }}</p>
+      </ng-template>
       <div class="card d-block">
         <div class="card-body">
           <ng-container
@@ -93,6 +98,21 @@
               <iframe id="duo_iframe"></iframe>
             </div>
           </ng-container>
+          <ng-container *ngIf="selectedProviderType === providerType.OrganizationHypr">
+            <div id="hypr-frame" class="text-center mb-3">
+              <h1>{{ "twoFactorHyprCheckDevice" | i18n }}</h1>
+              <p style="margin-bottom: -1em;">{{ "twoFactorHyprVerifyItIsYou" | i18n }}</p>
+              <span id="iconsFaStack" class="fa-stack fa-2x" style="font-size: 750%;">
+                <i id="mobile" class="fa fa fa-solid fa-mobile fa-stack-2x"></i>
+                <i id="innerIcon" class="fa fa-spinner fa-spin" style="
+                  font-size: 50%;
+                  position: relative;
+                  top: -10%;
+                "></i>
+              </span>
+              <p id="messagePlaceHolder"></p>
+            </div>
+          </ng-container>
           <i
             class="fa fa-spinner text-muted fa-spin pull-right"
             title="{{ 'loading' | i18n }}"
@@ -126,6 +146,7 @@
                 selectedProviderType != null &&
                 selectedProviderType !== providerType.Duo &&
                 selectedProviderType !== providerType.OrganizationDuo &&
+                selectedProviderType !== providerType.OrganizationHypr &&
                 selectedProviderType !== providerType.WebAuthn
               "
             >

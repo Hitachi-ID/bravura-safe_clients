@@ -205,6 +205,11 @@ const routes: Routes = [
           { path: "", pathMatch: "full", redirectTo: "account" },
           { path: "account", component: AccountComponent, data: { titleId: "myOrganization" } },
           {
+            path: "two-factor",
+            component: TwoFactorSetupComponent,
+            data: { titleId: "twoStepLogin" },
+          },
+          {
             path: "billing",
             component: OrganizationBillingComponent,
             canActivate: [PermissionsGuard],
