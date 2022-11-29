@@ -905,6 +905,12 @@
     "message": "Duo Security را برای سازماندهی خود با استفاده از برنامه Duo Mobile، SMS، تماس تلفنی یا کلید امنیتی U2F تأیید کنید.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "twoFactorHyprCheckDevice": {
+    "message": "Check device for notification"
+  },
+  "twoFactorHyprVerifyItIsYou": {
+    "message": "Verify it is you by approving the notification sent to your registered device"
+  },
   "webAuthnTitle": {
     "message": "FIDO2 WebAuthn\n"
   },

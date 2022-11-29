@@ -905,6 +905,12 @@
     "message": "Ověřit pomocí Duo Security pro vaši organizaci prostřednictvím aplikace Duo Mobile, SMS, telefonního hovoru nebo U2F bezpečnostního kódu.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "twoFactorHyprCheckDevice": {
+    "message": "Check device for notification"
+  },
+  "twoFactorHyprVerifyItIsYou": {
+    "message": "Verify it is you by approving the notification sent to your registered device"
+  },
   "webAuthnTitle": {
     "message": "FIDO2 WebAuthn"
   },
