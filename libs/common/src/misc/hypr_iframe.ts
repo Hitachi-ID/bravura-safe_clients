@@ -36,7 +36,9 @@ export class HyprIFrame {
 
     const img = this.win.document.getElementById("img");
     const num : number = TwoFactorProviderType.OrganizationHypr;
-    img.setAttribute('src', '../images/' + num.toString() + '.png');
+    if (img) {
+      img.setAttribute('src', '../images/' + num.toString() + '.png');
+    }
 
     const hyprAuthenticationRequestModel: HyprAuthenticationRequestModel = {
       Signature: this.signature,

@@ -53,13 +53,13 @@
     "message": "Tab"
   },
   "vault": {
-    "message": "Vault"
+    "message": "Safe"
   },
   "myVault": {
     "message": "My Safe"
   },
   "allVaults": {
-    "message": "All Vaults"
+    "message": "All Safes"
   },
   "tools": {
     "message": "Tools"
@@ -215,7 +215,7 @@
     "message": "Automatically generate strong, unique passwords for your logins."
   },
   "bitWebVault": {
-    "message": "Bravura Safe web vault"
+    "message": "Bravura Safe web safe"
   },
   "importItems": {
     "message": "Import items"
@@ -904,6 +904,12 @@
   "duoOrganizationDesc": {
     "message": "Verify with Duo Security for your team using the Duo Mobile app, SMS, phone call, or U2F security key.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
+  },
+  "twoFactorHyprCheckDevice": {
+    "message": "Check device for notification"
+  },
+  "twoFactorHyprVerifyItIsYou": {
+    "message": "Verify it is you by approving the notification sent to your registered device"
   },
   "webAuthnTitle": {
     "message": "FIDO2 WebAuthn"
@@ -1892,10 +1898,10 @@
     "message": "Your session has timed out. Please go back and try logging in again."
   },
   "exportingPersonalVaultTitle": {
-    "message": "Exporting Personal Vault"
+    "message": "Exporting Personal Safe"
   },
   "exportingPersonalVaultDescription": {
-    "message": "Only the personal vault items associated with $EMAIL$ will be exported. Organization vault items will not be included.",
+    "message": "Only the personal safe items associated with $EMAIL$ will be exported. Team safe items will not be included.",
     "placeholders": {
       "email": {
         "content": "$1",
