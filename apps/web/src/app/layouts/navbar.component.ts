@@ -51,9 +51,7 @@ export class NavbarComponent implements OnInit {
     }
     this.providers = await this.providerService.getAll();
 
-    this.organizations$ = this.organizationService.organizations$.pipe(
-      canAccessAdmin(this.i18nService)
-    );
+    this.organizations$ = this.organizationService.organizations$;
   }
 
   lock() {

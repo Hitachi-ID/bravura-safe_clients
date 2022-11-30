@@ -12,7 +12,6 @@ import { UnsecuredWebsitesReportComponent } from "./pages/unsecured-websites-rep
 import { WeakPasswordsReportComponent } from "./pages/weak-passwords-report.component";
 import { ReportCardComponent } from "./report-card/report-card.component";
 import { ReportListComponent } from "./report-list/report-list.component";
-import { ReportsLayoutComponent } from "./reports-layout.component";
 import { ReportsRoutingModule } from "./reports-routing.module";
 
 @NgModule({
@@ -23,7 +22,6 @@ import { ReportsRoutingModule } from "./reports-routing.module";
     InactiveTwoFactorReportComponent,
     ReportCardComponent,
     ReportListComponent,
-    ReportsLayoutComponent,
     ReportsHomeComponent,
     ReusedPasswordsReportComponent,
     UnsecuredWebsitesReportComponent,

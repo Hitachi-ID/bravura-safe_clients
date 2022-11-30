@@ -77,6 +77,7 @@ import { InactiveTwoFactorReportComponent as OrgInactiveTwoFactorReportComponent
 import { ReusedPasswordsReportComponent as OrgReusedPasswordsReportComponent } from "../organizations/tools/reused-passwords-report.component";
 import { ToolsComponent as OrgToolsComponent } from "../organizations/tools/tools.component";
 import { ReportsComponent as OrgReportsComponent} from "../organizations/tools/reports.component";
+import { ReportsLayoutComponent as BaseReportsComponent} from "../reports/reports-layout.component";
 import { UnsecuredWebsitesReportComponent as OrgUnsecuredWebsitesReportComponent } from "../organizations/tools/unsecured-websites-report.component";
 import { WeakPasswordsReportComponent as OrgWeakPasswordsReportComponent } from "../organizations/tools/weak-passwords-report.component";
 import { AddEditComponent as OrgAddEditComponent } from "../organizations/vault/add-edit.component";
@@ -247,6 +248,7 @@ import { SharedModule } from ".";
     OrgSettingComponent,
     OrgToolsComponent,
     OrgReportsComponent,
+    BaseReportsComponent,
     OrgTwoFactorSetupComponent,
     OrgSubscriptionHiddenComponent,
     OrgUnsecuredWebsitesReportComponent,
