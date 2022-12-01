@@ -15,9 +15,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const team = getQsParam("team");
   const sig = getQsParam("signature");
+  // default to true if not provided
+  const mobile = getQsParam("mobile") === "false" ? false : true;
+
   const hyprAuthenticationRequestModel: HyprAuthenticationRequestModel = {
     Signature: sig,
-    Team: team
+    Team: team,
+    MobileBrowser: mobile
   };
 
   const origin = window.document.location.origin;
@@ -34,7 +38,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       next: (response: TwoFactorHyprAuthResponse) => {
         //console.log(response);
         const concatenatedAuthTx = response.signature + ":" + hyprAuthenticationRequestModel.Signature;
-        console.log("concatenatedAuthTx ", concatenatedAuthTx);
+        //console.log("concatenatedAuthTx ", concatenatedAuthTx);
+        window.document.getElementById('messagePlaceHolder').innerHTML = "Login succesful<br />Loading...";
         invokeCSCode(concatenatedAuthTx);
       },
       error: (response) => {
