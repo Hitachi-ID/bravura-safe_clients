@@ -22,6 +22,7 @@ export abstract class PlatformUtilsService {
   getInternalApplicationVersion: () => Promise<string>;
   supportsWebAuthn: (win: Window) => boolean;
   supportsDuo: () => boolean;
+  supportsHypr: () => boolean;
   showToast: (
     type: "error" | "success" | "warning" | "info",
     title: string,

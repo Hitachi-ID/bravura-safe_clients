@@ -62,6 +62,9 @@ export class TwoFactorVerifyComponent {
         } else {
           return this.apiService.getTwoFactorDuo(request);
         }
+      case TwoFactorProviderType.OrganizationHypr:
+        // need to handle if (this.organizationId != null)
+        return this.apiService.getTwoFactorOrganizationHypr(this.organizationId, request);
       case TwoFactorProviderType.Email:
         return this.apiService.getTwoFactorEmail(request);
       case TwoFactorProviderType.WebAuthn:

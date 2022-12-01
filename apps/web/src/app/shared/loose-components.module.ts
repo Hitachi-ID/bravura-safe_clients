@@ -125,6 +125,7 @@ import { TaxInfoComponent } from "../settings/tax-info.component";
 import { TwoFactorAuthenticatorComponent } from "../settings/two-factor-authenticator.component";
 import { TwoFactorDuoComponent } from "../settings/two-factor-duo.component";
 import { TwoFactorEmailComponent } from "../settings/two-factor-email.component";
+import { TwoFactorHyprComponent } from "../settings/two-factor-hypr.component";
 import { TwoFactorRecoveryComponent } from "../settings/two-factor-recovery.component";
 import { TwoFactorSetupComponent } from "../settings/two-factor-setup.component";
 import { TwoFactorVerifyComponent } from "../settings/two-factor-verify.component";
@@ -297,6 +298,7 @@ import { SharedModule } from ".";
     TwoFactorComponent,
     TwoFactorDuoComponent,
     TwoFactorEmailComponent,
+    TwoFactorHyprComponent,
     TwoFactorOptionsComponent,
     TwoFactorRecoveryComponent,
     TwoFactorSetupComponent,
@@ -442,6 +444,7 @@ import { SharedModule } from ".";
     TwoFactorComponent,
     TwoFactorDuoComponent,
     TwoFactorEmailComponent,
+    TwoFactorHyprComponent,
     TwoFactorOptionsComponent,
     TwoFactorRecoveryComponent,
     TwoFactorSetupComponent,

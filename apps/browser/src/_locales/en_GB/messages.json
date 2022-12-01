@@ -53,13 +53,13 @@
     "message": "Tab"
   },
   "vault": {
-    "message": "Vault"
+    "message": "Safe"
   },
   "myVault": {
     "message": "My safe"
   },
   "allVaults": {
-    "message": "All Vaults"
+    "message": "All Safes"
   },
   "tools": {
     "message": "Tools"
@@ -674,13 +674,13 @@
     "message": "Shared"
   },
   "learnOrg": {
-    "message": "Learn about organisations"
+    "message": "Learn about Teams"
   },
   "learnOrgConfirmation": {
-    "message": "Bravura Safe allows you to share your safe items with others by using an organisation. Would you like to visit the bravura-safe.com website to learn more?"
+    "message": "Bravura Safe allows you to share your safe items with others by using a team. Would you like to visit the bravura-safe.com website to learn more?"
   },
   "moveToOrganization": {
-    "message": "Move to Organisation"
+    "message": "Move to Team"
   },
   "share": {
     "message": "Share"
@@ -699,7 +699,7 @@
     }
   },
   "moveToOrgDesc": {
-    "message": "Choose an organisation that you wish to move this item to. Moving to an organisation transfers ownership of the item to that organisation. You will no longer be the direct owner of this item once it has been moved."
+    "message": "Choose a team that you wish to move this item to. Moving to a team transfers ownership of the item to that team. You will no longer be the direct owner of this item once it has been moved."
   },
   "learnMore": {
     "message": "Learn more"
@@ -905,8 +905,14 @@
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
   "duoOrganizationDesc": {
-    "message": "Verify with Duo Security for your organisation using the Duo Mobile app, SMS, phone call, or U2F security key.",
+    "message": "Verify with Duo Security for your team using the Duo Mobile app, SMS, phone call, or U2F security key.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
+  },
+  "twoFactorHyprCheckDevice": {
+    "message": "Check device for notification"
+  },
+  "twoFactorHyprVerifyItIsYou": {
+    "message": "Verify it is you by approving the notification sent to your registered device"
   },
   "webAuthnTitle": {
     "message": "FIDO2 WebAuthn"
@@ -1289,7 +1295,7 @@
     "description": "The URL of one of the current open tabs in the browser."
   },
   "organization": {
-    "message": "Organisation",
+    "message": "Team",
     "description": "An entity of multiple related people (ex. a team or business team)."
   },
   "types": {
@@ -1319,7 +1325,7 @@
     "message": "Are you sure you want to use the \"Never\" option? Setting your lock options to \"Never\" stores your safe's encryption key on your device. If you use this option you should ensure that you keep your device properly protected."
   },
   "noOrganizationsList": {
-    "message": "You do not belong to any organisations. Organisations allow you to securely share items with other users."
+    "message": "You do not belong to any teams. Teams allow you to securely share items with other users."
   },
   "noCollectionsInList": {
     "message": "There are no collections to list."
@@ -1386,7 +1392,7 @@
     "message": "Clone"
   },
   "passwordGeneratorPolicyInEffect": {
-    "message": "One or more organisation policies are affecting your generator settings."
+    "message": "One or more team policies are affecting your generator settings."
   },
   "vaultTimeoutAction": {
     "message": "Safe timeout action"
@@ -1439,7 +1445,7 @@
     "message": "Set master password"
   },
   "masterPasswordPolicyInEffect": {
-    "message": "One or more organisation policies require your master password to meet the following requirements:"
+    "message": "One or more team policies require your master password to meet the following requirements:"
   },
   "policyInEffectMinComplexity": {
     "message": "Minimum complexity score of $SCORE$",
@@ -1559,10 +1565,10 @@
     "message": "This action cannot be done in the sidebar, please retry the action in the popup or popout."
   },
   "personalOwnershipSubmitError": {
-    "message": "Due to an Enterprise Policy, you are restricted from saving items to your personal safe. Change the Ownership option to an organisation and choose from available Collections."
+    "message": "Due to an Enterprise Policy, you are restricted from saving items to your personal safe. Change the Ownership option to a team and choose from available Collections."
   },
   "personalOwnershipPolicyInEffect": {
-    "message": "An organisation policy is affecting your ownership options."
+    "message": "A team policy is affecting your ownership options."
   },
   "excludedDomains": {
     "message": "Excluded domains"
@@ -1584,7 +1590,7 @@
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "searchSends": {
-    "message": "Search Sends",
+    "message": "Search Shares",
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "addSend": {
@@ -1598,12 +1604,12 @@
     "message": "File"
   },
   "allSends": {
-    "message": "All Sends",
+    "message": "All Shares",
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "Max access count reached",
-    "description": "This text will be displayed after a Send has been accessed the maximum amount of times."
+    "description": "This text will be displayed after a Share has been accessed the maximum amount of times."
   },
   "expired": {
     "message": "Expired"
@@ -1792,7 +1798,7 @@
     "message": "Hide my email address from recipients."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "One or more organisation policies are affecting your Share options."
+    "message": "One or more team policies are affecting your Share options."
   },
   "passwordPrompt": {
     "message": "Master password re-prompt"
@@ -1865,7 +1871,7 @@
     "message": "No unique identifier found."
   },
   "convertOrganizationEncryptionDesc": {
-    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this organisation.",
+    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this team.",
     "placeholders": {
       "organization": {
         "content": "$1",
@@ -1874,7 +1880,7 @@
 }
   },
   "leaveOrganization": {
-    "message": "Leave Organisation"
+    "message": "Leave Team"
   },
   "removeMasterPassword": {
     "message": "Remove Master Password"
@@ -1883,10 +1889,10 @@
     "message": "Master password removed."
   },
   "leaveOrganizationConfirmation": {
-    "message": "Are you sure you want to leave this organisation?"
+    "message": "Are you sure you want to leave this team?"
   },
   "leftOrganization": {
-    "message": "You have left the organisation."
+    "message": "You have left the team."
   },
   "toggleCharacterCount": {
     "message": "Toggle character count"
@@ -1895,10 +1901,10 @@
     "message": "Your session has timed out. Please go back and try logging in again."
   },
   "exportingPersonalVaultTitle": {
-    "message": "Exporting Personal Vault"
+    "message": "Exporting Personal safe"
   },
   "exportingPersonalVaultDescription": {
-    "message": "Only the personal vault items associated with $EMAIL$ will be exported. Organisation vault items will not be included.",
+    "message": "Only the personal safe items associated with $EMAIL$ will be exported. Team vault items will not be included.",
     "placeholders": {
       "email": {
         "content": "$1",

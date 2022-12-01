@@ -18,6 +18,7 @@ import { TwoFactorProviders } from "@bitwarden/common/services/twoFactor.service
 import { TwoFactorAuthenticatorComponent } from "./two-factor-authenticator.component";
 import { TwoFactorDuoComponent } from "./two-factor-duo.component";
 import { TwoFactorEmailComponent } from "./two-factor-email.component";
+import { TwoFactorHyprComponent } from "./two-factor-hypr.component";
 import { TwoFactorRecoveryComponent } from "./two-factor-recovery.component";
 import { TwoFactorWebAuthnComponent } from "./two-factor-webauthn.component";
 import { TwoFactorYubiKeyComponent } from "./two-factor-yubikey.component";
@@ -36,6 +37,7 @@ export class TwoFactorSetupComponent implements OnInit, OnDestroy {
   @ViewChild("duoTemplate", { read: ViewContainerRef, static: true }) duoModalRef: ViewContainerRef;
   @ViewChild("emailTemplate", { read: ViewContainerRef, static: true })
   emailModalRef: ViewContainerRef;
+  @ViewChild("hyprTemplate", { read: ViewContainerRef, static: true }) hyprModalRef: ViewContainerRef;
   @ViewChild("webAuthnTemplate", { read: ViewContainerRef, static: true })
   webAuthnModalRef: ViewContainerRef;
 
@@ -85,14 +87,24 @@ export class TwoFactorSetupComponent implements OnInit, OnDestroy {
         continue;
       }
 
-      this.providers.push({
-        type: p.type,
-        name: p.name,
-        description: p.description,
-        enabled: false,
-        premium: p.premium,
-        sort: p.sort,
-      });
+      // for accounts settings show [Authenticator, Email]
+      // for organization settings show [OrganizationHypr]
+      if( (!this.organizationId &&
+            (p.type === TwoFactorProviderType.Authenticator ||
+             p.type === TwoFactorProviderType.Email))
+          ||// OR
+          (this.organizationId &&
+            (p.type === TwoFactorProviderType.OrganizationHypr))
+        ) {
+        this.providers.push({
+          type: p.type,
+          name: p.name,
+          description: p.description,
+          enabled: false,
+          premium: p.premium,
+          sort: p.sort,
+        });
+      }
     }
 
     this.providers.sort((a: any, b: any) => a.sort - b.sort);
@@ -163,6 +175,13 @@ export class TwoFactorSetupComponent implements OnInit, OnDestroy {
         });
         break;
       }
+      case TwoFactorProviderType.OrganizationHypr: {
+        const hyprComp = await this.openModal(this.hyprModalRef, TwoFactorHyprComponent);
+        hyprComp.onUpdated.subscribe((enabled: boolean) => {
+          this.updateStatus(enabled, TwoFactorProviderType.OrganizationHypr);
+        });
+        break;
+      }
       case TwoFactorProviderType.WebAuthn: {
         const webAuthnComp = await this.openModal(
           this.webAuthnModalRef,
@@ -195,7 +214,7 @@ export class TwoFactorSetupComponent implements OnInit, OnDestroy {
   }
 
   protected filterProvider(type: TwoFactorProviderType) {
-    return type === TwoFactorProviderType.OrganizationDuo;
+    return type === TwoFactorProviderType.OrganizationDuo || type === TwoFactorProviderType.OrganizationHypr;
   }
 
   protected async openModal<T>(ref: ViewContainerRef, type: Type<T>): Promise<T> {

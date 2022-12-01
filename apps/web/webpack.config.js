@@ -95,6 +95,11 @@ const plugins = [
     chunks: ["connectors/duo"],
   }),
   new HtmlWebpackPlugin({
+    template: "./src/connectors/hypr.html",
+    filename: "hypr-connector.html",
+    chunks: ["connectors/hypr"],
+  }),
+  new HtmlWebpackPlugin({
     template: "./src/connectors/webauthn.html",
     filename: "webauthn-connector.html",
     chunks: ["connectors/webauthn"],
@@ -258,12 +263,14 @@ const devServer =
                   https://assets.braintreegateway.com
                   https://*.paypal.com
                   https://*.duosecurity.com
+                  https://*.hypr
                 ;frame-src
                   'self'
                   https://js.stripe.com
                   https://assets.braintreegateway.com
                   https://*.paypal.com
                   https://*.duosecurity.com
+                  https://*.hypr
                 ;connect-src
                   'self'
                   wss://notifications.bitwarden.com
@@ -311,6 +318,7 @@ const webpackConfig = {
     "connectors/webauthn": "./src/connectors/webauthn.ts",
     "connectors/webauthn-fallback": "./src/connectors/webauthn-fallback.ts",
     "connectors/duo": "./src/connectors/duo.ts",
+    "connectors/hypr": "./src/connectors/hypr.ts",
     "connectors/sso": "./src/connectors/sso.ts",
     "connectors/captcha": "./src/connectors/captcha.ts",
     theme_head: "./src/theme.js",

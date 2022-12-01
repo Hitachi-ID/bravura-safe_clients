@@ -193,4 +193,8 @@ export class Organization {
   get isExemptFromPolicies() {
     return this.canManagePolicies;
   }
+
+  get hasProvider() {
+    return this.providerId != null || this.providerName != null;
+  }
 }

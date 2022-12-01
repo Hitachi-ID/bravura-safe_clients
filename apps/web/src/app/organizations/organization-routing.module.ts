@@ -198,6 +198,11 @@ const routes: Routes = [
           { path: "", pathMatch: "full", redirectTo: "account" },
           { path: "account", component: AccountComponent, data: { titleId: "myOrganization" } },
           {
+            path: "two-factor",
+            component: TwoFactorSetupComponent,
+            data: { titleId: "twoStepLogin" },
+          },
+          {
             path: "subscription",
             component: OrganizationSubscriptionComponent,
             data: { titleId: "subscription" },

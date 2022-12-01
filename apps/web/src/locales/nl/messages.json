@@ -804,6 +804,12 @@
     "message": "Verifieer met Duo Security voor jouw organisatie middels de Duo Mobile-app, sms, spraakoproep of een U2F-beveiligingssleutel.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with Bravura OneAuth using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with Bravura OneAuth for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "Gebruik een FIDO U2F-beveiligingssleutel om toegang te krijgen tot je account."
   },
@@ -1463,6 +1469,24 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "API-hostnaam"
+  },
+  "twoFactorHyprCheckDevice": {
+    "message": "Check device for notification"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your Bravura OneAuth Admin panel."
+  },
+  "twoFactorHyprApiToken": {
+    "message": "API Token"
+  },
+  "twoFactorHyprAppId": {
+    "message": "Application ID (case sensitive)"
+  },
+  "twoFactorHyprServerUrl": {
+    "message": "Server Name"
+  },
+  "twoFactorHyprVerifyItIsYou": {
+  "message": "Verify it is you by approving the notification sent to your registered device"
   },
   "twoFactorEmailDesc": {
     "message": "Volg deze stappen voor het instellen van tweestapsaanmelding met e-mail:"
@@ -2231,6 +2255,9 @@
   },
   "enforce2faDuo": {
     "message": "Tweestapsaanmelding afdwingen met Duo"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with Bravura OneAuth"
   },
   "priorityCustomerSupport": {
     "message": "Klantondersteuning met hoge prioriteit"

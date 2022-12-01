@@ -15,6 +15,14 @@
           >
             {{ "billing" | i18n }}
           </a>
+          <a
+            routerLink="two-factor"
+            class="list-group-item"
+            routerLinkActive="active"
+            *ngIf="access2fa"
+          >
+            {{ "twoStepLogin" | i18n }}
+          </a>
         </div>
       </div>
     </div>
