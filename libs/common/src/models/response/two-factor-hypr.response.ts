@@ -1,4 +1,4 @@
-import { BaseResponse } from "./baseResponse";
+import { BaseResponse } from "./base.response";
 
 export class TwoFactorHyprResponse extends BaseResponse {
   enabled: boolean;
