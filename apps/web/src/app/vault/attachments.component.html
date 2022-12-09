@@ -26,10 +26,14 @@
           <tbody>
             <tr *ngFor="let a of cipher.attachments">
               <td class="table-list-icon">
-                <i class="fa fa-fw fa-lg fa-file-o" *ngIf="!a.downloading" aria-hidden="true"></i>
+                <i
+                  class="fa fa-fw fa-lg fa-file-o"
+                  *ngIf="!$any(a).downloading"
+                  aria-hidden="true"
+                ></i>
                 <i
                   class="fa fa-spinner fa-lg fa-fw fa-spin"
-                  *ngIf="a.downloading"
+                  *ngIf="$any(a).downloading"
                   aria-hidden="true"
                 ></i>
               </td>
@@ -43,7 +47,7 @@
                       (click)="reupload(a)"
                       #reuploadBtn
                       [appApiAction]="reuploadPromises[a.id]"
-                      [disabled]="reuploadBtn.loading"
+                      [disabled]="$any(reuploadBtn).loading"
                     >
                       {{ "fix" | i18n }}
                     </button>
@@ -60,16 +64,16 @@
                   (click)="delete(a)"
                   #deleteBtn
                   [appApiAction]="deletePromises[a.id]"
-                  [disabled]="deleteBtn.loading"
+                  [disabled]="$any(deleteBtn).loading"
                 >
                   <i
                     class="fa fa-trash-o fa-lg fa-fw"
-                    [hidden]="deleteBtn.loading"
+                    [hidden]="$any(deleteBtn).loading"
                     aria-hidden="true"
                   ></i>
                   <i
                     class="fa fa-spinner fa-spin fa-lg fa-fw"
-                    [hidden]="!deleteBtn.loading"
+                    [hidden]="!$any(deleteBtn).loading"
                     title="{{ 'loading' | i18n }}"
                     aria-hidden="true"
                   ></i>

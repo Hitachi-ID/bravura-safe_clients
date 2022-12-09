@@ -1,13 +1,13 @@
 {
   "appName": {
-    "message": "Bravura Safe"
+    "message": "Bitwarden"
   },
   "extName": {
-    "message": "Bravura Safe",
+    "message": "Bitwarden",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
-    "message": "Bravura Safe - це захищений і безкоштовний менеджер паролів для всіх ваших пристроїв.",
+    "message": "Bitwarden - це захищений і безкоштовний менеджер паролів для всіх ваших пристроїв.",
     "description": "Extension description"
   },
   "loginOrCreateNewAccount": {
@@ -77,7 +77,7 @@
     "message": "Копіювати нотатку"
   },
   "copyUri": {
-    "message": "Копіювати URL"
+    "message": "Копіювати URI"
   },
   "copyUsername": {
     "message": "Копіювати ім'я користувача"
@@ -98,7 +98,7 @@
     "message": "Копіювати назву власного поля"
   },
   "noMatchingLogins": {
-    "message": "Немає відповідних записів."
+    "message": "Немає відповідних записів"
   },
   "unlockVaultMenu": {
     "message": "Розблокуйте сховище"
@@ -153,7 +153,7 @@
     "description": "A 'fingerprint phrase' is a unique word phrase (similar to a passphrase) that a user can use to authenticate their public key with another user, for the purposes of sharing."
   },
   "yourAccountsFingerprint": {
-    "message": "Фраза відбитку вашого облікового запису",
+    "message": "Фраза відбитка вашого облікового запису",
     "description": "A 'fingerprint phrase' is a unique word phrase (similar to a passphrase) that a user can use to authenticate their public key with another user, for the purposes of sharing."
   },
   "twoStepLogin": {
@@ -181,7 +181,7 @@
     "message": "Назва"
   },
   "editFolder": {
-    "message": "Редагувати теку"
+    "message": "Редагування"
   },
   "deleteFolder": {
     "message": "Видалити теку"
@@ -215,7 +215,7 @@
     "message": "Автоматичне генерування стійких, унікальних паролів."
   },
   "bitWebVault": {
-    "message": "Веб сховище Bravura Safe"
+    "message": "Веб сховище Bitwarden"
   },
   "importItems": {
     "message": "Імпортувати записи"
@@ -303,7 +303,7 @@
     "message": "Нотатка"
   },
   "editItem": {
-    "message": "Зміна запису"
+    "message": "Редагування"
   },
   "folder": {
     "message": "Тека"
@@ -321,7 +321,7 @@
     "message": "Вебсайт"
   },
   "toggleVisibility": {
-    "message": "Змінити видимість"
+    "message": "Перемкнути видимість"
   },
   "manage": {
     "message": "Керування"
@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bravurasecurity.com"
+        "example": "bitwarden.com"
       }
     }
   },
@@ -482,19 +482,19 @@
     "message": "Потрібна назва."
   },
   "addedFolder": {
-    "message": "Додано теку"
+    "message": "Теку додано"
   },
   "changeMasterPass": {
     "message": "Змінити головний пароль"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Ви можете змінити головний пароль в сховищі на Bravura Safe. Хочете перейти на вебсайт зараз?"
+    "message": "Ви можете змінити головний пароль в сховищі на bitwarden.com. Хочете перейти на вебсайт зараз?"
   },
   "twoStepLoginConfirmation": {
-    "message": "Двоетапна перевірка робить ваш обліковий запис більш захищеним, вимагаючи підтвердження входу з використанням іншого пристрою, наприклад, за допомогою коду безпеки, програми авторизації, SMS, телефонного виклику, або е-пошти. Ви можете увімкнути двоетапну перевірку в сховищі на Bravura Safe. Хочете перейти на вебсайт зараз?"
+    "message": "Двоетапна перевірка дає змогу надійніше захистити ваш обліковий запис, вимагаючи підтвердження входу з використанням іншого пристрою, наприклад, за допомогою коду безпеки, програми авторизації, SMS, телефонного виклику, або е-пошти. Ви можете налаштувати двоетапну перевірку в сховищі на bitwarden.com. Хочете перейти на вебсайт зараз?"
   },
   "editedFolder": {
-    "message": "Тека змінена"
+    "message": "Теку збережено"
   },
   "deleteFolderConfirmation": {
     "message": "Ви дійсно хочете видалити цю теку?"
@@ -512,17 +512,17 @@
     "message": "Синхронізацію завершено"
   },
   "syncingFailed": {
-    "message": "Не вдалося синхронізувати"
+    "message": "Збій синхронізації"
   },
   "passwordCopied": {
     "message": "Пароль скопійовано"
   },
   "uri": {
-    "message": "URL"
+    "message": "URI"
   },
   "uriPosition": {
-    "message": "URL $POSITION$",
-    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
+    "message": "URI $POSITION$",
+    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -531,19 +531,19 @@
     }
   },
   "newUri": {
-    "message": "Новий URL"
+    "message": "Новий URI"
   },
   "addedItem": {
     "message": "Запис додано"
   },
   "editedItem": {
-    "message": "Запис змінено"
+    "message": "Запис збережено"
   },
   "deleteItemConfirmation": {
     "message": "Ви дійсно хочете перенести до смітника?"
   },
   "deletedItem": {
-    "message": "Запис перенесено до смітника"
+    "message": "Запис переміщено до смітника"
   },
   "overwritePassword": {
     "message": "Перезаписати пароль"
@@ -597,7 +597,7 @@
     "description": "Clipboard is the operating system thing where you copy/paste data to on your device."
   },
   "notificationAddDesc": {
-    "message": "Чи має Bravura Safe зберегти цей пароль?"
+    "message": "Чи має Bitwarden зберегти цей пароль?"
   },
   "notificationAddSave": {
     "message": "Зберегти"
@@ -609,7 +609,7 @@
     "message": "Запитувати про оновлення пароля запису, якщо на вебсайті виявлено його зміну."
   },
   "notificationChangeDesc": {
-    "message": "Ви хочете оновити цей пароль в Bravura Safe?"
+    "message": "Ви хочете оновити цей пароль в Bitwarden?"
   },
   "notificationChangeSave": {
     "message": "Оновити"
@@ -621,11 +621,11 @@
     "message": "Використовувати доступ до генератора паролів та відповідних записів для вебсайту через контекстне меню."
   },
   "defaultUriMatchDetection": {
-    "message": "Типове виявлення збігів URL",
-    "description": "Default URL match detection for auto-fill."
+    "message": "Типове виявлення збігів URI",
+    "description": "Default URI match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "Оберіть типовий спосіб виявлення збігів URL для виконання автозаповнення під час входу."
+    "message": "Оберіть типовий спосіб виявлення збігів URI для виконання автозаповнення під час входу."
   },
   "theme": {
     "message": "Тема"
@@ -665,7 +665,7 @@
     "message": "Цей експорт шифрує ваші дані за допомогою ключа шифрування облікового запису. Якщо ви коли-небудь оновите ключ шифрування облікового запису, необхідно виконати експорт знову, оскільки не зможете розшифрувати цей файл експорту."
   },
   "encExportAccountWarningDesc": {
-    "message": "Ключі шифрування унікальні для кожного облікового запису користувача Bravura Safe, тому ви не можете імпортувати зашифрований експорт до іншого облікового запису."
+    "message": "Ключі шифрування унікальні для кожного облікового запису користувача Bitwarden, тому ви не можете імпортувати зашифрований експорт до іншого облікового запису."
   },
   "exportMasterPassword": {
     "message": "Введіть головний пароль, щоб експортувати дані сховища."
@@ -677,7 +677,7 @@
     "message": "Докладніше про організації"
   },
   "learnOrgConfirmation": {
-    "message": "Bravura Safe дозволяє вам надавати доступ до записів свого сховища іншим за допомогою облікового запису організації. Бажаєте перейти на веб-сайт Bravura Safe, щоб дізнатися більше?"
+    "message": "Bitwarden дозволяє вам надавати доступ до записів свого сховища іншим за допомогою облікового запису організації. Бажаєте перейти на веб-сайт bitwarden.com, щоб дізнатися більше?"
   },
   "moveToOrganization": {
     "message": "Перемістити до організації"
@@ -732,13 +732,13 @@
     "message": "Немає вкладень."
   },
   "attachmentSaved": {
-    "message": "Вкладення збережено."
+    "message": "Вкладення збережено"
   },
   "file": {
     "message": "Файл"
   },
   "selectFile": {
-    "message": "Оберіть файл."
+    "message": "Оберіть файл"
   },
   "maxFileSize": {
     "message": "Максимальний розмір файлу 500 Мб."
@@ -753,19 +753,19 @@
     "message": "Преміум статус"
   },
   "premiumManage": {
-    "message": "Керувати статусом"
+    "message": "Керувати передплатою"
   },
   "premiumManageAlert": {
-    "message": "Ви можете керувати своїм статусом у сховищі на bravurasecurity.com. Хочете перейти на вебсайт зараз?"
+    "message": "Ви можете керувати своїм статусом у сховищі на bitwarden.com. Хочете перейти на вебсайт зараз?"
   },
   "premiumRefresh": {
-    "message": "Оновити статус"
+    "message": "Оновити стан передплати"
   },
   "premiumNotCurrentMember": {
-    "message": "Зараз у вас немає преміум-статусу."
+    "message": "Зараз у вас немає передплати преміум."
   },
   "premiumSignUpAndGet": {
-    "message": "Підпишіться на преміум-статус і отримайте:"
+    "message": "Передплатіть преміум і отримайте:"
   },
   "ppremiumSignUpStorage": {
     "message": "1 ГБ зашифрованого сховища для файлів."
@@ -783,19 +783,19 @@
     "message": "Пріоритетну технічну підтримку."
   },
   "ppremiumSignUpFuture": {
-    "message": "Всі майбутні функції преміум статусу. Їх буде більше!"
+    "message": "Усі майбутні преміумфункції. Їх буде більше!"
   },
   "premiumPurchase": {
     "message": "Придбати преміум"
   },
   "premiumPurchaseAlert": {
-    "message": "Ви можете придбати преміум статус у сховищі на bravurasecurity.com. Хочете перейти на вебсайт зараз?"
+    "message": "Ви можете передплатити преміум у сховищі на bitwarden.com. Хочете перейти на вебсайт зараз?"
   },
   "premiumCurrentMember": {
-    "message": "У вас преміум статус!"
+    "message": "Ви користуєтеся передплатою преміум!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Дякуємо за підтримку Bravura Safe."
+    "message": "Дякуємо за підтримку Bitwarden."
   },
   "premiumPrice": {
     "message": "Всього лише $PRICE$ / за рік!",
@@ -819,10 +819,10 @@
     "message": "Запитувати біометрію під час запуску"
   },
   "premiumRequired": {
-    "message": "Необхідний преміум статус"
+    "message": "Необхідна передплата преміум"
   },
   "premiumRequiredDesc": {
-    "message": "Для використання цієї функції необхідний преміум статус."
+    "message": "Для використання цієї функції необхідна передплата преміум."
   },
   "enterVerificationCodeApp": {
     "message": "Введіть 6-значний код підтвердження з програми авторизації."
@@ -873,7 +873,7 @@
     "message": "Вхід недоступний"
   },
   "noTwoStepProviders": {
-    "message": "Для цього облікового запису увімкнено двоетапну перевірку. Однак, жоден з налаштованих провайдерів двоетапної перевірки не підтримується цим браузером."
+    "message": "Для цього облікового запису увімкнено двоетапну перевірку. Однак, жоден із налаштованих провайдерів не підтримується цим браузером."
   },
   "noTwoStepProviders2": {
     "message": "Будь ласка, скористайтеся підтримуваним браузером (наприклад, Chrome) та/або іншими провайдерами, що краще підтримуються браузерами (наприклад, програма авторизації)."
@@ -930,7 +930,7 @@
     "message": "Середовище власного хостингу"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Вкажіть основну URL-адресу Bravura Safe на вашому сервері."
+    "message": "Вкажіть основну URL-адресу Bitwarden на вашому сервері."
   },
   "customEnvironment": {
     "message": "Власне середовище"
@@ -942,7 +942,7 @@
     "message": "URL-адреса сервера"
   },
   "apiUrl": {
-    "message": "URL-адреса API"
+    "message": "URL-адреса сервера API"
   },
   "webVaultUrl": {
     "message": "URL-адреса сервера веб сховища"
@@ -951,13 +951,13 @@
     "message": "URL-адреса сервера ідентифікації"
   },
   "notificationsUrl": {
-    "message": "URL сервера сповіщень"
+    "message": "URL-адреса сервера сповіщень"
   },
   "iconsUrl": {
     "message": "URL-адреса сервера піктограм"
   },
   "environmentSaved": {
-    "message": "URL-адреси середовища збережено."
+    "message": "URL-адреси середовища збережено"
   },
   "enableAutoFillOnPageLoad": {
     "message": "Автозаповнення на сторінці"
@@ -1277,26 +1277,26 @@
   },
   "matchDetection": {
     "message": "Виявлення збігів",
-    "description": "URL match detection for auto-fill."
+    "description": "URI match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Типове виявлення збігів",
-    "description": "Default URL match detection for auto-fill."
+    "description": "Default URI match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Перемкнути налаштування"
   },
   "toggleCurrentUris": {
     "message": "Перемкнути поточні URL-адреси",
-    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
+    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
   },
   "currentUri": {
     "message": "Поточна URL-адреса",
-    "description": "The URL of one of the current open tabs in the browser."
+    "description": "The URI of one of the current open tabs in the browser."
   },
   "organization": {
     "message": "Організація",
-    "description": "An entity of multiple related people (ex. a team or business team)."
+    "description": "An entity of multiple related people (ex. a team or business organization)."
   },
   "types": {
     "message": "Типи"
@@ -1316,6 +1316,10 @@
   "dateUpdated": {
     "message": "Оновлено",
     "description": "ex. Date this item was updated"
+  },
+  "dateCreated": {
+    "message": "Створено",
+    "description": "ex. Date this item was created"
   },
   "datePasswordUpdated": {
     "message": "Пароль оновлено",
@@ -1352,7 +1356,7 @@
     "message": "Слабкий головний пароль"
   },
   "weakMasterPasswordDesc": {
-    "message": "Обраний вами головний пароль є слабким. Для належного захисту свого облікового запису Bravura Safe, вам слід використовувати надійний головний пароль (або парольну фразу). Ви впевнені, що хочете використати цей пароль?"
+    "message": "Обраний вами головний пароль є слабким. Для належного захисту свого облікового запису Bitwarden, вам слід використовувати надійний головний пароль (або парольну фразу). Ви впевнені, що хочете використати цей пароль?"
   },
   "pin": {
     "message": "PIN-код",
@@ -1362,7 +1366,7 @@
     "message": "Розблокування з PIN-кодом"
   },
   "setYourPinCode": {
-    "message": "Встановіть PIN-код для розблокування Bravura Safe. Налаштування PIN-коду будуть скинуті, якщо ви коли-небудь повністю вийдете з програми."
+    "message": "Встановіть PIN-код для розблокування Bitwarden. Налаштування PIN-коду будуть скинуті, якщо ви коли-небудь повністю вийдете з програми."
   },
   "pinRequired": {
     "message": "Необхідний PIN-код."
@@ -1377,7 +1381,7 @@
     "message": "Очікується підтвердження з комп'ютера"
   },
   "awaitDesktopDesc": {
-    "message": "Для увімкнення біометрії в браузері, будь ласка, підтвердьте це у програмі Bravura Safe на комп'ютері."
+    "message": "Щоб увімкнути біометрію в браузері, спершу виконайте це у програмі Bitwarden на комп'ютері."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Блокувати головним паролем при перезапуску браузера"
@@ -1508,22 +1512,22 @@
     "message": "Перевірка синхронізації на комп'ютері"
   },
   "desktopIntegrationVerificationText": {
-    "message": "Перевірте, чи програма на комп'ютері показує відбиток: "
+    "message": "Перевірте, чи програма на комп'ютері показує цю фразу відбитка: "
   },
   "desktopIntegrationDisabledTitle": {
-    "message": "Інтеграція з браузером не увімкнена"
+    "message": "Інтеграцію з браузером не налаштовано"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "Інтеграція з браузером не увімкнена в програмі Bravura Safe на комп'ютері. Увімкніть її в налаштуваннях програми на комп'ютері."
+    "message": "Інтеграцію з браузером не налаштовано в Bitwarden на комп'ютері. Увімкніть її в налаштуваннях програми на комп'ютері."
   },
   "startDesktopTitle": {
-    "message": "Запустіть програму Bravura Safe на комп'ютері"
+    "message": "Запустіть програму Bitwarden на комп'ютері"
   },
   "startDesktopDesc": {
-    "message": "Для можливості розблокування з біометрією необхідно запустити програму Bravura Safe на комп'ютері."
+    "message": "Для можливості розблокування з біометрією необхідно запустити програму Bitwarden на комп'ютері."
   },
   "errorEnableBiometricTitle": {
-    "message": "Не вдається увімкнути біометрію"
+    "message": "Не вдається налаштувати біометрію"
   },
   "errorEnableBiometricDesc": {
     "message": "Дію було скасовано програмою на комп'ютері"
@@ -1541,10 +1545,10 @@
     "message": "Невідповідність облікових записів"
   },
   "biometricsNotEnabledTitle": {
-    "message": "Біометрію не увімкнено"
+    "message": "Біометрію не налаштовано"
   },
   "biometricsNotEnabledDesc": {
-    "message": "Для активації біометрії в браузері необхідно спершу увімкнути біометрію в програмі на комп'ютері."
+    "message": "Для використання біометрії в браузері необхідно спершу налаштувати її в програмі на комп'ютері."
   },
   "biometricsNotSupportedTitle": {
     "message": "Біометрія не підтримується"
@@ -1556,7 +1560,7 @@
     "message": "Дозвіл не надано"
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "Без дозволу з'єднання з програмою Bravura Safe на комп'ютері неможливо використовувати біометрію в розширенні браузера. Спробуйте знову."
+    "message": "Без дозволу з'єднання з програмою Bitwarden на комп'ютері неможливо використовувати біометрію в розширенні браузера. Спробуйте знову."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Помилка запиту дозволу"
@@ -1574,7 +1578,7 @@
     "message": "Виключені домени"
   },
   "excludedDomainsDesc": {
-    "message": "Bravura Safe не запитуватиме про збереження даних входу для цих доменів. Потрібно оновити сторінку для застосування змін."
+    "message": "Bitwarden не запитуватиме про збереження даних входу для цих доменів. Потрібно оновити сторінку для застосування змін."
   },
   "excludedDomainsInvalidDomain": {
     "message": "$DOMAIN$ не є дійсним доменом",
@@ -1587,15 +1591,15 @@
   },
   "send": {
     "message": "Відправлення",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "searchSends": {
     "message": "Шукати відправлення",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "addSend": {
     "message": "Додати відправлення",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendTypeText": {
     "message": "Текст"
@@ -1605,7 +1609,7 @@
   },
   "allSends": {
     "message": "Усі відправлення",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "Досягнуто максимальну кількість доступів",
@@ -1622,7 +1626,7 @@
   },
   "copySendLink": {
     "message": "Копіювати посилання відправлення",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "removePassword": {
     "message": "Вилучити пароль"
@@ -1635,11 +1639,11 @@
   },
   "deletedSend": {
     "message": "Відправлення видалено",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendLink": {
     "message": "Посилання на відправлення",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "disabled": {
     "message": "Вимкнено"
@@ -1649,23 +1653,23 @@
   },
   "deleteSend": {
     "message": "Видалити відправлення",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "deleteSendConfirmation": {
     "message": "Ви дійсно хочете видалити це відправлення?",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "editSend": {
-    "message": "Змінити відправлення",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Редагування",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendTypeHeader": {
     "message": "Який це тип відправлення?",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendNameDesc": {
     "message": "Опис цього відправлення.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendFileDesc": {
     "message": "Файл, який ви хочете відправити."
@@ -1675,14 +1679,14 @@
   },
   "deletionDateDesc": {
     "message": "Відправлення буде остаточно видалено у вказаний час.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "expirationDate": {
     "message": "Дата завершення"
   },
   "expirationDateDesc": {
     "message": "Якщо встановлено, термін дії цього відправлення завершиться у вказаний час.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "oneDay": {
     "message": "1 день"
@@ -1704,56 +1708,56 @@
   },
   "maximumAccessCountDesc": {
     "message": "Якщо встановлено, користувачі більше не зможуть отримати доступ до цього відправлення після досягнення максимальної кількості доступів.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendPasswordDesc": {
     "message": "За бажанням вимагати пароль в користувачів для доступу до цього відправлення.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendNotesDesc": {
     "message": "Особисті нотатки про це відправлення.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendDisableDesc": {
     "message": "Деактивувати це відправлення для скасування доступу до нього.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendShareDesc": {
     "message": "Копіювати посилання цього відправлення перед збереженням.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Текст, який ви хочете відправити."
   },
   "sendHideText": {
     "message": "Приховувати текст цього відправлення.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Поточна кількість доступів"
   },
   "createSend": {
-    "message": "Створити нове відправлення",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Нове відправлення",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "newPassword": {
     "message": "Новий пароль"
   },
   "sendDisabled": {
-    "message": "Відправлення вимкнено",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Відправлення вилучено",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "У зв'язку з політикою компанії, ви можете лише видалити наявне відправлення.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "createdSend": {
     "message": "Відправлення створено",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "editedSend": {
-    "message": "Відправлення змінено",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Відправлення збережено",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendLinuxChromiumFileWarning": {
     "message": "Щоб вибрати файл, відкрийте розширення в бічній панелі (якщо можливо) або в новому вікні, натиснувши цей банер."
@@ -1859,7 +1863,7 @@
     "message": "Час очікування сховища перевищує обмеження, встановлені вашою організацією."
   },
   "vaultExportDisabled": {
-    "message": "Експорт сховища вимкнено"
+    "message": "Експорт сховища недоступний"
   },
   "personalVaultExportPolicyInEffect": {
     "message": "Одна чи декілька організаційних політик не дозволяють вам експортувати особисте сховище."
@@ -1886,7 +1890,7 @@
     "message": "Вилучити головний пароль"
   },
   "removedMasterPassword": {
-    "message": "Головний пароль вилучено."
+    "message": "Головний пароль вилучено"
   },
   "leaveOrganizationConfirmation": {
     "message": "Ви справді хочете покинути цю організацію?"
@@ -2030,5 +2034,20 @@
         "example": "Jun 15, 2015"
       }
     }
+  },
+  "loginWithMasterPassword": {
+    "message": "Увійти з головним паролем"
+  },
+  "loggingInAs": {
+    "message": "Вхід у систему як"
+  },
+  "notYou": {
+    "message": "Не ви?"
+  },
+  "newAroundHere": {
+    "message": "Виконуєте вхід вперше?"
+  },
+  "rememberEmail": {
+    "message": "Запам'ятати е-пошту"
   }
 }

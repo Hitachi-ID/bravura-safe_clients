@@ -7,34 +7,110 @@ describe("Utils Service", () => {
       expect(Utils.getDomain(undefined)).toBeNull();
       expect(Utils.getDomain(" ")).toBeNull();
       expect(Utils.getDomain('https://bit!:"_&ward.com')).toBeNull();
-      expect(Utils.getDomain("bitwarden")).toBeNull();
+      expect(Utils.getDomain("bravurasafe")).toBeNull();
     });
 
     it("should fail for data urls", () => {
       expect(Utils.getDomain("data:image/jpeg;base64,AAA")).toBeNull();
     });
 
+    it("should fail for about urls", () => {
+      expect(Utils.getDomain("about")).toBeNull();
+      expect(Utils.getDomain("about:")).toBeNull();
+      expect(Utils.getDomain("about:blank")).toBeNull();
+    });
+
+    it("should fail for file url", () => {
+      expect(Utils.getDomain("file:///C://somefolder/form.pdf")).toBeNull();
+    });
+
     it("should handle urls without protocol", () => {
-      expect(Utils.getDomain("safe.hitachi-id.net")).toBe("safe.hitachi-id.net");
-      expect(Utils.getDomain("wrong://safe.hitachi-id.net")).toBe("safe.hitachi-id.net");
+      expect(Utils.getDomain("bravurasafe.com")).toBe("bravurasafe.com");
+      expect(Utils.getDomain("wrong://bravurasafe.com")).toBe("bravurasafe.com");
     });
 
     it("should handle valid urls", () => {
-      expect(Utils.getDomain("https://bitwarden")).toBe("bitwarden");
-      expect(Utils.getDomain("https://safe.hitachi-id.net")).toBe("safe.hitachi-id.net");
-      expect(Utils.getDomain("http://safe.hitachi-id.net")).toBe("safe.hitachi-id.net");
-      expect(Utils.getDomain("http://vault.safe.hitachi-id.net")).toBe("safe.hitachi-id.net");
+      expect(Utils.getDomain("bravurasafe.com")).toBe("bravurasafe.com");
+      expect(Utils.getDomain("http://bravurasafe.com")).toBe("bravurasafe.com");
+      expect(Utils.getDomain("https://bravurasafe.com")).toBe("bravurasafe.com");
+
+      expect(Utils.getDomain("www.bravurasafe.com")).toBe("bravurasafe.com");
+      expect(Utils.getDomain("http://www.bravurasafe.com")).toBe("bravurasafe.com");
+      expect(Utils.getDomain("https://www.bravurasafe.com")).toBe("bravurasafe.com");
+
+      expect(Utils.getDomain("vault.bravurasafe.com")).toBe("bravurasafe.com");
+      expect(Utils.getDomain("http://vault.bravurasafe.com")).toBe("bravurasafe.com");
+      expect(Utils.getDomain("https://vault.bravurasafe.com")).toBe("bravurasafe.com");
+
+      expect(Utils.getDomain("www.vault.bravurasafe.com")).toBe("bravurasafe.com");
+      expect(Utils.getDomain("http://www.vault.bravurasafe.com")).toBe("bravurasafe.com");
+      expect(Utils.getDomain("https://www.vault.bravurasafe.com")).toBe("bravurasafe.com");
+
       expect(
-        Utils.getDomain(
-          "https://user:password@safe.hitachi-id.net:8080/password/sites?and&query#hash"
-        )
-      ).toBe("safe.hitachi-id.net");
-      expect(Utils.getDomain("https://bitwarden.unknown")).toBe("bitwarden.unknown");
+        Utils.getDomain("user:password@bravurasafe.com:8080/password/sites?and&query#hash")
+      ).toBe("bravurasafe.com");
+      expect(
+        Utils.getDomain("http://user:password@bravurasafe.com:8080/password/sites?and&query#hash")
+      ).toBe("bravurasafe.com");
+      expect(
+        Utils.getDomain("https://user:password@bravurasafe.com:8080/password/sites?and&query#hash")
+      ).toBe("bravurasafe.com");
+
+      expect(Utils.getDomain("bravurasafe.unknown")).toBe("bravurasafe.unknown");
+      expect(Utils.getDomain("http://bravurasafe.unknown")).toBe("bravurasafe.unknown");
+      expect(Utils.getDomain("https://bravurasafe.unknown")).toBe("bravurasafe.unknown");
     });
 
-    it("should support localhost and IP", () => {
+    it("should handle valid urls with an underscore in subdomain", () => {
+      expect(Utils.getDomain("my_vault.bravurasafe.com/")).toBe("bravurasafe.com");
+      expect(Utils.getDomain("http://my_vault.bravurasafe.com/")).toBe("bravurasafe.com");
+      expect(Utils.getDomain("https://my_vault.bravurasafe.com/")).toBe("bravurasafe.com");
+    });
+
+    it("should support urls containing umlauts", () => {
+      expect(Utils.getDomain("bütwarden.com")).toBe("bütwarden.com");
+      expect(Utils.getDomain("http://bütwarden.com")).toBe("bütwarden.com");
+      expect(Utils.getDomain("https://bütwarden.com")).toBe("bütwarden.com");
+
+      expect(Utils.getDomain("subdomain.bütwarden.com")).toBe("bütwarden.com");
+      expect(Utils.getDomain("http://subdomain.bütwarden.com")).toBe("bütwarden.com");
+      expect(Utils.getDomain("https://subdomain.bütwarden.com")).toBe("bütwarden.com");
+    });
+
+    it("should support punycode urls", () => {
+      expect(Utils.getDomain("xn--btwarden-65a.com")).toBe("xn--btwarden-65a.com");
+      expect(Utils.getDomain("xn--btwarden-65a.com")).toBe("xn--btwarden-65a.com");
+      expect(Utils.getDomain("xn--btwarden-65a.com")).toBe("xn--btwarden-65a.com");
+
+      expect(Utils.getDomain("subdomain.xn--btwarden-65a.com")).toBe("xn--btwarden-65a.com");
+      expect(Utils.getDomain("http://subdomain.xn--btwarden-65a.com")).toBe("xn--btwarden-65a.com");
+      expect(Utils.getDomain("https://subdomain.xn--btwarden-65a.com")).toBe(
+        "xn--btwarden-65a.com"
+      );
+    });
+
+    it("should support localhost", () => {
+      expect(Utils.getDomain("localhost")).toBe("localhost");
+      expect(Utils.getDomain("http://localhost")).toBe("localhost");
       expect(Utils.getDomain("https://localhost")).toBe("localhost");
+    });
+
+    it("should support localhost with subdomain", () => {
+      expect(Utils.getDomain("subdomain.localhost")).toBe("localhost");
+      expect(Utils.getDomain("http://subdomain.localhost")).toBe("localhost");
+      expect(Utils.getDomain("https://subdomain.localhost")).toBe("localhost");
+    });
+
+    it("should support IPv4", () => {
+      expect(Utils.getDomain("192.168.1.1")).toBe("192.168.1.1");
+      expect(Utils.getDomain("http://192.168.1.1")).toBe("192.168.1.1");
       expect(Utils.getDomain("https://192.168.1.1")).toBe("192.168.1.1");
+    });
+
+    it("should support IPv6", () => {
+      expect(Utils.getDomain("[2620:fe::fe]")).toBe("2620:fe::fe");
+      expect(Utils.getDomain("http://[2620:fe::fe]")).toBe("2620:fe::fe");
+      expect(Utils.getDomain("https://[2620:fe::fe]")).toBe("2620:fe::fe");
     });
 
     it("should reject invalid hostnames", () => {
@@ -49,21 +125,106 @@ describe("Utils Service", () => {
       expect(Utils.getHostname(undefined)).toBeNull();
       expect(Utils.getHostname(" ")).toBeNull();
       expect(Utils.getHostname('https://bit!:"_&ward.com')).toBeNull();
-      expect(Utils.getHostname("bitwarden")).toBeNull();
+    });
+
+    it("should fail for data urls", () => {
+      expect(Utils.getHostname("data:image/jpeg;base64,AAA")).toBeNull();
+    });
+
+    it("should fail for about urls", () => {
+      expect(Utils.getHostname("about")).toBe("about");
+      expect(Utils.getHostname("about:")).toBeNull();
+      expect(Utils.getHostname("about:blank")).toBeNull();
+    });
+
+    it("should fail for file url", () => {
+      expect(Utils.getHostname("file:///C:/somefolder/form.pdf")).toBeNull();
     });
 
     it("should handle valid urls", () => {
-      expect(Utils.getHostname("safe.hitachi-id.net")).toBe("safe.hitachi-id.net");
-      expect(Utils.getHostname("https://safe.hitachi-id.net")).toBe("safe.hitachi-id.net");
-      expect(Utils.getHostname("http://safe.hitachi-id.net")).toBe("safe.hitachi-id.net");
-      expect(Utils.getHostname("http://vault.safe.hitachi-id.net")).toBe(
-        "vault.safe.hitachi-id.net"
+      expect(Utils.getHostname("bravurasafe")).toBe("bravurasafe");
+      expect(Utils.getHostname("http://bravurasafe")).toBe("bravurasafe");
+      expect(Utils.getHostname("https://bravurasafe")).toBe("bravurasafe");
+
+      expect(Utils.getHostname("bravurasafe.com")).toBe("bravurasafe.com");
+      expect(Utils.getHostname("http://bravurasafe.com")).toBe("bravurasafe.com");
+      expect(Utils.getHostname("https://bravurasafe.com")).toBe("bravurasafe.com");
+
+      expect(Utils.getHostname("www.bravurasafe.com")).toBe("www.bravurasafe.com");
+      expect(Utils.getHostname("http://www.bravurasafe.com")).toBe("www.bravurasafe.com");
+      expect(Utils.getHostname("https://www.bravurasafe.com")).toBe("www.bravurasafe.com");
+
+      expect(Utils.getHostname("vault.bravurasafe.com")).toBe("vault.bravurasafe.com");
+      expect(Utils.getHostname("http://vault.bravurasafe.com")).toBe("vault.bravurasafe.com");
+      expect(Utils.getHostname("https://vault.bravurasafe.com")).toBe("vault.bravurasafe.com");
+
+      expect(Utils.getHostname("www.vault.bravurasafe.com")).toBe("www.vault.bravurasafe.com");
+      expect(Utils.getHostname("http://www.vault.bravurasafe.com")).toBe("www.vault.bravurasafe.com");
+      expect(Utils.getHostname("https://www.vault.bravurasafe.com")).toBe("www.vault.bravurasafe.com");
+
+      expect(
+        Utils.getHostname("user:password@bravurasafe.com:8080/password/sites?and&query#hash")
+      ).toBe("bravurasafe.com");
+      expect(
+        Utils.getHostname("https://user:password@bravurasafe.com:8080/password/sites?and&query#hash")
+      ).toBe("bravurasafe.com");
+      expect(Utils.getHostname("https://bravurasafe.unknown")).toBe("bravurasafe.unknown");
+    });
+
+    it("should handle valid urls with an underscore in subdomain", () => {
+      expect(Utils.getHostname("my_vault.bravurasafe.com/")).toBe("my_vault.bravurasafe.com");
+      expect(Utils.getHostname("http://my_vault.bravurasafe.com/")).toBe("my_vault.bravurasafe.com");
+      expect(Utils.getHostname("https://my_vault.bravurasafe.com/")).toBe("my_vault.bravurasafe.com");
+    });
+
+    it("should support urls containing umlauts", () => {
+      expect(Utils.getHostname("bütwarden.com")).toBe("bütwarden.com");
+      expect(Utils.getHostname("http://bütwarden.com")).toBe("bütwarden.com");
+      expect(Utils.getHostname("https://bütwarden.com")).toBe("bütwarden.com");
+
+      expect(Utils.getHostname("subdomain.bütwarden.com")).toBe("subdomain.bütwarden.com");
+      expect(Utils.getHostname("http://subdomain.bütwarden.com")).toBe("subdomain.bütwarden.com");
+      expect(Utils.getHostname("https://subdomain.bütwarden.com")).toBe("subdomain.bütwarden.com");
+    });
+
+    it("should support punycode urls", () => {
+      expect(Utils.getHostname("xn--btwarden-65a.com")).toBe("xn--btwarden-65a.com");
+      expect(Utils.getHostname("xn--btwarden-65a.com")).toBe("xn--btwarden-65a.com");
+      expect(Utils.getHostname("xn--btwarden-65a.com")).toBe("xn--btwarden-65a.com");
+
+      expect(Utils.getHostname("subdomain.xn--btwarden-65a.com")).toBe(
+        "subdomain.xn--btwarden-65a.com"
+      );
+      expect(Utils.getHostname("http://subdomain.xn--btwarden-65a.com")).toBe(
+        "subdomain.xn--btwarden-65a.com"
+      );
+      expect(Utils.getHostname("https://subdomain.xn--btwarden-65a.com")).toBe(
+        "subdomain.xn--btwarden-65a.com"
       );
     });
 
-    it("should support localhost and IP", () => {
+    it("should support localhost", () => {
+      expect(Utils.getHostname("localhost")).toBe("localhost");
+      expect(Utils.getHostname("http://localhost")).toBe("localhost");
       expect(Utils.getHostname("https://localhost")).toBe("localhost");
+    });
+
+    it("should support localhost with subdomain", () => {
+      expect(Utils.getHostname("subdomain.localhost")).toBe("subdomain.localhost");
+      expect(Utils.getHostname("http://subdomain.localhost")).toBe("subdomain.localhost");
+      expect(Utils.getHostname("https://subdomain.localhost")).toBe("subdomain.localhost");
+    });
+
+    it("should support IPv4", () => {
+      expect(Utils.getHostname("192.168.1.1")).toBe("192.168.1.1");
+      expect(Utils.getHostname("http://192.168.1.1")).toBe("192.168.1.1");
       expect(Utils.getHostname("https://192.168.1.1")).toBe("192.168.1.1");
+    });
+
+    it("should support IPv6", () => {
+      expect(Utils.getHostname("[2620:fe::fe]")).toBe("2620:fe::fe");
+      expect(Utils.getHostname("http://[2620:fe::fe]")).toBe("2620:fe::fe");
+      expect(Utils.getHostname("https://[2620:fe::fe]")).toBe("2620:fe::fe");
     });
   });
 
@@ -78,6 +239,74 @@ describe("Utils Service", () => {
   describe("fromByteStringToArray", () => {
     it("should handle null", () => {
       expect(Utils.fromByteStringToArray(null)).toEqual(null);
+    });
+  });
+
+  describe("mapToRecord", () => {
+    it("should handle null", () => {
+      expect(Utils.mapToRecord(null)).toEqual(null);
+    });
+
+    it("should handle empty map", () => {
+      expect(Utils.mapToRecord(new Map())).toEqual({});
+    });
+
+    it("should handle convert a Map to a Record", () => {
+      const map = new Map([
+        ["key1", "value1"],
+        ["key2", "value2"],
+      ]);
+      expect(Utils.mapToRecord(map)).toEqual({ key1: "value1", key2: "value2" });
+    });
+
+    it("should handle convert a Map to a Record with non-string keys", () => {
+      const map = new Map([
+        [1, "value1"],
+        [2, "value2"],
+      ]);
+      const result = Utils.mapToRecord(map);
+      expect(result).toEqual({ 1: "value1", 2: "value2" });
+      expect(Utils.recordToMap(result)).toEqual(map);
+    });
+
+    it("should not convert an object if it's not a map", () => {
+      const obj = { key1: "value1", key2: "value2" };
+      expect(Utils.mapToRecord(obj as any)).toEqual(obj);
+    });
+  });
+
+  describe("recordToMap", () => {
+    it("should handle null", () => {
+      expect(Utils.recordToMap(null)).toEqual(null);
+    });
+
+    it("should handle empty record", () => {
+      expect(Utils.recordToMap({})).toEqual(new Map());
+    });
+
+    it("should handle convert a Record to a Map", () => {
+      const record = { key1: "value1", key2: "value2" };
+      expect(Utils.recordToMap(record)).toEqual(new Map(Object.entries(record)));
+    });
+
+    it("should handle convert a Record to a Map with non-string keys", () => {
+      const record = { 1: "value1", 2: "value2" };
+      const result = Utils.recordToMap(record);
+      expect(result).toEqual(
+        new Map([
+          [1, "value1"],
+          [2, "value2"],
+        ])
+      );
+      expect(Utils.mapToRecord(result)).toEqual(record);
+    });
+
+    it("should not convert an object if already a map", () => {
+      const map = new Map([
+        ["key1", "value1"],
+        ["key2", "value2"],
+      ]);
+      expect(Utils.recordToMap(map as any)).toEqual(map);
     });
   });
 });

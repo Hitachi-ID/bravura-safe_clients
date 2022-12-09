@@ -3,12 +3,15 @@ import { ActivatedRoute } from "@angular/router";
 import { map, mergeMap, Observable, Subject, takeUntil } from "rxjs";
 
 import {
-  OrganizationService,
-  getOrganizationById,
+  canAccessBillingTab,
+  canAccessGroupsTab,
   canAccessManageTab,
+  canAccessMembersTab,
+  canAccessReportingTab,
   canAccessSettingsTab,
-  canAccessToolsTab,
-  canAccessReportsTab,
+  getOrganizationById,
+  OrganizationService,
+//  canAccessReportsTab,
 } from "@bitwarden/common/abstractions/organization/organization.service.abstraction";
 import { Organization } from "@bitwarden/common/models/domain/organization";
 
@@ -18,7 +21,6 @@ import { Organization } from "@bitwarden/common/models/domain/organization";
 })
 export class OrganizationLayoutComponent implements OnInit, OnDestroy {
   organization$: Observable<Organization>;
-  businessTokenPromise: Promise<void>;
 
   private _destroy = new Subject<void>();
 
@@ -44,59 +46,35 @@ export class OrganizationLayoutComponent implements OnInit, OnDestroy {
     this._destroy.complete();
   }
 
-  canShowManageTab(organization: Organization): boolean {
-    return canAccessManageTab(organization);
-  }
-
-  canShowReportsTab(organization: Organization): boolean {
-    return canAccessReportsTab(organization);
-  }
-
-  canShowToolsTab(organization: Organization): boolean {
-    return canAccessToolsTab(organization);
-  }
-
   canShowSettingsTab(organization: Organization): boolean {
     return canAccessSettingsTab(organization);
   }
 
+  canShowManageTab(organization: Organization): boolean {
+    return canAccessManageTab(organization);
+  }
+
+  canShowMembersTab(organization: Organization): boolean {
+    return canAccessMembersTab(organization);
+  }
+
+  canShowGroupsTab(organization: Organization): boolean {
+    return canAccessGroupsTab(organization);
+  }
+
+  canShowReportsTab(organization: Organization): boolean {
+    return canAccessReportingTab(organization);
+  }
+
+  canShowBillingTab(organization: Organization): boolean {
+    return canAccessBillingTab(organization);
+  }
+
+  getReportTabLabel(organization: Organization): string {
+    return organization.useEvents ? "reporting" : "reports";
+  }
+
   getReportsRoute(organization: Organization): string {
     return "reports/exposed-passwords-report";
-  }
-
-  getToolsRoute(organization: Organization): string {
-    return "tools/import";
-  }
-
-  getManageRoute(organization: Organization): string {
-    let route: string;
-    switch (true) {
-      case organization.canManageUsers:
-        route = "manage/people";
-        break;
-      case organization.canViewAssignedCollections || organization.canViewAllCollections:
-        route = "manage/collections";
-        break;
-      case organization.canManageGroups:
-        route = "manage/groups";
-        break;
-      case organization.canManagePolicies:
-        route = "manage/policies";
-        break;
-      case organization.canManageSso:
-        route = "manage/sso";
-        break;
-      case organization.canManageScim:
-        route = "manage/scim";
-        break;
-      case organization.canAccessEventLogs:
-        route = "manage/events";
-        break;
-    }
-    return route;
-  }
-
-  get optionsRoute(): string {
-    return "options/account";
   }
 }

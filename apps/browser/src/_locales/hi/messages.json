@@ -1,13 +1,13 @@
 {
   "appName": {
-    "message": "bravura safe"
+    "message": "bitwarden"
   },
   "extName": {
-    "message": "Bravura Safe",
+    "message": "Bitwarden",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
-    "message": "bravura safe is a secure password manager for all of your devices.",
+    "message": "bitwarden is a secure and free password manager for all of your devices.",
     "description": "Extension description"
   },
   "loginOrCreateNewAccount": {
@@ -56,10 +56,10 @@
     "message": "Vault"
   },
   "myVault": {
-    "message": "My Safe"
+    "message": "My Vault"
   },
   "allVaults": {
-    "message": "All Vaults"
+    "message": "All vaults"
   },
   "tools": {
     "message": "उपकरण"
@@ -77,7 +77,7 @@
     "message": "Copy Note"
   },
   "copyUri": {
-    "message": "URL को कॉपी करें"
+    "message": "URI को कॉपी करें"
   },
   "copyUsername": {
     "message": "Copy Username"
@@ -95,7 +95,7 @@
     "message": "Generate Password (copied)"
   },
   "copyElementIdentifier": {
-    "message": "Copy Custom Field Name"
+    "message": "Copy custom field name"
   },
   "noMatchingLogins": {
     "message": "कोई मेल-मिला लॉगिन नहीं |"
@@ -131,10 +131,10 @@
     "message": "Send a verification code to your email"
   },
   "sendCode": {
-    "message": "Send Code"
+    "message": "Send code"
   },
   "codeSent": {
-    "message": "Code Sent"
+    "message": "Code sent"
   },
   "verificationCode": {
     "message": "Verification Code"
@@ -199,7 +199,7 @@
     "message": "सिंक"
   },
   "syncVaultNow": {
-    "message": "Sync Safe Now"
+    "message": "Sync Vault Now"
   },
   "lastSync": {
     "message": "Last Sync:"
@@ -215,7 +215,7 @@
     "message": "स्वचालित रूप से अपने लॉगिन के लिए मजबूत, अद्वितीय पासवर्ड उत्पन्न करते हैं।"
   },
   "bitWebVault": {
-    "message": "bravura safe Web Safe"
+    "message": "bitwarden Web Vault"
   },
   "importItems": {
     "message": "Import Items"
@@ -245,7 +245,7 @@
     "message": "Numbers (0-9)"
   },
   "specialCharacters": {
-    "message": "Special Characters (!@#$%^&*)"
+    "message": "Special characters (!@#$%^&*)"
   },
   "numWords": {
     "message": "Number of Words"
@@ -339,7 +339,7 @@
     "message": "आपका वेब ब्राउज़र आसान क्लिपबोर्ड कॉपीिंग का समर्थन नहीं करता है। इसके बजाय इसे मैन्युअल रूप से कॉपी करें।"
   },
   "verifyIdentity": {
-    "message": "Verify Identity"
+    "message": "Verify identity"
   },
   "yourVaultIsLocked": {
     "message": "आपकी वॉल्ट लॉक हो गई है। जारी रखने के लिए अपने मास्टर पासवर्ड को सत्यापित करें।"
@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bravurasecurity.com"
+        "example": "bitwarden.com"
       }
     }
   },
@@ -488,10 +488,10 @@
     "message": "Change Master Password"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "आप वेब वॉल्ट bravurasecurity.com पर अपना मास्टर पासवर्ड बदल सकते हैं।क्या आप अब वेबसाइट पर जाना चाहते हैं?"
+    "message": "आप वेब वॉल्ट bitwarden.com पर अपना मास्टर पासवर्ड बदल सकते हैं।क्या आप अब वेबसाइट पर जाना चाहते हैं?"
   },
   "twoStepLoginConfirmation": {
-    "message": "Two-step login makes your account more secure by requiring you to enter a security code from an authenticator app whenever you log in. Two-step login can be enabled on the bravurasecurity.com web vault. Do you want to visit the website now?"
+    "message": "Two-step login makes your account more secure by requiring you to enter a security code from an authenticator app whenever you log in. Two-step login can be enabled on the bitwarden.com web vault. Do you want to visit the website now?"
   },
   "editedFolder": {
     "message": "Edited Folder"
@@ -521,8 +521,8 @@
     "message": "यूआरआइ"
   },
   "uriPosition": {
-    "message": "URL $POSITION$",
-    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
+    "message": "URI $POSITION$",
+    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -531,7 +531,7 @@
     }
   },
   "newUri": {
-    "message": "नया URL"
+    "message": "नया URI"
   },
   "addedItem": {
     "message": "जोड़ा गया आइटम"
@@ -552,7 +552,7 @@
     "message": "क्या आप सुनिश्चित हैं कि आप वर्तमान पासवर्ड को ओवरराइट करना चाहते हैं?"
   },
   "overwriteUsername": {
-    "message": "Overwrite Username"
+    "message": "Overwrite username"
   },
   "overwriteUsernameConfirmation": {
     "message": "Are you sure you want to overwrite the current username?"
@@ -597,7 +597,7 @@
     "description": "Clipboard is the operating system thing where you copy/paste data to on your device."
   },
   "notificationAddDesc": {
-    "message": "Should bravura safe remember this password for you?"
+    "message": "Should bitwarden remember this password for you?"
   },
   "notificationAddSave": {
     "message": "Yes, Save Now"
@@ -621,11 +621,11 @@
     "message": "Use a secondary click to access password generation and matching logins for the website. "
   },
   "defaultUriMatchDetection": {
-    "message": "डिफॉल्ट URL मैच डिटेक्शन",
-    "description": "Default URL match detection for auto-fill."
+    "message": "डिफॉल्ट URI मैच डिटेक्शन",
+    "description": "Default URI match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "ऑटो-फिल जैसे कार्यों को करते समय लॉगिन के लिए URL मैच डिटेक्शन को संभाले जाने का डिफ़ॉल्ट तरीका चुनें। "
+    "message": "ऑटो-फिल जैसे कार्यों को करते समय लॉगिन के लिए URI मैच डिटेक्शन को संभाले जाने का डिफ़ॉल्ट तरीका चुनें। "
   },
   "theme": {
     "message": "थीम"
@@ -646,7 +646,7 @@
     "description": "'Solarized' is a noun and the name of a color scheme. It should not be translated."
   },
   "exportVault": {
-    "message": "Export Safe"
+    "message": "Export Vault"
   },
   "fileFormat": {
     "message": "File Format"
@@ -677,7 +677,7 @@
     "message": "संगठनों के बारे में जानें"
   },
   "learnOrgConfirmation": {
-    "message": "बिटवर्डन आपको एक संगठन का उपयोग करके अपनी तिजोरी वस्तुओं को दूसरों के साथ साझा करने की अनुमति देता है।क्या आप अधिक जानने के लिए bravurasecurity.com वेबसाइट पर जाना चाहेंगे?"
+    "message": "बिटवर्डन आपको एक संगठन का उपयोग करके अपनी तिजोरी वस्तुओं को दूसरों के साथ साझा करने की अनुमति देता है।क्या आप अधिक जानने के लिए bitwarden.com वेबसाइट पर जाना चाहेंगे?"
   },
   "moveToOrganization": {
     "message": "संगठन में ले जाएँ"
@@ -756,7 +756,7 @@
     "message": "Manage Membership"
   },
   "premiumManageAlert": {
-    "message": "आप वेब वॉल्ट bravurasecurity.com पर अपनी सदस्यता का प्रबंधन कर सकते हैं।क्या आप अब वेबसाइट पर जाना चाहते हैं?"
+    "message": "आप वेब वॉल्ट bitwarden.com पर अपनी सदस्यता का प्रबंधन कर सकते हैं।क्या आप अब वेबसाइट पर जाना चाहते हैं?"
   },
   "premiumRefresh": {
     "message": "Refresh Membership"
@@ -789,13 +789,13 @@
     "message": "Purchase Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "आप bravurasecurity.com वेब वॉल्ट पर प्रीमियम सदस्यता खरीद सकते हैं।क्या आप अब वेबसाइट पर जाना चाहते हैं?"
+    "message": "आप bitwarden.com वेब वॉल्ट पर प्रीमियम सदस्यता खरीद सकते हैं।क्या आप अब वेबसाइट पर जाना चाहते हैं?"
   },
   "premiumCurrentMember": {
     "message": "आप एक प्रीमियम सदस्य हैं!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Thank you for supporting Bravura Safe."
+    "message": "Thank you for supporting bitwarden."
   },
   "premiumPrice": {
     "message": "All for just %price% /year!",
@@ -905,7 +905,7 @@
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
   "duoOrganizationDesc": {
-    "message": "Verify with Duo Security for your team using the Duo Mobile app, SMS, phone call, or U2F security key.",
+    "message": "Verify with Duo Security for your organization using the Duo Mobile app, SMS, phone call, or U2F security key.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
   "twoFactorHyprCheckDevice": {
@@ -927,10 +927,10 @@
     "message": "सत्यापन कोड आपको ईमेल किए जाएंगे।"
   },
   "selfHostedEnvironment": {
-    "message": "Cloud-hosted Environment"
+    "message": "Self-hosted Environment"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Specify the base URL of your on-premise hosted bravura safe installation."
+    "message": "Specify the base URL of your on-premise hosted bitwarden installation."
   },
   "customEnvironment": {
     "message": "Custom Environment"
@@ -945,7 +945,7 @@
     "message": "API Server URL"
   },
   "webVaultUrl": {
-    "message": "Web Safe Server URL"
+    "message": "Web Vault Server URL"
   },
   "identityUrl": {
     "message": "Identity Server URL"
@@ -1139,7 +1139,7 @@
     "message": "Last Name"
   },
   "fullName": {
-    "message": "Full Name"
+    "message": "Full name"
   },
   "identityName": {
     "message": "Identity Name"
@@ -1277,26 +1277,26 @@
   },
   "matchDetection": {
     "message": "Match Detection",
-    "description": "URL match detection for auto-fill."
+    "description": "URI match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "डिफॉल्ट मैच डिटेक्शन",
-    "description": "Default URL match detection for auto-fill."
+    "description": "Default URI match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Toggle Options"
   },
   "toggleCurrentUris": {
-    "message": "वर्तमान URL's को टॉगल करें",
-    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
+    "message": "वर्तमान URI's को टॉगल करें",
+    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
   },
   "currentUri": {
-    "message": "वर्तमान URL",
-    "description": "The URL of one of the current open tabs in the browser."
+    "message": "वर्तमान URI",
+    "description": "The URI of one of the current open tabs in the browser."
   },
   "organization": {
-    "message": "Team",
-    "description": "An entity of multiple related people (ex. a team or business team)."
+    "message": "Organization",
+    "description": "An entity of multiple related people (ex. a team or business organization)."
   },
   "types": {
     "message": "प्रकार"
@@ -1317,6 +1317,10 @@
     "message": "अपडेट किया गया",
     "description": "ex. Date this item was updated"
   },
+  "dateCreated": {
+    "message": "Created",
+    "description": "ex. Date this item was created"
+  },
   "datePasswordUpdated": {
     "message": "Password Updated",
     "description": "ex. Date this password was updated"
@@ -1325,7 +1329,7 @@
     "message": "क्या आप सुनिश्चित हैं कि आप \"कभी नहीं\" विकल्प का उपयोग करना चाहते हैं?\"कभी नहीं\" के लिए अपने लॉक विकल्प को सेट करना आपके डिवाइस पर आपकी वॉल्ट की एन्क्रिप्शन कुंजी को स्टोर करता है। यदि आप इस विकल्प का उपयोग करते हैं तो आपको यह सुनिश्चित करना चाहिए कि आप अपने डिवाइस को ठीक से सुरक्षित रखें।"
   },
   "noOrganizationsList": {
-    "message": "You do not belong to any teams. Teams allow you to securely share items with other users."
+    "message": "You do not belong to any organizations. Organizations allow you to securely share items with other users."
   },
   "noCollectionsInList": {
     "message": "सूची में कोई संग्रह नहीं है।"
@@ -1377,7 +1381,7 @@
     "message": "डेस्कटॉप से पुष्टि का इंतजार"
   },
   "awaitDesktopDesc": {
-    "message": "ब्राउज़र के लिए बॉयोमीट्रिक्स सक्षम करने के लिए Bravura Safe डेस्कटॉप आवेदन में बॉयोमीट्रिक्स का उपयोग कर पुष्टि करें।"
+    "message": "ब्राउज़र के लिए बॉयोमीट्रिक्स सक्षम करने के लिए Bitwarden डेस्कटॉप आवेदन में बॉयोमीट्रिक्स का उपयोग कर पुष्टि करें।"
   },
   "lockWithMasterPassOnRestart": {
     "message": "ब्राउज़र पुनः आरंभ करने पर मास्टर पासवर्ड के साथ लॉक करें"
@@ -1436,7 +1440,7 @@
     "message": "ऑटो फिल और सेव"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "ऑटो फिल आइटम और सेव URL"
+    "message": "ऑटो फिल आइटम और सेव URI"
   },
   "autoFillSuccess": {
     "message": "ऑटो फिल आइटम"
@@ -1587,15 +1591,15 @@
   },
   "send": {
     "message": "भेजें",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "searchSends": {
     "message": "Sends मे खोजे",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "addSend": {
-    "message": "Share जोड़ें",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Send जोड़ें",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendTypeText": {
     "message": "शब्द"
@@ -1605,7 +1609,7 @@
   },
   "allSends": {
     "message": "सभी Sends",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "मैक्स एक्सेस काउंट पहुंच गया है",
@@ -1621,8 +1625,8 @@
     "message": "पासवर्ड सुरक्षित है"
   },
   "copySendLink": {
-    "message": "कॉपी Share लिंक",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "कॉपी Send लिंक",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "removePassword": {
     "message": "पासवर्ड हटाएं"
@@ -1634,12 +1638,12 @@
     "message": "पासवर्ड हटाएं"
   },
   "deletedSend": {
-    "message": " Share हटाए गए",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": " Send हटाए गए",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendLink": {
-    "message": "Share लिंक",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Send लिंक",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "disabled": {
     "message": "अक्षम"
@@ -1648,24 +1652,24 @@
     "message": "क्या आप सयमुच पासवर्ड हटाना चाहते हैं?"
   },
   "deleteSend": {
-    "message": " Share हटाए",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": " Send हटाए",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "deleteSendConfirmation": {
-    "message": "क्या आप वाकई इस Share को मिटाना चाहते हैं?",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "क्या आप वाकई इस Send को मिटाना चाहते हैं?",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "editSend": {
-    "message": "एडिट Share",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "एडिट Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendTypeHeader": {
     "message": "यह किस प्रकार का सेंड है?",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendNameDesc": {
     "message": "इस सेंड का वर्णन करने के लिए एक दोस्ताना नाम।",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendFileDesc": {
     "message": "वह फाइल जो आप सेंड करना चाहते हैं।"
@@ -1675,14 +1679,14 @@
   },
   "deletionDateDesc": {
     "message": " यह सेंड निर्धारित तिथि और समय पर स्थायी रूप से हटा दिया जाएगा।",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "expirationDate": {
     "message": "समाप्ति तिथि"
   },
   "expirationDateDesc": {
     "message": "यदि सेट किया जाता है, तो  यह सेंड निर्दिष्ट तिथि और समय पर समाप्त हो जाएगा।",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "oneDay": {
     "message": "1 दिन"
@@ -1704,56 +1708,56 @@
   },
   "maximumAccessCountDesc": {
     "message": "यदि सेट किया जाता है, तो अधिकतम एक्सेस काउंट तक पहुंचने के बाद उपयोगकर्ता अब इस सेंड को एक्सेस नहीं कर पाएंगे।",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendPasswordDesc": {
     "message": "वैकल्पिक रूप से उपयोगकर्ताओं को इस सेंड तक पहुंचने के लिए पासवर्ड की आवश्यकता होगी।",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendNotesDesc": {
     "message": "इस सेंड के बारे में निजी नोट्स।",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendDisableDesc": {
     "message": "इस सेंड को अक्षम करें ताकि कोई भी इसे एक्सेस न कर सके।",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendShareDesc": {
     "message": "सेव पर क्लिपबोर्ड पर इस सेंड के लिंक को कॉपी करें।",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "वह टेक्स्ट जो आप सेंड करना चाहते हैं।"
   },
   "sendHideText": {
     "message": "इस सेंड के टेक्स्ट को डिफ़ॉल्ट रूप से छिपाएं।",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "वर्तमान एक्सेस काउंट"
   },
   "createSend": {
     "message": "नया सेंड बनाएं",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "newPassword": {
     "message": "नया पासवर्ड"
   },
   "sendDisabled": {
     "message": "सेंड अक्षम",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "एक उद्यम नीति के कारण, आप केवल मौजूदा सेंड को हटाने में सक्षम हैं।",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "createdSend": {
     "message": "नया सेंड बनाया गया",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "editedSend": {
     "message": "सेंड एडिट किया गया",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendLinuxChromiumFileWarning": {
     "message": "फ़ाइल चुनने के लिए, साइडबार (यदि संभव हो) में एक्सटेंशन खोलें या इस बैनर पर क्लिक करके एक नई विंडो को पॉप आउट करें।"
@@ -1816,19 +1820,19 @@
     "message": "इस सुविधा का उपयोग करने के लिए आपको अपने ईमेल को सत्यापित करना होगा। आप वेब वॉल्ट में अपने ईमेल को सत्यापित कर सकते हैं।"
   },
   "updatedMasterPassword": {
-    "message": "Updated Master Password"
+    "message": "Updated master password"
   },
   "updateMasterPassword": {
-    "message": "Update Master Password"
+    "message": "Update master password"
   },
   "updateMasterPasswordWarning": {
-    "message": "Your Master Password was recently changed by an administrator in your team. In order to access the vault, you must update it now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
+    "message": "Your master password was recently changed by an administrator in your organization. In order to access the vault, you must update it now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
   },
   "resetPasswordPolicyAutoEnroll": {
-    "message": "Automatic Enrollment"
+    "message": "Automatic enrollment"
   },
   "resetPasswordAutoEnrollInviteWarning": {
-    "message": "This team has an enterprise policy that will automatically enroll you in password reset. Enrollment will allow team administrators to change your master password."
+    "message": "This organization has an enterprise policy that will automatically enroll you in password reset. Enrollment will allow organization administrators to change your master password."
   },
   "selectFolder": {
     "message": "Select folder..."
@@ -1843,7 +1847,7 @@
     "message": "Minutes"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Your team policies are affecting your vault timeout. Maximum allowed Safe Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
+    "message": "Your organization policies are affecting your vault timeout. Maximum allowed Vault Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1856,13 +1860,13 @@
     }
   },
   "vaultTimeoutTooLarge": {
-    "message": "Your vault timeout exceeds the restrictions set by your team."
+    "message": "Your vault timeout exceeds the restrictions set by your organization."
   },
   "vaultExportDisabled": {
-    "message": "Safe Export Disabled"
+    "message": "Vault export unavailable"
   },
   "personalVaultExportPolicyInEffect": {
-    "message": "One or more team policies prevents you from exporting your personal vault."
+    "message": "One or more organization policies prevents you from exporting your individual vault."
   },
   "copyCustomFieldNameInvalidElement": {
     "message": "Unable to identify a valid form element. Try inspecting the HTML instead."
@@ -1871,7 +1875,7 @@
     "message": "No unique identifier found."
   },
   "convertOrganizationEncryptionDesc": {
-    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this team.",
+    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this organization.",
     "placeholders": {
       "organization": {
         "content": "$1",
@@ -1880,19 +1884,19 @@
     }
   },
   "leaveOrganization": {
-    "message": "Leave Team"
+    "message": "Leave organization"
   },
   "removeMasterPassword": {
-    "message": "Remove Master Password"
+    "message": "Remove master password"
   },
   "removedMasterPassword": {
-    "message": "Master password removed."
+    "message": "Master password removed"
   },
   "leaveOrganizationConfirmation": {
-    "message": "Are you sure you want to leave this team?"
+    "message": "Are you sure you want to leave this organization?"
   },
   "leftOrganization": {
-    "message": "You have left the team."
+    "message": "You have left the organization."
   },
   "toggleCharacterCount": {
     "message": "Toggle character count"
@@ -1901,10 +1905,10 @@
     "message": "Your session has timed out. Please go back and try logging in again."
   },
   "exportingPersonalVaultTitle": {
-    "message": "Exporting Personal Vault"
+    "message": "Exporting individual vault"
   },
   "exportingPersonalVaultDescription": {
-    "message": "Only the personal vault items associated with $EMAIL$ will be exported. Organization vault items will not be included.",
+    "message": "Only the individual vault items associated with $EMAIL$ will be exported. Organization vault items will not be included.",
     "placeholders": {
       "email": {
         "content": "$1",
@@ -1916,23 +1920,23 @@
     "message": "Error"
   },
   "regenerateUsername": {
-    "message": "Regenerate Username"
+    "message": "Regenerate username"
   },
   "generateUsername": {
-    "message": "Generate Username"
+    "message": "Generate username"
   },
   "usernameType": {
-    "message": "Username Type"
+    "message": "Username type"
   },
   "plusAddressedEmail": {
-    "message": "Plus Addressed Email",
+    "message": "Plus addressed email",
     "description": "Username generator option that appends a random sub-address to the username. For example: address+subaddress@email.com"
   },
   "plusAddressedEmailDesc": {
     "message": "Use your email provider's sub-addressing capabilities."
   },
   "catchallEmail": {
-    "message": "Catch-all Email"
+    "message": "Catch-all email"
   },
   "catchallEmailDesc": {
     "message": "Use your domain's configured catch-all inbox."
@@ -1941,22 +1945,22 @@
     "message": "Random"
   },
   "randomWord": {
-    "message": "Random Word"
+    "message": "Random word"
   },
   "websiteName": {
-    "message": "Website Name"
+    "message": "Website name"
   },
   "whatWouldYouLikeToGenerate": {
     "message": "What would you like to generate?"
   },
   "passwordType": {
-    "message": "Password Type"
+    "message": "Password type"
   },
   "service": {
     "message": "Service"
   },
   "forwardedEmail": {
-    "message": "Forwarded Email Alias"
+    "message": "Forwarded email alias"
   },
   "forwardedEmailDesc": {
     "message": "Generate an email alias with an external forwarding service."
@@ -1972,16 +1976,16 @@
     "message": "API Key"
   },
   "ssoKeyConnectorError": {
-    "message": "Key Connector error: make sure Key Connector is available and working correctly."
+    "message": "Key connector error: make sure key connector is available and working correctly."
   },
   "premiumSubcriptionRequired": {
     "message": "Premium subscription required"
   },
   "organizationIsDisabled": {
-    "message": "Organization is disabled."
+    "message": "Organization suspended."
   },
   "disabledOrganizationFilterError": {
-    "message": "Items in disabled Organizations cannot be accessed. Contact your Organization owner for assistance."
+    "message": "Items in suspended Organizations cannot be accessed. Contact your Organization owner for assistance."
   },
   "cardBrandMir": {
     "message": "Mir"
@@ -2005,13 +2009,13 @@
     "message": "to reset to pre-configured settings"
   },
   "serverVersion": {
-    "message": "Server Version"
+    "message": "Server version"
   },
   "selfHosted": {
-    "message": "Self-Hosted"
+    "message": "Self-hosted"
   },
   "thirdParty": {
-    "message": "Third-Party"
+    "message": "Third-party"
   },
   "thirdPartyServerMessage": {
     "message": "Connected to third-party server implementation, $SERVERNAME$. Please verify bugs using the official server, or report them to the third-party server.",
@@ -2030,5 +2034,20 @@
         "example": "Jun 15, 2015"
       }
     }
+  },
+  "loginWithMasterPassword": {
+    "message": "Log in with master password"
+  },
+  "loggingInAs": {
+    "message": "Logging in as"
+  },
+  "notYou": {
+    "message": "Not you?"
+  },
+  "newAroundHere": {
+    "message": "New around here?"
+  },
+  "rememberEmail": {
+    "message": "Remember email"
   }
 }

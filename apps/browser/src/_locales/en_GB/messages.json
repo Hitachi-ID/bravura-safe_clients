@@ -59,7 +59,7 @@
     "message": "My safe"
   },
   "allVaults": {
-    "message": "All Safes"
+    "message": "All safes"
   },
   "tools": {
     "message": "Tools"
@@ -95,10 +95,10 @@
     "message": "Generate password (copied)"
   },
   "copyElementIdentifier": {
-    "message": "Copy Custom Field Name"
+    "message": "Copy custom field name"
   },
   "noMatchingLogins": {
-    "message": "No matching logins."
+    "message": "No matching logins"
   },
   "unlockVaultMenu": {
     "message": "Unlock your safe"
@@ -342,7 +342,7 @@
     "message": "Verify Identity"
   },
   "yourVaultIsLocked": {
-    "message": "Your safe is locked. Verify your master password to continue."
+    "message": "Your safe is locked. Verify your identity to continue."
   },
   "unlock": {
     "message": "Unlock"
@@ -543,7 +543,7 @@
     "message": "Do you really want to send to the bin?"
   },
   "deletedItem": {
-    "message": "Sent item to bin"
+    "message": "Deleted item"
   },
   "overwritePassword": {
     "message": "Overwrite password"
@@ -1317,6 +1317,10 @@
     "message": "Updated",
     "description": "ex. Date this item was updated"
   },
+  "dateCreated": {
+    "message": "Created",
+    "description": "ex. Date this item was created"
+  },
   "datePasswordUpdated": {
     "message": "Password updated",
     "description": "ex. Date this password was updated"
@@ -1978,7 +1982,7 @@
     "message": "Premium subscription required"
   },
   "organizationIsDisabled": {
-    "message": "Organisation is disabled."
+    "message": "Team is disabled."
   },
   "disabledOrganizationFilterError": {
     "message": "Items in disabled Organisations cannot be accessed. Contact your Organisation owner for assistance."
@@ -2030,5 +2034,20 @@
         "example": "Jun 15, 2015"
       }
     }
+  },
+  "loginWithMasterPassword": {
+    "message": "Log in with master password"
+  },
+  "loggingInAs": {
+    "message": "Logging in as"
+  },
+  "notYou": {
+    "message": "Not you?"
+  },
+  "newAroundHere": {
+    "message": "New around here?"
+  },
+  "rememberEmail": {
+    "message": "Remember email"
   }
 }

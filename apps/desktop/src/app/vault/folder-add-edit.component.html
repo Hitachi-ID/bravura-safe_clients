@@ -47,17 +47,17 @@
             class="danger"
             appA11yTitle="{{ 'delete' | i18n }}"
             *ngIf="editMode"
-            [disabled]="deleteBtn.loading"
+            [disabled]="$any(deleteBtn).loading"
             [appApiAction]="deletePromise"
           >
             <i
               class="fa fa-trash fa-lg fa-fw"
-              [hidden]="deleteBtn.loading"
+              [hidden]="$any(deleteBtn).loading"
               aria-hidden="true"
             ></i>
             <i
               class="fa fa-spinner fa-spin fa-lg fa-fw"
-              [hidden]="!deleteBtn.loading"
+              [hidden]="!$any(deleteBtn).loading"
               aria-hidden="true"
             ></i>
           </button>

@@ -1,29 +1,29 @@
-import { Except, Jsonify } from "type-fest";
+import { Jsonify } from "type-fest";
 
 import { AuthenticationStatus } from "../../enums/authenticationStatus";
 import { KdfType } from "../../enums/kdfType";
 import { UriMatchType } from "../../enums/uriMatchType";
 import { Utils } from "../../misc/utils";
 import { DeepJsonify } from "../../types/deep-jsonify";
-import { CipherData } from "../data/cipherData";
-import { CollectionData } from "../data/collectionData";
-import { EncryptedOrganizationKeyData } from "../data/encryptedOrganizationKeyData";
-import { EventData } from "../data/eventData";
-import { FolderData } from "../data/folderData";
-import { OrganizationData } from "../data/organizationData";
-import { PolicyData } from "../data/policyData";
-import { ProviderData } from "../data/providerData";
-import { SendData } from "../data/sendData";
+import { CipherData } from "../data/cipher.data";
+import { CollectionData } from "../data/collection.data";
+import { EncryptedOrganizationKeyData } from "../data/encrypted-organization-key.data";
+import { EventData } from "../data/event.data";
+import { FolderData } from "../data/folder.data";
+import { OrganizationData } from "../data/organization.data";
+import { PolicyData } from "../data/policy.data";
+import { ProviderData } from "../data/provider.data";
+import { SendData } from "../data/send.data";
 import { ServerConfigData } from "../data/server-config.data";
-import { CipherView } from "../view/cipherView";
-import { CollectionView } from "../view/collectionView";
-import { SendView } from "../view/sendView";
+import { CipherView } from "../view/cipher.view";
+import { CollectionView } from "../view/collection.view";
+import { SendView } from "../view/send.view";
 
-import { EncString } from "./encString";
-import { EnvironmentUrls } from "./environmentUrls";
-import { GeneratedPasswordHistory } from "./generatedPasswordHistory";
+import { EncString } from "./enc-string";
+import { EnvironmentUrls } from "./environment-urls";
+import { GeneratedPasswordHistory } from "./generated-password-history";
 import { Policy } from "./policy";
-import { SymmetricCryptoKey } from "./symmetricCryptoKey";
+import { SymmetricCryptoKey } from "./symmetric-crypto-key";
 
 export class EncryptionPair<TEncrypted, TDecrypted> {
   encrypted?: TEncrypted;
@@ -40,7 +40,7 @@ export class EncryptionPair<TEncrypted, TDecrypted> {
 }
 
   static fromJSON<TEncrypted, TDecrypted>(
-    obj: Jsonify<EncryptionPair<Jsonify<TEncrypted>, Jsonify<TDecrypted>>>,
+    obj: { encrypted?: Jsonify<TEncrypted>; decrypted?: string | Jsonify<TDecrypted> },
     decryptedFromJson?: (decObj: Jsonify<TDecrypted> | string) => TDecrypted,
     encryptedFromJson?: (encObj: Jsonify<TEncrypted>) => TEncrypted
   ) {
@@ -123,7 +123,7 @@ export class AccountKeys {
   apiKeyClientSecret?: string;
 
   toJSON() {
-    return Object.assign(this as Except<AccountKeys, "publicKey">, {
+    return Utils.merge(this, {
       publicKey: Utils.fromBufferToByteString(this.publicKey),
     });
 }
@@ -175,6 +175,7 @@ export class AccountProfile {
   apiKeyClientId?: string;
   authenticationStatus?: AuthenticationStatus;
   convertAccountToKeyConnector?: boolean;
+  name?: string;
   email?: string;
   emailVerified?: boolean;
   entityId?: string;
@@ -219,7 +220,6 @@ export class AccountSettings {
   enableAutoFillOnPageLoad?: boolean;
   enableBiometric?: boolean;
   enableFullWidth?: boolean;
-  enableGravitars?: boolean;
   environmentUrls: EnvironmentUrls = new EnvironmentUrls();
   equivalentDomains?: any;
   minimizeOnCopyToClipboard?: boolean;
@@ -253,7 +253,7 @@ export class AccountSettings {
 }
 
 export type AccountSettingsSettings = {
-  equivalentDomains?: { [id: string]: any };
+  equivalentDomains?: string[][];
 };
 
 export class AccountTokens {

@@ -4,7 +4,7 @@ import { EnvironmentService } from "@bitwarden/common/abstractions/environment.s
 import { StateService } from "@bitwarden/common/abstractions/state.service";
 import { CipherType } from "@bitwarden/common/enums/cipherType";
 import { Utils } from "@bitwarden/common/misc/utils";
-import { CipherView } from "@bitwarden/common/models/view/cipherView";
+import { CipherView } from "@bitwarden/common/models/view/cipher.view";
 const IconMap: any = {
   "fa-globe": String.fromCharCode(0xf0ac),
   "fa-sticky-note-o": String.fromCharCode(0xf24a),

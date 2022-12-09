@@ -56,7 +56,7 @@ export default {
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/f32LSg3jaegICkMu7rPARm/Tailwind-Component-Library-Update?node-id=1881%3A17689",
+      url: "https://www.figma.com/file/Zt3YSeb6E6lebAffrNLa0h/Tailwind-Component-Library?node-id=5600%3A24278",
     },
   },
 } as Meta;
@@ -137,7 +137,7 @@ Members.args = {
   name: "Select members",
   hint: "Members will be assigned to the associated group/collection",
   baseItems: [
-    { id: "1", listName: "Joe Smith (jsmith@mail.me)", labelName: "Joe Smith", icon: "bwi-user" },
+    { id: "1", listName: "Joe Smith (jsmith@mail.me)", labelName: "Joe Smith", icon: "fa-user" },
     {
       id: "2",
       listName: "Tania Stone (tstone@mail.me)",
@@ -162,7 +162,7 @@ Members.args = {
       labelName: "Ashley Fletcher",
       icon: "fa-user",
     },
-    { id: "6", listName: "Rita Olson (rolson@mail.me)", labelName: "Rita Olson", icon: "bwi-user" },
+    { id: "6", listName: "Rita Olson (rolson@mail.me)", labelName: "Rita Olson", icon: "fa-user" },
     {
       id: "7",
       listName: "Final listName (fname@mail.me)",

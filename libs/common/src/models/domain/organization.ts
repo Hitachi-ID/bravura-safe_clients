@@ -1,8 +1,10 @@
+import { Jsonify } from "type-fest";
+
 import { OrganizationUserStatusType } from "../../enums/organizationUserStatusType";
 import { OrganizationUserType } from "../../enums/organizationUserType";
 import { ProductType } from "../../enums/productType";
-import { PermissionsApi } from "../api/permissionsApi";
-import { OrganizationData } from "../data/organizationData";
+import { PermissionsApi } from "../api/permissions.api";
+import { OrganizationData } from "../data/organization.data";
 
 export class Organization {
   id: string;
@@ -196,5 +198,16 @@ export class Organization {
 
   get hasProvider() {
     return this.providerId != null || this.providerName != null;
+  }
+
+  static fromJSON(json: Jsonify<Organization>) {
+    if (json == null) {
+      return null;
+    }
+
+    return Object.assign(new Organization(), json, {
+      familySponsorshipLastSyncDate: new Date(json.familySponsorshipLastSyncDate),
+      familySponsorshipValidUntil: new Date(json.familySponsorshipValidUntil),
+    });
   }
 }

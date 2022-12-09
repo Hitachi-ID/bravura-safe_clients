@@ -113,16 +113,16 @@
             (click)="delete()"
             appA11yTitle="{{ 'delete' | i18n }}"
             *ngIf="editMode"
-            [disabled]="deleteBtn.loading"
+            [disabled]="$any(deleteBtn).loading"
           >
             <i
               class="fa fa-trash-o fa-lg fa-fw"
-              [hidden]="deleteBtn.loading"
+              [hidden]="$any(deleteBtn).loading"
               aria-hidden="true"
             ></i>
             <i
               class="fa fa-spinner fa-spin fa-lg fa-fw"
-              [hidden]="!deleteBtn.loading"
+              [hidden]="!$any(deleteBtn).loading"
               title="{{ 'loading' | i18n }}"
               aria-hidden="true"
             ></i>

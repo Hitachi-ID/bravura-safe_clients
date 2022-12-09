@@ -7,32 +7,33 @@ import { InternalFolderService } from "../../abstractions/folder/folder.service.
 import { KeyConnectorService } from "../../abstractions/keyConnector.service";
 import { LogService } from "../../abstractions/log.service";
 import { MessagingService } from "../../abstractions/messaging.service";
+import { InternalOrganizationService } from "../../abstractions/organization/organization.service.abstraction";
 import { InternalPolicyService } from "../../abstractions/policy/policy.service.abstraction";
 import { ProviderService } from "../../abstractions/provider.service";
 import { SendService } from "../../abstractions/send.service";
 import { SettingsService } from "../../abstractions/settings.service";
 import { StateService } from "../../abstractions/state.service";
 import { SyncService as SyncServiceAbstraction } from "../../abstractions/sync/sync.service.abstraction";
-import { SyncNotifierService } from "../../abstractions/sync/syncNotifier.service.abstraction";
 import { sequentialize } from "../../misc/sequentialize";
-import { CipherData } from "../../models/data/cipherData";
-import { CollectionData } from "../../models/data/collectionData";
-import { FolderData } from "../../models/data/folderData";
-import { PolicyData } from "../../models/data/policyData";
-import { ProviderData } from "../../models/data/providerData";
-import { SendData } from "../../models/data/sendData";
-import { CipherResponse } from "../../models/response/cipherResponse";
-import { CollectionDetailsResponse } from "../../models/response/collectionResponse";
-import { DomainsResponse } from "../../models/response/domainsResponse";
-import { FolderResponse } from "../../models/response/folderResponse";
+import { CipherData } from "../../models/data/cipher.data";
+import { CollectionData } from "../../models/data/collection.data";
+import { FolderData } from "../../models/data/folder.data";
+import { OrganizationData } from "../../models/data/organization.data";
+import { PolicyData } from "../../models/data/policy.data";
+import { ProviderData } from "../../models/data/provider.data";
+import { SendData } from "../../models/data/send.data";
+import { CipherResponse } from "../../models/response/cipher.response";
+import { CollectionDetailsResponse } from "../../models/response/collection.response";
+import { DomainsResponse } from "../../models/response/domains.response";
+import { FolderResponse } from "../../models/response/folder.response";
 import {
   SyncCipherNotification,
   SyncFolderNotification,
   SyncSendNotification,
-} from "../../models/response/notificationResponse";
-import { PolicyResponse } from "../../models/response/policyResponse";
-import { ProfileResponse } from "../../models/response/profileResponse";
-import { SendResponse } from "../../models/response/sendResponse";
+} from "../../models/response/notification.response";
+import { PolicyResponse } from "../../models/response/policy.response";
+import { ProfileResponse } from "../../models/response/profile.response";
+import { SendResponse } from "../../models/response/send.response";
 
 export class SyncService implements SyncServiceAbstraction {
   syncInProgress = false;
@@ -52,7 +53,7 @@ export class SyncService implements SyncServiceAbstraction {
     private stateService: StateService,
     private providerService: ProviderService,
     private folderApiService: FolderApiServiceAbstraction,
-    private syncNotifierService: SyncNotifierService,
+    private organizationService: InternalOrganizationService,
     private logoutCallback: (expired: boolean) => Promise<void>
   ) {}
 
@@ -76,10 +77,8 @@ export class SyncService implements SyncServiceAbstraction {
   @sequentialize(() => "fullSync")
   async fullSync(forceSync: boolean, allowThrowOnError = false): Promise<boolean> {
     this.syncStarted();
-    this.syncNotifierService.next({ status: "Started" });
     const isAuthenticated = await this.stateService.getIsAuthenticated();
     if (!isAuthenticated) {
-      this.syncNotifierService.next({ status: "Completed", successfully: false });
       return this.syncCompleted(false);
     }
 
@@ -95,7 +94,6 @@ export class SyncService implements SyncServiceAbstraction {
 
     if (!needsSync) {
       await this.setLastSync(now);
-      this.syncNotifierService.next({ status: "Completed", successfully: false });
       return this.syncCompleted(false);
     }
 
@@ -112,13 +110,11 @@ export class SyncService implements SyncServiceAbstraction {
       await this.syncPolicies(response.policies);
 
       await this.setLastSync(now);
-      this.syncNotifierService.next({ status: "Completed", successfully: true, data: response });
       return this.syncCompleted(true);
     } catch (e) {
       if (allowThrowOnError) {
         throw e;
       } else {
-        this.syncNotifierService.next({ status: "Completed", successfully: false });
         return this.syncCompleted(false);
       }
     }
@@ -315,11 +311,24 @@ export class SyncService implements SyncServiceAbstraction {
     await this.stateService.setForcePasswordReset(response.forcePasswordReset);
     await this.keyConnectorService.setUsesKeyConnector(response.usesKeyConnector);
 
+    const organizations: { [id: string]: OrganizationData } = {};
+    response.organizations.forEach((o) => {
+      organizations[o.id] = new OrganizationData(o);
+    });
+
     const providers: { [id: string]: ProviderData } = {};
     response.providers.forEach((p) => {
       providers[p.id] = new ProviderData(p);
     });
 
+    response.providerOrganizations.forEach((o) => {
+      if (organizations[o.id] == null) {
+        organizations[o.id] = new OrganizationData(o);
+        organizations[o.id].isProviderUser = true;
+      }
+    });
+
+    await this.organizationService.replace(organizations);
     await this.providerService.save(providers);
 
     if (await this.keyConnectorService.userNeedsMigration()) {

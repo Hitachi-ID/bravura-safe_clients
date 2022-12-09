@@ -27,7 +27,7 @@ import { VerifyRecoverDeleteComponent } from "./accounts/verify-recover-delete.c
 import { HomeGuard } from "./guards/home.guard";
 import { FrontendLayoutComponent } from "./layouts/frontend-layout.component";
 import { UserLayoutComponent } from "./layouts/user-layout.component";
-import { OrganizationsRoutingModule } from "./organizations/organization-routing.module";
+import { OrganizationModule } from "./organizations/organization.module";
 import { AcceptFamilySponsorshipComponent } from "./organizations/sponsorships/accept-family-sponsorship.component";
 import { FamiliesForEnterpriseSetupComponent } from "./organizations/sponsorships/families-for-enterprise-setup.component";
 import { ReportsModule } from "./reports";
@@ -49,7 +49,7 @@ import { VaultModule } from "./vault/vault.module";
 import { BreachReportComponent } from "./reports/pages/breach-report.component";
 import { ExposedPasswordsReportComponent } from "./reports/pages/exposed-passwords-report.component";
 import { InactiveTwoFactorReportComponent } from "./reports/pages/inactive-two-factor-report.component";
-import { ReportListComponent } from "./reports/report-list/report-list.component";
+import { ReportListComponent } from "./reports/shared/report-list/report-list.component";
 import { ReportsLayoutComponent } from "./reports/reports-layout.component";
 import { ReusedPasswordsReportComponent } from "./reports/pages/reused-passwords-report.component";
 import { UnsecuredWebsitesReportComponent } from "./reports/pages/unsecured-websites-report.component";
@@ -266,7 +266,7 @@ const routes: Routes = [
   },
   {
     path: "organizations",
-    loadChildren: () => OrganizationsRoutingModule,
+    loadChildren: () => OrganizationModule,
   },
 ];
 

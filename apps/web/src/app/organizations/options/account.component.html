@@ -14,7 +14,7 @@
 <div class="secondary-header border-0 mb-0">
   <h1>{{ "enrollPasswordReset" | i18n }}</h1>
 </div>
-<button type="button" class="btn btn-outline-secondary" (click)="enrollPasswordReset()" [disabled]="!allowEnrollment()">
+<button type="submit" class="btn btn-primary btn-submit" (click)="enrollPasswordReset()" [disabled]="!allowEnrollment()">
   {{ "enrollPasswordReset" | i18n }}
 </button>
 

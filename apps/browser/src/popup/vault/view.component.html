@@ -88,17 +88,17 @@
               appA11yTitle="{{ 'checkPassword' | i18n }}"
               (click)="checkPassword()"
               [appApiAction]="checkPasswordPromise"
-              [disabled]="checkPasswordBtn.loading"
+              [disabled]="$any(checkPasswordBtn).loading"
               *ngIf="cipher.viewPassword"
             >
               <i
                 class="fa fa-lg fa-check-circle"
-                [hidden]="checkPasswordBtn.loading"
+                [hidden]="$any(checkPasswordBtn).loading"
                 aria-hidden="true"
               ></i>
               <i
                 class="fa fa-lg fa-spinner fa-spin"
-                [hidden]="!checkPasswordBtn.loading"
+                [hidden]="!$any(checkPasswordBtn).loading"
                 aria-hidden="true"
               ></i>
             </button>
@@ -475,6 +475,20 @@
       </div>
     </div>
   </div>
+  <div class="box" *ngIf="cipher.folderId">
+    <div class="box-content">
+      <div class="box-content-row">
+        <label
+          for="folderName"
+          class="draggable"
+          draggable="true"
+          (dragstart)="setTextDataOnDrag($event, folder.name)"
+          >{{ "folder" | i18n }}</label
+        >
+        <input id="folderName" type="text" name="folderName" [value]="folder.name" readonly />
+      </div>
+    </div>
+  </div>
   <div class="box" *ngIf="cipher.notes">
     <h2 class="box-header">
       <label
@@ -523,12 +537,12 @@
         <small class="row-sub-label">{{ attachment.sizeName }}</small>
         <i
           class="fa fa-download fa-fw row-sub-icon"
-          *ngIf="!attachment.downloading"
+          *ngIf="!$any(attachment).downloading"
           aria-hidden="true"
         ></i>
         <i
           class="fa fa-spinner fa-fw fa-spin row-sub-icon"
-          *ngIf="attachment.downloading"
+          *ngIf="$any(attachment).downloading"
           aria-hidden="true"
         ></i>
       </button>
@@ -606,7 +620,13 @@
           <span>{{ "restoreItem" | i18n }}</span>
         </div>
       </button>
-      <button type="button" class="box-content-row" appStopClick (click)="delete()">
+      <button
+        type="button"
+        class="box-content-row"
+        appStopClick
+        (click)="delete()"
+        *ngIf="cipher.edit"
+      >
         <div class="row-main text-danger">
           <div class="icon text-danger" aria-hidden="true">
             <i class="fa fa-trash-o fa-lg fa-fw"></i>
@@ -621,6 +641,10 @@
       <div>
         <b class="font-weight-semibold">{{ "dateUpdated" | i18n }}:</b>
         {{ cipher.revisionDate | date: "medium" }}
+      </div>
+      <div *ngIf="cipher.creationDate">
+        <b class="font-weight-semibold">{{ "dateCreated" | i18n }}:</b>
+        {{ cipher.creationDate | date: "medium" }}
       </div>
       <div *ngIf="cipher.passwordRevisionDisplayDate">
         <b class="font-weight-semibold">{{ "datePasswordUpdated" | i18n }}:</b>

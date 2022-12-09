@@ -161,10 +161,10 @@
     "message": "Empresa"
   },
   "ssn": {
-    "message": "Número de la seguridad social"
+    "message": "Nº de la seguridad social"
   },
   "passportNumber": {
-    "message": "Número de pasaporte"
+    "message": "Nº de pasaporte"
   },
   "licenseNumber": {
     "message": "Número de licencia"
@@ -278,11 +278,11 @@
   },
   "baseDomain": {
     "message": "Dominio base",
-    "description": "Domain name. Ex. website.com"
+    "description": "Domain name. Example: website.com"
   },
   "domainName": {
     "message": "Nombre de dominio",
-    "description": "Domain name. Ex. website.com"
+    "description": "Domain name. Example: website.com"
   },
   "host": {
     "message": "Servidor",
@@ -667,6 +667,9 @@
   },
   "loginWithDeviceEnabledInfo": {
     "message": "Iniciar sesión con el dispositivo debe estar habilitado en los ajustes de la aplicación móvil Bravura Safe. ¿Necesitas otra opción?"
+  },
+  "loginWithMasterPassword": {
+    "message": "Iniciar sesión con contraseña maestra"
   },
   "createAccount": {
     "message": "Crear cuenta"
@@ -1063,7 +1066,7 @@
   },
   "minSpecial": {
     "message": "Mínimo de caracteres especiales",
-    "description": "Minimum Special Characters"
+    "description": "Minimum special characters"
   },
   "ambiguous": {
     "message": "Evitar caracteres ambiguos"
@@ -1096,7 +1099,7 @@
   },
   "capitalize": {
     "message": "Capitalizar",
-    "description": "Make the first letter of a work uppercase."
+    "description": "Make the first letter of a word uppercase."
   },
   "includeNumber": {
     "message": "Incluir número"
@@ -1109,7 +1112,7 @@
   },
   "clear": {
     "message": "Limpiar",
-    "description": "To clear something out. example: To clear browser history."
+    "description": "To clear something out. Example: To clear browser history."
   },
   "accountUpdated": {
     "message": "Cuenta actualizada"
@@ -1247,7 +1250,7 @@
     "message": "Cuenta eliminada"
   },
   "accountDeletedDesc": {
-    "message": "Tu cuenta de Bitwarden y los datos de tu caja fuerte fueron eliminados permanentemente."
+    "message": "Tu cuenta de Bravura Safe y los datos de tu caja fuerte fueron eliminados permanentemente."
   },
   "myAccount": {
     "message": "Mi cuenta"
@@ -1291,6 +1294,12 @@
   "selectImportFile": {
     "message": "Seleccionar el fichero a importar"
   },
+  "chooseFile": {
+    "message": "Seleccionar archivo"
+  },
+  "noFileChosen": {
+    "message": "No se ha seleccionado ningún archivo"
+  },
   "orCopyPasteFileContents": {
     "message": "o copia/pega el contenido del fichero a importar"
   },
@@ -1327,13 +1336,6 @@
   },
   "faviconDesc": {
     "message": "Mostrar una imagen reconocible junto a cada inicio de sesión."
-  },
-  "enableGravatars": {
-    "message": "Habilitar Gravatars",
-    "description": "Use avatar images loaded from gravatar.com."
-  },
-  "enableGravatarsDesc": {
-    "message": "Usa imágenes de avatares cargadas desde gravatar.com."
   },
   "enableFullWidth": {
     "message": "Habilitar diseño de ancho completo",
@@ -1387,11 +1389,24 @@
   "twoStepLogin": {
     "message": "Autenticación en dos pasos"
   },
+  "twoStepLoginEnforcement": {
+    "message": "Inicio de sesión en dos pasos"
+  },
   "twoStepLoginDesc": {
     "message": "Protege tu cuenta requiriendo un paso adicional a la hora de acceder."
   },
-  "twoStepLoginOrganizationDesc": {
-    "message": "Requiere autenticación en dos pasos para los usuarios de tu organización configurando los proveedores a nivel de organización."
+  "twoStepLoginOrganizationDescStart": {
+    "message": "Forzar opciones de inicio de sesión en dos pasos de Bravura Safe para los miembros mediante el uso del ",
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Enforce Bravura Safe Two-step Login options for members by using the Two-step Login Policy.'"
+  },
+  "twoStepLoginPolicy": {
+    "message": "Política de acceso en dos pasos"
+  },
+  "twoStepLoginOrganizationDuoDesc": {
+    "message": "Para hacer cumplir el inicio de sesión en dos pasos a través de Duo, utilice las siguientes opciones."
+  },
+  "twoStepLoginOrganizationSsoDesc": {
+    "message": "Si tiene la configuración de SSO o planea hacerlo, puede que el inicio de sesión en dos pasos ya se ejecute a través de su proveedor de identidad."
   },
   "twoStepLoginRecoveryWarning": {
     "message": "Habilitar la autenticación en dos pasos puede impedirte acceder permanentemente a tu cuenta de Bravura Safe. Un código de recuperación te permite acceder a la cuenta en caso de que no puedas usar más tu proveedor de autenticación en dos pasos (ej. si pierdes tu dispositivo). El soporte de Bravura Safe no será capaz de asistirte si pierdes acceso a tu cuenta. Te recomendamos que escribas o imprimas este código y lo guardes en un lugar seguro."
@@ -1414,7 +1429,7 @@
   },
   "premium": {
     "message": "Premium",
-    "description": "Premium Membership"
+    "description": "Premium membership"
   },
   "premiumMembership": {
     "message": "Suscripción Premium"
@@ -1423,13 +1438,13 @@
     "message": "Premium requerido"
   },
   "premiumRequiredDesc": {
-    "message": "Se quiere membrasía Premium para poder utilizar esta característica."
+    "message": "Se quiere membresía Premium para poder utilizar esta característica."
   },
   "youHavePremiumAccess": {
-    "message": "Tienes acceso premium"
+    "message": "Usted tiene acceso premium"
   },
   "alreadyPremiumFromOrg": {
-    "message": "Ya tienes acceso a las características premium, debido a que eres miembro de una organización."
+    "message": "Ya tiene acceso a las características premium, debido a que es miembro de una organización."
   },
   "manage": {
     "message": "Gestionar"
@@ -1656,7 +1671,11 @@
   },
   "reportsDesc": {
     "message": "Identifique y cierre las lagunas de seguridad en sus cuentas en línea haciendo clic en los siguientes informes.",
-    "description": "Vault Health Reports can be used to evaluate the security of your Bravura Safe Personal or Team Safe."
+    "description": "Vault health reports can be used to evaluate the security of your Bravura Safe individual or team safe."
+  },
+  "orgsReportsDesc": {
+    "message": "Identifique y cierre las lagunas de seguridad en las cuentas de su organización haciendo clic en los siguientes informes.",
+    "description": "Vault health reports can be used to evaluate the security of your Bravura Safe individual or team Vault."
   },
   "unsecuredWebsitesReport": {
     "message": "Informes de sitios web no seguros"
@@ -1689,7 +1708,7 @@
     "message": "Inicios de sesión sin 2FA encontrados"
   },
   "inactive2faFoundDesc": {
-    "message": "Hemos encontrado $COUNT$ sitio(s) web en su caja fuerte que no pueden ser configuradas con autenticación de dos factores (según twofactorauth.org). Para proteger estas cuentas, debe habilitar autenticación de dos factores.",
+    "message": "Hemos encontrado $COUNT$ sitios web en tu bóveda que pueden no estar configurados con inicio de sesión en dos pasos (de acuerdo a 2fa. irectory). Para proteger aún más estas cuentas, debe configurar el inicio de sesión en dos pasos.",
     "placeholders": {
       "count": {
         "content": "$1",
@@ -1882,7 +1901,7 @@
   },
   "goPremium": {
     "message": "Hazte Premium",
-    "description": "Another way of saying \"Get a premium membership\""
+    "description": "Another way of saying \"Get a Premium membership\""
   },
   "premiumUpdated": {
     "message": "Has actualizado a premium."
@@ -2365,7 +2384,7 @@
     }
   },
   "trialThankYou": {
-    "message": "¡Gracias por registrarte en Bitwarden para $PLAN$!",
+    "message": "¡Gracias por registrarte en Bravura Safe para $PLAN$!",
     "placeholders": {
       "plan": {
         "content": "$1",
@@ -2694,6 +2713,15 @@
       "id": {
         "content": "$1",
         "example": "Google"
+      }
+    }
+  },
+  "viewedCardNumberItemId": {
+    "message": "Número de tarjeta visto para el elemento $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "Unique ID"
       }
     }
   },
@@ -3077,7 +3105,7 @@
     "placeholders": {
       "description": {
         "content": "$1",
-        "example": "You must enable 2FA on your user account before you can join this team."
+        "example": "You must set up 2FA on your user account before you can join this team."
       }
     }
   },
@@ -3107,6 +3135,9 @@
   },
   "myOrganization": {
     "message": "Mi organización"
+  },
+  "organizationInfo": {
+    "message": "Información de la organización"
   },
   "deleteOrganization": {
     "message": "Eliminar organización"
@@ -3149,15 +3180,15 @@
   },
   "billingPlan": {
     "message": "Plan",
-    "description": "A billing plan/package. For example: families, teams, enterprise, etc."
+    "description": "A billing plan/package. For example: Families, Teams, Enterprise, etc."
   },
   "changeBillingPlan": {
     "message": "Cambiar plan",
-    "description": "A billing plan/package. For example: families, teams, enterprise, etc."
+    "description": "A billing plan/package. For example: Families, Teams, Enterprise, etc."
   },
   "changeBillingPlanUpgrade": {
     "message": "Actualiza tu cuenta a otro plan proporcionando la información de abajo. Por favor, asegúrate de que tienes un método de pago activo añadido a la cuenta.",
-    "description": "A billing plan/package. For example: families, teams, enterprise, etc."
+    "description": "A billing plan/package. For example: Families, Teams, Enterprise, etc."
   },
   "invoiceNumber": {
     "message": "Factura $NUMBER$",
@@ -3432,6 +3463,10 @@
   "dateUpdated": {
     "message": "Actualizada",
     "description": "ex. Date this item was updated"
+  },
+  "dateCreated": {
+    "message": "Creado",
+    "description": "ex. Date this item was created"
   },
   "datePasswordUpdated": {
     "message": "Contraseña actualizada",
@@ -3800,6 +3835,12 @@
   "ssoIdentifierRequired": {
     "message": "Se requiere un identificador de organización."
   },
+  "ssoIdentifier": {
+    "message": "Identificador SSO"
+  },
+  "ssoIdentifierHint": {
+    "message": "Proporcione este ID a sus miembros para iniciar sesión con SSO."
+  },
   "unlinkSso": {
     "message": "Desenlazar SSO"
   },
@@ -4063,7 +4104,7 @@
     "placeholders": {
       "description": {
         "content": "$1",
-        "example": "You must enable 2FA on your user account before you can join this team."
+        "example": "You must set up 2FA on your user account before you can join this team."
       }
     }
   },
@@ -4200,6 +4241,9 @@
   },
   "permissions": {
     "message": "Permisos"
+  },
+  "permission": {
+    "message": "Permiso"
   },
   "managerPermissions": {
     "message": "Permisos del Administrador"
@@ -4606,6 +4650,10 @@
   "clients": {
     "message": "Clientes"
   },
+  "client": {
+    "message": "Cliente",
+    "description": "This is used as a table header to describe which client application created an event log."
+  },
   "providerAdmin": {
     "message": "Administrador del Proveedor"
   },
@@ -4849,10 +4897,10 @@
     "message": "Comportamiento de firma"
   },
   "spMinIncomingSigningAlgorithm": {
-    "message": "Minimum Incoming Signing Algorithm"
+    "message": "Algoritmo mínimo de firma entrante"
   },
   "spWantAssertionsSigned": {
-    "message": "Expect signed assertions"
+    "message": "Esperar afirmaciones firmadas"
   },
   "spValidateCertificates": {
     "message": "Validar certificado"
@@ -4940,7 +4988,7 @@
     "placeholders": {
       "description": {
         "content": "$1",
-        "example": "You must have at least one existing Families Team."
+        "example": "You must have at least one existing Families team."
       }
     }
   },
@@ -5173,10 +5221,10 @@
     "message": "Facturación sincronizada"
   },
   "billingSyncDesc": {
-    "message": "Billing Sync provides Free Families plans for members and advanced billing capabilities by linking your self-hosted Bravura Safe to the Bravura Safe cloud server."
+    "message": "La sincronización de facturación proveé planes Famliares gratuitos para los miembros y facilidades de facturación avanzada, conectando la bóveda autoalojada de Bravura Safe al servidor en la nube de Bravura Safe."
   },
   "billingSyncKeyDesc": {
-    "message": "A Billing Sync Token from your cloud team's subscription settings is required to complete this form."
+    "message": "Para completar este formulario se requiere un token de sincronización de facturación de la configuración de suscripción de su organización en la nube."
   },
   "billingSyncKey": {
     "message": "Token de sincronización de facturación"
@@ -5309,17 +5357,17 @@
     "message": "Tipo de nombre de usuario"
   },
   "plusAddressedEmail": {
-    "message": "Plus Addressed Email",
+    "message": "Correo electrónico más dirigido",
     "description": "Username generator option that appends a random sub-address to the username. For example: address+subaddress@email.com"
   },
   "plusAddressedEmailDesc": {
-    "message": "Use your email provider's sub-addressing capabilities."
+    "message": "Utiliza las capacidades de subdireccionamiento de tu proveedor de correo electrónico."
   },
   "catchallEmail": {
-    "message": "Catch-all Email"
+    "message": "Correo catch-all"
   },
   "catchallEmailDesc": {
-    "message": "Use your domain's configured catch-all inbox."
+    "message": "Utiliza la bandeja de entrada global configurada de tu dominio."
   },
   "random": {
     "message": "Aleatorio",
@@ -5382,7 +5430,7 @@
   },
   "billingContactProviderForAssistance": {
     "message": "Por favor, contacte con ellos para obtener más ayuda",
-    "description": "This text is displayed if an team's billing is managed by a Provider. It tells the user to contact the Provider for assistance."
+    "description": "This text is displayed if a team's billing is managed by a Provider. It tells the user to contact the Provider for assistance."
   },
   "forwardedEmail": {
     "message": "Alias de Correo Reenviado"
@@ -5493,6 +5541,15 @@
       }
     }
   },
+  "inputMaxLength": {
+    "message": "La entrada no debe exceder los $COUNT$ caracteres de longitud.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "20"
+      }
+    }
+  },
   "fieldsNeedAttention": {
     "message": "$COUNT$ campo(s) anteriores necesitan su atención.",
     "placeholders": {
@@ -5508,10 +5565,70 @@
   "on": {
     "message": "Activado"
   },
+  "members": {
+    "message": "Miembros"
+  },
+  "reporting": {
+    "message": "Informando"
+  },
   "cardBrandMir": {
     "message": "Mir"
   },
   "numberOfUsers": {
     "message": "Número de usuarios"
+  },
+  "loggingInAs": {
+    "message": "Iniciando sesión como"
+  },
+  "notYou": {
+    "message": "¿No eres tú?"
+  },
+  "multiSelectPlaceholder": {
+    "message": "-- Escriba para filtrar --"
+  },
+  "multiSelectLoading": {
+    "message": "Recuperando opciones..."
+  },
+  "multiSelectNotFound": {
+    "message": "No hay elementos"
+  },
+  "multiSelectClearAll": {
+    "message": "Borrar todo"
+  },
+  "from": {
+    "message": "De"
+  },
+  "to": {
+    "message": "A"
+  },
+  "member": {
+    "message": "Miembro"
+  },
+  "update": {
+    "message": "Actualizar"
+  },
+  "role": {
+    "message": "Rol"
+  },
+  "canView": {
+    "message": "Puede ver"
+  },
+  "canViewExceptPass": {
+    "message": "Puede ver, excepto contraseñas"
+  },
+  "canEdit": {
+    "message": "Puede editar"
+  },
+  "canEditExceptPass": {
+    "message": "Puede editar, excepto contraseñas"
+  },
+  "group": {
+    "message": "Grupo"
+  },
+  "groupAccessAll": {
+    "message": "Este grupo puede acceder y modificar todos los elementos."
+  },
+  "memberAccessAll": {
+    "message": "Este miembro puede acceder y modificar todos los elementos."
   }
 }

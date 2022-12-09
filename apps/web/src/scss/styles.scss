@@ -1,6 +1,7 @@
 @import "../../../../libs/angular/src/scss/webfonts.css";
 @import "./variables";
 @import "./mixins";
+@import "../../../../libs/components/src/multi-select/scss/bw.theme";
 @import "@angular/cdk/overlay-prebuilt.css";
 
 //@import "~bootstrap/scss/bootstrap";
@@ -34,8 +35,8 @@
 @import "~bootstrap/scss/_close";
 //@import "~bootstrap/scss/_toasts";
 @import "~bootstrap/scss/_modal";
-@import "~bootstrap/scss/_tooltip";
-@import "~bootstrap/scss/_popover";
+// @import "~bootstrap/scss/_tooltip";
+// @import "~bootstrap/scss/_popover";
 // @import "~bootstrap/scss/_carousel";
 // @import "~bootstrap/scss/_spinners";
 @import "~bootstrap/scss/_utilities";
