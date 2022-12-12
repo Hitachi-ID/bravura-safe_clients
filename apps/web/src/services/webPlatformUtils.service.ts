@@ -168,6 +168,10 @@ export class WebPlatformUtilsService implements PlatformUtilsService {
     return true;
   }
 
+  supportsHypr(): boolean {
+    return true;
+  }
+
   showToast(
     type: "error" | "success" | "warning" | "info",
     title: string,

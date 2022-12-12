@@ -774,6 +774,12 @@
     "message": "Apstiprini ar Duo Security savā apvienībā, izmantojot Duo Mobile lietotni, īsziņu, tālruņa zvanu vai U2F drošības atslēgu!",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with Bravura OneAuth using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with Bravura OneAuth for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "Izmantot jebkuru FIDO U2F atbalstošu drošības atslēgu, lai piekļūtu kontam."
   },
@@ -1391,6 +1397,24 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "API saimniekdatora nosaukums"
+  },
+  "twoFactorHyprCheckDevice": {
+    "message": "Check device for notification"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your Bravura OneAuth Admin panel."
+  },
+  "twoFactorHyprApiToken": {
+    "message": "API Token"
+  },
+  "twoFactorHyprAppId": {
+    "message": "Application ID (case sensitive)"
+  },
+  "twoFactorHyprServerUrl": {
+    "message": "Server Name"
+  },
+  "twoFactorHyprVerifyItIsYou": {
+  "message": "Verify it is you by approving the notification sent to your registered device"
   },
   "twoFactorEmailDesc": {
     "message": "Sekot šiem soļiem, lai uzstādīt divpakāpju pierakstīšanos ar e-pastu:"
@@ -2147,6 +2171,9 @@
   },
   "enforce2faDuo": {
     "message": "Ieviest 2FA ar Duo"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with Bravura OneAuth"
   },
   "priorityCustomerSupport": {
     "message": "Priekšrocīgs lietotāju atbalsts"

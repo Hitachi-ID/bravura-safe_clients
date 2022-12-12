@@ -210,4 +210,8 @@ export class Organization {
 
     return specifiedPermissions && (this.enabled || this.isOwner);
   }
+
+  get hasProvider() {
+    return this.providerId != null || this.providerName != null;
+  }
 }

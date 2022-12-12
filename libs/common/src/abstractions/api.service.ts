@@ -90,6 +90,8 @@ import { UpdateTempPasswordRequest } from "../models/request/updateTempPasswordR
 import { UpdateTwoFactorAuthenticatorRequest } from "../models/request/updateTwoFactorAuthenticatorRequest";
 import { UpdateTwoFactorDuoRequest } from "../models/request/updateTwoFactorDuoRequest";
 import { UpdateTwoFactorEmailRequest } from "../models/request/updateTwoFactorEmailRequest";
+import { UpdateTwoFactorHyprRequest } from "../models/request/updateTwoFactorHyprRequest";
+import { HyprAuthenticationRequestModel } from "../models/request/hyprAuthenticationRequestModel";
 import { UpdateTwoFactorWebAuthnDeleteRequest } from "../models/request/updateTwoFactorWebAuthnDeleteRequest";
 import { UpdateTwoFactorWebAuthnRequest } from "../models/request/updateTwoFactorWebAuthnRequest";
 import { UpdateTwoFactorYubioOtpRequest } from "../models/request/updateTwoFactorYubioOtpRequest";
@@ -171,6 +173,8 @@ import { TaxRateResponse } from "../models/response/taxRateResponse";
 import { TwoFactorAuthenticatorResponse } from "../models/response/twoFactorAuthenticatorResponse";
 import { TwoFactorDuoResponse } from "../models/response/twoFactorDuoResponse";
 import { TwoFactorEmailResponse } from "../models/response/twoFactorEmailResponse";
+import { TwoFactorHyprResponse } from "../models/response/twoFactorHyprResponse";
+import { TwoFactorHyprAuthResponse } from "../models/response/twoFactorHyprAuthResponse";
 import { TwoFactorProviderResponse } from "../models/response/twoFactorProviderResponse";
 import { TwoFactorRecoverResponse } from "../models/response/twoFactorRescoverResponse";
 import {
@@ -475,6 +479,10 @@ export abstract class ApiService {
     organizationId: string,
     request: SecretVerificationRequest
   ) => Promise<TwoFactorDuoResponse>;
+  getTwoFactorOrganizationHypr: (
+    organizationId: string,
+    request: SecretVerificationRequest
+  ) => Promise<TwoFactorHyprResponse>;
   getTwoFactorYubiKey: (request: SecretVerificationRequest) => Promise<TwoFactorYubiKeyResponse>;
   getTwoFactorWebAuthn: (request: SecretVerificationRequest) => Promise<TwoFactorWebAuthnResponse>;
   getTwoFactorWebAuthnChallenge: (request: SecretVerificationRequest) => Promise<ChallengeResponse>;
@@ -488,6 +496,13 @@ export abstract class ApiService {
     organizationId: string,
     request: UpdateTwoFactorDuoRequest
   ) => Promise<TwoFactorDuoResponse>;
+  putTwoFactorOrganizationHypr: (
+    organizationId: string,
+    request: UpdateTwoFactorHyprRequest
+  ) => Promise<TwoFactorHyprResponse>;
+  postTwoFactorHyprAuthReq: (
+     request: HyprAuthenticationRequestModel
+  ) => Promise<TwoFactorHyprAuthResponse>;
   putTwoFactorYubiKey: (
     request: UpdateTwoFactorYubioOtpRequest
   ) => Promise<TwoFactorYubiKeyResponse>;

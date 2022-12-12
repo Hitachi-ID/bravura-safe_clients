@@ -774,6 +774,12 @@
     "message": "Kontrolu kun Duo Security por via organizo per la Duo Mobile-programo, SMS, telefona alvoko aŭ U2F-sekureca ŝlosilo.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with Bravura OneAuth using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with Bravura OneAuth for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "Uzu iun ajn sekurecan ŝlosilon FIDO U2F por aliri vian konton."
   },
@@ -1391,6 +1397,24 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "API Gastiganta Nomo"
+  },
+  "twoFactorHyprCheckDevice": {
+    "message": "Check device for notification"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your Bravura OneAuth Admin panel."
+  },
+  "twoFactorHyprApiToken": {
+    "message": "API Token"
+  },
+  "twoFactorHyprAppId": {
+    "message": "Application ID (case sensitive)"
+  },
+  "twoFactorHyprServerUrl": {
+    "message": "Server Name"
+  },
+  "twoFactorHyprVerifyItIsYou": {
+  "message": "Verify it is you by approving the notification sent to your registered device"
   },
   "twoFactorEmailDesc": {
     "message": "Sekvu ĉi tiujn paŝojn por agordi du-paŝan ensaluton per retpoŝto:"
@@ -2147,6 +2171,9 @@
   },
   "enforce2faDuo": {
     "message": "Devigi 2FA kun Duo"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with Bravura OneAuth"
   },
   "priorityCustomerSupport": {
     "message": "Prioritata klienta subteno"

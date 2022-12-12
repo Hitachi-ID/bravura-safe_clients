@@ -3326,6 +3326,7 @@ export const EEFLongWordList = [
   "hypnotize",
   "hypocrisy",
   "hypocrite",
+  "hypr",
   "ibuprofen",
   "ice",
   "iciness",

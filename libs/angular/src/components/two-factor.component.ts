@@ -1,6 +1,7 @@
 import { Directive, OnDestroy, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import * as DuoWebSDK from "duo_web_sdk";
+//import * as HyprWebSDK from "hypr_web_sdk";
 import { first } from "rxjs/operators";
 
 import { ApiService } from "@bitwarden/common/abstractions/api.service";
@@ -14,6 +15,7 @@ import { StateService } from "@bitwarden/common/abstractions/state.service";
 import { TwoFactorService } from "@bitwarden/common/abstractions/twoFactor.service";
 import { TwoFactorProviderType } from "@bitwarden/common/enums/twoFactorProviderType";
 import { WebAuthnIFrame } from "@bitwarden/common/misc/webauthn_iframe";
+import { HyprIFrame } from "@bitwarden/common/misc/hypr_iframe";
 import { AuthResult } from "@bitwarden/common/models/domain/authResult";
 import { TokenRequestTwoFactor } from "@bitwarden/common/models/request/identityToken/tokenRequestTwoFactor";
 import { TwoFactorEmailRequest } from "@bitwarden/common/models/request/twoFactorEmailRequest";
@@ -32,6 +34,7 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
   selectedProviderType: TwoFactorProviderType = TwoFactorProviderType.Authenticator;
   webAuthnSupported = false;
   webAuthn: WebAuthnIFrame = null;
+  hypr: HyprIFrame = null;
   title = "";
   twoFactorEmail: string = null;
   formPromise: Promise<any>;
@@ -111,6 +114,8 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
   ngOnDestroy(): void {
     this.cleanupWebAuthn();
     this.webAuthn = null;
+    this.cleanupHypr();
+    this.hypr = null;
   }
 
   async init() {
@@ -120,6 +125,7 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
     }
 
     this.cleanupWebAuthn();
+    this.cleanupHypr();
     this.title = (TwoFactorProviders as any)[this.selectedProviderType].name;
     const providerData = this.twoFactorService.getProviders().get(this.selectedProviderType);
     switch (this.selectedProviderType) {
@@ -146,6 +152,28 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
             },
           });
         }, 0);
+        break;
+      case TwoFactorProviderType.OrganizationHypr:
+        const webVaultUrl = this.environmentService.getWebVaultUrl();
+        this.hypr = new HyprIFrame(
+          providerData.Signature,
+          providerData.Team,
+          this.win,
+          webVaultUrl,
+          this.platformUtilsService,
+          this.apiService,
+          this.i18nService,
+          (token: string) => {
+            this.token = token;
+            this.submit();
+          },
+          (error: string) => {
+            this.platformUtilsService.showToast("error", this.i18nService.t("errorOccurred"), error);
+          }
+        );
+        setTimeout(() => {
+          this.authHypr();
+        }, 500);
         break;
       case TwoFactorProviderType.Email:
         this.twoFactorEmail = providerData.Email;
@@ -267,6 +295,23 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
     if (this.webAuthn != null) {
       this.webAuthn.stop();
       this.webAuthn.cleanup();
+    }
+  }
+
+  authHypr() {
+    const providerData = this.twoFactorService.getProviders().get(this.selectedProviderType);
+
+    if (!this.hypr == null) {
+      return;
+    }
+
+    this.hypr.init(providerData);
+  }
+
+  private cleanupHypr() {
+    if (this.hypr != null) {
+      this.hypr.stop();
+      this.hypr.cleanup();
     }
   }
 

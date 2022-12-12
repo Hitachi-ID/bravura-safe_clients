@@ -12,6 +12,7 @@ import { StateService } from "@bitwarden/common/abstractions/state.service";
 import { TwoFactorProviderType } from "@bitwarden/common/enums/twoFactorProviderType";
 
 import { TwoFactorDuoComponent } from "../../settings/two-factor-duo.component";
+import { TwoFactorHyprComponent } from "../../settings/two-factor-hypr.component";
 import { TwoFactorSetupComponent as BaseTwoFactorSetupComponent } from "../../settings/two-factor-setup.component";
 
 @Component({
@@ -60,6 +61,15 @@ export class TwoFactorSetupComponent extends BaseTwoFactorSetupComponent {
         });
         break;
       }
+      case TwoFactorProviderType.OrganizationHypr: {
+        const hyprComp = await this.openModal(this.hyprModalRef, TwoFactorHyprComponent);
+        hyprComp.type = TwoFactorProviderType.OrganizationHypr;
+        hyprComp.organizationId = this.organizationId;
+        hyprComp.onUpdated.subscribe((enabled: boolean) => {
+          this.updateStatus(enabled, TwoFactorProviderType.OrganizationHypr);
+        });
+        break;
+      }
       default:
         break;
     }
@@ -70,6 +80,6 @@ export class TwoFactorSetupComponent extends BaseTwoFactorSetupComponent {
   }
 
   protected filterProvider(type: TwoFactorProviderType) {
-    return type !== TwoFactorProviderType.OrganizationDuo;
+    return type !== TwoFactorProviderType.OrganizationDuo && type !== TwoFactorProviderType.OrganizationHypr;
   }
 }

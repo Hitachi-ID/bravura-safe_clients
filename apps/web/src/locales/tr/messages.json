@@ -774,6 +774,12 @@
     "message": "Kuruluşunuzun Duo Security doğrulaması için Duo Mobile uygulaması, SMS, telefon araması veya U2F güvenlik anahtarını kullanın.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with Bravura OneAuth using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with Bravura OneAuth for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "Hesabınıza erişmek için FIDO U2F uyumlu bir güvenlik anahtarı kullanın."
   },
@@ -1391,6 +1397,24 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "API sunucusu"
+  },
+  "twoFactorHyprCheckDevice": {
+    "message": "Check device for notification"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your Bravura OneAuth Admin panel."
+  },
+  "twoFactorHyprApiToken": {
+    "message": "API Token"
+  },
+  "twoFactorHyprAppId": {
+    "message": "Application ID (case sensitive)"
+  },
+  "twoFactorHyprServerUrl": {
+    "message": "Server Name"
+  },
+  "twoFactorHyprVerifyItIsYou": {
+  "message": "Verify it is you by approving the notification sent to your registered device"
   },
   "twoFactorEmailDesc": {
     "message": "E-posta ile iki aşamalı girişi kurmak için aşağıdaki adımları izleyin:"
@@ -2147,6 +2171,9 @@
   },
   "enforce2faDuo": {
     "message": "Duo ile 2FA uygulaması"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with Bravura OneAuth"
   },
   "priorityCustomerSupport": {
     "message": "Öncelikli müşteri desteği"

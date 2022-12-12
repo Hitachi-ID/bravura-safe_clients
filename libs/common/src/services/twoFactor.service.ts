@@ -35,10 +35,18 @@ export const TwoFactorProviders: Partial<Record<TwoFactorProviderType, TwoFactor
     },
     [TwoFactorProviderType.OrganizationDuo]: {
       type: TwoFactorProviderType.OrganizationDuo,
-      name: "Duo (Organization)",
+      name: "Duo (Team)",
       description: null as string,
       priority: 10,
       sort: 4,
+      premium: false,
+    },
+    [TwoFactorProviderType.OrganizationHypr]: {
+      type: TwoFactorProviderType.OrganizationHypr,
+      name: "Bravura OneAuth (Team)",
+      description: null as string,
+      priority: 11,
+      sort: 7,
       premium: false,
     },
     [TwoFactorProviderType.Email]: {
@@ -84,6 +92,11 @@ export class TwoFactorService implements TwoFactorServiceAbstraction {
     TwoFactorProviders[TwoFactorProviderType.OrganizationDuo].description =
       this.i18nService.t("duoOrganizationDesc");
 
+    TwoFactorProviders[TwoFactorProviderType.OrganizationHypr].name =
+      "Bravura OneAuth (" + this.i18nService.t("organization") + ")";
+    TwoFactorProviders[TwoFactorProviderType.OrganizationHypr].description =
+      this.i18nService.t("hyprOrganizationDesc");
+
     TwoFactorProviders[TwoFactorProviderType.WebAuthn].name = this.i18nService.t("webAuthnTitle");
     TwoFactorProviders[TwoFactorProviderType.WebAuthn].description =
       this.i18nService.t("webAuthnDesc");
@@ -104,6 +117,13 @@ export class TwoFactorService implements TwoFactorServiceAbstraction {
       this.platformUtilsService.supportsDuo()
     ) {
       providers.push(TwoFactorProviders[TwoFactorProviderType.OrganizationDuo]);
+    }
+
+    if (
+      this.twoFactorProvidersData.has(TwoFactorProviderType.OrganizationHypr) &&
+      this.platformUtilsService.supportsHypr()
+    ) {
+      providers.push(TwoFactorProviders[TwoFactorProviderType.OrganizationHypr]);
     }
 
     if (this.twoFactorProvidersData.has(TwoFactorProviderType.Authenticator)) {

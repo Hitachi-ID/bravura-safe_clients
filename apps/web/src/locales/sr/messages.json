@@ -774,6 +774,12 @@
     "message": "Провери са Duo Security за вашу организацију користећи Duo Mobile апликацију, СМС, телефонски позив, или U2F кључ.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
+  "hyprDesc": {
+    "message": "Verify with Bravura OneAuth using the HYPR Mobile app."
+  },
+  "hyprOrganizationDesc": {
+    "message": "Verify with Bravura OneAuth for your team using the HYPR Mobile app."
+  },
   "u2fDesc": {
     "message": "Користите било који FIDO U2F сигурносни кључ за присту налога."
   },
@@ -1391,6 +1397,24 @@
   },
   "twoFactorDuoApiHostname": {
     "message": "API Име хоста"
+  },
+  "twoFactorHyprCheckDevice": {
+    "message": "Check device for notification"
+  },
+  "twoFactorHyprDesc": {
+    "message": "Enter the Bravura Safe application information from your Bravura OneAuth Admin panel."
+  },
+  "twoFactorHyprApiToken": {
+    "message": "API Token"
+  },
+  "twoFactorHyprAppId": {
+    "message": "Application ID (case sensitive)"
+  },
+  "twoFactorHyprServerUrl": {
+    "message": "Server Name"
+  },
+  "twoFactorHyprVerifyItIsYou": {
+  "message": "Verify it is you by approving the notification sent to your registered device"
   },
   "twoFactorEmailDesc": {
     "message": "Следите ове кораке за подешавање пријаве у два корака путем имејла:"
@@ -2147,6 +2171,9 @@
   },
   "enforce2faDuo": {
     "message": "Натерај 2FA са Duo"
+  },
+  "enforce2faHypr": {
+    "message": "Enforce 2FA with Bravura OneAuth"
   },
   "priorityCustomerSupport": {
     "message": "Приоритетна корисничка подршка"
