@@ -1403,7 +1403,7 @@
     "message": "Politique de Connexion en 2 Étapes"
   },
   "twoStepLoginOrganizationDuoDesc": {
-    "message": "Pour imposer la Connexion en 2 Étapes via Duo, utilisez les options ci-dessous."
+    "message": "Pour imposer la Connexion en 2 Étapes, utilisez les options ci-dessous."
   },
   "twoStepLoginOrganizationSsoDesc": {
     "message": "Si vous avez configuré SSO ou planifié le faire, la Connexion en 2 Étapes peut déjà être imposée via votre Fournisseur d'Identité."

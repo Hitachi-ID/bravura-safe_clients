@@ -1403,7 +1403,7 @@
     "message": "Two-step Login Policy"
   },
   "twoStepLoginOrganizationDuoDesc": {
-    "message": "To enforce Two-step Login through Duo, use the options below."
+    "message": "To enforce Two-step Login, use the options below."
   },
   "twoStepLoginOrganizationSsoDesc": {
     "message": "If you have setup SSO or plan to, Two-step Login may already be enforced through your Identity Provider."

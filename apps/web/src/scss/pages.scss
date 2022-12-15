@@ -528,3 +528,38 @@ app-organization-layout {
   overflow-y: auto;
   max-height: calc(100vh - 200px);
 }
+
+div.organization-switcher-list {
+  p {
+    margin: 5px 10px 10px;
+  }
+  p.text-muted {
+    i.fa.fa-spinner.fa-spin,
+    span.sr-only {
+      margin-left: 10px;
+    }
+  }
+  ul.fa-ul.card-ul {
+    margin-left: 0;
+    li.d-flex {
+      cursor: pointer;
+      &:hover {
+        @include themify($themes) {
+          background-color: themed("filterPanelHoverBackgroundColor");
+        }
+      }
+      a.text-body {
+        margin: 5px 10px;
+        text-decoration: none;
+      }
+      i.fa-li {
+        position: relative;
+        left: 0;
+      }
+    }
+  }
+}
+div.organization-switcher-list + a.btn.btn-block {
+  margin: 5px 10px;
+  width: auto;
+}

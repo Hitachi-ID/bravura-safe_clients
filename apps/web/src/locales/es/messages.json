@@ -1403,7 +1403,7 @@
     "message": "Política de acceso en dos pasos"
   },
   "twoStepLoginOrganizationDuoDesc": {
-    "message": "Para hacer cumplir el inicio de sesión en dos pasos a través de Duo, utilice las siguientes opciones."
+    "message": "Para hacer cumplir el inicio de sesión en dos pasos, utilice las siguientes opciones."
   },
   "twoStepLoginOrganizationSsoDesc": {
     "message": "Si tiene la configuración de SSO o planea hacerlo, puede que el inicio de sesión en dos pasos ya se ejecute a través de su proveedor de identidad."

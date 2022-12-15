@@ -26,6 +26,7 @@ export class TabLinkComponent implements FocusableOption, AfterViewInit, OnDestr
 
   @Input() route: string;
   @Input() disabled = false;
+  @Input() iconClass: string;
 
   @HostListener("keydown", ["$event"]) onKeyDown(event: KeyboardEvent) {
     if (event.code === "Space") {

@@ -39,13 +39,10 @@
   </div>
 
   <bit-menu #orgPickerMenu>
-    <ul aria-labelledby="pickerButton" class="tw-m-0 tw-p-0">
-      <li
-        *ngFor="let org of organizations$ | async"
-        class="tw-flex tw-list-none tw-flex-col"
-        role="none"
-      >
-        <a bitMenuItem [routerLink]="['/organizations', org.id]">
+    <div class="organization-switcher-list">
+    <ul class="fa-ul card-ul carets">
+      <li *ngFor="let org of organizations$ | async" class="d-flex tw-flex-col">
+        <a [routerLink]="['/organizations', org.id]" class="text-body text-break">
           <i
             class="fa fa-check mr-2"
             [ngClass]="org.id === activeOrganization.id ? 'visible' : 'invisible'"
@@ -55,13 +52,11 @@
           {{ org.name }}
         </a>
       </li>
-      <bit-menu-divider></bit-menu-divider>
-      <li class="tw-list-none" role="none">
-        <a bitMenuItem routerLink="/create-organization">
-          <i class="fa fa-plus mr-2"></i>
-          {{ "newOrganization" | i18n }}</a
-        >
-      </li>
     </ul>
+    </div>
+    <a href="#" routerLink="/create-organization" class="btn btn-block btn-outline-primary">
+      <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
+      {{ "newOrganization" | i18n }}
+    </a>
   </bit-menu>
 </div>

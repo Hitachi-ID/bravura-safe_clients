@@ -219,7 +219,7 @@ export class AppComponent implements OnInit, OnDestroy {
               this.i18nService.t("close")
             );
             if (result) {
-              this.platformUtilsService.launchUri("https://docs.hitachi-id.net/safe/#/home/27269/10/11");
+              this.platformUtilsService.launchUri("https://bravurasecuritydocs.com/safe/#/home/27269/10/11");
             }
             break;
           }

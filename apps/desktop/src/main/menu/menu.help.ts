@@ -49,7 +49,7 @@ export class HelpMenu implements IMenubarMenu {
     return {
       id: "getHelp",
       label: this.localize("getHelp"),
-      click: () => shell.openExternal("https://docs.hitachi-id.net/safe/#/home/2202/10/11"),
+      click: () => shell.openExternal("https://bravurasecuritydocs.com/safe/#/home/2202/10/11"),
     };
   }
 

@@ -7,17 +7,21 @@
         [activeOrganization]="organization"
       ></app-organization-switcher>
       <bit-tab-nav-bar class="-tw-mb-px">
-        <bit-tab-link route="vault">{{ "vault" | i18n }}</bit-tab-link>
-        <bit-tab-link *ngIf="canShowManageTab(organization)" route="manage">
+        <bit-tab-link route="vault" iconClass="fa fa-lock">
+          {{ "vault" | i18n }}
+        </bit-tab-link>
+        <bit-tab-link *ngIf="canShowManageTab(organization)" route="manage" iconClass="fa fa-sliders">
           {{ "manage" | i18n }}
         </bit-tab-link>
-        <bit-tab-link *ngIf="canShowReportsTab(organization)" route="reporting">
+        <bit-tab-link *ngIf="canShowReportsTab(organization)" route="reporting" iconClass="fa fa-file">
           {{ getReportTabLabel(organization) | i18n }}
         </bit-tab-link>
-        <bit-tab-link *ngIf="canShowSettingsTab(organization)" route="settings">{{
-          "settings" | i18n
-        }}</bit-tab-link>
-        <bit-tab-link route="options">{{ "options" | i18n }}</bit-tab-link>
+        <bit-tab-link *ngIf="canShowSettingsTab(organization)" route="settings" iconClass="fa fa-cogs">
+          {{ "settings" | i18n }}
+        </bit-tab-link>
+        <bit-tab-link route="options" iconClass="fa fa-bars">
+          {{ "options" | i18n }}
+        </bit-tab-link>
       </bit-tab-nav-bar>
     </div>
   </div>
