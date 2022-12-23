@@ -92,31 +92,31 @@
     "message": "SAML 2.0 Service Provider Configuration"
   },
   "sso_serviceProviderEntityID": {
-    "message": "Service Provider Entity ID"
+    "message": "Service provider entity ID"
   },
   "sso_serviceProviderMetadataUrl": {
-    "message": "SAML Metadata URL"
+    "message": "SAML metadata URL"
   },
   "sso_serviceProviderACSUrl": {
-    "message": "Assertion Consumer Service URL (ACS)"
+    "message": "Assertion Consumer Service (ACS) URL"
   },
   "sso_signingEncryptionAlgorithm": {
-    "message": "Signing Algorithm"
+    "message": "Signing algorithm"
   },
   "sso_signingType": {
-    "message": "IdP Signing Behavior"
+    "message": "IdP signing behavior"
   },
   "sso_signedAssertions": {
-    "message": "Signed Assertions"
+    "message": "Signed assertions"
   },
   "sso_certificateValidation": {
-    "message": "Certificate Validation"
+    "message": "Certificate validation"
   },
   "sso_identityProviderConfiguration": {
     "message": "SAML 2.0 Identity Provider Configuration"
   },
   "sso_samlMappingType": {
-    "message": "Name ID Format"
+    "message": "Name ID format"
   },
   "sso_samlMappingType_NotConfigured": {
     "message": "Not configured"
@@ -539,7 +539,7 @@
     "message": "Delete selected"
   },
   "moveSelected": {
-    "message": "Move selected to Folder"
+    "message": "Move selected to folder"
   },
   "selectAll": {
     "message": "Select all"
@@ -1390,7 +1390,7 @@
     "message": "Two-step login"
   },
   "twoStepLoginEnforcement": {
-    "message": "Two-step Login Enforcement"
+    "message": "Two-step login enforcement"
   },
   "twoStepLoginDesc": {
     "message": "Secure your account by requiring an additional step when logging in."
@@ -1585,13 +1585,13 @@
     "message": "Enter the Bravura Safe application information from your Bravura OneAuth Admin panel."
   },
   "twoFactorHyprApiToken": {
-    "message": "API Token"
+    "message": "API token"
   },
   "twoFactorHyprAppId": {
     "message": "Application ID (case sensitive)"
   },
   "twoFactorHyprServerUrl": {
-    "message": "Server Name"
+    "message": "Server name"
   },
   "twoFactorHyprVerifyItIsYou": {
   "message": "Verify it is you by approving the notification sent to your registered device"
@@ -3981,7 +3981,7 @@
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "allSends": {
-    "message": "All Shares"
+    "message": "All shares"
   },
   "maxAccessCountReached": {
     "message": "Max access count reached",
@@ -3994,7 +3994,7 @@
     "message": "Expired"
   },
   "searchSends": {
-    "message": "Search Shares",
+    "message": "Search shares",
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendProtectedPassword": {
@@ -5535,11 +5535,11 @@
       "count": {
         "content": "$1",
         "example": "8"
+      }
+    }
   },
   "domainNameRequired": {
     "message": "Domain name is required."
-      }
-    }
   },
   "inputMaxLength": {
     "message": "Input must not exceed $COUNT$ characters in length.",

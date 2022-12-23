@@ -5535,11 +5535,11 @@
       "count": {
         "content": "$1",
         "example": "8"
+      }
+    }
   },
   "domainNameRequired": {
     "message": "Domain name is required."
-      }
-    }
   },
   "inputMaxLength": {
     "message": "L'entrée ne doit pas dépasser $COUNT$ caractères de long.",

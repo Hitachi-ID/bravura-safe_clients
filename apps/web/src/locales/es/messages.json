@@ -1645,7 +1645,7 @@
     "message": "Esperando a que toques el botón de tu llave de seguridad"
   },
   "twoFactorU2fClickSave": {
-    "message": "Haz clic en el botón \"guardar\" para habilitar esta  llave de seguridad para el inicio de sesión de dos pasos."
+    "message": "Haz clic en el botón \"guardar\" para habilitar esta llave de seguridad para el inicio de sesión de dos pasos."
   },
   "twoFactorU2fProblemReadingTryAgain": {
     "message": "Hubo un problema al leer la llave de seguridad. Inténtalo de nuevo."
@@ -5535,11 +5535,11 @@
       "count": {
         "content": "$1",
         "example": "8"
+      }
+    }
   },
   "domainNameRequired": {
     "message": "Domain name is required."
-      }
-    }
   },
   "inputMaxLength": {
     "message": "La entrada no debe exceder los $COUNT$ caracteres de longitud.",

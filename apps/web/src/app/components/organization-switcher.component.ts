@@ -22,7 +22,9 @@ export class OrganizationSwitcherComponent implements OnInit {
   loaded = false;
 
   async ngOnInit() {
-    this.organizations$ = this.organizationService.organizations$;
+    this.organizations$ = this.organizationService.organizations$.pipe(
+      map((orgs) => orgs.sort((a, b) => a.name.localeCompare(b.name)))
+    );
     this.loaded = true;
   }
 }

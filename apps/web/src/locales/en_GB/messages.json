@@ -539,7 +539,7 @@
     "message": "Delete selected"
   },
   "moveSelected": {
-    "message": "Move Selected to Folder"
+    "message": "Move selected to folder"
   },
   "selectAll": {
     "message": "Select all"
@@ -5535,11 +5535,11 @@
       "count": {
         "content": "$1",
         "example": "8"
+      }
+    }
   },
   "domainNameRequired": {
     "message": "Domain name is required."
-      }
-    }
   },
   "inputMaxLength": {
     "message": "Input must not exceed $COUNT$ characters in length.",
