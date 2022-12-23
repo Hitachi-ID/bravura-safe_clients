@@ -346,7 +346,7 @@ export class LoginCommand {
       });
       return Response.error(
         new MessageResponse(
-          "An organization administrator recently changed your master password. In order to access the vault, you must update your master password now via the web vault. You have been logged out.",
+          "A team administrator recently changed your master password. In order to access the vault, you must update your master password now via the web vault. You have been logged out.",
           null
         )
       );
@@ -358,7 +358,7 @@ export class LoginCommand {
 
     // Get New Master Password
     const baseMessage =
-      "An organization administrator recently changed your master password. In order to access the vault, you must update your master password now.\n" +
+      "A team administrator recently changed your master password. In order to access the vault, you must update your master password now.\n" +
       "Master password: ";
     const firstMessage = error != null ? error + baseMessage : baseMessage;
     const mp: inquirer.Answers = await inquirer.createPromptModule({ output: process.stderr })({
