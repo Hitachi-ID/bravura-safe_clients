@@ -1,5 +1,5 @@
 import { Component, NgZone } from "@angular/core";
-import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { UntypedFormControl, UntypedFormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 
 import { BroadcasterService } from "@bitwarden/common/abstractions/broadcaster.service";
@@ -19,8 +19,8 @@ export class AccessibilityCookieComponent {
   listenForCookie = false;
   hCaptchaWindow: Window;
 
-  accessibilityForm = new FormGroup({
-    link: new FormControl("", Validators.required),
+  accessibilityForm = new UntypedFormGroup({
+    link: new UntypedFormControl("", Validators.required),
   });
 
   constructor(
@@ -79,7 +79,7 @@ export class AccessibilityCookieComponent {
   }
 
   async submit() {
-    if (Utils.getDomain(this.accessibilityForm.value.link) !== "accounts.hcaptcha.com") {
+    if (Utils.getHostname(this.accessibilityForm.value.link) !== "accounts.hcaptcha.com") {
       this.platformUtilsService.showToast(
         "error",
         this.i18nService.t("errorOccurred"),

@@ -1,19 +1,21 @@
+// eslint-disable-next-line no-restricted-imports
 import { Arg, Substitute, SubstituteOf } from "@fluffy-spoon/substitute";
+import { BehaviorSubject } from "rxjs";
 
 import { ApiService } from "@bitwarden/common/abstractions/api.service";
 import { CipherService } from "@bitwarden/common/abstractions/cipher.service";
 import { CryptoService } from "@bitwarden/common/abstractions/crypto.service";
 import { CryptoFunctionService } from "@bitwarden/common/abstractions/cryptoFunction.service";
-import { FolderService } from "@bitwarden/common/abstractions/folder.service";
+import { FolderService } from "@bitwarden/common/abstractions/folder/folder.service.abstraction";
 import { CipherType } from "@bitwarden/common/enums/cipherType";
 import { KdfType } from "@bitwarden/common/enums/kdfType";
 import { Utils } from "@bitwarden/common/misc/utils";
 import { Cipher } from "@bitwarden/common/models/domain/cipher";
-import { EncString } from "@bitwarden/common/models/domain/encString";
+import { EncString } from "@bitwarden/common/models/domain/enc-string";
 import { Login } from "@bitwarden/common/models/domain/login";
-import { CipherWithIdExport as CipherExport } from "@bitwarden/common/models/export/cipherWithIdsExport";
-import { CipherView } from "@bitwarden/common/models/view/cipherView";
-import { LoginView } from "@bitwarden/common/models/view/loginView";
+import { CipherWithIdExport as CipherExport } from "@bitwarden/common/models/export/cipher-with-ids.export";
+import { CipherView } from "@bitwarden/common/models/view/cipher.view";
+import { LoginView } from "@bitwarden/common/models/view/login.view";
 import { ExportService } from "@bitwarden/common/services/export.service";
 
 import { BuildTestObject, GetUniqueString } from "../utils";
@@ -97,8 +99,8 @@ describe("ExportService", () => {
     folderService = Substitute.for<FolderService>();
     cryptoService = Substitute.for<CryptoService>();
 
-    folderService.getAllDecrypted().resolves([]);
-    folderService.getAll().resolves([]);
+    folderService.folderViews$.returns(new BehaviorSubject([]));
+    folderService.folders$.returns(new BehaviorSubject([]));
 
     exportService = new ExportService(
       folderService,

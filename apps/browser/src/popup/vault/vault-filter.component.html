@@ -17,13 +17,16 @@
     <i class="fa fa-search"></i>
   </div>
   <div class="right">
-    <button type="button" appBlurClick (click)="addCipher()" appA11yTitle="{{ 'addItem' | i18n }}">
+    <button type="button" (click)="addCipher()" appA11yTitle="{{ 'addItem' | i18n }}">
       <i class="fa fa-plus fa-lg fa-fw" aria-hidden="true"></i>
     </button>
   </div>
 </header>
 <main tabindex="-1" cdk-scrollable>
-  <app-vault-select (onVaultSelectionChanged)="vaultFilterChanged()"></app-vault-select>
+  <app-vault-select
+    (onVaultSelectionChanged)="vaultFilterChanged()"
+    class="select-index-top"
+  ></app-vault-select>
   <div class="no-items" *ngIf="(!ciphers || !ciphers.length) && !showSearching()">
     <i class="fa fa-spinner fa-spin fa-3x" *ngIf="!loaded"></i>
     <ng-container *ngIf="loaded">
@@ -60,7 +63,6 @@
           type="button"
           class="box-content-row"
           appStopClick
-          appBlurClick
           (click)="selectType(cipherType.Login)"
         >
           <div class="row-main">
@@ -74,7 +76,6 @@
           type="button"
           class="box-content-row"
           appStopClick
-          appBlurClick
           (click)="selectType(cipherType.Card)"
         >
           <div class="row-main">
@@ -88,7 +89,6 @@
           type="button"
           class="box-content-row"
           appStopClick
-          appBlurClick
           (click)="selectType(cipherType.Identity)"
         >
           <div class="row-main">
@@ -102,7 +102,6 @@
           type="button"
           class="box-content-row"
           appStopClick
-          appBlurClick
           (click)="selectType(cipherType.SecureNote)"
         >
           <div class="row-main">
@@ -125,7 +124,6 @@
           *ngFor="let f of nestedFolders"
           class="box-content-row"
           appStopClick
-          appBlurClick
           (click)="selectFolder(f.node)"
         >
           <div class="row-main">
@@ -153,7 +151,6 @@
           *ngFor="let nestedCollection of nestedCollections"
           class="box-content-row"
           appStopClick
-          appBlurClick
           (click)="selectCollection(nestedCollection.node)"
         >
           <div class="row-main">
@@ -188,13 +185,7 @@
         <span class="flex-right">{{ deletedCount }}</span>
       </h2>
       <div class="box-content single-line">
-        <button
-          type="button"
-          class="box-content-row"
-          appStopClick
-          appBlurClick
-          (click)="selectTrash()"
-        >
+        <button type="button" class="box-content-row" appStopClick (click)="selectTrash()">
           <div class="row-main">
             <div class="icon"><i class="fa fa-fw fa-lg fa-trash-o"></i></div>
             <span class="text">{{ "trash" | i18n }}</span>

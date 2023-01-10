@@ -4,10 +4,11 @@ import { ApiService } from "@bitwarden/common/abstractions/api.service";
 import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
 import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
-import { UserVerificationService } from "@bitwarden/common/abstractions/userVerification.service";
+import { UserVerificationService } from "@bitwarden/common/abstractions/userVerification/userVerification.service.abstraction";
 import { TwoFactorProviderType } from "@bitwarden/common/enums/twoFactorProviderType";
-import { UpdateTwoFactorHyprRequest } from "@bitwarden/common/models/request/updateTwoFactorHyprRequest";
-import { TwoFactorHyprResponse } from "@bitwarden/common/models/response/twoFactorHyprResponse";
+import { UpdateTwoFactorHyprRequest } from "@bitwarden/common/models/request/update-two-factor-hypr.request";
+import { TwoFactorHyprResponse } from "@bitwarden/common/models/response/two-factor-hypr.response";
+import { AuthResponse } from "@bitwarden/common/types/authResponse";
 
 import { TwoFactorBaseComponent } from "./two-factor-base.component";
 
@@ -20,7 +21,7 @@ export class TwoFactorHyprComponent extends TwoFactorBaseComponent {
   akey: string;
   appId: string;
   serverUrl: string;
-  formPromise: Promise<any>;
+  formPromise: Promise<TwoFactorHyprResponse>;
 
   constructor(
     apiService: ApiService,
@@ -32,7 +33,7 @@ export class TwoFactorHyprComponent extends TwoFactorBaseComponent {
     super(apiService, i18nService, platformUtilsService, logService, userVerificationService);
   }
 
-  auth(authResponse: any) {
+  auth(authResponse: AuthResponse<TwoFactorHyprResponse>) {
     super.auth(authResponse);
     this.processResponse(authResponse.response);
   }

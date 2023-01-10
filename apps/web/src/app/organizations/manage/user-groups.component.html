@@ -2,10 +2,10 @@
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <form class="modal-content" #form (ngSubmit)="submit()" [appApiAction]="formPromise">
       <div class="modal-header">
-        <h2 class="modal-title" id="groupAccessTitle">
+        <h1 class="modal-title" id="groupAccessTitle">
           {{ "groupAccess" | i18n }}
           <small class="text-muted" *ngIf="name">{{ name }}</small>
-        </h2>
+        </h1>
         <button
           type="button"
           class="close"
@@ -30,11 +30,11 @@
         </div>
         <table class="table table-hover table-list mb-0" *ngIf="groups && groups.length">
           <tbody>
-            <tr *ngFor="let g of groups; let i = index" [ngClass]="{ 'table-active': g.checked }">
+            <tr *ngFor="let g of groups; let i = index" [ngClass]="{ 'table-active': $any(g).checked }">
               <td class="table-list-checkbox" (click)="check(g)">
                 <input
                   type="checkbox"
-                  [(ngModel)]="g.checked"
+                  [(ngModel)]="$any(g).checked"
                   name="Groups[{{ i }}].Checked"
                   appStopProp
                 />

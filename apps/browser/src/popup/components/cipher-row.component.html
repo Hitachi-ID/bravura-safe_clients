@@ -15,19 +15,25 @@
     <app-vault-icon [cipher]="cipher"></app-vault-icon>
     <div class="row-main-content">
       <span class="text">
-        {{ cipher.name }}
-        <ng-container *ngIf="cipher.organizationId">
-          <i class="fa fa-cube text-muted" title="{{ 'shared' | i18n }}" aria-hidden="true"></i>
-          <span class="sr-only">{{ "shared" | i18n }}</span>
-        </ng-container>
-        <ng-container *ngIf="cipher.hasAttachments">
-          <i
-            class="fa fa-paperclip text-muted"
-            title="{{ 'attachments' | i18n }}"
-            aria-hidden="true"
-          ></i>
-          <span class="sr-only">{{ "attachments" | i18n }}</span>
-        </ng-container>
+        <span class="truncate-box">
+          <span class="truncate">{{ cipher.name }}</span>
+          <ng-container *ngIf="cipher.organizationId">
+            <i
+              class="fa fa-cube text-muted"
+              title="{{ 'shared' | i18n }}"
+              aria-hidden="true"
+            ></i>
+            <span class="sr-only">{{ "shared" | i18n }}</span>
+          </ng-container>
+          <ng-container *ngIf="cipher.hasAttachments">
+            <i
+              class="fa fa-paperclip text-muted"
+              title="{{ 'attachments' | i18n }}"
+              aria-hidden="true"
+            ></i>
+            <span class="sr-only">{{ "attachments" | i18n }}</span>
+          </ng-container>
+        </span>
       </span>
       <span class="detail">{{ cipher.subTitle }}</span>
     </div>

@@ -2,7 +2,7 @@
   "name": "@bitwarden/desktop",
   "productName": "Bravura Safe",
   "description": "A secure password manager for all of your devices.",
-  "version": "2022.6.0",
+  "version": "2022.10.2",
   "author": "Hitachi ID Systems, Inc. <noreply@hitachi-id.com> (https://hitachi-id.com)",
   "homepage": "https://hitachi-id.com",
   "license": "GPL-3.0",
@@ -12,8 +12,6 @@
     "url": "git+https://github.com/Hitachi-ID/bravura-safe_clients.git"
   },
   "dependencies": {
-    "@nodert-win10-rs4/windows.security.credentials.ui": "^0.4.4",
-    "forcefocus": "^1.1.0",
-    "keytar": "^7.9.0"
+    "@bitwarden/desktop-native": "file:../desktop_native"
   }
 }

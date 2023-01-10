@@ -6,10 +6,10 @@ import { EnvironmentService } from "@bitwarden/common/abstractions/environment.s
 import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
 import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
-import { PolicyService } from "@bitwarden/common/abstractions/policy.service";
+import { PolicyService } from "@bitwarden/common/abstractions/policy/policy.service.abstraction";
 import { SearchService } from "@bitwarden/common/abstractions/search.service";
 import { SendService } from "@bitwarden/common/abstractions/send.service";
-import { SendView } from "@bitwarden/common/models/view/sendView";
+import { SendView } from "@bitwarden/common/models/view/send.view";
 import { invokeMenu, RendererMenuItem } from "@bitwarden/electron/utils";
 
 import { SearchBarService } from "../layout/search/search-bar.service";
@@ -56,7 +56,8 @@ export class SendComponent extends BaseSendComponent implements OnInit, OnDestro
       policyService,
       logService
     );
-    this.searchBarService.searchText.subscribe((searchText) => {
+    // eslint-disable-next-line rxjs-angular/prefer-takeuntil
+    this.searchBarService.searchText$.subscribe((searchText) => {
       this.searchText = searchText;
       this.searchTextChanged();
     });

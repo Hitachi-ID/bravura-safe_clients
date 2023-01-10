@@ -2,10 +2,10 @@
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <form class="modal-content" #form (ngSubmit)="submit()" [appApiAction]="formPromise">
       <div class="modal-header">
-        <h2 class="modal-title" id="collectionsTitle">
+        <h1 class="modal-title" id="collectionsTitle">
           {{ "collections" | i18n }}
           <small *ngIf="cipher">{{ cipher.name }}</small>
-        </h2>
+        </h1>
         <button
           type="button"
           class="close"
@@ -36,12 +36,12 @@
             <tr
               *ngFor="let c of collections; let i = index"
               (click)="check(c)"
-              [ngClass]="{ 'table-active': c.checked }"
+              [ngClass]="{ 'table-active': $any(c).checked }"
             >
               <td class="table-list-checkbox">
                 <input
                   type="checkbox"
-                  [(ngModel)]="c.checked"
+                  [(ngModel)]="$any(c).checked"
                   name="Collection[{{ i }}].Checked"
                   appStopProp
                 />

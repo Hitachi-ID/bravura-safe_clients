@@ -1,6 +1,6 @@
 import { TwoFactorProviderType } from '@bitwarden/common/enums/twoFactorProviderType';
 import { HyprAuthenticationRequestModel } from '@bitwarden/common/models/request/hyprAuthenticationRequestModel';
-import { TwoFactorHyprAuthResponse } from '@bitwarden/common/models/response/twoFactorHyprAuthResponse';
+import { TwoFactorHyprAuthResponse } from '@bitwarden/common/models/response/two-factor-hypr-auth.response';
 
 import { getQsParam } from "./common";
 import { HttpClient, HttpXhrBackend } from '@angular/common/http';

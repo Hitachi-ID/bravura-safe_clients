@@ -6,10 +6,11 @@ import * as koaBodyParser from "koa-bodyparser";
 import * as koaJson from "koa-json";
 
 import { KeySuffixOptions } from "@bitwarden/common/enums/keySuffixOptions";
-import { Response } from "@bitwarden/node/cli/models/response";
-import { FileResponse } from "@bitwarden/node/cli/models/response/fileResponse";
+import { Utils } from "@bitwarden/common/misc/utils";
 
 import { Main } from "../bw";
+import { Response } from "../models/response";
+import { FileResponse } from "../models/response/file.response";
 
 import { ConfirmCommand } from "./confirm.command";
 import { CreateCommand } from "./create.command";
@@ -25,7 +26,7 @@ import { SendDeleteCommand } from "./send/delete.command";
 import { SendEditCommand } from "./send/edit.command";
 import { SendGetCommand } from "./send/get.command";
 import { SendListCommand } from "./send/list.command";
-import { SendRemovePasswordCommand } from "./send/removePassword.command";
+import { SendRemovePasswordCommand } from "./send/remove-password.command";
 import { ShareCommand } from "./share.command";
 import { StatusCommand } from "./status.command";
 import { SyncCommand } from "./sync.command";
@@ -79,13 +80,15 @@ export class ServeCommand {
       this.main.folderService,
       this.main.stateService,
       this.main.cryptoService,
-      this.main.apiService
+      this.main.apiService,
+      this.main.folderApiService
     );
     this.editCommand = new EditCommand(
       this.main.cipherService,
       this.main.folderService,
       this.main.cryptoService,
-      this.main.apiService
+      this.main.apiService,
+      this.main.folderApiService
     );
     this.generateCommand = new GenerateCommand(
       this.main.passwordGenerationService,
@@ -102,7 +105,8 @@ export class ServeCommand {
       this.main.cipherService,
       this.main.folderService,
       this.main.stateService,
-      this.main.apiService
+      this.main.apiService,
+      this.main.folderApiService
     );
     this.confirmCommand = new ConfirmCommand(this.main.apiService, this.main.cryptoService);
     this.restoreCommand = new RestoreCommand(this.main.cipherService);
@@ -117,6 +121,7 @@ export class ServeCommand {
       this.main.keyConnectorService,
       this.main.environmentService,
       this.main.syncService,
+      this.main.organizationApiService,
       async () => await this.main.logout()
     );
 
@@ -146,14 +151,37 @@ export class ServeCommand {
   }
 
   async run(options: program.OptionValues) {
+    const protectOrigin = !options.disableOriginProtection;
     const port = options.port || 8087;
     const hostname = options.hostname || "localhost";
+    this.main.logService.info(
+      `Starting server on ${hostname}:${port} with ${
+        protectOrigin ? "origin protection" : "no origin protection"
+      }`
+    );
+
     const server = new koa();
     const router = new koaRouter();
     process.env.BW_SERVE = "true";
     process.env.BW_NOINTERACTION = "true";
 
-    server.use(koaBodyParser()).use(koaJson({ pretty: false, param: "pretty" }));
+    server
+      .use(async (ctx, next) => {
+        if (protectOrigin && ctx.headers.origin != undefined) {
+          ctx.status = 403;
+          this.main.logService.warning(
+            `Blocking request from "${
+              Utils.isNullOrEmpty(ctx.headers.origin)
+                ? "(Origin header value missing)"
+                : ctx.headers.origin
+            }"`
+          );
+          return;
+        }
+        await next();
+      })
+      .use(koaBodyParser())
+      .use(koaJson({ pretty: false, param: "pretty" }));
 
     router.get("/generate", async (ctx, next) => {
       const response = await this.generateCommand.run(ctx.request.query);

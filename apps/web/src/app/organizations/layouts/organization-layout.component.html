@@ -1,49 +1,28 @@
 <app-navbar></app-navbar>
-<div class="org-nav position-sticky" *ngIf="organization">
+<div class="org-nav !tw-h-32" *ngIf="organization$ | async as organization">
   <div class="container d-flex">
     <div class="d-flex flex-column">
       <app-organization-switcher
         class="my-auto pl-1"
         [activeOrganization]="organization"
       ></app-organization-switcher>
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="vault" routerLinkActive="active">
-            <i class="fa fa-lock" aria-hidden="true"></i>
-            {{ "vault" | i18n }}
-          </a>
-        </li>
-        <li class="nav-item" *ngIf="showManageTab">
-          <a class="nav-link" [routerLink]="manageRoute" routerLinkActive="active">
-            <i class="fa fa-sliders" aria-hidden="true"></i>
-            {{ "manage" | i18n }}
-          </a>
-        </li>
-        <li class="nav-item" *ngIf="showReportsTab">
-          <a class="nav-link" [routerLink]="reportsRoute" routerLinkActive="active">
-            <i class="fa fa-file" aria-hidden="true"></i>
-            {{ "reports" | i18n }}
-          </a>
-        </li>
-        <li class="nav-item" *ngIf="showToolsTab">
-          <a class="nav-link" [routerLink]="toolsRoute" routerLinkActive="active">
-            <i class="fa fa-wrench" aria-hidden="true"></i>
-            {{ "tools" | i18n }}
-          </a>
-        </li>
-        <li class="nav-item" *ngIf="showSettingsTab">
-          <a class="nav-link" routerLink="settings" routerLinkActive="active">
-            <i class="fa fa-cogs" aria-hidden="true"></i>
-            {{ "settings" | i18n }}
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="optionsRoute" routerLinkActive="active">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-            {{ "options" | i18n }}
-          </a>
-        </li>
-      </ul>
+      <bit-tab-nav-bar class="-tw-mb-px">
+        <bit-tab-link route="vault" iconClass="fa fa-lock">
+          {{ "vault" | i18n }}
+        </bit-tab-link>
+        <bit-tab-link *ngIf="canShowManageTab(organization)" route="manage" iconClass="fa fa-sliders">
+          {{ "manage" | i18n }}
+        </bit-tab-link>
+        <bit-tab-link *ngIf="canShowReportsTab(organization)" route="reporting" iconClass="fa fa-file">
+          {{ getReportTabLabel(organization) | i18n }}
+        </bit-tab-link>
+        <bit-tab-link *ngIf="canShowSettingsTab(organization)" route="settings" iconClass="fa fa-cogs">
+          {{ "settings" | i18n }}
+        </bit-tab-link>
+        <bit-tab-link route="options" iconClass="fa fa-bars">
+          {{ "options" | i18n }}
+        </bit-tab-link>
+      </bit-tab-nav-bar>
     </div>
   </div>
 </div>

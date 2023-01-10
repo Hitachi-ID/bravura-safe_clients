@@ -1,9 +1,9 @@
 {
   "appName": {
-    "message": "Bravura Safe"
+    "message": "Bitwarden"
   },
   "extName": {
-    "message": "Bravura Safe",
+    "message": "Bitwarden - Brezplačen upravitelj gesel",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
@@ -53,13 +53,13 @@
     "message": "Zavihek"
   },
   "vault": {
-    "message": "Vault"
+    "message": "Trezor"
   },
   "myVault": {
     "message": "Moj trezor"
   },
   "allVaults": {
-    "message": "All Vaults"
+    "message": "Vsi trezorji"
   },
   "tools": {
     "message": "Orodja"
@@ -95,13 +95,13 @@
     "message": "Generiraj geslo (kopirano)"
   },
   "copyElementIdentifier": {
-    "message": "Copy Custom Field Name"
+    "message": "Copy custom field name"
   },
   "noMatchingLogins": {
     "message": "Nobenih ujemajočih prijav."
   },
   "unlockVaultMenu": {
-    "message": "Unlock your vault"
+    "message": "Odkleni svoj trezor"
   },
   "loginToVaultMenu": {
     "message": "Log in to your vault"
@@ -128,13 +128,13 @@
     "message": "Nadaljuj"
   },
   "sendVerificationCode": {
-    "message": "Share a verification code to your email"
+    "message": "Send a verification code to your email"
   },
   "sendCode": {
-    "message": "Share Code"
+    "message": "Pošlji kodo"
   },
   "codeSent": {
-    "message": "Code Sent"
+    "message": "Koda poslana"
   },
   "verificationCode": {
     "message": "Verifikacijska koda"
@@ -215,7 +215,7 @@
     "message": "Avtomatično generiraj močna, edinstvena gesla za vaše prijave."
   },
   "bitWebVault": {
-    "message": "Bravura Safe spletni trezor"
+    "message": "Bitwarden spletni trezor"
   },
   "importItems": {
     "message": "Uvozi predmete"
@@ -242,10 +242,10 @@
     "message": "Lowercase (a-z)"
   },
   "numbers": {
-    "message": "Numbers (0-9)"
+    "message": "Številke (0-9)"
   },
   "specialCharacters": {
-    "message": "Special Characters (!@#$%^&*)"
+    "message": "Posebni znaki (!@#$%^&*)"
   },
   "numWords": {
     "message": "Število besed"
@@ -339,7 +339,7 @@
     "message": "Vaš spletni brskalnik ne podpira enostavno kopiranje odložišča. Kopirajte ročno."
   },
   "verifyIdentity": {
-    "message": "Verify Identity"
+    "message": "Verify identity"
   },
   "yourVaultIsLocked": {
     "message": "Vaš trezor je zaklenjen. Potrdite vaše glavno geslo za nadaljevanje."
@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bravurasecurity.com"
+        "example": "bitwarden.com"
       }
     }
   },
@@ -423,11 +423,14 @@
   "invalidEmail": {
     "message": "Neveljaven epoštni naslov."
   },
-  "masterPassRequired": {
-    "message": "Glavno geslo je obvezno."
+  "masterPasswordRequired": {
+    "message": "Master password is required."
   },
-  "masterPassLength": {
-    "message": "Glavno geslo mora biti dolgo najmanj 8 znakov."
+  "confirmMasterPasswordRequired": {
+    "message": "Master password retype is required."
+  },
+  "masterPasswordMinlength": {
+    "message": "Master password must be at least 8 characters long."
   },
   "masterPassDoesntMatch": {
     "message": "Potrditev glavnega gesla se ne ujema."
@@ -485,10 +488,10 @@
     "message": "Spremeni glavno geslo"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Svoje glavno geslo lahko spremenite v Bravura Safe spletnem trezorju. Želite obiskati spletno stran zdaj?"
+    "message": "Svoje glavno geslo lahko spremenite v bitwarden.com spletnem trezorju. Želite obiskati spletno stran zdaj?"
   },
   "twoStepLoginConfirmation": {
-    "message": "Two-step login makes your account more secure by requiring you to verify your login with another device such as a security key, authenticator app, SMS, phone call, or email. Two-step login can be enabled on the Bravura Safe web vault. Do you want to visit the website now?"
+    "message": "Two-step login makes your account more secure by requiring you to verify your login with another device such as a security key, authenticator app, SMS, phone call, or email. Two-step login can be set up on the bitwarden.com web vault. Do you want to visit the website now?"
   },
   "editedFolder": {
     "message": "Urejena mapa"
@@ -500,7 +503,7 @@
     "message": "Izbrisana mapa"
   },
   "gettingStartedTutorial": {
-    "message": "Getting Started Tutorial"
+    "message": "Getting started tutorial"
   },
   "gettingStartedTutorialVideo": {
     "message": "Watch our getting started tutorial to learn how to get the most out of the browser extension."
@@ -518,8 +521,8 @@
     "message": "URL"
   },
   "uriPosition": {
-    "message": "URL $POSITION$",
-    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
+    "message": "URI $POSITION$",
+    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -549,7 +552,7 @@
     "message": "Ali ste prepričani, da želite prepisati vaše trenutno geslo?"
   },
   "overwriteUsername": {
-    "message": "Overwrite Username"
+    "message": "Overwrite username"
   },
   "overwriteUsernameConfirmation": {
     "message": "Are you sure you want to overwrite the current username?"
@@ -594,7 +597,7 @@
     "description": "Clipboard is the operating system thing where you copy/paste data to on your device."
   },
   "notificationAddDesc": {
-    "message": "Should Bravura Safe remember this password for you?"
+    "message": "Should Bitwarden remember this password for you?"
   },
   "notificationAddSave": {
     "message": "Da, shrani zdaj"
@@ -606,7 +609,7 @@
     "message": "Ask to update a login's password when a change is detected on a website."
   },
   "notificationChangeDesc": {
-    "message": "Do you want to update this password in Bravura Safe?"
+    "message": "Do you want to update this password in Bitwarden?"
   },
   "notificationChangeSave": {
     "message": "Da, posodobi zdaj"
@@ -618,11 +621,11 @@
     "message": "Use a secondary click to access password generation and matching logins for the website. "
   },
   "defaultUriMatchDetection": {
-    "message": "Default URL match detection",
-    "description": "Default URL match detection for auto-fill."
+    "message": "Default URI match detection",
+    "description": "Default URI match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "Choose the default way that URL match detection is handled for logins when performing actions such as auto-fill."
+    "message": "Choose the default way that URI match detection is handled for logins when performing actions such as auto-fill."
   },
   "theme": {
     "message": "Tema"
@@ -662,7 +665,7 @@
     "message": "Ta izvoz šifrira vaše podatke z uporabo ključa za šifriranje. Če boste kdaj zamenjali ključ za šifriranje, je potrebno, da ponovno naredite izvoz, ker ne boste mogli dešifrirati to izvoženo datoteko."
   },
   "encExportAccountWarningDesc": {
-    "message": "Ključ za šifriranje je edinstven za vsak Bravura Safe račun, zato ni mogoče da se uvozi šifrirana datoteka v drugi račun."
+    "message": "Ključ za šifriranje je edinstven za vsak Bitwarden račun, zato ni mogoče da se uvozi šifrirana datoteka v drugi račun."
   },
   "exportMasterPassword": {
     "message": "Vnesite vaše glavno geslo za izvoz podatkov iz vašega trezorja."
@@ -671,13 +674,13 @@
     "message": "V skupni rabi"
   },
   "learnOrg": {
-    "message": "Learn about teams"
+    "message": "Learn about organizations"
   },
   "learnOrgConfirmation": {
-    "message": "Bravura Safe allows you to share your vault items with others by using a team. Would you like to visit the Bravura Safe website to learn more?"
+    "message": "Bitwarden allows you to share your vault items with others by using an organization. Would you like to visit the bitwarden.com website to learn more?"
   },
   "moveToOrganization": {
-    "message": "Move to Team"
+    "message": "Move to organization"
   },
   "share": {
     "message": "Deli"
@@ -696,7 +699,7 @@
     }
   },
   "moveToOrgDesc": {
-    "message": "Choose a team that you wish to move this item to. Moving to a team transfers ownership of the item to that team. You will no longer be the direct owner of this item once it has been moved."
+    "message": "Choose an organization that you wish to move this item to. Moving to an organization transfers ownership of the item to that organization. You will no longer be the direct owner of this item once it has been moved."
   },
   "learnMore": {
     "message": "Več o tem"
@@ -753,7 +756,7 @@
     "message": "Upravljanje članstva"
   },
   "premiumManageAlert": {
-    "message": "S svojim članstvom lahko upravljate na bravurasecurity.com spletnem trezorju. Želite obiskati spletno stran zdaj?"
+    "message": "S svojim članstvom lahko upravljate na bitwarden.com spletnem trezorju. Želite obiskati spletno stran zdaj?"
   },
   "premiumRefresh": {
     "message": "Osvežite članstvo"
@@ -786,13 +789,13 @@
     "message": "Kupite premium članstvo"
   },
   "premiumPurchaseAlert": {
-    "message": "Premium članstvo lahko kupite na bravurasecurity.com spletnem trezoju. Želite obiskati spletno stran zdaj?"
+    "message": "Premium članstvo lahko kupite na bitwarden.com spletnem trezoju. Želite obiskati spletno stran zdaj?"
   },
   "premiumCurrentMember": {
     "message": "Ste premium član!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Hvala da podpirate Bravura Safe."
+    "message": "Hvala da podpirate Bitwarden."
   },
   "premiumPrice": {
     "message": "Vse za samo $PRICE$ /leto!",
@@ -861,7 +864,7 @@
     "message": "To start the WebAuthn 2FA verification. Click the button below to open a new tab and follow the instructions provided in the new tab."
   },
   "webAuthnNewTabOpen": {
-    "message": "Open new tab"
+    "message": "Odpri nov zavihek"
   },
   "webAuthnAuthenticate": {
     "message": "Authenticate WebAuthn"
@@ -876,10 +879,10 @@
     "message": "Please use a supported web browser (such as Chrome) and/or add additional providers that are better supported across web browsers (such as an authenticator app)."
   },
   "twoStepOptions": {
-    "message": "Two-step Login Options"
+    "message": "Možnosti dvostopenjske prijave"
   },
   "recoveryCodeDesc": {
-    "message": "Lost access to all of your two-factor providers? Use your recovery code to disable all two-factor providers from your account."
+    "message": "Ste izgubili dostop do vseh vaših ponudnikov dvostopenjske prijave? Uporabite svojo kodo za obnovitev in tako onemogočite dvostopenjsko prijavo v svoj račun."
   },
   "recoveryCodeTitle": {
     "message": "Koda za obnovitev"
@@ -902,7 +905,7 @@
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
   "duoOrganizationDesc": {
-    "message": "Verify with Duo Security for your team using the Duo Mobile app, SMS, phone call, or U2F security key.",
+    "message": "Verify with Duo Security for your organization using the Duo Mobile app, SMS, phone call, or U2F security key.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
   },
   "twoFactorHyprCheckDevice": {
@@ -915,7 +918,7 @@
     "message": "FIDO2 WebAuthn"
   },
   "webAuthnDesc": {
-    "message": "Use any WebAuthn enabled security key to access your account."
+    "message": "Use any WebAuthn compatible security key to access your account."
   },
   "emailTitle": {
     "message": "E-pošta"
@@ -924,13 +927,13 @@
     "message": "Potrditvene kode vam bodo posredovane po e-pošti."
   },
   "selfHostedEnvironment": {
-    "message": "Cloud-hosted Environment"
+    "message": "Self-hosted environment"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Specify the base URL of your on-premises hosted Bravura Safe installation."
+    "message": "Specify the base URL of your on-premises hosted Bitwarden installation."
   },
   "customEnvironment": {
-    "message": "Custom Environment"
+    "message": "Okolje po meri"
   },
   "customEnvironmentFooter": {
     "message": "For advanced users. You can specify the base URL of each service independently."
@@ -942,19 +945,19 @@
     "message": "URL naslov API strežnika"
   },
   "webVaultUrl": {
-    "message": "Web Safe Server URL"
+    "message": "Web vault server URL"
   },
   "identityUrl": {
-    "message": "Identity Server URL"
+    "message": "Identity server URL"
   },
   "notificationsUrl": {
-    "message": "Notifications Server URL"
+    "message": "Notifications server URL"
   },
   "iconsUrl": {
-    "message": "Icons Server URL"
+    "message": "Icons server URL"
   },
   "environmentSaved": {
-    "message": "The environment URLs have been saved."
+    "message": "Environment URLs saved"
   },
   "enableAutoFillOnPageLoad": {
     "message": "Auto-fill on page load"
@@ -972,7 +975,7 @@
     "message": "You can turn off auto-fill on page load for individual login items from the item's Edit view."
   },
   "itemAutoFillOnPageLoad": {
-    "message": "Auto-fill on page load (if enabled in Options)"
+    "message": "Auto-fill on page load (if set up in Options)"
   },
   "autoFillOnPageLoadUseDefault": {
     "message": "Uporabi privzete nastavitve"
@@ -996,22 +999,22 @@
     "message": "Generate and copy a new random password to the clipboard"
   },
   "commandLockVaultDesc": {
-    "message": "Lock the vault"
+    "message": "Zakleni trezor"
   },
   "privateModeWarning": {
     "message": "Private mode support is experimental and some features are limited."
   },
   "customFields": {
-    "message": "Custom Fields"
+    "message": "Custom fields"
   },
   "copyValue": {
-    "message": "Copy Value"
+    "message": "Kopiraj vrednost"
   },
   "value": {
-    "message": "Value"
+    "message": "Vrednost"
   },
   "newCustomField": {
-    "message": "New Custom Field"
+    "message": "New custom field"
   },
   "dragToSort": {
     "message": "Drag to sort"
@@ -1023,7 +1026,7 @@
     "message": "Skrito"
   },
   "cfTypeBoolean": {
-    "message": "Boolean"
+    "message": "Logična vrednost"
   },
   "cfTypeLinked": {
     "message": "Linked",
@@ -1136,7 +1139,7 @@
     "message": "Priimek"
   },
   "fullName": {
-    "message": "Full Name"
+    "message": "Polno ime"
   },
   "identityName": {
     "message": "Ime identitete"
@@ -1193,22 +1196,22 @@
     "message": "Prijave"
   },
   "typeSecureNote": {
-    "message": "Secure Note"
+    "message": "Varni zapisek"
   },
   "typeCard": {
-    "message": "Card"
+    "message": "Kartica"
   },
   "typeIdentity": {
-    "message": "Identity"
+    "message": "Identiteta"
   },
   "passwordHistory": {
-    "message": "Password History"
+    "message": "Zgodovina gesel"
   },
   "back": {
-    "message": "Back"
+    "message": "Nazaj"
   },
   "collections": {
-    "message": "Collections"
+    "message": "Zbirke"
   },
   "favorites": {
     "message": "Priljubljeno"
@@ -1229,7 +1232,7 @@
     "message": "Prijave"
   },
   "secureNotes": {
-    "message": "Secure Notes"
+    "message": "Varni zapiski"
   },
   "clear": {
     "message": "Počisti",
@@ -1273,108 +1276,112 @@
     "description": "A programming term, also known as 'RegEx'."
   },
   "matchDetection": {
-    "message": "Match Detection",
-    "description": "URL match detection for auto-fill."
+    "message": "Match detection",
+    "description": "URI match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Default match detection",
-    "description": "Default URL match detection for auto-fill."
+    "description": "Default URI match detection for auto-fill."
   },
   "toggleOptions": {
-    "message": "Toggle Options"
+    "message": "Toggle options"
   },
   "toggleCurrentUris": {
-    "message": "Toggle Current URLs",
-    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
+    "message": "Toggle current URIs",
+    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
   },
   "currentUri": {
-    "message": "Current URL",
-    "description": "The URL of one of the current open tabs in the browser."
+    "message": "Trenutni URI",
+    "description": "The URI of one of the current open tabs in the browser."
   },
   "organization": {
-    "message": "Team",
-    "description": "An entity of multiple related people (ex. a team or business team)."
+    "message": "Organizacija",
+    "description": "An entity of multiple related people (ex. a team or business organization)."
   },
   "types": {
-    "message": "Types"
+    "message": "Tipi"
   },
   "allItems": {
-    "message": "All Items"
+    "message": "All items"
   },
   "noPasswordsInList": {
     "message": "There are no passwords to list."
   },
   "remove": {
-    "message": "Remove"
+    "message": "Odstrani"
   },
   "default": {
-    "message": "Default"
+    "message": "Privzeto"
   },
   "dateUpdated": {
-    "message": "Updated",
+    "message": "Posodobljeno",
     "description": "ex. Date this item was updated"
   },
+  "dateCreated": {
+    "message": "Created",
+    "description": "ex. Date this item was created"
+  },
   "datePasswordUpdated": {
-    "message": "Password Updated",
+    "message": "Password updated",
     "description": "ex. Date this password was updated"
   },
   "neverLockWarning": {
     "message": "Are you sure you want to use the \"Never\" option? Setting your lock options to \"Never\" stores your vault's encryption key on your device. If you use this option you should ensure that you keep your device properly protected."
   },
   "noOrganizationsList": {
-    "message": "You do not belong to any teams. Teams allow you to securely share items with other users."
+    "message": "You do not belong to any organizations. Organizations allow you to securely share items with other users."
   },
   "noCollectionsInList": {
     "message": "There are no collections to list."
   },
   "ownership": {
-    "message": "Ownership"
+    "message": "Lastništvo"
   },
   "whoOwnsThisItem": {
     "message": "Who owns this item?"
   },
   "strong": {
-    "message": "Strong",
+    "message": "Močno",
     "description": "ex. A strong password. Scale: Weak -> Good -> Strong"
   },
   "good": {
-    "message": "Good",
+    "message": "Dobro",
     "description": "ex. A good password. Scale: Weak -> Good -> Strong"
   },
   "weak": {
-    "message": "Weak",
+    "message": "Šibko",
     "description": "ex. A weak password. Scale: Weak -> Good -> Strong"
   },
   "weakMasterPassword": {
-    "message": "Weak Master Password"
+    "message": "Šibko glavno geslo"
   },
   "weakMasterPasswordDesc": {
-    "message": "The master password you have chosen is weak. You should use a strong master password (or a passphrase) to properly protect your Bravura Safe account. Are you sure you want to use this master password?"
+    "message": "The master password you have chosen is weak. You should use a strong master password (or a passphrase) to properly protect your Bitwarden account. Are you sure you want to use this master password?"
   },
   "pin": {
     "message": "PIN",
     "description": "PIN code. Ex. The short code (often numeric) that you use to unlock a device."
   },
   "unlockWithPin": {
-    "message": "Unlock with PIN"
+    "message": "Odkleni s PIN kodo"
   },
   "setYourPinCode": {
-    "message": "Set your PIN code for unlocking Bravura Safe. Your PIN settings will be reset if you ever fully log out of the application."
+    "message": "Set your PIN code for unlocking Bitwarden. Your PIN settings will be reset if you ever fully log out of the application."
   },
   "pinRequired": {
-    "message": "PIN code is required."
+    "message": "Potrebna je PIN koda."
   },
   "invalidPin": {
-    "message": "Invalid PIN code."
+    "message": "Nepravilna PIN koda."
   },
   "unlockWithBiometrics": {
-    "message": "Unlock with biometrics"
+    "message": "Prijava z biometriko"
   },
   "awaitDesktop": {
     "message": "Awaiting confirmation from desktop"
   },
   "awaitDesktopDesc": {
-    "message": "Please confirm using biometrics in the Bravura Safe Desktop application to enable biometrics for browser."
+    "message": "Please confirm using biometrics in the Bitwarden desktop application to set up biometrics for browser."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Lock with master password on browser restart"
@@ -1383,66 +1390,66 @@
     "message": "You must select at least one collection."
   },
   "cloneItem": {
-    "message": "Clone Item"
+    "message": "Clone item"
   },
   "clone": {
-    "message": "Clone"
+    "message": "Kloniraj"
   },
   "passwordGeneratorPolicyInEffect": {
-    "message": "One or more team policies are affecting your generator settings."
+    "message": "One or more organization policies are affecting your generator settings."
   },
   "vaultTimeoutAction": {
-    "message": "Safe timeout action"
+    "message": "Vault timeout action"
   },
   "lock": {
-    "message": "Lock",
+    "message": "Zakleni",
     "description": "Verb form: to make secure or inaccesible by"
   },
   "trash": {
-    "message": "Trash",
+    "message": "Koš",
     "description": "Noun: a special folder to hold deleted items"
   },
   "searchTrash": {
-    "message": "Search trash"
+    "message": "Preišči koš"
   },
   "permanentlyDeleteItem": {
-    "message": "Permanently Delete Item"
+    "message": "Permanently delete item"
   },
   "permanentlyDeleteItemConfirmation": {
     "message": "Are you sure you want to permanently delete this item?"
   },
   "permanentlyDeletedItem": {
-    "message": "Permanently Deleted item"
+    "message": "Item permanently deleted"
   },
   "restoreItem": {
-    "message": "Restore Item"
+    "message": "Restore item"
   },
   "restoreItemConfirmation": {
     "message": "Are you sure you want to restore this item?"
   },
   "restoredItem": {
-    "message": "Restored Item"
+    "message": "Item restored"
   },
   "vaultTimeoutLogOutConfirmation": {
     "message": "Logging out will remove all access to your vault and requires online authentication after the timeout period. Are you sure you want to use this setting?"
   },
   "vaultTimeoutLogOutConfirmationTitle": {
-    "message": "Timeout Action Confirmation"
+    "message": "Timeout action confirmation"
   },
   "autoFillAndSave": {
-    "message": "Auto-fill and Save"
+    "message": "Auto-fill and save"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "Auto-filled Item and Saved URL"
+    "message": "Item auto-filled and URI saved"
   },
   "autoFillSuccess": {
-    "message": "Auto-filled Item"
+    "message": "Item auto-filled "
   },
   "setMasterPassword": {
-    "message": "Set Master Password"
+    "message": "Nastavi glavno geslo"
   },
   "masterPasswordPolicyInEffect": {
-    "message": "One or more team policies require your master password to meet the following requirements:"
+    "message": "One or more organization policies require your master password to meet the following requirements:"
   },
   "policyInEffectMinComplexity": {
     "message": "Minimum complexity score of $SCORE$",
@@ -1486,20 +1493,20 @@
   "acceptPolicies": {
     "message": "By checking this box you agree to the following:"
   },
-  "acceptPoliciesError": {
+  "acceptPoliciesRequired": {
     "message": "Terms of Service and Privacy Policy have not been acknowledged."
   },
   "termsOfService": {
     "message": "Terms of Service"
   },
   "privacyPolicy": {
-    "message": "Privacy Policy"
+    "message": "Pravilnik o zasebnosti"
   },
   "hintEqualsPassword": {
     "message": "Your password hint cannot be the same as your password."
   },
   "ok": {
-    "message": "Ok"
+    "message": "V redu"
   },
   "desktopSyncVerificationTitle": {
     "message": "Desktop sync verification"
@@ -1508,19 +1515,19 @@
     "message": "Please verify that the desktop application shows this fingerprint: "
   },
   "desktopIntegrationDisabledTitle": {
-    "message": "Browser integration is not enabled"
+    "message": "Browser integration is not set up"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "Browser integration is not enabled in the Bravura Safe Desktop application. Please enable it in the settings within the desktop application."
+    "message": "Browser integration is not set up in the Bitwarden desktop application. Please set it up in the settings within the desktop application."
   },
   "startDesktopTitle": {
-    "message": "Start the Bravura Safe Desktop application"
+    "message": "Start the Bitwarden desktop application"
   },
   "startDesktopDesc": {
-    "message": "The Bravura Safe Desktop application needs to be started before unlock with biometrics can be used."
+    "message": "The Bitwarden desktop application needs to be started before unlock with biometrics can be used."
   },
   "errorEnableBiometricTitle": {
-    "message": "Unable to enable biometrics"
+    "message": "Unable to set up biometrics"
   },
   "errorEnableBiometricDesc": {
     "message": "Action was canceled by the desktop application"
@@ -1538,10 +1545,10 @@
     "message": "Account missmatch"
   },
   "biometricsNotEnabledTitle": {
-    "message": "Biometrics not enabled"
+    "message": "Biometrics not set up"
   },
   "biometricsNotEnabledDesc": {
-    "message": "Browser biometrics requires desktop biometric to be enabled in the settings first."
+    "message": "Browser biometrics requires desktop biometric to be set up in the settings first."
   },
   "biometricsNotSupportedTitle": {
     "message": "Biometrics not supported"
@@ -1553,7 +1560,7 @@
     "message": "Permission not provided"
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "Without permission to communicate with the Bravura Safe Desktop Application we cannot provide biometrics in the browser extension. Please try again."
+    "message": "Without permission to communicate with the Bitwarden Desktop Application we cannot provide biometrics in the browser extension. Please try again."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Permission request error"
@@ -1562,16 +1569,16 @@
     "message": "This action cannot be done in the sidebar, please retry the action in the popup or popout."
   },
   "personalOwnershipSubmitError": {
-    "message": "Due to an Enterprise Policy, you are restricted from saving items to your personal vault. Change the Ownership option to a team and choose from available Collections."
+    "message": "Due to an Enterprise Policy, you are restricted from saving items to your personal vault. Change the Ownership option to an organization and choose from available collections."
   },
   "personalOwnershipPolicyInEffect": {
-    "message": "A team policy is affecting your ownership options."
+    "message": "An organization policy is affecting your ownership options."
   },
   "excludedDomains": {
     "message": "Excluded domains"
   },
   "excludedDomainsDesc": {
-    "message": "Bravura Safe will not ask to save login details for these domains. You must refresh the page for changes to take effect."
+    "message": "Bitwarden will not ask to save login details for these domains. You must refresh the page for changes to take effect."
   },
   "excludedDomainsInvalidDomain": {
     "message": "$DOMAIN$ is not a valid domain",
@@ -1583,33 +1590,33 @@
     }
   },
   "send": {
-    "message": "Share",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Pošlji",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "searchSends": {
     "message": "Search Sends",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "addSend": {
-    "message": "Add Share",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Add Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendTypeText": {
-    "message": "Text"
+    "message": "Besedilo"
   },
   "sendTypeFile": {
-    "message": "File"
+    "message": "Datoteka"
   },
   "allSends": {
     "message": "All Sends",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "Max access count reached",
     "description": "This text will be displayed after a Send has been accessed the maximum amount of times."
   },
   "expired": {
-    "message": "Expired"
+    "message": "Poteklo"
   },
   "pendingDeletion": {
     "message": "Pending deletion"
@@ -1618,74 +1625,74 @@
     "message": "Password protected"
   },
   "copySendLink": {
-    "message": "Copy Share link",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Copy Send link",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "removePassword": {
     "message": "Remove Password"
   },
   "delete": {
-    "message": "Delete"
+    "message": "Izbriši"
   },
   "removedPassword": {
-    "message": "Removed Password"
+    "message": "Password removed"
   },
   "deletedSend": {
-    "message": "Deleted Share",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Send deleted",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendLink": {
-    "message": "Share link",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Pošlji povezavo",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "disabled": {
-    "message": "Disabled"
+    "message": "Onemogočeno"
   },
   "removePasswordConfirmation": {
     "message": "Are you sure you want to remove the password?"
   },
   "deleteSend": {
-    "message": "Delete Share",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Delete Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "deleteSendConfirmation": {
-    "message": "Are you sure you want to delete this Share?",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Are you sure you want to delete this Send?",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "editSend": {
-    "message": "Edit Share",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Edit Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendTypeHeader": {
-    "message": "What type of Share is this?",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "What type of Send is this?",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendNameDesc": {
-    "message": "A friendly name to describe this Share.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "A friendly name to describe this Send.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendFileDesc": {
     "message": "The file you want to send."
   },
   "deletionDate": {
-    "message": "Deletion Date"
+    "message": "Deletion date"
   },
   "deletionDateDesc": {
-    "message": "The Share will be permanently deleted on the specified date and time.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "The Send will be permanently deleted on the specified date and time.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "expirationDate": {
-    "message": "Expiration Date"
+    "message": "Expiration date"
   },
   "expirationDateDesc": {
-    "message": "If set, access to this Share will expire on the specified date and time.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "If set, access to this Send will expire on the specified date and time.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "oneDay": {
-    "message": "1 day"
+    "message": "1 dan"
   },
   "days": {
-    "message": "$DAYS$ days",
+    "message": "$DAYS$ dni",
     "placeholders": {
       "days": {
         "content": "$1",
@@ -1700,57 +1707,57 @@
     "message": "Maximum Access Count"
   },
   "maximumAccessCountDesc": {
-    "message": "If set, users will no longer be able to access this Share once the maximum access count is reached.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "If set, users will no longer be able to access this Send once the maximum access count is reached.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendPasswordDesc": {
-    "message": "Optionally require a password for users to access this Share.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Optionally require a password for users to access this Send.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "Private notes about this Share.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Private notes about this Send.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendDisableDesc": {
-    "message": "Disable this Share so that no one can access it.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Deactivate this Send so that no one can access it.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendShareDesc": {
-    "message": "Copy this Share's link to clipboard upon save.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Copy this Send's link to clipboard upon save.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "The text you want to send."
   },
   "sendHideText": {
-    "message": "Hide this Share's text by default.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Hide this Send's text by default.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "currentAccessCount": {
-    "message": "Current Access Count"
+    "message": "Current access count"
   },
   "createSend": {
-    "message": "Create New Share",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "New Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "newPassword": {
-    "message": "New Password"
+    "message": "New password"
   },
   "sendDisabled": {
-    "message": "Share Disabled",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Send removed",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "Due to an enterprise policy, you are only able to delete an existing Share.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Due to an enterprise policy, you are only able to delete an existing Send.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "createdSend": {
-    "message": "Created Share",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Send created",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "editedSend": {
-    "message": "Edited Share",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Send saved",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendLinuxChromiumFileWarning": {
     "message": "In order to choose a file, open the extension in the sidebar (if possible) or pop out to a new window by clicking this banner."
@@ -1795,7 +1802,7 @@
     "message": "Hide my email address from recipients."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "One or more team policies are affecting your Share options."
+    "message": "One or more organization policies are affecting your Send options."
   },
   "passwordPrompt": {
     "message": "Master password re-prompt"
@@ -1807,25 +1814,25 @@
     "message": "This action is protected. To continue, please re-enter your master password to verify your identity."
   },
   "emailVerificationRequired": {
-    "message": "Email Verification Required"
+    "message": "Email verification required"
   },
   "emailVerificationRequiredDesc": {
     "message": "You must verify your email to use this feature. You can verify your email in the web vault."
   },
   "updatedMasterPassword": {
-    "message": "Updated Master Password"
+    "message": "Updated master password"
   },
   "updateMasterPassword": {
-    "message": "Update Master Password"
+    "message": "Update master password"
   },
   "updateMasterPasswordWarning": {
-    "message": "Your Master Password was recently changed by an administrator in your team. In order to access the vault, you must update it now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
+    "message": "Your master password was recently changed by an administrator in your organization. In order to access the vault, you must update it now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
   },
   "resetPasswordPolicyAutoEnroll": {
-    "message": "Automatic Enrollment"
+    "message": "Automatic enrollment"
   },
   "resetPasswordAutoEnrollInviteWarning": {
-    "message": "This team has an enterprise policy that will automatically enroll you in password reset. Enrollment will allow team administrators to change your master password."
+    "message": "This organization has an enterprise policy that will automatically enroll you in password reset. Enrollment will allow organization administrators to change your master password."
   },
   "selectFolder": {
     "message": "Select folder..."
@@ -1834,13 +1841,13 @@
     "message": "In order to complete logging in with SSO, please set a master password to access and protect your vault."
   },
   "hours": {
-    "message": "Hours"
+    "message": "Ur"
   },
   "minutes": {
-    "message": "Minutes"
+    "message": "Minut"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Your team policies are affecting your vault timeout. Maximum allowed Safe Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
+    "message": "Your organization policies are affecting your vault timeout. Maximum allowed Vault Timeout is $HOURS$ hour(s) and $MINUTES$ minute(s)",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1852,14 +1859,14 @@
       }
     }
   },
-  "vaultTimeoutToLarge": {
-    "message": "Your vault timeout exceeds the restrictions set by your team."
+  "vaultTimeoutTooLarge": {
+    "message": "Your vault timeout exceeds the restrictions set by your organization."
   },
   "vaultExportDisabled": {
-    "message": "Safe Export Disabled"
+    "message": "Vault export unavailable"
   },
   "personalVaultExportPolicyInEffect": {
-    "message": "One or more team policies prevents you from exporting your personal vault."
+    "message": "One or more organization policies prevents you from exporting your individual vault."
   },
   "copyCustomFieldNameInvalidElement": {
     "message": "Unable to identify a valid form element. Try inspecting the HTML instead."
@@ -1868,7 +1875,7 @@
     "message": "No unique identifier found."
   },
   "convertOrganizationEncryptionDesc": {
-    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this team.",
+    "message": "$ORGANIZATION$ is using SSO with a self-hosted key server. A master password is no longer required to log in for members of this organization.",
     "placeholders": {
       "organization": {
         "content": "$1",
@@ -1877,19 +1884,19 @@
     }
   },
   "leaveOrganization": {
-    "message": "Leave Team"
+    "message": "Leave organization"
   },
   "removeMasterPassword": {
-    "message": "Remove Master Password"
+    "message": "Remove master password"
   },
   "removedMasterPassword": {
-    "message": "Master password removed."
+    "message": "Master password removed"
   },
   "leaveOrganizationConfirmation": {
-    "message": "Are you sure you want to leave this team?"
+    "message": "Are you sure you want to leave this organization?"
   },
   "leftOrganization": {
-    "message": "You have left the team."
+    "message": "You have left the organization."
   },
   "toggleCharacterCount": {
     "message": "Toggle character count"
@@ -1898,10 +1905,10 @@
     "message": "Your session has timed out. Please go back and try logging in again."
   },
   "exportingPersonalVaultTitle": {
-    "message": "Exporting Personal Vault"
+    "message": "Exporting individual vault"
   },
   "exportingPersonalVaultDescription": {
-    "message": "Only the personal vault items associated with $EMAIL$ will be exported. Organization vault items will not be included.",
+    "message": "Only the individual vault items associated with $EMAIL$ will be exported. Organization vault items will not be included.",
     "placeholders": {
       "email": {
         "content": "$1",
@@ -1910,50 +1917,50 @@
     }
   },
   "error": {
-    "message": "Error"
+    "message": "Napaka"
   },
   "regenerateUsername": {
-    "message": "Regenerate Username"
+    "message": "Regenerate username"
   },
   "generateUsername": {
-    "message": "Generate Username"
+    "message": "Generate username"
   },
   "usernameType": {
-    "message": "Username Type"
+    "message": "Username type"
   },
   "plusAddressedEmail": {
-    "message": "Plus Addressed Email",
+    "message": "Plus addressed email",
     "description": "Username generator option that appends a random sub-address to the username. For example: address+subaddress@email.com"
   },
   "plusAddressedEmailDesc": {
     "message": "Use your email provider's sub-addressing capabilities."
   },
   "catchallEmail": {
-    "message": "Catch-all Email"
+    "message": "Catch-all email"
   },
   "catchallEmailDesc": {
     "message": "Use your domain's configured catch-all inbox."
   },
   "random": {
-    "message": "Random"
+    "message": "Naključno"
   },
   "randomWord": {
-    "message": "Random Word"
+    "message": "Naključna beseda"
   },
   "websiteName": {
-    "message": "Website Name"
+    "message": "Ime spletne strani"
   },
   "whatWouldYouLikeToGenerate": {
     "message": "What would you like to generate?"
   },
   "passwordType": {
-    "message": "Password Type"
+    "message": "Password type"
   },
   "service": {
     "message": "Service"
   },
   "forwardedEmail": {
-    "message": "Forwarded Email Alias"
+    "message": "Forwarded email alias"
   },
   "forwardedEmailDesc": {
     "message": "Generate an email alias with an external forwarding service."
@@ -1969,6 +1976,78 @@
     "message": "API Key"
   },
   "ssoKeyConnectorError": {
-    "message": "Key Connector error: make sure Key Connector is available and working correctly."
+    "message": "Key connector error: make sure key connector is available and working correctly."
+  },
+  "premiumSubcriptionRequired": {
+    "message": "Premium subscription required"
+  },
+  "organizationIsDisabled": {
+    "message": "Organization suspended."
+  },
+  "disabledOrganizationFilterError": {
+    "message": "Items in suspended Organizations cannot be accessed. Contact your Organization owner for assistance."
+  },
+  "cardBrandMir": {
+    "message": "Mir"
+  },
+  "loggingInTo": {
+    "message": "Logging in to $DOMAIN$",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+  "settingsEdited": {
+    "message": "Settings have been edited"
+  },
+  "environmentEditedClick": {
+    "message": "Kliknite tukaj"
+  },
+  "environmentEditedReset": {
+    "message": "to reset to pre-configured settings"
+  },
+  "serverVersion": {
+    "message": "Verzija strežnika"
+  },
+  "selfHosted": {
+    "message": "Self-hosted"
+  },
+  "thirdParty": {
+    "message": "Third-party"
+  },
+  "thirdPartyServerMessage": {
+    "message": "Connected to third-party server implementation, $SERVERNAME$. Please verify bugs using the official server, or report them to the third-party server.",
+    "placeholders": {
+      "servername": {
+        "content": "$1",
+        "example": "ThirdPartyServerName"
+      }
+    }
+  },
+  "lastSeenOn": {
+    "message": "last seen on: $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "Jun 15, 2015"
+      }
+    }
+  },
+  "loginWithMasterPassword": {
+    "message": "Log in with master password"
+  },
+  "loggingInAs": {
+    "message": "Logging in as"
+  },
+  "notYou": {
+    "message": "Niste vi?"
+  },
+  "newAroundHere": {
+    "message": "New around here?"
+  },
+  "rememberEmail": {
+    "message": "Zapomni si e-pošto"
   }
 }

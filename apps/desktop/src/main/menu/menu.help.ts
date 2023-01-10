@@ -49,7 +49,7 @@ export class HelpMenu implements IMenubarMenu {
     return {
       id: "getHelp",
       label: this.localize("getHelp"),
-      click: () => shell.openExternal("https://docs.hitachi-id.net/safe/#/home/2202/10/11"),
+      click: () => shell.openExternal("https://bravurasecuritydocs.com/safe/#/home/2202/10/11"),
     };
   }
 
@@ -118,6 +118,11 @@ export class HelpMenu implements IMenubarMenu {
         id: "github",
         label: "GitHub",
         click: () => shell.openExternal("https://github.com/bitwarden"),
+      },
+      {
+        id: "mastodon",
+        label: "Mastodon",
+        click: () => shell.openExternal("https://fosstodon.org/@bitwarden"),
       },
     ];
   }

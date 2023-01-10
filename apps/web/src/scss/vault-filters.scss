@@ -184,6 +184,10 @@ ul.filter-options li.filter-option {
     @extend .no-btn;
   }
 
+  .contents {
+    display: contents;
+  }
+
   .toggle-button {
     &:hover,
     &:focus {
@@ -194,6 +198,9 @@ ul.filter-options li.filter-option {
   }
 
   .filter-button {
+    max-width: 90%;
+    white-space: nowrap;
+
     &:hover,
     &:focus,
     &:active {
@@ -201,6 +208,10 @@ ul.filter-options li.filter-option {
         color: themed("linkColor") !important;
       }
       text-decoration: none;
+    }
+
+    &.disabled-organization {
+      max-width: 78%;
     }
     &.flex-grow-align {
       flex-grow: 1;
@@ -221,6 +232,10 @@ ul.filter-options li.filter-option {
         color: themed("iconHover") !important;
       }
     }
+  }
+
+  .org-options {
+    padding: 0 2px;
   }
 }
 

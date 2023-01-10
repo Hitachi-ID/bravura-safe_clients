@@ -1,0 +1,72 @@
+<div class="container page-content">
+  <div class="row">
+    <div class="col-3" *ngIf="showLeftNav">
+      <div class="card" *ngIf="organization">
+        <div class="card-header">{{ "reporting" | i18n }}</div>
+        <div class="list-group list-group-flush">
+          <a
+            routerLink="events"
+            class="list-group-item"
+            routerLinkActive="active"
+            *ngIf="organization.canAccessEventLogs"
+          >
+            {{ "eventLogs" | i18n }}
+          </a>
+<!--          <a
+            routerLink="reports"
+            class="list-group-item"
+            routerLinkActive="active"
+            *ngIf="organization.canAccessReports"
+          >
+            {{ "reports" | i18n }}
+          </a>-->
+          <a
+            routerLink="reports/exposed-passwords-report"
+            class="list-group-item"
+            routerLinkActive="active"
+            *ngIf="organization.canAccessReports"
+          >
+            {{ "exposedPasswordsReport" | i18n }}
+          </a>
+          <a
+            routerLink="reports/reused-passwords-report"
+            class="list-group-item"
+            routerLinkActive="active"
+            *ngIf="organization.canAccessReports"
+          >
+            {{ "reusedPasswordsReport" | i18n }}
+          </a>
+          <a
+            routerLink="reports/weak-passwords-report"
+            class="list-group-item"
+            routerLinkActive="active"
+            *ngIf="organization.canAccessReports"
+          >
+            {{ "weakPasswordsReport" | i18n }}
+          </a>
+          <a
+            routerLink="reports/unsecured-websites-report"
+            class="list-group-item"
+            routerLinkActive="active"
+            *ngIf="organization.canAccessReports"
+          >
+            {{ "unsecuredWebsitesReport" | i18n }}
+          </a>
+          <a
+            routerLink="reports/inactive-two-factor-report"
+            class="list-group-item"
+            routerLinkActive="active"
+            *ngIf="organization.canAccessReports"
+          >
+            {{ "inactive2faReport" | i18n }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-9" [ngClass]="showLeftNav ? 'col-9' : 'col-12'">
+      <router-outlet></router-outlet>
+      <div class="vertical-spacer"></div>
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>

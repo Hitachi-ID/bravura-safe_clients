@@ -3,10 +3,10 @@ import { ActivatedRoute } from "@angular/router";
 
 import { ModalService } from "@bitwarden/angular/services/modal.service";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
-import { OrganizationService } from "@bitwarden/common/abstractions/organization.service";
+import { OrganizationService } from "@bitwarden/common/abstractions/organization/organization.service.abstraction";
 import { StateService } from "@bitwarden/common/abstractions/state.service";
-import { PolicyService } from "@bitwarden/common/abstractions/policy.service";
-import { EnrollMasterPasswordReset } from "../../modules/organizations/users/enroll-master-password-reset.component";
+import { PolicyService } from "@bitwarden/common/abstractions/policy/policy.service.abstraction";
+import { EnrollMasterPasswordReset } from "../../organizations/users/enroll-master-password-reset.component";
 import { Organization } from "@bitwarden/common/models/domain/organization";
 import { PolicyType } from "@bitwarden/common/enums/policyType";
 import { Policy } from "@bitwarden/common/models/domain/policy";
@@ -48,7 +48,7 @@ export class AccountComponent {
         if( organizationUsers!=null && organizationUsers.length == 1 )
           this.organizationUser = organizationUsers[0];
         else
-          throw new Error( "Error when trying to find user in organization" );
+          throw new Error( "Error when trying to find user in team" );
         this.policies = await this.policyService.getAll( PolicyType.ResetPassword );
        } catch( e ){
       this.logService.error( e );

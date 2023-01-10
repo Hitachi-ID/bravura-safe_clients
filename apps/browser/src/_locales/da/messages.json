@@ -1,13 +1,13 @@
 {
   "appName": {
-    "message": "Bravura Safe"
+    "message": "Bitwarden"
   },
   "extName": {
-    "message": "Bravura Safe - Adgangskodemanager",
+    "message": "Bitwarden - Gratis adgangskodemanager",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
-    "message": "En sikker og adgangskodemanager til alle dine enheder.",
+    "message": "En sikker og gratis adgangskodemanager til alle dine enheder.",
     "description": "Extension description"
   },
   "loginOrCreateNewAccount": {
@@ -20,7 +20,7 @@
     "message": "Log ind"
   },
   "enterpriseSingleSignOn": {
-    "message": "Virksomheds Single Sign On"
+    "message": "Virksomheds Single-Sign-On"
   },
   "cancel": {
     "message": "Annullér"
@@ -44,7 +44,7 @@
     "message": "Et tip til hovedadgangskoden kan hjælpe dig med at huske din adgangskode, hvis du glemmer den."
   },
   "reTypeMasterPass": {
-    "message": "Bekræft hovedadgangskode"
+    "message": "Indtast hovedadgangskode igen"
   },
   "masterPassHint": {
     "message": "Hovedadgangskodetip (valgfrit)"
@@ -77,7 +77,7 @@
     "message": "Kopiér notat"
   },
   "copyUri": {
-    "message": "Kopiér URL"
+    "message": "Kopiér URI"
   },
   "copyUsername": {
     "message": "Kopiér brugernavn"
@@ -98,7 +98,7 @@
     "message": "Kopiér brugerdefineret feltnavn"
   },
   "noMatchingLogins": {
-    "message": "Ingen matchende logins."
+    "message": "Ingen matchende logins"
   },
   "unlockVaultMenu": {
     "message": "Lås din boks op"
@@ -215,10 +215,10 @@
     "message": "Opret automatisk stærke, unikke adgangskoder til dine logins."
   },
   "bitWebVault": {
-    "message": "Bravura Safe web-boks"
+    "message": "Bitwarden web-boks"
   },
   "importItems": {
-    "message": "Importer elementer"
+    "message": "Importér elementer"
   },
   "select": {
     "message": "Vælg"
@@ -245,7 +245,7 @@
     "message": "Tal (0-9)"
   },
   "specialCharacters": {
-    "message": "Specielle tegn (!@#$%^&*)"
+    "message": "Specialtegn (!@#$%^&*)"
   },
   "numWords": {
     "message": "Antal ord"
@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bravurasecurity.com"
+        "example": "bitwarden.com"
       }
     }
   },
@@ -423,11 +423,14 @@
   "invalidEmail": {
     "message": "Ugyldig e-mailadresse."
   },
-  "masterPassRequired": {
+  "masterPasswordRequired": {
     "message": "Hovedadgangskode er påkrævet."
   },
-  "masterPassLength": {
-    "message": "Hovedadgangskoden skal være på mindst 8 tegn."
+  "confirmMasterPasswordRequired": {
+    "message": "Hovedadgangskode kræves angivet igen."
+  },
+  "masterPasswordMinlength": {
+    "message": "Hovedadgangskode skal være mindst 8 tegn."
   },
   "masterPassDoesntMatch": {
     "message": "De to adgangskoder matcher ikke."
@@ -479,25 +482,25 @@
     "message": "Navn er påkrævet."
   },
   "addedFolder": {
-    "message": "Tilføjede mappe"
+    "message": "Mappe tilføjet"
   },
   "changeMasterPass": {
     "message": "Skift hovedadgangskode"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Du kan ændre din hovedadgangskode i Bravura Safe web-boksen. Vil du besøge hjemmesiden nu?"
+    "message": "Du kan ændre din hovedadgangskode i bitwarden.com web-boksen. Vil du besøge hjemmesiden nu?"
   },
   "twoStepLoginConfirmation": {
-    "message": "To-trins login gør din konto mere sikker ved at kræve, at du verificerer dit login med en anden enhed, med en sikkerhedsnøgle, autentificerings app, SMS, telefonopkald eller e-mail. To-trins login kan aktiveres i Bravura Safe web-boksen. Vil du besøge hjemmesiden nu?"
+    "message": "To-trins login gør din konto mere sikker ved at kræve, at du verificerer dit login med en anden enhed, såsom en sikkerhedsnøgle, autentificeringsapp, SMS, telefonopkald eller e-mail. To-trins login kan aktiveres i bitwarden.com web-boksen. Vil du besøge hjemmesiden nu?"
   },
   "editedFolder": {
-    "message": "Redigerede mappe"
+    "message": "Mappe gemt"
   },
   "deleteFolderConfirmation": {
     "message": "Er du sikker på du vil slette denne mappe?"
   },
   "deletedFolder": {
-    "message": "Slettede mappe"
+    "message": "Mappe slettet"
   },
   "gettingStartedTutorial": {
     "message": "Sådan kommer du i gang"
@@ -515,11 +518,11 @@
     "message": "Adgangskode kopieret"
   },
   "uri": {
-    "message": "URL"
+    "message": "URI"
   },
   "uriPosition": {
-    "message": "URL $POSITION$",
-    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
+    "message": "URI $POSITION$",
+    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -528,13 +531,13 @@
     }
   },
   "newUri": {
-    "message": "Ny URL"
+    "message": "Ny URI"
   },
   "addedItem": {
-    "message": "Tilføjede element"
+    "message": "Element tilføjet"
   },
   "editedItem": {
-    "message": "Redigerede element"
+    "message": "Element gemt"
   },
   "deleteItemConfirmation": {
     "message": "Er du sikker på, at du sende til papirkurven?"
@@ -568,22 +571,22 @@
     "description": "This is the folder for uncategorized items"
   },
   "enableAddLoginNotification": {
-    "message": "Ask to add login"
+    "message": "Spørg om at tilføje login"
   },
   "addLoginNotificationDesc": {
-    "message": "\"Tilføj login notifikation\" spørger dig automatisk om du vil gemme nye logins til din boks, når du logger ind med dem for første gang."
+    "message": "Spørg om at tilføje et element, hvis et ikke findes i din boks."
   },
   "showCardsCurrentTab": {
-    "message": "Show cards on Tab page"
+    "message": "Vis kort på fanebladet"
   },
   "showCardsCurrentTabDesc": {
-    "message": "List card items on the Tab page for easy auto-fill."
+    "message": "Vis kortelementer på fanebladet for nem auto-udfyldning."
   },
   "showIdentitiesCurrentTab": {
-    "message": "Show identities on Tab page"
+    "message": "Vis identiteter på fanebladet"
   },
   "showIdentitiesCurrentTabDesc": {
-    "message": "List identity items on the Tab page for easy auto-fill."
+    "message": "Vis identitetselementer på fanebladet for nem auto-udfyldning."
   },
   "clearClipboard": {
     "message": "Ryd udklipsholder",
@@ -594,35 +597,35 @@
     "description": "Clipboard is the operating system thing where you copy/paste data to on your device."
   },
   "notificationAddDesc": {
-    "message": "Skal Bravura Safe huske denne adgangskode for dig?"
+    "message": "Skal Bitwarden huske denne adgangskode for dig?"
   },
   "notificationAddSave": {
     "message": "Gem"
   },
   "enableChangedPasswordNotification": {
-    "message": "Ask to update existing login"
+    "message": "Bed om at opdatere eksisterende login"
   },
   "changedPasswordNotificationDesc": {
-    "message": "Ask to update a login's password when a change is detected on a website."
+    "message": "Bed om at opdatere et logins adgangskode, når der registreres en ændring på en hjemmeside."
   },
   "notificationChangeDesc": {
-    "message": "Vil du opdatere denne adgangskode i Bravura Safe?"
+    "message": "Vil du opdatere denne adgangskode i Bitwarden?"
   },
   "notificationChangeSave": {
     "message": "Opdatér"
   },
   "enableContextMenuItem": {
-    "message": "Show context menu options"
+    "message": "Vis indstillinger i kontekstmenuen"
   },
   "contextMenuItemDesc": {
-    "message": "Use a secondary click to access password generation and matching logins for the website. "
+    "message": "Brug et sekundært klik for at få adgang til adgangskodegenerering og matchende logins til hjemmesiden."
   },
   "defaultUriMatchDetection": {
-    "message": "Standard URL matchmetode",
-    "description": "Default URL match detection for auto-fill."
+    "message": "Standard URI matchmetode",
+    "description": "Default URI match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "Vælg den standard måde, som URL matchmetode håndteres til logins, når du udfører handlinger som f.eks. Auto-udfyld."
+    "message": "Vælg den standard måde, som URI matchmetode håndteres til logins, når du udfører handlinger som f.eks. Auto-udfyld."
   },
   "theme": {
     "message": "Tema"
@@ -662,7 +665,7 @@
     "message": "Denne eksport krypterer dine data vha. din kontos krypteringsnøgle. Roterer du på et tidspunkt denne kontokrypteringsnøgle, skal du eksportere igen, da du ikke vil kunne dekryptere denne eksportfil."
   },
   "encExportAccountWarningDesc": {
-    "message": "Kontokrypteringsnøgler er unikke for hver Bravura Safe-brugerkonto, så du kan ikke importere en krypteret eksport til en anden konto."
+    "message": "Kontokrypteringsnøgler er unikke for hver Bitwarden-brugerkonto, så du kan ikke importere en krypteret eksport til en anden konto."
   },
   "exportMasterPassword": {
     "message": "Indtast din hovedadgangskode for at eksportere dine data fra boksen."
@@ -674,7 +677,7 @@
     "message": "Få mere at vide om organisationer"
   },
   "learnOrgConfirmation": {
-    "message": "Bravura Safe giver dig mulighed for at dele elementer i din boks med andre ved hjælp af en organisation. Vil du besøge Bravura Safe-webstedet for at få mere at vide?"
+    "message": "Bitwarden giver dig mulighed for at dele elementer i din boks med andre ved hjælp af en organisation. Vil du besøge bitwarden.com-webstedet for at få mere at vide?"
   },
   "moveToOrganization": {
     "message": "Flyt til organisation"
@@ -720,7 +723,7 @@
     "message": "Er du sikker på du vil slette denne vedhæftning?"
   },
   "deletedAttachment": {
-    "message": "Slettet vedhæftning"
+    "message": "Vedhæftning slettet"
   },
   "newAttachment": {
     "message": "Tilføj ny vedhæftning"
@@ -729,13 +732,13 @@
     "message": "Ingen vedhæftninger."
   },
   "attachmentSaved": {
-    "message": "Vedhæftningen er blevet gemt."
+    "message": "Vedhæftning gemt"
   },
   "file": {
     "message": "Fil"
   },
   "selectFile": {
-    "message": "Vælg en fil."
+    "message": "Vælg en fil"
   },
   "maxFileSize": {
     "message": "Maksimum filstørrelse er 500 MB."
@@ -753,7 +756,7 @@
     "message": "Håndtér medlemsskab"
   },
   "premiumManageAlert": {
-    "message": "Du kan håndtere dit medlemskab i bravurasecurity.com web-boksen. Vil du besøge hjemmesiden nu?"
+    "message": "Du kan håndtere dit medlemskab i bitwarden.com web-boksen. Vil du besøge hjemmesiden nu?"
   },
   "premiumRefresh": {
     "message": "Opdatér medlemskab"
@@ -780,19 +783,19 @@
     "message": "Prioriteret kundeservice."
   },
   "ppremiumSignUpFuture": {
-    "message": "Alle fremtidige premium-funktioner. Mere kommer snart!"
+    "message": "Alle fremtidige premium-funktioner. Flere kommer snart!"
   },
   "premiumPurchase": {
     "message": "Køb premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Du kan købe premium-medlemskab i bravurasecurity.com web-boksen. Vil du besøge hjemmesiden nu?"
+    "message": "Du kan købe premium-medlemskab i bitwarden.com web-boksen. Vil du besøge hjemmesiden nu?"
   },
   "premiumCurrentMember": {
     "message": "Du er premium-medlem!"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Tak fordi du støtter Bravura Safe."
+    "message": "Tak fordi du støtter Bitwarden."
   },
   "premiumPrice": {
     "message": "Alt dette for kun $PRICE$ /år!",
@@ -807,13 +810,13 @@
     "message": "Opdatering færdig"
   },
   "enableAutoTotpCopy": {
-    "message": "Copy TOTP automatically"
+    "message": "Kopiér TOTP automatisk"
   },
   "disableAutoTotpCopyDesc": {
-    "message": "Hvis dit login har en autentificeringsnøgle tilknyttet, kopieres TOTP verifikationskoden automatisk til din udklipsholder når du auto-udfylder login."
+    "message": "Hvis et login har en autentificeringsnøgle, så kopiér TOTP-bekræftelseskoden til din udklipsholder, når du auto-udfylder login."
   },
   "enableAutoBiometricsPrompt": {
-    "message": "Ask for biometrics on launch"
+    "message": "Bed om biometri ved start"
   },
   "premiumRequired": {
     "message": "Premium påkrævet"
@@ -846,7 +849,7 @@
     "message": "Husk mig"
   },
   "sendVerificationCodeEmailAgain": {
-    "message": "Share verifikationskode-email igen"
+    "message": "Send verifikationskode-email igen"
   },
   "useAnotherTwoStepMethod": {
     "message": "Brug en anden to-trins login metode"
@@ -876,7 +879,7 @@
     "message": "Du skal bruge en understøttet webbrowser (såsom Chrome) og/eller tilføje ekstra udbydere, der understøttes bedre på tværs af webbrowsere (f.eks. en autentificering app)."
   },
   "twoStepOptions": {
-    "message": "To-trins login muligheder"
+    "message": "To-trins-login indstillinger"
   },
   "recoveryCodeDesc": {
     "message": "Mistet adgang til alle dine to-faktor-udbydere? Brug din genoprettelseskode til at deaktivere alle to-faktor udbydere på din konto."
@@ -915,7 +918,7 @@
     "message": "FIDO2 WebAuthn"
   },
   "webAuthnDesc": {
-    "message": "Brug en hvilken som helst WebAuthn-aktiveret sikkerhedsnøgle til at få adgang til din konto."
+    "message": "Brug en hvilken som helst WebAuthn-kompatibel sikkerhedsnøgle til at få adgang til din konto."
   },
   "emailTitle": {
     "message": "E-mail"
@@ -927,7 +930,7 @@
     "message": "Selv-hosted miljø"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Angiv grund-URL'en i din lokal-hostede Bravura Safe-installation."
+    "message": "Angiv grund-URL'en i din lokal-hostede Bitwarden-installation."
   },
   "customEnvironment": {
     "message": "Brugerdefineret miljø"
@@ -957,10 +960,10 @@
     "message": "Miljøets URLs er blevet gemt."
   },
   "enableAutoFillOnPageLoad": {
-    "message": "Aktivér Auto-udfyld ved sideindlæsning"
+    "message": "Auto-udfyld ved sideindlæsning"
   },
   "enableAutoFillOnPageLoadDesc": {
-    "message": "Hvis en login-formular er opdaget, så udfør automatisk en auto-udfyld når hjemmesiden indlæses."
+    "message": "Hvis der registreres en loginformular, så auto-udfyld, når websiden indlæses."
   },
   "experimentalFeature": {
     "message": "Dette er i øjeblikket en eksperimentel funktion. Brug på egen risiko."
@@ -969,7 +972,7 @@
     "message": "Standardindstilling for autofyld for loginelementer"
   },
   "defaultAutoFillOnPageLoadDesc": {
-    "message": "Når du har aktiveret auto-udfyldning ved sideindlæsning, kan du aktivere eller deaktivere funktionen for individuelle loginelementer. Dette er standardindstillingen for loginelementer, der ikke er konfigureret separat."
+    "message": "Du kan deaktivere auto-udfyld ved sideindlæsning for individuelle login-elementer fra elementets redigeringsvisning."
   },
   "itemAutoFillOnPageLoad": {
     "message": "Auto-udfyld ved sideindlæsning (hvis aktiveret i Indstillinger)"
@@ -1040,19 +1043,19 @@
     "message": "Denne browser kan ikke behandle U2F-anmodninger i dette popup-vindue. Vil du åbne denne popup i et nyt vindue, så du kan logge ind ved hjælp af U2F?"
   },
   "enableFavicon": {
-    "message": "Show website icons"
+    "message": "Vis webstedsikoner"
   },
   "faviconDesc": {
-    "message": "Show a recognizable image next to each login."
+    "message": "Vis et genkendeligt billede ud for hvert login."
   },
   "enableBadgeCounter": {
-    "message": "Show badge counter"
+    "message": "Vis badge-tæller"
   },
   "badgeCounterDesc": {
-    "message": "Indicate how many logins you have for the current web page."
+    "message": "Vis hvor mange logins du har til den aktuelle webside."
   },
   "cardholderName": {
-    "message": "Kortindehaverens navn"
+    "message": "Kortholders navn"
   },
   "number": {
     "message": "Nummer"
@@ -1151,7 +1154,7 @@
     "message": "Pasnummer"
   },
   "licenseNumber": {
-    "message": "Kørekortnummer"
+    "message": "Licensnummer"
   },
   "email": {
     "message": "E-mail"
@@ -1274,26 +1277,26 @@
   },
   "matchDetection": {
     "message": "Matchmetode",
-    "description": "URL match detection for auto-fill."
+    "description": "URI match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Standard matchmetode",
-    "description": "Default URL match detection for auto-fill."
+    "description": "Default URI match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Skift indstillinger"
   },
   "toggleCurrentUris": {
-    "message": "Skift aktuelle URL'er",
-    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
+    "message": "Skift aktuelle URI'er",
+    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
   },
   "currentUri": {
-    "message": "Aktuel URL",
-    "description": "The URL of one of the current open tabs in the browser."
+    "message": "Aktuel URI",
+    "description": "The URI of one of the current open tabs in the browser."
   },
   "organization": {
     "message": "Organisation",
-    "description": "An entity of multiple related people (ex. a team or business team)."
+    "description": "An entity of multiple related people (ex. a team or business organization)."
   },
   "types": {
     "message": "Typer"
@@ -1313,6 +1316,10 @@
   "dateUpdated": {
     "message": "Opdateret",
     "description": "ex. Date this item was updated"
+  },
+  "dateCreated": {
+    "message": "Oprettet",
+    "description": "ex. Date this item was created"
   },
   "datePasswordUpdated": {
     "message": "Adgangskode opdateret",
@@ -1349,7 +1356,7 @@
     "message": "Svag hovedadgangskode"
   },
   "weakMasterPasswordDesc": {
-    "message": "Hovedadgangskoden du har valgt er svag. Du skal bruge en stærk hovedadgangskode (eller en adgangssætning) for at beskytte din Bravura Safe-konto korrekt. Er du sikker på, at du vil bruge denne hovedadgangskode?"
+    "message": "Hovedadgangskoden du har valgt er svag. Du skal bruge en stærk hovedadgangskode (eller en adgangssætning) for at beskytte din Bitwarden-konto korrekt. Er du sikker på, at du vil bruge denne hovedadgangskode?"
   },
   "pin": {
     "message": "Pinkode",
@@ -1359,7 +1366,7 @@
     "message": "Lås op med pinkode"
   },
   "setYourPinCode": {
-    "message": "Indstil din pinkode til at låse Bravura Safe op. Dine pin-indstillinger nulstilles, hvis du nogensinde logger helt ud af programmet."
+    "message": "Indstil din pinkode til at låse Bitwarden op. Dine pin-indstillinger nulstilles, hvis du nogensinde logger helt ud af programmet."
   },
   "pinRequired": {
     "message": "Pinkode er påkrævet."
@@ -1374,7 +1381,7 @@
     "message": "Afventer bekræftelse fra skrivebordet"
   },
   "awaitDesktopDesc": {
-    "message": "Bekræft venligst brug af biometri i Bravura Safe skrivebordsapplikationen for at aktivere biometri for browseren."
+    "message": "Bekræft venligst brug af biometri i Bitwarden skrivebordsapplikationen for at aktivere biometri for browseren."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Lås med hovedadgangskode ved genstart af browseren"
@@ -1433,7 +1440,7 @@
     "message": "Autoudfyld og gem"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "Autoudfyldte element og URL gemt"
+    "message": "Autoudfyldte element og URI gemt"
   },
   "autoFillSuccess": {
     "message": "Autoudfyldte element"
@@ -1486,8 +1493,8 @@
   "acceptPolicies": {
     "message": "Ved at markere dette felt accepterer du følgende:"
   },
-  "acceptPoliciesError": {
-    "message": "Servicevilkår og fortrolighedspolitik er ikke blevet bekræftet."
+  "acceptPoliciesRequired": {
+    "message": "Tjenestevilkår og fortrolighedspolitik er ikke blevet accepteret."
   },
   "termsOfService": {
     "message": "Servicevilkår"
@@ -1508,16 +1515,16 @@
     "message": "Bekræft venligst at skrivebordsprogrammet viser dette fingeraftryk: "
   },
   "desktopIntegrationDisabledTitle": {
-    "message": "Browserintegration er ikke aktiveret"
+    "message": "Browserintegration er ikke konfigureret"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "Browserintegration er ikke aktiveret i Bravura Safe skrivebordsapplikationen. Aktivér det i indstillingerne i skrivebordsprogrammet."
+    "message": "Browserintegration er ikke konfigureret i Bitwarden skrivebordsapplikationen. Aktivér det i indstillingerne i skrivebordsapplikationen."
   },
   "startDesktopTitle": {
-    "message": "Start Bravura Safe skrivebordsapplikationen"
+    "message": "Start Bitwarden skrivebordsapplikationen"
   },
   "startDesktopDesc": {
-    "message": "Bravura Safe skrivebordsapplikationen skal startes, før oplåsning med biometri kan bruges."
+    "message": "Bitwarden skrivebordsapplikationen skal startes, før oplåsning med biometri kan bruges."
   },
   "errorEnableBiometricTitle": {
     "message": "Kan ikke aktivere biometri"
@@ -1541,7 +1548,7 @@
     "message": "Biometri ikke aktiveret"
   },
   "biometricsNotEnabledDesc": {
-    "message": "Browserbiometri kræver, at desktop-biometri er aktiveret i indstillingerne først."
+    "message": "Browserbiometri kræver, at skrivebords-biometri er aktiveret i indstillingerne først."
   },
   "biometricsNotSupportedTitle": {
     "message": "Biometri ikke understøttet"
@@ -1553,7 +1560,7 @@
     "message": "Tilladelse ikke givet"
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "Uden tilladelse til at kommunikere med Bravura Safe skrivebordsapplikationen kan vi ikke levere biometri i browserudvidelsen. Prøv igen."
+    "message": "Uden tilladelse til at kommunikere med Bitwarden skrivebordsapplikationen kan vi ikke levere biometri i browserudvidelsen. Prøv igen."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Fejl ved anmodning om tilladelse"
@@ -1562,7 +1569,7 @@
     "message": "Denne handling kan ikke udføres i sidebjælken, prøv handlingen igen i popup tilstand eller i et nyt vindue."
   },
   "personalOwnershipSubmitError": {
-    "message": "På grund af en virksomhedspolitik er du begrænset til at gemme elementer i din personlige boks. Skift ejerskabsindstillingen til en organisation, og vælg blandt de tilgængelige samlinger."
+    "message": "På grund af en virksomhedspolitik er du begrænset fra at gemme elementer i din personlige boks. Skift ejerskabsindstillingen til en organisation, og vælg blandt de tilgængelige samlinger."
   },
   "personalOwnershipPolicyInEffect": {
     "message": "En organisationspolitik påvirker dine ejerskabsmuligheder."
@@ -1571,7 +1578,7 @@
     "message": "Ekskluderede domæner"
   },
   "excludedDomainsDesc": {
-    "message": "Bravura Safe vil ikke bede om at gemme login-detaljer for disse domæner. Du skal opdatere siden for at ændringerne kan træde i kraft."
+    "message": "Bitwarden vil ikke bede om at gemme login-detaljer for disse domæner. Du skal opdatere siden for at ændringerne kan træde i kraft."
   },
   "excludedDomainsInvalidDomain": {
     "message": "$DOMAIN$ er ikke et gyldigt domæne",
@@ -1583,16 +1590,16 @@
     }
   },
   "send": {
-    "message": "Share",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "searchSends": {
     "message": "Søg i Sends",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "addSend": {
-    "message": "Tilføj Share",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Tilføj Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendTypeText": {
     "message": "Tekst"
@@ -1601,8 +1608,8 @@
     "message": "Fil"
   },
   "allSends": {
-    "message": "Alle Share",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Alle Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "Maksimalt adgangsantal nået",
@@ -1618,8 +1625,8 @@
     "message": "Kodeordsbeskyttet"
   },
   "copySendLink": {
-    "message": "Kopiér Share link",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Kopiér Send link",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "removePassword": {
     "message": "Fjern adgangskode"
@@ -1631,12 +1638,12 @@
     "message": "Adgangskode fjernet"
   },
   "deletedSend": {
-    "message": "Share slettet",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Send slettet",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendLink": {
-    "message": "Share link",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Send link",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "disabled": {
     "message": "Deaktiveret"
@@ -1645,24 +1652,24 @@
     "message": "Er du sikker på, at du vil fjerne adgangskoden?"
   },
   "deleteSend": {
-    "message": "Slet Share",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Slet Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "deleteSendConfirmation": {
-    "message": "Er du sikker på, at du vil slette denne Share?",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Er du sikker på, at du vil slette denne Send?",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "editSend": {
-    "message": "Redigér Share",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Redigér Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendTypeHeader": {
-    "message": "Hvilken type Share er denne?",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Hvilken type Send er denne?",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendNameDesc": {
-    "message": "Et venligt navn til at beskrive denne Share.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Et venligt navn til at beskrive denne Send.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendFileDesc": {
     "message": "Den fil, du vil sende."
@@ -1671,15 +1678,15 @@
     "message": "Sletningsdato"
   },
   "deletionDateDesc": {
-    "message": "Share'en slettes permanent på den angivne dato og tid.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Send'en slettes permanent på den angivne dato og tid.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "expirationDate": {
     "message": "Udløbsdato"
   },
   "expirationDateDesc": {
-    "message": "Hvis angivet, vil adgangen til denne Share udløbe på den angivne dato og tidspunkt.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Hvis angivet, vil adgangen til denne Send udløbe på den angivne dato og tidspunkt.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "oneDay": {
     "message": "1 dag"
@@ -1700,57 +1707,57 @@
     "message": "Maksimalt antal tilgange"
   },
   "maximumAccessCountDesc": {
-    "message": "Hvis opsat, vil brugere ikke længere kunne tilgå denne Share, når det maksimale adgangsantal er nået.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Hvis opsat, vil brugere ikke længere kunne tilgå denne Send, når det maksimale adgangsantal er nået.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendPasswordDesc": {
-    "message": "Valgfrit brugeradgangskodekrav for at tilgå denne Share.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Valgfrit brugeradgangskodekrav for at tilgå denne Send.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendNotesDesc": {
-    "message": "Private notater om denne Share.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Private notater om denne Send.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendDisableDesc": {
-    "message": "Deaktivér denne Share, så ingen kan tilgå den.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Deaktivér denne Send, så ingen kan tilgå den.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendShareDesc": {
     "message": "Kopiér denne Sends link til udklipsholderen når du gemmer.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Den tekst, du vil sende."
   },
   "sendHideText": {
     "message": "Skjul denne Sends tekst som standard.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Aktuelt antal tilgange"
   },
   "createSend": {
-    "message": "Opret ny Share",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Ny Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "newPassword": {
     "message": "Ny adgangskode"
   },
   "sendDisabled": {
-    "message": "Share deaktiveret",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Send fjernet",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendDisabledWarning": {
-    "message": "Du kan grundet en virksomhedspolitik kun slette en eksisterende Share.",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Du kan grundet en virksomhedspolitik kun slette en eksisterende Send.",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "createdSend": {
-    "message": "Share oprettet",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Send oprettet",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "editedSend": {
-    "message": "Share opdateret",
-    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "message": "Send gemt",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendLinuxChromiumFileWarning": {
     "message": "For at vælge en fil, åben udvidelsen i sidepanelet (om muligt) eller pop ud til et nyt vindue ved at klikke på dette banner."
@@ -1795,7 +1802,7 @@
     "message": "Skjul min e-mailadresse for modtagere."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "Én eller flere organisationspolitikker påvirker dine Share-valgmuligheder."
+    "message": "Én eller flere organisationspolitikker påvirker dine Send-valgmuligheder."
   },
   "passwordPrompt": {
     "message": "Genanmodning om hovedadgangskode"
@@ -1819,10 +1826,10 @@
     "message": "Opdatér hovedadgangskode"
   },
   "updateMasterPasswordWarning": {
-    "message": "Dit hovedadgangskode blev for nylig ændret af en administrator i din organisation. For at få adgang til boksen skal du opdatere din hovedadgangskode nu. Hvis du fortsætter, logges du ud af din nuværende session, hvilket kræver, at du logger ind igen. Aktive sessioner på andre enheder kan fortsætte med at være aktive i op til én time."
+    "message": "Dit hovedadgangskode blev for nylig ændret af en administrator i din organisation. For at få adgang til boksen skal du opdatere den nu. Hvis du fortsætter, logges du ud af din nuværende session, hvilket kræver, at du logger ind igen. Aktive sessioner på andre enheder kan fortsætte med at være aktive i op til én time."
   },
   "resetPasswordPolicyAutoEnroll": {
-    "message": "Auto-indrullering"
+    "message": "Automatisk tilmelding"
   },
   "resetPasswordAutoEnrollInviteWarning": {
     "message": "Denne organisation har en virksomhedspolitik, der automatisk tilmelder dig til nulstilling af adgangskode. Tilmelding giver organisationsadministratorer mulighed for at skifte din hovedadgangskode."
@@ -1852,11 +1859,11 @@
       }
     }
   },
-  "vaultTimeoutToLarge": {
+  "vaultTimeoutTooLarge": {
     "message": "Din boks-timeout overskrider de begrænsninger, der er fastsat af din organisation."
   },
   "vaultExportDisabled": {
-    "message": "Bokseksport deaktiveret"
+    "message": "Boks-eksport ikke tilgængelig"
   },
   "personalVaultExportPolicyInEffect": {
     "message": "En eller flere organisationspolitikker forhindrer dig i at eksportere din personlige boks."
@@ -1883,7 +1890,7 @@
     "message": "Fjern hovedadgangskode"
   },
   "removedMasterPassword": {
-    "message": "Hovedadgangskode fjernet."
+    "message": "Hovedadgangskode fjernet"
   },
   "leaveOrganizationConfirmation": {
     "message": "Er du sikker på, at du vil forlade denne organisation?"
@@ -1901,7 +1908,7 @@
     "message": "Eksporterer personlig boks"
   },
   "exportingPersonalVaultDescription": {
-    "message": "Kun de personlige bokselementer tilknyttet $EMAIL$ eksporteres. Organisationsbokseelementer medtages ikke.",
+    "message": "Kun de personlige bokselementer tilknyttet $EMAIL$ vil blive eksporteret. Organisationsbokseelementer vil ikke være inkluderet.",
     "placeholders": {
       "email": {
         "content": "$1",
@@ -1922,7 +1929,7 @@
     "message": "Brugernavnstype"
   },
   "plusAddressedEmail": {
-    "message": "Plus adresseret e-mail",
+    "message": "Plus-adresseret e-mail",
     "description": "Username generator option that appends a random sub-address to the username. For example: address+subaddress@email.com"
   },
   "plusAddressedEmailDesc": {
@@ -1953,7 +1960,7 @@
     "message": "Tjeneste"
   },
   "forwardedEmail": {
-    "message": "Videresendt E-mail Alias"
+    "message": "Videresendt e-mail alias"
   },
   "forwardedEmailDesc": {
     "message": "Generér et e-mail alias med en ekstern viderestillingstjeneste."
@@ -1970,5 +1977,77 @@
   },
   "ssoKeyConnectorError": {
     "message": "Key Connector-fejl: Sørg for, at Key Connector er tilgængelig og fungerer korrekt."
+  },
+  "premiumSubcriptionRequired": {
+    "message": "Premium-abonnement kræves"
+  },
+  "organizationIsDisabled": {
+    "message": "Organisation suspenderet."
+  },
+  "disabledOrganizationFilterError": {
+    "message": "Elementer i suspenderede organisationer kan ikke tilgås. Kontakt din organisationsejer for at få hjælp."
+  },
+  "cardBrandMir": {
+    "message": "Mir"
+  },
+  "loggingInTo": {
+    "message": "Logger ind på $DOMAIN$",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+  "settingsEdited": {
+    "message": "Indstillinger er blevet redigeret"
+  },
+  "environmentEditedClick": {
+    "message": "Klik her"
+  },
+  "environmentEditedReset": {
+    "message": "for at nulstille til forudkonfigurerede indstillinger"
+  },
+  "serverVersion": {
+    "message": "Server version"
+  },
+  "selfHosted": {
+    "message": "Selv-hostet"
+  },
+  "thirdParty": {
+    "message": "Tredjepart"
+  },
+  "thirdPartyServerMessage": {
+    "message": "Forbundet til tredjepartsserverimplementering, $SERVERNAME$. Kontrollér venligst fejl ved hjælp af den officielle server, eller rapportér dem til tredjepartsserveren.",
+    "placeholders": {
+      "servername": {
+        "content": "$1",
+        "example": "ThirdPartyServerName"
+      }
+    }
+  },
+  "lastSeenOn": {
+    "message": "sidst set: $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "Jun 15, 2015"
+      }
+    }
+  },
+  "loginWithMasterPassword": {
+    "message": "Log in with master password"
+  },
+  "loggingInAs": {
+    "message": "Logging in as"
+  },
+  "notYou": {
+    "message": "Not you?"
+  },
+  "newAroundHere": {
+    "message": "New around here?"
+  },
+  "rememberEmail": {
+    "message": "Remember email"
   }
 }

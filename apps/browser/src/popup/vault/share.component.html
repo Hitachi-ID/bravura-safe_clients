@@ -1,7 +1,8 @@
 <form #form (ngSubmit)="submit()" [appApiAction]="formPromise">
+  <ng-container *ngIf="organizations$ | async as organizations">
   <header>
     <div class="left">
-      <button type="button" appBlurClick (click)="cancel()">{{ "cancel" | i18n }}</button>
+      <button type="button" (click)="cancel()">{{ "cancel" | i18n }}</button>
     </div>
     <h1 class="center">
       <span class="title">{{ "moveToOrganization" | i18n }}</span>
@@ -9,12 +10,15 @@
     <div class="right">
       <button
         type="submit"
-        appBlurClick
         [disabled]="form.loading || !canSave"
         *ngIf="organizations && organizations.length"
       >
         <span [hidden]="form.loading">{{ "move" | i18n }}</span>
-        <i class="fa fa-spinner fa-lg fa-spin" [hidden]="!form.loading" aria-hidden="true"></i>
+        <i
+          class="fa fa-spinner fa-lg fa-spin"
+          [hidden]="!form.loading"
+          aria-hidden="true"
+        ></i>
       </button>
     </div>
   </header>
@@ -68,4 +72,5 @@
       </div>
     </div>
   </main>
+  </ng-container>
 </form>

@@ -5,43 +5,25 @@
 <ng-container *ngIf="createOrganization && selfHosted"> </ng-container>
 
 <form #form (ngSubmit)="submit()" [appApiAction]="formPromise" ngNativeValidate *ngIf="!loading">
-  <h2 class="mt-5">{{ "generalInformation" | i18n }}</h2>
-  <div class="row" *ngIf="createOrganization">
-    <div class="form-group col-6">
-      <label for="name">{{ "organizationName" | i18n }}</label>
-      <input id="name" class="form-control" type="text" name="Name" [(ngModel)]="name" required />
-    </div>
-    <div class="form-group col-6">
-      <label for="billingEmail">{{ "email" | i18n }}</label>
-      <input
-        id="billingEmail"
-        class="form-control"
-        type="text"
-        name="BillingEmail"
-        [(ngModel)]="billingEmail"
-        required
-      />
-    </div>
-    <div class="form-group col-6" *ngIf="!!providerId">
-      <label for="email">{{ "clientOwnerEmail" | i18n }}</label>
-      <input
-        id="email"
-        class="form-control"
-        type="text"
-        name="Email"
-        [(ngModel)]="clientOwnerEmail"
-        required
-      />
-      <small class="text-muted">{{ "clientOwnerDesc" | i18n: "20" }}</small>
-    </div>
-  </div>
+  <app-org-info
+    (changedBusinessOwned)="changedOwnedBusiness()"
+    [formGroup]="formGroup"
+    [createOrganization]="createOrganization"
+    [isProvider]="!!providerId"
+    [acceptingSponsorship]="acceptingSponsorship"
+  ></app-org-info>
   <div *ngIf="singleOrgPolicyBlock" class="mt-4">
     <app-callout [type]="'error'">{{ "singleOrgBlockCreateMessage" | i18n }}</app-callout>
   </div>
   <div class="mt-4">
-    <button type="submit" class="btn btn-primary btn-submit" [disabled]="form.loading">
-      <i class="fa fa-spinner fa-spin" title="{{ 'loading' | i18n }}" aria-hidden="true"></i>
-      <span>{{ "submit" | i18n }}</span>
+    <button
+      type="submit"
+      buttonType="primary"
+      bitButton
+      [loading]="form.loading"
+      [disabled]="!formGroup.valid"
+    >
+      {{ "submit" | i18n }}
     </button>
     <button type="button" class="btn btn-outline-secondary" (click)="cancel()" *ngIf="showCancel">
       {{ "cancel" | i18n }}

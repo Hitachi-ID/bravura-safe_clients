@@ -2,6 +2,7 @@
   "urls": {
     "icons": "https://icons.hitachi-id.net",
     "notifications": "https://notifications.hitachi-id.com"
+    "scim": "https://scim.hitachi-id.com"
   },
   "stripeKey": "pk_live_bpN0P37nMxrMQkcaHXtAybJk",
   "braintreeKey": "production_qfbsv8kc_njj2zjtyngtjmbjd",
@@ -13,5 +14,9 @@
     "proxyApi": "https://api.hitachi-id.com",
     "proxyIdentity": "https://identity.hitachi-id.com",
     "proxyEvents": "https://events.hitachi-id.com"
+  },
+  "flags": {
+    "showTrial": true,
+    "showPasswordless": true
   }
 }

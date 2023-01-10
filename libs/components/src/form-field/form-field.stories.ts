@@ -1,6 +1,6 @@
 import {
   AbstractControl,
-  FormBuilder,
+  UntypedFormBuilder,
   FormsModule,
   ReactiveFormsModule,
   ValidationErrors,
@@ -41,12 +41,12 @@ export default {
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/f32LSg3jaegICkMu7rPARm/Tailwind-Component-Library-Update?node-id=1881%3A17689",
+      url: "https://www.figma.com/file/Zt3YSeb6E6lebAffrNLa0h/Tailwind-Component-Library?node-id=1881%3A17689",
     },
   },
 } as Meta;
 
-const fb = new FormBuilder();
+const fb = new UntypedFormBuilder();
 const formObj = fb.group({
   test: [""],
   required: ["", [Validators.required]],
@@ -166,19 +166,32 @@ const ButtonGroupTemplate: Story<BitFormFieldComponent> = (args: BitFormFieldCom
   template: `
     <bit-form-field>
       <bit-label>Label</bit-label>
-      <input bitInput placeholder="Placeholder" />
-      <button bitSuffix bitButton>
-        <i aria-hidden="true" class="fa fa-lg fa-eye"></i>
-      </button>
-      <button bitSuffix bitButton>
-        <i aria-hidden="true" class="fa fa-lg fa-copy"></i>
-      </button>
+      <input bitInput placeholder="Placeholder" type="password" />
+      <button bitSuffix bitButton bitIconButton="fa-eye"></button>
+      <button bitSuffix bitButton bitIconButton="fa-clone"></button>
     </bit-form-field>
   `,
 });
 
 export const ButtonInputGroup = ButtonGroupTemplate.bind({});
 ButtonInputGroup.args = {};
+
+const DisabledButtonInputGroupTemplate: Story<BitFormFieldComponent> = (
+  args: BitFormFieldComponent
+) => ({
+  props: args,
+  template: `
+    <bit-form-field>
+      <bit-label>Label</bit-label>
+      <input bitInput placeholder="Placeholder" disabled />
+      <button bitSuffix bitButton bitIconButton="fa-eye" disabled></button>
+      <button bitSuffix bitButton bitIconButton="fa-clone"></button>
+    </bit-form-field>
+  `,
+});
+
+export const DisabledButtonInputGroup = DisabledButtonInputGroupTemplate.bind({});
+DisabledButtonInputGroup.args = {};
 
 const SelectTemplate: Story<BitFormFieldComponent> = (args: BitFormFieldComponent) => ({
   props: args,
