@@ -4398,6 +4398,10 @@
     "message": "创建此 Share 的 Bravura Safe 用户已选择隐藏他们的电子邮件地址。在使用或下载此链接的内容之前，应确保您信任此链接的来源。",
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
+  "viewSendDownloadFileWarning": {
+    "message": "The file you are about to download should be scanned with an antivirus program before using it.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+  },
   "expirationDateIsInvalid": {
     "message": "所提供的过期日期无效。"
   },

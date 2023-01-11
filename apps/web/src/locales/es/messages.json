@@ -4398,6 +4398,10 @@
     "message": "El usuario Bravura Safe que creó este Share ha elegido ocultar su dirección de correo electrónico. Deberías asegurarte de que confías en la fuente de este enlace antes de usar o descargar su contenido.",
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
+  "viewSendDownloadFileWarning": {
+    "message": "The file you are about to download should be scanned with an antivirus program before using it.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+  },
   "expirationDateIsInvalid": {
     "message": "La fecha de caducidad proporcionada no es válida."
   },
