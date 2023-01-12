@@ -4413,6 +4413,10 @@
     "message": "L'utilisateur Bravura Safe qui a créé ce Share a choisi de masquer son adresse e-mail. Vous devez vous assurer que vous faites confiance à la source de ce lien avant d'utiliser ou de télécharger son contenu.",
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
+  "viewSendDownloadFileWarning": {
+    "message": "The file you are about to download should be scanned with an antivirus program before using it.",
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+  },
   "expirationDateIsInvalid": {
     "message": "La date d'expiration indiquée n'est pas valide."
   },
