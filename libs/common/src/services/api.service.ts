@@ -1490,6 +1490,19 @@ export class ApiService implements ApiServiceAbstraction {
     }
   }
 
+  async postHyprMailRegistration(
+    request: HyprAuthenticationRequestModel
+  ): Promise<TwoFactorHyprAuthResponse> {
+    const r = await this.send(
+      "POST",
+      "/two-factor/hypr/mail-registration",
+      request,
+      false,
+      true
+    );
+    return new TwoFactorHyprAuthResponse(r);
+  }
+
   async putTwoFactorYubiKey(
     request: UpdateTwoFactorYubioOtpRequest
   ): Promise<TwoFactorYubiKeyResponse> {

@@ -12,7 +12,8 @@
       [ngClass]="{
         'col-9':
           selectedProviderType === providerType.Duo ||
-          selectedProviderType === providerType.OrganizationDuo
+          selectedProviderType === providerType.OrganizationDuo,
+        'col-7': selectedProviderType === providerType.OrganizationHypr
       }"
     >
       <ng-container *ngIf="selectedProviderType === providerType.OrganizationHypr; else otherProviders">
@@ -111,6 +112,7 @@
                 "></i>
               </span>
               <p id="messagePlaceHolder"></p>
+              <button hidden id="hyprEmailRegistration" type="button" class="btn btn-primary" method="post">Send registration email</button>
             </div>
           </ng-container>
           <i

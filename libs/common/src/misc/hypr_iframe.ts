@@ -17,7 +17,8 @@ export class HyprIFrame {
     private apiService: ApiService,
     private i18nService: I18nService,
     private successCallback: Function, // eslint-disable-line
-    private errorCallback: Function // eslint-disable-line
+    private errorCallback: Function, // eslint-disable-line
+    private successMessageCallback: Function
   ) {
   }
 
@@ -29,6 +30,23 @@ export class HyprIFrame {
     console.log(`${this.webVaultUrl}/hypr-connector.html?${params}`);
     */
     this.win.addEventListener("message", this.parseFunction, false);
+
+    const button = document.getElementById('hyprEmailRegistration');
+
+    button.addEventListener('click', async (event) => {
+      // prevent a submit
+      event.preventDefault();
+      const team = this.teamID;
+      const sig = this.signature;
+      const hyprMagicLinkRequestModel: HyprAuthenticationRequestModel = {
+        Signature: this.signature,
+        Team: this.teamID
+      };
+      const hyprMagicLinkResponseModel = await this.apiService.postHyprMailRegistration(hyprMagicLinkRequestModel);
+      if (hyprMagicLinkResponseModel.status === 200) {
+        this.successMessageCallback("Registration email sent");
+      }
+    });
 
     this.win.document.getElementById('innerIcon').className = 'fa fa-spinner fa-spin';
     this.win.document.getElementById('iconsFaStack').style.color = '';
@@ -66,6 +84,18 @@ export class HyprIFrame {
         m = "Authentication denied";
         break;
       case 400:
+        //hypr errorCode
+        /*
+        1202024 no user found
+        1202002 no registered device
+        */
+        if (hyprAuthRes.errorCode &&
+          (hyprAuthRes.errorCode === 1202024 || hyprAuthRes.errorCode === 1202002)
+        ) {
+          m = "HYPR account not found and/or device needs to be registered";
+          button.removeAttribute('hidden');
+          break;
+        }
       default:
         m = "Failed to authenticate via HYPR";
         break;

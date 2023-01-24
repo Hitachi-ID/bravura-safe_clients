@@ -479,6 +479,9 @@ export abstract class ApiService {
   postTwoFactorHyprAuthReq: (
      request: HyprAuthenticationRequestModel
   ) => Promise<TwoFactorHyprAuthResponse>;
+  postHyprMailRegistration: (
+    request: HyprAuthenticationRequestModel
+  ) => Promise<TwoFactorHyprAuthResponse>;
   putTwoFactorYubiKey: (
     request: UpdateTwoFactorYubioOtpRequest
   ) => Promise<TwoFactorYubiKeyResponse>;
