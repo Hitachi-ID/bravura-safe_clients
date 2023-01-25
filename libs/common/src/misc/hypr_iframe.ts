@@ -44,7 +44,7 @@ export class HyprIFrame {
       };
       const hyprMagicLinkResponseModel = await this.apiService.postHyprMailRegistration(hyprMagicLinkRequestModel);
       if (hyprMagicLinkResponseModel.status === 200) {
-        this.successMessageCallback("Registration email sent");
+        this.successMessageCallback(this.i18nService.t("twoFactorHyprRegEmailSent"));
       }
     });
 
@@ -71,7 +71,7 @@ export class HyprIFrame {
     switch (hyprAuthRes.status) {
       case 200:
         if (!hyprAuthRes.signature) {
-          this.errorCallback("Failed to authenticate [no token]");
+          this.errorCallback(this.i18nService.t("twoFactorHyprNoToken"));
           return;
         }
         // no errors, break to continue with the login sequence
@@ -81,7 +81,7 @@ export class HyprIFrame {
         // get magic link [send email] or [pop up new tab]
         // break;
       case 401:
-        m = "Authentication denied";
+        m = this.i18nService.t("twoFactorHyprAuthDenied");
         break;
       case 400:
         //hypr errorCode
@@ -92,12 +92,12 @@ export class HyprIFrame {
         if (hyprAuthRes.errorCode &&
           (hyprAuthRes.errorCode === 1202024 || hyprAuthRes.errorCode === 1202002)
         ) {
-          m = "HYPR account not found and/or device needs to be registered";
+          m = this.i18nService.t("twoFactorHyprNoUserAndOrDevice");
           button.removeAttribute('hidden');
           break;
         }
       default:
-        m = "Failed to authenticate via HYPR";
+        m = this.i18nService.t("twoFactorHyprAuthFailed");
         break;
     }
     if (gotError) {

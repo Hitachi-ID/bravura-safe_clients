@@ -1593,6 +1593,24 @@
   "twoFactorHyprServerUrl": {
     "message": "Server name"
   },
+  "twoFactorHyprSendRegEmail": {
+    "message": "Send registration email"
+  },
+  "twoFactorHyprRegEmailSent": {
+    "message": "Registration email sent"
+  },
+  "twoFactorHyprNoToken": {
+    "message": "Failed to authenticate [no token]"
+  },
+  "twoFactorHyprAuthDenied": {
+    "message": "Authentication denied"
+  },
+  "twoFactorHyprAuthFailed": {
+    "message": "Failed to authenticate via HYPR"
+  },
+  "twoFactorHyprNoUserAndOrDevice": {
+    "message": "HYPR account not found and/or device needs to be registered"
+  },
   "twoFactorHyprVerifyItIsYou": {
   "message": "Verify it is you by approving the notification sent to your registered device"
   },
