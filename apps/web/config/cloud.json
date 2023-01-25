@@ -16,7 +16,6 @@
     "proxyEvents": "https://events.hitachi-id.com"
   },
   "flags": {
-    "showTrial": true,
-    "showPasswordless": true
+    "showPasswordless": false
   }
 }

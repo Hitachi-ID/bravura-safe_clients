@@ -24,11 +24,11 @@ export class CollectionService implements CollectionServiceAbstraction {
 
   async encrypt(model: CollectionView): Promise<Collection> {
     if (model.organizationId == null) {
-      throw new Error("Collection has no organization id.");
+      throw new Error("Collection has no team id.");
     }
     const key = await this.cryptoService.getOrgKey(model.organizationId);
     if (key == null) {
-      throw new Error("No key for this collection's organization.");
+      throw new Error("No key for this collection's team.");
     }
     const collection = new Collection();
     collection.id = model.id;

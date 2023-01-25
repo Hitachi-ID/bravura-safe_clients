@@ -117,7 +117,7 @@ describe("VaultFilter", () => {
       });
     });
 
-    describe("given an organizational cipher (with organization and collections)", () => {
+    describe("given an organizational cipher (with team and collections)", () => {
       const cipher = createCipher({
         organizationId: "organizationId",
         collectionIds: ["collectionId", "anotherId"],
@@ -145,7 +145,7 @@ describe("VaultFilter", () => {
         expect(result).toBe(false);
       });
 
-      it("should return false when filter does not match organization id", () => {
+      it("should return false when filter does not match team id", () => {
         const filterFunction = createFilterFunction({
           selectedOrganizationId: "anotherOrganizationId",
         });
@@ -166,7 +166,7 @@ describe("VaultFilter", () => {
       });
     });
 
-    describe("given an unassigned organizational cipher (with organization, without collection)", () => {
+    describe("given an unassigned organizational cipher (with team, without collection)", () => {
       const cipher = createCipher({ organizationId: "organizationId", collectionIds: [] });
 
       it("should return true when filtering for unassigned collection", () => {
@@ -180,7 +180,7 @@ describe("VaultFilter", () => {
         expect(result).toBe(true);
       });
 
-      it("should return true when filter matches organization id", () => {
+      it("should return true when filter matches team id", () => {
         const filterFunction = createFilterFunction({
           selectedOrganizationId: "organizationId",
         });
@@ -191,7 +191,7 @@ describe("VaultFilter", () => {
       });
     });
 
-    describe("given an individual cipher (without organization or collection)", () => {
+    describe("given an individual cipher (without team or collection)", () => {
       const cipher = createCipher({ organizationId: null, collectionIds: [] });
 
       it("should return false when filtering for unassigned collection", () => {

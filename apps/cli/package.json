@@ -1,8 +1,8 @@
 {
   "name": "@bitwarden/cli",
   "description": "A secure and free password manager for all of your devices.",
-  "version": "2022.10.0",
-  "internalVersion": "2022-10",
+  "version": "2022.11.0",
+  "internalVersion": "2022-11",
   "keywords": [
     "bravura safe",
     "password",

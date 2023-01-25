@@ -154,6 +154,10 @@ export default class BrowserPlatformUtilsService implements PlatformUtilsService
     return Promise.resolve(BrowserApi.getInternalApplicationVersion());
   }
 
+  async getApplicationVersionNumber(): Promise<string> {
+    return (await this.getApplicationVersion()).split(RegExp("[+|-]"))[0].trim();
+  }
+
   supportsWebAuthn(win: Window): boolean {
     return typeof PublicKeyCredential !== "undefined";
   }

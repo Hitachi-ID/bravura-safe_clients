@@ -20,6 +20,7 @@ export abstract class PlatformUtilsService {
   launchUri: (uri: string, options?: any) => void;
   getApplicationVersion: () => Promise<string>;
   getInternalApplicationVersion: () => Promise<string>;
+  getApplicationVersionNumber: () => Promise<string>;
   supportsWebAuthn: (win: Window) => boolean;
   supportsDuo: () => boolean;
   supportsHypr: () => boolean;

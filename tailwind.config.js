@@ -4,6 +4,7 @@ const config = require("./libs/components/tailwind.config.base");
 config.content = [
   "./libs/components/src/**/*.{html,ts,mdx}",
   "./apps/web/src/**/*.{html,ts,mdx}",
+  "./apps/web/bravura_src/web/sso/src/app/**/*.{html,ts,mdx}",
   "./.storybook/preview.js",
 ];
 config.safelist = [

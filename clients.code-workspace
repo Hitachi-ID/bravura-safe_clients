@@ -10,7 +10,7 @@
     },
     {
       "name": "web vault (bit)",
-      "path": "bitwarden_license/bit-web"
+      "path": "bravura_src/web"
     },
     {
       "name": "cli",
