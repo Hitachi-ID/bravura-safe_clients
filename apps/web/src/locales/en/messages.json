@@ -2564,7 +2564,7 @@
     "message": "Owner"
   },
   "ownerDesc": {
-    "message": "Manage all aspects of your team, including billing and subscriptions"
+    "message": "Manage all aspects of your team."
   },
   "clientOwnerDesc": {
     "message": "This user should be independent of the Provider. If the Provider is disassociated with the team, this user will maintain ownership of the team."
