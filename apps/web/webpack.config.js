@@ -312,7 +312,7 @@ const devServer =
 
 const webpackConfig = {
   mode: NODE_ENV,
-  devtool: "source-map",
+  devtool: NODE_ENV === "production" ? "hidden-source-map" : "source-map",
   devServer: devServer,
   entry: {
     "app/polyfills": "./src/polyfills.ts",
