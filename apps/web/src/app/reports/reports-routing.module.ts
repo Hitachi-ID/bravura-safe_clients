@@ -8,10 +8,10 @@ import { HasPremiumGuard } from "../shared/guards/has-premium.guard";
 import { BreachReportComponent } from "./pages/breach-report.component";
 import { ExposedPasswordsReportComponent } from "./pages/exposed-passwords-report.component";
 import { InactiveTwoFactorReportComponent } from "./pages/inactive-two-factor-report.component";
-import { ReportsHomeComponent } from "./pages/reports-home.component";
 import { ReusedPasswordsReportComponent } from "./pages/reused-passwords-report.component";
 import { UnsecuredWebsitesReportComponent } from "./pages/unsecured-websites-report.component";
 import { WeakPasswordsReportComponent } from "./pages/weak-passwords-report.component";
+import { SecurityAssessmentReportComponent } from "./pages/security-assessment-report.component";
 import { ReportsLayoutComponent } from "./reports-layout.component";
 
 const routes: Routes = [
@@ -20,7 +20,13 @@ const routes: Routes = [
     component: ReportsLayoutComponent,
     canActivate: [AuthGuard],
     children: [
-      { path: "", pathMatch: "full", component: ReportsHomeComponent, data: { homepage: true } },
+      { path: "", pathMatch: "full", redirectTo: "security-assessment-report" },
+      {
+        path: "security-assessment-report",
+        component: SecurityAssessmentReportComponent,
+        data: { titleId: "securityAssessmentReport" },
+        canActivate: [HasPremiumGuard],
+      },
       {
         path: "reused-passwords-report",
         component: ReusedPasswordsReportComponent,

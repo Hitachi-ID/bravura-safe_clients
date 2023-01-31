@@ -12,9 +12,9 @@ import { InactiveTwoFactorReportComponent } from "../tools/inactive-two-factor-r
 import { ReusedPasswordsReportComponent } from "../tools/reused-passwords-report.component";
 import { UnsecuredWebsitesReportComponent } from "../tools/unsecured-websites-report.component";
 import { WeakPasswordsReportComponent } from "../tools/weak-passwords-report.component";
+import { SecurityAssessmentReportComponent } from "../tools/security-assessment-report.component";
 
 import { ReportingComponent } from "./reporting.component";
-import { ReportsHomeComponent } from "./reports-home.component";
 
 const routes: Routes = [
   {
@@ -34,12 +34,14 @@ const routes: Routes = [
       },
       {
         path: "reports",
-        component: ReportsHomeComponent,
         canActivate: [OrganizationPermissionsGuard],
-        data: {
-          titleId: "reports",
-        },
         children: [
+          { path: "", pathMatch: "full", redirectTo: "security-assessment-report" },
+          {
+            path: "security-assessment-report",
+            component: SecurityAssessmentReportComponent,
+            data: { titleId: "securityAssessmentReport" },
+          },
           {
             path: "exposed-passwords-report",
             component: ExposedPasswordsReportComponent,
@@ -91,11 +93,11 @@ const routes: Routes = [
 ];
 
 function getReportRoute(organization: Organization): string {
-  if (organization.canAccessEventLogs) {
-    return "events";
-  }
   if (organization.canAccessReports) {
     return "reports";
+  }
+  if (organization.canAccessEventLogs) {
+    return "events";
   }
   return undefined;
 }

@@ -53,6 +53,7 @@ import { ReusedPasswordsReportComponent as OrgReusedPasswordsReportComponent } f
 import { ToolsComponent as OrgToolsComponent } from "../organizations/tools/tools.component";
 import { UnsecuredWebsitesReportComponent as OrgUnsecuredWebsitesReportComponent } from "../organizations/tools/unsecured-websites-report.component";
 import { WeakPasswordsReportComponent as OrgWeakPasswordsReportComponent } from "../organizations/tools/weak-passwords-report.component";
+import { SecurityAssessmentReportComponent as OrgSecurityAssessmentReportComponent } from "../organizations/tools/security-assessment-report.component";
 import { AddEditComponent as OrgAddEditComponent } from "../organizations/vault/add-edit.component";
 import { AttachmentsComponent as OrgAttachmentsComponent } from "../organizations/vault/attachments.component";
 import { CollectionsComponent as OrgCollectionsComponent } from "../organizations/vault/collections.component";
@@ -207,6 +208,7 @@ import { SharedModule } from ".";
     OrgUserConfirmComponent,
     OrgUserGroupsComponent,
     OrgWeakPasswordsReportComponent,
+    OrgSecurityAssessmentReportComponent,
     GeneratorComponent,
     PasswordGeneratorHistoryComponent,
     PasswordRepromptComponent,
@@ -334,6 +336,7 @@ import { SharedModule } from ".";
     OrgUserConfirmComponent,
     OrgUserGroupsComponent,
     OrgWeakPasswordsReportComponent,
+    OrgSecurityAssessmentReportComponent,
     GeneratorComponent,
     PasswordGeneratorHistoryComponent,
     PasswordRepromptComponent,

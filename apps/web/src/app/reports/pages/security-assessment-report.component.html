@@ -1,0 +1,155 @@
+<form #form (ngSubmit)="downloadAssessment()">
+
+  <div #reportResults class="assessment-report">
+    <div class="page-header">
+      <h1>{{ "securityAssessmentReport" | i18n }}</h1>
+    </div>
+
+    <div *ngIf="pageLoaded && ciphersSize == 0" class="no-items">
+      <bit-icon [icon]="noItemIcon" aria-hidden="true"></bit-icon>
+      <p>{{ "noItemsToRunReportOn" | i18n }}</p>
+    </div>
+
+    <span *ngIf="ciphersSize>0">
+      <p>
+      <span *ngIf="!organizationName">{{ "userSecurityAssessmentReportDesc" | i18n }}<b>{{userEmail}}</b></span>
+      <span *ngIf="organizationName">{{ "teamSecurityAssessmentReportDesc" | i18n }}<b>{{organizationName}}</b></span>
+      </p>
+
+      <table class="assessment-report">
+        <tbody>
+          <tr class="first-row">
+            <td class="tw-p-1">
+              <div *ngIf="!exposedPasswordsLoaded">
+                <i
+                  class="fa fa-spinner fa-spin text-muted"
+                  title="{{ 'loading' | i18n }}"
+                  aria-hidden="true"
+                ></i>
+                <span class="sr-only">{{ "loading" | i18n }}</span>
+              </div>
+              <div class="mt-4" *ngIf="exposedPasswordsLoaded">
+                <a routerLink="../exposed-passwords-report" class="tw-block hover:tw-scale-105">
+                  <h2>{{ "exposedPasswordsReport" | i18n }}</h2>
+                  <app-callout type="success" title="{{ 'noExposedPasswordsAssessment' | i18n }}" *ngIf="!exposedPasswordsCiphers.length">
+                  </app-callout>
+                  <app-callout type="danger" title="{{ 'exposedPasswordsFound' | i18n }}" *ngIf="exposedPasswordsCiphers.length">
+                    {{ "totalItemsAssessment" | i18n }} <span class="total-items-danger">{{exposedPasswordsCiphers.length}}</span><br>
+                    {{ "exposedPasswordsAssessmentRecommendation" | i18n }}
+                  </app-callout>
+                </a>
+              </div>
+            </td>
+
+            <td class="tw-p-1">
+              <div *ngIf="!reusedPasswordsLoaded">
+                <i
+                  class="fa fa-spinner fa-spin text-muted"
+                  title="{{ 'loading' | i18n }}"
+                  aria-hidden="true"
+                ></i>
+                <span class="sr-only">{{ "loading" | i18n }}</span>
+              </div>
+              <div class="mt-4" *ngIf="reusedPasswordsLoaded">
+                <a routerLink="../reused-passwords-report" class="tw-block hover:tw-scale-105">
+                  <h2>{{ "reusedPasswordsReport" | i18n }}</h2>
+                  <app-callout type="success" title="{{ 'noReusedPasswordsAssessment' | i18n }}" *ngIf="!reusedPasswordsCiphers.length">
+                  </app-callout>
+                  <app-callout type="danger" title="{{ 'reusedPasswordsFound' | i18n }}" *ngIf="reusedPasswordsCiphers.length">
+                    {{ "totalItemsAssessment" | i18n }} <span class="total-items-danger">{{reusedPasswordsCiphers.length}}</span><br>
+                    {{ "reusedPasswordsAssessmentRecommendation" | i18n }}
+                  </app-callout>
+                </a>
+              </div>
+            </td>
+
+            <td class="tw-p-1">
+              <div *ngIf="!weakPasswordsLoaded">
+                <i
+                  class="fa fa-spinner fa-spin text-muted"
+                  title="{{ 'loading' | i18n }}"
+                  aria-hidden="true"
+                ></i>
+                <span class="sr-only">{{ "loading" | i18n }}</span>
+              </div>
+              <div class="mt-4" *ngIf="weakPasswordsLoaded">
+                <a routerLink="../weak-passwords-report" class="tw-block hover:tw-scale-105">
+                  <h2>{{ "weakPasswordsReport" | i18n }}</h2>
+                  <app-callout type="success" title="{{ 'noWeakPasswordsAssessment' | i18n }}" *ngIf="!weakPasswordsCiphers.length">
+                  </app-callout>
+                  <app-callout type="danger" title="{{ 'weakPasswordsFound' | i18n }}" *ngIf="weakPasswordsCiphers.length">
+                    {{ "totalItemsAssessment" | i18n }} <span class="total-items-danger">{{weakPasswordsCiphers.length}}</span><br>
+                    {{ "weakPasswordsAssessmentRecommendation" | i18n }}
+                  </app-callout>
+                </a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tw-p-1">
+              <div *ngIf="!unsecuredWebsitesLoaded">
+                <i
+                  class="fa fa-spinner fa-spin text-muted"
+                  title="{{ 'loading' | i18n }}"
+                  aria-hidden="true"
+                ></i>
+                <span class="sr-only">{{ "loading" | i18n }}</span>
+              </div>
+              <div class="mt-4" *ngIf="unsecuredWebsitesLoaded">
+                <a routerLink="../unsecured-websites-report" class="tw-block hover:tw-scale-105">
+                  <h2>{{ "unsecuredWebsitesReport" | i18n }}</h2>
+                  <app-callout type="success" title="{{ 'noUnsecuredWebsitesAssessment' | i18n }}" *ngIf="!unsecuredWebsitesCiphers.length">
+                  </app-callout>
+                  <app-callout type="danger" title="{{ 'unsecuredWebsitesFound' | i18n }}" *ngIf="unsecuredWebsitesCiphers.length">
+                    {{ "totalItemsAssessment" | i18n }} <span class="total-items-danger">{{unsecuredWebsitesCiphers.length}}</span><br>
+                    {{ "unsecuredWebsitesAssessmentRecommendation" | i18n }}
+                  </app-callout>
+                </a>
+              </div>
+            </td>
+
+            <td class="tw-p-1">
+              <div *ngIf="!inactiveTwoFactorLoaded">
+                <i
+                  class="fa fa-spinner fa-spin text-muted"
+                  title="{{ 'loading' | i18n }}"
+                  aria-hidden="true"
+                ></i>
+                <span class="sr-only">{{ "loading" | i18n }}</span>
+              </div>
+              <div class="mt-4" *ngIf="inactiveTwoFactorLoaded">
+                <a routerLink="../inactive-two-factor-report" class="tw-block hover:tw-scale-105">
+                  <h2>{{ "inactive2faReport" | i18n }}</h2>
+                  <app-callout type="success" title="{{ 'noInactiveTwoFactorAssessment' | i18n }}" *ngIf="!inactiveTwoFactorCiphers.length">
+                  </app-callout>
+                  <app-callout type="danger" title="{{ 'inactive2faFound' | i18n }}" *ngIf="inactiveTwoFactorCiphers.length">
+                    {{ "totalItemsAssessment" | i18n }} <span class="total-items-danger">{{inactiveTwoFactorCiphers.length}}</span><br>
+                    {{ "inactiveTwoFactorAssessmentRecommendation" | i18n }}
+                  </app-callout>
+                </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><p>
+      <small>{{ "reportExecutedOn" | i18n }}{{ executionDate | date:'medium' }}</small>
+      <small *ngIf="organizationName"><br>{{ "reportExecutedBy" | i18n }}{{ userEmail }}</small>
+
+    </span> <!-- ciphersSize>0 -->
+  </div> <!-- #reportResults -->
+
+  <div *ngIf="ciphersSize>0">
+    <p><p>
+    <button
+      type="submit"
+      class="btn btn-primary btn-submit"
+      [disabled]="!pageLoaded"
+    >
+      <span>{{ "exportAssessment" | i18n }}</span>
+    </button>
+  </div>
+
+</form>

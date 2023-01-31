@@ -559,7 +559,35 @@ div.organization-switcher-list {
     }
   }
 }
+
 div.organization-switcher-list + a.btn.btn-block {
   margin: 5px 10px;
   width: auto;
+}
+
+div.assessment-report {
+  padding-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+table.assessment-report {
+  tr {
+    vertical-align: top;
+  }
+  tr.first-row {
+    td {
+      width: 33%;
+    }
+  }
+  span.total-items-danger {
+    @include themify($themes) {
+      color: themed("danger");
+    }
+    font-weight: bold;
+  }
+  a {
+    text-decoration: none;
+  }
 }
