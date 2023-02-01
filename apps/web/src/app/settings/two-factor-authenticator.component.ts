@@ -98,11 +98,11 @@ export class TwoFactorAuthenticatorComponent
       new window.QRious({
         element: document.getElementById("qr"),
         value:
-          "otpauth://totp/Bravura Safe:" +
-          encodeURIComponent("Bravura Safe:" + email) +
+          "otpauth://totp/BravuraSafe:" +
+          encodeURIComponent(email) +
           "?secret=" +
           encodeURIComponent(this.key) +
-          "&issuer=Hitachi+ID",
+          "&issuer=Bravura+Security",
         size: 160,
       });
     }, 100);
