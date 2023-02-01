@@ -4,6 +4,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
+import { NgxCaptureModule } from "ngx-capture";
 
 import { AppComponent } from "./app.component";
 import { CoreModule } from "./core/core.module";
@@ -18,6 +19,7 @@ import { WildcardRoutingModule } from "./wildcard-routing.module";
     FormsModule,
     CoreModule,
     InfiniteScrollModule,
+    NgxCaptureModule,
     DragDropModule,
     LayoutModule,
     OssRoutingModule,

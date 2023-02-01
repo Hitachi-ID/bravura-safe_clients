@@ -5,21 +5,13 @@
         <div class="card-header">{{ "reporting" | i18n }}</div>
         <div class="list-group list-group-flush">
           <a
-            routerLink="events"
-            class="list-group-item"
-            routerLinkActive="active"
-            *ngIf="organization.canAccessEventLogs"
-          >
-            {{ "eventLogs" | i18n }}
-          </a>
-<!--          <a
-            routerLink="reports"
+            routerLink="reports/security-assessment-report"
             class="list-group-item"
             routerLinkActive="active"
             *ngIf="organization.canAccessReports"
           >
-            {{ "reports" | i18n }}
-          </a>-->
+            {{ "securityAssessmentReport" | i18n }}
+          </a>
           <a
             routerLink="reports/exposed-passwords-report"
             class="list-group-item"
@@ -59,6 +51,14 @@
             *ngIf="organization.canAccessReports"
           >
             {{ "inactive2faReport" | i18n }}
+          </a>
+          <a
+            routerLink="events"
+            class="list-group-item"
+            routerLinkActive="active"
+            *ngIf="organization.canAccessEventLogs"
+          >
+            {{ "eventLogs" | i18n }}
           </a>
         </div>
       </div>

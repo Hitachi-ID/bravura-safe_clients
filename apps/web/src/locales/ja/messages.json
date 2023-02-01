@@ -5649,5 +5649,59 @@
   },
   "memberAccessAll": {
     "message": "このメンバーはすべてのアイテムにアクセスして変更できます。"
+  },
+  "securityAssessmentReport": {
+    "message": "Security assessment"
+  },
+  "userSecurityAssessmentReportDesc": {
+    "message": "Bravura Safe security assessment for user: "
+  },
+  "teamSecurityAssessmentReportDesc": {
+    "message": "Bravura Safe security assessment for team: "
+  },
+  "noItemsToRunReportOn": {
+    "message": "There are no items for the security assessment report."
+  },
+  "exportAssessment": {
+    "message": "Export assessment"
+  },
+  "reportExecutedOn": {
+    "message": "Report executed on: "
+  },
+  "reportExecutedBy": {
+    "message": "Report executed by: "
+  },
+  "totalItemsAssessment": {
+    "message": "Items: "
+  },
+  "exposedPasswordsAssessmentRecommendation": {
+    "message": "You should change them to use a new password."
+  },
+  "noExposedPasswordsAssessment": {
+    "message": "No exposed passwords found"
+  },
+  "reusedPasswordsAssessmentRecommendation": {
+    "message": "You should change them to a unique value."
+  },
+  "noReusedPasswordsAssessment": {
+    "message": "No reused passwords found"
+  },
+  "weakPasswordsAssessmentRecommendation": {
+    "message": "You should update them to use stronger passwords."
+  },
+  "noWeakPasswordsAssessment": {
+    "message": "No weak passwords found"
+  },
+  "unsecuredWebsitesAssessmentRecommendation": {
+    "message": "You should change their URL scheme to https:// if the website allows it."
+  },
+  "noUnsecuredWebsitesAssessment": {
+    "message": "No unsecured websites found"
+  },
+  "inactiveTwoFactorAssessmentRecommendation": {
+    "message": "To further protect these accounts, you should set up two-step login."
+  },
+  "noInactiveTwoFactorAssessment": {
+    "message": "No websites found"
   }
 }

@@ -94,14 +94,6 @@ const routes: Routes = [
             (m) => m.OrganizationReportingModule
           ),
       },
-/*      {
-        path: "options",
-        component: OptionsComponent,
-        children: [
-          { path: "", pathMatch: "full", redirectTo: "account" },
-          { path: "account", component: AccountOptionsComponent, data: { titleId: "myOrganization" } },
-        ],
-      },*/
       {
         path: "options",
         loadChildren: () => import("./options").then((m) => m.OrganizationOptionsModule),

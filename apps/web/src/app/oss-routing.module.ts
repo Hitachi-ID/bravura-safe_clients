@@ -54,6 +54,7 @@ import { ReportsLayoutComponent } from "./reports/reports-layout.component";
 import { ReusedPasswordsReportComponent } from "./reports/pages/reused-passwords-report.component";
 import { UnsecuredWebsitesReportComponent } from "./reports/pages/unsecured-websites-report.component";
 import { WeakPasswordsReportComponent } from "./reports/pages/weak-passwords-report.component";
+import { SecurityAssessmentReportComponent } from "./reports/pages/security-assessment-report.component";
 
 const routes: Routes = [
   {
@@ -232,7 +233,12 @@ const routes: Routes = [
         component: ReportsLayoutComponent,
         canActivate: [AuthGuard],
         children: [
-          { path: "", pathMatch: "full", redirectTo: "exposed-passwords-report" },
+          { path: "", pathMatch: "full", redirectTo: "security-assessment-report" },
+          {
+            path: "security-assessment-report",
+            component: SecurityAssessmentReportComponent,
+            data: { titleId: "securityAssessmentReport" },
+          },
           {
             path: "reused-passwords-report",
             component: ReusedPasswordsReportComponent,
