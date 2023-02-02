@@ -5,6 +5,7 @@ export class TwoFactorHyprResponse extends BaseResponse {
   appId: string;
   serverUrl: string;
   apiKey: string;
+  hyprMagicLinkDuration: number;
 
   constructor(response: any) {
     super(response);
@@ -12,5 +13,7 @@ export class TwoFactorHyprResponse extends BaseResponse {
     this.serverUrl = this.getResponseProperty("serverURL");
     this.appId = this.getResponseProperty("appID");
     this.apiKey = this.getResponseProperty("apiKey");
+    let hyprMagicLinkDuration = this.getResponseProperty("hyprMagicLinkDuration");
+    this.hyprMagicLinkDuration = hyprMagicLinkDuration ? hyprMagicLinkDuration : 900;
   }
 }

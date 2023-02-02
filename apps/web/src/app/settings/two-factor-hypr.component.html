@@ -41,6 +41,8 @@
             <strong>{{ "twoFactorHyprAppId" | i18n }}:</strong> {{ appId }}
             <br />
             <strong>{{ "twoFactorHyprServerUrl" | i18n }}:</strong> {{ serverUrl }}
+            <br />
+            <strong>HYPR Registration Link Duration (in seconds):</strong> {{ hyprMagicLinkDuration }}
           </ng-container>
           <ng-container *ngIf="!enabled">
             <img class="float-right ml-3 mfaType99" alt="Bravura OneAuth logo" />
@@ -80,6 +82,19 @@
                 [(ngModel)]="serverUrl"
                 placeholder="{{ 'ex' | i18n }} xxxxxxxx.hypr.com"
                 required
+                appInputVerbatim
+              />
+            </div>
+            <div class="form-group">
+              <label for="hyprMagicLinkDuration">OneAuth Registration Link Duration (in seconds)</label>
+              <input
+                id="hyprMagicLinkDuration"
+                type="number"
+                name="OneAuth Registration Link Duration"
+                class="form-control"
+                [(ngModel)]="hyprMagicLinkDuration"
+                placeholder="{{ 'ex' | i18n }} 900"
+                value="900"
                 appInputVerbatim
               />
             </div>

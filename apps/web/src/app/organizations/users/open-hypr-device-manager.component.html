@@ -1,0 +1,48 @@
+<div
+  class="modal fade"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="openDeviceManagerTitle"
+>
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <form
+      class="modal-content"
+      #form
+      (ngSubmit)="submit()"
+    >
+      <div class="modal-header">
+        <h1 class="modal-title" id="openDeviceManagerTitle">
+          Open device manager
+        </h1>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Are you sure you want to open the device manager in a new tab?
+          <!--{{ "twoStepHyprDeviceManager" | i18n }}-->
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" buttonType="primary" bitButton>
+          {{ "yes" | i18n }}
+        </button>
+        <button
+          bitButton
+          buttonType="secondary"
+          type="button"
+          data-dismiss="modal"
+        >
+          <span>
+            {{ "cancel" | i18n }}
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

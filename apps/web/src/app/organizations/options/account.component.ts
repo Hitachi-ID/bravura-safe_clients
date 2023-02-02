@@ -7,9 +7,14 @@ import { OrganizationService } from "@bitwarden/common/abstractions/organization
 import { StateService } from "@bitwarden/common/abstractions/state.service";
 import { PolicyService } from "@bitwarden/common/abstractions/policy/policy.service.abstraction";
 import { EnrollMasterPasswordReset } from "../../organizations/users/enroll-master-password-reset.component";
+import { OpenHyprDeviceManager } from "../../organizations/users/open-hypr-device-manager.component";
 import { Organization } from "@bitwarden/common/models/domain/organization";
 import { PolicyType } from "@bitwarden/common/enums/policyType";
 import { Policy } from "@bitwarden/common/models/domain/policy";
+import { ApiService } from "@bitwarden/common/abstractions/api.service";
+import { ListResponse } from "@bitwarden/common/models/response/list.response";
+import { TwoFactorProviderType } from "@bitwarden/common/enums/twoFactorProviderType";
+import { TwoFactorProviderResponse } from "@bitwarden/common/models/response/two-factor-provider.response";
 
 @Component({
   selector: "app-org-account-options",
@@ -21,6 +26,7 @@ export class AccountComponent {
   organizationUser: Organization;
   organization: Organization;
   policies: Policy[];
+  organizationOneAuthEnabled = false;
 
   private organizationId: string;
 
@@ -30,7 +36,8 @@ export class AccountComponent {
     private logService: LogService,
     private organizationService: OrganizationService,
     private stateService: StateService,
-    private policyService: PolicyService
+    private policyService: PolicyService,
+    private apiService: ApiService
   ) {}
 
   async ngOnInit() {
@@ -50,6 +57,10 @@ export class AccountComponent {
         else
           throw new Error( "Error when trying to find user in team" );
         this.policies = await this.policyService.getAll( PolicyType.ResetPassword );
+        const twoFactorProviders: ListResponse<TwoFactorProviderResponse> = await this.apiService.getTwoFactorOrganizationProviders(this.organizationId);
+        this.organizationOneAuthEnabled = this.organization && this.organization.use2fa && twoFactorProviders.data.some(
+          (p) => p.type === TwoFactorProviderType.OrganizationHypr && p.enabled
+        );
        } catch( e ){
       this.logService.error( e );
       }
@@ -86,5 +97,23 @@ export class AccountComponent {
       await ref.onClosedPromise();
       await this.load();
     }
+  }
+
+  allowOneAuthDeviceManager(): boolean {
+    if( this.organization && this.organizationUser && this.organizationOneAuthEnabled ) {
+      return true;
+    }
+    return false;
+  }
+
+  async openOneAuthDeviceManager() {
+    const ref = this.modalService.open( OpenHyprDeviceManager, {
+      allowMultipleModals: true,
+      data: {
+        organization: { id: this.organizationId, userId: this.organizationUser.userId },
+      },
+    });
+    await ref.onClosedPromise();
+    await this.load();
   }
 }
