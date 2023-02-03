@@ -12,7 +12,7 @@
     >
       <div class="modal-header">
         <h1 class="modal-title" id="openDeviceManagerTitle">
-          Open device manager
+          {{ "twoFactorHyprOpenDeviceManager" | i18n }}
         </h1>
         <button
           type="button"
@@ -24,8 +24,7 @@
       </div>
       <div class="modal-body">
         <p>
-          Are you sure you want to open the device manager in a new tab?
-          <!--{{ "twoStepHyprDeviceManager" | i18n }}-->
+          {{ "twoFactorHyprConfirmOpenDeviceManager" | i18n }}
         </p>
       </div>
       <div class="modal-footer">

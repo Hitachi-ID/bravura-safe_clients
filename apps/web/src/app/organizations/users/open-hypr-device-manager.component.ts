@@ -40,20 +40,6 @@ export class OpenHyprDeviceManager {
   }
 
   async submit() {
-    /*this.formPromise = this.userVerificationService
-      .buildRequest(this.verification, PasswordRequest)
-      .then(async (request) => {
-        // get team's two-factor hypr settings
-        const orgKeys = await this.organizationApiService.getKeys(this.organization.id);
-        if (orgKeys == null) {
-          throw new Error(this.i18nService.t("resetPasswordOrgKeysError"));
-        }
-
-       // get the hypr settings to send to hypr to generate the magic link
-       // send request for the magic link
-       // open magic in a new tab OR try to open in the mobile browser
-
-      });*/
     try {
       //await this.formPromise;
       // maybe spinner on ok before closing
@@ -63,8 +49,7 @@ export class OpenHyprDeviceManager {
       };
       const r: TwoFactorHyprAuthGetMagicLink = await this.apiService.postGoToHyprManagement(hyprAuthenticationRequestModel);
       //console.log(r.url);
-      //this.platformUtilsService.showToast("success", null, this.i18nService.t("withdrawPasswordResetSuccess"));
-      this.platformUtilsService.showToast("success", null, "Opening device manager in a new tab");
+      this.platformUtilsService.showToast("success", null, this.i18nService.t("twoFactorHyprOpeningDeviceManager"));
       this.modalRef.close();
       setTimeout(function(url){
         window.open(url);

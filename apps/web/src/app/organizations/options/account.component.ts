@@ -57,11 +57,15 @@ export class AccountComponent {
         else
           throw new Error( "Error when trying to find user in team" );
         this.policies = await this.policyService.getAll( PolicyType.ResetPassword );
+        /*
+        // may need to get a new api call getTwoFactorOrganizationProviders only gets providers if the user is an admin
+        // getTwoFactorProviders only gets the email provider, for now skip this check
         const twoFactorProviders: ListResponse<TwoFactorProviderResponse> = await this.apiService.getTwoFactorOrganizationProviders(this.organizationId);
-        this.organizationOneAuthEnabled = this.organization && this.organization.use2fa && twoFactorProviders.data.some(
+        */
+        this.organizationOneAuthEnabled = this.organization && this.organization.use2fa;/* && twoFactorProviders.data.some(
           (p) => p.type === TwoFactorProviderType.OrganizationHypr && p.enabled
-        );
-       } catch( e ){
+        );*/
+      } catch( e ){
       this.logService.error( e );
       }
     });
@@ -107,13 +111,15 @@ export class AccountComponent {
   }
 
   async openOneAuthDeviceManager() {
-    const ref = this.modalService.open( OpenHyprDeviceManager, {
-      allowMultipleModals: true,
-      data: {
-        organization: { id: this.organizationId, userId: this.organizationUser.userId },
-      },
-    });
-    await ref.onClosedPromise();
-    await this.load();
+    if (this.organizationOneAuthEnabled) {
+      const ref = this.modalService.open( OpenHyprDeviceManager, {
+        allowMultipleModals: true,
+        data: {
+          organization: { id: this.organizationId, userId: this.organizationUser.userId },
+        },
+      });
+      await ref.onClosedPromise();
+      await this.load();
+    }
   }
 }
