@@ -40,9 +40,9 @@ export class SendProgram extends Program {
     return new program.Command("share")
       .arguments("<data>")
       .description(
-        "Work with Bravura Safe shares. A Share can be quickly created using this command or subcommands can be used to fine-tune the Share.",
+        "Work with Bravura Safe Shares. A Share can be quickly created using this command or subcommands can be used to fine-tune the Share.",
         {
-          data: "The data to Share. Specify as a filepath with the --file option",
+          data: "The data to share. Specify as a filepath with the --file option",
         }
       )
       .option("-f, --file", "Specifies that <data> is a filepath")
@@ -203,8 +203,8 @@ export class SendProgram extends Program {
       .description("create a Share", {
         encodedJson: "JSON object to upload. Can also be piped in through stdin.",
       })
-      .option("--file <path>", "file to Share. Can also be specified in parent's JSON.")
-      .option("--text <text>", "text to Share. Can also be specified in parent's JSON.")
+      .option("--file <path>", "file to share. Can also be specified in parent's JSON.")
+      .option("--text <text>", "text to share. Can also be specified in parent's JSON.")
       .option("--hidden", "text hidden flag. Valid only with the --text option.")
       .option(
         "--password <password>",
