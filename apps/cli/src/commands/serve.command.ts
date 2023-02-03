@@ -234,7 +234,7 @@ export class ServeCommand {
 
     router.post("/unlock", async (ctx, next) => {
       const response = await this.unlockCommand.run(
-        ctx.request.body.password == null ? null : (ctx.request.body.password as string),
+        (ctx.request.body as any).password == null ? null : ((ctx.request.body as any).password as string),
         ctx.request.query
       );
       this.processResponse(ctx.response, response);
@@ -273,7 +273,7 @@ export class ServeCommand {
       const response = await this.shareCommand.run(
         ctx.params.id,
         ctx.params.organizationId,
-        ctx.request.body // TODO: Check the format of this body for an array of collection ids
+        ctx.request.body as string // TODO: Check the format of this body for an array of collection ids
       );
       this.processResponse(ctx.response, response);
       await next();
@@ -286,7 +286,7 @@ export class ServeCommand {
       }
       const response = await this.createCommand.run(
         "attachment",
-        ctx.request.body,
+        ctx.request.body as string,
         ctx.request.query,
         {
           fileBuffer: ctx.request.file.buffer,
@@ -318,7 +318,7 @@ export class ServeCommand {
       } else {
         response = await this.createCommand.run(
           ctx.params.object,
-          ctx.request.body,
+          ctx.request.body as string,
           ctx.request.query
         );
       }
@@ -333,8 +333,8 @@ export class ServeCommand {
       }
       let response: Response = null;
       if (ctx.params.object === "send") {
-        ctx.request.body.id = ctx.params.id;
-        response = await this.sendEditCommand.run(ctx.request.body, ctx.request.query);
+        (ctx.request.body as any).id = ctx.params.id;
+        response = await this.sendEditCommand.run(ctx.request.body as string, ctx.request.query);
       } else {
         response = await this.editCommand.run(
           ctx.params.object,

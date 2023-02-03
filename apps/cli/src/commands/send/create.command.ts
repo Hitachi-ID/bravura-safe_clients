@@ -86,7 +86,7 @@ export class SendCreateCommand {
 
         if (filePath == null) {
           return Response.badRequest(
-            "Must specify a file to Share either with the --file option or in the request JSON."
+            "Must specify a file to share either with the --file option or in the request JSON."
           );
         }
 
@@ -95,7 +95,7 @@ export class SendCreateCommand {
       case SendType.Text:
         if (text == null) {
           return Response.badRequest(
-            "Must specify text content to Shares either with the --text option or in the request JSON."
+            "Must specify text content to share either with the --text option or in the request JSON."
           );
         }
         req.text = new SendTextResponse();
