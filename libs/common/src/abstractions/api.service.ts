@@ -167,6 +167,7 @@ import { TwoFactorYubiKeyResponse } from "../models/response/two-factor-yubi-key
 import { UserKeyResponse } from "../models/response/user-key.response";
 import { SendAccessView } from "../models/view/send-access.view";
 import { HyprAuthenticationRequestModel } from "../models/request/hyprAuthenticationRequestModel";
+import { TwoFactorHyprAuthGetMagicLink } from "../models/response/two-factor-hypr-auth-get-magic-link.response";
 
 /**
  * @deprecated The `ApiService` class is deprecated and calls should be extracted into individual
@@ -479,6 +480,12 @@ export abstract class ApiService {
   postTwoFactorHyprAuthReq: (
      request: HyprAuthenticationRequestModel
   ) => Promise<TwoFactorHyprAuthResponse>;
+  postHyprMailRegistration: (
+    request: HyprAuthenticationRequestModel
+  ) => Promise<TwoFactorHyprAuthResponse>;
+  postGoToHyprManagement: (
+    request: HyprAuthenticationRequestModel
+  ) => Promise<TwoFactorHyprAuthGetMagicLink>;
   putTwoFactorYubiKey: (
     request: UpdateTwoFactorYubioOtpRequest
   ) => Promise<TwoFactorYubiKeyResponse>;

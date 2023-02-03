@@ -177,6 +177,7 @@ import { TwoFactorYubiKeyResponse } from "../models/response/two-factor-yubi-key
 import { UserKeyResponse } from "../models/response/user-key.response";
 import { SendAccessView } from "../models/view/send-access.view";
 import { HyprAuthenticationRequestModel } from "../models/request/hyprAuthenticationRequestModel";
+import { TwoFactorHyprAuthGetMagicLink } from "../models/response/two-factor-hypr-auth-get-magic-link.response";
 
 /**
  * @deprecated The `ApiService` class is deprecated and calls should be extracted into individual
@@ -1488,6 +1489,32 @@ export class ApiService implements ApiServiceAbstraction {
         return new TwoFactorHyprAuthResponse(r);
       } else throw e;
     }
+  }
+
+  async postHyprMailRegistration(
+    request: HyprAuthenticationRequestModel
+  ): Promise<TwoFactorHyprAuthResponse> {
+    const r = await this.send(
+      "POST",
+      "/two-factor/hypr/mail-registration",
+      request,
+      false,
+      true
+    );
+    return new TwoFactorHyprAuthResponse(r);
+  }
+
+  async postGoToHyprManagement(
+    request: HyprAuthenticationRequestModel
+  ): Promise<TwoFactorHyprAuthGetMagicLink> {
+    const r = await this.send(
+      "POST",
+      "/two-factor/hypr/goto-hypr-management",
+      request,
+      true,
+      true
+    );
+    return new TwoFactorHyprAuthGetMagicLink(r);
   }
 
   async putTwoFactorYubiKey(

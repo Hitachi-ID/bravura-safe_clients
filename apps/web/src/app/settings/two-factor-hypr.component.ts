@@ -21,6 +21,7 @@ export class TwoFactorHyprComponent extends TwoFactorBaseComponent {
   akey: string;
   appId: string;
   serverUrl: string;
+  hyprMagicLinkDuration: number;
   formPromise: Promise<TwoFactorHyprResponse>;
 
   constructor(
@@ -51,6 +52,7 @@ export class TwoFactorHyprComponent extends TwoFactorBaseComponent {
     request.apiKey = this.akey;
     request.appId = this.appId;
     request.serverUrl = this.serverUrl;
+    request.hyprMagicLinkDuration = this.hyprMagicLinkDuration;
 
     return super.enable(async () => {
       if (this.organizationId != null) {
@@ -68,6 +70,8 @@ export class TwoFactorHyprComponent extends TwoFactorBaseComponent {
     this.akey = response.apiKey;
     this.appId = response.appId;
     this.serverUrl = response.serverUrl;
+    let hyprMagicLinkDuration = response.hyprMagicLinkDuration;
+    this.hyprMagicLinkDuration = hyprMagicLinkDuration ? hyprMagicLinkDuration : 900;
     this.enabled = response.enabled;
   }
 }

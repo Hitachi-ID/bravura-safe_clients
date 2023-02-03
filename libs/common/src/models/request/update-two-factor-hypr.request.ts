@@ -4,4 +4,5 @@ export class UpdateTwoFactorHyprRequest extends SecretVerificationRequest {
   apiKey: string;
   serverUrl: string;
   appId: string;
+  hyprMagicLinkDuration: number;
 }

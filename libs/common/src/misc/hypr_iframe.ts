@@ -17,7 +17,8 @@ export class HyprIFrame {
     private apiService: ApiService,
     private i18nService: I18nService,
     private successCallback: Function, // eslint-disable-line
-    private errorCallback: Function // eslint-disable-line
+    private errorCallback: Function, // eslint-disable-line
+    private successMessageCallback: Function
   ) {
   }
 
@@ -29,6 +30,23 @@ export class HyprIFrame {
     console.log(`${this.webVaultUrl}/hypr-connector.html?${params}`);
     */
     this.win.addEventListener("message", this.parseFunction, false);
+
+    const button = document.getElementById('hyprEmailRegistration');
+
+    button.addEventListener('click', async (event) => {
+      // prevent a submit
+      event.preventDefault();
+      const team = this.teamID;
+      const sig = this.signature;
+      const hyprMagicLinkRequestModel: HyprAuthenticationRequestModel = {
+        Signature: this.signature,
+        Team: this.teamID
+      };
+      const hyprMagicLinkResponseModel = await this.apiService.postHyprMailRegistration(hyprMagicLinkRequestModel);
+      if (hyprMagicLinkResponseModel.status === 200) {
+        this.successMessageCallback(this.i18nService.t("twoFactorHyprRegEmailSent"));
+      }
+    });
 
     this.win.document.getElementById('innerIcon').className = 'fa fa-spinner fa-spin';
     this.win.document.getElementById('iconsFaStack').style.color = '';
@@ -53,7 +71,7 @@ export class HyprIFrame {
     switch (hyprAuthRes.status) {
       case 200:
         if (!hyprAuthRes.signature) {
-          this.errorCallback("Failed to authenticate [no token]");
+          this.errorCallback(this.i18nService.t("twoFactorHyprNoToken"));
           return;
         }
         // no errors, break to continue with the login sequence
@@ -63,11 +81,23 @@ export class HyprIFrame {
         // get magic link [send email] or [pop up new tab]
         // break;
       case 401:
-        m = "Authentication denied";
+        m = this.i18nService.t("twoFactorHyprAuthDenied");
         break;
       case 400:
+        //hypr errorCode
+        /*
+        1202024 no user found
+        1202002 no registered device
+        */
+        if (hyprAuthRes.errorCode &&
+          (hyprAuthRes.errorCode === 1202024 || hyprAuthRes.errorCode === 1202002)
+        ) {
+          m = this.i18nService.t("twoFactorHyprNoUserAndOrDevice");
+          button.removeAttribute('hidden');
+          break;
+        }
       default:
-        m = "Failed to authenticate via HYPR";
+        m = this.i18nService.t("twoFactorHyprAuthFailed");
         break;
     }
     if (gotError) {

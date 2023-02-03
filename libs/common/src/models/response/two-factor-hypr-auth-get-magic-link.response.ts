@@ -1,16 +1,14 @@
 import { BaseResponse } from "./base.response";
 
-export class TwoFactorHyprAuthResponse extends BaseResponse {
-  signature: string;
+export class TwoFactorHyprAuthGetMagicLink extends BaseResponse {
+  url: string;
   status: number;
   message: string;
-  errorCode: number;
 
   constructor(response: any) {
     super(response);
-    this.signature = this.getResponseProperty("signature");
+    this.url = this.getResponseProperty("url");
     this.status = this.getResponseProperty("status");
     this.message = this.getResponseProperty("message");
-    this.errorCode = this.getResponseProperty("errorCode");
   }
 }

@@ -1593,8 +1593,41 @@
   "twoFactorHyprServerUrl": {
     "message": "Server Name"
   },
+  "twoFactorHyprLinkDuration": {
+    "message": "Bravura OneAuth Registration Link Duration (in seconds)"
+  },
+  "twoFactorHyprSendRegEmail": {
+    "message": "Send registration email"
+  },
+  "twoFactorHyprRegEmailSent": {
+    "message": "Registration email sent"
+  },
+  "twoFactorHyprNoToken": {
+    "message": "Failed to authenticate [no token]"
+  },
+  "twoFactorHyprAuthDenied": {
+    "message": "Authentication denied"
+  },
+  "twoFactorHyprAuthFailed": {
+    "message": "Failed to authenticate via HYPR"
+  },
+  "twoFactorHyprNoUserAndOrDevice": {
+    "message": "HYPR account not found and/or device needs to be registered"
+  },
   "twoFactorHyprVerifyItIsYou": {
-  "message": "Verify it is you by approving the notification sent to your registered device"
+    "message": "Verify it is you by approving the notification sent to your registered device"
+  },
+  "twoFactorHyprDeviceManager": {
+    "message": "Bravura OneAuth Device Manager"
+  },
+  "twoFactorHyprOpenDeviceManager": {
+    "message": "Open Bravura OneAuth Device Manager"
+  },
+  "twoFactorHyprConfirmOpenDeviceManager": {
+    "message": "Are you sure you want to open Bravura OneAuth device manager in a new tab?"
+  },
+  "twoFactorHyprOpeningDeviceManager": {
+    "message": "Opening device manager in a new tab"
   },
   "twoFactorEmailDesc": {
     "message": "Sigue estos pasos para configurar la autenticación en dos pasos con una aplicación autenticadora:"
