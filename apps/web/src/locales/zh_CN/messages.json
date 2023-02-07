@@ -1621,10 +1621,10 @@
     "message": "Verify it is you by approving the notification sent to your registered device"
   },
   "twoFactorHyprDeviceManager": {
-    "message": "Bravura OneAuth Device Manager"
+    "message": "Bravura OneAuth device manager"
   },
   "twoFactorHyprOpenDeviceManager": {
-    "message": "Open Bravura OneAuth Device Manager"
+    "message": "Open Bravura OneAuth device manager"
   },
   "twoFactorHyprConfirmOpenDeviceManager": {
     "message": "Are you sure you want to open Bravura OneAuth device manager in a new tab?"

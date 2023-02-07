@@ -1354,6 +1354,20 @@ export class ApiService implements ApiServiceAbstraction {
     return new ListResponse(r, TwoFactorProviderResponse);
   }
 
+  async getTwoFactorOrganizationHasProvider(
+    organizationId: string,
+    type: TwoFactorProviderType
+  ): Promise<boolean> {
+    const r = await this.send(
+      "GET",
+      `/organizations/${organizationId}/two-factor-enabled/${type}`,
+      null,
+      true,
+      true
+    );
+    return r as boolean;
+  }
+
   async getTwoFactorAuthenticator(
     request: SecretVerificationRequest
   ): Promise<TwoFactorAuthenticatorResponse> {
