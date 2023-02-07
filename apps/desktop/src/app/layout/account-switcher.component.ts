@@ -23,7 +23,7 @@ export class SwitcherAccount extends Account {
     return this.removeWebProtocolFromString(
       this.settings?.environmentUrls?.base ??
         this.settings?.environmentUrls.api ??
-        "https://hitachi-id.com"
+        "https://bravurasafe.com"
     );
   }
 

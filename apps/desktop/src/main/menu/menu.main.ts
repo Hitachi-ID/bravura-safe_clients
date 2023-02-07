@@ -8,7 +8,7 @@ import { WindowMain } from "../window.main";
 import { MenuUpdateRequest } from "./menu.updater";
 import { Menubar } from "./menubar";
 
-const cloudWebVaultUrl = "https://vault.hitachi-id.com";
+const cloudWebVaultUrl = "https://vault.bravurasafe.com";
 
 export class MenuMain {
   private i18nService: I18nService;

@@ -542,13 +542,6 @@
           <div class="box-content-row box-content-row-checkbox" appBoxRow *ngIf="canUseReprompt">
             <label for="passwordPrompt"
               >{{ "passwordPrompt" | i18n }}
-              <button
-                type="button"
-                appA11yTitle="{{ 'learnMore' | i18n }}"
-                (click)="openHelpReprompt()"
-              >
-                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
-              </button>
             </label>
             <input
               id="passwordPrompt"

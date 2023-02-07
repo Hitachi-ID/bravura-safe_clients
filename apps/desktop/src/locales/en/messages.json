@@ -779,7 +779,7 @@
     "message": "Change master password"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "You can change your master password on the hitachi-id.com web vault. Do you want to visit the website now?"
+    "message": "You can change your master password on the bravurasafe.com web vault. Do you want to visit the website now?"
   },
   "fingerprintPhrase": {
     "message": "Fingerprint phrase",
@@ -819,7 +819,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasafe.com"
       }
     }
   },
@@ -1050,7 +1050,7 @@
     "message": "Manage membership"
   },
   "premiumManageAlert": {
-    "message": "You can manage your membership on the hitachi-id.com web vault. Do you want to visit the website now?"
+    "message": "You can manage your membership on the bravurasafe.com web vault. Do you want to visit the website now?"
   },
   "premiumRefresh": {
     "message": "Refresh membership"
@@ -1083,7 +1083,7 @@
     "message": "Purchase Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "You can purchase premium membership on the hitachi-id.com web vault. Do you want to visit the website now?"
+    "message": "You can purchase premium membership on the bravurasafe.com web vault. Do you want to visit the website now?"
   },
   "premiumCurrentMember": {
     "message": "You are a premium member!"
@@ -1734,10 +1734,10 @@
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendTextDesc": {
-    "message": "The text you want to send."
+    "message": "The text you want to share."
   },
   "sendFileDesc": {
-    "message": "The file you want to send."
+    "message": "The file you want to share."
   },
   "days": {
     "message": "$DAYS$ days",
@@ -2017,10 +2017,10 @@
     "message": "Premium subscription required"
   },
   "organizationIsDisabled": {
-    "message": "Organization suspended"
+    "message": "Team suspended"
   },
   "disabledOrganizationFilterError" : {
-    "message" : "Items in suspended organizations cannot be accessed. Contact your organization owner for assistance."
+    "message" : "Items in suspended teams cannot be accessed. Contact your team owner for assistance."
   },
   "neverLockWarning": {
     "message": "Are you sure you want to use the \"Never\" option? Setting your lock options to \"Never\" stores your vault's encryption key on your device. If you use this option you should ensure that you keep your device properly protected."

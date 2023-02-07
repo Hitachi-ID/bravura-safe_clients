@@ -266,7 +266,7 @@ export class AppComponent implements OnInit, OnDestroy {
             );
             if (emailVerificationConfirmed) {
               this.platformUtilsService.launchUri(
-                "https://hitachi-id.com/help/create-bitwarden-account/"
+                "https://bravurasafe.com/help/create-bitwarden-account/"
               );
             }
             break;
