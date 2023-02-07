@@ -52,7 +52,17 @@ export class TwoFactorHyprComponent extends TwoFactorBaseComponent {
     request.apiKey = this.akey;
     request.appId = this.appId;
     request.serverUrl = this.serverUrl;
-    request.hyprMagicLinkDuration = this.hyprMagicLinkDuration;
+    request.hyprMagicLinkDuration = this.hyprMagicLinkDuration ? this.hyprMagicLinkDuration : 3600;
+
+    if (this.hyprMagicLinkDuration !== null && ( this.hyprMagicLinkDuration < 900 || this.hyprMagicLinkDuration > 432000)) {
+      // duration has to be between 900s (15 mins) and 432000 (5 days)
+      this.platformUtilsService.showToast(
+        "error",
+        this.i18nService.t("errorOccurred"),
+        this.i18nService.t("twoFactorHyprLinkDurationRange")
+      );
+      return;
+    }
 
     return super.enable(async () => {
       if (this.organizationId != null) {
@@ -71,7 +81,7 @@ export class TwoFactorHyprComponent extends TwoFactorBaseComponent {
     this.appId = response.appId;
     this.serverUrl = response.serverUrl;
     let hyprMagicLinkDuration = response.hyprMagicLinkDuration;
-    this.hyprMagicLinkDuration = hyprMagicLinkDuration ? hyprMagicLinkDuration : 900;
+    this.hyprMagicLinkDuration = hyprMagicLinkDuration ? hyprMagicLinkDuration : 3600;
     this.enabled = response.enabled;
   }
 }

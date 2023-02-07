@@ -1596,6 +1596,9 @@
   "twoFactorHyprLinkDuration": {
     "message": "Bravura OneAuth Registration Link Duration (in seconds)"
   },
+  "twoFactorHyprLinkDurationRange": {
+    "message": "Registration Link Duration must be between 900 and 432000 seconds (15 minutes and 5 days)"
+  },
   "twoFactorHyprSendRegEmail": {
     "message": "Send registration email"
   },
