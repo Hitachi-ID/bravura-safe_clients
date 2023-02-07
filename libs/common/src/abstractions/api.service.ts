@@ -168,6 +168,7 @@ import { UserKeyResponse } from "../models/response/user-key.response";
 import { SendAccessView } from "../models/view/send-access.view";
 import { HyprAuthenticationRequestModel } from "../models/request/hyprAuthenticationRequestModel";
 import { TwoFactorHyprAuthGetMagicLink } from "../models/response/two-factor-hypr-auth-get-magic-link.response";
+import { TwoFactorProviderType } from "../enums/twoFactorProviderType";
 
 /**
  * @deprecated The `ApiService` class is deprecated and calls should be extracted into individual
@@ -447,6 +448,10 @@ export abstract class ApiService {
   getTwoFactorOrganizationProviders: (
     organizationId: string
   ) => Promise<ListResponse<TwoFactorProviderResponse>>;
+  getTwoFactorOrganizationHasProvider: (
+    organizationId: string,
+    type: TwoFactorProviderType
+  ) => Promise<boolean>;
   getTwoFactorAuthenticator: (
     request: SecretVerificationRequest
   ) => Promise<TwoFactorAuthenticatorResponse>;
