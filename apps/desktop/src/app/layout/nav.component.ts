@@ -16,7 +16,7 @@ export class NavComponent {
     {
       link: "/send",
       icon: "fa-paper-plane",
-      label: "Send",
+      label: "Share",
     },
   ];
 

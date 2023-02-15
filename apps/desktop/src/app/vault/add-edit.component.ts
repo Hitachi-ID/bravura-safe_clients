@@ -118,7 +118,7 @@ export class AddEditComponent extends BaseAddEditComponent implements OnChanges,
 
   openHelpReprompt() {
     this.platformUtilsService.launchUri(
-      "https://hitachi-id.com/help/managing-items/#protect-individual-items"
+      "https://bravurasafe.com/help/managing-items/#protect-individual-items"
     );
   }
 }
