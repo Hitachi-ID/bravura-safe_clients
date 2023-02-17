@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", async () => {
               (response.errorCode === 1202024 || response.errorCode === 1202002)
             ) {
               m = "HYPR account not found and/or device needs to be registered";
-              button.removeAttribute('hidden');
+              if (button) button.removeAttribute('hidden');
               break;
             }
           default:
@@ -92,39 +92,41 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const button = document.getElementById('hyprEmailRegistration');
 
-  button.addEventListener('click', async () => {
-    const team = getQsParam("team");
-    const sig = getQsParam("signature");
-    const mobile = getQsParam("mobile") === "false" ? false : true;
-    const hyprAuthenticationRequestModel: HyprAuthenticationRequestModel = {
-      Signature: sig,
-      Team: team,
-      MobileBrowser: mobile
-    };
-    const origin = window.document.location.origin;
-    const httpClient: HttpClient = new HttpClient(new HttpXhrBackend({ 
-      build: () => new XMLHttpRequest()
-    }));
-    httpClient.post(
-      origin + "/api/two-factor/hypr/mail-registration",
-      hyprAuthenticationRequestModel
-    )
-    .subscribe(
-      {
-        next:(response: any) => {
-          //console.log(response);
-          const button = window.document.getElementById('hyprEmailRegistration');
-          button.setAttribute('hidden', '');
-          const p = window.document.createElement('p');
-          p.innerText = 'Registration email sent';
-          button.after(p);
-        },
-        error: (response: any) => {
-          console.log(response);
+  if (button) {
+    button.addEventListener('click', async () => {
+      const team = getQsParam("team");
+      const sig = getQsParam("signature");
+      const mobile = getQsParam("mobile") === "false" ? false : true;
+      const hyprAuthenticationRequestModel: HyprAuthenticationRequestModel = {
+        Signature: sig,
+        Team: team,
+        MobileBrowser: mobile
+      };
+      const origin = window.document.location.origin;
+      const httpClient: HttpClient = new HttpClient(new HttpXhrBackend({ 
+        build: () => new XMLHttpRequest()
+      }));
+      httpClient.post(
+        origin + "/api/two-factor/hypr/mail-registration",
+        hyprAuthenticationRequestModel
+      )
+      .subscribe(
+        {
+          next:(response: any) => {
+            //console.log(response);
+            const button = window.document.getElementById('hyprEmailRegistration');
+            button.setAttribute('hidden', '');
+            const p = window.document.createElement('p');
+            p.innerText = 'Registration email sent';
+            button.after(p);
+          },
+          error: (response: any) => {
+            console.log(response);
+          }
         }
-      }
-    );
-  });
+      );
+    });
+  }
 
 });
 
