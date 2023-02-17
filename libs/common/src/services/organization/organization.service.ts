@@ -40,7 +40,7 @@ export class OrganizationService implements InternalOrganizationServiceAbstracti
 
   hasOrganizations(): boolean {
     const organizations = this._organizations.getValue();
-    return organizations.length > 0;
+    return !!organizations && organizations.length > 0;
   }
 
   async upsert(organization: OrganizationData): Promise<void> {

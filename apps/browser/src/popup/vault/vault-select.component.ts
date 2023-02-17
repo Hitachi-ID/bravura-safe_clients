@@ -74,7 +74,7 @@ export class VaultSelectComponent implements OnInit, OnDestroy {
   private _destroy = new Subject<void>();
 
   shouldShow(organizations: Organization[]): boolean {
-    return (
+    return !!organizations && (
       (organizations.length > 0 && !this.enforcePersonalOwnership) ||
       (organizations.length > 1 && this.enforcePersonalOwnership)
     );
@@ -100,7 +100,11 @@ export class VaultSelectComponent implements OnInit, OnDestroy {
   async ngOnInit() {
     this.organizations$ = this.organizationService.organizations$
       .pipe(takeUntil(this._destroy))
-      .pipe(map((orgs) => orgs.sort((a, b) => a.name.localeCompare(b.name))));
+      .pipe(map((orgs) => {
+        if (orgs)
+          orgs.sort((a, b) => a.name.localeCompare(b.name));
+        return orgs;
+      }));
 
     this.organizations$
       .pipe(

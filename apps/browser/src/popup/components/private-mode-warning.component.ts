@@ -13,8 +13,6 @@ export class PrivateModeWarningComponent implements OnInit {
 
   ngOnInit() {
     const isChrome = navigator.userAgent.match(/chrome|chromium|crios/i);
-    // don't show the private mode warning for chrome
-    if (!isChrome)
-      this.showWarning = this.popupUtilsService.inPrivateMode();
+    this.showWarning = this.popupUtilsService.inPrivateMode();
   }
 }

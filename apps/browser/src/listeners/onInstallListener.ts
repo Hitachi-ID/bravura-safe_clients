@@ -28,7 +28,7 @@ export async function onInstallListener(details: chrome.runtime.InstalledDetails
 
   setTimeout(async () => {
     if (details.reason != null && details.reason === "install") {
-      BrowserApi.createNewTab("https://bitwarden.com/browser-start/");
+      BrowserApi.createNewTab("https://www.bravurasecurity.com/products/bravura-safe");
 
       if (await environmentService.hasManagedEnvironment()) {
         await environmentService.setUrlsToManagedEnvironment();
