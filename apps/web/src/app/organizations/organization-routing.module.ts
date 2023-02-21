@@ -8,6 +8,7 @@ import {
   canAccessMembersTab,
   canAccessOrgAdmin,
   canManageCollections,
+  canAccessVaultTab,
 } from "@bitwarden/common/abstractions/organization/organization.service.abstraction";
 import { Organization } from "@bitwarden/common/models/domain/organization";
 
@@ -29,7 +30,7 @@ const routes: Routes = [
     component: OrganizationLayoutComponent,
     canActivate: [AuthGuard, OrganizationPermissionsGuard],
     data: {
-      organizationPermissions: canAccessOrgAdmin,
+      organizationPermissions: canAccessVaultTab,
     },
     children: [
       { path: "", pathMatch: "full", redirectTo: "vault" },
