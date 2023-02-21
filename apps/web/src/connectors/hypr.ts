@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const button = document.getElementById('hyprEmailRegistration');
 
   if (button) {
-    button.addEventListener('click', async () => {/*
+    button.addEventListener('click', async () => {
       const team = getQsParam("team");
       const sig = getQsParam("signature");
       const mobile = getQsParam("mobile") === "false" ? false : true;
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             console.log(response);
           }
         }
-      );*/
+      );
     });
   }
 
