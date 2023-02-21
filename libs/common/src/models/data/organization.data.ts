@@ -3,6 +3,7 @@ import { OrganizationUserType } from "../../enums/organizationUserType";
 import { ProductType } from "../../enums/productType";
 import { PermissionsApi } from "../api/permissions.api";
 import { ProfileOrganizationResponse } from "../response/profile-organization.response";
+import { PlanType } from "../../enums/planType";
 
 export class OrganizationData {
   id: string;
@@ -45,6 +46,7 @@ export class OrganizationData {
   familySponsorshipLastSyncDate?: Date;
   familySponsorshipValidUntil?: Date;
   familySponsorshipToDelete?: boolean;
+  planType: PlanType;
 
   constructor(response: ProfileOrganizationResponse) {
     this.id = response.id;
@@ -86,5 +88,6 @@ export class OrganizationData {
     this.familySponsorshipLastSyncDate = response.familySponsorshipLastSyncDate;
     this.familySponsorshipValidUntil = response.familySponsorshipValidUntil;
     this.familySponsorshipToDelete = response.familySponsorshipToDelete;
+    this.planType = response.planType;
   }
 }

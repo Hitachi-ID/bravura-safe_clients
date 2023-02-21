@@ -5,6 +5,7 @@ import { OrganizationUserType } from "../../enums/organizationUserType";
 import { ProductType } from "../../enums/productType";
 import { PermissionsApi } from "../api/permissions.api";
 import { OrganizationData } from "../data/organization.data";
+import { PlanType } from "../../enums/planType";
 
 export class Organization {
   id: string;
@@ -47,6 +48,7 @@ export class Organization {
   familySponsorshipLastSyncDate?: Date;
   familySponsorshipValidUntil?: Date;
   familySponsorshipToDelete?: boolean;
+  planType: PlanType;
 
   constructor(obj?: OrganizationData) {
     if (obj == null) {
@@ -93,6 +95,7 @@ export class Organization {
     this.familySponsorshipLastSyncDate = obj.familySponsorshipLastSyncDate;
     this.familySponsorshipValidUntil = obj.familySponsorshipValidUntil;
     this.familySponsorshipToDelete = obj.familySponsorshipToDelete;
+    this.planType = obj.planType;
   }
 
   get canAccess() {
@@ -206,6 +209,14 @@ export class Organization {
 
   get canAccessSecretsManager() {
     return this.useSecretsManager;
+  }
+
+  get isBravuraEnterprise() {
+    return (this.planType === PlanType.BravuraEnterprise);
+  }
+
+  get canAccessOptionsAccount() {
+    return (this.isBravuraEnterprise && this.canAccess);
   }
 
   static fromJSON(json: Jsonify<Organization>) {

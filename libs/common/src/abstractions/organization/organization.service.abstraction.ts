@@ -49,6 +49,14 @@ export function canAccessManageTab(org: Organization): boolean {
   return canAccessMembersTab(org) || canAccessGroupsTab(org) || canManageCollections(org);
 }
 
+export function canAccessOptionsTab(org: Organization): boolean {
+  return (org.isBravuraEnterprise && org.canAccess);
+}
+
+export function canAccessOptionsAccountPage(org: Organization): boolean {
+  return (org.isBravuraEnterprise && org.canAccess);
+}
+
 export function canAccessOrgAdmin(org: Organization): boolean {
   return (
     canAccessMembersTab(org) ||
