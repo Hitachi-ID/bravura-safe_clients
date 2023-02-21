@@ -19,7 +19,7 @@
         <bit-tab-link *ngIf="canShowSettingsTab(organization)" route="settings" iconClass="fa fa-cogs">
           {{ "settings" | i18n }}
         </bit-tab-link>
-        <bit-tab-link route="options" iconClass="fa fa-bars">
+        <bit-tab-link *ngIf="canShowOptionsTab(organization)" route="options" iconClass="fa fa-bars">
           {{ "options" | i18n }}
         </bit-tab-link>
       </bit-tab-nav-bar>

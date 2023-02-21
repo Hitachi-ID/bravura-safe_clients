@@ -2,6 +2,7 @@ import { OrganizationUserStatusType } from "../../enums/organizationUserStatusTy
 import { OrganizationUserType } from "../../enums/organizationUserType";
 import { ProductType } from "../../enums/productType";
 import { PermissionsApi } from "../api/permissions.api";
+import { PlanType } from "../../enums/planType";
 
 import { BaseResponse } from "./base.response";
 
@@ -46,6 +47,7 @@ export class ProfileOrganizationResponse extends BaseResponse {
   familySponsorshipLastSyncDate?: Date;
   familySponsorshipValidUntil?: Date;
   familySponsorshipToDelete?: boolean;
+  planType: PlanType;
 
   constructor(response: any) {
     super(response);
@@ -99,5 +101,6 @@ export class ProfileOrganizationResponse extends BaseResponse {
       this.familySponsorshipValidUntil = new Date(familySponsorshipValidUntilString);
     }
     this.familySponsorshipToDelete = this.getResponseProperty("FamilySponsorshipToDelete");
+    this.planType = this.getResponseProperty("PlanType");
   }
 }

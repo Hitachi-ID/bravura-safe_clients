@@ -9,9 +9,10 @@ import {
   canAccessMembersTab,
   canAccessReportingTab,
   canAccessSettingsTab,
+  canAccessOptionsTab,
+  canAccessOptionsAccountPage,
   getOrganizationById,
   OrganizationService,
-//  canAccessReportsTab,
 } from "@bitwarden/common/abstractions/organization/organization.service.abstraction";
 import { Organization } from "@bitwarden/common/models/domain/organization";
 
@@ -68,6 +69,14 @@ export class OrganizationLayoutComponent implements OnInit, OnDestroy {
 
   canShowBillingTab(organization: Organization): boolean {
     return canAccessBillingTab(organization);
+  }
+
+  canShowOptionsTab(organization: Organization): boolean {
+    return canAccessOptionsTab(organization);
+  }
+
+  canShowOptionsAccountPage(organization: Organization): boolean {
+    return canAccessOptionsAccountPage(organization);
   }
 
   getReportTabLabel(organization: Organization): string {

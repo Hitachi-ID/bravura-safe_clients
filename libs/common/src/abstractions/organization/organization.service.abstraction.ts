@@ -6,7 +6,7 @@ import { Organization } from "../../models/domain/organization";
 import { I18nService } from "../i18n.service";
 
 export function canAccessVaultTab(org: Organization): boolean {
-  return org.isManager;
+  return org.canAccess;
 }
 
 export function canAccessSettingsTab(org: Organization): boolean {
@@ -47,6 +47,14 @@ export function canManageCollections(org: Organization): boolean {
 
 export function canAccessManageTab(org: Organization): boolean {
   return canAccessMembersTab(org) || canAccessGroupsTab(org) || canManageCollections(org);
+}
+
+export function canAccessOptionsTab(org: Organization): boolean {
+  return (org.isBravuraEnterprise && org.canAccess);
+}
+
+export function canAccessOptionsAccountPage(org: Organization): boolean {
+  return (org.isBravuraEnterprise && org.canAccess);
 }
 
 export function canAccessOrgAdmin(org: Organization): boolean {
