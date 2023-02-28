@@ -4,13 +4,13 @@
   "version": "2022.11.0",
   "internalVersion": "2023-10",
   "keywords": [
-    "bravura safe",
+    "Bravura Safe",
     "password",
     "vault",
     "password manager",
     "cli"
   ],
-  "author": "Bravura Security Inc. <hello@bravurasecurity.com> (https://www.bravurasecurity.com)",
+  "author": "Bitwarden Inc. with modifications by Bravura Security Inc.",
   "homepage": "https://www.bravurasecurity.com",
   "repository": {
     "type": "git",
