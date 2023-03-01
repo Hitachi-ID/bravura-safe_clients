@@ -18,7 +18,7 @@
       <app-two-factor-verify
         [organizationId]="organizationId"
         [type]="type"
-        (onAuthed)="auth($event)"
+        (onAuthed)="auth($any($event))"
         *ngIf="!authed"
       >
       </app-two-factor-verify>
@@ -41,6 +41,8 @@
             <strong>{{ "twoFactorHyprAppId" | i18n }}:</strong> {{ appId }}
             <br />
             <strong>{{ "twoFactorHyprServerUrl" | i18n }}:</strong> {{ serverUrl }}
+            <br />
+            <strong>{{ "twoFactorHyprLinkDuration" | i18n }}:</strong> {{ hyprMagicLinkDuration }}
           </ng-container>
           <ng-container *ngIf="!enabled">
             <img class="float-right ml-3 mfaType99" alt="Bravura OneAuth logo" />
@@ -80,6 +82,19 @@
                 [(ngModel)]="serverUrl"
                 placeholder="{{ 'ex' | i18n }} xxxxxxxx.hypr.com"
                 required
+                appInputVerbatim
+              />
+            </div>
+            <div class="form-group">
+              <label for="hyprMagicLinkDuration">{{ "twoFactorHyprLinkDuration" | i18n }}</label>
+              <input
+                id="hyprMagicLinkDuration"
+                type="number"
+                name="Bravura OneAuth Registration Link Duration"
+                class="form-control"
+                [(ngModel)]="hyprMagicLinkDuration"
+                placeholder="{{ 'ex' | i18n }} 3600"
+                value="3600"
                 appInputVerbatim
               />
             </div>

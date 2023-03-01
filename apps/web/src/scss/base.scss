@@ -44,8 +44,6 @@ body {
 .tabbed-header {
   padding-top: $sidebar-padding-top;
 
-
-
   @include themify($themes) {
     background: themed("backgroundColor");
   }
@@ -320,6 +318,16 @@ code {
   }
 }
 
-button i.fa, .text-muted.invisible {
+button i.fa,
+a i.fa,
+.text-muted.invisible {
   margin-right: 0.25rem;
+}
+
+.no-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

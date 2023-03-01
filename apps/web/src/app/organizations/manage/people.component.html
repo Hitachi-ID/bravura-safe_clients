@@ -1,46 +1,46 @@
 <div class="page-header d-flex">
-  <h1>{{ "people" | i18n }}</h1>
+  <h1>{{ "members" | i18n }}</h1>
   <div class="ml-auto d-flex">
     <div class="btn-group btn-group-sm" role="group">
       <button
         type="button"
         class="btn btn-outline-secondary"
+        style="white-space: nowrap;"
         [ngClass]="{ active: status == null }"
         (click)="filter(null)"
       >
         {{ "all" | i18n }}
-        <span class="badge badge-pill badge-info" *ngIf="allCount">{{ allCount }}</span>
+        <span bitBadge badgeType="info" *ngIf="allCount">{{ allCount }}</span>
       </button>
       <button
         type="button"
         class="btn btn-outline-secondary"
+        style="white-space: nowrap;"
         [ngClass]="{ active: status == userStatusType.Invited }"
         (click)="filter(userStatusType.Invited)"
       >
         {{ "invited" | i18n }}
-        <span class="badge badge-pill badge-info" *ngIf="invitedCount">{{ invitedCount }}</span>
+        <span bitBadge badgeType="info" *ngIf="invitedCount">{{ invitedCount }}</span>
       </button>
       <button
         type="button"
         class="btn btn-outline-secondary"
+        style="white-space: nowrap;"
         [ngClass]="{ active: status == userStatusType.Accepted }"
         (click)="filter(userStatusType.Accepted)"
       >
         {{ "accepted" | i18n }}
-        <span class="badge badge-pill badge-warning" *ngIf="acceptedCount">{{
-          acceptedCount
-        }}</span>
+        <span bitBadge badgeType="warning" *ngIf="acceptedCount">{{ acceptedCount }}</span>
       </button>
       <button
         type="button"
         class="btn btn-outline-secondary"
-        [ngClass]="{ active: status == userStatusType.Deactivated }"
-        (click)="filter(userStatusType.Deactivated)"
+        style="white-space: nowrap;"
+        [ngClass]="{ active: status == userStatusType.Revoked }"
+        (click)="filter(userStatusType.Revoked)"
       >
-        {{ "deactivated" | i18n }}
-        <span class="badge badge-pill badge-info" *ngIf="deactivatedCount">{{
-          deactivatedCount
-        }}</span>
+        {{ "revoked" | i18n }}
+        <span bitBadge badgeType="info" *ngIf="revokedCount">{{ revokedCount }}</span>
       </button>
     </div>
     <div class="ml-3">
@@ -79,13 +79,13 @@
           <i class="fa fa-fw fa-check" aria-hidden="true"></i>
           {{ "confirmSelected" | i18n }}
         </button>
-        <button class="dropdown-item" appStopClick (click)="bulkActivate()">
+        <button class="dropdown-item" appStopClick (click)="bulkRestore()">
           <i class="fa fa-fw fa-plus-circle" aria-hidden="true"></i>
-          {{ "activate" | i18n }}
+          {{ "restoreAccess" | i18n }}
         </button>
-        <button class="dropdown-item" appStopClick (click)="bulkDeactivate()">
+        <button class="dropdown-item" appStopClick (click)="bulkRevoke()">
           <i class="fa fa-fw fa-minus-circle" aria-hidden="true"></i>
-          {{ "deactivate" | i18n }}
+          {{ "revokeAccess" | i18n }}
         </button>
         <button class="dropdown-item text-danger" appStopClick (click)="bulkRemove()">
           <i class="fa fa-fw fa-remove" aria-hidden="true"></i>
@@ -145,25 +145,18 @@
             <input type="checkbox" [(ngModel)]="u.checked" appStopProp />
           </td>
           <td width="30">
-            <app-avatar
-              [data]="u | userName"
-              [email]="u.email"
-              size="25"
-              [circle]="true"
-              [fontSize]="14"
-            >
-            </app-avatar>
+            <bit-avatar [text]="u | userName" [id]="u.userId" size="small"></bit-avatar>
           </td>
           <td>
             <a href="#" appStopClick (click)="edit(u)">{{ u.email }}</a>
-            <span class="badge badge-secondary" *ngIf="u.status === userStatusType.Invited">{{
+            <span bitBadge badgeType="secondary" *ngIf="u.status === userStatusType.Invited">{{
               "invited" | i18n
             }}</span>
-            <span class="badge badge-warning" *ngIf="u.status === userStatusType.Accepted">{{
+            <span bitBadge badgeType="warning" *ngIf="u.status === userStatusType.Accepted">{{
               "accepted" | i18n
             }}</span>
-            <span class="badge badge-secondary" *ngIf="u.status === userStatusType.Deactivated">{{
-              "deactivated" | i18n
+            <span bitBadge badgeType="secondary" *ngIf="u.status === userStatusType.Revoked">{{
+              "revoked" | i18n
             }}</span>
             <small class="text-muted d-block" *ngIf="u.name">{{ u.name }}</small>
           </td>
@@ -259,21 +252,21 @@
                   class="dropdown-item"
                   href="#"
                   appStopClick
-                  (click)="activate(u)"
-                  *ngIf="u.status === userStatusType.Deactivated"
+                  (click)="restore(u)"
+                  *ngIf="u.status === userStatusType.Revoked"
                 >
                   <i class="fa fa-fw fa-plus-circle" aria-hidden="true"></i>
-                  {{ "activate" | i18n }}
+                  {{ "restoreAccess" | i18n }}
                 </a>
                 <a
                   class="dropdown-item"
                   href="#"
                   appStopClick
-                  (click)="deactivate(u)"
-                  *ngIf="u.status !== userStatusType.Deactivated"
+                  (click)="revoke(u)"
+                  *ngIf="u.status !== userStatusType.Revoked"
                 >
                   <i class="fa fa-fw fa-minus-circle" aria-hidden="true"></i>
-                  {{ "deactivate" | i18n }}
+                  {{ "revokeAccess" | i18n }}
                 </a>
                 <a class="dropdown-item text-danger" href="#" appStopClick (click)="remove(u)">
                   <i class="fa fa-fw fa-remove" aria-hidden="true"></i>

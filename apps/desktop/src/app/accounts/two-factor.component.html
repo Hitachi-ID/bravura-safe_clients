@@ -65,7 +65,7 @@
     </ng-container>
     <ng-container *ngIf="selectedProviderType === providerType.WebAuthn">
       <div id="web-authn-frame">
-        <iframe id="webauthn_iframe" [allow]="webAuthnAllow"></iframe>
+        <iframe id="webauthn_iframe" [attr.allow]="webAuthnAllow"></iframe>
       </div>
       <div class="box first">
         <div class="box-content">
@@ -105,7 +105,7 @@
         <div class="box-content-row">
           <iframe id="hcaptcha_iframe" height="80"></iframe>
           <button class="btn block" type="button" routerLink="/accessibility-cookie">
-            <i class="bwi bwi-universal-access" aria-hidden="true"></i>
+            <i class="fa fa-universal-access" aria-hidden="true"></i>
             {{ "loadAccessibilityCookie" | i18n }}
           </button>
         </div>

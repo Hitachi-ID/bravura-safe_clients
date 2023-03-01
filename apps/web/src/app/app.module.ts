@@ -1,14 +1,15 @@
 import { DragDropModule } from "@angular/cdk/drag-drop";
 import { LayoutModule } from "@angular/cdk/layout";
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
+import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
+import { NgxCaptureModule } from "ngx-capture";
 
 import { AppComponent } from "./app.component";
+import { CoreModule } from "./core/core.module";
 import { OssRoutingModule } from "./oss-routing.module";
 import { OssModule } from "./oss.module";
-import { ServicesModule } from "./services/services.module";
 import { WildcardRoutingModule } from "./wildcard-routing.module";
 
 @NgModule({
@@ -16,8 +17,9 @@ import { WildcardRoutingModule } from "./wildcard-routing.module";
     OssModule,
     BrowserAnimationsModule,
     FormsModule,
-    ServicesModule,
+    CoreModule,
     InfiniteScrollModule,
+    NgxCaptureModule,
     DragDropModule,
     LayoutModule,
     OssRoutingModule,
@@ -25,6 +27,5 @@ import { WildcardRoutingModule } from "./wildcard-routing.module";
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}

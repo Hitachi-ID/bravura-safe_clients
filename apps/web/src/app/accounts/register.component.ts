@@ -1,5 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { UntypedFormBuilder } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
+import { Subject, takeUntil } from "rxjs";
 import { first } from "rxjs/operators";
 
 import { RegisterComponent as BaseRegisterComponent } from "@bitwarden/angular/components/register.component";
@@ -7,31 +9,37 @@ import { ApiService } from "@bitwarden/common/abstractions/api.service";
 import { AuthService } from "@bitwarden/common/abstractions/auth.service";
 import { CryptoService } from "@bitwarden/common/abstractions/crypto.service";
 import { EnvironmentService } from "@bitwarden/common/abstractions/environment.service";
+import { FormValidationErrorsService } from "@bitwarden/common/abstractions/formValidationErrors.service";
 import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
 import { PasswordGenerationService } from "@bitwarden/common/abstractions/passwordGeneration.service";
 import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
-import { PolicyService } from "@bitwarden/common/abstractions/policy.service";
+import { PolicyApiServiceAbstraction } from "@bitwarden/common/abstractions/policy/policy-api.service.abstraction";
+import { PolicyService } from "@bitwarden/common/abstractions/policy/policy.service.abstraction";
 import { StateService } from "@bitwarden/common/abstractions/state.service";
-import { PolicyData } from "@bitwarden/common/models/data/policyData";
-import { MasterPasswordPolicyOptions } from "@bitwarden/common/models/domain/masterPasswordPolicyOptions";
+import { PolicyData } from "@bitwarden/common/models/data/policy.data";
+import { MasterPasswordPolicyOptions } from "@bitwarden/common/models/domain/master-password-policy-options";
 import { Policy } from "@bitwarden/common/models/domain/policy";
-import { ReferenceEventRequest } from "@bitwarden/common/models/request/referenceEventRequest";
+import { ReferenceEventRequest } from "@bitwarden/common/models/request/reference-event.request";
 
-import { RouterService } from "../services/router.service";
+import { RouterService } from "../core";
 
 @Component({
   selector: "app-register",
   templateUrl: "register.component.html",
 })
-export class RegisterComponent extends BaseRegisterComponent {
+export class RegisterComponent extends BaseRegisterComponent implements OnInit, OnDestroy {
+  email = "";
   showCreateOrgMessage = false;
   layout = "";
   enforcedPolicyOptions: MasterPasswordPolicyOptions;
 
   private policies: Policy[];
+  private destroy$ = new Subject<void>();
 
   constructor(
+    formValidationErrorService: FormValidationErrorsService,
+    formBuilder: UntypedFormBuilder,
     authService: AuthService,
     router: Router,
     i18nService: I18nService,
@@ -41,12 +49,15 @@ export class RegisterComponent extends BaseRegisterComponent {
     stateService: StateService,
     platformUtilsService: PlatformUtilsService,
     passwordGenerationService: PasswordGenerationService,
+    private policyApiService: PolicyApiServiceAbstraction,
     private policyService: PolicyService,
     environmentService: EnvironmentService,
     logService: LogService,
     private routerService: RouterService
   ) {
     super(
+      formValidationErrorService,
+      formBuilder,
       authService,
       router,
       i18nService,
@@ -61,6 +72,7 @@ export class RegisterComponent extends BaseRegisterComponent {
   }
 
   async ngOnInit() {
+    // eslint-disable-next-line rxjs-angular/prefer-takeuntil
     this.route.queryParams.pipe(first()).subscribe((qParams) => {
       this.referenceData = new ReferenceEventRequest();
       if (qParams.email != null && qParams.email.indexOf("@") > -1) {
@@ -103,7 +115,7 @@ export class RegisterComponent extends BaseRegisterComponent {
     const invite = await this.stateService.getOrganizationInvitation();
     if (invite != null) {
       try {
-        const policies = await this.apiService.getPoliciesByToken(
+        const policies = await this.policyApiService.getPoliciesByToken(
           invite.organizationId,
           invite.token,
           invite.email,
@@ -119,31 +131,19 @@ export class RegisterComponent extends BaseRegisterComponent {
     }
 
     if (this.policies != null) {
-      this.enforcedPolicyOptions = await this.policyService.getMasterPasswordPolicyOptions(
-        this.policies
-      );
+      this.policyService
+        .masterPasswordPolicyOptions$(this.policies)
+        .pipe(takeUntil(this.destroy$))
+        .subscribe((enforcedPasswordPolicyOptions) => {
+          this.enforcedPolicyOptions = enforcedPasswordPolicyOptions;
+        });
     }
 
     await super.ngOnInit();
   }
 
-  async submit() {
-    if (
-      this.enforcedPolicyOptions != null &&
-      !this.policyService.evaluateMasterPassword(
-        this.masterPasswordScore,
-        this.masterPassword,
-        this.enforcedPolicyOptions
-      )
-    ) {
-      this.platformUtilsService.showToast(
-        "error",
-        this.i18nService.t("errorOccurred"),
-        this.i18nService.t("masterPasswordPolicyRequirementsNotMet")
-      );
-      return;
-    }
-
-    await super.submit();
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

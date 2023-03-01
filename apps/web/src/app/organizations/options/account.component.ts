@@ -3,13 +3,18 @@ import { ActivatedRoute } from "@angular/router";
 
 import { ModalService } from "@bitwarden/angular/services/modal.service";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
-import { OrganizationService } from "@bitwarden/common/abstractions/organization.service";
+import { OrganizationService } from "@bitwarden/common/abstractions/organization/organization.service.abstraction";
 import { StateService } from "@bitwarden/common/abstractions/state.service";
-import { PolicyService } from "@bitwarden/common/abstractions/policy.service";
-import { EnrollMasterPasswordReset } from "../../modules/organizations/users/enroll-master-password-reset.component";
+import { PolicyService } from "@bitwarden/common/abstractions/policy/policy.service.abstraction";
+import { EnrollMasterPasswordReset } from "../../organizations/users/enroll-master-password-reset.component";
+import { OpenHyprDeviceManager } from "../../organizations/users/open-hypr-device-manager.component";
 import { Organization } from "@bitwarden/common/models/domain/organization";
 import { PolicyType } from "@bitwarden/common/enums/policyType";
 import { Policy } from "@bitwarden/common/models/domain/policy";
+import { ApiService } from "@bitwarden/common/abstractions/api.service";
+import { ListResponse } from "@bitwarden/common/models/response/list.response";
+import { TwoFactorProviderType } from "@bitwarden/common/enums/twoFactorProviderType";
+import { TwoFactorProviderResponse } from "@bitwarden/common/models/response/two-factor-provider.response";
 
 @Component({
   selector: "app-org-account-options",
@@ -21,6 +26,7 @@ export class AccountComponent {
   organizationUser: Organization;
   organization: Organization;
   policies: Policy[];
+  organizationOneAuthEnabled = false;
 
   private organizationId: string;
 
@@ -30,7 +36,8 @@ export class AccountComponent {
     private logService: LogService,
     private organizationService: OrganizationService,
     private stateService: StateService,
-    private policyService: PolicyService
+    private policyService: PolicyService,
+    private apiService: ApiService
   ) {}
 
   async ngOnInit() {
@@ -48,9 +55,11 @@ export class AccountComponent {
         if( organizationUsers!=null && organizationUsers.length == 1 )
           this.organizationUser = organizationUsers[0];
         else
-          throw new Error( "Error when trying to find user in organization" );
+          throw new Error( "Error when trying to find user in team" );
         this.policies = await this.policyService.getAll( PolicyType.ResetPassword );
-       } catch( e ){
+        const twoFactorProviderHyprEnabled = await this.apiService.getTwoFactorOrganizationHasProvider(this.organizationId, TwoFactorProviderType.OrganizationHypr);
+        this.organizationOneAuthEnabled = this.organization && this.organization.use2fa && twoFactorProviderHyprEnabled;
+      } catch( e ){
       this.logService.error( e );
       }
     });
@@ -83,6 +92,26 @@ export class AccountComponent {
         },
       });
 
+      await ref.onClosedPromise();
+      await this.load();
+    }
+  }
+
+  allowOneAuthDeviceManager(): boolean {
+    if( this.organization && this.organizationUser && this.organizationOneAuthEnabled ) {
+      return true;
+    }
+    return false;
+  }
+
+  async openOneAuthDeviceManager() {
+    if (this.organizationOneAuthEnabled) {
+      const ref = this.modalService.open( OpenHyprDeviceManager, {
+        allowMultipleModals: true,
+        data: {
+          organization: { id: this.organizationId, userId: this.organizationUser.userId },
+        },
+      });
       await ref.onClosedPromise();
       await this.load();
     }

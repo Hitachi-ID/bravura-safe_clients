@@ -4,10 +4,11 @@ import { ApiService } from "@bitwarden/common/abstractions/api.service";
 import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
 import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
-import { UserVerificationService } from "@bitwarden/common/abstractions/userVerification.service";
+import { UserVerificationService } from "@bitwarden/common/abstractions/userVerification/userVerification.service.abstraction";
 import { TwoFactorProviderType } from "@bitwarden/common/enums/twoFactorProviderType";
-import { UpdateTwoFactorHyprRequest } from "@bitwarden/common/models/request/updateTwoFactorHyprRequest";
-import { TwoFactorHyprResponse } from "@bitwarden/common/models/response/twoFactorHyprResponse";
+import { UpdateTwoFactorHyprRequest } from "@bitwarden/common/models/request/update-two-factor-hypr.request";
+import { TwoFactorHyprResponse } from "@bitwarden/common/models/response/two-factor-hypr.response";
+import { AuthResponse } from "@bitwarden/common/types/authResponse";
 
 import { TwoFactorBaseComponent } from "./two-factor-base.component";
 
@@ -20,7 +21,8 @@ export class TwoFactorHyprComponent extends TwoFactorBaseComponent {
   akey: string;
   appId: string;
   serverUrl: string;
-  formPromise: Promise<any>;
+  hyprMagicLinkDuration: number;
+  formPromise: Promise<TwoFactorHyprResponse>;
 
   constructor(
     apiService: ApiService,
@@ -32,7 +34,7 @@ export class TwoFactorHyprComponent extends TwoFactorBaseComponent {
     super(apiService, i18nService, platformUtilsService, logService, userVerificationService);
   }
 
-  auth(authResponse: any) {
+  auth(authResponse: AuthResponse<TwoFactorHyprResponse>) {
     super.auth(authResponse);
     this.processResponse(authResponse.response);
   }
@@ -50,6 +52,17 @@ export class TwoFactorHyprComponent extends TwoFactorBaseComponent {
     request.apiKey = this.akey;
     request.appId = this.appId;
     request.serverUrl = this.serverUrl;
+    request.hyprMagicLinkDuration = this.hyprMagicLinkDuration ? this.hyprMagicLinkDuration : 3600;
+
+    if (this.hyprMagicLinkDuration !== null && ( this.hyprMagicLinkDuration < 900 || this.hyprMagicLinkDuration > 432000)) {
+      // duration has to be between 900s (15 mins) and 432000 (5 days)
+      this.platformUtilsService.showToast(
+        "error",
+        this.i18nService.t("errorOccurred"),
+        this.i18nService.t("twoFactorHyprLinkDurationRange")
+      );
+      return;
+    }
 
     return super.enable(async () => {
       if (this.organizationId != null) {
@@ -67,6 +80,8 @@ export class TwoFactorHyprComponent extends TwoFactorBaseComponent {
     this.akey = response.apiKey;
     this.appId = response.appId;
     this.serverUrl = response.serverUrl;
+    let hyprMagicLinkDuration = response.hyprMagicLinkDuration;
+    this.hyprMagicLinkDuration = hyprMagicLinkDuration ? hyprMagicLinkDuration : 3600;
     this.enabled = response.enabled;
   }
 }

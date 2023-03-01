@@ -1,20 +1,24 @@
 import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { Route, RouterModule, Routes } from "@angular/router";
 
 import { AuthGuard } from "@bitwarden/angular/guards/auth.guard";
 import { LockGuard } from "@bitwarden/angular/guards/lock.guard";
 import { UnauthGuard } from "@bitwarden/angular/guards/unauth.guard";
 
+import { flagEnabled, Flags } from "../utils/flags";
+
 import { AcceptEmergencyComponent } from "./accounts/accept-emergency.component";
 import { AcceptOrganizationComponent } from "./accounts/accept-organization.component";
 import { HintComponent } from "./accounts/hint.component";
 import { LockComponent } from "./accounts/lock.component";
-import { LoginComponent } from "./accounts/login.component";
+import { LoginWithDeviceComponent } from "./accounts/login/login-with-device.component";
+import { LoginComponent } from "./accounts/login/login.component";
 import { RecoverDeleteComponent } from "./accounts/recover-delete.component";
 import { RegisterComponent } from "./accounts/register.component";
 import { RemovePasswordComponent } from "./accounts/remove-password.component";
 import { SetPasswordComponent } from "./accounts/set-password.component";
 import { SsoComponent } from "./accounts/sso.component";
+import { TrialInitiationComponent } from "./accounts/trial-initiation/trial-initiation.component";
 import { TwoFactorComponent } from "./accounts/two-factor.component";
 import { UpdatePasswordComponent } from "./accounts/update-password.component";
 import { UpdateTempPasswordComponent } from "./accounts/update-temp-password.component";
@@ -23,7 +27,10 @@ import { VerifyRecoverDeleteComponent } from "./accounts/verify-recover-delete.c
 import { HomeGuard } from "./guards/home.guard";
 import { FrontendLayoutComponent } from "./layouts/frontend-layout.component";
 import { UserLayoutComponent } from "./layouts/user-layout.component";
+import { OrganizationModule } from "./organizations/organization.module";
+import { AcceptFamilySponsorshipComponent } from "./organizations/sponsorships/accept-family-sponsorship.component";
 import { FamiliesForEnterpriseSetupComponent } from "./organizations/sponsorships/families-for-enterprise-setup.component";
+import { ReportsModule } from "./reports";
 import { AccessComponent } from "./send/access.component";
 import { SendComponent } from "./send/send.component";
 import { AccountComponent } from "./settings/account.component";
@@ -32,20 +39,22 @@ import { DomainRulesComponent } from "./settings/domain-rules.component";
 import { EmergencyAccessViewComponent } from "./settings/emergency-access-view.component";
 import { EmergencyAccessComponent } from "./settings/emergency-access.component";
 import { PreferencesComponent } from "./settings/preferences.component";
+import { SecurityRoutingModule } from "./settings/security-routing.module";
 import { SettingsComponent } from "./settings/settings.component";
-import { ExportComponent } from "./tools/export.component";
+import { SubscriptionRoutingModule } from "./settings/subscription-routing.module";
 import { GeneratorComponent } from "./tools/generator.component";
-import { ImportComponent } from "./tools/import.component";
 import { ToolsComponent } from "./tools/tools.component";
+import { VaultModule } from "./vault/vault.module";
 
-import { BreachReportComponent } from "./reports/breach-report.component";
-import { ExposedPasswordsReportComponent } from "./reports/exposed-passwords-report.component";
-import { InactiveTwoFactorReportComponent } from "./reports/inactive-two-factor-report.component";
-import { ReportListComponent } from "./reports/report-list.component";
-import { ReportsComponent } from "./reports/reports.component";
-import { ReusedPasswordsReportComponent } from "./reports/reused-passwords-report.component";
-import { UnsecuredWebsitesReportComponent } from "./reports/unsecured-websites-report.component";
-import { WeakPasswordsReportComponent } from "./reports/weak-passwords-report.component";
+import { BreachReportComponent } from "./reports/pages/breach-report.component";
+import { ExposedPasswordsReportComponent } from "./reports/pages/exposed-passwords-report.component";
+import { InactiveTwoFactorReportComponent } from "./reports/pages/inactive-two-factor-report.component";
+import { ReportListComponent } from "./reports/shared/report-list/report-list.component";
+import { ReportsLayoutComponent } from "./reports/reports-layout.component";
+import { ReusedPasswordsReportComponent } from "./reports/pages/reused-passwords-report.component";
+import { UnsecuredWebsitesReportComponent } from "./reports/pages/unsecured-websites-report.component";
+import { WeakPasswordsReportComponent } from "./reports/pages/weak-passwords-report.component";
+import { SecurityAssessmentReportComponent } from "./reports/pages/security-assessment-report.component";
 
 const routes: Routes = [
   {
@@ -60,12 +69,22 @@ const routes: Routes = [
         canActivate: [HomeGuard], // Redirects either to vault, login or lock page.
       },
       { path: "login", component: LoginComponent, canActivate: [UnauthGuard] },
+      {
+        path: "login-with-device",
+        component: LoginWithDeviceComponent,
+        data: { titleId: "loginWithDevice" },
+      },
       { path: "2fa", component: TwoFactorComponent, canActivate: [UnauthGuard] },
       {
         path: "register",
         component: RegisterComponent,
         canActivate: [UnauthGuard],
         data: { titleId: "createAccount" },
+      },
+      {
+        path: "trial",
+        redirectTo: "register",
+        pathMatch: "full",
       },
       {
         path: "sso",
@@ -144,9 +163,7 @@ const routes: Routes = [
     children: [
       {
         path: "vault",
-        loadChildren: async () =>
-          (await import("./modules/vault/modules/individual-vault/individual-vault.module"))
-            .IndividualVaultModule,
+        loadChildren: () => VaultModule,
       },
       { path: "sends", component: SendComponent, data: { title: "Send" } },
       {
@@ -167,8 +184,7 @@ const routes: Routes = [
           },
           {
             path: "security",
-            loadChildren: async () =>
-              (await import("./settings/security-routing.module")).SecurityRoutingModule,
+            loadChildren: () => SecurityRoutingModule,
           },
           {
             path: "domain-rules",
@@ -198,8 +214,13 @@ const routes: Routes = [
         canActivate: [AuthGuard],
         children: [
           { path: "", pathMatch: "full", redirectTo: "generator" },
-          { path: "import", component: ImportComponent, data: { titleId: "importData" } },
-          { path: "export", component: ExportComponent, data: { titleId: "exportVault" } },
+          {
+            path: "",
+            loadChildren: () =>
+              import("./tools/import-export/import-export.module").then(
+                (m) => m.ImportExportModule
+              ),
+          },
           {
             path: "generator",
             component: GeneratorComponent,
@@ -209,10 +230,15 @@ const routes: Routes = [
       },
       {
         path: "reports",
-        component: ReportsComponent,
+        component: ReportsLayoutComponent,
         canActivate: [AuthGuard],
         children: [
-          { path: "", pathMatch: "full", redirectTo: "exposed-passwords-report" },
+          { path: "", pathMatch: "full", redirectTo: "security-assessment-report" },
+          {
+            path: "security-assessment-report",
+            component: SecurityAssessmentReportComponent,
+            data: { titleId: "securityAssessmentReport" },
+          },
           {
             path: "reused-passwords-report",
             component: ReusedPasswordsReportComponent,
@@ -245,10 +271,7 @@ const routes: Routes = [
   },
   {
     path: "organizations",
-    loadChildren: () =>
-      import("./organizations/organization-routing.module").then(
-        (m) => m.OrganizationsRoutingModule
-      ),
+    loadChildren: () => OrganizationModule,
   },
 ];
 
@@ -263,3 +286,12 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class OssRoutingModule {}
+
+export function buildFlaggedRoute(flagName: keyof Flags, route: Route): Route {
+  return flagEnabled(flagName)
+    ? route
+    : {
+        path: route.path,
+        redirectTo: "/",
+      };
+}

@@ -11,6 +11,11 @@
         {{ "viewSendHiddenEmailWarning" | i18n }}
       </app-callout>
     </div>
+    <div class="col-8" *ngIf="send.type === sendType.File">
+      <app-callout type="warning" title="{{ 'warning' | i18n }}">
+        {{ "viewSendDownloadFileWarning" | i18n }}
+      </app-callout>
+    </div>
   </div>
   <div class="row justify-content-center">
     <div class="col-5">
@@ -77,7 +82,7 @@
                 id="text"
                 rows="8"
                 name="Text"
-                [(ngModel)]="sendText"
+                [ngModel]="sendText"
                 class="form-control"
                 readonly
               ></textarea>

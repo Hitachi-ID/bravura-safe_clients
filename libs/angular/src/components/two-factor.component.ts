@@ -10,15 +10,16 @@ import { AuthService } from "@bitwarden/common/abstractions/auth.service";
 import { EnvironmentService } from "@bitwarden/common/abstractions/environment.service";
 import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
+import { LoginService } from "@bitwarden/common/abstractions/login.service";
 import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
 import { StateService } from "@bitwarden/common/abstractions/state.service";
 import { TwoFactorService } from "@bitwarden/common/abstractions/twoFactor.service";
 import { TwoFactorProviderType } from "@bitwarden/common/enums/twoFactorProviderType";
 import { WebAuthnIFrame } from "@bitwarden/common/misc/webauthn_iframe";
 import { HyprIFrame } from "@bitwarden/common/misc/hypr_iframe";
-import { AuthResult } from "@bitwarden/common/models/domain/authResult";
-import { TokenRequestTwoFactor } from "@bitwarden/common/models/request/identityToken/tokenRequestTwoFactor";
-import { TwoFactorEmailRequest } from "@bitwarden/common/models/request/twoFactorEmailRequest";
+import { AuthResult } from "@bitwarden/common/models/domain/auth-result";
+import { TokenTwoFactorRequest } from "@bitwarden/common/models/request/identity-token/token-two-factor.request";
+import { TwoFactorEmailRequest } from "@bitwarden/common/models/request/two-factor-email.request";
 import { TwoFactorProviders } from "@bitwarden/common/services/twoFactor.service";
 
 import { CaptchaProtectedComponent } from "./captchaProtected.component";
@@ -62,7 +63,8 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
     protected route: ActivatedRoute,
     protected logService: LogService,
     protected twoFactorService: TwoFactorService,
-    protected appIdService: AppIdService
+    protected appIdService: AppIdService,
+    protected loginService: LoginService
   ) {
     super(environmentService, i18nService, platformUtilsService);
     this.webAuthnSupported = this.platformUtilsService.supportsWebAuthn(win);
@@ -169,6 +171,10 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
           },
           (error: string) => {
             this.platformUtilsService.showToast("error", this.i18nService.t("errorOccurred"), error);
+          },
+          (successMessage: string) => {
+            this.platformUtilsService.showToast("info", "", successMessage);
+            this.router.navigate([this.loginRoute]);
           }
         );
         setTimeout(() => {
@@ -222,7 +228,7 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
 
   async doSubmit() {
     this.formPromise = this.authService.logInTwoFactor(
-      new TokenRequestTwoFactor(this.selectedProviderType, this.token, this.remember),
+      new TokenTwoFactorRequest(this.selectedProviderType, this.token, this.remember),
       this.captchaToken
     );
     const response: AuthResult = await this.formPromise;
@@ -232,6 +238,7 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
       return;
     }
     if (this.onSuccessfulLogin != null) {
+      this.loginService.clearValues();
       this.onSuccessfulLogin();
     }
     if (response.resetMasterPassword) {
@@ -241,8 +248,10 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
       this.successRoute = "update-temp-password";
     }
     if (this.onSuccessfulLoginNavigate != null) {
+      this.loginService.clearValues();
       this.onSuccessfulLoginNavigate();
     } else {
+      this.loginService.clearValues();
       this.router.navigate([this.successRoute], {
         queryParams: {
           identifier: this.identifier,
@@ -265,6 +274,8 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
       request.email = this.authService.email;
       request.masterPasswordHash = this.authService.masterPasswordHash;
       request.deviceIdentifier = await this.appIdService.getAppId();
+      request.authRequestAccessCode = this.authService.accessCode;
+      request.authRequestId = this.authService.authRequestId;
       this.emailPromise = this.apiService.postTwoFactorEmail(request);
       await this.emailPromise;
       if (doToast) {
@@ -319,11 +330,12 @@ export class TwoFactorComponent extends CaptchaProtectedComponent implements OnI
     return (
       this.authService.authingWithPassword() ||
       this.authService.authingWithSso() ||
-      this.authService.authingWithApiKey()
+      this.authService.authingWithUserApiKey() ||
+      this.authService.authingWithPasswordless()
     );
   }
 
   get needsLock(): boolean {
-    return this.authService.authingWithSso() || this.authService.authingWithApiKey();
+    return this.authService.authingWithSso() || this.authService.authingWithUserApiKey();
   }
 }

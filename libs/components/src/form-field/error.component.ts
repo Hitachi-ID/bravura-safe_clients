@@ -9,7 +9,7 @@ let nextId = 0;
   selector: "bit-error",
   template: `<i class="fa fa-error"></i> {{ displayError }}`,
   host: {
-    class: "tw-block tw-mt-1 tw-text-danger",
+    class: "tw-block small tw-text-danger",
     "aria-live": "assertive",
   },
 })
@@ -26,6 +26,10 @@ export class BitErrorComponent {
         return this.i18nService.t("inputRequired");
       case "email":
         return this.i18nService.t("inputEmail");
+      case "minlength":
+        return this.i18nService.t("inputMinLength", this.error[1]?.requiredLength);
+      case "maxlength":
+        return this.i18nService.t("inputMaxLength", this.error[1]?.requiredLength);
       default:
         // Attempt to show a custom error message.
         if (this.error[1]?.message) {

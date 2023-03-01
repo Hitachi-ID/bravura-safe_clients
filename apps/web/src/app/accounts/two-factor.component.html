@@ -12,7 +12,8 @@
       [ngClass]="{
         'col-9':
           selectedProviderType === providerType.Duo ||
-          selectedProviderType === providerType.OrganizationDuo
+          selectedProviderType === providerType.OrganizationDuo,
+        'col-7': selectedProviderType === providerType.OrganizationHypr
       }"
     >
       <ng-container *ngIf="selectedProviderType === providerType.OrganizationHypr; else otherProviders">
@@ -85,7 +86,7 @@
           </ng-container>
           <ng-container *ngIf="selectedProviderType === providerType.WebAuthn">
             <div id="web-authn-frame" class="mb-3">
-              <iframe id="webauthn_iframe" [allow]="webAuthnAllow"></iframe>
+              <iframe id="webauthn_iframe" [attr.allow]="webAuthnAllow"></iframe>
             </div>
           </ng-container>
           <ng-container
@@ -111,6 +112,7 @@
                 "></i>
               </span>
               <p id="messagePlaceHolder"></p>
+              <button hidden id="hyprEmailRegistration" type="button" class="btn btn-primary" method="post">{{ "twoFactorHyprSendRegEmail" | i18n }}</button>
             </div>
           </ng-container>
           <i

@@ -23,6 +23,6 @@
 
 ## Before you submit
 
-- [ ] I have checked for **linting** errors (`npm run lint`) (required)
-- [ ] This change requires a **documentation update** (notify the documentation team)
-- [ ] This change has particular **deployment requirements** (notify the DevOps team)
+- Please add **unit tests** where it makes sense to do so (encouraged but not required)
+- If this change requires a **documentation update** - notify the documentation team
+- If this change has particular **deployment requirements** - notify the DevOps team

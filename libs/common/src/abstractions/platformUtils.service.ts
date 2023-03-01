@@ -18,9 +18,9 @@ export abstract class PlatformUtilsService {
   isMacAppStore: () => boolean;
   isViewOpen: () => Promise<boolean>;
   launchUri: (uri: string, options?: any) => void;
-  saveFile: (win: Window, blobData: any, blobOptions: any, fileName: string) => void;
   getApplicationVersion: () => Promise<string>;
   getInternalApplicationVersion: () => Promise<string>;
+  getApplicationVersionNumber: () => Promise<string>;
   supportsWebAuthn: (win: Window) => boolean;
   supportsDuo: () => boolean;
   supportsHypr: () => boolean;
@@ -36,7 +36,8 @@ export abstract class PlatformUtilsService {
     confirmText?: string,
     cancelText?: string,
     type?: string,
-    bodyIsHtml?: boolean
+    bodyIsHtml?: boolean,
+    target?: string
   ) => Promise<boolean>;
   isDev: () => boolean;
   isSelfHost: () => boolean;
