@@ -912,7 +912,7 @@
     "message": "Export"
   },
   "exportVault": {
-    "message": "Export vault"
+    "message": "Export safe"
   },
   "fileFormat": {
     "message": "File format"

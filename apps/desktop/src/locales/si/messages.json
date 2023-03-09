@@ -33,7 +33,7 @@
     "message": "Collections"
   },
   "searchVault": {
-    "message": "Search vault"
+    "message": "Search safe"
   },
   "addItem": {
     "message": "Add item"
@@ -674,7 +674,7 @@
     "message": "Self-hosted environment"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Specify the base URL of your on-premises hosted Bravura Safe installation."
+    "message": "Specify the base URL of your Bravura Safe installation."
   },
   "customEnvironment": {
     "message": "Custom environment"
@@ -752,7 +752,7 @@
     "message": "පූරණය වෙමින්..."
   },
   "lockVault": {
-    "message": "Lock vault"
+    "message": "Lock safe"
   },
   "passwordGenerator": {
     "message": "Password generator"
@@ -773,7 +773,7 @@
     "message": "Follow us"
   },
   "syncVault": {
-    "message": "Sync vault"
+    "message": "Sync safe"
   },
   "changeMasterPass": {
     "message": "Change master password"
@@ -790,7 +790,7 @@
     "description": "A 'fingerprint phrase' is a unique word phrase (similar to a passphrase) that a user can use to authenticate their public key with another user, for the purposes of sharing."
   },
   "goToWebVault": {
-    "message": "Go to web vault"
+    "message": "Go to web safe"
   },
   "getMobileApp": {
     "message": "Get mobile app"
@@ -1275,7 +1275,7 @@
     "description": "ex. Date this password was updated"
   },
   "exportVault": {
-    "message": "Export vault"
+    "message": "Export safe"
   },
   "fileFormat": {
     "message": "File format"
@@ -1895,7 +1895,7 @@
     "message": "Key connector error: make sure key connector is available and working correctly."
   },
   "lockAllVaults": {
-    "message": "Lock all vaults"
+    "message": "Lock all safes"
   },
   "accountLimitReached": {
     "message": "No more than 5 accounts may be logged in at the same time."

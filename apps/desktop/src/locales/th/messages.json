@@ -33,7 +33,7 @@
     "message": "คอลเลกชัน"
   },
   "searchVault": {
-    "message": "Search vault"
+    "message": "Search safe"
   },
   "addItem": {
     "message": "เพิ่มรายการ"
@@ -752,7 +752,7 @@
     "message": "กำลังโหลด..."
   },
   "lockVault": {
-    "message": "Lock vault"
+    "message": "Lock safe"
   },
   "passwordGenerator": {
     "message": "ตัวสร้างรหัสผ่าน"
@@ -1895,7 +1895,7 @@
     "message": "Key connector error: make sure key connector is available and working correctly."
   },
   "lockAllVaults": {
-    "message": "Lock all vaults"
+    "message": "Lock all safes"
   },
   "accountLimitReached": {
     "message": "No more than 5 accounts may be logged in at the same time."

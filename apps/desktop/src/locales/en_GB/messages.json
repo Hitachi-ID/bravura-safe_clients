@@ -33,7 +33,7 @@
     "message": "Collections"
   },
   "searchVault": {
-    "message": "Search vault"
+    "message": "Search safe"
   },
   "addItem": {
     "message": "Add item"
@@ -773,7 +773,7 @@
     "message": "Follow us"
   },
   "syncVault": {
-    "message": "Sync vault"
+    "message": "Sync safe"
   },
   "changeMasterPass": {
     "message": "Change master password"
@@ -1275,7 +1275,7 @@
     "description": "ex. Date this password was updated"
   },
   "exportVault": {
-    "message": "Export vault"
+    "message": "Export safe"
   },
   "fileFormat": {
     "message": "File format"

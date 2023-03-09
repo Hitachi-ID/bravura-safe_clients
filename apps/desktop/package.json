@@ -1,18 +1,19 @@
 {
   "name": "@bitwarden/desktop",
-  "description": "A secure and free password manager for all of your devices.",
+  "description": "A secure password manager for all of your devices.",
   "version": "2023.10.0",
   "keywords": [
     "Bravura Safe",
     "password",
     "vault",
+    "safe",
     "password manager"
   ],
   "author": "Bitwarden Inc. with modifications by Bravura Security Inc.",
   "homepage": "https://bravurasecurity.com",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.bravurasecurity.com/product/bravura-safe/clients"
+    "url": "https://github.com/Hitachi-ID/bravura-safe_clients.git"
   },
   "license": "GPL-3.0",
   "scripts": {
