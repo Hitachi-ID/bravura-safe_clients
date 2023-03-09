@@ -752,7 +752,7 @@
     "message": "ലഭ്യമാക്കുന്നു..."
   },
   "lockVault": {
-    "message": "Lock vault"
+    "message": "Lock safe"
   },
   "passwordGenerator": {
     "message": "പാസ്സ്‌വേഡ് സൃഷ്ടാവ്"
@@ -1895,7 +1895,7 @@
     "message": "Key connector error: make sure key connector is available and working correctly."
   },
   "lockAllVaults": {
-    "message": "Lock all vaults"
+    "message": "Lock all safes"
   },
   "accountLimitReached": {
     "message": "No more than 5 accounts may be logged in at the same time."

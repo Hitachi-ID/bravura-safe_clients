@@ -674,7 +674,7 @@
     "message": "Okolje z lastnim gostovanjem"
   },
   "selfHostedEnvironmentFooter": {
-    "message": "Specify the base URL of your on-premises hosted Bravura Safe installation."
+    "message": "Specify the base URL of your Bravura Safe installation."
   },
   "customEnvironment": {
     "message": "Okolje po meri"
@@ -752,7 +752,7 @@
     "message": "Nalaganje..."
   },
   "lockVault": {
-    "message": "Lock vault"
+    "message": "Lock safe"
   },
   "passwordGenerator": {
     "message": "Generator gesel"
@@ -1895,7 +1895,7 @@
     "message": "Key connector error: make sure key connector is available and working correctly."
   },
   "lockAllVaults": {
-    "message": "Lock all vaults"
+    "message": "Lock all safes"
   },
   "accountLimitReached": {
     "message": "No more than 5 accounts may be logged in at the same time."

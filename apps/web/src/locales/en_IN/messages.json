@@ -282,7 +282,7 @@
     "description": "Search item type"
   },
   "searchVault": {
-    "message": "Search vault"
+    "message": "Search safe"
   },
   "allItems": {
     "message": "All items"
@@ -912,7 +912,7 @@
     "message": "Export"
   },
   "exportVault": {
-    "message": "Export vault"
+    "message": "Export safe"
   },
   "fileFormat": {
     "message": "File format"

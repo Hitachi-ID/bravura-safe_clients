@@ -752,7 +752,7 @@
     "message": "Učitavanje..."
   },
   "lockVault": {
-    "message": "Lock vault"
+    "message": "Lock safe"
   },
   "passwordGenerator": {
     "message": "Generator lozinki"
@@ -1895,7 +1895,7 @@
     "message": "Key connector error: make sure key connector is available and working correctly."
   },
   "lockAllVaults": {
-    "message": "Lock all vaults"
+    "message": "Lock all safes"
   },
   "accountLimitReached": {
     "message": "No more than 5 accounts may be logged in at the same time."

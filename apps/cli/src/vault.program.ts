@@ -444,7 +444,7 @@ export class VaultProgram extends Program {
 
   private exportCommand(): program.Command {
     return new program.Command("export")
-      .description("Export vault data to a CSV or JSON file.", {})
+      .description("Export safe data to a CSV or JSON file.", {})
       .option("--output <output>", "Output directory or filename.")
       .option("--format <format>", "Export file format.")
       .option(

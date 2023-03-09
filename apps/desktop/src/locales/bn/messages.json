@@ -752,7 +752,7 @@
     "message": "লোড হচ্ছে..."
   },
   "lockVault": {
-    "message": "Lock vault"
+    "message": "Lock safe"
   },
   "passwordGenerator": {
     "message": "পাসওয়ার্ড উৎপাদক"
@@ -790,7 +790,7 @@
     "description": "A 'fingerprint phrase' is a unique word phrase (similar to a passphrase) that a user can use to authenticate their public key with another user, for the purposes of sharing."
   },
   "goToWebVault": {
-    "message": "Go to web vault"
+    "message": "Go to web safe"
   },
   "getMobileApp": {
     "message": "Get mobile app"
@@ -1895,7 +1895,7 @@
     "message": "Key connector error: make sure key connector is available and working correctly."
   },
   "lockAllVaults": {
-    "message": "Lock all vaults"
+    "message": "Lock all safes"
   },
   "accountLimitReached": {
     "message": "No more than 5 accounts may be logged in at the same time."

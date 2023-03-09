@@ -199,7 +199,7 @@
     "message": "Sync"
   },
   "syncVaultNow": {
-    "message": "Sync vault now"
+    "message": "Sync safe now"
   },
   "lastSync": {
     "message": "Last sync:"
@@ -270,7 +270,7 @@
     "message": "Avoid ambiguous characters"
   },
   "searchVault": {
-    "message": "Search vault"
+    "message": "Search safe"
   },
   "edit": {
     "message": "Edit"
@@ -646,7 +646,7 @@
     "description": "'Solarized' is a noun and the name of a color scheme. It should not be translated."
   },
   "exportVault": {
-    "message": "Export vault"
+    "message": "Export safe"
   },
   "fileFormat": {
     "message": "File format"
