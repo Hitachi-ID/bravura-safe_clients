@@ -11,7 +11,6 @@ This project contains the APIs, database, and other core infrastructure items ne
 
 #  Client Applications
 
-
 This repository houses all Bravura Safe client applications except the Mobile application
 
 Please check the readmes for each application under `apps` for instructions on how to build the different applications.

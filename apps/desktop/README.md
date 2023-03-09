@@ -1,14 +1,20 @@
-[![Github Workflow build on master](https://github.com/bitwarden/clients/actions/workflows/build-desktop.yml/badge.svg?branch=master)](https://github.com/bitwarden/clients/actions/workflows/build-desktop.yml?query=branch:master)
-[![Crowdin](https://d322cqt584bo4o.cloudfront.net/bitwarden-desktop/localized.svg)](https://crowdin.com/project/bitwarden-desktop)
-[![Join the chat at https://gitter.im/bitwarden/Lobby](https://badges.gitter.im/bitwarden/Lobby.svg)](https://gitter.im/bitwarden/Lobby)
+----------------------------------------------------------------
 
-# Bitwarden Desktop Application
+Bravura Safe is a modified version of Bitwarden®. It was developed using Bitwarden open source software. Bravura Security, Inc. and Bravura Safe are not affiliated with or endorsed by Bitwarden or Bitwarden, Inc. Bitwarden is a trademark or registered trademark of Bitwarden, Inc. in the United States and/or other countries. 
 
-[![Platforms](https://imgur.com/SLv9paA.png "Windows, macOS, and Linux")](https://bitwarden.com/download/)
+The original work is available at [https://github.com/bitwarden/clients]. 
+The original documentation is available at [https://bitwarden.com/help/].
+A complete list of all changes is available in the git history of this project.
 
-The Bitwarden desktop app is written using Electron and Angular. The application installs on Windows, macOS, and Linux distributions.
 
-![Desktop Vault](https://github.com/bitwarden/brand/blob/f09f2fa594c8a020c315296074f18ce0a7b3f171/screenshots/desktop-macos-vault.png "My Vault")
+This repository houses the Bravura Safe version of the desktop applications.
+
+# Desktop Application
+
+[![Platforms](https://imgur.com/SLv9paA.png "Windows, macOS, and Linux")](https://bravurasecurity.com/)
+
+The desktop app is written using Electron and Angular. The application installs on Windows, macOS, and Linux distributions.
+
 
 ## Documentation
 
