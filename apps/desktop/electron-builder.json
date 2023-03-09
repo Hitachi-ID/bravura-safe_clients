@@ -115,8 +115,8 @@
     "backgroundColor": "#175DDC",
     "applicationId": "bravurasafedesktop",
     "identityName": "HitachiIDSystemsInc.desktop",
-    "publisher": "CN=14D52771-DE3C-4886-B8BF-825BA7690418",
-    "publisherDisplayName": "Bravura Security, Inc",
+    "publisher": "CN=&quot;Bravura Security, Inc.&quot;, O=&quot;Bravura Security, Inc.&quot;, L=Calgary, S=Alberta, C=CA",
+    "publisherDisplayName": "Bravura Security, Inc.",
     "languages": ["en-US"]
   },
   "deb": {
