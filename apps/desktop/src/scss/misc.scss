@@ -245,6 +245,25 @@ p.lead {
   }
 }
 
+.one-auth-image {
+  content: url("../images/two-factor/99.png");
+  margin: 0 auto;
+}
+
+#verifyItIsYou {
+  margin-bottom: -1em;
+}
+
+#iconsFaStack {
+  font-size: 750%;
+}
+
+#innerIcon {
+  font-size: 50%;
+  position: relative;
+  top: -10%;
+}
+
 #web-authn-frame {
   background: url("../images/loading.svg") 0 0 no-repeat;
   height: 250px;

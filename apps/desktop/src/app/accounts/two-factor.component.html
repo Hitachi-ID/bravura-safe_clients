@@ -6,7 +6,12 @@
   attr.aria-hidden="{{ showingModal }}"
 >
   <div id="content" class="content">
-    <h1>{{ title }}</h1>
+    <ng-container *ngIf="selectedProviderType === providerType.OrganizationHypr; else otherProviders">
+      <img class="mb-4 two-factor-top text-center one-auth-image" alt="Bravura OneAuth (Team) logo">
+    </ng-container>
+    <ng-template #otherProviders>
+      <h1>{{ title }}</h1>
+    </ng-template>
     <p *ngIf="selectedProviderType === providerType.Authenticator">
       {{ "enterVerificationCodeApp" | i18n }}
     </p>
@@ -92,6 +97,23 @@
         </div>
       </div>
     </ng-container>
+    <ng-container *ngIf="selectedProviderType === providerType.OrganizationHypr">
+      <div id="hypr-frame" class="text-center mb-3">
+        <h1>{{ "twoFactorHyprCheckDevice" | i18n }}</h1>
+        <p id="verifyItIsYou">{{ "twoFactorHyprVerifyItIsYou" | i18n }}</p>
+        <span id="iconsFaStack" class="fa-stack fa-2x">
+          <i id="mobile" class="fa fa fa-solid fa-mobile fa-stack-2x"></i>
+          <i id="innerIcon" class="fa fa-spinner fa-spin"></i>
+        </span>
+        <p id="messagePlaceHolder"></p>
+        <button hidden id="hyprEmailRegistration" type="button" class="btn primary block" method="post">
+          <b>
+            <i aria-hidden="true" class="fa fa-envelope"></i>
+            {{ "twoFactorHyprSendRegEmail" | i18n }}
+          </b>
+        </button>
+      </div>
+    </ng-container>
     <div class="box last" *ngIf="selectedProviderType == null">
       <div class="box-content">
         <div class="box-content-row">
@@ -119,7 +141,8 @@
         *ngIf="
           selectedProviderType != null &&
           selectedProviderType !== providerType.Duo &&
-          selectedProviderType !== providerType.OrganizationDuo
+          selectedProviderType !== providerType.OrganizationDuo &&
+          selectedProviderType !== providerType.OrganizationHypr
         "
       >
         <span [hidden]="form.loading"
