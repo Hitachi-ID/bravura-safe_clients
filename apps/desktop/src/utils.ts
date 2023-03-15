@@ -43,7 +43,7 @@ export function isWindowsStore() {
   if (
     isWindows &&
     !windowsStore &&
-    process.resourcesPath.indexOf("8bitSolutionsLLC.bitwardendesktop_") > -1
+    process.resourcesPath.indexOf("BravuraSecurityInc.bravurasafedesktop_") > -1
   ) {
     windowsStore = true;
   }
