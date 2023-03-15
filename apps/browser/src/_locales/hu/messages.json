@@ -1560,7 +1560,7 @@
     "message": "A jogosultság nincs megadva."
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "A Bitwarden Desktop alkalmazással való kommunikáció engedélye nélkül nem adhatunk meg biometrikus adatokat a böngésző kiterjesztésében. Próbáljuk újra."
+    "message": "A Bravura Safe desktop alkalmazással való kommunikáció engedélye nélkül nem adhatunk meg biometrikus adatokat a böngésző kiterjesztésében. Próbáljuk újra."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Engedélykérési hiba történt."

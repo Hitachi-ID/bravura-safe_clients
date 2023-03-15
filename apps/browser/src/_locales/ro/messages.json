@@ -1524,7 +1524,7 @@
     "message": "Porniți aplicația desktop Bitwarden"
   },
   "startDesktopDesc": {
-    "message": "Aplicația Bitwarden Desktop trebuie să fie pornită înainte de a putea fi utilizată deblocarea cu date biometrice."
+    "message": "Aplicația Bravura Safe desktop trebuie să fie pornită înainte de a putea fi utilizată deblocarea cu date biometrice."
   },
   "errorEnableBiometricTitle": {
     "message": "Nu se pot configura datele biometrice"
@@ -1560,7 +1560,7 @@
     "message": "Permisiunea nu a fost furnizată"
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "Fără permisiunea de comunicare cu aplicația Bitwarden Desktop nu putem furniza date biometrice în extensia browserului. Încercați din nou."
+    "message": "Fără permisiunea de comunicare cu aplicația Bravura Safe desktop nu putem furniza date biometrice în extensia browserului. Încercați din nou."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Eroare solicitare permisiune"

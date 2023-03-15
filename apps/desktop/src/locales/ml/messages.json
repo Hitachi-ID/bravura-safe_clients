@@ -949,7 +949,7 @@
     "message": "Start automatically on login"
   },
   "openAtLoginDesc": {
-    "message": "Start the Bitwarden desktop application automatically on login."
+    "message": "Start the Bravura Safe desktop application automatically on login."
   },
   "alwaysShowDock": {
     "message": "Always show in the Dock"

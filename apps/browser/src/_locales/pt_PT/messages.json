@@ -1381,7 +1381,7 @@
     "message": "A aguardar confirmação do seu computador"
   },
   "awaitDesktopDesc": {
-    "message": "Por favor, confirme o uso de dados biométricos na aplicação Bitwarden Desktop para habilitar os dados biométricos do navegador."
+    "message": "Por favor, confirme o uso de dados biométricos na aplicação Bravura Safe desktop para habilitar os dados biométricos do navegador."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Bloquear com palavra-passe mestra quando reiniciar o navegador"
@@ -1518,13 +1518,13 @@
     "message": "Integração com o navegador não está ativada"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "A integração com o navegador não está habilitada no aplicativo Bitwarden Desktop. Por favor, habilite-o nas configurações da aplicação para computador."
+    "message": "A integração com o navegador não está habilitada no aplicativo Bravura Safe desktop. Por favor, habilite-o nas configurações da aplicação para computador."
   },
   "startDesktopTitle": {
-    "message": "Iniciar a aplicação Bitwarden Desktop"
+    "message": "Iniciar a aplicação Bravura Safe desktop"
   },
   "startDesktopDesc": {
-    "message": "The Bitwarden desktop application needs to be started before unlock with biometrics can be used."
+    "message": "The Bravura Safe desktop application needs to be started before unlock with biometrics can be used."
   },
   "errorEnableBiometricTitle": {
     "message": "Unable to set up biometrics"
@@ -1560,7 +1560,7 @@
     "message": "Permission not provided"
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "Without permission to communicate with the Bitwarden Desktop Application we cannot provide biometrics in the browser extension. Please try again."
+    "message": "Without permission to communicate with the Bravura Safe desktop Application we cannot provide biometrics in the browser extension. Please try again."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Permission request error"
