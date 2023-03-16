@@ -96,7 +96,7 @@ export class NativeMessagingMain {
         allowed_origins: [
           "chrome-extension://cjidmfgdjckibjdfnglfdgohkaballnn/", // Chrome
           "chrome-extension://lgjgabmkhcjfpcmflkhmhjgmnnpfgmnc/", // Edge
-          "chrome-extension://ccnckbpmaceehanjmeomladnmlffdjgn/", // Opera --- may need to change to match ours
+          "chrome-extension://ccnckbpmaceehanjmeomladnmlffdjgn/", // Opera
           "chrome-extension://cppacmfcpednmbnghfhnajlgpgjjpdgm/",
         ],
       },
