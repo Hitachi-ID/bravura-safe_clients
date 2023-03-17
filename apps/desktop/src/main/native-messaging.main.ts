@@ -7,7 +7,7 @@ import * as util from "util";
 import { ipcMain } from "electron";
 import * as ipc from "node-ipc";
 
-import { LogService } from "@bitwarden/common/abstractions/log.service";
+import { LogService } from "@bitwarden/common/src/abstractions/log.service";
 
 import { WindowMain } from "./window.main";
 
@@ -94,7 +94,7 @@ export class NativeMessagingMain {
         allowed_origins: [
           "chrome-extension://cjidmfgdjckibjdfnglfdgohkaballnn/", // Chrome
           "chrome-extension://lgjgabmkhcjfpcmflkhmhjgmnnpfgmnc/", // Edge
-          "chrome-extension://ccnckbpmaceehanjmeomladnmlffdjgn/",
+          "chrome-extension://ccnckbpmaceehanjmeomladnmlffdjgn/", // Opera
         ],
       },
     };
@@ -105,6 +105,7 @@ export class NativeMessagingMain {
         this.writeManifest(path.join(destination, "firefox.json"), firefoxJson);
         this.writeManifest(path.join(destination, "chrome.json"), chromeJson);
 
+        /*
         this.createWindowsRegistry(
           "HKLM\\SOFTWARE\\Mozilla\\Firefox",
           "HKCU\\SOFTWARE\\Mozilla\\NativeMessagingHosts\\com.hitachiid.safe",
@@ -113,6 +114,27 @@ export class NativeMessagingMain {
         this.createWindowsRegistry(
           "HKCU\\SOFTWARE\\Google\\Chrome",
           "HKCU\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe",
+          path.join(destination, "chrome.json")
+        );
+        */
+        this.createWindowsRegistry(
+          "HKCU\\SOFTWARE\\Mozilla\\NativeMessagingHosts",
+          "HKCU\\SOFTWARE\\Mozilla\\NativeMessagingHosts\\com.hitachiid.safe",
+          path.join(destination, "firefox.json")
+        );
+        this.createWindowsRegistry(
+          "HKLM\\SOFTWARE\\Mozilla\\NativeMessagingHosts",
+          "HKLM\\SOFTWARE\\Mozilla\\NativeMessagingHosts\\com.hitachiid.safe",
+          path.join(destination, "firefox.json")
+        );
+        this.createWindowsRegistry(
+          "HKCU\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts",
+          "HKCU\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe",
+          path.join(destination, "chrome.json")
+        );
+        this.createWindowsRegistry(
+          "HKLM\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts",
+          "HKLM\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe",
           path.join(destination, "chrome.json")
         );
         break;
@@ -166,7 +188,7 @@ export class NativeMessagingMain {
 
   generateDdgManifests() {
     const manifest = {
-      name: "com.8bit.bitwarden",
+      name: "com.hitachiid.safe",
       description: "Bitwarden desktop <-> DuckDuckGo bridge",
       path: this.binaryPath(),
       type: "stdio",
@@ -174,7 +196,7 @@ export class NativeMessagingMain {
     switch (process.platform) {
       case "darwin": {
         /* eslint-disable-next-line no-useless-escape */
-        const path = `${this.homedir()}/Library/Containers/com.duckduckgo.macos.browser/Data/Library/Application\ Support/NativeMessagingHosts/com.8bit.bitwarden.json`;
+        const path = `${this.homedir()}/Library/Containers/com.duckduckgo.macos.browser/Data/Library/Application\ Support/NativeMessagingHosts/com.hitachiid.safe.json`;
         this.writeManifest(path, manifest).catch((e) =>
           this.logService.error(`Error writing manifest for DuckDuckGo. ${e}`)
         );
@@ -194,7 +216,13 @@ export class NativeMessagingMain {
           "HKCU\\SOFTWARE\\Mozilla\\NativeMessagingHosts\\com.hitachiid.safe"
         );
         this.deleteWindowsRegistry(
+          "HKLM\\SOFTWARE\\Mozilla\\NativeMessagingHosts\\com.hitachiid.safe"
+        );
+        this.deleteWindowsRegistry(
           "HKCU\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe"
+        );
+        this.deleteWindowsRegistry(
+          "HKLM\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe"
         );
         break;
       case "darwin": {
@@ -243,7 +271,7 @@ export class NativeMessagingMain {
     switch (process.platform) {
       case "darwin": {
         /* eslint-disable-next-line no-useless-escape */
-        const path = `${this.homedir()}/Library/Containers/com.duckduckgo.macos.browser/Data/Library/Application\ Support/NativeMessagingHosts/com.8bit.bitwarden.json`;
+        const path = `${this.homedir()}/Library/Containers/com.duckduckgo.macos.browser/Data/Library/Application\ Support/NativeMessagingHosts/com.hitachiid.safe.json`;
         if (existsSync(path)) {
           fs.unlink(path);
         }
