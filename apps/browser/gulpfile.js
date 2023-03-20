@@ -57,7 +57,7 @@ function dist(browserName, manifest) {
 }
 
 function distFirefox() {
-  return dist("firefox", (manifest) => {
+  return dist("firefox-minified", (manifest) => {
     delete manifest.content_security_policy;
     delete manifest.storage;
     return manifest;
@@ -65,7 +65,7 @@ function distFirefox() {
 }
 
 function distFirefoxNoMin() {
-  return dist("firefox-nomin", (manifest) => {
+  return dist("firefox", (manifest) => {
     delete manifest.content_security_policy;
     delete manifest.storage;
     return manifest;

@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
 
-Bravura Safe is a modified version of Bitwarden®. It was developed using Bitwarden open source software. Bravura Security, Inc. and Bravura Safe are not affiliated with or endorsed by Bitwarden or Bitwarden, Inc. Bitwarden is a trademark or registered trademark of Bitwarden, Inc. in the United States and/or other countries. 
+Bravura Safe is a modified version of Bitwardenï¿½. It was developed using Bitwarden open source software. Bravura Security, Inc. and Bravura Safe are not affiliated with or endorsed by Bitwarden or Bitwarden, Inc. Bitwarden is a trademark or registered trademark of Bitwarden, Inc. in the United States and/or other countries. 
 
 The original work is available at [https://github.com/bitwarden/server]. 
 The original documentation is available at [https://bitwarden.com/help/].
@@ -30,7 +30,7 @@ Make sure NVM is installed correctly
 
 nvm install v16.13.1 #(once only) 
 nvm use v16.13.1 
-npm install -g npm@8.1.2 #(optional, if nvm didn’t set it!) 
+npm install -g npm@8.1.2 #(optional, if nvm didn't set it!) 
 
 navigate to root of "clients" folder ex: ~/projects/clients and run testbuild.sh as shown below
 
