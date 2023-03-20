@@ -14,6 +14,7 @@ if (process.env.NODE_ENV == null) {
 }
 const ENV = (process.env.ENV = process.env.NODE_ENV);
 const manifestVersion = process.env.MANIFEST_VERSION == 3 ? 3 : 2;
+const firefoxBuild = process.env.FIREFOX_BUILD == true ? true : false;
 
 console.log(`Building Manifest Version ${manifestVersion} app`);
 const envConfig = configurator.load(ENV);
@@ -145,7 +146,7 @@ const mainConfig = {
     "encrypt-worker": "../../libs/common/src/services/cryptography/encrypt.worker.ts",
   },
   optimization: {
-    minimize: ENV !== "development",
+    minimize: ENV !== "development" && firefoxBuild === false,
     minimizer: [
       new TerserPlugin({
         exclude: [/content\/.*/, /notification\/.*/],

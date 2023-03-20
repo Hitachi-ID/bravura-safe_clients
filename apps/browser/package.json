@@ -8,6 +8,7 @@
     "build:watch:mv3": "cross-env MANIFEST_VERSION=3 webpack --watch",
     "build:prod": "cross-env NODE_ENV=production webpack",
     "build:prod:watch": "cross-env NODE_ENV=production webpack --watch",
+    "build:firefox:nomin": "cross-env FIREFOX_BUILD=true webpack",
     "dist": "npm run build:prod && gulp dist",
     "dist:mv3": "cross-env MANIFEST_VERSION=3 npm run build:prod && cross-env MANIFEST_VERSION=3 gulp dist",
     "dist:chrome": "npm run build:prod && gulp dist:chrome",
@@ -17,6 +18,7 @@
     "dist:safari:mas": "npm run build:prod && gulp dist:safari:mas",
     "dist:safari:masdev": "npm run build:prod && gulp dist:safari:masdev",
     "dist:safari:dmg": "npm run build:prod && gulp dist:safari:dmg",
+    "dist:firefox:nomin": "cross-env FIREFOX_BUILD=true npm run build:firefox:nomin && gulp dist:firefox:nomin",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:watch:all": "jest --watchAll"

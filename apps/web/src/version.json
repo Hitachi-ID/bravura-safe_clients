@@ -1,6 +1,7 @@
-{ "version": "process.env.APPLICATION_VERSION",
+{
+    "version": "process.env.APPLICATION_VERSION",
     "versions": {
-        "coreVersion":"2023.2.1",
-        "webVersion":"2023.2.0",
-      }
+      "coreVersion": "2023.2.1",
+      "webVersion": "2023.2.0"
     }
+  }

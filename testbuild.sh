@@ -57,6 +57,21 @@ then
             popd
         ;;
 
+        "firefox")
+            pushd .
+
+		npm install
+		# npm audit fix
+		npm run prepare
+
+		cd apps
+		cd browser
+
+		npm run dist:firefox:nomin
+
+            popd
+        ;;
+
 	"web")
 	    echo "building web"
 

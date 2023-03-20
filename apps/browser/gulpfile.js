@@ -64,6 +64,14 @@ function distFirefox() {
   });
 }
 
+function distFirefoxNoMin() {
+  return dist("firefox-nomin", (manifest) => {
+    delete manifest.content_security_policy;
+    delete manifest.storage;
+    return manifest;
+  });
+}
+
 function distOpera() {
   return dist("opera", (manifest) => {
     delete manifest.applications;
@@ -235,6 +243,7 @@ exports["dist:safari"] = gulp.parallel(distSafariMas, distSafariMasDev, distSafa
 exports["dist:safari:mas"] = distSafariMas;
 exports["dist:safari:masdev"] = distSafariMasDev;
 exports["dist:safari:dmg"] = distSafariDmg;
-exports.dist = gulp.parallel(distFirefox, distChrome, distOpera, distEdge);
+exports["dist:firefox:nomin"] = distFirefoxNoMin;
+exports.dist = gulp.parallel(distFirefox, distChrome, distOpera, distEdge); //, distFirefoxNoMin);
 exports["ci:coverage"] = ciCoverage;
 exports.ci = ciCoverage;
