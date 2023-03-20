@@ -5,12 +5,12 @@ import { map, mergeMap, Observable, Subject, takeUntil } from "rxjs";
 import {
   canAccessBillingTab,
   canAccessGroupsTab,
-  canAccessManageTab,
   canAccessMembersTab,
   canAccessReportingTab,
   canAccessSettingsTab,
   canAccessOptionsTab,
   canAccessOptionsAccountPage,
+  canAccessVaultTab,
   getOrganizationById,
   OrganizationService,
 } from "@bitwarden/common/abstractions/organization/organization.service.abstraction";
@@ -47,12 +47,12 @@ export class OrganizationLayoutComponent implements OnInit, OnDestroy {
     this._destroy.complete();
   }
 
-  canShowSettingsTab(organization: Organization): boolean {
-    return canAccessSettingsTab(organization);
+  canShowVaultTab(organization: Organization): boolean {
+    return canAccessVaultTab(organization);
   }
 
-  canShowManageTab(organization: Organization): boolean {
-    return canAccessManageTab(organization);
+  canShowSettingsTab(organization: Organization): boolean {
+    return canAccessSettingsTab(organization);
   }
 
   canShowMembersTab(organization: Organization): boolean {

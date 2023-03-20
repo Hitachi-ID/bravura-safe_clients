@@ -11,9 +11,10 @@
 >
   <ng-template #button>
     <button
+      type="button"
       class="tw-ml-auto"
       [bitIconButton]="
-        open ? 'fa-chevron-up' : variant === 'tree' ? 'fa-angle-right' : 'fa-angle-down'
+        open ? 'fa-angle-up' : variant === 'tree' ? 'fa-angle-right' : 'fa-angle-down'
       "
       [buttonType]="'main'"
       (click)="toggle($event)"

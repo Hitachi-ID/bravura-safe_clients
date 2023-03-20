@@ -133,18 +133,18 @@
     <value>Synchroniser et accéder à votre coffre depuis plusieurs appareils</value>
   </data>
   <data name="ScreenshotVault" xml:space="preserve">
-    <value>Gérer tous vos identifiants depuis un coffre sécurisé</value>
+    <value>Gérer tous vos identifiants et mots de passe depuis un coffre sécurisé</value>
   </data>
   <data name="ScreenshotAutofill" xml:space="preserve">
-    <value>Remplissage automatique et rapide de vos identifiants sur n'importe quel site que vous visitez</value>
+    <value>Préremplir automatiquement et rapidement vos identifiants de connexion sur tous les sites web que vous visitez</value>
   </data>
   <data name="ScreenshotMenu" xml:space="preserve">
-    <value>Votre coffre est également facilement accessible depuis le menu contextuel</value>
+    <value>Votre coffre est également facilement accessible à partir du menu contextuel</value>
   </data>
   <data name="ScreenshotPassword" xml:space="preserve">
-    <value>Générer automatiquement des mots de passe forts, aléatoires et sécurisés</value>
+    <value>Générer automatiquement des mots de passe robustes, aléatoires et sécurisés</value>
   </data>
   <data name="ScreenshotEdit" xml:space="preserve">
-    <value>Vos informations sont gérées de manière sécurisée grâce à un chiffrement AES-256 bit</value>
+    <value>Vos informations sont gérées en toute sécurité en utilisant un chiffrement AES-256 bit</value>
   </data>
 </root>

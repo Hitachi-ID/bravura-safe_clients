@@ -1,0 +1,29 @@
+<div class="tw-mb-4 tw-flex tw-items-start tw-justify-between page-header">
+  <div>
+    <h1 class="tw-mb-0 tw-mt-1 tw-flex tw-items-center tw-space-x-2">
+      <i
+        *ngIf="activeFilter.isCollectionSelected"
+        class="fa fa-cube"
+        aria-hidden="true"
+      ></i>
+      <span>{{ title }}</span>
+      <small #actionSpinner [appApiAction]="actionPromise">
+        <ng-container *ngIf="$any(actionSpinner).loading">
+          <i
+            class="fa fa-spinner fa-spin text-muted"
+            title="{{ 'loading' | i18n }}"
+            aria-hidden="true"
+          ></i>
+          <span class="sr-only">{{ "loading" | i18n }}</span>
+        </ng-container>
+      </small>
+    </h1>
+  </div>
+
+  <div *ngIf="!activeFilter.isDeleted" class="tw-shrink-0">
+    <button type="button" bitButton buttonType="primary" (click)="addCipher()">
+      <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
+      {{ "newItem" | i18n }}
+    </button>
+  </div>
+</div>

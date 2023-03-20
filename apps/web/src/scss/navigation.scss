@@ -129,6 +129,8 @@ ul.navbar-nav {
 
 .org-nav,
 .tabbed-nav {
+  padding-top: $sidebar-padding-top;
+
   .nav-tabs {
     border-bottom: none;
 

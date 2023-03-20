@@ -133,6 +133,9 @@
   "ms": {
     "message": "Hörmətli"
   },
+  "mx": {
+    "message": "Hörmətli"
+  },
   "dr": {
     "message": "Dr"
   },
@@ -277,12 +280,36 @@
   "searchFavorites": {
     "message": "Sevimliləri axtar"
   },
-  "searchType": {
-    "message": "Axtarış növü",
-    "description": "Search item type"
+  "searchLogin": {
+    "message": "Girişlərdə axtar",
+    "description": "Search Login type"
+  },
+  "searchCard": {
+    "message": "Kartlarda axtar",
+    "description": "Search Card type"
+  },
+  "searchIdentity": {
+    "message": "Kimliklərdə axtar",
+    "description": "Search Identity type"
+  },
+  "searchSecureNote": {
+    "message": "Güvənli qeydlərdə axtar",
+    "description": "Search Secure Note type"
   },
   "searchVault": {
     "message": "Anbarda axtar"
+  },
+  "searchMyVault": {
+    "message": "Anbarımda axtar"
+  },
+  "searchOrganization": {
+    "message": "Təşkilatda axtar"
+  },
+  "searchMembers": {
+    "message": "Üzvlərdə axtar"
+  },
+  "searchGroups": {
+    "message": "Qrupları axtar"
   },
   "allItems": {
     "message": "Bütün elementlər"
@@ -365,6 +392,9 @@
   "select": {
     "message": "Seçin"
   },
+  "newItem": {
+    "message": "Yeni element"
+  },
   "addItem": {
     "message": "Element əlavə et"
   },
@@ -373,6 +403,13 @@
   },
   "viewItem": {
     "message": "Elementə bax"
+  },
+  "new": {
+    "message": "Yeni",
+    "description": "for adding new items"
+  },
+  "item": {
+    "message": "Element"
   },
   "ex": {
     "message": "məs.",
@@ -438,6 +475,9 @@
   },
   "vaultItems": {
     "message": "Anbar elementləri"
+  },
+  "filter": {
+    "message": "Filtr"
   },
   "moveSelectedToOrg": {
     "message": "Seçiləni təşkilata daşı"
@@ -544,6 +584,12 @@
   },
   "deletedFolder": {
     "message": "Qovluq silindi"
+  },
+  "editInfo": {
+    "message": "Məlumata düzəliş et"
+  },
+  "access": {
+    "message": "Müraciət"
   },
   "loggedOut": {
     "message": "Çıxış edildi"
@@ -702,6 +748,9 @@
   "noItemsInList": {
     "message": "Siyahılanacaq heç bir element yoxdur."
   },
+  "noPermissionToViewAllCollectionItems": {
+    "message": "Bu kolleksiyadakı bütün elementlərə baxmaq üçün icazəniz yoxdur."
+  },
   "noCollectionsInList": {
     "message": "Siyahılanacaq heç bir kolleksiya yoxdur."
   },
@@ -710,6 +759,9 @@
   },
   "noUsersInList": {
     "message": "Siyahılanacaq heç bir element yoxdur."
+  },
+  "noMembersInList": {
+    "message": "Siyahılanacaq heç bir üzv yoxdur."
   },
   "noEventsInList": {
     "message": "Siyahılanacaq heç bir element yoxdur."
@@ -861,6 +913,18 @@
       }
     }
   },
+  "deleteSelectedCollectionsDesc": {
+    "message": "$COUNT$ kolleksiya həmişəlik silinəcək.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "150"
+      }
+    }
+  },
+  "deleteSelectedConfirmation": {
+    "message": "Davam etmək istədiyinizə əminsiniz?"
+  },
   "moveSelectedItemsDesc": {
     "message": "Seçdiyiniz $COUNT$ elementi daşımaq istədiyiniz qovluğu seçin.",
     "placeholders": {
@@ -935,17 +999,17 @@
   "confirmFilePassword": {
     "message": "Fayl parolunu təsdiqlə"
   },
-  "accountBackupOptionDescription": {
-    "message": "Xaricə köçürməni qorumaq üçün ana parolu yox, Bitwarden hesab şifrələməsini istifadə edir. Bu xaricə köçürmə, yalnız hazırkı hesaba köçürülə bilər. Başqa yerdə istifadə edilə bilməyəcək bir nüsxə yaratmaq üçün bunu istifadə edin."
+  "accountRestrictedOptionDescription": {
+    "message": "Xaricə köçürməni şifrələmək və daxilə köçürməni yalnız mövcud Bitwarden hesabı ilə məhdudlaşdırmaq üçün hesabınızın istifadəçi adı və Ana Parolundan əldə edilən hesab şifrələmə açarınızı istifadə edin."
   },
   "passwordProtectedOptionDescription": {
     "message": "Xaricə köçürməni qorumaq üçün istifadəçi tərəfindən yaradılan bir parol yaradın. Digər hesablarda istifadə ediləcək bir xaricə köçürmə yaratmaq üçün bunu istifadə edin."
   },
-  "fileTypeHeading": {
-    "message": "Fayl növü"
+  "exportTypeHeading": {
+    "message": "Xaricə köçürmə növü"
   },
-  "accountBackup": {
-    "message": "Hesab nüsxələmə"
+  "accountRestricted": {
+    "message": "Hesab məhdudlaşdırıldı"
   },
   "passwordProtected": {
     "message": "Parolla qorunur"
@@ -1091,13 +1155,26 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "KDF iterasiyalarınızı çox yüksək tənzimləmək, zəif prosessora malik cihazlarda \"Bitwarden\"ə giriş edərkən (və ya kilidi açarkən) aşağı performansa səbəb ola bilər. Dəyəri $INCREMENT$ artımları ilə artırmağınızı və daha sonra bütün cihazlarınızda test etməyinizi məsləhət görürük.",
+    "message": "Setting your KDF iterations too high could result in poor performance when logging into (and unlocking) Bitwarden on slower or older devices. We recommend that you increase the value in increments of $INCREMENT$ and then test all of your devices.",
     "placeholders": {
       "increment": {
         "content": "$1",
         "example": "50,000"
       }
     }
+  },
+  "kdfMemory": {
+    "message": "KDF yaddaş (MB)",
+    "description": "Memory refers to computer memory (RAM). MB is short for megabytes."
+  },
+  "argon2Warning": {
+    "message": "KDF iterasiyalarınızı, yaddaşınızı və paralelizminizi çox yüksək tənzimləmək, daha yavaş və ya daha köhnə cihazlarda \"Bitwarden\"ə giriş edərkən (və ya kilidi açarkən) aşağı performansa səbəb ola bilər. Biz bunları fərdi olaraq kiçik artımlarla dəyişməyi, sonra bütün cihazlarınızı sınaqdan keçirməyi tövsiyə edirik."
+  },
+  "kdfParallelism": {
+    "message": "KDF paralelizm"
+  },
+  "argon2Desc": {
+    "message": "Yüksək KDF iterasiyaları, yaddaşı və paralelizmi, ana parolunuzu təcavüzkar tərəfindən \"brute force\" hücumuna qarşı qorumağa kömək edir."
   },
   "changeKdf": {
     "message": "KDF-i dəyişdir"
@@ -1582,7 +1659,7 @@
   },
   "orgsReportsDesc": {
     "message": "Aşağıdakı hesabatlara klikləyərək təşkilatınızın hesablarındakı güvənlik boşluqlarına baxın və onları bağlayın.",
-    "description": "Vault health reports can be used to evaluate the security of your Bitwarden individual or organization Vault."
+    "description": "Vault health reports can be used to evaluate the security of your Bitwarden individual or organization vault."
   },
   "unsecuredWebsitesReport": {
     "message": "Güvənli olmayan veb saytlar"
@@ -1846,6 +1923,22 @@
       }
     }
   },
+  "premiumPriceWithFamilyPlan": {
+    "message": "Sadəcə $PRICE$ qiymətinə illik premium-a abunə olun və ya Bitwarden Ailələr planı ilə $FAMILYPLANUSERCOUNT$ istifadəçiləri üçün premium hesablar və ",
+    "placeholders": {
+      "price": {
+        "content": "$1",
+        "example": "$10"
+      },
+      "familyplanusercount": {
+        "content": "$2",
+        "example": "6"
+      }
+    }
+  },
+  "bitwardenFamiliesPlan": {
+    "message": "limitsiz ailə paylaşımı əldə edin."
+  },
   "addons": {
     "message": "Əlavələr"
   },
@@ -1987,6 +2080,9 @@
   },
   "manageSubscription": {
     "message": "Abunəliyi idarə et"
+  },
+  "launchCloudSubscription": {
+    "message": "Bulud Abunəliyini Başlat"
   },
   "storage": {
     "message": "Saxlama"
@@ -2383,6 +2479,15 @@
   "deleteGroupConfirmation": {
     "message": "Bu qrupu silmək istədiyinizə əminsiniz?"
   },
+  "deleteMultipleGroupsConfirmation": {
+    "message": "Aşağıdakı $QUANTITY$ qrupu silmək istədiyinizə əminsiniz?",
+    "placeholders": {
+      "quantity": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
   "removeUserConfirmation": {
     "message": "Bu istifadəçini çıxartmaq istədiyinizə əminsiniz?"
   },
@@ -2400,6 +2505,9 @@
   },
   "externalIdDesc": {
     "message": "Xarici kimlik, referans olaraq və ya bu mənbəni istifadəçi kataloqu kimi xarici bir sistemə bağlamaq üçün istifadə edilir."
+  },
+  "nestCollectionUnder": {
+    "message": "Nest collection under"
   },
   "accessControl": {
     "message": "Müraciət nəzarəti"
@@ -2422,14 +2530,23 @@
   "editCollection": {
     "message": "Kolleksiyaya düzəliş et"
   },
+  "collectionInfo": {
+    "message": "Kolleksiya məlumatı"
+  },
   "deleteCollectionConfirmation": {
     "message": "Bu kolleksiyanı silmək istədiyinizə əminsiniz?"
   },
-  "editUser": {
-    "message": "İstifadəçiyə düzəliş et"
+  "editMember": {
+    "message": "Üzvə düzəliş et"
   },
-  "inviteUser": {
-    "message": "İstifadəçini dəvət et"
+  "fieldOnTabRequiresAttention": {
+    "message": "\"$TAB$\" vərəqindəki bir sahə diqqətinizi tələb edir.",
+    "placeholders": {
+      "tab": {
+        "content": "$1",
+        "example": "Collection info"
+      }
+    }
   },
   "inviteUserDesc": {
     "message": "Aşağıda Bitwarden hesabının e-poçt ünvanını daxil edərək təşkilatınıza yeni bir istifadəçi dəvət edə bilərsiniz. Əgər Bitwarden hesabı yoxdursa, yeni bir hesab yaratmaları üçün istək göndəriləcək."
@@ -2695,6 +2812,9 @@
       }
     }
   },
+  "deletedCollections": {
+    "message": "Silinmiş kolleksiyalar"
+  },
   "deletedCollectionId": {
     "message": "$ID$ kolleksiyası silindi.",
     "placeholders": {
@@ -2737,6 +2857,15 @@
       "id": {
         "content": "$1",
         "example": "Developers"
+      }
+    }
+  },
+  "deletedManyGroups": {
+    "message": "$QUANTITY$ qrup silindi.",
+    "placeholders": {
+      "quantity": {
+        "content": "$1",
+        "example": "3"
       }
     }
   },
@@ -5139,9 +5268,6 @@
   "billingSyncApiKeyRotated": {
     "message": "Token döndərildi."
   },
-  "billingSync": {
-    "message": "Faktura eyniləşdirmə"
-  },
   "billingSyncDesc": {
     "message": "Faktura eyniləşdirmə, öz-özünə sahiblik edən Bitwarden-inizi Bitwarden bulud serveri ilə əlaqələndirərək ailələr üçün Ödənişsiz Ailələr planını və qabaqcıl faktura özəllilərini təmin edir."
   },
@@ -5192,6 +5318,15 @@
   },
   "required": {
     "message": "tələb olunur"
+  },
+  "characterMaximum": {
+    "message": "maksimum $MAX$ simvol",
+    "placeholders": {
+      "max": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
   },
   "idpSingleSignOnServiceUrlRequired": {
     "message": "Varlıq Kimliyi bir URL deyilsə tələb olunur."
@@ -5469,6 +5604,27 @@
       }
     }
   },
+  "inputForbiddenCharacters": {
+    "message": "Aşağıdakı simvollara icazə verilmir: $CHARACTERS$",
+    "placeholders": {
+      "characters": {
+        "content": "$1",
+        "example": "@, #, $, %"
+      }
+    }
+  },
+  "multipleInputEmails": {
+    "message": "1 və ya daha çox e-poçt yararsızdır"
+  },
+  "tooManyEmails": {
+    "message": "Bir dəfəyə ən çox $COUNT$ e-poçt göndərə bilərsiniz",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "20"
+      }
+    }
+  },
   "fieldsNeedAttention": {
     "message": "Yuxarıdakı $COUNT$ sahənin diqqətinizə ehtiyacı var.",
     "placeholders": {
@@ -5502,6 +5658,45 @@
   "notYou": {
     "message": "Siz deyilsiniz?"
   },
+  "pickAnAvatarColor": {
+    "message": "Bir avatar rəngi götürün"
+  },
+  "customizeAvatar": {
+    "message": "Avatarı özəlləşdir"
+  },
+  "avatarUpdated": {
+    "message": "Avatar güncəlləndi"
+  },
+  "brightBlue": {
+    "message": "Parlaq mavi"
+  },
+  "green": {
+    "message": "Yaşıl"
+  },
+  "orange": {
+    "message": "Narıncı"
+  },
+  "lavender": {
+    "message": "Lavanda"
+  },
+  "yellow": {
+    "message": "Sarı"
+  },
+  "indigo": {
+    "message": "Tünd mavi"
+  },
+  "teal": {
+    "message": "Dəniz mavisi"
+  },
+  "salmon": {
+    "message": "Salmon"
+  },
+  "pink": {
+    "message": "Çəhrayı"
+  },
+  "customColor": {
+    "message": "Özəl rəng"
+  },
   "multiSelectPlaceholder": {
     "message": "-- Filtrləmək üçün yazın --"
   },
@@ -5513,6 +5708,272 @@
   },
   "multiSelectClearAll": {
     "message": "Hamısını təmizlə"
+  },
+  "toggleCharacterCount": {
+    "message": "Simvol sayını dəyişdir",
+    "description": "'Character count' describes a feature that displays a number next to each character of the password."
+  },
+  "passwordCharacterCount": {
+    "message": "Parol simvol sayı",
+    "description": "'Character count' describes a feature that displays a number next to each character of the password."
+  },
+  "hide": {
+    "message": "Gizlət"
+  },
+  "projects": {
+    "message": "Layihələr"
+  },
+  "lastEdited": {
+    "message": "Son düzəliş"
+  },
+  "editSecret": {
+    "message": "\"Sirr\"ə düzəliş et"
+  },
+  "addSecret": {
+    "message": "Sirr əlavə et"
+  },
+  "copySecretName": {
+    "message": "Sirr adını kopyala"
+  },
+  "copySecretValue": {
+    "message": "Sirr dəyərini kopyala"
+  },
+  "deleteSecret": {
+    "message": "Sirri sil"
+  },
+  "deleteSecrets": {
+    "message": "\"Sirr\"ləri sil"
+  },
+  "secretProjectAssociationDescription": {
+    "message": "Sirrin əlaqələndiriləcəyi layihələri seçin. Yalnız bu layihələrə müraciəti olan təşkilat istifadəçiləri sirri görə biləcək."
+  },
+  "typeOrSelectProjects": {
+    "message": "Layihələri yazın və ya seçin"
+  },
+  "typeOrSelectProject": {
+    "message": "Layihə yazın və ya seçin"
+  },
+  "project": {
+    "message": "Layihə"
+  },
+  "editProject": {
+    "message": "Layihəyə düzəliş et"
+  },
+  "viewProject": {
+    "message": "Layihəyə bax"
+  },
+  "deleteProject": {
+    "message": "Layihəni sil"
+  },
+  "deleteProjects": {
+    "message": "Layihələri sil"
+  },
+  "secret": {
+    "message": "Sirr"
+  },
+  "serviceAccount": {
+    "message": "Servis hesabı"
+  },
+  "serviceAccounts": {
+    "message": "Servis hesabları"
+  },
+  "secrets": {
+    "message": "\"Sirr\"lər"
+  },
+  "nameValuePair": {
+    "message": "Ad/Dəyər cütü"
+  },
+  "secretEdited": {
+    "message": "\"Sirr\"ə düzəliş edildi"
+  },
+  "secretCreated": {
+    "message": "Sirr yaradıldı"
+  },
+  "newSecret": {
+    "message": "Yeni Sirr"
+  },
+  "newServiceAccount": {
+    "message": "Yeni Servis hesabı"
+  },
+  "secretsNoItemsTitle": {
+    "message": "Göstəriləcək sirr yoxdur"
+  },
+  "secretsNoItemsMessage": {
+    "message": "Başlamaq üçün yeni bir sirr əlavə edin və ya daxilə köçürün."
+  },
+  "serviceAccountsNoItemsTitle": {
+    "message": "Göstəriləcək heç nə yoxdur"
+  },
+  "serviceAccountsNoItemsMessage": {
+    "message": "\"Sirr\" müraciətini avtomatlaşdırmağa başlamaq üçün yeni bir Servis hesabı yaradın."
+  },
+  "searchSecrets": {
+    "message": "\"Sirr\"ləri axtar"
+  },
+  "deleteServiceAccounts": {
+    "message": "Servis hesablarını sil"
+  },
+  "deleteServiceAccount": {
+    "message": "Servis hesabını sil"
+  },
+  "viewServiceAccount": {
+    "message": "Servis hesabına bax"
+  },
+  "searchServiceAccounts": {
+    "message": "Servis hesablarına bax"
+  },
+  "addProject": {
+    "message": "Layihə əlavə et"
+  },
+  "projectEdited": {
+    "message": "Layihəyə düzəliş edildi"
+  },
+  "projectSaved": {
+    "message": "Layihə saxlanıldı"
+  },
+  "projectCreated": {
+    "message": "Layihə yaradıldı"
+  },
+  "projectName": {
+    "message": "Layihə adı"
+  },
+  "newProject": {
+    "message": "Yeni layihə"
+  },
+  "softDeleteSecretWarning": {
+    "message": "\"Sirr\"ləri silmək, mövcud inteqrasiyalara təsir edə bilər."
+  },
+  "softDeletesSuccessToast": {
+    "message": "\"Sirr\"lər tullantı qutusuna göndərildi"
+  },
+  "serviceAccountCreated": {
+    "message": "Servis hesabı yaradıldı"
+  },
+  "smAccess": {
+    "message": "Müraciət"
+  },
+  "projectCommaSecret": {
+    "message": "Layihə, Sirr"
+  },
+  "serviceAccountName": {
+    "message": "Servis hesab adı"
+  },
+  "newSaSelectAccess": {
+    "message": "Layihələri və ya \"Sirr\"ləri yazın və ya seçin"
+  },
+  "newSaTypeToFilter": {
+    "message": "Filtrləmək üçün yazın"
+  },
+  "deleteProjectsToast": {
+    "message": "Layihələr silindi"
+  },
+  "deleteProjectToast": {
+    "message": "Layihə və əlaqələndirilmiş bütün \"sirr\"ləri silindi"
+  },
+  "deleteProjectDialogMessage": {
+    "message": "$PROJECT$ layihəsinin silinməsi daimi və geri qaytarıla bilməyən prosesdir.",
+    "placeholders": {
+      "project": {
+        "content": "$1",
+        "example": "project name"
+      }
+    }
+  },
+  "deleteProjectInputLabel": {
+    "message": "Davam etmək üçün \"$CONFIRM$\" yazın",
+    "placeholders": {
+      "confirm": {
+        "content": "$1",
+        "example": "Delete 3 projects"
+      }
+    }
+  },
+  "deleteProjectConfirmMessage": {
+    "message": "$PROJECT$ sil",
+    "placeholders": {
+      "project": {
+        "content": "$1",
+        "example": "project name"
+      }
+    }
+  },
+  "deleteProjectsConfirmMessage": {
+    "message": "$COUNT$ layihəni sil",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "deleteProjectsDialogMessage": {
+    "message": "Layihələrin silinməsi daimi və geri qaytarıla bilməyən prosesdir."
+  },
+  "projectsNoItemsTitle": {
+    "message": "Görüntülənəcək heç bir layihə yoxdur"
+  },
+  "projectsNoItemsMessage": {
+    "message": "\"Sirr\"ləri təşkil etməyə başlamaq üçün yeni bir layihə əlavə edin."
+  },
+  "smConfirmationRequired": {
+    "message": "Təsdiq tələb olunur"
+  },
+  "bulkDeleteProjectsErrorMessage": {
+    "message": "Aşağıdakı layihələr silinə bilmədi:"
+  },
+  "softDeleteSuccessToast": {
+    "message": "Sirr tullantı qutusuna göndərildi"
+  },
+  "searchProjects": {
+    "message": "Layihə axtar"
+  },
+  "accessTokens": {
+    "message": "Müraciət tokenləri"
+  },
+  "createAccessToken": {
+    "message": "Müraciət tokeni yarat"
+  },
+  "expires": {
+    "message": "Müddəti bitir"
+  },
+  "canRead": {
+    "message": "Oxuna bilər"
+  },
+  "accessTokensNoItemsTitle": {
+    "message": "Göstəriləcək heç bir müraciət tokeni yoxdur"
+  },
+  "accessTokensNoItemsDesc": {
+    "message": "Başlamaq üçün bir müraciət tokeni yarat"
+  },
+  "downloadAccessToken": {
+    "message": "Bağlamazdan əvvəl endir və ya kopyala."
+  },
+  "expiresOnAccessToken": {
+    "message": "Bitmə vaxtı:"
+  },
+  "accessTokenCallOutTitle": {
+    "message": "Müraciət tokenləri saxlanılmadı və alına bilmir"
+  },
+  "copyToken": {
+    "message": "Tokeni kopyala"
+  },
+  "accessToken": {
+    "message": "Müraciət tokeni"
+  },
+  "accessTokenExpirationRequired": {
+    "message": "Bitmə vaxtı tələb olunur"
+  },
+  "accessTokenCreatedAndCopied": {
+    "message": "Müraciət tokeni yaradıldı və lövhəyə kopyalandı"
+  },
+  "accessTokenPermissionsBetaNotification": {
+    "message": "Beta üçün icazələrin idarə edilməsi əlçatmazdır."
+  },
+  "revokeAccessToken": {
+    "message": "Müraciət tokenini ləğv et"
+  },
+  "submenu": {
+    "message": "Alt menyu"
   },
   "from": {
     "message": "Kimdən"
@@ -5526,8 +5987,44 @@
   "update": {
     "message": "Güncəllə"
   },
+  "plusNMore": {
+    "message": "daha $QUANTITY$ ədəd",
+    "placeholders": {
+      "quantity": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "groupInfo": {
+    "message": "Qrup məlumatı"
+  },
+  "editGroupMembersDesc": {
+    "message": "Üzvlərə qrupun təyin edilmiş kolleksiyalarına müraciət icazəsi verin."
+  },
+  "editGroupCollectionsDesc": {
+    "message": "Bu qrupa əlavə edərək kolleksiyalara müraciət icazəsi verin."
+  },
+  "accessAllCollectionsDesc": {
+    "message": "Hazırkı və gələcəkdəki bütün kolleksiyalara müraciət icazəsi verin."
+  },
+  "accessAllCollectionsHelp": {
+    "message": "İşarələnsə bu, digər bütün kolleksiya icazələrini əvəz edəcək."
+  },
+  "selectMembers": {
+    "message": "Üzv seç"
+  },
+  "selectCollections": {
+    "message": "Kolleksiya seç"
+  },
   "role": {
     "message": "Rol"
+  },
+  "removeMember": {
+    "message": "Üzv sil"
+  },
+  "collection": {
+    "message": "Kolleksiya"
   },
   "canView": {
     "message": "Baxa bilər"
@@ -5541,6 +6038,15 @@
   "canEditExceptPass": {
     "message": "Parollar istisna olmaqla düzəliş edə bilər"
   },
+  "noCollectionsAdded": {
+    "message": "Heç bir kolleksiya əlavə edilmədi"
+  },
+  "noMembersAdded": {
+    "message": "Heç bir üzv əlavə edilmədi"
+  },
+  "noGroupsAdded": {
+    "message": "Heç bir qrup əlavə edilmədi"
+  },
   "group": {
     "message": "Qrup"
   },
@@ -5549,5 +6055,131 @@
   },
   "memberAccessAll": {
     "message": "Bu üzv, bütün elementlərə müraciət edə və onları dəyişdirə bilər."
+  },
+  "membersColumnHeader": {
+    "message": "Üzv/Qrup"
+  },
+  "groupAndMemberColumnHeader": {
+    "message": "Üzv"
+  },
+  "selectGroupsAndMembers": {
+    "message": "Qrup və üzv seç"
+  },
+  "selectGroups": {
+    "message": "Qrupları seç"
+  },
+  "userPermissionOverrideHelper": {
+    "message": "Bir üzv üçün tənzimlənən icazələr, həmin üzvün qrupu tərəfindən tənzimlənən icazələri əvəz edəcək"
+  },
+  "noMembersOrGroupsAdded": {
+    "message": "Heç bir üzv və ya qrup əlavə edilmədi"
+  },
+  "deleted": {
+    "message": "Silindi"
+  },
+  "memberStatusFilter": {
+    "message": "Üzv status filtri"
+  },
+  "inviteMember": {
+    "message": "Üzv dəvət et"
+  },
+  "needsConfirmation": {
+    "message": "Təsdiqləmə lazımdır"
+  },
+  "memberRole": {
+    "message": "Üzv rolu"
+  },
+  "moreFromBitwarden": {
+    "message": "\"Bitwarden\"dən daha çoxu"
+  },
+  "switchProducts": {
+    "message": "Məhsulları dəyişdir"
+  },
+  "freeOrgInvLimitReachedManageBilling": {
+    "message": "Ödənişsiz təşkilatların ən çox $SEATCOUNT$ üzvü ola bilər. Daha çox üzv dəvət etmək üçün ödənişli bir plana yüksəldin.",
+    "placeholders": {
+      "seatcount": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "freeOrgInvLimitReachedNoManageBilling": {
+    "message": "Ödənişsiz təşkilatların ən çox $SEATCOUNT$ üzvü ola bilər. Yüksəltmək üçün təşkilatınızın sahibi ilə əlaqə saxlayın.",
+    "placeholders": {
+      "seatcount": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "freeOrgMaxCollectionReachedManageBilling": {
+    "message": "Ödənişsiz təşkilatların ən çox $COLLECTIONCOUNT$ kolleksiyası ola bilər. Daha çox kolleksiya əlavə etmək üçün ödənişli bir plana yüksəldin.",
+    "placeholders": {
+      "COLLECTIONCOUNT": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "freeOrgMaxCollectionReachedNoManageBilling": {
+    "message": "Ödənişsiz təşkilatların ən çox $COLLECTIONCOUNT$ kolleksiyası ola bilər. Yüksəltmək üçün təşkilatınızın sahibi ilə əlaqə saxlayın.",
+    "placeholders": {
+      "COLLECTIONCOUNT": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "licenseAndBillingManagement": {
+    "message": "Lisenziya və faktura idarəetməsi"
+  },
+  "automaticSync": {
+    "message": "Avto-sinxronlaşdırma"
+  },
+  "manualUpload": {
+    "message": "Əllə yükləmə"
+  },
+  "manualUploadDesc": {
+    "message": "Faktura sinxronlaşdırmasını fəallaşdırmaq istəmirsinizsə, lisenziyanızı burada əllə yükləyin."
+  },
+  "syncLicense": {
+    "message": "Lisenziyanı sinxronlaşdır"
+  },
+  "licenseSyncSuccess": {
+    "message": "Lisenziya uğurla sinxronlaşdırıldı"
+  },
+  "licenseUploadSuccess": {
+    "message": "Lisenziya uğurla yükləndi"
+  },
+  "lastLicenseSync": {
+    "message": "Son lisenziya sinxronlaşdırması"
+  },
+  "billingSyncHelp": {
+    "message": "Faktura Sinxronlaşdırma köməyi"
+  },
+  "uploadLicense": {
+    "message": "Lisenziyanı yüklə"
+  },
+  "lowKdfIterations": {
+    "message": "Aşağı KDF iterasiyaları"
+  },
+  "lowKdfIterationsDesc": {
+    "message": "Hesabınızın güvənliyini artırmaq üçün KDF şifrələmə tənzimləmələrinizi yüksəldin."
+  },
+  "changeKdfSettings": {
+    "message": "KDF tənzimləmələrini dəyişdir"
+  },
+  "changeKdfLoggedOutWarning": {
+    "message": "Davam etsəniz hazırkı seansdan çıxış ediləcək, təkrar giriş etməyiniz tələb olunacaq. Digər cihazlardakı aktiv seanslar bir saata qədər aktiv qalmağa davam edə bilər. Məlumat itkisinin qarşısını almaq üçün şifrələmə tənzimləmələrinizi dəyişdirməzdən əvvəl anbarınızı xaricə köçürməyinizi tövsiyə edirik."
+  },
+  "secretsManagerBeta": {
+    "message": "Secrets Manager Beta"
+  },
+  "secretsManagerBetaDesc": {
+    "message": "Beta proqramı əsnasında \"Secrets Manager\"ə istifadəçi müraciətini ödənişsiz fəallaşdırın."
+  },
+  "userAccessSecretsManager": {
+    "message": "Bu istifadəçi \"Secrets Manager Beta\"ya müraciət edə bilər"
   }
 }

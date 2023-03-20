@@ -40,6 +40,8 @@ $button-color: lighten($text-color, 40%);
 $button-color-primary: darken($brand-primary, 8%);
 $button-color-danger: darken($brand-danger, 10%);
 
+$code-color: #e83e8c;
+
 $themes: (
   light: (
     textColor: $text-color,
@@ -88,12 +90,14 @@ $themes: (
     logoSuffix: "dark",
     passwordNumberColor: #007fde,
     passwordSpecialColor: #c40800,
+    passwordCountText: #212529,
     calloutBorderColor: $border-color-dark,
     calloutBackgroundColor: $background-color,
     accountSwitcherBackgroundColor: $background-color,
     accountSwitcherTextColor: #ffffff,
     svgSuffix: "-light.svg",
     hrColor: #eeeeee,
+    codeColor: $code-color,
   ),
   dark: (
     textColor: #ffffff,
@@ -142,12 +146,14 @@ $themes: (
     logoSuffix: "white",
     passwordNumberColor: #52bdfb,
     passwordSpecialColor: #ff7c70,
+    passwordCountText: #ffffff,
     calloutBorderColor: #2f2f2f,
     calloutBackgroundColor: #363636,
     accountSwitcherBackgroundColor: #2f2f2f,
     accountSwitcherTextColor: #ffffff,
     svgSuffix: "-dark.svg",
     hrColor: #a3a3a3,
+    codeColor: $code-color,
   ),
   nord: (
     textColor: $nord5,
@@ -196,12 +202,14 @@ $themes: (
     logoSuffix: "white",
     passwordNumberColor: $nord8,
     passwordSpecialColor: $nord12,
+    passwordCountText: $nord5,
     calloutBorderColor: $nord1,
     calloutBackgroundColor: $nord2,
     accountSwitcherBackgroundColor: $nord0,
     accountSwitcherTextColor: $nord5,
     svgSuffix: "-dark.svg",
     hrColor: $nord4,
+    codeColor: $code-color,
   ),
 );
 

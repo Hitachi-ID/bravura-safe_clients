@@ -70,6 +70,16 @@
                 href="#"
                 appStopClick
                 *ngIf="this.canEdit(c)"
+                (click)="edit(c)"
+              >
+                <i class="fa fa-fw fa-pencil-square" aria-hidden="true"></i>
+                {{ "edit" | i18n }}
+              </a>
+              <a
+                class="dropdown-item"
+                href="#"
+                appStopClick
+                *ngIf="this.canEdit(c)"
                 (click)="users(c)"
               >
                 <i class="fa fa-fw fa-users" aria-hidden="true"></i>

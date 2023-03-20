@@ -1,5 +1,7 @@
 import { I18nService as BaseI18nService } from "@bitwarden/common/services/i18n.service";
 
+import { SupportedTranslationLocales } from "../../translation-constants";
+
 export class I18nService extends BaseI18nService {
   constructor(systemLanguage: string, localesDirectory: string) {
     super(systemLanguage || "en-US", localesDirectory, async (formattedLocale: string) => {
@@ -14,7 +16,7 @@ export class I18nService extends BaseI18nService {
       return locales;
     });
 
-    // Please leave 'en' where it is, as it's our fallback language in case no translation can be found
+//    this.supportedTranslationLocales = SupportedTranslationLocales;
     this.supportedTranslationLocales = ["en", "de", "en-GB", "es", "fr", "ja", "pt-BR", "zh-CN"];
   }
 }

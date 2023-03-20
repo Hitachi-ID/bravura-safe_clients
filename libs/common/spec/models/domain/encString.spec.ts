@@ -198,7 +198,7 @@ describe("EncString", () => {
       expect(encryptService.decryptToUtf8).toHaveBeenCalledWith(encString, key);
     });
 
-    it("gets an organization key if required", async () => {
+    it("gets a team key if required", async () => {
       const orgKey = mock<SymmetricCryptoKey>();
 
       cryptoService.getOrgKey.calledWith("orgId").mockResolvedValue(orgKey);

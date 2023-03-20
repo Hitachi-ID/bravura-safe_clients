@@ -13,8 +13,8 @@ import { PolicyType } from "@bitwarden/common/enums/policyType";
 import { Policy } from "@bitwarden/common/models/domain/policy";
 import { ApiService } from "@bitwarden/common/abstractions/api.service";
 import { ListResponse } from "@bitwarden/common/models/response/list.response";
-import { TwoFactorProviderType } from "@bitwarden/common/enums/twoFactorProviderType";
-import { TwoFactorProviderResponse } from "@bitwarden/common/models/response/two-factor-provider.response";
+import { TwoFactorProviderType } from "@bitwarden/common/auth/enums/two-factor-provider-type";
+import { TwoFactorProviderResponse } from "@bitwarden/common/auth/models/response/two-factor-provider.response";
 
 @Component({
   selector: "app-org-account-options",
