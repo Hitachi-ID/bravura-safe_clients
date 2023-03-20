@@ -150,7 +150,7 @@ export class Main {
         await this.i18nService.init(locale != null ? locale : app.getLocale());
         this.messagingMain.init();
         this.menuMain.init();
-        await this.trayMain.init("Bitwarden", [
+        await this.trayMain.init("Bravura Safe", [
           {
             label: this.i18nService.t("lockVault"),
             enabled: false,

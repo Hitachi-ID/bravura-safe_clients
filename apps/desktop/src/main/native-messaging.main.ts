@@ -189,7 +189,7 @@ export class NativeMessagingMain {
   generateDdgManifests() {
     const manifest = {
       name: "com.hitachiid.safe",
-      description: "Bitwarden desktop <-> DuckDuckGo bridge",
+      description: "Bravura Safe desktop <-> DuckDuckGo bridge",
       path: this.binaryPath(),
       type: "stdio",
     };
