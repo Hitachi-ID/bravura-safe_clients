@@ -14,6 +14,8 @@ import { WindowMain } from "./window.main";
 export class NativeMessagingMain {
   private connected: Socket[] = [];
   private socket: any;
+  readonly firefoxJsonFilename: string = "firefox.json";
+  readonly chromeJsonFilename: string = "chrome.json";
 
   constructor(
     private logService: LogService,
@@ -76,7 +78,7 @@ export class NativeMessagingMain {
     ipc.server.emit(socket, "message", message);
   }
 
-  generateManifests() {
+  async generateManifests() {
     const baseJson = {
       name: "com.hitachiid.safe",
       description: "Bravura Safe desktop <-> browser bridge",
@@ -103,39 +105,44 @@ export class NativeMessagingMain {
     switch (process.platform) {
       case "win32": {
         const destination = path.join(this.userPath, "browsers");
-        this.writeManifest(path.join(destination, "firefox.json"), firefoxJson);
-        this.writeManifest(path.join(destination, "chrome.json"), chromeJson);
-        /*
+        if (!existsSync(destination)) {
+          // need to create `browsers` folder to make sure both firefox.json and chrome.json can be created, writeManifest does not guarantee chrome.json is created
+          await fs.mkdir(destination);
+        }
+        this.writeManifest(path.join(destination, this.firefoxJsonFilename), firefoxJson);
+        this.writeManifest(path.join(destination, this.chromeJsonFilename), chromeJson);
+        // check if Firefox is installed for Local Machine and Current User, but only create in Current User
         this.createWindowsRegistry(
           "HKLM\\SOFTWARE\\Mozilla\\Firefox",
           "HKCU\\SOFTWARE\\Mozilla\\NativeMessagingHosts\\com.hitachiid.safe",
-          path.join(destination, "firefox.json")
+          path.join(destination, this.firefoxJsonFilename)
+        );
+        this.createWindowsRegistry(
+          "HKCU\\SOFTWARE\\Mozilla\\Firefox",
+          "HKCU\\SOFTWARE\\Mozilla\\NativeMessagingHosts\\com.hitachiid.safe",
+          path.join(destination, this.firefoxJsonFilename)
+        );
+        // check if Chrome is installed for Local Machine and Current User, but only create in Current User
+        this.createWindowsRegistry(
+          "HKLM\\SOFTWARE\\Google\\Chrome",
+          "HKCU\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe",
+          path.join(destination, this.chromeJsonFilename)
         );
         this.createWindowsRegistry(
           "HKCU\\SOFTWARE\\Google\\Chrome",
           "HKCU\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe",
-          path.join(destination, "chrome.json")
+          path.join(destination, this.chromeJsonFilename)
         );
-        */
+        // check if Edge is installed for Local Machine and Current User, but only create in Current User (Edge) re-uses the chrome registry location
         this.createWindowsRegistry(
-          "HKCU\\SOFTWARE\\Mozilla\\NativeMessagingHosts",
-          "HKCU\\SOFTWARE\\Mozilla\\NativeMessagingHosts\\com.hitachiid.safe",
-          path.join(destination, "firefox.json")
-        );
-        this.createWindowsRegistry(
-          "HKLM\\SOFTWARE\\Mozilla\\NativeMessagingHosts",
-          "HKLM\\SOFTWARE\\Mozilla\\NativeMessagingHosts\\com.hitachiid.safe",
-          path.join(destination, "firefox.json")
-        );
-        this.createWindowsRegistry(
-          "HKCU\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts",
+          "HKLM\\SOFTWARE\\Microsoft\\Edge",
           "HKCU\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe",
-          path.join(destination, "chrome.json")
+          path.join(destination, this.chromeJsonFilename)
         );
         this.createWindowsRegistry(
-          "HKLM\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts",
-          "HKLM\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe",
-          path.join(destination, "chrome.json")
+          "HKCU\\SOFTWARE\\Microsoft\\Edge",
+          "HKCU\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe",
+          path.join(destination, this.chromeJsonFilename)
         );
         break;
       }
@@ -210,19 +217,13 @@ export class NativeMessagingMain {
   removeManifests() {
     switch (process.platform) {
       case "win32":
-        fs.unlink(path.join(this.userPath, "browsers", "firefox.json"));
-        fs.unlink(path.join(this.userPath, "browsers", "chrome.json"));
+        fs.unlink(path.join(this.userPath, "browsers", this.firefoxJsonFilename));
+        fs.unlink(path.join(this.userPath, "browsers", this.chromeJsonFilename));
         this.deleteWindowsRegistry(
           "HKCU\\SOFTWARE\\Mozilla\\NativeMessagingHosts\\com.hitachiid.safe"
         );
         this.deleteWindowsRegistry(
-          "HKLM\\SOFTWARE\\Mozilla\\NativeMessagingHosts\\com.hitachiid.safe"
-        );
-        this.deleteWindowsRegistry(
           "HKCU\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe"
-        );
-        this.deleteWindowsRegistry(
-          "HKLM\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe"
         );
         break;
       case "darwin": {
