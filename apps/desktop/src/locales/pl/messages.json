@@ -779,7 +779,7 @@
     "message": "Zmień hasło główne"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Hasło główne możesz zmienić na stronie sejfu hitachi-id.com. Czy chcesz przejść do tej strony?"
+    "message": "Hasło główne możesz zmienić na stronie sejfu bravurasecurity.com. Czy chcesz przejść do tej strony?"
   },
   "fingerprintPhrase": {
     "message": "Unikalny identyfikator konta",
@@ -819,7 +819,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -827,7 +827,7 @@
     "message": "Hasło główne jest nieprawidłowe"
   },
   "twoStepLoginConfirmation": {
-    "message": "Logowanie dwustopniowe sprawia, że konto jest bardziej bezpieczne poprzez wymuszenie potwierdzenia logowania z innego urządzenia, takiego jak z klucza bezpieczeństwa, aplikacji uwierzytelniającej, wiadomości SMS, telefonu lub adresu e-mail. Logowanie dwustopniowe możesz włączyć w sejfie internetowym hitachi-id.com. Czy chcesz przejść do tej strony?"
+    "message": "Logowanie dwustopniowe sprawia, że konto jest bardziej bezpieczne poprzez wymuszenie potwierdzenia logowania z innego urządzenia, takiego jak z klucza bezpieczeństwa, aplikacji uwierzytelniającej, wiadomości SMS, telefonu lub adresu e-mail. Logowanie dwustopniowe możesz włączyć w sejfie internetowym bravurasecurity.com. Czy chcesz przejść do tej strony?"
   },
   "twoStepLogin": {
     "message": "Logowanie dwustopniowe"
@@ -1050,7 +1050,7 @@
     "message": "Zarządzaj kontem Premium"
   },
   "premiumManageAlert": {
-    "message": "Kontem Premium możesz zarządzać na stronie sejfu hitachi-id.com. Czy chcesz otworzyć tę stronę?"
+    "message": "Kontem Premium możesz zarządzać na stronie sejfu bravurasecurity.com. Czy chcesz otworzyć tę stronę?"
   },
   "premiumRefresh": {
     "message": "Przedłuż konto Premium"
@@ -1083,7 +1083,7 @@
     "message": "Kup konto Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Konto Premium możesz zakupić na stronie sejfu hitachi-id.com. Czy chcesz otworzyć tę stronę?"
+    "message": "Konto Premium możesz zakupić na stronie sejfu bravurasecurity.com. Czy chcesz otworzyć tę stronę?"
   },
   "premiumCurrentMember": {
     "message": "Posiadasz konto Premium!"

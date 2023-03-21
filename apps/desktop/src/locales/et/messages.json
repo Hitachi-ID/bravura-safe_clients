@@ -779,7 +779,7 @@
     "message": "Muuda ülemparooli"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Saad oma ülemparooli muuta hitachi-id.com veebihoidlas. Soovid seda kohe teha?"
+    "message": "Saad oma ülemparooli muuta bravurasecurity.com veebihoidlas. Soovid seda kohe teha?"
   },
   "fingerprintPhrase": {
     "message": "Sõrmejälje fraas",
@@ -819,7 +819,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -827,7 +827,7 @@
     "message": "Vale ülemparool"
   },
   "twoStepLoginConfirmation": {
-    "message": "Kaheastmeline kinnitamine aitab konto turvalisust tõsta. Lisaks paroolile pead kontole ligipääsemiseks kinnitama sisselogimise päringu SMS-ga, telefonikõnega, autentimise rakendusega või e-postiga. Kaheastmelist kinnitust saab sisse lülitada hitachi-id.com veebihoidlas. Soovid seda kohe avada?"
+    "message": "Kaheastmeline kinnitamine aitab konto turvalisust tõsta. Lisaks paroolile pead kontole ligipääsemiseks kinnitama sisselogimise päringu SMS-ga, telefonikõnega, autentimise rakendusega või e-postiga. Kaheastmelist kinnitust saab sisse lülitada bravurasecurity.com veebihoidlas. Soovid seda kohe avada?"
   },
   "twoStepLogin": {
     "message": "Kaheastmeline kinnitamine"
@@ -1050,7 +1050,7 @@
     "message": "Halda Preemium versiooni"
   },
   "premiumManageAlert": {
-    "message": "Saad Preemium versiooni hallata hitachi-id.com veebihoidlas. Soovid seda kohe teha?"
+    "message": "Saad Preemium versiooni hallata bravurasecurity.com veebihoidlas. Soovid seda kohe teha?"
   },
   "premiumRefresh": {
     "message": "Uuenda staatust"
@@ -1083,7 +1083,7 @@
     "message": "Osta Preemium"
   },
   "premiumPurchaseAlert": {
-    "message": "Saad Preemium versiooni osta hitachi-id.com veebihoidlas. Soovid seda kohe teha?"
+    "message": "Saad Preemium versiooni osta bravurasecurity.com veebihoidlas. Soovid seda kohe teha?"
   },
   "premiumCurrentMember": {
     "message": "Oled preemium kasutaja!"

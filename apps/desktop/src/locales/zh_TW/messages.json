@@ -779,7 +779,7 @@
     "message": "變更主密碼"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "您可以在 hitachi-id.com 網頁版密碼庫變更主密碼。現在要前往嗎？"
+    "message": "您可以在 bravurasecurity.com 網頁版密碼庫變更主密碼。現在要前往嗎？"
   },
   "fingerprintPhrase": {
     "message": "指紋短語",
@@ -819,7 +819,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -1050,7 +1050,7 @@
     "message": "管理會員資格"
   },
   "premiumManageAlert": {
-    "message": "您可以在 hitachi-id.com 網頁版密碼庫管理你的會員資格。現在要前往嗎？"
+    "message": "您可以在 bravurasecurity.com 網頁版密碼庫管理你的會員資格。現在要前往嗎？"
   },
   "premiumRefresh": {
     "message": "更新會員資格狀態"
@@ -1083,7 +1083,7 @@
     "message": "購買進階會員資格"
   },
   "premiumPurchaseAlert": {
-    "message": "您可以在 hitachi-id.com 網頁版密碼庫購買進階會員資格。現在要前往嗎？"
+    "message": "您可以在 bravurasecurity.com 網頁版密碼庫購買進階會員資格。現在要前往嗎？"
   },
   "premiumCurrentMember": {
     "message": "您目前是進階會員！"

@@ -779,7 +779,7 @@
     "message": "Promjena glavne lozinke"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Možete promijeniti svoju glavnu lozinku u trezoru na internet strani hitachi-id.com. Da li želite da posjetite internet lokaciju sada?"
+    "message": "Možete promijeniti svoju glavnu lozinku u trezoru na internet strani bravurasecurity.com. Da li želite da posjetite internet lokaciju sada?"
   },
   "fingerprintPhrase": {
     "message": "Fraza računa",
@@ -819,7 +819,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -827,7 +827,7 @@
     "message": "Nevažeća glavna lozinka"
   },
   "twoStepLoginConfirmation": {
-    "message": "Prijavljivanje u dva koraka čini vaš nalog sigurnijim tako što ćete morati da verifikujete prijavu na drugom uređaju, kao što su bezbjedonosni ključ, aplikacija za potvrđivanje, SMS, telefonski poziv ili e-pošta. Prijava u dva koraka može se omogućiti u trezoru na internet strani hitachi-id.com. Da li želite da posjetite internet lokaciju sada?"
+    "message": "Prijavljivanje u dva koraka čini vaš nalog sigurnijim tako što ćete morati da verifikujete prijavu na drugom uređaju, kao što su bezbjedonosni ključ, aplikacija za potvrđivanje, SMS, telefonski poziv ili e-pošta. Prijava u dva koraka može se omogućiti u trezoru na internet strani bravurasecurity.com. Da li želite da posjetite internet lokaciju sada?"
   },
   "twoStepLogin": {
     "message": "Prijava u dva koraka"
@@ -1050,7 +1050,7 @@
     "message": "Upravljanje članstvom"
   },
   "premiumManageAlert": {
-    "message": "Svojim članstvom možete upravljati na trezoru u sklopu internet strane hitachi-id.com. Da li želite da posjetite internet lokaciju sada?"
+    "message": "Svojim članstvom možete upravljati na trezoru u sklopu internet strane bravurasecurity.com. Da li želite da posjetite internet lokaciju sada?"
   },
   "premiumRefresh": {
     "message": "Osvježi članstvo"
@@ -1083,7 +1083,7 @@
     "message": "Kupi Premijum članstvo"
   },
   "premiumPurchaseAlert": {
-    "message": "Premium članstvo možete kupiti u trezoru na internet strani hitachi-id.com. Da li želite da posjetite internet lokaciju sada?"
+    "message": "Premium članstvo možete kupiti u trezoru na internet strani bravurasecurity.com. Da li želite da posjetite internet lokaciju sada?"
   },
   "premiumCurrentMember": {
     "message": "Vi ste premijum član!"

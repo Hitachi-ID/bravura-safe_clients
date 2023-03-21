@@ -803,7 +803,7 @@
     "message": "Alterar Senha Mestra"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Você pode alterar a sua senha mestra no cofre web em hitachi-id.com. Você deseja visitar o site agora?"
+    "message": "Você pode alterar a sua senha mestra no cofre web em bravurasecurity.com. Você deseja visitar o site agora?"
   },
   "fingerprintPhrase": {
     "message": "Frase biométrica",
@@ -843,7 +843,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -851,7 +851,7 @@
     "message": "Senha mestra inválida"
   },
   "twoStepLoginConfirmation": {
-    "message": "A autenticação em duas etapas torna sua conta mais segura, exigindo que você verifique o seu login com outro dispositivo, como uma chave de segurança, um aplicativo de autenticação, SMS, chamada telefônica ou e-mail. A autenticação em duas etapas pode ser ativada no cofre web em hitachi-id.com. Você deseja visitar o site agora?"
+    "message": "A autenticação em duas etapas torna sua conta mais segura, exigindo que você verifique o seu login com outro dispositivo, como uma chave de segurança, um aplicativo de autenticação, SMS, chamada telefônica ou e-mail. A autenticação em duas etapas pode ser ativada no cofre web em bravurasecurity.com. Você deseja visitar o site agora?"
   },
   "twoStepLogin": {
     "message": "Login em Duas Etapas"
@@ -1074,7 +1074,7 @@
     "message": "Gerenciar Plano"
   },
   "premiumManageAlert": {
-    "message": "Você pode gerenciar a sua assinatura premium no cofre web em hitachi-id.com. Você deseja visitar o site agora?"
+    "message": "Você pode gerenciar a sua assinatura premium no cofre web em bravurasecurity.com. Você deseja visitar o site agora?"
   },
   "premiumRefresh": {
     "message": "Atualizar Assinatura"
@@ -1107,7 +1107,7 @@
     "message": "Comprar Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Você pode comprar a assinatura premium no cofre web em hitachi-id.com. Você deseja visitar o site agora?"
+    "message": "Você pode comprar a assinatura premium no cofre web em bravurasecurity.com. Você deseja visitar o site agora?"
   },
   "premiumCurrentMember": {
     "message": "Você é um membro premium!"

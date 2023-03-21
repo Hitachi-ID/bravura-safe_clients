@@ -803,7 +803,7 @@
     "message": "マスターパスワードの変更"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "マスターパスワードは hitachi-id.com ウェブ保管庫で変更できます。ウェブサイトを開きますか？"
+    "message": "マスターパスワードは bravurasecurity.com ウェブ保管庫で変更できます。ウェブサイトを開きますか？"
   },
   "fingerprintPhrase": {
     "message": "パスフレーズ",
@@ -843,7 +843,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -851,7 +851,7 @@
     "message": "マスターパスワードが間違っています"
   },
   "twoStepLoginConfirmation": {
-    "message": "2段階認証を使うと、ログイン時にセキュリティキーや認証アプリ、SMS、電話やメールでの認証を必要にすることでアカウントをさらに安全に出来ます。2段階認証は hitachi-id.com ウェブ保管庫で有効化できます。ウェブサイトを開きますか？"
+    "message": "2段階認証を使うと、ログイン時にセキュリティキーや認証アプリ、SMS、電話やメールでの認証を必要にすることでアカウントをさらに安全に出来ます。2段階認証は bravurasecurity.com ウェブ保管庫で有効化できます。ウェブサイトを開きますか？"
   },
   "twoStepLogin": {
     "message": "2段階認証"
@@ -1074,7 +1074,7 @@
     "message": "会員情報の管理"
   },
   "premiumManageAlert": {
-    "message": "会員情報は hitachi-id.com ウェブ保管庫で管理できます。ウェブサイトを開きますか？"
+    "message": "会員情報は bravurasecurity.com ウェブ保管庫で管理できます。ウェブサイトを開きますか？"
   },
   "premiumRefresh": {
     "message": "会員情報の更新"
@@ -1107,7 +1107,7 @@
     "message": "プレミアム会員に加入"
   },
   "premiumPurchaseAlert": {
-    "message": "プレミアム会員権は hitachi-id.com ウェブ保管庫で購入できます。ウェブサイトを開きますか？"
+    "message": "プレミアム会員権は bravurasecurity.com ウェブ保管庫で購入できます。ウェブサイトを開きますか？"
   },
   "premiumCurrentMember": {
     "message": "あなたはプレミアム会員です！"

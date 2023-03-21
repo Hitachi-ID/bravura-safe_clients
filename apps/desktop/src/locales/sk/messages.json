@@ -779,7 +779,7 @@
     "message": "Zmeniť hlavné heslo"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Svoje hlavné heslo môžete zmeniť vo webovom trezore hitachi-id.com. Chcete teraz navštíviť túto stránku?"
+    "message": "Svoje hlavné heslo môžete zmeniť vo webovom trezore bravurasecurity.com. Chcete teraz navštíviť túto stránku?"
   },
   "fingerprintPhrase": {
     "message": "Fráza odtlačku",
@@ -819,7 +819,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -827,7 +827,7 @@
     "message": "Neplatné hlavné heslo"
   },
   "twoStepLoginConfirmation": {
-    "message": "Dvojstupňové prihlasovanie robí váš účet bezpečnejším vďaka vyžadovaniu bezpečnostného kódu z overovacej aplikácie vždy, keď sa prihlásite. Dvojstupňové prihlasovanie môžete povoliť vo webovom trezore hitachi-id.com. Chcete teraz navštíviť túto stránku?"
+    "message": "Dvojstupňové prihlasovanie robí váš účet bezpečnejším vďaka vyžadovaniu bezpečnostného kódu z overovacej aplikácie vždy, keď sa prihlásite. Dvojstupňové prihlasovanie môžete povoliť vo webovom trezore bravurasecurity.com. Chcete teraz navštíviť túto stránku?"
   },
   "twoStepLogin": {
     "message": "Dvojstupňové prihlásenie"
@@ -1050,7 +1050,7 @@
     "message": "Spravovať členstvo"
   },
   "premiumManageAlert": {
-    "message": "Svoje členstvo môžete spravovať vo webovom trezore hitachi-id.com. Chcete navštíviť túto stránku teraz?"
+    "message": "Svoje členstvo môžete spravovať vo webovom trezore bravurasecurity.com. Chcete navštíviť túto stránku teraz?"
   },
   "premiumRefresh": {
     "message": "Obnoviť členstvo"
@@ -1083,7 +1083,7 @@
     "message": "Zakúpiť Prémium"
   },
   "premiumPurchaseAlert": {
-    "message": "Svoje prémiové členstvo môžete zakúpiť vo webovom trezore hitachi-id.com. Chcete navštíviť túto stránku teraz?"
+    "message": "Svoje prémiové členstvo môžete zakúpiť vo webovom trezore bravurasecurity.com. Chcete navštíviť túto stránku teraz?"
   },
   "premiumCurrentMember": {
     "message": "Ste prémiovým členom!"

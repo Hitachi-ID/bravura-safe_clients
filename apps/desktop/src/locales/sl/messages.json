@@ -779,7 +779,7 @@
     "message": "Spremeni glavno geslo"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Svoje glavno geslo lahko spremenite v hitachi-id.com spletnem trezorju. Želite obiskati spletno stran zdaj?"
+    "message": "Svoje glavno geslo lahko spremenite v bravurasecurity.com spletnem trezorju. Želite obiskati spletno stran zdaj?"
   },
   "fingerprintPhrase": {
     "message": "Fraza prstnega odtisa",
@@ -819,7 +819,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -827,7 +827,7 @@
     "message": "Napačno glavno geslo"
   },
   "twoStepLoginConfirmation": {
-    "message": "Avtentikacija v dveh korakih naredi vaš račun bolj varen, saj od vas zahteva, da svojo prijavo preverite z drugo napravo, kot je varnostni ključ, aplikacija za preverjanje pristnosti, SMS, telefonski klic ali e-pošta. V spletnem trezorju hitachi-id.com je lahko omogočite prijavo v dveh korakih. Ali želite spletno stran obiskati sedaj?"
+    "message": "Avtentikacija v dveh korakih naredi vaš račun bolj varen, saj od vas zahteva, da svojo prijavo preverite z drugo napravo, kot je varnostni ključ, aplikacija za preverjanje pristnosti, SMS, telefonski klic ali e-pošta. V spletnem trezorju bravurasecurity.com je lahko omogočite prijavo v dveh korakih. Ali želite spletno stran obiskati sedaj?"
   },
   "twoStepLogin": {
     "message": "Prijava v dveh korakih"
@@ -1050,7 +1050,7 @@
     "message": "Upravljanje članstva"
   },
   "premiumManageAlert": {
-    "message": "You can manage your membership on the hitachi-id.com web vault. Do you want to visit the website now?"
+    "message": "You can manage your membership on the bravurasecurity.com web vault. Do you want to visit the website now?"
   },
   "premiumRefresh": {
     "message": "Osvežite članstvo"
@@ -1083,7 +1083,7 @@
     "message": "Purchase Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "You can purchase premium membership on the hitachi-id.com web vault. Do you want to visit the website now?"
+    "message": "You can purchase premium membership on the bravurasecurity.com web vault. Do you want to visit the website now?"
   },
   "premiumCurrentMember": {
     "message": "You are a premium member!"

@@ -779,7 +779,7 @@
     "message": "Change master password"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "You can change your master password on the hitachi-id.com web vault. Do you want to visit the website now?"
+    "message": "You can change your master password on the bravurasecurity.com web vault. Do you want to visit the website now?"
   },
   "fingerprintPhrase": {
     "message": "Fingerprint phrase",
@@ -819,7 +819,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -1050,7 +1050,7 @@
     "message": "Manage membership"
   },
   "premiumManageAlert": {
-    "message": "You can manage your membership on the hitachi-id.com web vault. Do you want to visit the website now?"
+    "message": "You can manage your membership on the bravurasecurity.com web vault. Do you want to visit the website now?"
   },
   "premiumRefresh": {
     "message": "Refresh membership"
@@ -1083,7 +1083,7 @@
     "message": "Purchase Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "You can purchase premium membership on the hitachi-id.com web vault. Do you want to visit the website now?"
+    "message": "You can purchase premium membership on the bravurasecurity.com web vault. Do you want to visit the website now?"
   },
   "premiumCurrentMember": {
     "message": "You are a premium member!"

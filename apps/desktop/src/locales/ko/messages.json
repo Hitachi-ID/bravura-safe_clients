@@ -779,7 +779,7 @@
     "message": "마스터 비밀번호 변경"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "hitachi-id.com 웹 보관함에서 마스터 비밀번호를 바꿀 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
+    "message": "bravurasecurity.com 웹 보관함에서 마스터 비밀번호를 바꿀 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
   },
   "fingerprintPhrase": {
     "message": "지문 구절",
@@ -819,7 +819,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -827,7 +827,7 @@
     "message": "잘못된 마스터 비밀번호"
   },
   "twoStepLoginConfirmation": {
-    "message": "2단계 인증은 보안 키, 인증 앱, SMS, 전화 통화 등의 다른 기기로 사용자의 로그인 시도를 검증하여 사용자의 계정을 더욱 안전하게 만듭니다. 2단계 인증은 hitachi-id.com 웹 보관함에서 활성화할 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
+    "message": "2단계 인증은 보안 키, 인증 앱, SMS, 전화 통화 등의 다른 기기로 사용자의 로그인 시도를 검증하여 사용자의 계정을 더욱 안전하게 만듭니다. 2단계 인증은 bravurasecurity.com 웹 보관함에서 활성화할 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
   },
   "twoStepLogin": {
     "message": "2단계 인증"
@@ -1050,7 +1050,7 @@
     "message": "멤버십 관리"
   },
   "premiumManageAlert": {
-    "message": "hitachi-id.com 웹 보관함에서 멤버십을 관리할 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
+    "message": "bravurasecurity.com 웹 보관함에서 멤버십을 관리할 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
   },
   "premiumRefresh": {
     "message": "멤버십 새로 고침"
@@ -1083,7 +1083,7 @@
     "message": "프리미엄 멤버십 구입"
   },
   "premiumPurchaseAlert": {
-    "message": "hitachi-id.com 웹 보관함에서 프리미엄 멤버십을 구입할 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
+    "message": "bravurasecurity.com 웹 보관함에서 프리미엄 멤버십을 구입할 수 있습니다. 지금 웹 사이트를 방문하시겠습니까?"
   },
   "premiumCurrentMember": {
     "message": "프리미엄 사용자입니다!"

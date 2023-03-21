@@ -803,7 +803,7 @@
     "message": "修改主密码"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "您可以在 hitachi-id.com 网页密码库修改您的主密码。现在要访问吗？"
+    "message": "您可以在 bravurasecurity.com网页密码库修改您的主密码。现在要访问吗？"
   },
   "fingerprintPhrase": {
     "message": "指纹短语",
@@ -843,7 +843,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -1074,7 +1074,7 @@
     "message": "管理会员资格"
   },
   "premiumManageAlert": {
-    "message": "您可以在 hitachi-id.com 网页版密码库管理您的会员资格。现在要访问吗？"
+    "message": "您可以在 bravurasecurity.com网页版密码库管理您的会员资格。现在要访问吗？"
   },
   "premiumRefresh": {
     "message": "刷新会员资格"
@@ -1107,7 +1107,7 @@
     "message": "购买高级版"
   },
   "premiumPurchaseAlert": {
-    "message": "您可以在 hitachi-id.com 网页版密码库购买高级会员。现在要访问吗？"
+    "message": "您可以在 bravurasecurity.com网页版密码库购买高级会员。现在要访问吗？"
   },
   "premiumCurrentMember": {
     "message": "您目前是高级会员！"

@@ -779,7 +779,7 @@
     "message": "Hoofdwachtwoord wijzigen"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Je kunt je hoofdwachtwoord wijzigen in de kluis op hitachi-id.com. Wil je de website nu bezoeken?"
+    "message": "Je kunt je hoofdwachtwoord wijzigen in de kluis op bravurasecurity.com. Wil je de website nu bezoeken?"
   },
   "fingerprintPhrase": {
     "message": "Vingerafdrukzin",
@@ -819,7 +819,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -827,7 +827,7 @@
     "message": "Ongeldig hoofdwachtwoord"
   },
   "twoStepLoginConfirmation": {
-    "message": "Tweestapsaanmelding beschermt je account door je inlogpoging te bevestigen met een ander apparaat zoals een beveiligingssleutel, authenticatie-app, SMS, spraakoproep of e-mail. Je kunt Tweestapsaanmelding inschakelen in de webkluis op hitachi-id.com. Wil je de website nu bezoeken?"
+    "message": "Tweestapsaanmelding beschermt je account door je inlogpoging te bevestigen met een ander apparaat zoals een beveiligingssleutel, authenticatie-app, SMS, spraakoproep of e-mail. Je kunt Tweestapsaanmelding inschakelen in de webkluis op bravurasecurity.com. Wil je de website nu bezoeken?"
   },
   "twoStepLogin": {
     "message": "Tweestapsaanmelding"
@@ -1050,7 +1050,7 @@
     "message": "Abonnement beheren"
   },
   "premiumManageAlert": {
-    "message": "Je kunt je abonnement aanpassen in de webkluis op hitachi-id.com. Wil je de website nu bezoeken?"
+    "message": "Je kunt je abonnement aanpassen in de webkluis op bravurasecurity.com. Wil je de website nu bezoeken?"
   },
   "premiumRefresh": {
     "message": "Abonnement vernieuwen"
@@ -1083,7 +1083,7 @@
     "message": "Premium aanschaffen"
   },
   "premiumPurchaseAlert": {
-    "message": "Je kunt een Premium-abonnement aanschaffen in de webkluis op hitachi-id.com. Wil je de website nu bezoeken?"
+    "message": "Je kunt een Premium-abonnement aanschaffen in de webkluis op bravurasecurity.com. Wil je de website nu bezoeken?"
   },
   "premiumCurrentMember": {
     "message": "Je bent Premium-lid!"

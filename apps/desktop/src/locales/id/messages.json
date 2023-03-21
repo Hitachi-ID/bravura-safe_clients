@@ -779,7 +779,7 @@
     "message": "Ubah Kata Sandi Utama"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Anda dapat mengubah kata sandi utama Anda di brankas web hitachi-id.com. Anda ingin mengunjungi situs web sekarang?"
+    "message": "Anda dapat mengubah kata sandi utama Anda di brankas web bravurasecurity.com. Anda ingin mengunjungi situs web sekarang?"
   },
   "fingerprintPhrase": {
     "message": "Frase Fingerprint",
@@ -819,7 +819,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -827,7 +827,7 @@
     "message": "Sandi utama tidak valid"
   },
   "twoStepLoginConfirmation": {
-    "message": "Info masuk dua langkah membuat akun Anda lebih aman dengan mengharuskan Anda memverifikasi info masuk Anda dengan peranti lain seperti kode keamanan, aplikasi autentikasi, SMS, panggilan telepon, atau email. Info masuk dua langkah dapat diaktifkan di brankas web hitachi-id.com. Anda ingin mengunjungi situs web sekarang?"
+    "message": "Info masuk dua langkah membuat akun Anda lebih aman dengan mengharuskan Anda memverifikasi info masuk Anda dengan peranti lain seperti kode keamanan, aplikasi autentikasi, SMS, panggilan telepon, atau email. Info masuk dua langkah dapat diaktifkan di brankas web bravurasecurity.com. Anda ingin mengunjungi situs web sekarang?"
   },
   "twoStepLogin": {
     "message": "Info masuk dua langkah"
@@ -1050,7 +1050,7 @@
     "message": "Kelola Keanggotaan"
   },
   "premiumManageAlert": {
-    "message": "Anda dapat mengelola keanggotaan anda di Brankas Web hitachi-id.com. Apakah anda ingin mengunjungi situs web itu sekarang?"
+    "message": "Anda dapat mengelola keanggotaan anda di Brankas Web bravurasecurity.com. Apakah anda ingin mengunjungi situs web itu sekarang?"
   },
   "premiumRefresh": {
     "message": "Segarkan Keanggotaan"
@@ -1083,7 +1083,7 @@
     "message": "Beli Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Kamu bisa membeli keanggotaan Premium di Brankas Web hitachi-id.com. Apakah kamu ingin mengunjungi situs web itu sekarang?"
+    "message": "Kamu bisa membeli keanggotaan Premium di Brankas Web bravurasecurity.com. Apakah kamu ingin mengunjungi situs web itu sekarang?"
   },
   "premiumCurrentMember": {
     "message": "Anda adalah anggota premium!"
