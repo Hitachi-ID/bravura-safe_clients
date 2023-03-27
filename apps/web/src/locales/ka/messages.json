@@ -297,7 +297,7 @@
     "description": "Search Secure Note type"
   },
   "searchVault": {
-    "message": "Search vault"
+    "message": "Search safe"
   },
   "searchMyVault": {
     "message": "Search my vault"
@@ -976,7 +976,7 @@
     "message": "Export"
   },
   "exportVault": {
-    "message": "Export vault"
+    "message": "Export safe"
   },
   "fileFormat": {
     "message": "File format"

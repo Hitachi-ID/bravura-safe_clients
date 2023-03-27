@@ -18,9 +18,9 @@ export class AccountMenu implements IMenubarMenu {
     return [
       this.changeMasterPassword,
       this.twoStepLogin,
-      this.fingerprintPhrase,
+      //this.fingerprintPhrase,
       this.separator,
-      this.deleteAccount,
+      //this.deleteAccount,
     ];
   }
 

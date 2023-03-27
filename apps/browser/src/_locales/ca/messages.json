@@ -1387,7 +1387,7 @@
     "message": "S’espera confirmació des de l’escriptori"
   },
   "awaitDesktopDesc": {
-    "message": "Confirmeu que utilitzeu la biomètrica a l'aplicació Bitwarden Desktop per habilitar la biomètrica per al navegador."
+    "message": "Confirmeu que utilitzeu la biomètrica a l'aplicació Bravura Safe desktop per habilitar la biomètrica per al navegador."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Bloqueja amb la contrasenya mestra en reiniciar el navegador"
@@ -1524,13 +1524,13 @@
     "message": "La integració en el navegador no està habilitada"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "La integració del navegador no està habilitada a l'aplicació Bitwarden Desktop. Activeu-la a la configuració de l'aplicació d'escriptori."
+    "message": "La integració del navegador no està habilitada a l'aplicació Bravura Safe desktop. Activeu-la a la configuració de l'aplicació d'escriptori."
   },
   "startDesktopTitle": {
-    "message": "Inicia l'aplicació Bitwarden Desktop"
+    "message": "Inicia l'aplicació Bravura Safe desktop"
   },
   "startDesktopDesc": {
-    "message": "L'aplicació Bitwarden Desktop s'ha d'iniciar abans que es puga utilitzar el desbloqueig amb biometria."
+    "message": "L'aplicació Bravura Safe desktop s'ha d'iniciar abans que es puga utilitzar el desbloqueig amb biometria."
   },
   "errorEnableBiometricTitle": {
     "message": "No es pot habilitar la biomètrica"

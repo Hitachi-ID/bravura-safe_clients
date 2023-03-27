@@ -1405,7 +1405,7 @@
     "message": "Warte auf Bestätigung vom Desktop"
   },
   "awaitDesktopDesc": {
-    "message": "Bitte bestätige die Verwendung von Biometrie in der Bitwarden Desktop-Anwendung, um Biometrie für den Browser zu aktivieren."
+    "message": "Bitte bestätige die Verwendung von Biometrie in der Bravura Safe desktop-Anwendung, um Biometrie für den Browser zu aktivieren."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Bei Neustart des Browsers mit Master-Passwort sperren"
@@ -1542,13 +1542,13 @@
     "message": "Browser-Einbindung ist nicht aktiviert"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "Die Browser-Einbindung ist in der Bitwarden Desktop-Anwendung nicht aktiviert. Bitte aktivieren Sie diese in den Einstellungen innerhalb der Desktop-Anwendung."
+    "message": "Die Browser-Einbindung ist in der Bravura Safe desktop-Anwendung nicht aktiviert. Bitte aktivieren Sie diese in den Einstellungen innerhalb der Desktop-Anwendung."
   },
   "startDesktopTitle": {
-    "message": "Bitwarden Desktop-Anwendung starten"
+    "message": "Bravura Safe desktop-Anwendung starten"
   },
   "startDesktopDesc": {
-    "message": "Die Bitwarden Desktop-Anwendung muss gestartet werden, bevor diese Funktion verwendet werden kann."
+    "message": "Die Bravura Safe desktop-Anwendung muss gestartet werden, bevor diese Funktion verwendet werden kann."
   },
   "errorEnableBiometricTitle": {
     "message": "Biometrie kann nicht aktiviert werden"
@@ -1584,7 +1584,7 @@
     "message": "Berechtigung nicht erteilt"
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "Ohne die Berechtigung zur Kommunikation mit der Bitwarden Desktop-Anwendung können wir keine Biometrie in der Browser-Erweiterung anbieten. Bitte versuche es erneut."
+    "message": "Ohne die Berechtigung zur Kommunikation mit der Bravura Safe desktop-Anwendung können wir keine Biometrie in der Browser-Erweiterung anbieten. Bitte versuche es erneut."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Fehler bei der Berechtigungsanfrage"

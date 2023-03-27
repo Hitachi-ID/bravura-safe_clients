@@ -1629,7 +1629,7 @@
     "message": "Biometrija nije omogućena"
   },
   "biometricsNotEnabledDesc": {
-    "message": "Biometrija preglednika zahtijeva prethodno omogućenu biometriju u Bitwarden desktop aplikaciji."
+    "message": "Biometrija preglednika zahtijeva prethodno omogućenu biometriju u Bravura Safe desktop aplikaciji."
   },
   "personalOwnershipSubmitError": {
     "message": "Zbog poslovnih smjernica, zabranjeno vam je pohranjivanje predmeta u svoj lični trezor. Promijenite opciju vlasništva u organizaciji i odaberite neku od dostupnih kolekcija."
@@ -1898,7 +1898,7 @@
     "message": "Key connector error: make sure key connector is available and working correctly."
   },
   "lockAllVaults": {
-    "message": "Lock all vaults"
+    "message": "Lock all safes"
   },
   "accountLimitReached": {
     "message": "No more than 5 accounts may be logged in at the same time."
@@ -1992,7 +1992,7 @@
     "message": "Service"
   },
   "allVaults": {
-    "message": "All vaults"
+    "message": "All safes"
   },
   "searchOrganization": {
     "message": "Search organization"

@@ -43,7 +43,7 @@ export default class IdleBackground {
           // If the screen is locked or the screensaver activates
           const timeout = await this.stateService.getVaultTimeout();
           if (timeout === -2) {
-            // On System Lock vault timeout option
+            // On System Lock safe timeout option
             const action = await this.stateService.getVaultTimeoutAction();
             if (action === "logOut") {
               await this.vaultTimeoutService.logOut();

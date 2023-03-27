@@ -1,11 +1,11 @@
 {
   "extraMetadata": {
-    "name": "bitwarden"
+    "name": "bravurasafe"
   },
   "productName": "Bravura Safe",
   "appId": "com.hitachiid.desktop",
   "buildDependenciesFromSource": true,
-  "copyright": "Copyright © 2015-2023 Bitwarden Inc.",
+  "copyright": "Copyright © 2015-2023, Bitwarden Inc., with modifications © 2023, Bravura Security, Inc.",
   "directories": {
     "buildResources": "resources",
     "output": "dist",
@@ -37,32 +37,7 @@
       "ITSAppUsesNonExemptEncryption": false,
       "CFBundleLocalizations": [
         "en",
-        "cs",
-        "da",
-        "de",
-        "es",
-        "et",
-        "fi",
-        "fr",
-        "hr",
-        "hu",
-        "id",
-        "it",
-        "ja",
-        "nb",
-        "nl",
-        "pl",
-        "pt-BR",
-        "pt-PT",
-        "ro",
-        "ru",
-        "sk",
-        "sv",
-        "tr",
-        "uk",
-        "vi",
-        "zh-Hans",
-        "zh-Hant"
+        "fr"
       ],
       "CFBundleDevelopmentRegion": "en"
     },
@@ -86,10 +61,10 @@
   },
   "linux": {
     "category": "Utility",
-    "synopsis": "A secure and free password manager for all of your devices.",
+    "synopsis": "A secure password manager for all of your devices.",
     "target": ["deb", "freebsd", "rpm", "AppImage", "snap"],
     "desktop": {
-      "Name": "Bitwarden",
+      "Name": "Bravura Safe",
       "Type": "Application",
       "GenericName": "Password Manager"
     }
@@ -140,8 +115,8 @@
     "backgroundColor": "#175DDC",
     "applicationId": "bravurasafedesktop",
     "identityName": "HitachiIDSystemsInc.desktop",
-    "publisher": "CN=14D52771-DE3C-4886-B8BF-825BA7690418",
-    "publisherDisplayName": "Hitachi ID Systems, Inc",
+    "publisher": "CN=&quot;Bravura Security, Inc.&quot;, O=&quot;Bravura Security, Inc.&quot;, L=Calgary, S=Alberta, C=CA",
+    "publisherDisplayName": "Bravura Security, Inc.",
     "languages": ["en-US"]
   },
   "deb": {
@@ -165,7 +140,7 @@
   },
   "protocols": [
     {
-      "name": "Bitwarden",
+      "name": "Bravura Safe",
       "schemes": ["bitwarden"]
     }
   ]

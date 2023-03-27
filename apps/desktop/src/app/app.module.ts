@@ -1,8 +1,9 @@
 import "zone.js/dist/zone";
 
-// Register the locales for the application
-import "./locales";
-
+import { registerLocaleData } from "@angular/common";
+import localeEnGb from "@angular/common/locales/en-GB";
+import localeEnIn from "@angular/common/locales/en-IN";
+import localeFr from "@angular/common/locales/fr";
 import { NgModule } from "@angular/core";
 
 import { ColorPasswordCountPipe } from "@bitwarden/angular/pipes/color-password-count.pipe";
@@ -54,6 +55,10 @@ import { CollectionsComponent } from "./vault/collections.component";
 import { ExportComponent } from "./vault/export.component";
 import { GeneratorComponent } from "./vault/generator.component";
 import { PasswordGeneratorHistoryComponent } from "./vault/password-generator-history.component";
+
+registerLocaleData(localeEnGb, "en-GB");
+registerLocaleData(localeEnIn, "en-IN");
+registerLocaleData(localeFr, "fr");
 
 @NgModule({
   imports: [SharedModule, AppRoutingModule, VaultFilterModule, LoginModule],

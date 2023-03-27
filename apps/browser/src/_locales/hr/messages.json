@@ -1387,7 +1387,7 @@
     "message": "Čekanje potvrde iz desktop aplikacije"
   },
   "awaitDesktopDesc": {
-    "message": "Potvrdi korištenje biometrije u Bitwarden desktop aplikaciji za korištenje biometrije u pregledniku."
+    "message": "Potvrdi korištenje biometrije u Bravura Safe desktop aplikaciji za korištenje biometrije u pregledniku."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Zaključaj glavnom lozinkom kod svakog pokretanja preglednika"
@@ -1524,13 +1524,13 @@
     "message": "Integracija s preglednikom nije omogućena"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "Integracija s preglednikom nije omogućena u Bitwarden desktop aplikaciji. Omogući integraciju u postavkama desktop aplikacije."
+    "message": "Integracija s preglednikom nije omogućena u Bravura Safe desktop aplikaciji. Omogući integraciju u postavkama desktop aplikacije."
   },
   "startDesktopTitle": {
     "message": "Pokreni Bitwarden dekstop aplikaciju"
   },
   "startDesktopDesc": {
-    "message": "Bitwarden desktop aplikacija mora biti pokrenuta prije korištenja ove funkcije."
+    "message": "Bravura Safe desktop aplikacija mora biti pokrenuta prije korištenja ove funkcije."
   },
   "errorEnableBiometricTitle": {
     "message": "Nije moguće omogućiti biometriju"
@@ -1554,7 +1554,7 @@
     "message": "Biometrija nije omogućena"
   },
   "biometricsNotEnabledDesc": {
-    "message": "Biometrija preglednika zahtijeva prethodno omogućenu biometriju u Bitwarden desktop aplikaciji."
+    "message": "Biometrija preglednika zahtijeva prethodno omogućenu biometriju u Bravura Safe desktop aplikaciji."
   },
   "biometricsNotSupportedTitle": {
     "message": "Biometrija nije podržana"
@@ -1566,7 +1566,7 @@
     "message": "Dopuštenje nije dano"
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "Bez odobrenja za komunikaciju s Bitwarden Desktop aplikacijom nije moguće korištenje biometrije u proširenju preglednika."
+    "message": "Bez odobrenja za komunikaciju s Bravura Safe desktop aplikacijom nije moguće korištenje biometrije u proširenju preglednika."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Greška zahtjeva dozvole"

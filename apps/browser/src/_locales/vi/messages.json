@@ -1524,13 +1524,13 @@
     "message": "Tích hợp trình duyệt chưa được kích hoạt"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "Browser integration is not set up in the Bitwarden desktop application. Please set it up in the settings within the desktop application."
+    "message": "Browser integration is not set up in the Bravura Safe desktop application. Please set it up in the settings within the desktop application."
   },
   "startDesktopTitle": {
     "message": "Mở ứng dụng Bitwarden trên máy tính"
   },
   "startDesktopDesc": {
-    "message": "The Bitwarden desktop application needs to be started before unlock with biometrics can be used."
+    "message": "The Bravura Safe desktop application needs to be started before unlock with biometrics can be used."
   },
   "errorEnableBiometricTitle": {
     "message": "Không thể bật nhận dạng sinh trắc học"
@@ -1566,7 +1566,7 @@
     "message": "Quyền chưa được cấp"
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "Without permission to communicate with the Bitwarden Desktop Application we cannot provide biometrics in the browser extension. Please try again."
+    "message": "Without permission to communicate with the Bravura Safe desktop Application we cannot provide biometrics in the browser extension. Please try again."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Lỗi yêu cầu quyền"

@@ -1387,7 +1387,7 @@
     "message": "In attesa di conferma dal desktop"
   },
   "awaitDesktopDesc": {
-    "message": "Si prega di confermare utilizzando l'autenticazione biometrica nell'applicazione Bitwarden Desktop per abilitare l'autenticazione biometrica per il browser."
+    "message": "Si prega di confermare utilizzando l'autenticazione biometrica nell'applicazione Bravura Safe desktop per abilitare l'autenticazione biometrica per il browser."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Blocca con la password principale al riavvio del browser"
@@ -1524,13 +1524,13 @@
     "message": "L'integrazione del browser non è abilitata"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "L'integrazione del browser non è abilitata nell'applicazione Bitwarden Desktop. Attivala nelle impostazioni all'interno dell'applicazione desktop."
+    "message": "L'integrazione del browser non è abilitata nell'applicazione Bravura Safe desktop. Attivala nelle impostazioni all'interno dell'applicazione desktop."
   },
   "startDesktopTitle": {
     "message": "Avvia l'applicazione desktop Bitwarden"
   },
   "startDesktopDesc": {
-    "message": "L'applicazione Bitwarden Desktop deve essere avviata prima che questa funzione possa essere utilizzata."
+    "message": "L'applicazione Bravura Safe desktop deve essere avviata prima che questa funzione possa essere utilizzata."
   },
   "errorEnableBiometricTitle": {
     "message": "Impossibile abilitare l'autenticazione biometrica"
@@ -1566,7 +1566,7 @@
     "message": "Permesso non fornito"
   },
   "nativeMessaginPermissionErrorDesc": {
-    "message": "Senza l'autorizzazione per comunicare con l'applicazione Bitwarden Desktop non è possibile fornire l'autenticazione biometrica nell'estensione del browser. Riprova di nuovo."
+    "message": "Senza l'autorizzazione per comunicare con l'applicazione Bravura Safe desktop non è possibile fornire l'autenticazione biometrica nell'estensione del browser. Riprova di nuovo."
   },
   "nativeMessaginPermissionSidebarTitle": {
     "message": "Errore richiesta di autorizzazione"

@@ -755,7 +755,7 @@
     "message": "ലഭ്യമാക്കുന്നു..."
   },
   "lockVault": {
-    "message": "Lock vault"
+    "message": "Lock safe"
   },
   "passwordGenerator": {
     "message": "പാസ്സ്‌വേഡ് സൃഷ്ടാവ്"
@@ -952,7 +952,7 @@
     "message": "Start automatically on login"
   },
   "openAtLoginDesc": {
-    "message": "Start the Bitwarden desktop application automatically on login."
+    "message": "Start the Bravura Safe desktop application automatically on login."
   },
   "alwaysShowDock": {
     "message": "Always show in the Dock"
@@ -1898,7 +1898,7 @@
     "message": "Key connector error: make sure key connector is available and working correctly."
   },
   "lockAllVaults": {
-    "message": "Lock all vaults"
+    "message": "Lock all safes"
   },
   "accountLimitReached": {
     "message": "No more than 5 accounts may be logged in at the same time."
@@ -1992,7 +1992,7 @@
     "message": "Service"
   },
   "allVaults": {
-    "message": "All vaults"
+    "message": "All safes"
   },
   "searchOrganization": {
     "message": "Search organization"
