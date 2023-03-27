@@ -4193,7 +4193,7 @@
     "message": "Acceso de emergencia"
   },
   "emergencyAccessDesc": {
-    "message": "Conceder y administrar el acceso de emergencia para los contactos de confianza. Los contactos de confianza pueden solicitar acceso a Ver o Tomar su cuenta en caso de emergencia. Visite nuestra página de ayuda para obtener más información y detalles sobre cómo funciona el intercambio de conocimiento cero."
+    "message": "Conceder y administrar el acceso de emergencia para los contactos de confianza. Los contactos de confianza pueden solicitar acceso a Ver o Tomar su cuenta en caso de emergencia."
   },
   "emergencyAccessOwnerWarning": {
     "message": "Usted es un propietario de una o más organizaciones. Si concede acceso a la adquisición de un contacto de emergencia, podrán utilizar todos sus permisos como propietario después de una adquisición."

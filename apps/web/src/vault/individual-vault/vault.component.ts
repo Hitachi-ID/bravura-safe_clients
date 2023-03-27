@@ -16,7 +16,7 @@ import { BroadcasterService } from "@bitwarden/common/abstractions/broadcaster.s
 import { CryptoService } from "@bitwarden/common/abstractions/crypto.service";
 import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
 import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
-import { OrganizationService } from "@bitwarden/common/abstractions/organization/organization.service.abstraction";
+import { isNotProviderUser, OrganizationService } from "@bitwarden/common/abstractions/organization/organization.service.abstraction";
 import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
 import { StateService } from "@bitwarden/common/abstractions/state.service";
 import { TokenService } from "@bitwarden/common/auth/abstractions/token.service";
@@ -40,6 +40,8 @@ import { VaultFilterService } from "./vault-filter/services/abstractions/vault-f
 import { VaultFilter } from "./vault-filter/shared/models/vault-filter.model";
 import { FolderFilter, OrganizationFilter } from "./vault-filter/shared/models/vault-filter.type";
 import { VaultItemsComponent } from "./vault-items.component";
+import { Organization } from "@bitwarden/common/models/domain/organization";
+import { OrganizationListComponent } from "./vault-filter/components/organization-list.component";
 
 const BroadcasterSubscriptionId = "VaultComponent";
 
@@ -48,6 +50,7 @@ const BroadcasterSubscriptionId = "VaultComponent";
   templateUrl: "vault.component.html",
 })
 export class VaultComponent implements OnInit, OnDestroy {
+  @ViewChild("organizationList", { static: true }) organizationListComponent: OrganizationListComponent;
   @ViewChild("vaultFilter", { static: true }) filterComponent: VaultFilterComponent;
   @ViewChild(VaultItemsComponent, { static: true }) vaultItemsComponent: VaultItemsComponent;
   @ViewChild("attachments", { read: ViewContainerRef, static: true })
@@ -71,6 +74,7 @@ export class VaultComponent implements OnInit, OnDestroy {
   kdfIterations: number;
   activeFilter: VaultFilter = new VaultFilter();
   private destroy$ = new Subject<void>();
+  organizations: Organization[];
 
   constructor(
     private syncService: SyncService,
@@ -159,6 +163,7 @@ export class VaultComponent implements OnInit, OnDestroy {
               await Promise.all([
                 this.vaultFilterService.reloadCollections(),
                 this.vaultItemsComponent.load(this.vaultItemsComponent.filter),
+                this.organizations = await this.buildOrganizations(),
               ]);
               this.changeDetectorRef.detectChanges();
             }
@@ -166,6 +171,19 @@ export class VaultComponent implements OnInit, OnDestroy {
         }
       });
     });
+
+    this.organizations = await this.buildOrganizations();
+  }
+
+  async buildOrganizations(): Promise<Organization[]> {
+    let organizations = await this.organizationService.getAll();
+    if (organizations != null) {
+      organizations = organizations
+        .filter(isNotProviderUser)
+        .sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    return organizations;
   }
 
   get isShowingCards() {

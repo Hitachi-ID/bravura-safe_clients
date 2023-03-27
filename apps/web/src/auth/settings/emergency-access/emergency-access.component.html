@@ -86,7 +86,7 @@
             *ngIf="c.status === emergencyAccessStatusType.Invited"
             (click)="reinvite(c)"
           >
-            <i class="fa fa-fw fa-envelope" aria-hidden="true"></i>
+            <i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i>
             {{ "resendInvitation" | i18n }}
           </button>
           <button
@@ -199,7 +199,7 @@
             *ngIf="c.status === emergencyAccessStatusType.Confirmed"
             (click)="requestAccess(c)"
           >
-            <i class="fa fa-fw fa-envelope" aria-hidden="true"></i>
+            <i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i>
             {{ "requestAccess" | i18n }}
           </button>
           <button

@@ -1,6 +1,26 @@
 <div class="container page-content">
   <div class="row">
     <div class="col-3 sidebar-panel d-flex flex-column">
+      <div class="dropdown organizations flex-grow-0 flex-shrink-0 org-dropdown-container">
+        <button
+          class="btn btn-outline-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          appA11yTitle="{{ 'organizations' | i18n }}"
+        >
+          <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
+          {{ "organizations" | i18n }}
+        </button>
+        <div
+          class="dropdown-menu dropdown-menu-right scrollable-menu"
+          aria-labelledby="dropdownMenuButton"
+        >
+          <app-organization-list [organizations]="organizations"></app-organization-list>
+        </div>
+      </div>
       <app-vault-filter
         #vaultFilter
         [activeFilter]="activeFilter"

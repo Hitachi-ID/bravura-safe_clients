@@ -64,7 +64,7 @@ export const WithChildButtons: Story<NavItemComponent> = (args: NavItemComponent
         <button
           slot-end
           class="tw-ml-auto"
-          [bitIconButton]="'fa-pencil-square'"
+          [bitIconButton]="'fa-pencil-square-o'"
           [buttonType]="'contrast'"
           size="small"
           aria-label="option 2"

@@ -42,7 +42,6 @@ export class ChangeKdfComponent implements OnInit {
   ) {
     this.kdfOptions = [
       { name: "PBKDF2 SHA-256", value: KdfType.PBKDF2_SHA256 },
-      { name: "Argon2id", value: KdfType.Argon2id },
     ];
   }
 

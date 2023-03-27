@@ -4193,7 +4193,7 @@
     "message": "Acesso de Emergência"
   },
   "emergencyAccessDesc": {
-    "message": "Conceda e gerencie o acesso de emergência para contatos confiáveis. Contatos confiáveis podem solicitar acesso a Visualizar ou Assumir o Controle da sua conta em caso de emergência. Visite a nossa página de ajuda para obter mais informações e detalhes sobre como o compartilhamento de conhecimento zero funciona."
+    "message": "Conceda e gerencie o acesso de emergência para contatos confiáveis. Contatos confiáveis podem solicitar acesso a Visualizar ou Assumir o Controle da sua conta em caso de emergência."
   },
   "emergencyAccessOwnerWarning": {
     "message": "Você é o Proprietário de uma ou mais organizações. Se você conceder acesso a um contato de emergência, eles serão capazes de usar todas as suas permissões como Proprietário após uma concessão."

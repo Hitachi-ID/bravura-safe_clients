@@ -4193,7 +4193,7 @@
     "message": "Accès d'urgence"
   },
   "emergencyAccessDesc": {
-    "message": "Accorder et gérer l'accès d'urgence pour les contacts de confiance. Les contacts de confiance peuvent demander l'accès à votre compte pour l'afficher ou en prendre le contrôle en cas d'urgence. Visitez notre page d'aide pour plus d'informations et de détails sur le fonctionnement du partage à divulgation nulle de connaissance."
+    "message": "Accorder et gérer l'accès d'urgence pour les contacts de confiance. Les contacts de confiance peuvent demander l'accès à votre compte pour l'afficher ou en prendre le contrôle en cas d'urgence."
   },
   "emergencyAccessOwnerWarning": {
     "message": "Vous êtes propriétaire d'une ou de plusieurs organisations. Si vous autorisez la prise de contrôle à un contact d'urgence, il sera en mesure d'utiliser toutes vos permissions de propriétaire après la prise de contrôle."

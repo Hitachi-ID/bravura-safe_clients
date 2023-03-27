@@ -12,7 +12,7 @@ import {
 
 import { CollectionService } from "@bitwarden/common/abstractions/collection.service";
 import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
-import { isNotProviderUser, OrganizationService } from "@bitwarden/common/abstractions/organization/organization.service.abstraction";
+import { OrganizationService } from "@bitwarden/common/abstractions/organization/organization.service.abstraction";
 import { PolicyService } from "@bitwarden/common/abstractions/policy/policy.service.abstraction";
 import { StateService } from "@bitwarden/common/abstractions/state.service";
 import { PolicyType } from "@bitwarden/common/enums/policyType";
@@ -252,16 +252,5 @@ export class VaultFilterService implements VaultFilterServiceAbstraction {
   protected getFolderFilterHead(): TreeNode<FolderFilter> {
     const head = new FolderView() as FolderFilter;
     return new TreeNode<FolderFilter>(head, null, "folders", "AllFolders");
-  }
-
-  async buildOrganizations(): Promise<Organization[]> {
-    let organizations = await this.organizationService.getAll();
-    if (organizations != null) {
-      organizations = organizations
-        .filter(isNotProviderUser)
-        .sort((a, b) => a.name.localeCompare(b.name));
-    }
-
-    return organizations;
   }
 }

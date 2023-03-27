@@ -4193,7 +4193,7 @@
     "message": "Notfallzugriff"
   },
   "emergencyAccessDesc": {
-    "message": "Gewähren und verwalten Sie einen Notfallzugriff für vertrauenswürdige Kontakte. Vertrauenswürdige Kontakte können im Notfall Zugriff verlangen, um Ihr Konto entweder einzusehen oder es zu übernehmen. Besuchen Sie unsere Hilfeseite für weitere Informationen und Details, wie der Austausch über Zero-Knowledge funktioniert."
+    "message": "Gewähren und verwalten Sie einen Notfallzugriff für vertrauenswürdige Kontakte. Vertrauenswürdige Kontakte können im Notfall Zugriff verlangen, um Ihr Konto entweder einzusehen oder es zu übernehmen."
   },
   "emergencyAccessOwnerWarning": {
     "message": "Sie sind Eigentümer einer oder mehrerer Organisationen. Wenn Sie einem Notfallkontakt Übernahmezugang gewähren, kann dieser nach einer Übernahme alle Ihre Berechtigungen als Eigentümer nutzen."

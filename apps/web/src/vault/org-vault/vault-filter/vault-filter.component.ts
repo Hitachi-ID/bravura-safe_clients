@@ -28,9 +28,12 @@ export class VaultFilterComponent extends BaseVaultFilterComponent implements On
 
   async ngOnInit() {
     this.filters = await this.buildAllFilters();
-    this.activeFilter.resetFilter();
-    this.activeFilter.selectedCipherTypeNode =
-      (await this.getDefaultFilter()) as TreeNode<CipherTypeFilter>;
+    if (!this.activeFilter.selectedCipherTypeNode) {
+      this.activeFilter.resetFilter();
+      this.activeFilter.selectedCollectionNode =
+        (await this.getDefaultFilter()) as TreeNode<CollectionFilter>;
+    }
+
     this.isLoaded = true;
   }
 
@@ -54,8 +57,9 @@ export class VaultFilterComponent extends BaseVaultFilterComponent implements On
     if (this.activeFilter.selectedCollectionNode) {
       if (!collections.some((f) => f.id === this.activeFilter.collectionId)) {
         this.activeFilter.resetFilter();
-        this.activeFilter.selectedCipherTypeNode =
-          (await this.getDefaultFilter()) as TreeNode<CipherTypeFilter>;
+        this.activeFilter.selectedCollectionNode =
+          (await this.getDefaultFilter()) as TreeNode<CollectionFilter>;
+
         this.applyVaultFilter(this.activeFilter);
       }
     }
@@ -69,6 +73,6 @@ export class VaultFilterComponent extends BaseVaultFilterComponent implements On
   }
 
   async getDefaultFilter(): Promise<TreeNode<VaultFilterType>> {
-    return await firstValueFrom(this.filters?.typeFilter.data$);
+    return await firstValueFrom(this.filters?.collectionFilter.data$);
   }
 }

@@ -66,7 +66,7 @@
                 (click)="bulkShare()"
                 *ngIf="!activeFilter.isDeleted && !organization"
               >
-                <i class="fa fa-fw fa-arrow-circle-right" aria-hidden="true"></i>
+                <i class="fa fa-fw fa-arrow-circle-o-right" aria-hidden="true"></i>
                 {{ "moveSelectedToOrg" | i18n }}
               </button>
               <button class="dropdown-item" (click)="bulkRestore()" *ngIf="activeFilter.isDeleted">
@@ -156,7 +156,7 @@
               bitMenuItem
               (click)="editCollection(col.node, 'info')"
             >
-              <i class="fa fa-fw fa-pencil-square" aria-hidden="true"></i>
+              <i class="fa fa-fw fa-pencil-square-o" aria-hidden="true"></i>
               {{ "editInfo" | i18n }}
             </button>
             <button
@@ -329,7 +329,7 @@
                 (click)="share(c)"
                 *ngIf="!organization && !c.organizationId && !c.isDeleted"
               >
-                <i class="fa fa-fw fa-arrow-circle-right" aria-hidden="true"></i>
+                <i class="fa fa-fw fa-arrow-circle-o-right" aria-hidden="true"></i>
                 {{ "moveToOrganization" | i18n }}
               </button>
               <button class="dropdown-item" (click)="editCipherCollections(c)" *ngIf="c.organizationId && !c.isDeleted">
@@ -337,7 +337,7 @@
                 {{ "collections" | i18n }}
               </button>
               <button class="dropdown-item" (click)="events(c)" *ngIf="c.organizationId && accessEvents">
-                <i class="fa fa-fw fa-file-text" aria-hidden="true"></i>
+                <i class="fa fa-fw fa-file-text-o" aria-hidden="true"></i>
                 {{ "eventLogs" | i18n }}
               </button>
               <button class="dropdown-item text-danger" (click)="deleteCipher(c)">

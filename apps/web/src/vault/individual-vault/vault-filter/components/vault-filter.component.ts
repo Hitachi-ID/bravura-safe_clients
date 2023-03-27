@@ -26,7 +26,6 @@ import {
 } from "../shared/models/vault-filter.type";
 
 import { OrganizationOptionsComponent } from "./organization-options.component";
-import { Organization } from "@bitwarden/common/models/domain/organization";
 
 @Component({
   selector: "app-vault-filter",
@@ -42,7 +41,6 @@ export class VaultFilterComponent implements OnInit, OnDestroy {
 
   isLoaded = false;
   searchText = "";
-  organizations: Organization[];
 
   protected destroy$: Subject<void> = new Subject<void>();
 
@@ -98,7 +96,6 @@ export class VaultFilterComponent implements OnInit, OnDestroy {
     this.filters = await this.buildAllFilters();
     this.activeFilter.selectedCipherTypeNode =
       (await this.getDefaultFilter()) as TreeNode<CipherTypeFilter>;
-    this.organizations = await this.vaultFilterService.buildOrganizations();
     this.isLoaded = true;
   }
 

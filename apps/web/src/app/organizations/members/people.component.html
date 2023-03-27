@@ -102,7 +102,7 @@
 
               <bit-menu #headerMenu>
                 <button type="button" bitMenuItem (click)="bulkReinvite()">
-                  <i class="fa fa-fw fa-envelope" aria-hidden="true"></i>
+                  <i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i>
                   {{ "reinviteSelected" | i18n }}
                 </button>
                 <button
@@ -126,7 +126,7 @@
                 </button>
                 <button type="button" bitMenuItem (click)="bulkRemove()">
                   <span class="tw-text-danger">
-                    <i aria-hidden="true" class="fa fa-close"></i>
+                    <i aria-hidden="true" class="fa fa-fw fa-close"></i>
                     {{ "remove" | i18n }}
                   </span>
                 </button>
@@ -238,7 +238,7 @@
                   (click)="reinvite(u)"
                   *ngIf="u.status === userStatusType.Invited"
                 >
-                  <i aria-hidden="true" class="fa fa-envelope"></i>
+                  <i aria-hidden="true" class="fa fa-fw fa-envelope-o"></i>
                   {{ "resendInvitation" | i18n }}
                 </button>
                 <button
@@ -248,7 +248,7 @@
                   *ngIf="u.status === userStatusType.Accepted"
                 >
                   <span class="tw-text-success">
-                    <i aria-hidden="true" class="fa fa-check"></i> {{ "confirm" | i18n }}
+                    <i aria-hidden="true" class="fa fa-fw fa-check"></i> {{ "confirm" | i18n }}
                   </span>
                 </button>
                 <bit-menu-divider
@@ -257,7 +257,7 @@
                   "
                 ></bit-menu-divider>
                 <button type="button" bitMenuItem (click)="edit(u, memberTab.Role)">
-                  <i aria-hidden="true" class="fa fa-user"></i> {{ "memberRole" | i18n }}
+                  <i aria-hidden="true" class="fa fa-fw fa-user"></i> {{ "memberRole" | i18n }}
                 </button>
                 <button
                   type="button"
@@ -268,7 +268,7 @@
                   <i aria-hidden="true" class="fa fa-fw fa-sitemap"></i> {{ "groups" | i18n }}
                 </button>
                 <button type="button" bitMenuItem (click)="edit(u, memberTab.Collections)">
-                  <i aria-hidden="true" class="fa fa-cube"></i> {{ "collections" | i18n }}
+                  <i aria-hidden="true" class="fa fa-fw fa-cube"></i> {{ "collections" | i18n }}
                 </button>
                 <bit-menu-divider></bit-menu-divider>
                 <button
@@ -277,7 +277,7 @@
                   (click)="events(u)"
                   *ngIf="organization.useEvents && u.status === userStatusType.Confirmed"
                 >
-                  <i aria-hidden="true" class="fa fa-file-text"></i> {{ "eventLogs" | i18n }}
+                  <i aria-hidden="true" class="fa fa-fw fa-file-text-o"></i> {{ "eventLogs" | i18n }}
                 </button>
                 <button
                   type="button"
@@ -285,7 +285,7 @@
                   (click)="resetPassword(u)"
                   *ngIf="allowResetPassword(u)"
                 >
-                  <i aria-hidden="true" class="fa fa-key"></i> {{ "resetPassword" | i18n }}
+                  <i aria-hidden="true" class="fa fa-fw fa-key"></i> {{ "resetPassword" | i18n }}
                 </button>
                 <button
                   type="button"
@@ -293,7 +293,7 @@
                   (click)="restore(u)"
                   *ngIf="u.status === userStatusType.Revoked"
                 >
-                  <i aria-hidden="true" class="fa fa-plus-circle"></i>
+                  <i aria-hidden="true" class="fa fa-fw fa-plus-circle"></i>
                   {{ "restoreAccess" | i18n }}
                 </button>
                 <button
@@ -302,12 +302,12 @@
                   (click)="revoke(u)"
                   *ngIf="u.status !== userStatusType.Revoked"
                 >
-                  <i aria-hidden="true" class="fa fa-minus-circle"></i>
+                  <i aria-hidden="true" class="fa fa-fw fa-minus-circle"></i>
                   {{ "revokeAccess" | i18n }}
                 </button>
                 <button type="button" bitMenuItem (click)="remove(u)">
                   <span class="tw-text-danger">
-                    <i aria-hidden="true" class="fa fa-close"></i> {{ "remove" | i18n }}
+                    <i aria-hidden="true" class="fa fa-fw fa-close"></i> {{ "remove" | i18n }}
                   </span>
                 </button>
               </bit-menu>
@@ -316,8 +316,8 @@
         </ng-template>
       </bit-table>
     </ng-container>
-<div class="vertical-spacer"></div>
-<app-footer></app-footer>
+    <div class="vertical-spacer"></div>
+    <app-footer></app-footer>
   </ng-container>
   <ng-template #addEdit></ng-template>
   <ng-template #groupsTemplate></ng-template>

@@ -9,7 +9,7 @@ import { MessagingService } from "@bitwarden/common/abstractions/messaging.servi
 import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
 import { EncString } from "@bitwarden/common/models/domain/enc-string";
 import { UpdateKeyRequest } from "@bitwarden/common/models/request/update-key.request";
-import { CipherWithIdRequest } from "@bitwarden/common/vault//models/request/cipher-with-id.request";
+import { CipherWithIdRequest } from "@bitwarden/common/vault/models/request/cipher-with-id.request";
 import { CipherService } from "@bitwarden/common/vault/abstractions/cipher.service";
 import { FolderService } from "@bitwarden/common/vault/abstractions/folder/folder.service.abstraction";
 import { SyncService } from "@bitwarden/common/vault/abstractions/sync/sync.service.abstraction";

@@ -2720,7 +2720,7 @@
     "message": "Owner"
   },
   "ownerDesc": {
-    "message": "Manage all aspects of your team."
+    "message": "Manage all aspects of your team"
   },
   "clientOwnerDesc": {
     "message": "This user should be independent of the Provider. If the Provider is disassociated with the team, this user will maintain ownership of the team."
@@ -4196,7 +4196,7 @@
     "message": "Emergency access"
   },
   "emergencyAccessDesc": {
-    "message": "Grant and manage emergency access for trusted contacts. Trusted contacts may request access to either View or Takeover your account in case of an emergency. Visit our help page for more information and details into how zero knowledge sharing works."
+    "message": "Grant and manage emergency access for trusted contacts. Trusted contacts may request access to either View or Takeover your account in case of an emergency."
   },
   "emergencyAccessOwnerWarning": {
     "message": "You are an owner of one or more teams. If you give takeover access to an emergency contact, they will be able to use all your permissions as owner after a takeover."

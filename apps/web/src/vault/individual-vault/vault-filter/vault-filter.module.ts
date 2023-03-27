@@ -12,7 +12,7 @@ import { VaultFilterService } from "./services/vault-filter.service";
 @NgModule({
   imports: [VaultFilterSharedModule],
   declarations: [VaultFilterComponent, OrganizationListComponent, OrganizationOptionsComponent, LinkSsoComponent],
-  exports: [VaultFilterComponent],
+  exports: [VaultFilterComponent, OrganizationListComponent],
   providers: [
     {
       provide: VaultFilterServiceAbstraction,

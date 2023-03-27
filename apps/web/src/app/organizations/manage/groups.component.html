@@ -69,7 +69,7 @@
             <bit-menu #headerMenu>
               <button type="button" bitMenuItem (click)="deleteAllSelected()">
                 <span class="tw-text-danger"
-                  ><i aria-hidden="true" class="fa fa-trash-o"></i> {{ "delete" | i18n }}</span
+                  ><i aria-hidden="true" class="fa fa-trash-o"></i> {{ "deleteSelected" | i18n }}</span
                 >
               </button>
             </bit-menu>
@@ -107,17 +107,17 @@
 
             <bit-menu #rowMenu>
               <button type="button" bitMenuItem (click)="edit(g)">
-                <i aria-hidden="true" class="fa fa-pencil-square"></i> {{ "editInfo" | i18n }}
+                <i aria-hidden="true" class="fa fa-fw fa-pencil-square-o"></i> {{ "editInfo" | i18n }}
               </button>
               <button type="button" bitMenuItem (click)="edit(g, ModalTabType.Members)">
-                <i aria-hidden="true" class="fa fa-user"></i> {{ "members" | i18n }}
+                <i aria-hidden="true" class="fa fa-fw fa-user"></i> {{ "members" | i18n }}
               </button>
               <button type="button" bitMenuItem (click)="edit(g, ModalTabType.Collections)">
-                <i aria-hidden="true" class="fa fa-cube"></i> {{ "collections" | i18n }}
+                <i aria-hidden="true" class="fa fa-fw fa-cube"></i> {{ "collections" | i18n }}
               </button>
               <button type="button" bitMenuItem (click)="delete(g)">
                 <span class="tw-text-danger"
-                  ><i aria-hidden="true" class="fa fa-trash-o"></i> {{ "delete" | i18n }}</span
+                  ><i aria-hidden="true" class="fa fa-fw fa-trash-o"></i> {{ "delete" | i18n }}</span
             >
             </button>
             </bit-menu>

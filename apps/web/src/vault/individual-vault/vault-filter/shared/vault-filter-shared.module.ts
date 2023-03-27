@@ -9,4 +9,5 @@ import { VaultFilterSectionComponent } from "./components/vault-filter-section.c
   declarations: [VaultFilterSectionComponent],
   exports: [SharedModule, VaultFilterSectionComponent],
 })
+
 export class VaultFilterSharedModule {}
