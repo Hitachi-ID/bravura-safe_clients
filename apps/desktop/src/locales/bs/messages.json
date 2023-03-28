@@ -782,7 +782,7 @@
     "message": "Promijenite glavnu lozinku"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Možete da promjenite svoju glavnu lozinku na hitachi-id.com web trezoru. Da li želite da posjetite web stranicu sada?"
+    "message": "Možete da promjenite svoju glavnu lozinku na bravurasecurity.com web trezoru. Da li želite da posjetite web stranicu sada?"
   },
   "fingerprintPhrase": {
     "message": "Jedinstvena fraza",
@@ -822,7 +822,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -830,7 +830,7 @@
     "message": "Neispravna glavna lozinka"
   },
   "twoStepLoginConfirmation": {
-    "message": "Prijava u dva koraka čini Vaš račun sigurnijim tako što zahtjeva da verifikujete svoje podatke pomoću drugog uređaja, kao što su sigurnosni ključ, aplikacija za autentifikaciju, SMS, telefonski poziv ili E-Mail. Prijavljivanje u dva koraka može se omogućiti na hitachi-id.com web trezoru. Da li želite da posjetite web stranicu sada?"
+    "message": "Prijava u dva koraka čini Vaš račun sigurnijim tako što zahtjeva da verifikujete svoje podatke pomoću drugog uređaja, kao što su sigurnosni ključ, aplikacija za autentifikaciju, SMS, telefonski poziv ili E-Mail. Prijavljivanje u dva koraka može se omogućiti na bravurasecurity.com web trezoru. Da li želite da posjetite web stranicu sada?"
   },
   "twoStepLogin": {
     "message": "Prijava u dva koraka"
@@ -1053,7 +1053,7 @@
     "message": "Upravljaj članstvom"
   },
   "premiumManageAlert": {
-    "message": "Svojim članstvom možeš upravljati na hitachi-id.com web trezoru. Želiš li sada posjetiti web stranicu?"
+    "message": "Svojim članstvom možeš upravljati na bravurasecurity.com web trezoru. Želiš li sada posjetiti web stranicu?"
   },
   "premiumRefresh": {
     "message": "Osvježi status članstva"
@@ -1086,7 +1086,7 @@
     "message": "Kupi premium članstvo"
   },
   "premiumPurchaseAlert": {
-    "message": "Svojim članstvom možeš upravljati na hitachi-id.com web trezoru. Želiš li sada posjetiti web stranicu?"
+    "message": "Svojim članstvom možeš upravljati na bravurasecurity.com web trezoru. Želiš li sada posjetiti web stranicu?"
   },
   "premiumCurrentMember": {
     "message": "Ti si premium član!"

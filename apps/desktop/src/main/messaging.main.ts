@@ -122,8 +122,8 @@ export class MessagingMain {
       const data = `[Desktop Entry]
 Type=Application
 Version=${app.getVersion()}
-Name=Bitwarden
-Comment=Bitwarden startup script
+Name=Bravura Safe
+Comment=Bravura Safe startup script
 Exec=${app.getPath("exe")}
 StartupNotify=false
 Terminal=false`;

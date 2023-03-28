@@ -782,7 +782,7 @@
     "message": "Palitan ang master password"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Maaari mong palitan ang iyong master password sa bitwarden.com web vault. Gusto mo bang bisitahin ang website ngayon?"
+    "message": "Maaari mong palitan ang iyong master password sa bravurasecurity.com web vault. Gusto mo bang bisitahin ang website ngayon?"
   },
   "fingerprintPhrase": {
     "message": "Hulmabig ng Hilik ng Dako",
@@ -822,7 +822,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -830,7 +830,7 @@
     "message": "Imbalidong master password"
   },
   "twoStepLoginConfirmation": {
-    "message": "Ang two-step login ay nagpapagaan sa iyong account sa pamamagitan ng pag-verify sa iyong login sa isa pang device tulad ng security key, authenticator app, SMS, tawag sa telepono o email. Ang two-step login ay maaaring magawa sa bitwarden.com web vault. Gusto mo bang bisitahin ang website ngayon?"
+    "message": "Ang two-step login ay nagpapagaan sa iyong account sa pamamagitan ng pag-verify sa iyong login sa isa pang device tulad ng security key, authenticator app, SMS, tawag sa telepono o email. Ang two-step login ay maaaring magawa sa bravurasecurity.com web vault. Gusto mo bang bisitahin ang website ngayon?"
   },
   "twoStepLogin": {
     "message": "Dalawahang-hakbang na Pag-login"
@@ -1053,7 +1053,7 @@
     "message": "Pamahalaan ang pagiging miyembro"
   },
   "premiumManageAlert": {
-    "message": "Maaari mong pamahalaan ang iyong pagiging miyembro sa bitwarden.com web vault. Gusto mo bang bisitahin ang website ngayon?"
+    "message": "Maaari mong pamahalaan ang iyong pagiging miyembro sa bravurasecurity.com web vault. Gusto mo bang bisitahin ang website ngayon?"
   },
   "premiumRefresh": {
     "message": "I-refresh ang pagiging miyembro"
@@ -1086,7 +1086,7 @@
     "message": "Bumili ng Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Maaari kang bumili ng premium membership sa bitwarden.com web vault. Gusto mo bang bisitahin ang website ngayon?"
+    "message": "Maaari kang bumili ng premium membership sa bravurasecurity.com web vault. Gusto mo bang bisitahin ang website ngayon?"
   },
   "premiumCurrentMember": {
     "message": "Ikaw ay isang premium na miyembro!"

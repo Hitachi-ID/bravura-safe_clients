@@ -782,7 +782,7 @@
     "message": "Verander Hoofwagwoord"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "U kan u hoofwagwoord op die hitachi-id.com-webkluis verander. Wil u die webwerf nou besoek?"
+    "message": "U kan u hoofwagwoord op die bravurasecurity.com-webkluis verander. Wil u die webwerf nou besoek?"
   },
   "fingerprintPhrase": {
     "message": "Vingerafdrukfrase",
@@ -822,7 +822,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -830,7 +830,7 @@
     "message": "Ongeldige hoofwagwoord"
   },
   "twoStepLoginConfirmation": {
-    "message": "Tweestapsaantekening maak u rekening veiliger deur u aantekenpoging te bevestig met ’n ander toestel soos ’n beveiligingsleutel, waarmerktoep, SMS, telefoonoproep of e-pos. U kan tweestapsaantekening in die webkluis op hitachi-id.com aktiveer. Wil u die webwerf nou besoek?"
+    "message": "Tweestapsaantekening maak u rekening veiliger deur u aantekenpoging te bevestig met ’n ander toestel soos ’n beveiligingsleutel, waarmerktoep, SMS, telefoonoproep of e-pos. U kan tweestapsaantekening in die webkluis op bravurasecurity.com aktiveer. Wil u die webwerf nou besoek?"
   },
   "twoStepLogin": {
     "message": "Tweestapaantekening"
@@ -1053,7 +1053,7 @@
     "message": "Bestuur Lidmaatskap"
   },
   "premiumManageAlert": {
-    "message": "U kan u lidmaatskap op die hitachi-id.com-webkluis bestuur. Wil u nou na die webwerf gaan?"
+    "message": "U kan u lidmaatskap op die bravurasecurity.com-webkluis bestuur. Wil u nou na die webwerf gaan?"
   },
   "premiumRefresh": {
     "message": "Verfris lidmaatskap"
@@ -1086,7 +1086,7 @@
     "message": "Koop Premie"
   },
   "premiumPurchaseAlert": {
-    "message": "U kan lidmaatskap op die hitachi-id.com-webkluis koop. Wil u nou na die webwerf gaan?"
+    "message": "U kan lidmaatskap op die bravurasecurity.com-webkluis koop. Wil u nou na die webwerf gaan?"
   },
   "premiumCurrentMember": {
     "message": "U is ’n premie-lid!"

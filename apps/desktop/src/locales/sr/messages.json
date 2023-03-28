@@ -782,7 +782,7 @@
     "message": "Промени главну лозинку"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Можете променити главну лозинку у Вашем сефу на hitachi-id.com. Да ли желите да посетите веб страницу сада?"
+    "message": "Можете променити главну лозинку у Вашем сефу на bravurasecurity.com. Да ли желите да посетите веб страницу сада?"
   },
   "fingerprintPhrase": {
     "message": "Сигурносна Фраза Сефа",
@@ -822,7 +822,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -1053,7 +1053,7 @@
     "message": "Управљање чланством"
   },
   "premiumManageAlert": {
-    "message": "Можете управљати вашим чланством на hitachi-id.com. Да ли желите да посетите веб сајт сада?"
+    "message": "Можете управљати вашим чланством на bravurasecurity.com. Да ли желите да посетите веб сајт сада?"
   },
   "premiumRefresh": {
     "message": "Освежите чланство"
@@ -1086,7 +1086,7 @@
     "message": "Купити премијум"
   },
   "premiumPurchaseAlert": {
-    "message": "Можете купити премијум претплату на hitachi-id.com. Да ли желите да посетите веб сајт сада?"
+    "message": "Можете купити премијум претплату на bravurasecurity.com. Да ли желите да посетите веб сајт сада?"
   },
   "premiumCurrentMember": {
     "message": "Ви сте премијум члан!"

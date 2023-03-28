@@ -782,7 +782,7 @@
     "message": "Змінити головний пароль"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Ви можете змінити головний пароль в сховищі на hitachi-id.com. Хочете перейти на вебсайт зараз?"
+    "message": "Ви можете змінити головний пароль в сховищі на bravurasecurity.com. Хочете перейти на вебсайт зараз?"
   },
   "fingerprintPhrase": {
     "message": "Фраза відбитка",
@@ -822,7 +822,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -1053,7 +1053,7 @@
     "message": "Керувати передплатою"
   },
   "premiumManageAlert": {
-    "message": "Ви можете керувати своїм статусом у сховищі на hitachi-id.com. Хочете перейти на вебсайт зараз?"
+    "message": "Ви можете керувати своїм статусом у сховищі на bravurasecurity.com. Хочете перейти на вебсайт зараз?"
   },
   "premiumRefresh": {
     "message": "Оновити стан передплати"

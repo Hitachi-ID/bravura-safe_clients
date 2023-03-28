@@ -30,7 +30,7 @@ export class TwoFactorOptionsComponent implements OnInit {
   }
 
   recover() {
-    this.platformUtilsService.launchUri("https://hitachi-id.com/help/lost-two-step-device/");
+    this.platformUtilsService.launchUri("https://bravurasecuritydocs.com/safe/#/home/39285/10/11");
     this.onRecoverSelected.emit();
   }
 }

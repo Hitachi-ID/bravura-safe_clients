@@ -782,7 +782,7 @@
     "message": "Cambia password principale"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Puoi cambiare la tua password principale su hitachi-id.com. Vuoi visitare ora il sito?"
+    "message": "Puoi cambiare la tua password principale su bravurasecurity.com. Vuoi visitare ora il sito?"
   },
   "fingerprintPhrase": {
     "message": "Frase impronta",
@@ -822,7 +822,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -830,7 +830,7 @@
     "message": "Password principale errata"
   },
   "twoStepLoginConfirmation": {
-    "message": "L'autenticazione in due passaggi rende il tuo account più sicuro richiedendo di verificare l'accesso con un altro dispositivo come una chiave di sicurezza, applicazione di autenticazione, SMS, telefonata o email. Può essere abilitata su hitachi-id.com. Vuoi visitare il sito ora?"
+    "message": "L'autenticazione in due passaggi rende il tuo account più sicuro richiedendo di verificare l'accesso con un altro dispositivo come una chiave di sicurezza, applicazione di autenticazione, SMS, telefonata o email. Può essere abilitata su bravurasecurity.com. Vuoi visitare il sito ora?"
   },
   "twoStepLogin": {
     "message": "Verifica in due passaggi"
@@ -1053,7 +1053,7 @@
     "message": "Gestisci abbonamento"
   },
   "premiumManageAlert": {
-    "message": "Puoi gestire il tuo abbonamento premium online su hitachi-id.com. Vuoi visitare ora il sito?"
+    "message": "Puoi gestire il tuo abbonamento premium online su bravurasecurity.com. Vuoi visitare ora il sito?"
   },
   "premiumRefresh": {
     "message": "Aggiorna abbonamento"
@@ -1086,7 +1086,7 @@
     "message": "Acquista Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Puoi acquistare il tuo abbonamento premium online su hitachi-id.com. Vuoi visitare ora il sito?"
+    "message": "Puoi acquistare il tuo abbonamento premium online su bravurasecurity.com. Vuoi visitare ora il sito?"
   },
   "premiumCurrentMember": {
     "message": "Sei un membro premium!"

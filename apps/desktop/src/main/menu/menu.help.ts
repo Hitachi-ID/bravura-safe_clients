@@ -42,7 +42,7 @@ export class HelpMenu implements IMenubarMenu {
     return {
       id: "contactUs",
       label: this.localize("contactUs"),
-      click: () => shell.openExternal("https://hitachi-id.com/contact"),
+      click: () => shell.openExternal("https://bravurasecurity.com/contact"),
     };
   }
 
@@ -58,7 +58,7 @@ export class HelpMenu implements IMenubarMenu {
     return {
       id: "fileBugReport",
       label: this.localize("fileBugReport"),
-      click: () => shell.openExternal("https://hitachi-id.com/bitwarden/clients/issues"),
+      click: () => shell.openExternal("https://www.bravurasecurity.com/support/"),
     };
   }
 
@@ -76,12 +76,12 @@ export class HelpMenu implements IMenubarMenu {
       {
         id: "termsOfService",
         label: this.localize("termsOfService"),
-        click: () => shell.openExternal("https://hitachi-id.com/terms/"),
+        click: () => shell.openExternal("https://bravurasecurity.com/terms/"),
       },
       {
         id: "privacyPolicy",
         label: this.localize("privacyPolicy"),
-        click: () => shell.openExternal("https://hitachi-id.com/privacy/"),
+        click: () => shell.openExternal("https://bravurasecurity.com/privacy/"),
       },
     ];
   }
@@ -103,27 +103,27 @@ export class HelpMenu implements IMenubarMenu {
       {
         id: "blog",
         label: this.localize("blog"),
-        click: () => shell.openExternal("https://blog.bitwarden.com"),
+        click: () => shell.openExternal("https://blog.example.com"),
       },
       {
         id: "twitter",
         label: "Twitter",
-        click: () => shell.openExternal("https://twitter.com/bitwarden"),
+        click: () => shell.openExternal("https://twitter.com/example"),
       },
       {
         id: "facebook",
         label: "Facebook",
-        click: () => shell.openExternal("https://www.facebook.com/bitwarden/"),
+        click: () => shell.openExternal("https://www.facebook.com/example/"),
       },
       {
         id: "github",
         label: "GitHub",
-        click: () => shell.openExternal("https://github.com/bitwarden"),
+        click: () => shell.openExternal("https://github.com/example"),
       },
       {
         id: "mastodon",
         label: "Mastodon",
-        click: () => shell.openExternal("https://fosstodon.org/@bitwarden"),
+        click: () => shell.openExternal("https://fosstodon.org/@example"),
       },
     ];
   }
@@ -152,7 +152,7 @@ export class HelpMenu implements IMenubarMenu {
         label: "iOS",
         click: () => {
           shell.openExternal(
-            "https://itunes.apple.com/app/" + "bitwarden-free-password-manager/id1137397744?mt=8"
+            "https://itunes.apple.com/app/" + "bravura-safe/id1635873468"
           );
         },
       },
@@ -223,7 +223,7 @@ export class HelpMenu implements IMenubarMenu {
         id: "safari",
         label: "Safari",
         click: () => {
-          shell.openExternal("https://github.com/Hitachi-ID/");
+          shell.openExternal("https://apps.apple.com/us/app/bravura-safe-desktop/id1633310016");
         },
       },
     ];

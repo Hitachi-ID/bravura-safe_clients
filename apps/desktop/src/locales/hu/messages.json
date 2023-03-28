@@ -782,7 +782,7 @@
     "message": "Mesterjelszó módosítása"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "A mesterjelszó megváltoztatható a hitachi-id.com webes széfben. Szeretnénk felkeresni a webhelyet mos?"
+    "message": "A mesterjelszó megváltoztatható a bravurasecurity.com webes széfben. Szeretnénk felkeresni a webhelyet mos?"
   },
   "fingerprintPhrase": {
     "message": "Azonosítókifejezés",
@@ -822,7 +822,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -830,7 +830,7 @@
     "message": "A mesterjelszó érvénytelen."
   },
   "twoStepLoginConfirmation": {
-    "message": "A kétlépcsős bejelentkezés biztonságosabbá teszi a fiókot azzal, hogy meg kell erősíteni a bejelentkezést egy másik olyan eszközzel mint például biztonsági kulcs, hitelesítő alkalmazás, SMS, telefonhívás vagy email. A kétlépcsős bejelentkezést a hitachi-id.com webes széfben lehet megváltoztatni. Szeretnénk felkeresni most a webhelyet?"
+    "message": "A kétlépcsős bejelentkezés biztonságosabbá teszi a fiókot azzal, hogy meg kell erősíteni a bejelentkezést egy másik olyan eszközzel mint például biztonsági kulcs, hitelesítő alkalmazás, SMS, telefonhívás vagy email. A kétlépcsős bejelentkezést a bravurasecurity.com webes széfben lehet megváltoztatni. Szeretnénk felkeresni most a webhelyet?"
   },
   "twoStepLogin": {
     "message": "Kétlépcsős bejelentkezés"
@@ -1053,7 +1053,7 @@
     "message": "Tagság kezelése"
   },
   "premiumManageAlert": {
-    "message": "Prémium tagság a hitachi-id.com webes széfben kezelhető. Szeretnénk most felkeresni a webhelyet?"
+    "message": "Prémium tagság a bravurasecurity.com webes széfben kezelhető. Szeretnénk most felkeresni a webhelyet?"
   },
   "premiumRefresh": {
     "message": "Előfizetés ellenőrzése"
@@ -1086,7 +1086,7 @@
     "message": "Prémium verzió megvásárlása"
   },
   "premiumPurchaseAlert": {
-    "message": "Prémium tagságot a hitachi-id.com webes széfben lehet vásárolni. Szeretnénk most felkeresni a webhelyet?"
+    "message": "Prémium tagságot a bravurasecurity.com webes széfben lehet vásárolni. Szeretnénk most felkeresni a webhelyet?"
   },
   "premiumCurrentMember": {
     "message": "Jelenleg a prémium tagság érvényben van."

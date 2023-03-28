@@ -782,7 +782,7 @@
     "message": "Schimbare parolă principală"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Puteți modifica parola principală pe saitul web hitachi-id.com. Doriți să vizitați saitul acum?"
+    "message": "Puteți modifica parola principală pe saitul web bravurasecurity.com. Doriți să vizitați saitul acum?"
   },
   "fingerprintPhrase": {
     "message": "Frază amprentă",
@@ -822,7 +822,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -1053,7 +1053,7 @@
     "message": "Gestionare abonament"
   },
   "premiumManageAlert": {
-    "message": "Vă puteți gestiona abonamentul pe seiful web hitachi-id.com. Doriți să vizitați saitul acum?"
+    "message": "Vă puteți gestiona abonamentul pe seiful web bravurasecurity.com. Doriți să vizitați saitul acum?"
   },
   "premiumRefresh": {
     "message": "Actualizare apartenență"
@@ -1086,7 +1086,7 @@
     "message": "Achiziționare abonament Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Puteți achiziționa un abonament premium pe saitul web hitachi-id.com. Doriți să vizitați saitul acum?"
+    "message": "Puteți achiziționa un abonament premium pe saitul web bravurasecurity.com. Doriți să vizitați saitul acum?"
   },
   "premiumCurrentMember": {
     "message": "Sunteți un membru premium!"
