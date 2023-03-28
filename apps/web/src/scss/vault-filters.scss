@@ -32,7 +32,9 @@
     }
   }
 
-  button.filter-button {
+  .filter-button {
+    h3,
+    button {
     &:hover,
     &:focus,
     &.active {
@@ -44,8 +46,10 @@
       font-weight: bold;
     }
   }
+  }
 
-  button.toggle-button {
+  button.toggle-button,
+  button.add-button {
     &:hover,
     &:focus {
       @include themify($themes) {
@@ -234,7 +238,7 @@ ul.filter-options li.filter-option {
     }
   }
 
-  .org-options {
+  .filter-options-icon {
     padding: 0 2px;
   }
 }
@@ -257,7 +261,6 @@ ul.filter-options li.filter-option {
 
     h3 {
       font-weight: normal;
-      text-transform: uppercase;
       @include themify($themes) {
         color: themed("textMuted");
       }
@@ -272,12 +275,7 @@ ul.filter-options li.filter-option {
         color: themed("textHeadingColor");
         font-weight: themed("linkWeight");
       }
-
-      &:hover {
-        &.text-muted {
         }
-      }
-    }
     .show-active {
       display: none;
     }

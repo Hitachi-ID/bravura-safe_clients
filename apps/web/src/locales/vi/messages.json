@@ -133,6 +133,9 @@
   "ms": {
     "message": "Cô"
   },
+  "mx": {
+    "message": "Mx"
+  },
   "dr": {
     "message": "Dr"
   },
@@ -277,12 +280,36 @@
   "searchFavorites": {
     "message": "Tìm trong danh sách Yêu thích"
   },
-  "searchType": {
-    "message": "Tìm thể loại",
-    "description": "Search item type"
+  "searchLogin": {
+    "message": "Tìm kiếm thông tin đăng nhập",
+    "description": "Search Login type"
+  },
+  "searchCard": {
+    "message": "Tìm thẻ",
+    "description": "Search Card type"
+  },
+  "searchIdentity": {
+    "message": "Tìm kiếm danh tính",
+    "description": "Search Identity type"
+  },
+  "searchSecureNote": {
+    "message": "Tìm kiếm ghi chú an toàn",
+    "description": "Search Secure Note type"
   },
   "searchVault": {
     "message": "Tìm kiếm trong Kho"
+  },
+  "searchMyVault": {
+    "message": "Tìm kiếm trong kho"
+  },
+  "searchOrganization": {
+    "message": "Tìm tổ chức"
+  },
+  "searchMembers": {
+    "message": "Tìm thành viên"
+  },
+  "searchGroups": {
+    "message": "Tìm nhóm"
   },
   "allItems": {
     "message": "Tất cả các mục"
@@ -365,6 +392,9 @@
   "select": {
     "message": "Chọn"
   },
+  "newItem": {
+    "message": "Mục mới"
+  },
   "addItem": {
     "message": "Thêm mục"
   },
@@ -373,6 +403,13 @@
   },
   "viewItem": {
     "message": "Xem mục"
+  },
+  "new": {
+    "message": "Mới",
+    "description": "for adding new items"
+  },
+  "item": {
+    "message": "Mục"
   },
   "ex": {
     "message": "vd.",
@@ -428,7 +465,7 @@
     "message": "Kho của tôi"
   },
   "allVaults": {
-    "message": "All vaults"
+    "message": "Tất cả kho"
   },
   "vault": {
     "message": "Kho"
@@ -438,6 +475,9 @@
   },
   "vaultItems": {
     "message": "Vault items"
+  },
+  "filter": {
+    "message": "Bộ Lọc"
   },
   "moveSelectedToOrg": {
     "message": "Chuyển đã chọn tới Tổ chức"
@@ -501,7 +541,7 @@
     }
   },
   "movedItemsToOrg": {
-    "message": "Selected items moved to $ORGNAME$",
+    "message": "Đã di chuyển các mục đã chọn đến $ORGNAME$",
     "placeholders": {
       "orgname": {
         "content": "$1",
@@ -545,6 +585,12 @@
   "deletedFolder": {
     "message": "Đã xóa thư mục"
   },
+  "editInfo": {
+    "message": "Chỉnh sửa thông tin"
+  },
+  "access": {
+    "message": "Quyền truy cập"
+  },
   "loggedOut": {
     "message": "Đã đăng xuất"
   },
@@ -570,22 +616,22 @@
     "message": "Đăng nhập hoặc tạo tài khoản mới để truy cập kho mật khẩu của bạn."
   },
   "loginWithDevice": {
-    "message": "Log in with device"
+    "message": "Đăng nhập bằng thiết bị"
   },
   "loginWithDeviceEnabledInfo": {
-    "message": "Log in with device must be set up in the settings of the Bitwarden mobile app. Need another option?"
+    "message": "Đăng nhập bằng thiết bị phải được thiết lập trong cài đặt của ứng dụng di động Bitwarden. Cần một lựa chọn khác?"
   },
   "loginWithMasterPassword": {
-    "message": "Log in with master password"
+    "message": "Đăng nhập bằng mật khẩu chính"
   },
   "createAccount": {
     "message": "Tạo tài khoản"
   },
   "newAroundHere": {
-    "message": "New around here?"
+    "message": "Bạn mới tới đây sao?"
   },
   "startTrial": {
-    "message": "Start trial"
+    "message": "Bắt đầu dùng thử"
   },
   "logIn": {
     "message": "Đăng nhập"
@@ -609,19 +655,19 @@
     "message": "Mật khẩu chính"
   },
   "masterPassDesc": {
-    "message": "Mật khẩu chính là mật khẩu cho kho mật khẩu của bạn. Mật khẩu này rất quan trọng và bạn không nên quên nó của mình. Bạn sẽ không thể khôi phục lại mật khẩu chính của bạn nếu bạn quên nó."
+    "message": "Mật khẩu chính là mật khẩu bạn dùng để truy cập vào kho lưu trữ của bạn. Mật khẩu này rất quan trọng và bạn đừng nên quên mật khẩu chính này. Bạn sẽ không thể khôi phục mật khẩu chính trong trường hợp bạn quên nó."
   },
   "masterPassImportant": {
-    "message": "Master passwords cannot be recovered if you forget it!"
+    "message": "Không thể khôi phục mật khẩu chính nếu bạn quên!"
   },
   "masterPassHintDesc": {
-    "message": "Gợi ý mật khẩu có thể giúp bạn nhớ lại mật khẩu chính của mình nếu bạn quên nó."
+    "message": "Gợi ý mật khẩu chính có thể giúp bạn nhớ lại mật khẩu của mình nếu bạn quên nó."
   },
   "reTypeMasterPass": {
-    "message": "Vui lòng nhập lại mật khẩu chính"
+    "message": "Nhập lại mật khẩu chính"
   },
   "masterPassHint": {
-    "message": "Gợi ý mật khẩu chính (không bắt buộc)"
+    "message": "Gợi ý mật khẩu chính (tùy chọn)"
   },
   "masterPassHintLabel": {
     "message": "Gợi ý mật khẩu chính"
@@ -645,13 +691,13 @@
     "message": "Địa chỉ email không hợp lệ."
   },
   "masterPasswordRequired": {
-    "message": "Master password is required."
+    "message": "Yêu cầu mật khẩu chính."
   },
   "confirmMasterPasswordRequired": {
-    "message": "Master password retype is required."
+    "message": "Yêu cầu nhập lại mật khẩu chính."
   },
   "masterPasswordMinlength": {
-    "message": "Master password must be at least 8 characters long."
+    "message": "Mật khẩu chính phải có ít nhất 8 kí tự."
   },
   "masterPassDoesntMatch": {
     "message": "Xác minh mật khẩu chính không đúng."
@@ -660,7 +706,7 @@
     "message": "Tài khoản của bạn đã được tạo! Bạn có thể đăng nhập ngay bây giờ."
   },
   "trialAccountCreated": {
-    "message": "Account created successfully."
+    "message": "Tài Khoản Đã Tạo Thành Công."
   },
   "masterPassSent": {
     "message": "Chúng tôi đã gửi cho bạn email với gợi ý mật khẩu chính của bạn."
@@ -694,13 +740,16 @@
     "message": "Mật khẩu chính không hợp lệ"
   },
   "invalidFilePassword": {
-    "message": "Invalid file password, please use the password you entered when you created the export file."
+    "message": "Mật khẩu tệp không hợp lệ, vui lòng sử dụng mật khẩu bạn đã nhập khi tạo tệp xuất."
   },
   "lockNow": {
     "message": "Khóa ngay"
   },
   "noItemsInList": {
     "message": "Không có mục nào để liệt kê."
+  },
+  "noPermissionToViewAllCollectionItems": {
+    "message": "Bạn không có quyền xem tất cả các mục trong bộ sưu tập này."
   },
   "noCollectionsInList": {
     "message": "Không có bộ sưu tập nào để liệt kê."
@@ -709,6 +758,9 @@
     "message": "Không có nhóm nào để liệt kê."
   },
   "noUsersInList": {
+    "message": "Không có người nào để liệt kê."
+  },
+  "noMembersInList": {
     "message": "Không có người nào để liệt kê."
   },
   "noEventsInList": {
@@ -721,7 +773,7 @@
     "message": "Bạn không thuộc tổ chức nào. Tổ chức sẽ cho phép bạn chia sẻ với người dùng khác một cách bảo mật."
   },
   "notificationSentDevice": {
-    "message": "A notification has been sent to your device."
+    "message": "Một thông báo đã được gửi đến thiết bị của bạn."
   },
   "versionNumber": {
     "message": "Phiên bản $VERSION_NUMBER$",
@@ -861,6 +913,18 @@
       }
     }
   },
+  "deleteSelectedCollectionsDesc": {
+    "message": "$COUNT$ collection(s) will be permanently deleted.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "150"
+      }
+    }
+  },
+  "deleteSelectedConfirmation": {
+    "message": "Are you sure you want to continue?"
+  },
   "moveSelectedItemsDesc": {
     "message": "Vui lòng chọn thư mục mà bạn muốn di chuyển $COUNT$ mục này tới.",
     "placeholders": {
@@ -897,7 +961,7 @@
     "message": "Cảnh báo"
   },
   "confirmVaultExport": {
-    "message": "Confirm vault export"
+    "message": "Xác nhận xuất kho lưu trữ"
   },
   "exportWarningDesc": {
     "message": "Bản trích xuất này chứa dữ liệu kho bạn và không được mã hóa. Bạn không nên lưu trữ hay gửi tập tin trích xuất thông qua phương thức không an toàn (như email). Vui lòng xóa nó ngay lập tức khi bạn đã sử dụng xong."
@@ -924,28 +988,28 @@
     "message": "This password will be used to export and import this file"
   },
   "confirmMasterPassword": {
-    "message": "Confirm master password"
+    "message": "Xác nhận mật khẩu chính"
   },
   "confirmFormat": {
     "message": "Confirm format"
   },
   "filePassword": {
-    "message": "File password"
+    "message": "Mật khẩu tập tin"
   },
   "confirmFilePassword": {
-    "message": "Confirm file password"
+    "message": "Xác nhận mật khẩu tập tin"
   },
-  "accountBackupOptionDescription": {
-    "message": "Use your account encryption key to encrypt the export and restrict import to only the current Bitwarden account."
+  "accountRestrictedOptionDescription": {
+    "message": "Use your account encryption key, derived from your account's username and Master Password, to encrypt the export and restrict import to only the current Bitwarden account."
   },
   "passwordProtectedOptionDescription": {
-    "message": "Set a password to encrypt the export and import it to any Bitwarden account using the password for decryption."
+    "message": "Set a file password to encrypt the export and import it to any Bitwarden account using the password for decryption."
   },
-  "fileTypeHeading": {
-    "message": "Loại tệp"
+  "exportTypeHeading": {
+    "message": "Export type"
   },
-  "accountBackup": {
-    "message": "Sao lưu tài khoản"
+  "accountRestricted": {
+    "message": "Account restricted"
   },
   "passwordProtected": {
     "message": "Mật khẩu đã được bảo vệ"
@@ -1061,7 +1125,7 @@
     "message": "Thay đổi mật khẩu chính"
   },
   "masterPasswordChanged": {
-    "message": "Đã thay đổi mật khẩu chính"
+    "message": "Đã lưu mật khẩu chính"
   },
   "currentMasterPass": {
     "message": "Mật khẩu chính hiện tại"
@@ -1098,6 +1162,19 @@
         "example": "50,000"
       }
     }
+  },
+  "kdfMemory": {
+    "message": "KDF memory (MB)",
+    "description": "Memory refers to computer memory (RAM). MB is short for megabytes."
+  },
+  "argon2Warning": {
+    "message": "Setting your KDF iterations, memory, and parallelism too high could result in poor performance when logging into (and unlocking) Bitwarden on slower or older devices. We recommend changing these individually in small increments and then test all of your devices."
+  },
+  "kdfParallelism": {
+    "message": "KDF parallelism"
+  },
+  "argon2Desc": {
+    "message": "Higher KDF iterations, memory, and parallelism can help protect your master password from being brute forced by an attacker."
   },
   "changeKdf": {
     "message": "Thay đổi KDF"
@@ -1169,7 +1246,7 @@
     "message": "Nhập dữ liệu"
   },
   "importError": {
-    "message": "Import error"
+    "message": "Lỗi nhập"
   },
   "importErrorDesc": {
     "message": "There was a problem with the data you tried to import. Please resolve the errors listed below in your source file and try again."
@@ -1202,10 +1279,10 @@
     "message": "Chọn tập tin nhập"
   },
   "chooseFile": {
-    "message": "Choose File"
+    "message": "Chọn tập tin"
   },
   "noFileChosen": {
-    "message": "No file chosen"
+    "message": "Không có tệp nào được chọn"
   },
   "orCopyPasteFileContents": {
     "message": "hoặc sao chép/dán để nhập nội dung file"
@@ -1224,13 +1301,13 @@
     "message": "Tùy chọn"
   },
   "preferences": {
-    "message": "Preferences"
+    "message": "Tuỳ chỉnh"
   },
   "preferencesDesc": {
-    "message": "Customize your web vault experience."
+    "message": "Tùy chỉnh trải nghiệm Kho trên web của bạn."
   },
   "preferencesUpdated": {
-    "message": "Preferences saved"
+    "message": "Đã lưu tuỳ chỉnh"
   },
   "language": {
     "message": "Ngôn ngữ"
@@ -1239,7 +1316,7 @@
     "message": "Thay đổi ngôn ngữ của kho mạng."
   },
   "enableFavicon": {
-    "message": "Show website icons"
+    "message": "Hiện biểu tượng trang web"
   },
   "faviconDesc": {
     "message": "Show a recognizable image next to each login."
@@ -1582,7 +1659,7 @@
   },
   "orgsReportsDesc": {
     "message": "Identify and close security gaps in your organization's accounts by clicking the reports below.",
-    "description": "Vault health reports can be used to evaluate the security of your Bitwarden individual or organization Vault."
+    "description": "Vault health reports can be used to evaluate the security of your Bitwarden individual or organization vault."
   },
   "unsecuredWebsitesReport": {
     "message": "Báo cáo trang web không an toàn"
@@ -1633,7 +1710,7 @@
     "message": "Báo cáo mật khẩu bị rò rỉ"
   },
   "exposedPasswordsReportDesc": {
-    "message": "Mật khẩu bị rò rĩ là mật khẩu đã bị hacker hack được trong các vụ rò rĩ dữ liệu được thông báo công khai hoặc được bán trên web đen( dark web) bởi hacker"
+    "message": "Passwords exposed in a data breach are easy targets for attackers. Change these passwords to prevent potential break-ins."
   },
   "exposedPasswordsFound": {
     "message": "Phát hiện mật khẩu bị rò rĩ"
@@ -1846,6 +1923,22 @@
       }
     }
   },
+  "premiumPriceWithFamilyPlan": {
+    "message": "Go premium for just $PRICE$ /year, or get premium accounts for $FAMILYPLANUSERCOUNT$ users and unlimited family sharing with a ",
+    "placeholders": {
+      "price": {
+        "content": "$1",
+        "example": "$10"
+      },
+      "familyplanusercount": {
+        "content": "$2",
+        "example": "6"
+      }
+    }
+  },
+  "bitwardenFamiliesPlan": {
+    "message": "Bitwarden Families plan."
+  },
   "addons": {
     "message": "Addons"
   },
@@ -1988,6 +2081,9 @@
   "manageSubscription": {
     "message": "Manage subscription"
   },
+  "launchCloudSubscription": {
+    "message": "Bắt Đầu Đăng Ký Đám Mây"
+  },
   "storage": {
     "message": "Lưu trữ"
   },
@@ -2023,10 +2119,10 @@
     "message": "Change payment method"
   },
   "invoices": {
-    "message": "Invoices"
+    "message": "Hóa đơn"
   },
   "noInvoices": {
-    "message": "No invoices."
+    "message": "Không có hóa đơn."
   },
   "paid": {
     "message": "Paid",
@@ -2383,6 +2479,15 @@
   "deleteGroupConfirmation": {
     "message": "Bạn có chắc chắn muốn xóa nhóm này?"
   },
+  "deleteMultipleGroupsConfirmation": {
+    "message": "Are you sure you want to delete the following $QUANTITY$ group(s)?",
+    "placeholders": {
+      "quantity": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
   "removeUserConfirmation": {
     "message": "Are you sure you want to remove this user?"
   },
@@ -2396,10 +2501,13 @@
     "message": "Warning! This user requires Key Connector to manage their encryption. Removing this user from your organization will permanently deactivate their account. This action cannot be undone. Do you want to proceed?"
   },
   "externalId": {
-    "message": "External id"
+    "message": "External ID"
   },
   "externalIdDesc": {
-    "message": "The external id can be used as a reference or to link this resource to an external system such as a user directory."
+    "message": "External ID is an unencrypted reference used by the Bitwarden Directory Connector and API."
+  },
+  "nestCollectionUnder": {
+    "message": "Nest collection under"
   },
   "accessControl": {
     "message": "Access control"
@@ -2422,20 +2530,29 @@
   "editCollection": {
     "message": "Edit collection"
   },
+  "collectionInfo": {
+    "message": "Collection info"
+  },
   "deleteCollectionConfirmation": {
     "message": "Are you sure you want to delete this collection?"
   },
-  "editUser": {
-    "message": "Edit user"
+  "editMember": {
+    "message": "Edit member"
   },
-  "inviteUser": {
-    "message": "Invite user"
+  "fieldOnTabRequiresAttention": {
+    "message": "A field on the '$TAB$' tab requires your attention.",
+    "placeholders": {
+      "tab": {
+        "content": "$1",
+        "example": "Collection info"
+      }
+    }
   },
   "inviteUserDesc": {
     "message": "Invite a new user to your organization by entering their Bitwarden account email address below. If they do not have a Bitwarden account already, they will be prompted to create a new account."
   },
   "inviteMultipleEmailDesc": {
-    "message": "You can invite up to $COUNT$ users at a time by comma separating a list of email addresses.",
+    "message": "Enter up to $COUNT$ emails by separating with a comma.",
     "placeholders": {
       "count": {
         "content": "$1",
@@ -2695,6 +2812,9 @@
       }
     }
   },
+  "deletedCollections": {
+    "message": "Deleted collections"
+  },
   "deletedCollectionId": {
     "message": "Deleted collection $ID$.",
     "placeholders": {
@@ -2737,6 +2857,15 @@
       "id": {
         "content": "$1",
         "example": "Developers"
+      }
+    }
+  },
+  "deletedManyGroups": {
+    "message": "Deleted $QUANTITY$ group(s).",
+    "placeholders": {
+      "quantity": {
+        "content": "$1",
+        "example": "3"
       }
     }
   },
@@ -2915,7 +3044,7 @@
     "message": "Group access"
   },
   "groupAccessUserDesc": {
-    "message": "Edit the groups that this user belongs to."
+    "message": "Grant member access to collections by adding them to 1 or more groups."
   },
   "invitedUsers": {
     "message": "User(s) invited"
@@ -2951,10 +3080,10 @@
     }
   },
   "confirmUsers": {
-    "message": "Confirm users"
+    "message": "Confirm members"
   },
   "usersNeedConfirmed": {
-    "message": "You have users that have accepted their invitation, but still need to be confirmed. Users will not have access to the organization until they are confirmed."
+    "message": "You have members that have accepted their invitation, but still need to be confirmed. Members will not have access to the organization until they are confirmed."
   },
   "startDate": {
     "message": "Start date"
@@ -3668,7 +3797,7 @@
     "message": "Restore items"
   },
   "restoreSelectedItemsDesc": {
-    "message": "You have selected $COUNT$ item(s) to restore. Are you sure you want to restore all of these items?",
+    "message": "You have selected $COUNT$ item(s) to restore. Are you sure you want to restore these items?",
     "placeholders": {
       "count": {
         "content": "$1",
@@ -3707,7 +3836,7 @@
     "message": "Tax information updated."
   },
   "setMasterPassword": {
-    "message": "Thiết lập mật khẩu chính"
+    "message": "Đặt mật khẩu chính"
   },
   "ssoCompleteRegistration": {
     "message": "In order to complete logging in with SSO, please set a master password to access and protect your vault."
@@ -3901,7 +4030,7 @@
     "message": "Expired"
   },
   "searchSends": {
-    "message": "Tìm kiếm Send",
+    "message": "Tìm kiếm trong Send",
     "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendProtectedPassword": {
@@ -3928,7 +4057,7 @@
     "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "noSendsInList": {
-    "message": "There are no Sends to list.",
+    "message": "Không có Sends trong danh sách.",
     "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "emergencyAccess": {
@@ -4276,7 +4405,7 @@
     "message": "Share text or files directly with anyone."
   },
   "sendVaultCardLearnMore": {
-    "message": "Learn more",
+    "message": "Tìm hiểu thêm",
     "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read '**Learn more**, see how it works, or try it now. '"
   },
   "sendVaultCardSee": {
@@ -4284,7 +4413,7 @@
     "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more, **see** how it works, or try it now.'"
   },
   "sendVaultCardHowItWorks": {
-    "message": "how it works",
+    "message": "cách thức hoạt động",
     "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more, see **how it works**, or try it now.'"
   },
   "sendVaultCardOr": {
@@ -5139,11 +5268,8 @@
   "billingSyncApiKeyRotated": {
     "message": "Token rotated"
   },
-  "billingSync": {
-    "message": "Billing sync"
-  },
   "billingSyncDesc": {
-    "message": "Billing sync provides Free Families plans for members and advanced billing capabilities by linking your self-hosted Bitwarden to the Bitwarden cloud server."
+    "message": "Billing sync unlocks Families sponsorships and automatic license syncing on your server. After making updates in the Bitwarden cloud server, select Sync License to apply changes."
   },
   "billingSyncKeyDesc": {
     "message": "A billing sync token from your cloud organization's subscription settings is required to complete this form."
@@ -5193,6 +5319,15 @@
   "required": {
     "message": "required"
   },
+  "characterMaximum": {
+    "message": "$MAX$ ký tự tối đa",
+    "placeholders": {
+      "max": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
+  },
   "idpSingleSignOnServiceUrlRequired": {
     "message": "Required if Entity ID is not a URL."
   },
@@ -5215,7 +5350,7 @@
     "message": "Exporting organization vault"
   },
   "exportingPersonalVaultDescription": {
-    "message": "Only the individual vault items associated with $EMAIL$ will be exported. Organization vault items will not be included.",
+    "message": "Only the individual vault items associated with $EMAIL$ will be exported. Organization vault items will not be included. Only vault item information will be exported and will not include associated password history or attachments.",
     "placeholders": {
       "email": {
         "content": "$1",
@@ -5239,13 +5374,13 @@
     "message": "Master password"
   },
   "security": {
-    "message": "Security"
+    "message": "Bảo mật"
   },
   "keys": {
     "message": "Keys"
   },
   "billingHistory": {
-    "message": "Billing history"
+    "message": "Lịch sử Thanh toán"
   },
   "backToReports": {
     "message": "Back to reports"
@@ -5469,6 +5604,27 @@
       }
     }
   },
+  "inputForbiddenCharacters": {
+    "message": "The following characters are not allowed: $CHARACTERS$",
+    "placeholders": {
+      "characters": {
+        "content": "$1",
+        "example": "@, #, $, %"
+      }
+    }
+  },
+  "multipleInputEmails": {
+    "message": "1 or more emails are invalid"
+  },
+  "tooManyEmails": {
+    "message": "You can only submit up to $COUNT$ emails at a time",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "20"
+      }
+    }
+  },
   "fieldsNeedAttention": {
     "message": "$COUNT$ field(s) above need your attention.",
     "placeholders": {
@@ -5502,8 +5658,47 @@
   "notYou": {
     "message": "Not you?"
   },
+  "pickAnAvatarColor": {
+    "message": "Pick an avatar color"
+  },
+  "customizeAvatar": {
+    "message": "Customize avatar"
+  },
+  "avatarUpdated": {
+    "message": "Avatar updated"
+  },
+  "brightBlue": {
+    "message": "Bright Blue"
+  },
+  "green": {
+    "message": "Green"
+  },
+  "orange": {
+    "message": "Orange"
+  },
+  "lavender": {
+    "message": "Lavender"
+  },
+  "yellow": {
+    "message": "Yellow"
+  },
+  "indigo": {
+    "message": "Indigo"
+  },
+  "teal": {
+    "message": "Teal"
+  },
+  "salmon": {
+    "message": "Salmon"
+  },
+  "pink": {
+    "message": "Pink"
+  },
+  "customColor": {
+    "message": "Custom Color"
+  },
   "multiSelectPlaceholder": {
-    "message": "-- Type to Filter --"
+    "message": "-- Type to filter --"
   },
   "multiSelectLoading": {
     "message": "Retrieving options..."
@@ -5513,6 +5708,272 @@
   },
   "multiSelectClearAll": {
     "message": "Clear all"
+  },
+  "toggleCharacterCount": {
+    "message": "Toggle character count",
+    "description": "'Character count' describes a feature that displays a number next to each character of the password."
+  },
+  "passwordCharacterCount": {
+    "message": "Password character count",
+    "description": "'Character count' describes a feature that displays a number next to each character of the password."
+  },
+  "hide": {
+    "message": "Hide"
+  },
+  "projects": {
+    "message": "Projects"
+  },
+  "lastEdited": {
+    "message": "Last edited"
+  },
+  "editSecret": {
+    "message": "Edit secret"
+  },
+  "addSecret": {
+    "message": "Add secret"
+  },
+  "copySecretName": {
+    "message": "Copy secret name"
+  },
+  "copySecretValue": {
+    "message": "Copy secret value"
+  },
+  "deleteSecret": {
+    "message": "Delete secret"
+  },
+  "deleteSecrets": {
+    "message": "Delete secrets"
+  },
+  "secretProjectAssociationDescription": {
+    "message": "Select projects that the secret will be associated with. Only organization users with access to these projects will be able to see the secret."
+  },
+  "typeOrSelectProjects": {
+    "message": "Type or select Projects"
+  },
+  "typeOrSelectProject": {
+    "message": "Type or select Project"
+  },
+  "project": {
+    "message": "Project"
+  },
+  "editProject": {
+    "message": "Edit project"
+  },
+  "viewProject": {
+    "message": "View project"
+  },
+  "deleteProject": {
+    "message": "Delete project"
+  },
+  "deleteProjects": {
+    "message": "Delete projects"
+  },
+  "secret": {
+    "message": "Secret"
+  },
+  "serviceAccount": {
+    "message": "Service account"
+  },
+  "serviceAccounts": {
+    "message": "Service accounts"
+  },
+  "secrets": {
+    "message": "Secrets"
+  },
+  "nameValuePair": {
+    "message": "Name/Value pair"
+  },
+  "secretEdited": {
+    "message": "Secret edited"
+  },
+  "secretCreated": {
+    "message": "Secret created"
+  },
+  "newSecret": {
+    "message": "New secret"
+  },
+  "newServiceAccount": {
+    "message": "New service account"
+  },
+  "secretsNoItemsTitle": {
+    "message": "No secrets to show"
+  },
+  "secretsNoItemsMessage": {
+    "message": "To get started, add a new secret or import secrets."
+  },
+  "serviceAccountsNoItemsTitle": {
+    "message": "Nothing to show yet"
+  },
+  "serviceAccountsNoItemsMessage": {
+    "message": "Create a new service account to get started automating secret access."
+  },
+  "searchSecrets": {
+    "message": "Search secrets"
+  },
+  "deleteServiceAccounts": {
+    "message": "Delete service accounts"
+  },
+  "deleteServiceAccount": {
+    "message": "Delete service account"
+  },
+  "viewServiceAccount": {
+    "message": "View service account"
+  },
+  "searchServiceAccounts": {
+    "message": "Search service accounts"
+  },
+  "addProject": {
+    "message": "Add project"
+  },
+  "projectEdited": {
+    "message": "Project edited"
+  },
+  "projectSaved": {
+    "message": "Project saved"
+  },
+  "projectCreated": {
+    "message": "Project created"
+  },
+  "projectName": {
+    "message": "Project name"
+  },
+  "newProject": {
+    "message": "New project"
+  },
+  "softDeleteSecretWarning": {
+    "message": "Deleting secrets can affect existing integrations."
+  },
+  "softDeletesSuccessToast": {
+    "message": "Secrets sent to trash"
+  },
+  "serviceAccountCreated": {
+    "message": "Service account created"
+  },
+  "smAccess": {
+    "message": "Access"
+  },
+  "projectCommaSecret": {
+    "message": "Project, Secret"
+  },
+  "serviceAccountName": {
+    "message": "Service account name"
+  },
+  "newSaSelectAccess": {
+    "message": "Type or select projects or secrets"
+  },
+  "newSaTypeToFilter": {
+    "message": "Type to filter"
+  },
+  "deleteProjectsToast": {
+    "message": "Projects deleted"
+  },
+  "deleteProjectToast": {
+    "message": "The project and all associated secrets have been deleted"
+  },
+  "deleteProjectDialogMessage": {
+    "message": "Deleting project $PROJECT$ is permanent and irreversible.",
+    "placeholders": {
+      "project": {
+        "content": "$1",
+        "example": "project name"
+      }
+    }
+  },
+  "deleteProjectInputLabel": {
+    "message": "Type \"$CONFIRM$\" to continue",
+    "placeholders": {
+      "confirm": {
+        "content": "$1",
+        "example": "Delete 3 projects"
+      }
+    }
+  },
+  "deleteProjectConfirmMessage": {
+    "message": "Delete $PROJECT$",
+    "placeholders": {
+      "project": {
+        "content": "$1",
+        "example": "project name"
+      }
+    }
+  },
+  "deleteProjectsConfirmMessage": {
+    "message": "Delete $COUNT$ Projects",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "deleteProjectsDialogMessage": {
+    "message": "Deleting projects is permanent and irreversible."
+  },
+  "projectsNoItemsTitle": {
+    "message": "No projects to display"
+  },
+  "projectsNoItemsMessage": {
+    "message": "Add a new project to get started organizing secrets."
+  },
+  "smConfirmationRequired": {
+    "message": "Confirmation required"
+  },
+  "bulkDeleteProjectsErrorMessage": {
+    "message": "The following projects could not be deleted:"
+  },
+  "softDeleteSuccessToast": {
+    "message": "Secret sent to trash"
+  },
+  "searchProjects": {
+    "message": "Search projects"
+  },
+  "accessTokens": {
+    "message": "Access tokens"
+  },
+  "createAccessToken": {
+    "message": "Create access token"
+  },
+  "expires": {
+    "message": "Expires"
+  },
+  "canRead": {
+    "message": "Can Read"
+  },
+  "accessTokensNoItemsTitle": {
+    "message": "No access tokens to show"
+  },
+  "accessTokensNoItemsDesc": {
+    "message": "To get started, create an access token"
+  },
+  "downloadAccessToken": {
+    "message": "Download or copy before closing."
+  },
+  "expiresOnAccessToken": {
+    "message": "Expires on:"
+  },
+  "accessTokenCallOutTitle": {
+    "message": "Access tokens are not stored and cannot be retrieved"
+  },
+  "copyToken": {
+    "message": "Copy token"
+  },
+  "accessToken": {
+    "message": "Access token"
+  },
+  "accessTokenExpirationRequired": {
+    "message": "Expiration date required"
+  },
+  "accessTokenCreatedAndCopied": {
+    "message": "Access token created and copied to clipboard"
+  },
+  "accessTokenPermissionsBetaNotification": {
+    "message": "Permissions management is unavailable for beta."
+  },
+  "revokeAccessToken": {
+    "message": "Revoke access token"
+  },
+  "submenu": {
+    "message": "Submenu"
   },
   "from": {
     "message": "From"
@@ -5526,8 +5987,44 @@
   "update": {
     "message": "Update"
   },
+  "plusNMore": {
+    "message": "+ $QUANTITY$ more",
+    "placeholders": {
+      "quantity": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "groupInfo": {
+    "message": "Group info"
+  },
+  "editGroupMembersDesc": {
+    "message": "Grant members access to the group's assigned collections."
+  },
+  "editGroupCollectionsDesc": {
+    "message": "Grant access to collections by adding them to this group."
+  },
+  "accessAllCollectionsDesc": {
+    "message": "Grant access to all current and future collections."
+  },
+  "accessAllCollectionsHelp": {
+    "message": "If checked, this will replace all other collection permissions."
+  },
+  "selectMembers": {
+    "message": "Select members"
+  },
+  "selectCollections": {
+    "message": "Select collections"
+  },
   "role": {
     "message": "Role"
+  },
+  "removeMember": {
+    "message": "Remove member"
+  },
+  "collection": {
+    "message": "Collection"
   },
   "canView": {
     "message": "Can view"
@@ -5541,6 +6038,15 @@
   "canEditExceptPass": {
     "message": "Can edit, except passwords"
   },
+  "noCollectionsAdded": {
+    "message": "No collections added"
+  },
+  "noMembersAdded": {
+    "message": "No members added"
+  },
+  "noGroupsAdded": {
+    "message": "No groups added"
+  },
   "group": {
     "message": "Group"
   },
@@ -5549,5 +6055,131 @@
   },
   "memberAccessAll": {
     "message": "This member can access and modify all items."
+  },
+  "membersColumnHeader": {
+    "message": "Member/Group"
+  },
+  "groupAndMemberColumnHeader": {
+    "message": "Member"
+  },
+  "selectGroupsAndMembers": {
+    "message": "Select groups and members"
+  },
+  "selectGroups": {
+    "message": "Select groups"
+  },
+  "userPermissionOverrideHelper": {
+    "message": "Permissions set for a member will replace permissions set by that member's group"
+  },
+  "noMembersOrGroupsAdded": {
+    "message": "No members or groups added"
+  },
+  "deleted": {
+    "message": "Deleted"
+  },
+  "memberStatusFilter": {
+    "message": "Member status filter"
+  },
+  "inviteMember": {
+    "message": "Invite member"
+  },
+  "needsConfirmation": {
+    "message": "Needs confirmation"
+  },
+  "memberRole": {
+    "message": "Member role"
+  },
+  "moreFromBitwarden": {
+    "message": "More from Bitwarden"
+  },
+  "switchProducts": {
+    "message": "Switch products"
+  },
+  "freeOrgInvLimitReachedManageBilling": {
+    "message": "Free organizations may have up to $SEATCOUNT$ members. Upgrade to a paid plan to invite more members.",
+    "placeholders": {
+      "seatcount": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "freeOrgInvLimitReachedNoManageBilling": {
+    "message": "Free organizations may have up to $SEATCOUNT$ members. Contact your organization owner to upgrade.",
+    "placeholders": {
+      "seatcount": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "freeOrgMaxCollectionReachedManageBilling": {
+    "message": "Free organizations may have up to $COLLECTIONCOUNT$ collections. Upgrade to a paid plan to add more collections.",
+    "placeholders": {
+      "COLLECTIONCOUNT": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "freeOrgMaxCollectionReachedNoManageBilling": {
+    "message": "Free organizations may have up to $COLLECTIONCOUNT$ collections. Contact your organization owner to upgrade.",
+    "placeholders": {
+      "COLLECTIONCOUNT": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "licenseAndBillingManagement": {
+    "message": "Quản lý giấy phép và thanh toán"
+  },
+  "automaticSync": {
+    "message": "Tự động đồng bộ"
+  },
+  "manualUpload": {
+    "message": "Tải lên thủ công"
+  },
+  "manualUploadDesc": {
+    "message": "Nếu không muốn thực hiện đồng bộ hóa thanh toán, bạn có thể tải lên giấy phép của mình theo cách thủ công tại đây."
+  },
+  "syncLicense": {
+    "message": "Đồng bộ hóa giấy phép"
+  },
+  "licenseSyncSuccess": {
+    "message": "Đồng bộ hóa giấy phép thành công"
+  },
+  "licenseUploadSuccess": {
+    "message": "Tải lên giấy phép thành công"
+  },
+  "lastLicenseSync": {
+    "message": "Đồng bộ hóa giấy phép lần cuối"
+  },
+  "billingSyncHelp": {
+    "message": "Trợ giúp về Đồng Bộ Thanh Toán"
+  },
+  "uploadLicense": {
+    "message": "Tải lên giấy phép"
+  },
+  "lowKdfIterations": {
+    "message": "Low KDF Iterations"
+  },
+  "lowKdfIterationsDesc": {
+    "message": "Increase your KDF encryption settings to improve the security of your account."
+  },
+  "changeKdfSettings": {
+    "message": "Thay đổi cài đặt KDF"
+  },
+  "changeKdfLoggedOutWarning": {
+    "message": "Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour. We recommend exporting your vault before changing your encryption settings to prevent data loss."
+  },
+  "secretsManagerBeta": {
+    "message": "Secrets Manager Beta"
+  },
+  "secretsManagerBetaDesc": {
+    "message": "Enable user access to the Secrets Manager at no charge during the Beta program."
+  },
+  "userAccessSecretsManager": {
+    "message": "This user can access the Secrets Manager Beta"
   }
 }

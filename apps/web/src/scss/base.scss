@@ -318,7 +318,7 @@ code {
   }
 }
 
-button i.fa,
+button:not([bitbutton]):not([biticonbutton]) i.fa,
 a i.fa,
 .text-muted.invisible {
   margin-right: 0.25rem;

@@ -6,25 +6,41 @@ import localeEnIn from "@angular/common/locales/en-IN";
 import localeFr from "@angular/common/locales/fr";
 import { NgModule } from "@angular/core";
 
-import { AccessibilityCookieComponent } from "./accounts/accessibility-cookie.component";
-import { DeleteAccountComponent } from "./accounts/delete-account.component";
-import { EnvironmentComponent } from "./accounts/environment.component";
-import { HintComponent } from "./accounts/hint.component";
-import { LockComponent } from "./accounts/lock.component";
-import { LoginComponent } from "./accounts/login.component";
-import { PremiumComponent } from "./accounts/premium.component";
-import { RegisterComponent } from "./accounts/register.component";
-import { RemovePasswordComponent } from "./accounts/remove-password.component";
-import { SetPasswordComponent } from "./accounts/set-password.component";
+import { ColorPasswordCountPipe } from "@bitwarden/angular/pipes/color-password-count.pipe";
+import { ColorPasswordPipe } from "@bitwarden/angular/pipes/color-password.pipe";
+
+import { AccessibilityCookieComponent } from "../auth/accessibility-cookie.component";
+import { DeleteAccountComponent } from "../auth/delete-account.component";
+import { EnvironmentComponent } from "../auth/environment.component";
+import { HintComponent } from "../auth/hint.component";
+import { LockComponent } from "../auth/lock.component";
+import { LoginApprovalComponent } from "../auth/login/login-approval.component";
+import { LoginModule } from "../auth/login/login.module";
+import { RegisterComponent } from "../auth/register.component";
+import { RemovePasswordComponent } from "../auth/remove-password.component";
+import { SetPasswordComponent } from "../auth/set-password.component";
+import { SsoComponent } from "../auth/sso.component";
+import { TwoFactorOptionsComponent } from "../auth/two-factor-options.component";
+import { TwoFactorComponent } from "../auth/two-factor.component";
+import { UpdateTempPasswordComponent } from "../auth/update-temp-password.component";
+import { PremiumComponent } from "../vault/app/accounts/premium.component";
+import { PasswordRepromptComponent } from "../vault/app/components/password-reprompt.component";
+import { AddEditCustomFieldsComponent } from "../vault/app/vault/add-edit-custom-fields.component";
+import { AddEditComponent } from "../vault/app/vault/add-edit.component";
+import { AttachmentsComponent } from "../vault/app/vault/attachments.component";
+import { FolderAddEditComponent } from "../vault/app/vault/folder-add-edit.component";
+import { PasswordHistoryComponent } from "../vault/app/vault/password-history.component";
+import { ShareComponent } from "../vault/app/vault/share.component";
+import { VaultFilterModule } from "../vault/app/vault/vault-filter/vault-filter.module";
+import { VaultItemsComponent } from "../vault/app/vault/vault-items.component";
+import { VaultComponent } from "../vault/app/vault/vault.component";
+import { ViewCustomFieldsComponent } from "../vault/app/vault/view-custom-fields.component";
+import { ViewComponent } from "../vault/app/vault/view.component";
+
 import { SettingsComponent } from "./accounts/settings.component";
-import { SsoComponent } from "./accounts/sso.component";
-import { TwoFactorOptionsComponent } from "./accounts/two-factor-options.component";
-import { TwoFactorComponent } from "./accounts/two-factor.component";
-import { UpdateTempPasswordComponent } from "./accounts/update-temp-password.component";
 import { VaultTimeoutInputComponent } from "./accounts/vault-timeout-input.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { PasswordRepromptComponent } from "./components/password-reprompt.component";
 import { SetPinComponent } from "./components/set-pin.component";
 import { UserVerificationComponent } from "./components/user-verification.component";
 import { AccountSwitcherComponent } from "./layout/account-switcher.component";
@@ -35,29 +51,17 @@ import { AddEditComponent as SendAddEditComponent } from "./send/add-edit.compon
 import { EffluxDatesComponent as SendEffluxDatesComponent } from "./send/efflux-dates.component";
 import { SendComponent } from "./send/send.component";
 import { SharedModule } from "./shared/shared.module";
-import { AddEditCustomFieldsComponent } from "./vault/add-edit-custom-fields.component";
-import { AddEditComponent } from "./vault/add-edit.component";
-import { AttachmentsComponent } from "./vault/attachments.component";
 import { CollectionsComponent } from "./vault/collections.component";
 import { ExportComponent } from "./vault/export.component";
-import { FolderAddEditComponent } from "./vault/folder-add-edit.component";
 import { GeneratorComponent } from "./vault/generator.component";
 import { PasswordGeneratorHistoryComponent } from "./vault/password-generator-history.component";
-import { PasswordHistoryComponent } from "./vault/password-history.component";
-import { ShareComponent } from "./vault/share.component";
-import { VaultFilterModule } from "./vault/vault-filter/vault-filter.module";
-import { VaultItemsComponent } from "./vault/vault-items.component";
-import { VaultComponent } from "./vault/vault.component";
-import { ViewCustomFieldsComponent } from "./vault/view-custom-fields.component";
-import { ViewComponent } from "./vault/view.component";
-
 
 registerLocaleData(localeEnGb, "en-GB");
 registerLocaleData(localeEnIn, "en-IN");
 registerLocaleData(localeFr, "fr");
 
 @NgModule({
-  imports: [SharedModule, AppRoutingModule, VaultFilterModule],
+  imports: [SharedModule, AppRoutingModule, VaultFilterModule, LoginModule],
   declarations: [
     AccessibilityCookieComponent,
     AccountSwitcherComponent,
@@ -67,6 +71,8 @@ registerLocaleData(localeFr, "fr");
     AttachmentsComponent,
     VaultItemsComponent,
     CollectionsComponent,
+    ColorPasswordPipe,
+    ColorPasswordCountPipe,
     DeleteAccountComponent,
     EnvironmentComponent,
     ExportComponent,
@@ -74,7 +80,6 @@ registerLocaleData(localeFr, "fr");
     HeaderComponent,
     HintComponent,
     LockComponent,
-    LoginComponent,
     NavComponent,
     GeneratorComponent,
     PasswordGeneratorHistoryComponent,
@@ -100,6 +105,7 @@ registerLocaleData(localeFr, "fr");
     VaultTimeoutInputComponent,
     ViewComponent,
     ViewCustomFieldsComponent,
+    LoginApprovalComponent,
   ],
   bootstrap: [AppComponent],
 })

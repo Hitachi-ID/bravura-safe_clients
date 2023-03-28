@@ -1,9 +1,9 @@
-import { HyprAuthenticationRequestModel } from "../models/request/hyprAuthenticationRequestModel";
+import { HyprAuthenticationRequestModel } from "../vault/models/request/hyprAuthenticationRequestModel";
 
 import { I18nService } from "../abstractions/i18n.service";
 import { PlatformUtilsService } from "../abstractions/platformUtils.service";
 import { ApiService } from "../abstractions/api.service";
-import { TwoFactorProviderType } from '../enums/twoFactorProviderType';
+import { TwoFactorProviderType } from "../auth/enums/two-factor-provider-type";
 
 export class HyprIFrame {
   private parseFunction = this.parseMessage.bind(this);
