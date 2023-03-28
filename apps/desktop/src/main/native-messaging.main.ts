@@ -7,13 +7,15 @@ import * as util from "util";
 import { ipcMain } from "electron";
 import * as ipc from "node-ipc";
 
-import { LogService } from "@bitwarden/common/abstractions/log.service";
+import { LogService } from "@bitwarden/common/src/abstractions/log.service";
 
 import { WindowMain } from "./window.main";
 
 export class NativeMessagingMain {
   private connected: Socket[] = [];
   private socket: any;
+  readonly firefoxJsonFilename: string = "firefox.json";
+  readonly chromeJsonFilename: string = "chrome.json";
 
   constructor(
     private logService: LogService,
@@ -76,7 +78,7 @@ export class NativeMessagingMain {
     ipc.server.emit(socket, "message", message);
   }
 
-  generateManifests() {
+  async generateManifests() {
     const baseJson = {
       name: "com.hitachiid.safe",
       description: "Bravura Safe desktop <-> browser bridge",
@@ -94,7 +96,8 @@ export class NativeMessagingMain {
         allowed_origins: [
           "chrome-extension://cjidmfgdjckibjdfnglfdgohkaballnn/", // Chrome
           "chrome-extension://lgjgabmkhcjfpcmflkhmhjgmnnpfgmnc/", // Edge
-          "chrome-extension://ccnckbpmaceehanjmeomladnmlffdjgn/",
+          "chrome-extension://ccnckbpmaceehanjmeomladnmlffdjgn/", // Opera --- may need to change to match ours
+          "chrome-extension://cppacmfcpednmbnghfhnajlgpgjjpdgm/",
         ],
       },
     };
@@ -102,18 +105,44 @@ export class NativeMessagingMain {
     switch (process.platform) {
       case "win32": {
         const destination = path.join(this.userPath, "browsers");
-        this.writeManifest(path.join(destination, "firefox.json"), firefoxJson);
-        this.writeManifest(path.join(destination, "chrome.json"), chromeJson);
-
+        if (!existsSync(destination)) {
+          // need to create `browsers` folder to make sure both firefox.json and chrome.json can be created, writeManifest does not guarantee chrome.json is created
+          await fs.mkdir(destination);
+        }
+        this.writeManifest(path.join(destination, this.firefoxJsonFilename), firefoxJson);
+        this.writeManifest(path.join(destination, this.chromeJsonFilename), chromeJson);
+        // check if Firefox is installed for Local Machine and Current User, but only create in Current User
         this.createWindowsRegistry(
           "HKLM\\SOFTWARE\\Mozilla\\Firefox",
           "HKCU\\SOFTWARE\\Mozilla\\NativeMessagingHosts\\com.hitachiid.safe",
-          path.join(destination, "firefox.json")
+          path.join(destination, this.firefoxJsonFilename)
+        );
+        this.createWindowsRegistry(
+          "HKCU\\SOFTWARE\\Mozilla\\Firefox",
+          "HKCU\\SOFTWARE\\Mozilla\\NativeMessagingHosts\\com.hitachiid.safe",
+          path.join(destination, this.firefoxJsonFilename)
+        );
+        // check if Chrome is installed for Local Machine and Current User, but only create in Current User
+        this.createWindowsRegistry(
+          "HKLM\\SOFTWARE\\Google\\Chrome",
+          "HKCU\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe",
+          path.join(destination, this.chromeJsonFilename)
         );
         this.createWindowsRegistry(
           "HKCU\\SOFTWARE\\Google\\Chrome",
           "HKCU\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe",
-          path.join(destination, "chrome.json")
+          path.join(destination, this.chromeJsonFilename)
+        );
+        // check if Edge is installed for Local Machine and Current User, but only create in Current User (Edge) re-uses the chrome registry location
+        this.createWindowsRegistry(
+          "HKLM\\SOFTWARE\\Microsoft\\Edge",
+          "HKCU\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe",
+          path.join(destination, this.chromeJsonFilename)
+        );
+        this.createWindowsRegistry(
+          "HKCU\\SOFTWARE\\Microsoft\\Edge",
+          "HKCU\\SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.hitachiid.safe",
+          path.join(destination, this.chromeJsonFilename)
         );
         break;
       }
@@ -166,15 +195,15 @@ export class NativeMessagingMain {
 
   generateDdgManifests() {
     const manifest = {
-      name: "com.8bit.bitwarden",
-      description: "Bitwarden desktop <-> DuckDuckGo bridge",
+      name: "com.hitachiid.safe",
+      description: "Bravura Safe desktop <-> DuckDuckGo bridge",
       path: this.binaryPath(),
       type: "stdio",
     };
     switch (process.platform) {
       case "darwin": {
         /* eslint-disable-next-line no-useless-escape */
-        const path = `${this.homedir()}/Library/Containers/com.duckduckgo.macos.browser/Data/Library/Application\ Support/NativeMessagingHosts/com.8bit.bitwarden.json`;
+        const path = `${this.homedir()}/Library/Containers/com.duckduckgo.macos.browser/Data/Library/Application\ Support/NativeMessagingHosts/com.hitachiid.safe.json`;
         this.writeManifest(path, manifest).catch((e) =>
           this.logService.error(`Error writing manifest for DuckDuckGo. ${e}`)
         );
@@ -188,8 +217,8 @@ export class NativeMessagingMain {
   removeManifests() {
     switch (process.platform) {
       case "win32":
-        fs.unlink(path.join(this.userPath, "browsers", "firefox.json"));
-        fs.unlink(path.join(this.userPath, "browsers", "chrome.json"));
+        fs.unlink(path.join(this.userPath, "browsers", this.firefoxJsonFilename));
+        fs.unlink(path.join(this.userPath, "browsers", this.chromeJsonFilename));
         this.deleteWindowsRegistry(
           "HKCU\\SOFTWARE\\Mozilla\\NativeMessagingHosts\\com.hitachiid.safe"
         );
@@ -243,7 +272,7 @@ export class NativeMessagingMain {
     switch (process.platform) {
       case "darwin": {
         /* eslint-disable-next-line no-useless-escape */
-        const path = `${this.homedir()}/Library/Containers/com.duckduckgo.macos.browser/Data/Library/Application\ Support/NativeMessagingHosts/com.8bit.bitwarden.json`;
+        const path = `${this.homedir()}/Library/Containers/com.duckduckgo.macos.browser/Data/Library/Application\ Support/NativeMessagingHosts/com.hitachiid.safe.json`;
         if (existsSync(path)) {
           fs.unlink(path);
         }

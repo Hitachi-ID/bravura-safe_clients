@@ -1,9 +1,9 @@
-import { TwoFactorProviderType } from '@bitwarden/common/enums/twoFactorProviderType';
-import { HyprAuthenticationRequestModel } from '@bitwarden/common/models/request/hyprAuthenticationRequestModel';
-import { TwoFactorHyprAuthResponse } from '@bitwarden/common/models/response/two-factor-hypr-auth.response';
+import { TwoFactorProviderType } from "@bitwarden/common/auth/enums/two-factor-provider-type";
+import { HyprAuthenticationRequestModel } from "@bitwarden/common/vault/models/request/hyprAuthenticationRequestModel";
+import { TwoFactorHyprAuthResponse } from "@bitwarden/common/auth/models/response/two-factor-hypr-auth.response";
 
 import { getQsParam } from "./common";
-import { HttpClient, HttpXhrBackend } from '@angular/common/http';
+import { HttpClient, HttpXhrBackend } from "@angular/common/http";
 
 require("./hypr.scss");
 

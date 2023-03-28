@@ -16,7 +16,7 @@ export abstract class NavBaseComponent {
   @Input() ariaLabel: string;
 
   /**
-   * Optional icon, e.g. `"fa-collection"`
+   * Optional icon, e.g. `"fa-cube"`
    */
   @Input() icon: string;
 

@@ -5,8 +5,8 @@ import { NotificationsService } from "@bitwarden/common/abstractions/notificatio
 import { SystemService } from "@bitwarden/common/abstractions/system.service";
 import { Utils } from "@bitwarden/common/misc/utils";
 
+import { AutofillService } from "../autofill/services/abstractions/autofill.service";
 import { BrowserApi } from "../browser/browserApi";
-import { AutofillService } from "../services/abstractions/autofill.service";
 import { BrowserEnvironmentService } from "../services/browser-environment.service";
 import BrowserPlatformUtilsService from "../services/browserPlatformUtils.service";
 
@@ -97,6 +97,7 @@ export default class RuntimeBackground {
             await this.main.refreshBadge();
             await this.main.refreshMenu();
           }, 2000);
+          this.main.avatarUpdateService.loadColorFromState();
         }
         break;
       case "openPopup":

@@ -1,3 +1,5 @@
+<!-- Please remove this disable statement when editing this file! -->
+<!-- eslint-disable @angular-eslint/template/button-has-type -->
 <div class="modal fade" role="dialog" aria-modal="true" aria-labelledby="sendAddEditTitle">
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <form
@@ -141,14 +143,16 @@
           class="section-header d-flex flex-row align-items-center mt-5"
           (click)="toggleOptions()"
         >
-          <h3 class="mb-0 mr-2">{{ "options" | i18n }}</h3>
-          <a class="mb-1" href="#" appStopClick role="button">
+          <h3 class="mb-0 mr-2">
+            <button appStopClick class="header-expandable">
             <i
               class="fa"
               aria-hidden="true"
-              [ngClass]="{ 'fa-chevron-down': !showOptions, 'fa-chevron-up': showOptions }"
+                [ngClass]="{ 'fa-angle-right': !showOptions, 'fa-angle-down': showOptions }"
             ></i>
-          </a>
+              {{ "options" | i18n }}
+            </button>
+          </h3>
         </div>
         <div id="options" [hidden]="!showOptions">
           <app-send-efflux-dates

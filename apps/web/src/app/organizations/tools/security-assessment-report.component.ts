@@ -4,16 +4,16 @@ import { ActivatedRoute } from "@angular/router";
 import { ApiService } from "@bitwarden/common/abstractions/api.service";
 import { ModalService } from "@bitwarden/angular/services/modal.service";
 import { AuditService } from "@bitwarden/common/abstractions/audit.service";
-import { CipherService } from "@bitwarden/common/abstractions/cipher.service";
+import { CipherService } from "@bitwarden/common/vault/abstractions/cipher.service";
 import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
-import { PasswordRepromptService } from "@bitwarden/common/abstractions/passwordReprompt.service";
+import { PasswordRepromptService } from "@bitwarden/common/vault/abstractions/password-reprompt.service";
 import { StateService } from "@bitwarden/common/abstractions/state.service";
 import { PasswordGenerationService } from "@bitwarden/common/abstractions/passwordGeneration.service";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
 import { FileDownloadService } from "@bitwarden/common/abstractions/fileDownload/fileDownload.service";
-import { NgxCaptureService } from 'ngx-capture';
+import { NgxCaptureService } from "ngx-capture";
 import { OrganizationService } from "@bitwarden/common/abstractions/organization/organization.service.abstraction";
-import { SyncService } from "@bitwarden/common/abstractions/sync/sync.service.abstraction";
+import { SyncService } from "@bitwarden/common/vault/abstractions/sync/sync.service.abstraction";
 
 import { SecurityAssessmentReportComponent as BaseSecurityAssessmentReportComponent } from "../../reports/pages/security-assessment-report.component";
 import { ExposedPasswordsReportComponent } from "./exposed-passwords-report.component";
@@ -61,11 +61,11 @@ export class SecurityAssessmentReportComponent extends BaseSecurityAssessmentRep
       syncService
     );
 
-    this.exposedPasswords = new ExposedPasswordsReportComponent(cipherService, auditService, modalService, messagingService, stateService, organizationService, route, passwordRepromptService);
+    this.exposedPasswords = new ExposedPasswordsReportComponent(cipherService, auditService, modalService, messagingService, organizationService, route, passwordRepromptService);
     this.reusedPasswords = new ReusedPasswordsReportComponent(cipherService, modalService, messagingService, stateService, route, organizationService, passwordRepromptService);
-    this.weakPasswords = new WeakPasswordsReportComponent(cipherService, passwordGenerationService, modalService, messagingService, stateService, route, organizationService, passwordRepromptService);
-    this.unsecuredWebsites = new UnsecuredWebsitesReportComponent(cipherService, modalService, messagingService, stateService, route, organizationService, passwordRepromptService);
-    this.inactiveTwoFactor = new InactiveTwoFactorReportComponent(cipherService, modalService, messagingService, stateService, route, logService, passwordRepromptService, organizationService);
+    this.weakPasswords = new WeakPasswordsReportComponent(cipherService, passwordGenerationService, modalService, messagingService, route, organizationService, passwordRepromptService);
+    this.unsecuredWebsites = new UnsecuredWebsitesReportComponent(cipherService, modalService, messagingService, route, organizationService, passwordRepromptService);
+    this.inactiveTwoFactor = new InactiveTwoFactorReportComponent(cipherService, modalService, messagingService, route, logService, passwordRepromptService, organizationService);
   }
 
   async ngOnInit() {

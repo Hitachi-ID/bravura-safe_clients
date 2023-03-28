@@ -223,6 +223,9 @@
   "ms": {
     "message": "Sra"
   },
+  "mx": {
+    "message": "Mx"
+  },
   "dr": {
     "message": "Dr"
   },
@@ -367,12 +370,36 @@
   "searchFavorites": {
     "message": "Pesquisar Favoritos"
   },
-  "searchType": {
-    "message": "Pesquisar Tipo",
-    "description": "Search item type"
+  "searchLogin": {
+    "message": "Search logins",
+    "description": "Search Login type"
+  },
+  "searchCard": {
+    "message": "Search cards",
+    "description": "Search Card type"
+  },
+  "searchIdentity": {
+    "message": "Search identities",
+    "description": "Search Identity type"
+  },
+  "searchSecureNote": {
+    "message": "Search secure notes",
+    "description": "Search Secure Note type"
   },
   "searchVault": {
     "message": "Pesquisar no Cofre"
+  },
+  "searchMyVault": {
+    "message": "Search my vault"
+  },
+  "searchOrganization": {
+    "message": "Search team"
+  },
+  "searchMembers": {
+    "message": "Search members"
+  },
+  "searchGroups": {
+    "message": "Search groups"
   },
   "allItems": {
     "message": "Todos os Itens"
@@ -455,6 +482,9 @@
   "select": {
     "message": "Selecionar"
   },
+  "newItem": {
+    "message": "New item"
+  },
   "addItem": {
     "message": "Adicionar Item"
   },
@@ -463,6 +493,13 @@
   },
   "viewItem": {
     "message": "Visualizar Item"
+  },
+  "new": {
+    "message": "New",
+    "description": "for adding new items"
+  },
+  "item": {
+    "message": "Item"
   },
   "ex": {
     "message": "ex.",
@@ -531,6 +568,9 @@
   },
   "organizationVaultItems": {
     "message": "Itens do Cofre"
+  },
+  "filter": {
+    "message": "Filter"
   },
   "moveSelectedToOrg": {
     "message": "Mover Selecionados para a Organização"
@@ -637,6 +677,12 @@
   },
   "deletedFolder": {
     "message": "Pasta excluída"
+  },
+  "editInfo": {
+    "message": "Edit info"
+  },
+  "access": {
+    "message": "Access"
   },
   "loggedOut": {
     "message": "Sessão encerrada"
@@ -779,7 +825,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "hitachi-id.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -795,6 +841,9 @@
   "noItemsInList": {
     "message": "Não há itens para listar."
   },
+  "noPermissionToViewAllCollectionItems": {
+    "message": "You do not have permission to view all items in this collection."
+  },
   "noCollectionsInList": {
     "message": "Não há coleções para listar."
   },
@@ -803,6 +852,9 @@
   },
   "noUsersInList": {
     "message": "Não há usuários para listar."
+  },
+  "noMembersInList": {
+    "message": "There are no members to list."
   },
   "noEventsInList": {
     "message": "Não há eventos para listar."
@@ -954,6 +1006,18 @@
       }
     }
   },
+  "deleteSelectedCollectionsDesc": {
+    "message": "$COUNT$ collection(s) will be permanently deleted.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "150"
+      }
+    }
+  },
+  "deleteSelectedConfirmation": {
+    "message": "Are you sure you want to continue?"
+  },
   "moveSelectedItemsDesc": {
     "message": "Escolha uma pasta para a qual você deseja mover os $COUNT$ itens selecionados.",
     "placeholders": {
@@ -1028,17 +1092,17 @@
   "confirmFilePassword": {
     "message": "Confirmar senha do arquivo"
   },
-  "accountBackupOptionDescription": {
-    "message": "Usar sua chave de criptografia da conta para criptografar a exportação e restringir a importação apenas para a conta atual do Bravura Safe."
+  "accountRestrictedOptionDescription": {
+    "message": "Use your account encryption key, derived from your account's username and Master Password, to encrypt the export and restrict import to only the current Bravura Safe account."
   },
   "passwordProtectedOptionDescription": {
     "message": "Defina uma senha para criptografar a exportação e importá-la para qualquer conta do Bravura Safe usando a senha para descriptografar."
   },
-  "fileTypeHeading": {
-    "message": "Tipo de arquivo"
+  "exportTypeHeading": {
+    "message": "Export type"
   },
-  "accountBackup": {
-    "message": "Backup da Conta"
+  "accountRestricted": {
+    "message": "Account restricted"
   },
   "passwordProtected": {
     "message": "Protegido por Senha"
@@ -1191,6 +1255,19 @@
         "example": "50,000"
       }
     }
+  },
+  "kdfMemory": {
+    "message": "KDF memory (MB)",
+    "description": "Memory refers to computer memory (RAM). MB is short for megabytes."
+  },
+  "argon2Warning": {
+    "message": "Setting your KDF iterations, memory, and parallelism too high could result in poor performance when logging into (and unlocking) Bravura Safe on slower or older devices. We recommend changing these individually in small increments and then test all of your devices."
+  },
+  "kdfParallelism": {
+    "message": "KDF parallelism"
+  },
+  "argon2Desc": {
+    "message": "Higher KDF iterations, memory, and parallelism can help protect your master password from being brute forced by an attacker."
   },
   "changeKdf": {
     "message": "Alterar KDF"
@@ -1711,7 +1788,7 @@
   },
   "orgsReportsDesc": {
     "message": "Identify and close security gaps in your team's accounts by clicking the reports below.",
-    "description": "Vault health reports can be used to evaluate the security of your Bravura Safe individual or team Vault."
+    "description": "Vault health reports can be used to evaluate the security of your Bravura Safe individual or team vault."
   },
   "unsecuredWebsitesReport": {
     "message": "Relatório de Sites Inseguros"
@@ -1762,7 +1839,7 @@
     "message": "Relatório de Senhas Expostas"
   },
   "exposedPasswordsReportDesc": {
-    "message": "Senhas expostas são senhas que foram descobertas em violações de dados conhecidas que foram divulgadas publicamente ou vendidas na \"dark web\" por hackers."
+    "message": "Passwords exposed in a data breach are easy targets for attackers. Change these passwords to prevent potential break-ins."
   },
   "exposedPasswordsFound": {
     "message": "Senhas Expostas Encontradas"
@@ -1975,6 +2052,22 @@
       }
     }
   },
+  "premiumPriceWithFamilyPlan": {
+    "message": "Go premium for just $PRICE$ /year, or get premium accounts for $FAMILYPLANUSERCOUNT$ users and unlimited family sharing with a ",
+    "placeholders": {
+      "price": {
+        "content": "$1",
+        "example": "$10"
+      },
+      "familyplanusercount": {
+        "content": "$2",
+        "example": "6"
+      }
+    }
+  },
+  "bitwardenFamiliesPlan": {
+    "message": "Bravura Safe Families plan."
+  },
   "addons": {
     "message": "Complementos"
   },
@@ -2116,6 +2209,9 @@
   },
   "manageSubscription": {
     "message": "Gerenciar Assinatura"
+  },
+  "launchCloudSubscription": {
+    "message": "Launch Cloud Subscription"
   },
   "storage": {
     "message": "Armazenamento"
@@ -2512,6 +2608,15 @@
   "deleteGroupConfirmation": {
     "message": "Você tem certeza que deseja excluir este grupo?"
   },
+  "deleteMultipleGroupsConfirmation": {
+    "message": "Are you sure you want to delete the following $QUANTITY$ group(s)?",
+    "placeholders": {
+      "quantity": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
   "removeUserConfirmation": {
     "message": "Você tem certeza que deseja remover este(a) usuário(a)?"
   },
@@ -2529,6 +2634,9 @@
   },
   "externalIdDesc": {
     "message": "O ID externo pode ser usado como referência ou vincular esse recurso a um sistema externo, como um diretório de usuários."
+  },
+  "nestCollectionUnder": {
+    "message": "Nest collection under"
   },
   "accessControl": {
     "message": "Controle de Acesso"
@@ -2551,14 +2659,23 @@
   "editCollection": {
     "message": "Editar Coleção"
   },
+  "collectionInfo": {
+    "message": "Collection info"
+  },
   "deleteCollectionConfirmation": {
     "message": "Você tem certeza que deseja excluir esta coleção?"
   },
-  "editUser": {
-    "message": "Editar Usuário"
+  "editMember": {
+    "message": "Edit member"
   },
-  "inviteUser": {
-    "message": "Convidar Usuário"
+  "fieldOnTabRequiresAttention": {
+    "message": "A field on the '$TAB$' tab requires your attention.",
+    "placeholders": {
+      "tab": {
+        "content": "$1",
+        "example": "Collection info"
+      }
+    }
   },
   "inviteUserDesc": {
     "message": "Convide um novo usuário para sua organização digitando o endereço de e-mail da conta Bravura Safe dele abaixo. Se ele não tiver uma conta no Bravura Safe, ele será solicitado a criar uma nova conta."
@@ -2824,6 +2941,9 @@
       }
     }
   },
+  "deletedCollections": {
+    "message": "Deleted collections"
+  },
   "deletedCollectionId": {
     "message": "Coleção excluída $ID$.",
     "placeholders": {
@@ -2866,6 +2986,15 @@
       "id": {
         "content": "$1",
         "example": "Developers"
+      }
+    }
+  },
+  "deletedManyGroups": {
+    "message": "Deleted $QUANTITY$ group(s).",
+    "placeholders": {
+      "quantity": {
+        "content": "$1",
+        "example": "3"
       }
     }
   },
@@ -4064,7 +4193,7 @@
     "message": "Acesso de Emergência"
   },
   "emergencyAccessDesc": {
-    "message": "Conceda e gerencie o acesso de emergência para contatos confiáveis. Contatos confiáveis podem solicitar acesso a Visualizar ou Assumir o Controle da sua conta em caso de emergência. Visite a nossa página de ajuda para obter mais informações e detalhes sobre como o compartilhamento de conhecimento zero funciona."
+    "message": "Conceda e gerencie o acesso de emergência para contatos confiáveis. Contatos confiáveis podem solicitar acesso a Visualizar ou Assumir o Controle da sua conta em caso de emergência."
   },
   "emergencyAccessOwnerWarning": {
     "message": "Você é o Proprietário de uma ou mais organizações. Se você conceder acesso a um contato de emergência, eles serão capazes de usar todas as suas permissões como Proprietário após uma concessão."
@@ -5272,9 +5401,6 @@
   "billingSyncApiKeyRotated": {
     "message": "Token renovado"
   },
-  "billingSync": {
-    "message": "Sincronização de Faturamento"
-  },
   "billingSyncDesc": {
     "message": "A sincronização de faturamento fornece Plano Familiar gratuito para membros e recursos avançados de faturamento, vinculando o Bravura Safe auto-hospedado ao servidor da nuvem do Bravura Safe."
   },
@@ -5325,6 +5451,15 @@
   },
   "required": {
     "message": "obrigatório"
+  },
+  "characterMaximum": {
+    "message": "$MAX$ character maximum",
+    "placeholders": {
+      "max": {
+        "content": "$1",
+        "example": "100"
+      }
+    }
   },
   "idpSingleSignOnServiceUrlRequired": {
     "message": "Necessário se o ID da Entidade não for um URL."
@@ -5605,6 +5740,27 @@
       }
     }
   },
+  "inputForbiddenCharacters": {
+    "message": "The following characters are not allowed: $CHARACTERS$",
+    "placeholders": {
+      "characters": {
+        "content": "$1",
+        "example": "@, #, $, %"
+      }
+    }
+  },
+  "multipleInputEmails": {
+    "message": "1 or more emails are invalid"
+  },
+  "tooManyEmails": {
+    "message": "You can only submit up to $COUNT$ emails at a time",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "20"
+      }
+    }
+  },
   "fieldsNeedAttention": {
     "message": "$COUNT$ campos(s) acima precisam de sua atenção.",
     "placeholders": {
@@ -5638,6 +5794,45 @@
   "notYou": {
     "message": "Not you?"
   },
+  "pickAnAvatarColor": {
+    "message": "Pick an avatar color"
+  },
+  "customizeAvatar": {
+    "message": "Customize avatar"
+  },
+  "avatarUpdated": {
+    "message": "Avatar updated"
+  },
+  "brightBlue": {
+    "message": "Bright Blue"
+  },
+  "green": {
+    "message": "Green"
+  },
+  "orange": {
+    "message": "Orange"
+  },
+  "lavender": {
+    "message": "Lavender"
+  },
+  "yellow": {
+    "message": "Yellow"
+  },
+  "indigo": {
+    "message": "Indigo"
+  },
+  "teal": {
+    "message": "Teal"
+  },
+  "salmon": {
+    "message": "Salmon"
+  },
+  "pink": {
+    "message": "Pink"
+  },
+  "customColor": {
+    "message": "Custom Color"
+  },
   "multiSelectPlaceholder": {
     "message": "-- Digite para filtrar --"
   },
@@ -5649,6 +5844,272 @@
   },
   "multiSelectClearAll": {
     "message": "Limpar todos"
+  },
+  "toggleCharacterCount": {
+    "message": "Toggle character count",
+    "description": "'Character count' describes a feature that displays a number next to each character of the password."
+  },
+  "passwordCharacterCount": {
+    "message": "Password character count",
+    "description": "'Character count' describes a feature that displays a number next to each character of the password."
+  },
+  "hide": {
+    "message": "Hide"
+  },
+  "projects": {
+    "message": "Projects"
+  },
+  "lastEdited": {
+    "message": "Last edited"
+  },
+  "editSecret": {
+    "message": "Edit secret"
+  },
+  "addSecret": {
+    "message": "Add secret"
+  },
+  "copySecretName": {
+    "message": "Copy secret name"
+  },
+  "copySecretValue": {
+    "message": "Copy secret value"
+  },
+  "deleteSecret": {
+    "message": "Delete secret"
+  },
+  "deleteSecrets": {
+    "message": "Delete secrets"
+  },
+  "secretProjectAssociationDescription": {
+    "message": "Select projects that the secret will be associated with. Only team users with access to these projects will be able to see the secret."
+  },
+  "typeOrSelectProjects": {
+    "message": "Type or select Projects"
+  },
+  "typeOrSelectProject": {
+    "message": "Type or select Project"
+  },
+  "project": {
+    "message": "Project"
+  },
+  "editProject": {
+    "message": "Edit project"
+  },
+  "viewProject": {
+    "message": "View project"
+  },
+  "deleteProject": {
+    "message": "Delete project"
+  },
+  "deleteProjects": {
+    "message": "Delete projects"
+  },
+  "secret": {
+    "message": "Secret"
+  },
+  "serviceAccount": {
+    "message": "Service account"
+  },
+  "serviceAccounts": {
+    "message": "Service accounts"
+  },
+  "secrets": {
+    "message": "Secrets"
+  },
+  "nameValuePair": {
+    "message": "Name/Value pair"
+  },
+  "secretEdited": {
+    "message": "Secret edited"
+  },
+  "secretCreated": {
+    "message": "Secret created"
+  },
+  "newSecret": {
+    "message": "New secret"
+  },
+  "newServiceAccount": {
+    "message": "New service account"
+  },
+  "secretsNoItemsTitle": {
+    "message": "No secrets to show"
+  },
+  "secretsNoItemsMessage": {
+    "message": "To get started, add a new secret or import secrets."
+  },
+  "serviceAccountsNoItemsTitle": {
+    "message": "Nothing to show yet"
+  },
+  "serviceAccountsNoItemsMessage": {
+    "message": "Create a new service account to get started automating secret access."
+  },
+  "searchSecrets": {
+    "message": "Search secrets"
+  },
+  "deleteServiceAccounts": {
+    "message": "Delete service accounts"
+  },
+  "deleteServiceAccount": {
+    "message": "Delete service account"
+  },
+  "viewServiceAccount": {
+    "message": "View service account"
+  },
+  "searchServiceAccounts": {
+    "message": "Search service accounts"
+  },
+  "addProject": {
+    "message": "Add project"
+  },
+  "projectEdited": {
+    "message": "Project edited"
+  },
+  "projectSaved": {
+    "message": "Project saved"
+  },
+  "projectCreated": {
+    "message": "Project created"
+  },
+  "projectName": {
+    "message": "Project name"
+  },
+  "newProject": {
+    "message": "New project"
+  },
+  "softDeleteSecretWarning": {
+    "message": "Deleting secrets can affect existing integrations."
+  },
+  "softDeletesSuccessToast": {
+    "message": "Secrets sent to trash"
+  },
+  "serviceAccountCreated": {
+    "message": "Service account created"
+  },
+  "smAccess": {
+    "message": "Access"
+  },
+  "projectCommaSecret": {
+    "message": "Project, Secret"
+  },
+  "serviceAccountName": {
+    "message": "Service account name"
+  },
+  "newSaSelectAccess": {
+    "message": "Type or select projects or secrets"
+  },
+  "newSaTypeToFilter": {
+    "message": "Type to filter"
+  },
+  "deleteProjectsToast": {
+    "message": "Projects deleted"
+  },
+  "deleteProjectToast": {
+    "message": "The project and all associated secrets have been deleted"
+  },
+  "deleteProjectDialogMessage": {
+    "message": "Deleting project $PROJECT$ is permanent and irreversible.",
+    "placeholders": {
+      "project": {
+        "content": "$1",
+        "example": "project name"
+      }
+    }
+  },
+  "deleteProjectInputLabel": {
+    "message": "Type \"$CONFIRM$\" to continue",
+    "placeholders": {
+      "confirm": {
+        "content": "$1",
+        "example": "Delete 3 projects"
+      }
+    }
+  },
+  "deleteProjectConfirmMessage": {
+    "message": "Delete $PROJECT$",
+    "placeholders": {
+      "project": {
+        "content": "$1",
+        "example": "project name"
+      }
+    }
+  },
+  "deleteProjectsConfirmMessage": {
+    "message": "Delete $COUNT$ Projects",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "deleteProjectsDialogMessage": {
+    "message": "Deleting projects is permanent and irreversible."
+  },
+  "projectsNoItemsTitle": {
+    "message": "No projects to display"
+  },
+  "projectsNoItemsMessage": {
+    "message": "Add a new project to get started organizing secrets."
+  },
+  "smConfirmationRequired": {
+    "message": "Confirmation required"
+  },
+  "bulkDeleteProjectsErrorMessage": {
+    "message": "The following projects could not be deleted:"
+  },
+  "softDeleteSuccessToast": {
+    "message": "Secret sent to trash"
+  },
+  "searchProjects": {
+    "message": "Search projects"
+  },
+  "accessTokens": {
+    "message": "Access tokens"
+  },
+  "createAccessToken": {
+    "message": "Create access token"
+  },
+  "expires": {
+    "message": "Expires"
+  },
+  "canRead": {
+    "message": "Can Read"
+  },
+  "accessTokensNoItemsTitle": {
+    "message": "No access tokens to show"
+  },
+  "accessTokensNoItemsDesc": {
+    "message": "To get started, create an access token"
+  },
+  "downloadAccessToken": {
+    "message": "Download or copy before closing."
+  },
+  "expiresOnAccessToken": {
+    "message": "Expires on:"
+  },
+  "accessTokenCallOutTitle": {
+    "message": "Access tokens are not stored and cannot be retrieved"
+  },
+  "copyToken": {
+    "message": "Copy token"
+  },
+  "accessToken": {
+    "message": "Access token"
+  },
+  "accessTokenExpirationRequired": {
+    "message": "Expiration date required"
+  },
+  "accessTokenCreatedAndCopied": {
+    "message": "Access token created and copied to clipboard"
+  },
+  "accessTokenPermissionsBetaNotification": {
+    "message": "Permissions management is unavailable for beta."
+  },
+  "revokeAccessToken": {
+    "message": "Revoke access token"
+  },
+  "submenu": {
+    "message": "Submenu"
   },
   "from": {
     "message": "From"
@@ -5662,8 +6123,44 @@
   "update": {
     "message": "Update"
   },
+  "plusNMore": {
+    "message": "+ $QUANTITY$ more",
+    "placeholders": {
+      "quantity": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "groupInfo": {
+    "message": "Group info"
+  },
+  "editGroupMembersDesc": {
+    "message": "Grant members access to the group's assigned collections."
+  },
+  "editGroupCollectionsDesc": {
+    "message": "Grant access to collections by adding them to this group."
+  },
+  "accessAllCollectionsDesc": {
+    "message": "Grant access to all current and future collections."
+  },
+  "accessAllCollectionsHelp": {
+    "message": "If checked, this will replace all other collection permissions."
+  },
+  "selectMembers": {
+    "message": "Select members"
+  },
+  "selectCollections": {
+    "message": "Select collections"
+  },
   "role": {
     "message": "Role"
+  },
+  "removeMember": {
+    "message": "Remove member"
+  },
+  "collection": {
+    "message": "Collection"
   },
   "canView": {
     "message": "Can view"
@@ -5676,6 +6173,15 @@
   },
   "canEditExceptPass": {
     "message": "Can edit, except passwords"
+  },
+  "noCollectionsAdded": {
+    "message": "No collections added"
+  },
+  "noMembersAdded": {
+    "message": "No members added"
+  },
+  "noGroupsAdded": {
+    "message": "No groups added"
   },
   "group": {
     "message": "Group"
@@ -5739,5 +6245,131 @@
   },
   "noInactiveTwoFactorAssessment": {
     "message": "No websites found"
+  },
+  "membersColumnHeader": {
+    "message": "Member/Group"
+  },
+  "groupAndMemberColumnHeader": {
+    "message": "Member"
+  },
+  "selectGroupsAndMembers": {
+    "message": "Select groups and members"
+  },
+  "selectGroups": {
+    "message": "Select groups"
+  },
+  "userPermissionOverrideHelper": {
+    "message": "Permissions set for a member will replace permissions set by that member's group."
+  },
+  "noMembersOrGroupsAdded": {
+    "message": "No members or groups added"
+  },
+  "deleted": {
+    "message": "Deleted"
+  },
+  "memberStatusFilter": {
+    "message": "Member status filter"
+  },
+  "inviteMember": {
+    "message": "Invite member"
+  },
+  "needsConfirmation": {
+    "message": "Needs confirmation"
+  },
+  "memberRole": {
+    "message": "Member role"
+  },
+  "moreFromBitwarden": {
+    "message": "Mais do Bravura Safe"
+  },
+  "switchProducts": {
+    "message": "Trocar Produtos"
+  },
+  "freeOrgInvLimitReachedManageBilling": {
+    "message": "Free teams may have up to $SEATCOUNT$ members. Upgrade to a paid plan to invite more members.",
+    "placeholders": {
+      "seatcount": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "freeOrgInvLimitReachedNoManageBilling": {
+    "message": "Free teams may have up to $SEATCOUNT$ members. Contact your team owner to upgrade.",
+    "placeholders": {
+      "seatcount": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "freeOrgMaxCollectionReachedManageBilling": {
+    "message": "Free teams may have up to $COLLECTIONCOUNT$ collections. Upgrade to a paid plan to add more collections.",
+    "placeholders": {
+      "COLLECTIONCOUNT": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "freeOrgMaxCollectionReachedNoManageBilling": {
+    "message": "Free teams may have up to $COLLECTIONCOUNT$ collections. Contact your team owner to upgrade.",
+    "placeholders": {
+      "COLLECTIONCOUNT": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "licenseAndBillingManagement": {
+    "message": "License and billing management"
+  },
+  "automaticSync": {
+    "message": "Automatic sync"
+  },
+  "manualUpload": {
+    "message": "Manual upload"
+  },
+  "manualUploadDesc": {
+    "message": "If you do not want to opt into billing sync, manually upload your license here."
+  },
+  "syncLicense": {
+    "message": "Sync license"
+  },
+  "licenseSyncSuccess": {
+    "message": "Successfully synced license"
+  },
+  "licenseUploadSuccess": {
+    "message": "Successfully uploaded license"
+  },
+  "lastLicenseSync": {
+    "message": "Last license sync"
+  },
+  "billingSyncHelp": {
+    "message": "Billing Sync help"
+  },
+  "uploadLicense": {
+    "message": "Upload license"
+  },
+  "lowKdfIterations": {
+    "message": "Low KDF Iterations"
+  },
+  "lowKdfIterationsDesc": {
+    "message": "Increase your KDF encryption settings to improve the security of your account."
+  },
+  "changeKdfSettings": {
+    "message": "Change KDF settings"
+  },
+  "changeKdfLoggedOutWarning": {
+    "message": "Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour. We recommend exporting your vault before changing your encryption settings to prevent data loss."
+  },
+  "secretsManagerBeta": {
+    "message": "Secrets Manager Beta"
+  },
+  "secretsManagerBetaDesc": {
+    "message": "Enable user access to the Secrets Manager at no charge during the Beta program."
+  },
+  "userAccessSecretsManager": {
+    "message": "This user can access the Secrets Manager Beta"
   }
 }

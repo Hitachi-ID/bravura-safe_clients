@@ -1,0 +1,78 @@
+<!-- Please remove this disable statement when editing this file! -->
+<!-- eslint-disable @angular-eslint/template/button-has-type -->
+<div class="filter-heading">
+  <button
+    class="no-btn"
+    (click)="toggleCollapse()"
+    aria-expanded="!isCollapsed"
+    aria-controls="type-filters"
+    appA11yTitle="{{ 'toggleCollapse' | i18n }}"
+  >
+    <i
+      class="fa fa-fw"
+      aria-hidden="true"
+      [ngClass]="{
+        'fa-chevron-right': isCollapsed,
+        'fa-chevron-down': !isCollapsed
+      }"
+    ></i>
+  </button>
+  <h2>&nbsp;{{ typesNode.name | i18n }}</h2>
+</div>
+<ul id="type-filters" *ngIf="!isCollapsed" class="filter-options">
+  <li
+    class="filter-option"
+    [ngClass]="{ active: activeFilter.cipherType === cipherTypeEnum.Login }"
+  >
+    <span class="filter-buttons">
+      <button
+        class="filter-button"
+        (click)="applyFilter(cipherTypeEnum.Login)"
+        [attr.aria-pressed]="activeFilter.cipherType === cipherTypeEnum.Login"
+      >
+        <i class="fa fa-fw fa-globe" aria-hidden="true"></i>&nbsp;{{ "typeLogin" | i18n }}
+      </button>
+    </span>
+  </li>
+  <li class="filter-option" [ngClass]="{ active: activeFilter.cipherType === cipherTypeEnum.Card }">
+    <span class="filter-buttons">
+      <button
+        class="filter-button"
+        (click)="applyFilter(cipherTypeEnum.Card)"
+        [attr.aria-pressed]="activeFilter.cipherType === cipherTypeEnum.Card"
+      >
+        <i class="fa fa-fw fa-credit-card" aria-hidden="true"></i>&nbsp;{{ "typeCard" | i18n }}
+      </button>
+    </span>
+  </li>
+  <li
+    class="filter-option"
+    [ngClass]="{ active: activeFilter.cipherType === cipherTypeEnum.Identity }"
+  >
+    <span class="filter-buttons">
+      <button
+        class="filter-button"
+        (click)="applyFilter(cipherTypeEnum.Identity)"
+        [attr.aria-pressed]="activeFilter.cipherType === cipherTypeEnum.Identity"
+      >
+        <i class="fa fa-fw fa-id-card-o" aria-hidden="true"></i>&nbsp;{{ "typeIdentity" | i18n }}
+      </button>
+    </span>
+  </li>
+  <li
+    class="filter-option"
+    [ngClass]="{ active: activeFilter.cipherType === cipherTypeEnum.SecureNote }"
+  >
+    <span class="filter-buttons">
+      <button
+        class="filter-button"
+        (click)="applyFilter(cipherTypeEnum.SecureNote)"
+        [attr.aria-pressed]="activeFilter.cipherType === cipherTypeEnum.SecureNote"
+      >
+        <i class="fa fa-fw fa-sticky-note-o" aria-hidden="true"></i>&nbsp;{{
+          "typeSecureNote" | i18n
+        }}
+      </button>
+    </span>
+  </li>
+</ul>

@@ -1,4 +1,4 @@
-import { HyprAuthenticationRequestModel } from './../../../../../../libs/common/src/models/request/hyprAuthenticationRequestModel';
+import { HyprAuthenticationRequestModel } from "@bitwarden/common/vault/models/request/hyprAuthenticationRequestModel";
 import { Component } from "@angular/core";
 
 import { ModalRef } from "@bitwarden/angular/components/modal/modal.ref";
@@ -9,11 +9,11 @@ import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
 
 import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
-import { SyncService } from "@bitwarden/common/abstractions/sync/sync.service.abstraction";
+import { SyncService } from "@bitwarden/common/vault/abstractions/sync/sync.service.abstraction";
 import { UserVerificationService } from "@bitwarden/common/abstractions/userVerification/userVerification.service.abstraction";
 import { Utils } from "@bitwarden/common/misc/utils";
 import { Organization } from "@bitwarden/common/models/domain/organization";
-import { TwoFactorHyprAuthGetMagicLink } from '@bitwarden/common/models/response/two-factor-hypr-auth-get-magic-link.response';
+import { TwoFactorHyprAuthGetMagicLink } from "@bitwarden/common/auth/models/response/two-factor-hypr-auth-get-magic-link.response";
 
 @Component({
   selector: "app-open-hypr-device-manager",

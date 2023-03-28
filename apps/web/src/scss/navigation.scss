@@ -121,6 +121,8 @@ ul.navbar-nav {
 }
 
 .tabbed-nav {
+  padding-top: $sidebar-padding-top;
+
   @include themify($themes) {
     border-bottom: 1px solid themed("borderColor");
     color: themed("textColor");

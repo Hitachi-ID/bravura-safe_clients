@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bravur Safe</value>
+    <value>Bravura Safe</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>Isang ligtas at libreng password manager para sa lahat ng iyong mga aparato.</value>
@@ -133,18 +133,18 @@
     <value>I-sync at i-access ang iyong kahadeyero mula sa maraming mga aparato</value>
   </data>
   <data name="ScreenshotVault" xml:space="preserve">
-    <value>Manage all your logins and passwords from a secure vault</value>
+    <value>Pamahalaan ang lahat ng iyong logins at passwords mula sa isang secure vault</value>
   </data>
   <data name="ScreenshotAutofill" xml:space="preserve">
-    <value>Quickly auto-fill your login credentials into any website that you visit</value>
+    <value>Makabilis na auto-fill ang iyong login credentials sa anumang website na bisitahin mo</value>
   </data>
   <data name="ScreenshotMenu" xml:space="preserve">
-    <value>Your vault is also conveniently accessible from the right-click menu</value>
+    <value>Accessible din ang iyong vault mula sa right-click menu</value>
   </data>
   <data name="ScreenshotPassword" xml:space="preserve">
-    <value>Automatically generate strong, random, and secure passwords</value>
+    <value>Awtomatikong gumawa ng mga malakas, random, at ligtas na password</value>
   </data>
   <data name="ScreenshotEdit" xml:space="preserve">
-    <value>Your information is managed securely using AES-256 bit encryption</value>
+    <value>Ang iyong impormasyon ay namamahala nang maayos gamit ang AES-256 bit encryption</value>
   </data>
 </root>

@@ -1,0 +1,68 @@
+<div class="container page-content">
+  <div class="row">
+    <div class="col-3 sidebar-panel d-flex flex-column">
+      <div class="dropdown organizations flex-grow-0 flex-shrink-0 org-dropdown-container">
+        <button
+          class="btn btn-outline-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          appA11yTitle="{{ 'organizations' | i18n }}"
+        >
+          <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
+          {{ "organizations" | i18n }}
+        </button>
+        <div
+          class="dropdown-menu dropdown-menu-right scrollable-menu"
+          aria-labelledby="dropdownMenuButton"
+        >
+          <app-organization-list [organizations]="organizations"></app-organization-list>
+        </div>
+      </div>
+      <app-vault-filter
+        #vaultFilter
+        [activeFilter]="activeFilter"
+        (activeFilterChanged)="applyVaultFilter($event)"
+        (onSearchTextChanged)="filterSearchText($event)"
+        (onAddFolder)="addFolder()"
+        (onEditFolder)="editFolder($event)"
+      ></app-vault-filter>
+
+    </div>
+    <div [ngClass]="{ 'col-6': isShowingCards, 'col-9': !isShowingCards }">
+      <app-vault-header
+        [activeFilter]="activeFilter"
+        (activeFilterChanged)="applyVaultFilter($event)"
+        [actionPromise]="vaultItemsComponent.actionPromise"
+        (onAddCipher)="addCipher()"
+      ></app-vault-header>
+      <app-callout type="warning" *ngIf="activeFilter.isDeleted" icon="fa-exclamation-triangle">
+        {{ trashCleanupWarning }}
+      </app-callout>
+      <app-vault-items
+        [activeFilter]="activeFilter"
+        (activeFilterChanged)="applyVaultFilter($event)"
+        (onCipherClicked)="navigateToCipher($event)"
+        (onAttachmentsClicked)="editCipherAttachments($event)"
+        (onAddCipher)="addCipher()"
+        (onShareClicked)="shareCipher($event)"
+        (onEditCipherCollectionsClicked)="editCipherCollections($event)"
+        (onCloneClicked)="cloneCipher($event)"
+        (onOrganzationBadgeClicked)="applyOrganizationFilter($event)"
+      >
+      </app-vault-items>
+      <app-low-kdf class="d-block mb-4" *ngIf="showLowKdf"> </app-low-kdf>
+      <div class="vertical-spacer"></div>
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>
+
+<ng-template #attachments></ng-template>
+<ng-template #folderAddEdit></ng-template>
+<ng-template #cipherAddEdit></ng-template>
+<ng-template #share></ng-template>
+<ng-template #collections></ng-template>
+<ng-template #updateKeyTemplate></ng-template>

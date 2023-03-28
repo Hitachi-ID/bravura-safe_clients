@@ -175,6 +175,7 @@
   }
 
   &:disabled:not(.manual),
+  &[aria-disabled="true"]:not(.manual),
   &.loading {
     .fa-spinner {
       display: flex;
@@ -249,4 +250,18 @@ button.no-btn {
     background-color: themed("success");
     color: themed("textSuccessColor");
   }
+}
+
+button.header-expandable {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+/* special case for Send options */
+h3 button.header-expandable .fa {
+  line-height: 1.5;
 }
