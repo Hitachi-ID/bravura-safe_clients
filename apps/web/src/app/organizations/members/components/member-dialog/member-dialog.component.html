@@ -44,7 +44,7 @@
               />
               <label class="tw-m-0" for="userTypeUser">
                 {{ "user" | i18n }}
-                <div class="text-base tw-block tw-font-normal tw-text-muted">
+                <div class="text-base tw-block tw-font-normal">
                   {{ "userDesc" | i18n }}
                 </div>
               </label>
@@ -60,7 +60,7 @@
               />
               <label class="tw-m-0" for="userTypeManager">
                 {{ "manager" | i18n }}
-                <div class="text-base tw-block tw-font-normal tw-text-muted">
+                <div class="text-base tw-block tw-font-normal">
                   {{ "managerDesc" | i18n }}
                 </div>
               </label>
@@ -76,7 +76,7 @@
               />
               <label class="tw-m-0" for="userTypeAdmin">
                 {{ "admin" | i18n }}
-                <div class="text-base tw-block tw-font-normal tw-text-muted">
+                <div class="text-base tw-block tw-font-normal">
                   {{ "adminDesc" | i18n }}
                 </div>
               </label>
@@ -110,7 +110,7 @@
               <label class="tw-m-0" for="userTypeCustom">
                 {{ "custom" | i18n }}
                 <ng-container *ngIf="!canUseCustomPermissions; else enterprise">
-                  <div class="text-base tw-block tw-font-normal tw-text-muted">
+                  <div class="text-base tw-block tw-font-normal">
                     {{ "customDescNonEnterpriseStart" | i18n
                     }}<a href="https://bitwarden.com/contact/" target="_blank">{{
                       "customDescNonEnterpriseLink" | i18n
@@ -119,7 +119,7 @@
                   </div>
                 </ng-container>
                 <ng-template #enterprise>
-                  <div class="text-base tw-block tw-font-normal tw-text-muted">
+                  <div class="text-base tw-block tw-font-normal">
                     {{ "customDesc" | i18n }}
                   </div>
                 </ng-template>
