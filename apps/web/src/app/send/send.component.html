@@ -1,3 +1,5 @@
+<!-- Please remove this disable statement when editing this file! -->
+<!-- eslint-disable @angular-eslint/template/button-has-type -->
 <div class="container page-content">
   <app-callout type="warning" title="{{ 'sendDisabled' | i18n }}" *ngIf="disableSend">
     <span>{{ "sendDisabledWarning" | i18n }}</span>
@@ -5,9 +7,6 @@
   <div class="row">
     <div class="col-3 groupings">
       <div class="card vault-filters">
-        <div class="card-header d-flex">
-          {{ "filters" | i18n }}
-        </div>
         <div class="card-body">
           <div class="search-container">
             <input
@@ -28,11 +27,11 @@
                   <span class="filter-buttons">
                     <i class="text-muted invisible"></i>
                     <button
-                      class="filter-button flex-grow-1 text-left"
+                      class="filter-button flex-grow-1 text-left text-muted"
                       appStopClick
                       (click)="selectAll()"
                     >
-                      <i class="fa-li fa fa-fw fa-th"></i>{{ "allSends" | i18n }}
+                      <i class="fa fa-fw fa-th"></i>{{ "allSends" | i18n }}
                     </button>
                   </span>
                 </li>
@@ -47,11 +46,11 @@
                   <span class="filter-buttons">
                     <i class="text-muted invisible"></i>
                     <button
-                      class="filter-button flex-grow-1 text-left"
+                      class="filter-button flex-grow-1 text-left text-muted"
                       appStopClick
                       (click)="selectType(sendType.Text)"
                     >
-                      <i class="fa-li fa fa-fw fa-file-text-o text-muted"></i
+                      <i class="fa fa-fw fa-file-text-o text-muted"></i
                       >{{ "sendTypeText" | i18n }}
                     </button>
                   </span>
@@ -60,11 +59,11 @@
                   <span class="filter-buttons">
                     <i class="text-muted invisible"></i>
                     <button
-                      class="filter-button flex-grow-1 text-left"
+                      class="filter-button flex-grow-1 text-left text-muted"
                       appStopClick
                       (click)="selectType(sendType.File)"
                     >
-                      <i class="fa-li fa fa-fw fa-file-o text-muted"></i>{{ "sendTypeFile" | i18n }}
+                      <i class="fa fa-fw fa-file-o text-muted"></i>{{ "sendTypeFile" | i18n }}
                     </button>
                   </span>
                 </li>
@@ -106,8 +105,8 @@
           <tr *ngFor="let s of filteredSends">
             <td class="table-list-icon">
               <div class="icon" aria-hidden="true">
-                <i class="fa fa-fw fa-lg fa-file-o" *ngIf="s.type == sendType.File"></i>
-                <i class="fa fa-fw fa-lg fa-file-text-o" *ngIf="s.type == sendType.Text"></i>
+                <i class="fa fa-fw fa-file-o" *ngIf="s.type == sendType.File"></i>
+                <i class="fa fa-fw fa-file-text-o" *ngIf="s.type == sendType.Text"></i>
               </div>
             </td>
             <td class="reduced-lh wrap">
@@ -150,7 +149,7 @@
               </ng-container>
               <ng-container *ngIf="s.pendingDelete">
                 <i
-                  class="fa fa-trash"
+                  class="fa fa-trash-o"
                   appStopProp
                   title="{{ 'pendingDeletion' | i18n }}"
                   aria-hidden="true"
@@ -160,40 +159,45 @@
               <br />
               <small appStopProp>{{ s.deletionDate | date: "medium" }}</small>
             </td>
-            <td class="table-list-options reduced-1h">
-              <div appListDropdown>
-                <button
-                  class="btn btn-outline-secondary dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  appA11yTitle="{{ 'options' | i18n }}"
-                >
-                  <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
-                </button>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                  <button bitMenuItem (click)="copy(s)">
+            <td style="text-align:right">
+              <button
+                [bitMenuTriggerFor]="sendOptions"
+                bitIconButton="fa fa-cog"
+                size="small"
+                type="button"
+                appA11yTitle="{{ 'options' | i18n }}"
+                class="btn btn-sm btn-outline-secondary dropdown-toggle"
+                appStopProp
+              ></button>
+              <bit-menu #sendOptions>
+                <ng-container>
+                  <button
+                    class="dropdown-item"
+                    appStopClick
+                    (click)="copy(s)"
+                  >
                     <i class="fa fa-fw fa-copy" aria-hidden="true"></i>
                     {{ "copySendLink" | i18n }}
                   </button>
                   <button
-                    bitMenuItem
+                    class="dropdown-item"
+                    appStopClick
                     (click)="removePassword(s)"
                     *ngIf="s.password && !disableSend"
                   >
                     <i class="fa fa-fw fa-undo" aria-hidden="true"></i>
                     {{ "removePassword" | i18n }}
                   </button>
-                  <button bitMenuItem (click)="delete(s)">
-                    <span class="tw-text-danger">
-                      <i class="fa fa-fw fa-trash-o" aria-hidden="true"></i>
-                      {{ "delete" | i18n }}
-                    </span>
+                  <button
+                    class="dropdown-item text-danger"
+                    appStopClick
+                    (click)="delete(s)"
+                  >
+                    <i class="fa fa-fw fa-trash-o" aria-hidden="true"></i>
+                    {{ "delete" | i18n }}
                   </button>
-                </div>
-              </div>
+                </ng-container>
+              </bit-menu>
             </td>
           </tr>
         </tbody>

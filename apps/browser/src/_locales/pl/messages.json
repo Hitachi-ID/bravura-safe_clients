@@ -98,7 +98,7 @@
     "message": "Kopiuj nazwę pola niestandardowego"
   },
   "noMatchingLogins": {
-    "message": "Brak pasujących danych logowania."
+    "message": "Brak pasujących danych logowania"
   },
   "unlockVaultMenu": {
     "message": "Odblokuj sejf"
@@ -942,7 +942,7 @@
     "message": "Adres URL serwera"
   },
   "apiUrl": {
-    "message": "Adres URL serwera interfejsu API"
+    "message": "Adres URL serwera API"
   },
   "webVaultUrl": {
     "message": "Adres URL serwera sejfu internetowego"
@@ -966,7 +966,10 @@
     "message": "Jeśli zostanie wykryty formularz logowania, automatycznie uzupełnij dane logowania po załadowaniu strony."
   },
   "experimentalFeature": {
-    "message": "Obecnie jest to funkcja eksperymentalna. Używaj na własne ryzyko."
+    "message": "Zaatakowane lub niezaufane witryny internetowe mogą wykorzystać funkcję autouzupełniania podczas wczytywania strony, aby wyrządzić szkody."
+  },
+  "learnMoreAboutAutofill": {
+    "message": "Dowiedz się więcej o autouzupełnianiu"
   },
   "defaultAutoFillOnPageLoad": {
     "message": "Domyślne ustawienie autouzupełniania"
@@ -1046,7 +1049,7 @@
     "message": "Pokaż ikony witryn"
   },
   "faviconDesc": {
-    "message": "Pokaż rozpoznawalny obraz obok każdych danych logowania."
+    "message": "Pokaż rozpoznawalny obraz obok danych logowania."
   },
   "enableBadgeCounter": {
     "message": "Pokaż licznik na ikonie"
@@ -1128,6 +1131,9 @@
   },
   "dr": {
     "message": "Doktor"
+  },
+  "mx": {
+    "message": "Pan(i)"
   },
   "firstName": {
     "message": "Imię"
@@ -1322,7 +1328,7 @@
     "description": "ex. Date this item was created"
   },
   "datePasswordUpdated": {
-    "message": "Aktualizacja hasła",
+    "message": "Hasło zostało zaktualizowane",
     "description": "ex. Date this password was updated"
   },
   "neverLockWarning": {
@@ -1494,7 +1500,7 @@
     "message": "Zaznaczając tę opcję, akceptujesz:"
   },
   "acceptPoliciesRequired": {
-    "message": "Warunki użytkowania i polityka prywatności nie zostały zaakceptowane."
+    "message": "Regulamin i polityka prywatności nie zostały zaakceptowane."
   },
   "termsOfService": {
     "message": "Regulamin"
@@ -1826,7 +1832,7 @@
     "message": "Zaktualizuj hasło główne"
   },
   "updateMasterPasswordWarning": {
-    "message": "Twoje hasło główne zostało ostatnio zmienione przez administratora Twojej organizacji. Musisz je teraz zaktualizować, aby uzyskać dostęp do sejfu. W przypadku kontynuacji nastąpi wylogowanie z bieżącej sesji, przez co konieczne będzie ponowne zalogowanie się. Aktywne sesje na innych urządzeniach mogą pozostać aktywne przez maksymalnie jedną godzinę."
+    "message": "Hasło główne zostało zmienione przez administratora Twojej organizacji. Musisz je zaktualizować, aby uzyskać dostęp do sejfu. Ta czynność spowoduje wylogowanie z bieżącej sesji, przez co konieczne będzie ponowne zalogowanie się. Aktywne sesje na innych urządzeniach mogą pozostać aktywne przez maksymalnie godzinę."
   },
   "resetPasswordPolicyAutoEnroll": {
     "message": "Automatyczne rejestrowanie użytkowników"
@@ -1863,10 +1869,10 @@
     "message": "Czas blokowania sejfu przekracza limit określony przez organizację."
   },
   "vaultExportDisabled": {
-    "message": "Eksport sejfu wyłączony"
+    "message": "Eksportowanie sejfu jest niedostępne"
   },
   "personalVaultExportPolicyInEffect": {
-    "message": "Co najmniej jedna zasada organizacji uniemożliwia wyeksportowanie Twojego sejfu."
+    "message": "Co najmniej jedna zasada organizacji uniemożliwia wyeksportowanie osobistego sejfu."
   },
   "copyCustomFieldNameInvalidElement": {
     "message": "Nie można zidentyfikować poprawnego elementu formularza. Spróbuj sprawdzić kod HTML."
@@ -1948,7 +1954,7 @@
     "message": "Losowe słowo"
   },
   "websiteName": {
-    "message": "Nazwa witryny"
+    "message": "Nazwa strony"
   },
   "whatWouldYouLikeToGenerate": {
     "message": "Co chcesz wygenerować?"
@@ -1960,10 +1966,10 @@
     "message": "Usługa"
   },
   "forwardedEmail": {
-    "message": "Alias przekazywanego e-maila"
+    "message": "Alias przekierowania"
   },
   "forwardedEmailDesc": {
-    "message": "Wygeneruj alias adresu e-mail z zewnętrznej usługi przekazywania."
+    "message": "Wygeneruj alias adresu e-mail z zewnętrznej usługi przekierowania."
   },
   "hostname": {
     "message": "Nazwa hosta",
@@ -1973,7 +1979,7 @@
     "message": "Token dostępu API"
   },
   "apiKey": {
-    "message": "Klucz interfejsu API"
+    "message": "Klucz API"
   },
   "ssoKeyConnectorError": {
     "message": "Błąd serwera Key Connector: upewnij się, że serwer Key Connector jest dostępny i działa poprawnie."
@@ -1982,10 +1988,10 @@
     "message": "Wymagana jest subskrypcja Premium"
   },
   "organizationIsDisabled": {
-    "message": "Organizacja jest wyłączona."
+    "message": "Organizacja została zawieszona."
   },
   "disabledOrganizationFilterError": {
-    "message": "Nie można uzyskać dostępu do elementów w wyłączonych organizacjach. Skontaktuj się z właścicielem organizacji, aby uzyskać pomoc."
+    "message": "Nie można uzyskać dostępu do elementów w zawieszonych organizacjach. Skontaktuj się z właścicielem organizacji, aby uzyskać pomoc."
   },
   "cardBrandMir": {
     "message": "Mir"
@@ -2000,7 +2006,7 @@
     }
   },
   "settingsEdited": {
-    "message": "Ustawienia zostały edytowane"
+    "message": "Ustawienia zostały zmienione"
   },
   "environmentEditedClick": {
     "message": "Kliknij tutaj"
@@ -2015,7 +2021,7 @@
     "message": "Samodzielnie hostowany"
   },
   "thirdParty": {
-    "message": "Innego dostawcy"
+    "message": "Inny dostawca"
   },
   "thirdPartyServerMessage": {
     "message": "Połączono z implementacją serwera innego dostawcy, $SERVERNAME$. Zweryfikuj błędy za pomocą oficjalnego serwera lub zgłoś je serwerowi innego dostawcy.",
@@ -2027,7 +2033,7 @@
     }
   },
   "lastSeenOn": {
-    "message": "ostatnio widziano $DATE$",
+    "message": "ostatnio widziany $DATE$",
     "placeholders": {
       "date": {
         "content": "$1",
@@ -2045,9 +2051,63 @@
     "message": "To nie Ty?"
   },
   "newAroundHere": {
-    "message": "Jesteś tu nowy(a)?"
+    "message": "Nowy użytkownik?"
   },
   "rememberEmail": {
     "message": "Zapamiętaj adres e-mail"
+  },
+  "loginWithDevice": {
+    "message": "Zaloguj się za pomocą urządzenia"
+  },
+  "loginWithDeviceEnabledInfo": {
+    "message": "Logowanie za pomocą urządzenia musi być włączone w ustawieniach aplikacji Bitwarden. Potrzebujesz innej opcji?"
+  },
+  "fingerprintPhraseHeader": {
+    "message": "Unikalny identyfikator konta"
+  },
+  "fingerprintMatchInfo": {
+    "message": "Upewnij się, że sejf jest odblokowany, a unikalny identyfikator konta pasuje do drugiego urządzenia."
+  },
+  "resendNotification": {
+    "message": "Wyślij ponownie powiadomienie"
+  },
+  "viewAllLoginOptions": {
+    "message": "Zobacz wszystkie sposoby logowania"
+  },
+  "notificationSentDevice": {
+    "message": "Powiadomienie zostało wysłane na urządzenie."
+  },
+  "logInInitiated": {
+    "message": "Logowanie rozpoczęte"
+  },
+  "exposedMasterPassword": {
+    "message": "Ujawnione hasło główne"
+  },
+  "exposedMasterPasswordDesc": {
+    "message": "Hasło ujawnione w wyniku naruszenia ochrony danych. Użyj unikalnego hasła, aby chronić swoje konto. Czy na pewno chcesz użyć ujawnionego hasła?"
+  },
+  "weakAndExposedMasterPassword": {
+    "message": "Słabe i ujawnione hasło główne"
+  },
+  "weakAndBreachedMasterPasswordDesc": {
+    "message": "Słabe hasło ujawnione w wyniku naruszenia ochrony danych. Użyj silnego i unikalnego hasła, aby chronić swoje konto. Czy na pewno chcesz użyć tego hasła?"
+  },
+  "checkForBreaches": {
+    "message": "Sprawdź znane naruszenia ochrony danych tego hasła"
+  },
+  "important": {
+    "message": "Ważne:"
+  },
+  "masterPasswordHint": {
+    "message": "Twoje hasło główne nie może zostać odzyskane, jeśli je zapomnisz!"
+  },
+  "characterMinimum": {
+    "message": "Minimum znaków: $LENGTH$",
+    "placeholders": {
+      "length": {
+        "content": "$1",
+        "example": "14"
+      }
+    }
   }
 }

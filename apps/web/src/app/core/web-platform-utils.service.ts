@@ -206,6 +206,11 @@ export class WebPlatformUtilsService implements PlatformUtilsService {
   }
 
   isSelfHost(): boolean {
+    return WebPlatformUtilsService.isSelfHost();
+  }
+
+  static isSelfHost(): boolean {
+    // return process.env.ENV.toString() === "selfhosted";
     return true;
   }
 

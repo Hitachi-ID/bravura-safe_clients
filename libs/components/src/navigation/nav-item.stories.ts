@@ -45,14 +45,14 @@ WithoutIcon.args = {
 export const WithoutRoute: Story<NavItemComponent> = (args: NavItemComponent) => ({
   props: args,
   template: `
-      <bit-nav-item text="Hello World" icon="fa-collection"></bit-nav-item>
+      <bit-nav-item text="Hello World" icon="fa-cube"></bit-nav-item>
     `,
 });
 
 export const WithChildButtons: Story<NavItemComponent> = (args: NavItemComponent) => ({
   props: args,
   template: `
-      <bit-nav-item text="Hello World" [route]="['']" icon="fa-collection">
+      <bit-nav-item text="Hello World" [route]="['']" icon="fa-cube">
         <button
           slot-start
           class="tw-ml-auto"
@@ -64,7 +64,7 @@ export const WithChildButtons: Story<NavItemComponent> = (args: NavItemComponent
         <button
           slot-end
           class="tw-ml-auto"
-          [bitIconButton]="'fa-pencil-square'"
+          [bitIconButton]="'fa-pencil-square-o'"
           [buttonType]="'contrast'"
           size="small"
           aria-label="option 2"
@@ -84,10 +84,10 @@ export const WithChildButtons: Story<NavItemComponent> = (args: NavItemComponent
 export const MultipleItemsWithDivider: Story<NavItemComponent> = (args: NavItemComponent) => ({
   props: args,
   template: `
-    <bit-nav-item text="Hello World" icon="fa-collection"></bit-nav-item>
-    <bit-nav-item text="Hello World" icon="fa-collection"></bit-nav-item>
+    <bit-nav-item text="Hello World" icon="fa-cube"></bit-nav-item>
+    <bit-nav-item text="Hello World" icon="fa-cube"></bit-nav-item>
     <bit-nav-divider></bit-nav-divider>
-    <bit-nav-item text="Hello World" icon="fa-collection"></bit-nav-item>
-    <bit-nav-item text="Hello World" icon="fa-collection"></bit-nav-item>
+    <bit-nav-item text="Hello World" icon="fa-cube"></bit-nav-item>
+    <bit-nav-item text="Hello World" icon="fa-cube"></bit-nav-item>
   `,
 });

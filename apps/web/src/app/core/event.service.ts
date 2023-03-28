@@ -484,7 +484,7 @@ export class EventService {
     // TODO: Update view/edit collection link after EC-14 is completed
     a.setAttribute(
       "href",
-      "#/organizations/" + ev.organizationId + "/manage/collections?search=" + shortId
+      "#/organizations/" + ev.organizationId + "/vault?collectionId=" + ev.collectionId
     );
     return a.outerHTML;
   }

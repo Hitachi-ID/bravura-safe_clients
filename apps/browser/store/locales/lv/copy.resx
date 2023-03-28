@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bravura Safe – bezmaksas paroļu pārvaldnieks</value>
+    <value>Bravura Safe – Bezmaksas Paroļu Pārvaldnieks</value>
   </data>
   <data name="Summary" xml:space="preserve">
-    <value>Drošs bezmaksas paroļu pārvaldnieks visām Tavām ierīcēm</value>
+    <value>Drošs un bezmaksas paroļu pārvaldnieks priekš visām jūsu ierīcēm.</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Bravura Security Inc.</value>
   </data>
   <data name="AssetTitle" xml:space="preserve">
-    <value>Drošs bezmaksas paroļu pārvaldnieks visām Tavām ierīcēm</value>
+    <value>Drošs un bezmaksas paroļu pārvaldnieks priekš visām jūsu ierīcēm.</value>
   </data>
   <data name="ScreenshotSync" xml:space="preserve">
     <value>Sinhronizē un piekļūsti savai glabātavai no vairākām ierīcēm</value>
@@ -136,7 +136,7 @@
     <value>Pārvaldi visus savus pierakstīšanās vienumus un paroles no drošas glabātavas</value>
   </data>
   <data name="ScreenshotAutofill" xml:space="preserve">
-    <value>Ātra automātiskā aizpilde Taviem pierakstīšanās datiem jebkurā lapā, ko apmeklē</value>
+    <value>Ātri automātiski aizpildiet savus pieteikšanās akreditācijas datus jebkurā apmeklētajā vietnē</value>
   </data>
   <data name="ScreenshotMenu" xml:space="preserve">
     <value>Tava glabātava ir arī ērti pieejama labā klikšķa izvēlnē</value>
@@ -145,6 +145,6 @@
     <value>Automātiski veido spēcīgas, sarežģītas un drošas paroles</value>
   </data>
   <data name="ScreenshotEdit" xml:space="preserve">
-    <value>Tava informācija ir droši pārvaldīta, izmantojot AES-256 bitu šifrēšanu</value>
+    <value>Jūsu informācija ir droši pārvaldīta izmantojot AES-256 bitu šifrēšanu</value>
   </data>
 </root>

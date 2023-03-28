@@ -91,7 +91,7 @@ describe("Keeper Json Importer", () => {
     expect(result.folderRelationships[2]).toEqual([1, 1]);
   });
 
-  it("should create collections if part of an organization", async () => {
+  it("should create collections if part of a team", async () => {
     importer.organizationId = Utils.newGuid();
     const result = await importer.parse(testDataJson);
     expect(result != null).toBe(true);
