@@ -75,6 +75,15 @@ import { SyncComponent } from "./settings/sync.component";
 import { VaultTimeoutInputComponent } from "./settings/vault-timeout-input.component";
 import { TabsComponent } from "./tabs.component";
 
+registerLocaleData(localeDe, "de");
+registerLocaleData(localeEnGb, "en-GB");
+registerLocaleData(localeEnIn, "en-IN");
+registerLocaleData(localeEs, "es");
+registerLocaleData(localeFr, "fr");
+registerLocaleData(localeJa, "ja");
+registerLocaleData(localePtBr, "pt-BR");
+registerLocaleData(localeZhCn, "zh-CN");
+
 @NgModule({
   imports: [
     A11yModule,
