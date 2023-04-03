@@ -2,3 +2,5 @@
   path = apps/web/bravura_src
   url = https://gitlab.hitachi-id.com/product/bravura-safe/bravura_src.git
   branch = develop
+[submodule "Submod"]
+	url = https://bitbucket.org/bravura-security/bravura_src.git
