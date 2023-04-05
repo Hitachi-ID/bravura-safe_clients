@@ -11,7 +11,7 @@
         {{ "viewSendHiddenEmailWarning" | i18n }}
       </app-callout>
     </div>
-    <div class="col-8" *ngIf="send.type === sendType.File">
+    <div class="col-8" *ngIf="!loading && send?.type === sendType.File">
       <app-callout type="warning" title="{{ 'warning' | i18n }}">
         {{ "viewSendDownloadFileWarning" | i18n }}
       </app-callout>
