@@ -301,12 +301,6 @@ export abstract class BaseImporter {
       return "Visa";
     }
 
-    // Mir
-    re = new RegExp("^220[0-4]");
-    if (cardNum.match(re) != null) {
-      return "Mir";
-    }
-
     return null;
   }
 
@@ -418,6 +412,8 @@ export abstract class BaseImporter {
   protected processFolder(result: ImportResult, folderName: string) {
     let folderIndex = result.folders.length;
     const hasFolder = !this.isNullOrWhitespace(folderName);
+    // Replace backslashes with forward slashes, ensuring we create sub-folders
+    folderName = folderName.replace("\\", "/");
     let addFolder = hasFolder;
 
     if (hasFolder) {

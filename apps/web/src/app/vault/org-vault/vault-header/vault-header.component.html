@@ -1,0 +1,99 @@
+<div class="tw-mb-4 tw-flex tw-items-start tw-justify-between page-header">
+  <div>
+    <h1 class="tw-mb-0 tw-mt-1 tw-flex tw-items-center tw-space-x-2">
+      <i
+        *ngIf="activeFilter.isCollectionSelected"
+        class="fa fa-cube"
+        aria-hidden="true"
+      ></i>
+      <span>{{ title }}</span>
+      <ng-container
+        *ngIf="organization.isManager && activeFilter.isCollectionSelected && !activeFilter.isUnassignedCollectionSelected"
+      >
+        <button
+          bitIconButton="fa-angle-down"
+          [bitMenuTriggerFor]="editCollectionMenu"
+          size="small"
+          type="button"
+          aria-haspopup
+        ></button>
+        <bit-menu #editCollectionMenu>
+          <button
+            type="button"
+            *ngIf="canEditCollection(activeFilter.selectedCollectionNode.node)"
+            bitMenuItem
+            (click)="editCollection(activeFilter.selectedCollectionNode.node, 'info')"
+          >
+            <i class="fa fa-fw fa-pencil-square-o" aria-hidden="true"></i>
+            {{ "editInfo" | i18n }}
+          </button>
+          <button
+            type="button"
+            *ngIf="canEditCollection(activeFilter.selectedCollectionNode.node)"
+            bitMenuItem
+            (click)="editCollection(activeFilter.selectedCollectionNode.node, 'access')"
+          >
+            <i class="fa fa-fw fa-users" aria-hidden="true"></i>
+            {{ "access" | i18n }}
+          </button>
+          <button
+            type="button"
+            *ngIf="canDeleteCollection(activeFilter.selectedCollectionNode.node)"
+            bitMenuItem
+            (click)="deleteCollection(activeFilter.selectedCollectionNode.node)"
+          >
+            <span class="tw-text-danger">
+              <i class="fa fa-fw fa-trash-o" aria-hidden="true"></i>
+              {{ "delete" | i18n }}
+            </span>
+          </button>
+        </bit-menu>
+      </ng-container>
+      <small #actionSpinner [appApiAction]="actionPromise">
+        <ng-container *ngIf="$any(actionSpinner).loading">
+          <i
+            class="fa fa-spinner fa-spin text-muted"
+            title="{{ 'loading' | i18n }}"
+            aria-hidden="true"
+          ></i>
+          <span class="sr-only">{{ "loading" | i18n }}</span>
+        </ng-container>
+      </small>
+    </h1>
+  </div>
+
+  <div *ngIf="!activeFilter.isDeleted" class="tw-shrink-0">
+    <div *ngIf="organization.canCreateNewCollections" appListDropdown>
+      <button
+        bitButton
+        buttonType="primary"
+        type="button"
+        [bitMenuTriggerFor]="addOptions"
+        id="newItemDropdown"
+        appA11yTitle="{{ 'new' | i18n }}"
+      >
+        {{ "new" | i18n }}<i class="fa fa-angle-down tw-ml-2" aria-hidden="true"></i>
+      </button>
+      <bit-menu #addOptions aria-labelledby="newItemDropdown">
+        <button type="button" bitMenuItem (click)="addCipher()">
+          <i class="fa fa-fw fa-globe" aria-hidden="true"></i>
+          {{ "item" | i18n }}
+        </button>
+        <button type="button" bitMenuItem (click)="addCollection()">
+          <i class="fa fa-fw fa-cube" aria-hidden="true"></i>
+          {{ "collection" | i18n }}
+        </button>
+      </bit-menu>
+    </div>
+    <button
+      *ngIf="!organization.canCreateNewCollections"
+      type="button"
+      bitButton
+      buttonType="primary"
+      (click)="addCipher()"
+    >
+      <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
+      {{ "newItem" | i18n }}
+    </button>
+  </div>
+</div>

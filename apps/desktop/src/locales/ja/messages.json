@@ -542,7 +542,14 @@
     "message": "マスターパスワードの再入力が必要です。"
   },
   "masterPasswordMinlength": {
-    "message": "マスターパスワードは、少なくとも8文字以上で設定してください。"
+    "message": "マスターパスワードは少なくとも $VALUE$ 文字以上でなければなりません。",
+    "description": "The Master Password must be at least a specific number of characters long.",
+    "placeholders": {
+      "value": {
+        "content": "$1",
+        "example": "8"
+      }
+    }
   },
   "masterPassDoesntMatch": {
     "message": "マスターパスワードが一致しません。"
@@ -1605,7 +1612,7 @@
     "message": "DuckDuckGo ブラウザの統合を許可する"
   },
   "enableDuckDuckGoBrowserIntegrationDesc": {
-    "message": "DuckDuckGo でブラウズするときに Bitwarden 保管庫を使用します。"
+    "message": "DuckDuckGo でブラウズするときに Bravura Safe 保管庫を使用します。"
   },
   "browserIntegrationUnsupportedTitle": {
     "message": "ブラウザー統合はサポートされていません"
@@ -1635,7 +1642,7 @@
     "message": "表示されているパスフレーズがブラウザ拡張に表示されているものと同じであることを確認してください。"
   },
   "verifyNativeMessagingConnectionTitle": {
-    "message": "$APPID$ が Bitwarden に接続しようとしています",
+    "message": "$APPID$ が Bravura Safe に接続しようとしています",
     "placeholders": {
       "appid": {
         "content": "$1",
@@ -2052,9 +2059,6 @@
   "neverLockWarning": {
     "message": "本当に「なし」オプションを使用しますか？ロックオプションを「なし」に設定すると、保管庫の暗号化キーがデバイスに保存されます。 このオプションを使用する場合は、デバイスを適切に保護する必要があります。"
   },
-  "cardBrandMir": {
-    "message": "Mir"
-  },
   "vault": {
     "message": "保管庫"
   },
@@ -2098,7 +2102,7 @@
     "message": "パスフレーズ"
   },
   "needAnotherOption": {
-    "message": "Bitwarden アプリの設定でデバイスでログインする必要があります。別のオプションが必要ですか？"
+    "message": "Bravura Safe アプリの設定でデバイスでログインする必要があります。別のオプションが必要ですか？"
   },
   "viewAllLoginOptions": {
     "message": "すべてのログインオプションを表示"

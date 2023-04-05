@@ -542,7 +542,14 @@
     "message": "נדרשת חזרה על הסיסמה הראשית."
   },
   "masterPasswordMinlength": {
-    "message": "הסיסמת הראשית חייבת להכיל 8 תווים לפחות."
+    "message": "Master password must be at least $VALUE$ characters long.",
+    "description": "The Master Password must be at least a specific number of characters long.",
+    "placeholders": {
+      "value": {
+        "content": "$1",
+        "example": "8"
+      }
+    }
   },
   "masterPassDoesntMatch": {
     "message": "אימות סיסמה ראשית אינו תואם."
@@ -2027,9 +2034,6 @@
   },
   "neverLockWarning": {
     "message": "האם אתה בטוח שברצונך להשתמש באפשרות \"לעולם לא\"? על ידי הגדרת אפשרויות הנעילה ל\"לעולם לא\", מפתח ההצפנה של הכספת שלך יישמר במכשיר שלך. אם אתה משתמש באפשרות זו, ודא שאתה שומר על המכשיר שלך מוגן כראוי."
-  },
-  "cardBrandMir": {
-    "message": "Mir"
   },
   "vault": {
     "message": "כספת"

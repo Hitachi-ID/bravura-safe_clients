@@ -8,7 +8,7 @@ import { CipherService } from "@bitwarden/common/vault/abstractions/cipher.servi
 import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
 import { PasswordRepromptService } from "@bitwarden/common/vault/abstractions/password-reprompt.service";
 import { StateService } from "@bitwarden/common/abstractions/state.service";
-import { PasswordGenerationService } from "@bitwarden/common/abstractions/passwordGeneration.service";
+import { PasswordGenerationServiceAbstraction } from "@bitwarden/common/tools/generator/password";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
 import { FileDownloadService } from "@bitwarden/common/abstractions/fileDownload/fileDownload.service";
 import { NgxCaptureService } from "ngx-capture";
@@ -40,7 +40,7 @@ export class SecurityAssessmentReportComponent extends BaseSecurityAssessmentRep
     private organizationService: OrganizationService,
     private route: ActivatedRoute,
     passwordRepromptService: PasswordRepromptService,
-    passwordGenerationService: PasswordGenerationService,
+    passwordGenerationService: PasswordGenerationServiceAbstraction,
     logService: LogService,
     fileDownloadService: FileDownloadService,
     captureService: NgxCaptureService,

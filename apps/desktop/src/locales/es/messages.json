@@ -542,7 +542,14 @@
     "message": "Se requiere volver a teclear la contraseña maestra."
   },
   "masterPasswordMinlength": {
-    "message": "La contraseña maestra debe tener al menos 8 caracteres."
+    "message": "La contraseña maestra debe tener al menos $VALUE$ caracteres.",
+    "description": "The Master Password must be at least a specific number of characters long.",
+    "placeholders": {
+      "value": {
+        "content": "$1",
+        "example": "8"
+      }
+    }
   },
   "masterPassDoesntMatch": {
     "message": "La confirmación de contraseña maestra no coincide."
@@ -1605,7 +1612,7 @@
     "message": "Permitir integración con el navegador DuckDuckGo"
   },
   "enableDuckDuckGoBrowserIntegrationDesc": {
-    "message": "Usa tu caja fuerte de Bitwarden cuando navegas con DuckDuckGo."
+    "message": "Usa tu caja fuerte de Bravura Safe cuando navegas con DuckDuckGo."
   },
   "browserIntegrationUnsupportedTitle": {
     "message": "La integración con el navegador no está soportada"
@@ -1635,7 +1642,7 @@
     "message": "Por favor, asegúrese de que la huella digital mostrada es idéntica a la huella que aparece en la extensión del navegador."
   },
   "verifyNativeMessagingConnectionTitle": {
-    "message": "$APPID$ quiere conectarse a Bitwarden",
+    "message": "$APPID$ quiere conectarse a Bravura Safe",
     "placeholders": {
       "appid": {
         "content": "$1",
@@ -2052,9 +2059,6 @@
   "neverLockWarning": {
     "message": "¿Está seguro de que quieres usar la opción \"Nunca\"? Al ajustar las opciones de bloqueo a \"Nunca\", la clave de cifrado de su caja fuerte se guardará en tu dispositivo. Si usas esta opción, asegúrate de mantener tu dispositivo debidamente protegido."
   },
-  "cardBrandMir": {
-    "message": "Mir"
-  },
   "vault": {
     "message": "Caja fuerte"
   },
@@ -2098,7 +2102,7 @@
     "message": "Frase de huella dactilar"
   },
   "needAnotherOption": {
-    "message": "Iniciar sesión con el dispositivo debe estar habilitado en los ajustes de la aplicación móvil Bitwarden. ¿Necesitas otra opción?"
+    "message": "Iniciar sesión con el dispositivo debe estar habilitado en los ajustes de la aplicación móvil Bravura Safe. ¿Necesitas otra opción?"
   },
   "viewAllLoginOptions": {
     "message": "Ver todas las opciones de inicio de sesión"
@@ -2193,25 +2197,25 @@
     "message": "Contraseña maestra comprometida"
   },
   "exposedMasterPasswordDesc": {
-    "message": "Password found in a data breach. Use a unique password to protect your account. Are you sure you want to use an exposed password?"
+    "message": "Contraseña encontrada en una filtración de datos. Utilice una contraseña única para proteger su cuenta. ¿Está seguro de que desea utilizar una contraseña comprometida?"
   },
   "weakAndExposedMasterPassword": {
-    "message": "Weak and Exposed Master Password"
+    "message": "Contraseña maestra débil y comprometida"
   },
   "weakAndBreachedMasterPasswordDesc": {
-    "message": "Weak password identified and found in a data breach. Use a strong and unique password to protect your account. Are you sure you want to use this password?"
+    "message": "Contraseña débil encontrada en una filtración de datos. Utilice una contraseña única para proteger su cuenta. ¿Está seguro de que desea utilizar una contraseña comprometida?"
   },
   "checkForBreaches": {
-    "message": "Check known data breaches for this password"
+    "message": "Comprobar filtración de datos conocidos para esta contraseña"
   },
   "important": {
-    "message": "Important:"
+    "message": "Importante:"
   },
   "masterPasswordHint": {
-    "message": "Your master password cannot be recovered if you forget it!"
+    "message": "Tu contraseña maestra no se puede recuperar si la olvidas"
   },
   "characterMinimum": {
-    "message": "$LENGTH$ character minimum",
+    "message": "$LENGTH$ caracteres mínimo",
     "placeholders": {
       "length": {
         "content": "$1",

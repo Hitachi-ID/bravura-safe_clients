@@ -36,7 +36,7 @@ export class EventService {
   }
 
   async getEventInfo(ev: EventResponse, options = new EventOptions()): Promise<EventInfo> {
-    const appInfo = this.getAppInfo(ev.deviceType);
+    const appInfo = this.getAppInfo(ev);
     const { message, humanReadableMessage } = await this.getEventMessage(ev, options);
     return {
       message: message,
@@ -397,6 +397,24 @@ export class EventService {
           this.getShortId(ev.providerOrganizationId)
         );
         break;
+      // Org Domain claiming events
+      case EventType.OrganizationDomain_Added:
+        msg = humanReadableMsg = this.i18nService.t("addedDomain", ev.domainName);
+        break;
+      case EventType.OrganizationDomain_Removed:
+        msg = humanReadableMsg = this.i18nService.t("removedDomain", ev.domainName);
+        break;
+      case EventType.OrganizationDomain_Verified:
+        msg = humanReadableMsg = this.i18nService.t("domainVerifiedEvent", ev.domainName);
+        break;
+      case EventType.OrganizationDomain_NotVerified:
+        msg = humanReadableMsg = this.i18nService.t("domainNotVerifiedEvent", ev.domainName);
+        break;
+      // Secrets Manager
+      case EventType.Secret_Retrieved:
+        msg = this.i18nService.t("accessedSecret", this.formatSecretId(ev));
+        humanReadableMsg = this.i18nService.t("accessedSecret", this.getShortId(ev.secretId));
+        break;
       default:
         break;
     }
@@ -406,8 +424,12 @@ export class EventService {
     };
   }
 
-  private getAppInfo(deviceType: DeviceType): [string, string] {
-    switch (deviceType) {
+  private getAppInfo(ev: EventResponse): [string, string] {
+    if (ev.serviceAccountId) {
+      return ["fa-globe", this.i18nService.t("sdk")];
+    }
+
+    switch (ev.deviceType) {
       case DeviceType.Android:
         return ["fa-android", this.i18nService.t("mobile") + " - Android"];
       case DeviceType.iOS:
@@ -446,6 +468,8 @@ export class EventService {
         return ["fa-globe", this.i18nService.t("webVault") + " - Edge"];
       case DeviceType.IEBrowser:
         return ["fa-globe", this.i18nService.t("webVault") + " - IE"];
+      case DeviceType.Server:
+        return ["fa-server", this.i18nService.t("server")];
       case DeviceType.UnknownBrowser:
         return ["fa-globe", this.i18nService.t("webVault") + " - " + this.i18nService.t("unknown")];
       default:
@@ -533,6 +557,13 @@ export class EventService {
       "href",
       "#/organizations/" + ev.organizationId + "/manage/policies?policyId=" + ev.policyId
     );
+    return a.outerHTML;
+  }
+
+  formatSecretId(ev: EventResponse): string {
+    const shortId = this.getShortId(ev.secretId);
+    const a = this.makeAnchor(shortId);
+    a.setAttribute("href", "#/sm/" + ev.organizationId + "/secrets?search=" + shortId);
     return a.outerHTML;
   }
 

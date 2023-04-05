@@ -192,4 +192,8 @@ export class ElectronPlatformUtilsService implements PlatformUtilsService {
   supportsSecureStorage(): boolean {
     return true;
   }
+
+  getAutofillKeyboardShortcut(): Promise<string> {
+    return null;
+  }
 }

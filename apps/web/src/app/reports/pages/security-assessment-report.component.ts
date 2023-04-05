@@ -9,7 +9,7 @@ import { MessagingService } from "@bitwarden/common/abstractions/messaging.servi
 import { PasswordRepromptService } from "@bitwarden/common/vault/abstractions/password-reprompt.service";
 import { StateService } from "@bitwarden/common/abstractions/state.service";
 import { CipherView } from "@bitwarden/common/vault/models/view/cipher.view";
-import { PasswordGenerationService } from "@bitwarden/common/abstractions/passwordGeneration.service";
+import { PasswordGenerationServiceAbstraction } from "@bitwarden/common/tools/generator/password";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
 import { FileDownloadService } from "@bitwarden/common/abstractions/fileDownload/fileDownload.service";
 import { NgxCaptureService } from "ngx-capture";
@@ -60,7 +60,7 @@ export class SecurityAssessmentReportComponent implements OnInit {
     protected messagingService: MessagingService,
     protected stateService: StateService,
     protected passwordRepromptService: PasswordRepromptService,
-    protected passwordGenerationService: PasswordGenerationService,
+    protected passwordGenerationService: PasswordGenerationServiceAbstraction,
     protected logService: LogService,
     protected fileDownloadService: FileDownloadService,
     protected captureService: NgxCaptureService,

@@ -45,7 +45,9 @@
     </li>
   </ul>
   <p class="text-lg" [ngClass]="{ 'mb-0': !selfHosted }">
-    {{ "premiumPriceWithFamilyPlan" | i18n: (premiumPrice | currency: "$"):familyPlanMaxUserCount }}
+    {{
+      "premiumPriceWithFamilyPlan" | i18n : (premiumPrice | currency : "$") : familyPlanMaxUserCount
+    }}
     <a routerLink="/create-organization" [queryParams]="{ plan: 'families' }">{{
       "bitwardenFamiliesPlan" | i18n
     }}</a>
@@ -58,7 +60,7 @@
       <label for="file">{{ "licenseFile" | i18n }}</label>
       <input type="file" id="file" class="form-control-file" name="file" required />
       <small class="form-text text-muted">{{
-        "licenseFileDesc" | i18n: "bravura_safe_premium_license.json"
+        "licenseFileDesc" | i18n : "bravura_safe_premium_license.json"
       }}</small>
     </div>
     <button type="submit" buttonType="primary" bitButton [loading]="form.loading">
@@ -84,7 +86,7 @@
       />
       <small class="text-muted form-text">{{
         "additionalStorageIntervalDesc"
-          | i18n: "1 GB":(storageGbPrice | currency: "$"):("year" | i18n)
+          | i18n : "1 GB":(storageGbPrice | currency: "$"):("year" | i18n)
       }}</small>
     </div>
   </div>

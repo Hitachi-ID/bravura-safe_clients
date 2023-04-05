@@ -1,0 +1,402 @@
+<!-- Please remove this disable statement when editing this file! -->
+<!-- eslint-disable @angular-eslint/template/button-has-type -->
+<ng-container>
+  <bit-table
+    *ngIf="filteredCiphers.length || filteredCollections.length"
+    infiniteScroll
+    [infiniteScrollDistance]="1"
+    [infiniteScrollDisabled]="!isPaging()"
+    (scrolled)="loadMore()"
+    class="table table-hover table-list"
+  >
+    <ng-container header>
+      <tr>
+        <th bitCell class="tw-min-w-fit" colspan="2">
+          <ng-container *ngIf="!organization && activeFilter.selectedCollectionNode?.node?.id === 'AllCollections'">
+          &nbsp;
+          </ng-container>
+          <ng-container *ngIf="organization || activeFilter.selectedCollectionNode?.node?.id !== 'AllCollections'">
+          <input
+            class="tw-mr-2"
+            type="checkbox"
+            bitCheckbox
+            id="checkAll"
+            [disabled]="isProcessingAction"
+            (change)="checkAll($any($event.target).checked)"
+            [(ngModel)]="isAllChecked"
+          />
+          <label class="tw-mb-0 !tw-font-bold !tw-text-muted" for="checkAll">{{
+            "all" | i18n
+          }}</label>
+          </ng-container>
+        </th>
+        <th bitCell class="tw-w-1/2">{{ "name" | i18n }}</th>
+        <th bitCell class="tw-w-max">
+          <ng-container *ngIf="!organization">{{ "owner" | i18n }}</ng-container>
+          <ng-container *ngIf="organization">
+            {{ (activeFilter.selectedCollectionNode ? "groups" : "collections") | i18n }}
+          </ng-container>
+        </th>
+        <th bitCell class="tw-min-w-fit tw-text-right">
+          <ng-container *ngIf="!organization && activeFilter.selectedCollectionNode?.node?.id === 'AllCollections'">
+          &nbsp;
+          </ng-container>
+          <ng-container *ngIf="organization || activeFilter.selectedCollectionNode?.node?.id !== 'AllCollections'">
+          <button
+            [bitMenuTriggerFor]="headerMenu"
+            [disabled]="isProcessingAction"
+            bitIconButton="fa fa-cog"
+            size="small"
+            type="button"
+            appA11yTitle="{{ 'options' | i18n }}"
+            class="btn btn-sm btn-outline-secondary dropdown-toggle"
+          ></button>
+          <bit-menu #headerMenu>
+            <ng-container>
+              <button
+                bitMenuItem
+                (click)="bulkMove()"
+                *ngIf="!activeFilter.isDeleted && !organization"
+              >
+                <i class="fa fa-fw fa-folder-o" aria-hidden="true"></i>
+                {{ "moveSelected" | i18n }}
+              </button>
+              <button
+                bitMenuItem
+                (click)="bulkShare()"
+                *ngIf="!activeFilter.isDeleted && !organization"
+              >
+                <i class="fa fa-fw fa-arrow-circle-o-right" aria-hidden="true"></i>
+                {{ "moveSelectedToOrg" | i18n }}
+              </button>
+              <button bitMenuItem (click)="bulkRestore()" *ngIf="activeFilter.isDeleted">
+                <i class="fa fa-fw fa-undo" aria-hidden="true"></i>
+                {{ "restoreSelected" | i18n }}
+              </button>
+              <button bitMenuItem (click)="bulkDelete()">
+                <span class="tw-text-danger">
+                <i class="fa fa-fw fa-trash-o" aria-hidden="true"></i>
+                {{
+                  (activeFilter.isDeleted ? "permanentlyDeleteSelected" : "deleteSelected") | i18n
+                }}
+                </span>
+              </button>
+            </ng-container>
+          </bit-menu>
+          </ng-container>
+        </th>
+      </tr>
+    </ng-container>
+
+    <ng-template body>
+      <tr
+        bitRow
+        *ngFor="let col of filteredCollections"
+        [class.tw-cursor-pointer]="!isProcessingAction"
+        (click)="!isProcessingAction && navigateCollection(col)"
+        alignContent="middle"
+      >
+        <td bitCell (click)="checkRow(col)" appStopProp>
+          <input
+            *ngIf="canDeleteCollection(col.node)"
+            class="tw-cursor-pointer"
+            type="checkbox"
+            bitCheckbox
+            [disabled]="isProcessingAction"
+            [(ngModel)]="$any(col).checked"
+            appStopProp
+          />
+        </td>
+        <td bitCell>
+          <div class="icon" aria-hidden="true">
+            <i class="fa fa-fw fa-lg fa-cube"></i>
+          </div>
+        </td>
+        <td bitCell>
+          <button
+            bitLink
+            class="tw-text-start"
+            linkType="secondary"
+            (click)="navigateCollection(col)"
+            [disabled]="isProcessingAction"
+          >
+            {{ col.node.name }}
+          </button>
+        </td>
+        <td bitCell>
+          <ng-container *ngIf="!organization">
+            <app-org-badge
+              organizationName="{{ col.node.organizationId | orgNameFromId: organizations }}"
+              [profileName]="profileName"
+              (onOrganizationClicked)="onOrganizationClicked(col.node.organizationId)"
+              appStopProp
+            >
+            </app-org-badge>
+          </ng-container>
+          <ng-container *ngIf="organization && activeFilter.selectedCollectionNode">
+            <app-group-badge
+              *ngIf="col.node.groups"
+              [selectedGroups]="col.node.groups"
+              [allGroups]="groups"
+            ></app-group-badge>
+          </ng-container>
+        </td>
+
+        <td bitCell class="tw-text-right">
+          <button
+            *ngIf="canEditCollection(col.node) || canDeleteCollection(col.node)"
+            [bitMenuTriggerFor]="collectionOptions"
+            [disabled]="isProcessingAction"
+            size="small"
+            bitIconButton="fa fa-cog"
+            type="button"
+            appA11yTitle="{{ 'options' | i18n }}"
+            class="btn btn-sm btn-outline-secondary dropdown-toggle"
+            appStopProp
+          ></button>
+          <bit-menu #collectionOptions>
+            <ng-container>
+            <button
+              *ngIf="canEditCollection(col.node)"
+              bitMenuItem
+              (click)="editCollection(col.node, 'info')"
+            >
+              <i class="fa fa-fw fa-pencil-square-o" aria-hidden="true"></i>
+              {{ "editInfo" | i18n }}
+            </button>
+            <button
+              *ngIf="canEditCollection(col.node)"
+              bitMenuItem
+             (click)="editCollection(col.node, 'access')"
+            >
+              <i class="fa fa-fw fa-users" aria-hidden="true"></i>
+              {{ "access" | i18n }}
+            </button>
+            <button
+              *ngIf="canDeleteCollection(col.node)"
+              bitMenuItem
+              (click)="deleteCollection(col.node)"
+            >
+              <span class="tw-text-danger">
+                <i class="fa fa-fw fa-trash-o" aria-hidden="true"></i>
+                {{ "delete" | i18n }}
+              </span>
+            </button>
+            </ng-container>
+          </bit-menu>
+        </td>
+      </tr>
+      <tr
+        bitRow
+        *ngFor="let c of filteredCiphers"
+        [class.tw-cursor-pointer]="!isProcessingAction"
+        (click)="!isProcessingAction && selectCipher(c)"
+        alignContent="middle"
+      >
+        <td bitCell (click)="checkRow(c)" appStopProp>
+          <input
+            type="checkbox"
+            bitCheckbox
+            [disabled]="isProcessingAction"
+            [(ngModel)]="$any(c).checked"
+            appStopProp
+          />
+        </td>
+        <td bitCell>
+          <app-vault-icon [cipher]="c"></app-vault-icon>
+        </td>
+        <td bitCell class="tw-break-all">
+          <button
+            bitLink
+            class="tw-text-start"
+            [routerLink]="[]"
+            [queryParams]="{ itemId: c.id }"
+            queryParamsHandling="merge"
+            title="{{ 'editItem' | i18n }}"
+            [disabled]="isProcessingAction"
+          >
+            {{ c.name }}
+          </button>
+          <ng-container *ngIf="c.hasAttachments">
+            <i
+              class="fa fa-paperclip"
+              appStopProp
+              title="{{ 'attachments' | i18n }}"
+              aria-hidden="true"
+            ></i>
+            <span class="sr-only">{{ "attachments" | i18n }}</span>
+            <ng-container *ngIf="showFixOldAttachments(c)">
+              <i
+                class="fa fa-exclamation-triangle text-warning"
+                appStopProp
+                title="{{ 'attachmentsNeedFix' | i18n }}"
+                aria-hidden="true"
+              ></i>
+              <span class="sr-only">{{ "attachmentsNeedFix" | i18n }}</span>
+            </ng-container>
+          </ng-container>
+          <br />
+          <span class="tw-text-sm tw-text-muted" appStopProp>{{ c.subTitle }}</span>
+        </td>
+        <td bitCell>
+          <ng-container *ngIf="!organization">
+            <app-org-badge
+              organizationName="{{ c.organizationId | orgNameFromId: organizations }}"
+              profileName="{{ profileName }}"
+             *ngIf="c.organizationId | orgNameFromId: organizations"
+              appStopProp
+            >
+            </app-org-badge>
+          </ng-container>
+          <ng-container *ngIf="organization && !activeFilter.selectedCollectionNode">
+            <app-collection-badge
+              *ngIf="c.collectionIds"
+              [collectionIds]="c.collectionIds"
+              [collections]="vaultFilterService.filteredCollections$ | async"
+            ></app-collection-badge>
+          </ng-container>
+        </td>
+        <td bitCell class="table-list-options reduced-lh">
+          <div class="list-options">
+            <ng-container *ngIf="c.type === cipherType.Login && !c.isDeleted">
+              <a
+                class="list-options-item"
+                [ngClass]="{ 'list-options-item-disable': !c.login.canLaunch }"
+                href="#"
+                appStopClick
+                (click)="launch(c.login.launchUri)"
+              >
+                <i class="fa fa-fw fa-share-square-o fa-lg" aria-hidden="true" title="{{ 'launch' | i18n }}"></i>
+              </a>
+              <a
+                class="list-options-item"
+                [ngClass]="{ 'list-options-item-disable': !c.login.username }"
+                href="#"
+                appStopClick
+                (click)="copy(c, c.login.username, 'username', 'Username')"
+              >
+                <i class="fa fa-fw fa-user fa-lg" aria-hidden="true" title="{{ 'copyUsername' | i18n }}"></i>
+              </a>
+              <a
+                class="list-options-item"
+                [ngClass]="{ 'list-options-item-disable': !c.login.password }"
+                href="#"
+                appStopClick
+                (click)="copy(c, c.login.password, 'password', 'Password')"
+              >
+                <i class="fa fa-fw fa-key fa-lg" aria-hidden="true" title="{{ 'copyPassword' | i18n }}"></i>
+              </a>
+              <a
+                class="list-options-item"
+                [ngClass]="{ 'list-options-item-disable': !displayTotpCopyButton(c) }"
+                href="#"
+                appStopClick
+                (click)="copy(c, c.login.totp, 'verificationCodeTotp', 'TOTP')"
+              >
+                <i class="fa fa-fw fa-clock-o fa-lg" aria-hidden="true" title="{{ 'copyVerificationCode' | i18n }}"></i>
+              </a>
+            </ng-container>
+
+            <a
+              class="list-options-item"
+              href="#"
+              [ngClass]="{ 'list-options-item-disable': !c }"
+              appStopClick
+              (click)="attachments(c)"
+            >
+              <i class="fa fa-fw fa-paperclip fa-lg" aria-hidden="true" title="{{ 'attachments' | i18n }}"></i>
+            </a>
+            <a
+              class="list-options-item"
+              href="#"
+              appStopClick
+              (click)="restore(c)"
+              *ngIf="c.isDeleted"
+            >
+              <i class="fa fa-fw fa-undo" aria-hidden="true" title="{{ 'restore' | i18n }}"></i>
+            </a>
+          <button
+            [bitMenuTriggerFor]="cipherOptions"
+            [disabled]="isProcessingAction"
+            size="small"
+            bitIconButton="fa fa-cog"
+            type="button"
+            appA11yTitle="{{ 'options' | i18n }}"
+            class="btn btn-sm btn-outline-secondary dropdown-toggle"
+            appStopProp
+          ></button>
+          <bit-menu #cipherOptions>
+            <ng-container>
+              <button
+                class="dropdown-item"
+                appStopClick
+                (click)="clone(c)"
+                *ngIf="((!organization && !c.organizationId) || organization) && !c.isDeleted"
+              >
+                <i class="fa fa-fw fa-files-o" aria-hidden="true"></i>
+                {{ "clone" | i18n }}
+              </button>
+              <button
+                class="dropdown-item"
+                appStopClick
+                (click)="share(c)"
+                *ngIf="!organization && !c.organizationId && !c.isDeleted"
+              >
+                <i class="fa fa-fw fa-arrow-circle-o-right" aria-hidden="true"></i>
+                {{ "moveToOrganization" | i18n }}
+              </button>
+              <button class="dropdown-item" (click)="editCipherCollections(c)" *ngIf="c.organizationId && !c.isDeleted">
+                <i class="fa fa-fw fa-cube" aria-hidden="true"></i>
+                {{ "collections" | i18n }}
+              </button>
+              <button class="dropdown-item" (click)="events(c)" *ngIf="c.organizationId && accessEvents">
+                <i class="fa fa-fw fa-file-text-o" aria-hidden="true"></i>
+                {{ "eventLogs" | i18n }}
+              </button>
+              <button class="dropdown-item text-danger" (click)="deleteCipher(c)">
+                <i class="fa fa-fw fa-trash-o" aria-hidden="true"></i>
+                {{ (c.isDeleted ? "permanentlyDelete" : "delete") | i18n }}
+              </button>
+            </ng-container>
+          </bit-menu>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+  </bit-table>
+  <div
+    class="tw-mt-6 tw-flex tw-h-full tw-flex-col tw-items-center tw-justify-start"
+    *ngIf="
+      showMissingCollectionPermissionMessage ||
+      (!filteredCiphers.length && !filteredCollections.length)
+    "
+  >
+    <ng-container *ngIf="!loaded">
+      <i
+        class="fa fa-spinner fa-spin text-muted"
+        title="{{ 'loading' | i18n }}"
+        aria-hidden="true"
+      ></i>
+      <span class="sr-only">{{ "loading" | i18n }}</span>
+    </ng-container>
+    <ng-container *ngIf="loaded">
+      <bit-icon [icon]="noItemIcon" aria-hidden="true"></bit-icon>
+      <ng-container *ngIf="showMissingCollectionPermissionMessage">
+        <p>{{ "noPermissionToViewAllCollectionItems" | i18n }}</p>
+      </ng-container>
+      <ng-container *ngIf="!showMissingCollectionPermissionMessage">
+        <p>{{ "noItemsInList" | i18n }}</p>
+        <button
+          type="button"
+          buttonType="primary"
+          bitButton
+          (click)="addCipher()"
+          *ngIf="showAddNew"
+        >
+          <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
+          {{ "newItem" | i18n }}
+        </button>
+      </ng-container>
+    </ng-container>
+  </div>
+</ng-container>

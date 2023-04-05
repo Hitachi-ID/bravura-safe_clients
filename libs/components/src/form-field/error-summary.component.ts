@@ -4,7 +4,7 @@ import { AbstractControl, UntypedFormGroup } from "@angular/forms";
 @Component({
   selector: "bit-error-summary",
   template: ` <ng-container *ngIf="errorCount > 0">
-    <i class="fa fa-error"></i> {{ "fieldsNeedAttention" | i18n: errorString }}
+    <i class="fa fa-error"></i> {{ "fieldsNeedAttention" | i18n : errorString }}
   </ng-container>`,
   host: {
     class: "tw-block tw-text-danger tw-mt-2",
