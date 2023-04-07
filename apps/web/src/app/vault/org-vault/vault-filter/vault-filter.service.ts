@@ -72,30 +72,27 @@ filteredCollections$: Observable<CollectionView[]> = this._collections.asObserva
     this._collections.next(await this.loadCollections(this._organizationFilter.getValue()));
   }
 
-//  protected async loadCollections(org: Organization): Promise<CollectionAdminView[]> {
-protected async loadCollections(org: Organization): Promise<CollectionView[]> {
-if( org.isManager )
-{
-    let collections: CollectionAdminView[] = [];
-    if (canAccessVaultTab(org)) {
-      collections = await this.collectionAdminService.getAll(org.id);
+  protected async loadCollections(org: Organization): Promise<CollectionView[]> {
+    if( org.isManager ) {
+      let collections: CollectionAdminView[] = [];
+      if (canAccessVaultTab(org)) {
+        collections = await this.collectionAdminService.getAll(org.id);
 
-      const noneCollection = new CollectionAdminView();
-      noneCollection.name = this.i18nService.t("unassigned");
-      noneCollection.organizationId = org.id;
-      collections.push(noneCollection);
+        const noneCollection = new CollectionAdminView();
+        noneCollection.name = this.i18nService.t("unassigned");
+        noneCollection.organizationId = org.id;
+        collections.push(noneCollection);
+      }
+      return collections;
     }
-    return collections;
-}
-else
-{
-    let collections: CollectionView[] = [];
-    if (canAccessVaultTab(org)) {
-      collections = await this.collectionService.getAllDecrypted();
-      collections = collections.filter((collection) => org.id === collection.organizationId);
+    else {
+      let collections: CollectionView[] = [];
+      if (canAccessVaultTab(org)) {
+        collections = await this.collectionService.getAllDecrypted();
+        collections = collections.filter((collection) => org.id === collection.organizationId);
+      }
+      return collections;
     }
-    return collections;
-}
   }
 
   ngOnDestroy() {

@@ -228,8 +228,10 @@ if( this.organization?.isManager )
       return false;
     }
 
+    if( !this.organization.isManager ) {
+      return false;
+    }
     // Filtering by a collection, so show message if user is not assigned
-if( !this.organization.isManager ) return false;
     return !this.activeFilter.selectedCollectionNode.node.assigned && !this.organization.isAdmin;
   }
 
