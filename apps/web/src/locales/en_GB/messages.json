@@ -92,31 +92,31 @@
     "message": "SAML 2.0 Service Provider Configuration"
   },
   "sso_serviceProviderEntityID": {
-    "message": "Service Provider Entity ID"
+    "message": "Service provider entity ID"
   },
   "sso_serviceProviderMetadataUrl": {
-    "message": "SAML Metadata URL"
+    "message": "SAML metadata URL"
   },
   "sso_serviceProviderACSUrl": {
-    "message": "Assertion Consumer Service URL (ACS)"
+    "message": "Assertion Consumer Service (ACS) URL"
   },
   "sso_signingEncryptionAlgorithm": {
-    "message": "Signing Algorithm"
+    "message": "Signing algorithm"
   },
   "sso_signingType": {
-    "message": "IdP Signing Behavior"
+    "message": "IdP signing behaviour"
   },
   "sso_signedAssertions": {
-    "message": "Signed Assertions"
+    "message": "Signed assertions"
   },
   "sso_certificateValidation": {
-    "message": "Certificate Validation"
+    "message": "Certificate validation"
   },
   "sso_identityProviderConfiguration": {
     "message": "SAML 2.0 Identity Provider Configuration"
   },
   "sso_samlMappingType": {
-    "message": "Name ID Format"
+    "message": "Name ID format"
   },
   "sso_samlMappingType_NotConfigured": {
     "message": "Not configured"
@@ -387,7 +387,7 @@
     "description": "Search Secure Note type"
   },
   "searchVault": {
-    "message": "Search Item"
+    "message": "Search safe"
   },
   "searchMyVault": {
     "message": "Search my vault"
@@ -552,7 +552,7 @@
     "message": "Me"
   },
   "myVault": {
-    "message": "My Safe"
+    "message": "My safe"
   },
   "allVaults": {
     "message": "All safes"
@@ -567,7 +567,7 @@
     "message": "My Safe items"
   },
   "organizationVaultItems": {
-    "message": "Safe Items"
+    "message": "Safe items"
   },
   "filter": {
     "message": "Filter"
@@ -697,7 +697,7 @@
     "message": "Log out"
   },
   "ok": {
-    "message": "OK"
+    "message": "Ok"
   },
   "yes": {
     "message": "Yes"
@@ -1064,7 +1064,7 @@
     "message": "Confirm vault export"
   },
   "exportWarningDesc": {
-    "message": "This export contains your vault data in an unencrypted format. You should not store or send the exported file over insecure channels (such as email). Delete it immediately after you are done using it."
+    "message": "This export contains your vault data in an unencrypted format. You should not store or send the exported file over unsecure channels (such as email). Delete it immediately after you are done using it."
   },
   "encExportKeyWarningDesc": {
     "message": "This export encrypts your data using your account's encryption key. If you ever rotate your account's encryption key you should export again since you will not be able to decrypt this export file."
@@ -1459,7 +1459,7 @@
     "message": "New custom domain"
   },
   "newCustomDomainDesc": {
-    "message": "Enter a list of domains separated by commas. Only \"base\" domains are allowed. Do not enter sub-domains. For example, enter \"google.com\" instead of \"www.google.com\". You can also enter \"androidapp://package.name\" to associate an Android app with other website domains."
+    "message": "Enter a list of domains separated by commas. Only \"base\" domains are allowed. Do not enter sub-domains. For example, enter \"google.com\" instead of \"www.google.com\". You can also enter \"androidapp://package.name\" to associate an android app with other website domains."
   },
   "customDomainX": {
     "message": "Custom domain $INDEX$",
@@ -1477,7 +1477,7 @@
     "message": "Two-step login"
   },
   "twoStepLoginEnforcement": {
-    "message": "Two-step Login Enforcement"
+    "message": "Two-step login enforcement"
   },
   "twoStepLoginDesc": {
     "message": "Secure your account by requiring an additional step when logging in."
@@ -1609,7 +1609,7 @@
     "message": "Web vault, desktop application, CLI, and all browser extensions on a device with a USB port that can accept your YubiKey."
   },
   "twoFactorYubikeySupportMobile": {
-    "message": "Mobile apps on a device with NFC capabilities or a USB port that can accept your YubiKey."
+    "message": "Mobile apps on a device with NFC capabilities or a USB data port that can accept your YubiKey."
   },
   "yubikeyX": {
     "message": "YubiKey $INDEX$",
@@ -1672,13 +1672,13 @@
     "message": "Enter the Bravura Safe application information from your Bravura OneAuth Admin panel."
   },
   "twoFactorHyprApiToken": {
-    "message": "API Token"
+    "message": "API token"
   },
   "twoFactorHyprAppId": {
     "message": "Application ID (case sensitive)"
   },
   "twoFactorHyprServerUrl": {
-    "message": "Server Name"
+    "message": "Server name"
   },
   "twoFactorHyprLinkDuration": {
     "message": "Bravura OneAuth Registration Link Duration (in seconds)"
@@ -1750,7 +1750,7 @@
     "message": "Give the security key a friendly name to identify it."
   },
   "twoFactorU2fPlugInReadKey": {
-    "message": "Plug the security key into your computer's USB port and click the \"Read key\" button."
+    "message": "Plug the security key into your computer's USB port and click the \"Read Key\" button."
   },
   "twoFactorU2fTouchButton": {
     "message": "If the security key has a button, touch it."
@@ -2023,7 +2023,7 @@
     "message": "Your account's credit can be used to make purchases. Any available credit will be automatically applied towards invoices generated for this account."
   },
   "goPremium": {
-    "message": "Go premium",
+    "message": "Go Premium",
     "description": "Another way of saying \"Get a Premium membership\""
   },
   "premiumUpdated": {
@@ -2320,7 +2320,7 @@
     "message": "Updated payment method."
   },
   "purchasePremium": {
-    "message": "Purchase premium"
+    "message": "Purchase Premium"
   },
   "licenseFile": {
     "message": "Licence file"
@@ -3426,7 +3426,7 @@
     "message": "Individual (personal)"
   },
   "enterInstallationId": {
-    "message": "Enter your installation ID"
+    "message": "Enter your installation id"
   },
   "limitSubscriptionDesc": {
     "message": "Set a seat limit for your subscription. Once this limit is reached, you will not be able to invite new members."
@@ -3516,10 +3516,10 @@
     "message": "Adjustments to your subscription will result in pro-rated changes to your billing totals. You cannot invite more than $COUNT$ members without increasing your subscription seats.",
     "placeholders": {
       "count": {
-        "content": "$1",
-        "example": "50"
-      }
-    }
+            "content": "$1",
+            "example": "50"
+          }
+        }
   },
   "seatsToAdd": {
     "message": "Seats to add"
@@ -4200,7 +4200,7 @@
     "message": "Emergency access"
   },
   "emergencyAccessDesc": {
-    "message": "Grant and manage emergency access for trusted contacts. Trusted contacts may request access to either View or Takeover your account in case of a emergency."
+    "message": "Grant and manage emergency access for trusted contacts. Trusted contacts may request access to either View or Takeover your account in case of an emergency."
   },
   "emergencyAccessOwnerWarning": {
     "message": "You are an owner of one or more teams. If you give takeover access to an emergency contact, they will be able to use all your permissions as owner after a takeover."
@@ -4701,7 +4701,7 @@
     "message": "Password reset success!"
   },
   "resetPasswordEnrollmentWarning": {
-    "message": "Enrolment will allow team administrators to change your master password"
+    "message": "Enrolment will allow team administrators to change your master password. Are you sure you want to enroll?"
   },
   "resetPasswordPolicy": {
     "message": "Master password reset"
@@ -5421,7 +5421,7 @@
     "message": "Token rotated"
   },
   "billingSyncDesc": {
-    "message": "Billing sync provides Free Families plans for members and advanced billing capabilities by linking your self-hosted Bravura Safe to the Bravura Safe cloud server."
+    "message": "Billing sync unlocks Families sponsorships and automatic licence syncing on your server. After making updates in the Bravura Safe cloud server, select Sync License to apply changes."
   },
   "billingSyncKeyDesc": {
     "message": "A billing sync token from your cloud team's subscription settings is required to complete this form."
@@ -5845,9 +5845,15 @@
   },
   "pink": {
     "message": "Pink"
+   },
+   "customColor": {
+    "message": "Custom Color"
+   },
+  "selectPlaceholder": {
+    "message": "-- Select --"
   },
-  "customColor": {
-    "message": "Custom Colour"
+  "selectPlaceholder": {
+    "message": "-- Select --"
   },
   "selectPlaceholder": {
     "message": "-- Select --"
@@ -5925,6 +5931,9 @@
     "message": "Search projects",
     "description": "Label for the search bar used to search projects."
   },
+  "selectProjects": {
+    "message": "Select projects"
+  },
   "project": {
     "message": "Project",
     "description": "Similar to collections, projects can be used to group secrets."
@@ -5992,7 +6001,7 @@
   "secretsTrashNoItemsMessage": {
     "message": "There are no secrets in the trash."
   },
-  "serviceAccountsNoItemsMessage": {
+  "serviceAccountsNoItemsMessage":{
     "message": "Create a new service account to get started automating secret access.",
     "description": "Message to encourage the user to start creating service accounts."
   },
@@ -6620,10 +6629,10 @@
     "message": "Export data"
   },
   "exportingOrganizationSecretDataTitle": {
-    "message": "Exporting Organisation Secret Data"
+    "message": "Exporting Team Secret Data"
   },
   "exportingOrganizationSecretDataDescription": {
-    "message": "Only the Secrets Manager data associated with $ORGANIZATION$ will be exported. Items in other products or from other organisations will not be included.",
+    "message": "Only the Secrets Manager data associated with $ORGANIZATION$ will be exported. Items in other products or from other teams will not be included.",
     "placeholders": {
       "ORGANIZATION": {
         "content": "$1",
