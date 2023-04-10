@@ -4,7 +4,7 @@
       <p class="lead text-center mb-4">Bravura Safe Share</p>
     </div>
     <div class="col-12 text-center" *ngIf="creatorIdentifier != null">
-      <p>{{ "sendCreatorIdentifier" | i18n: creatorIdentifier }}</p>
+      <p>{{ "sendCreatorIdentifier" | i18n : creatorIdentifier }}</p>
     </div>
     <div class="col-8" *ngIf="hideEmail">
       <app-callout type="warning" title="{{ 'warning' | i18n }}">
@@ -130,7 +130,7 @@
             </button>
           </ng-container>
           <p *ngIf="expirationDate" class="text-center text-muted">
-            Expires: {{ expirationDate | date: "medium" }}
+            Expires: {{ expirationDate | date : "medium" }}
           </p>
         </div>
       </div>

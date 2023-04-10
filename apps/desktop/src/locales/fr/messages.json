@@ -67,7 +67,7 @@
     "message": "Pièces jointes"
   },
   "viewItem": {
-    "message": "Voir l'élément"
+    "message": "Afficher l'élément"
   },
   "name": {
     "message": "Nom"
@@ -355,7 +355,7 @@
     "message": "Élément modifié"
   },
   "deleteItem": {
-    "message": "Supprimer l'identifiant"
+    "message": "Supprimer l'élément"
   },
   "deleteFolder": {
     "message": "Supprimer le dossier"
@@ -392,7 +392,7 @@
     "message": "Re-générer un mot de passe"
   },
   "copyPassword": {
-    "message": "Copier mot de passe"
+    "message": "Copier le mot de passe"
   },
   "copyUri": {
     "message": "Copier l'URL"
@@ -491,7 +491,7 @@
     "message": "Dossier supprimé"
   },
   "loginOrCreateNewAccount": {
-    "message": "Identifiez-vous ou créez un nouveau compte pour accéder à votre coffre sécurisé."
+    "message": "Connectez-vous ou créez un nouveau compte pour accéder à votre coffre sécurisé."
   },
   "createAccount": {
     "message": "Créer un compte"
@@ -542,7 +542,14 @@
     "message": "Une nouvelle saisie du mot de passe principal est nécessaire."
   },
   "masterPasswordMinlength": {
-    "message": "Le mot de passe principal doit comporter au moins 8 caractères."
+    "message": "Le mot de passe principal doit comporter au moins $VALUE$ caractères.",
+    "description": "The Master Password must be at least a specific number of characters long.",
+    "placeholders": {
+      "value": {
+        "content": "$1",
+        "example": "8"
+      }
+    }
   },
   "masterPassDoesntMatch": {
     "message": "La confirmation du mot de passe principal ne correspond pas."
@@ -770,7 +777,7 @@
     "message": "Ajouter un dossier"
   },
   "view": {
-    "message": "Voir"
+    "message": "Affichage"
   },
   "account": {
     "message": "Compte"
@@ -854,7 +861,7 @@
     "message": "Mot de passe principal invalide"
   },
   "twoStepLoginConfirmation": {
-    "message": "L'authentification à deux facteurs rend votre compte plus sûr en vous demandant de vérifier votre connexion avec un autre dispositif tel qu'une clé de sécurité, une application d'authentification, un SMS, un appel téléphonique ou un courriel. L'authentification à deux facteurs peut être configurée sur le coffre web de bitwarden.com. Voulez-vous visiter le site web maintenant ?"
+    "message": "L'authentification à deux facteurs rend votre compte plus sûr en vous demandant de vérifier votre connexion avec un autre dispositif tel qu'une clé de sécurité, une application d'authentification, un SMS, un appel téléphonique ou un courriel. L'authentification à deux facteurs peut être configurée sur le coffre web de bravurasafe.com. Voulez-vous visiter le site web maintenant ?"
   },
   "twoStepLogin": {
     "message": "Authentification à deux facteurs"
@@ -1060,7 +1067,7 @@
     "message": "Inconnu"
   },
   "copyUsername": {
-    "message": "Copier nom d'utilisateur"
+    "message": "Copier le nom d'utilisateur"
   },
   "copyNumber": {
     "message": "Copier le numéro",
@@ -1116,7 +1123,7 @@
     "message": "Vous êtes un membre Premium !"
   },
   "premiumCurrentMemberThanks": {
-    "message": "Merci de soutenir Bitwarden."
+    "message": "Merci de soutenir Bravura Safe."
   },
   "premiumPrice": {
     "message": "Tout pour seulement $PRICE$ /an !",
@@ -1164,7 +1171,7 @@
     "message": "Zoom arrière"
   },
   "resetZoom": {
-    "message": "Taille réelle"
+    "message": "Réinitialiser le zoom"
   },
   "toggleFullScreen": {
     "message": "Afficher en plein écran"
@@ -1385,7 +1392,7 @@
     "message": "Mot de passe principal faible"
   },
   "weakMasterPasswordDesc": {
-    "message": "Le mot de passe principal que vous avez choisi est faible. Vous devriez utiliser un mot de passe principal fort (ou une phrase de passe) pour protéger correctement votre compte Bitwarden. Êtes-vous sûr de vouloir utiliser ce mot de passe principal ?"
+    "message": "Le mot de passe principal que vous avez choisi est faible. Vous devriez utiliser un mot de passe principal fort (ou une phrase de passe) pour protéger correctement votre compte Bravura Safe. Êtes-vous sûr de vouloir utiliser ce mot de passe principal ?"
   },
   "pin": {
     "message": "Code PIN",
@@ -1483,7 +1490,7 @@
     "message": "Cloner"
   },
   "passwordGeneratorPolicyInEffect": {
-    "message": "Une ou plusieurs politiques d'organisation affectent les paramètres de votre générateur."
+    "message": "Une ou plusieurs politiques de sécurité de l'organisation affectent les paramètres de votre générateur."
   },
   "vaultTimeoutAction": {
     "message": "Action après délai d'expiration du coffre"
@@ -1548,7 +1555,7 @@
     "message": "Confirmer le nouveau mot de passe principal"
   },
   "masterPasswordPolicyInEffect": {
-    "message": "Une ou plusieurs politiques de l'organisation exigent que votre mot de passe principal réponde aux exigences suivantes :"
+    "message": "Une ou plusieurs politiques de sécurité de l'organisation exigent que votre mot de passe principal réponde aux exigences suivantes :"
   },
   "policyInEffectMinComplexity": {
     "message": "Score de complexité minimum de $SCORE$",
@@ -1590,10 +1597,10 @@
     "message": "Votre nouveau mot de passe principal ne répond pas aux exigences en matière de politique de sécurité."
   },
   "acceptPolicies": {
-    "message": "En cochant cette case, vous acceptez les éléments suivants :"
+    "message": "En cochant cette case vous acceptez ce qui suit :"
   },
   "acceptPoliciesRequired": {
-    "message": "Les Conditions d'Utilisation et la Politique de Confidentialité n'ont pas été acceptées."
+    "message": "Les conditions d'utilisation et la politique de confidentialité n'ont pas été acceptées."
   },
   "enableBrowserIntegration": {
     "message": "Activer l'intégration avec le navigateur"
@@ -1605,7 +1612,7 @@
     "message": "Autoriser l'intégration DuckDuckGo au navigateur"
   },
   "enableDuckDuckGoBrowserIntegrationDesc": {
-    "message": "Utiliser votre coffre Bitwarden quand vous naviguez avec DuckDuckGo."
+    "message": "Utiliser votre coffre Bravura Safe quand vous naviguez avec DuckDuckGo."
   },
   "browserIntegrationUnsupportedTitle": {
     "message": "Intégration dans le navigateur non supportée"
@@ -1635,7 +1642,7 @@
     "message": "Veuillez vous assurer que la phrase d'empreinte affichée est identique à celle affichée dans l'extension de navigateur."
   },
   "verifyNativeMessagingConnectionTitle": {
-    "message": "$APPID$ veut se connecter à Bitwarden",
+    "message": "$APPID$ veut se connecter à Bravura Safe",
     "placeholders": {
       "appid": {
         "content": "$1",
@@ -1793,8 +1800,8 @@
     "message": "Copier le lien de ce Share dans mon presse-papiers lors de l'enregistrement."
   },
   "sendDisabled": {
-    "message": "Send supprimé",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "message": "Share supprimé",
+    "description": "'Send' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "En raison d'une politique d'entreprise, vous ne pouvez que supprimer un Share existant.",
@@ -1831,7 +1838,7 @@
     "message": "Masquer mon adresse électronique aux destinataires."
   },
   "sendOptionsPolicyInEffect": {
-    "message": "Une ou plusieurs politiques d'organisation affectent vos options Share."
+    "message": "Une ou plusieurs politiques de sécurité de l'organisation affectent vos options Share."
   },
   "emailVerificationRequired": {
     "message": "Vérification de courriel requise"
@@ -1864,7 +1871,7 @@
     "message": "Minutes"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Les politiques de votre organisation affectent le délai d'expiration de votre coffre. Le délai d'expiration maximal autorisé est de $HOURS$ heure(s) et $MINUTES$ minute(s)",
+    "message": "Les politiques de sécurité de votre organisation affectent le délai d'expiration de votre coffre. Le délai d'expiration autorisé du coffre est de $HOURS$ heure(s) et $MINUTES$ minute(s) maximum",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1889,7 +1896,7 @@
     "message": "Export du coffre supprimé"
   },
   "personalVaultExportPolicyInEffect": {
-    "message": "Une ou plusieurs politiques d'organisation vous empêchent d'exporter votre coffre personnel."
+    "message": "Une ou plusieurs politiques de sécurité de l'organisation vous empêchent d'exporter votre coffre individuel."
   },
   "addAccount": {
     "message": "Ajouter un compte"
@@ -2052,9 +2059,6 @@
   "neverLockWarning": {
     "message": "Êtes-vous sûr de vouloir utiliser l'option \"Jamais\" ? Définir le verrouillage sur \"Jamais\" stocke la clé de chiffrement de votre coffre sur votre appareil. Si vous utilisez cette option, vous devez vous assurer de correctement protéger votre appareil."
   },
-  "cardBrandMir": {
-    "message": "Mir"
-  },
   "vault": {
     "message": "Coffre"
   },
@@ -2098,7 +2102,7 @@
     "message": "Phrase d'empreinte"
   },
   "needAnotherOption": {
-    "message": "La connexion avec l'appareil doit être configurée dans les paramètres de l'application Bitwarden. Besoin d'une autre option ?"
+    "message": "La connexion avec l'appareil doit être configurée dans les paramètres de l'application Bravura Safe. Besoin d'une autre option ?"
   },
   "viewAllLoginOptions": {
     "message": "Afficher toutes les options de connexion"

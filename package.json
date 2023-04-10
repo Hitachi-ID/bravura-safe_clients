@@ -17,7 +17,7 @@
     "lint": "eslint . --cache --cache-strategy content && prettier --check .",
     "lint:fix": "eslint . --cache --cache-strategy content --fix",
     "lint:clear": "rimraf .eslintcache",
-    "prettier": "prettier --write .",
+    "prettier": "prettier --cache --write .",
     "test": "jest",
     "test:watch": "jest --clearCache && jest --watch",
     "test:watch:all": "jest --watchAll",
@@ -121,8 +121,8 @@
     "pkg": "5.8.0",
     "postcss": "^8.4.14",
     "postcss-loader": "^7.0.1",
-    "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.13",
+    "prettier": "2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.5",
     "process": "^0.11.10",
     "regedit": "^3.0.3",
     "rimraf": "^3.0.2",
@@ -206,7 +206,7 @@
     "react": "^18.0.0"
   },
   "lint-staged": {
-    "*": "prettier --ignore-unknown --write",
+    "*": "prettier --cache --ignore-unknown --write",
     "*.ts": "eslint --cache --cache-strategy content --fix"
   },
   "engines": {

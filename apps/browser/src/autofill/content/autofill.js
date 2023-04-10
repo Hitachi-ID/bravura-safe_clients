@@ -44,7 +44,101 @@
   11. Work on array of saved urls instead of just one to determine if we should autofill non-https sites
   12. Remove setting of attribute com.browser.browser.userEdited on user-inputs
   13. Handle null value URLs in urlNotSecure
+  14. Implement new HTML element query logic to be able to traverse into ShadowRoot
   */
+
+  /*
+   * `openOrClosedShadowRoot` is only available to WebExtensions.
+   * We need to use the correct implementation based on browser.
+   */
+  // START MODIFICATION
+  var getShadowRoot;
+
+  if (chrome.dom && chrome.dom.openOrClosedShadowRoot) {
+      // Chromium 88+
+      // https://developer.chrome.com/docs/extensions/reference/dom/
+      getShadowRoot = function (element) {
+          if (!(element instanceof HTMLElement)) {
+              return null;
+          }
+
+          return chrome.dom.openOrClosedShadowRoot(element);
+      };
+  } else {
+      getShadowRoot = function (element) {
+          // `openOrClosedShadowRoot` is currently available for Firefox 63+
+          // https://developer.mozilla.org/en-US/docs/Web/API/Element/openOrClosedShadowRoot
+          // Fallback to usual shadowRoot if it doesn't exist, which will only find open ShadowRoots, not closed ones.
+          // https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot#browser_compatibility
+          return element.openOrClosedShadowRoot || element.shadowRoot;
+      };
+  }
+
+  /*
+   * Returns elements like Document.querySelectorAll does, but traverses the document and shadow
+   * roots, yielding a visited node only if it passes the predicate in filterCallback.
+   */
+  function queryDocAll(doc, rootEl, filterCallback) {
+      var accumulatedNodes = [];
+
+      // mutates accumulatedNodes
+      accumulatingQueryDocAll(doc, rootEl, filterCallback, accumulatedNodes);
+
+      return accumulatedNodes;
+  }
+
+  function accumulatingQueryDocAll(doc, rootEl, filterCallback, accumulatedNodes) {
+      var treeWalker = doc.createTreeWalker(rootEl, NodeFilter.SHOW_ELEMENT);
+      var node;
+
+      while (node = treeWalker.nextNode()) {
+        if (filterCallback(node)) {
+            accumulatedNodes.push(node);
+        }
+
+        // If node contains a ShadowRoot we want to step into it and also traverse all child nodes inside.
+        var nodeShadowRoot = getShadowRoot(node);
+
+        if (!nodeShadowRoot) {
+          continue;
+        }
+
+        // recursively traverse into ShadowRoot
+        accumulatingQueryDocAll(doc, nodeShadowRoot, filterCallback, accumulatedNodes);
+    }
+  }
+
+  /*
+   * Returns an element like Document.querySelector does, but traverses the document and shadow
+   * roots, yielding a visited node only if it passes the predicate in filterCallback.
+   */
+  function queryDoc(doc, rootEl, filterCallback) {
+      var treeWalker = doc.createTreeWalker(rootEl, NodeFilter.SHOW_ELEMENT);
+      var node;
+
+      while (node = treeWalker.nextNode()) {
+          if (filterCallback(node)) {
+              return node;
+          }
+
+          // If node contains a ShadowRoot we want to step into it and also traverse all child nodes inside.
+          var nodeShadowRoot = getShadowRoot(node);
+
+          if (!nodeShadowRoot) {
+            continue;
+          }
+
+          // recursively traverse into ShadowRoot
+          var subQueryResult = queryDoc(doc, nodeShadowRoot, filterCallback);
+
+          if (subQueryResult) {
+              return subQueryResult;
+          }
+      }
+
+      return null;
+  }
+  // END MODIFICATION
 
   function collect(document, undefined) {
       // START MODIFICATION
@@ -198,12 +292,22 @@
                   theLabels = Array.prototype.slice.call(el.labels);
               } else {
                   if (el.id) {
-                      theLabels = theLabels.concat(Array.prototype.slice.call(
-                          queryDoc(theDoc, 'label[for=' + JSON.stringify(el.id) + ']')));
+                      // START MODIFICATION
+                      var elId = JSON.stringify(el.id);
+                      var labelsByReferencedId = queryDocAll(theDoc, theDoc.body, function (node) {
+                          return node.nodeName === 'LABEL' && node.htmlFor === elId;
+                      });
+                      theLabels = theLabels.concat(labelsByReferencedId);
+                      // END MODIFICATION
                   }
 
                   if (el.name) {
-                      docLabel = queryDoc(theDoc, 'label[for=' + JSON.stringify(el.name) + ']');
+                      // START MODIFICATION
+                      var elName = JSON.stringify(el.name);
+                      docLabel = queryDocAll(theDoc, theDoc.body, function (node) {
+                          return node.nodeName === 'LABEL' && node.htmlFor === elName;
+                      });
+                      // END MODIFICATION
 
                       for (var labelIndex = 0; labelIndex < docLabel.length; labelIndex++) {
                           if (-1 === theLabels.indexOf(docLabel[labelIndex])) {
@@ -260,28 +364,21 @@
           function toLowerString(s) {
               return 'string' === typeof s ? s.toLowerCase() : ('' + s).toLowerCase();
           }
-
-          /**
-           * Query the document `doc` for elements matching the selector `selector`
-           * @param {Document} doc 
-           * @param {string} query 
-           * @returns {HTMLElement[]} An array of elements matching the selector
-           */
-          function queryDoc(doc, query) {
-              var els = [];
-              try {
-                  els = doc.querySelectorAll(query);
-              } catch (e) { }
-              return els;
-          }
-
+          // START MODIFICATION
+          // renamed queryDoc to queryDocAll and moved to top
+          // END MODIFICATION
           // end helpers
 
           var theView = theDoc.defaultView ? theDoc.defaultView : window,
               passwordRegEx = RegExp('((\\\\b|_|-)pin(\\\\b|_|-)|password|passwort|kennwort|(\\\\b|_|-)passe(\\\\b|_|-)|contraseña|senha|密码|adgangskode|hasło|wachtwoord)', 'i');
 
           // get all the docs
-          var theForms = Array.prototype.slice.call(queryDoc(theDoc, 'form')).map(function (formEl, elIndex) {
+          // START MODIFICATION
+          var formNodes = queryDocAll(theDoc, theDoc.body, function (el) {
+              return el.nodeName === 'FORM';
+          });
+          var theForms = formNodes.map(function (formEl, elIndex) {
+          // END MODIFICATION
               var op = {},
                   formOpId = '__form__' + elIndex;
 
@@ -427,7 +524,6 @@
               title: theDoc.title,
               url: theView.location.href,
               documentUrl: theDoc.location.href,
-              tabUrl: theView.location.href,
               forms: function (forms) {
                   var formObj = {};
                   forms.forEach(function (f) {
@@ -440,7 +536,11 @@
           };
 
           // get proper page title. maybe they are using the special meta tag?
-          var theTitle = document.querySelector('[data-onepassword-title]')
+          // START MODIFICATION
+          var theTitle = queryDoc(theDoc, theDoc, function (node) {
+              return node.hasAttribute('data-onepassword-title');
+          });
+          // END MODIFICATION
           if (theTitle && theTitle.dataset[DISPLAY_TITLE_ATTRIBUE]) {
               pageDetails.displayTitle = theTitle.dataset.onepasswordTitle;
           }
@@ -556,7 +656,10 @@
           // walk the dom tree until we reach the top
           for (var elStyle; theEl && theEl !== document;) {
               // Calculate the style of the element
-              elStyle = el.getComputedStyle ? el.getComputedStyle(theEl, null) : theEl.style;
+              // START MODIFICATION
+              elStyle = el.getComputedStyle && theEl instanceof Element ? el.getComputedStyle(theEl, null) : theEl.style;
+              // END MODIFICATION
+
               // If there's no computed style at all, we're done, as we know that it's not hidden
               if (!elStyle) {
                   return true;
@@ -666,6 +769,28 @@
           }
       }
 
+      var ignoredInputTypes = {
+        hidden: true,
+        submit: true,
+        reset: true,
+        button: true,
+        image: true,
+        file: true,
+      };
+
+      /*
+       * inputEl MUST BE an instanceof HTMLInputElement, else inputEl.type.toLowerCase will throw an error
+       */
+      function isRelevantInputField(inputEl) {
+        if (inputEl.hasAttribute('data-faignore')) {
+          return false;
+        }
+
+        const isIgnoredInputType = ignoredInputTypes.hasOwnProperty(inputEl.type.toLowerCase());
+
+        return !isIgnoredInputType;
+      }
+
       /**
        * Query `theDoc` for form elements that we can use for autofill, ranked by importance and limited by `limit`
        * @param {Document} theDoc The Document to query
@@ -674,13 +799,19 @@
        */
       function getFormElements(theDoc, limit) {
           // START MODIFICATION
-          var els = [];
-          try {
-              var elsList = theDoc.querySelectorAll('input:not([type="hidden"]):not([type="submit"]):not([type="reset"])' +
-                  ':not([type="button"]):not([type="image"]):not([type="file"]):not([data-faignore]), select, ' +
-                  'span[data-bwautofill]');
-              els = Array.prototype.slice.call(elsList);
-          } catch (e) { }
+
+          var els = queryDocAll(theDoc, theDoc.body, function (el) {
+              switch (el.nodeName) {
+                  case 'SELECT':
+                      return true;
+                  case 'SPAN':
+                      return el.hasAttribute('data-bwautofill');
+                  case 'INPUT':
+                      return isRelevantInputField(el);
+                  default:
+                      return false;
+              }
+          });
 
           if (!limit || els.length <= limit) {
               return els;
@@ -710,8 +841,8 @@
           }
 
           return returnEls;
-          // END MODIFICATION
       }
+          // END MODIFICATION
 
       /**
        * Focus the element `el` and optionally restore its original value
@@ -740,6 +871,12 @@
       var markTheFilling = true,
           animateTheFilling = true;
 
+      function queryPasswordInputs() {
+        return queryDocAll(document, document.body, function (el) {
+          return el.nodeName === 'INPUT' && el.type.toLowerCase() === 'password';
+        })
+      }
+
       // Check if URL is not secure when the original saved one was
       function urlNotSecure(savedURLs) {
           var passwordInputs = null;
@@ -747,7 +884,7 @@
               return false;
           }
 
-          return savedURLs.some(url => url?.indexOf('https://') === 0) && 'http:' === document.location.protocol && (passwordInputs = document.querySelectorAll('input[type=password]'),
+          return savedURLs.some(url => url?.indexOf('https://') === 0) && 'http:' === document.location.protocol && (passwordInputs = queryPasswordInputs(),
               0 < passwordInputs.length && (confirmResult = confirm('Warning: This is an unsecured HTTP page, and any information you submit can potentially be seen and changed by others. This Login was originally saved on a secure (HTTPS) page.\n\nDo you still wish to fill this login?'),
                   0 == confirmResult)) ? true : false;
       }
@@ -772,6 +909,19 @@
 
           if (isSandboxed() || urlNotSecure(fillScript.savedUrls)) {
               return;
+          }
+
+          if (fillScript.untrustedIframe) {
+            // confirm() is blocked by sandboxed iframes, but we don't want to fill sandboxed iframes anyway.
+            // If this occurs, confirm() returns false without displaying the dialog box, and autofill will be aborted.
+            // The browser may print a message to the console, but this is not a standard error that we can handle.
+            var acceptedIframeWarning = confirm("The form is hosted by a different domain than the URI " +
+                "of your saved login. Choose OK to auto-fill anyway, or Cancel to stop. " +
+                "To prevent this warning in the future, save this URI, " +
+                window.location.hostname + ", to your login.");
+            if (!acceptedIframeWarning) {
+              return;
+            }
           }
 
           doOperation = function (ops, theOperation) {
@@ -1086,9 +1236,12 @@
        */
       function getAllFields() {
           var r = RegExp('((\\\\b|_|-)pin(\\\\b|_|-)|password|passwort|kennwort|passe|contraseña|senha|密码|adgangskode|hasło|wachtwoord)', 'i');
-          return Array.prototype.slice.call(selectAllFromDoc("input[type='text']")).filter(function (el) {
-              return el.value && r.test(el.value);
-          }, this);
+          return queryDocAll(document, document.body, function (el) {
+              return el.nodeName === 'INPUT' &&
+                  el.type.toLowerCase() === 'text' &&
+                  el.value &&
+                  r.test(el.value);
+          });
       }
 
       /**
@@ -1113,7 +1266,9 @@
               a: {
                   currentEl = el;
                   for (var owner = el.ownerDocument, owner = owner ? owner.defaultView : {}, theStyle; currentEl && currentEl !== document;) {
-                      theStyle = owner.getComputedStyle ? owner.getComputedStyle(currentEl, null) : currentEl.style;
+                      // START MODIFICATION
+                      theStyle = owner.getComputedStyle && currentEl instanceof Element ? owner.getComputedStyle(currentEl, null) : currentEl.style;
+                      // END MODIFICATION
                       if (!theStyle) {
                           currentEl = true;
                           break a;
@@ -1147,12 +1302,19 @@
           }
           try {
               // START MODIFICATION
-              var elements = Array.prototype.slice.call(selectAllFromDoc('input, select, button, ' +
-                  'span[data-bwautofill]'));
-              // END MODIFICATION
-              var filteredElements = elements.filter(function (o) {
-                  return o.opid == theOpId;
+              var filteredElements = queryDocAll(document, document.body, function (el) {
+                  switch (el.nodeName) {
+                      case 'INPUT':
+                      case 'SELECT':
+                      case 'BUTTON':
+                          return el.opid === theOpId;
+                      case 'SPAN':
+                          return el.hasAttribute('data-bwautofill') && el.opid === theOpId;
+                  }
+
+                  return false;
               });
+              // END MODIFICATION
               if (0 < filteredElements.length) {
                   theElement = filteredElements[0],
                       1 < filteredElements.length && console.warn('More than one element found with opid ' + theOpId);
@@ -1173,11 +1335,11 @@
        * @returns 
        */
       function selectAllFromDoc(theSelector) {
-          var d = document, elements = [];
-          try {
-              elements = d.querySelectorAll(theSelector);
-          } catch (e) { }
-          return elements;
+          // START MODIFICATION
+          return queryDocAll(document, document, function(node) {
+              return node.matches(theSelector);
+          });
+          // END MODIFICATION
       }
 
       /**

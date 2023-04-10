@@ -368,10 +368,6 @@ export class SettingsComponent implements OnInit {
     this.router.navigate(["/export"]);
   }
 
-  help() {
-    BrowserApi.createNewTab("https://bravurasecuritydocs.com/safe/#/home/MY_SAFE_/10/11");
-  }
-
   about() {
     this.modalService.open(AboutComponent);
   }
