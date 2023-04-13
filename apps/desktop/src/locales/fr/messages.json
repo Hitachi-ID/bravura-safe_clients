@@ -1711,7 +1711,7 @@
   },
   "maxAccessCount": {
     "message": "Nombre maximum d'accès",
-    "description": "This text will be displayed after a Send has been accessed the maximum amount of times."
+    "description": "This text will be displayed after a Share has been accessed the maximum amount of times."
   },
   "maxAccessCountDesc": {
     "message": "Si défini, les utilisateurs ne seront plus en mesure d'accéder à ce Share une fois que le nombre maximum d'accès sera atteint.",
@@ -1801,7 +1801,7 @@
   },
   "sendDisabled": {
     "message": "Share supprimé",
-    "description": "'Send' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
+    "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "En raison d'une politique d'entreprise, vous ne pouvez que supprimer un Share existant.",

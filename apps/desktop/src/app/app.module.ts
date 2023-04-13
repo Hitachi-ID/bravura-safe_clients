@@ -2,7 +2,6 @@ import "zone.js/dist/zone";
 
 import { registerLocaleData } from "@angular/common";
 import localeEnGb from "@angular/common/locales/en-GB";
-import localeEnIn from "@angular/common/locales/en-IN";
 import localeFr from "@angular/common/locales/fr";
 import { NgModule } from "@angular/core";
 
@@ -57,7 +56,6 @@ import { CollectionsComponent } from "./vault/collections.component";
 import { ExportComponent } from "./vault/export.component";
 
 registerLocaleData(localeEnGb, "en-GB");
-registerLocaleData(localeEnIn, "en-IN");
 registerLocaleData(localeFr, "fr");
 
 @NgModule({

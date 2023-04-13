@@ -1490,7 +1490,7 @@
     "message": "Política de Login em Duas Etapas"
   },
   "twoStepLoginOrganizationDuoDesc": {
-    "message": "Para aplicar o Login em Duas Etapas pelo Duo, use as opções abaixo."
+    "message": "Para aplicar o Login em Duas Etapas, use as opções abaixo."
   },
   "twoStepLoginOrganizationSsoDesc": {
     "message": "Se você tem SSO configurado ou planeja ter, o Login em Duas Etapas já pode ser requerido por meio do seu Provedor de Identidade."
@@ -1798,7 +1798,7 @@
   },
   "orgsReportsDesc": {
     "message": "Identifique e feche as brechas de segurança nas contas da sua organização clicando nos relatórios abaixo.",
-    "description": "Vault health reports can be used to evaluate the security of your Bravura Safe individual or organization vault."
+    "description": "Vault health reports can be used to evaluate the security of your Bravura Safe individual or team vault."
   },
   "unsecuredWebsitesReport": {
     "message": "Relatório de Sites Inseguros"
@@ -2288,7 +2288,7 @@
     "placeholders": {
       "statement_name": {
         "content": "$1",
-        "example": "BITWARDEN"
+        "example": "Bravura Safe"
       }
     }
   },
@@ -2724,7 +2724,7 @@
     "message": "Proprietário"
   },
   "ownerDesc": {
-    "message": "O maior usuário de acesso que pode gerenciar todos os aspectos da sua organização."
+    "message": "O maior usuário de acesso que pode gerenciar todos os aspectos da sua organização"
   },
   "clientOwnerDesc": {
     "message": "Este usuário deve ser independente do Provedor. Se o Provedor estiver desassociado da organização, este usuário manterá a propriedade da organização."
@@ -6440,7 +6440,7 @@
     "message": "Automatic Domain Verification"
   },
   "automaticDomainVerificationProcess": {
-    "message": "Bravura Safe will attempt to verify the domain 3 times during the first 72 hours. If the domain can’t be verified, check the DNS record in your host and manually verify. The domain will be removed from your organization in 7 days if it is not verified"
+    "message": "Bravura Safe will attempt to verify the domain 3 times during the first 72 hours. If the domain can’t be verified, check the DNS record in your host and manually verify. The domain will be removed from your team in 7 days if it is not verified"
   },
   "invalidDomainNameMessage": {
     "message": "Input is not a valid format. Format: mydomain.com. Subdomains require separate entries to be verified."

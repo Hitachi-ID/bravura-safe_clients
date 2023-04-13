@@ -1490,7 +1490,7 @@
     "message": "Politique d'authentification à deux facteurs"
   },
   "twoStepLoginOrganizationDuoDesc": {
-    "message": "Pour imposer l'authentification à deux facteurs via Duo, utilisez les options ci-dessous."
+    "message": "Pour imposer l'authentification à deux facteurs, utilisez les options ci-dessous."
   },
   "twoStepLoginOrganizationSsoDesc": {
     "message": "Si vous avez configuré SSO ou si vous prévoyez de le faire, l'authentification à deux facteurs peut déjà être imposée via votre fournisseur d'identité."
@@ -2288,7 +2288,7 @@
     "placeholders": {
       "statement_name": {
         "content": "$1",
-        "example": "BITWARDEN"
+        "example": "Bravura Safe"
       }
     }
   },
@@ -2724,7 +2724,7 @@
     "message": "Propriétaire"
   },
   "ownerDesc": {
-    "message": "L’utilisateur avec l’accès le plus élevé qui peut gérer tous les aspects de votre organisation."
+    "message": "L’utilisateur avec l’accès le plus élevé qui peut gérer tous les aspects de votre organisation"
   },
   "clientOwnerDesc": {
     "message": "Cet utilisateur doit être indépendant du fournisseur. Si le fournisseur est dissocié de l'organisation, cet utilisateur conservera la propriété de l'organisation."
@@ -4582,7 +4582,7 @@
     }
   },
   "viewSendHiddenEmailWarning": {
-    "message": "L'utilisateur de Bravura Safe qui a créé ce Send a choisi de masquer son adresse électronique. Vous devriez vous assurer que vous faites confiance à la source de ce lien avant d'utiliser ou de télécharger son contenu.",
+    "message": "L'utilisateur de Bravura Safe qui a créé ce Share a choisi de masquer son adresse électronique. Vous devriez vous assurer que vous faites confiance à la source de ce lien avant d'utiliser ou de télécharger son contenu.",
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "viewSendDownloadFileWarning": {

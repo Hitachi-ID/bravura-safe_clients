@@ -1711,7 +1711,7 @@
   },
   "maxAccessCount": {
     "message": "Maximale Zugriffsanzahl",
-    "description": "This text will be displayed after a Send has been accessed the maximum amount of times."
+    "description": "This text will be displayed after a Share has been accessed the maximum amount of times."
   },
   "maxAccessCountDesc": {
     "message": "Falls aktiviert, können Benutzer nicht mehr auf dieses Share zugreifen, sobald die maximale Zugriffsanzahl erreicht ist.",

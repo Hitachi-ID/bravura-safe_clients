@@ -20,7 +20,6 @@ export class I18nService extends BaseI18nService {
       "en",
       "de",
       "en-GB",
-      "en-IN",
       "es",
       "fr",
       "ja",

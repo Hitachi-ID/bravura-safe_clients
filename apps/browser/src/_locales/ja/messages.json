@@ -1653,7 +1653,7 @@
   },
   "maxAccessCountReached": {
     "message": "最大アクセス数に達しました",
-    "description": "This text will be displayed after a Send has been accessed the maximum amount of times."
+    "description": "This text will be displayed after a Share has been accessed the maximum amount of times."
   },
   "expired": {
     "message": "有効期限切れ"
