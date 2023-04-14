@@ -2288,7 +2288,7 @@
     "placeholders": {
       "statement_name": {
         "content": "$1",
-        "example": "BITWARDEN"
+        "example": "Bravura Safe"
       }
     }
   },
@@ -2724,7 +2724,7 @@
     "message": "Propietario"
   },
   "ownerDesc": {
-    "message": "El usuario de acceso más alto que puede administrar todos los aspectos de su organización."
+    "message": "El usuario de acceso más alto que puede administrar todos los aspectos de su organización"
   },
   "clientOwnerDesc": {
     "message": "Este usuario debe ser independiente del Proveedor. Si el Proveedor está desasociado con la organización, este usuario mantendrá la propiedad de la organización."

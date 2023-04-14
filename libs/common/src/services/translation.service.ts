@@ -10,7 +10,6 @@ export abstract class TranslationService implements TranslationServiceAbstractio
     ["de", "Deutsch"],
     ["en", "English"],
     ["en-GB", "English (British)"],
-    ["en-IN", "English (India)"],
     ["es", "español"],
     ["fr", "français"],
     ["ja", "日本語"],

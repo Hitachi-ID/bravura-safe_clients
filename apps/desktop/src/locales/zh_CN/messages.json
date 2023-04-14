@@ -1711,7 +1711,7 @@
   },
   "maxAccessCount": {
     "message": "最大访问次数",
-    "description": "This text will be displayed after a Send has been accessed the maximum amount of times."
+    "description": "This text will be displayed after a Share has been accessed the maximum amount of times."
   },
   "maxAccessCountDesc": {
     "message": "设置后，当达到最大访问次数时用户将不再能够访问此 Share。",

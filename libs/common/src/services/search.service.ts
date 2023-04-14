@@ -16,7 +16,7 @@ export class SearchService implements SearchServiceAbstraction {
   indexedEntityId?: string = null;
   private indexing = false;
   private index: lunr.Index = null;
-  private readonly immediateSearchLocales: string[] = ["zh-CN", "zh-TW", "ja", "ko", "vi"];
+  private readonly immediateSearchLocales: string[] = ["zh-CN", "ja"];
   private readonly defaultSearchableMinLength: number = 2;
   private searchableMinLength: number = this.defaultSearchableMinLength;
 

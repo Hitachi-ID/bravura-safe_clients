@@ -3,7 +3,6 @@ export const SupportedTranslationLocales: string[] = [
   "en",
   "de",
   "en-GB",
-  "en-IN",
   "es",
   "fr",
   "ja",
