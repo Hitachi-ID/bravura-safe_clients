@@ -63,6 +63,7 @@ export class OrganizationUserServiceImplementation implements OrganizationUserSe
     options?: {
       includeCollections?: boolean;
       includeGroups?: boolean;
+      includeProviders?: boolean;
     }
   ): Promise<ListResponse<OrganizationUserUserDetailsResponse>> {
     const params = new URLSearchParams();
@@ -72,6 +73,9 @@ export class OrganizationUserServiceImplementation implements OrganizationUserSe
     }
     if (options?.includeGroups) {
       params.set("includeGroups", "true");
+    }
+    if (options?.includeProviders) {
+      params.set("includeTwoFactorProvidersEnabled", "true");
     }
 
     const r = await this.apiService.send(

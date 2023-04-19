@@ -47,6 +47,7 @@ export class OrganizationUserUserDetailsResponse extends OrganizationUserRespons
   avatarColor: string;
   twoFactorEnabled: boolean;
   usesKeyConnector: boolean;
+  twoFactorProvidersEnabled: Map<string, object>;
 
   constructor(response: any) {
     super(response);
@@ -55,6 +56,7 @@ export class OrganizationUserUserDetailsResponse extends OrganizationUserRespons
     this.avatarColor = this.getResponseProperty("AvatarColor");
     this.twoFactorEnabled = this.getResponseProperty("TwoFactorEnabled");
     this.usesKeyConnector = this.getResponseProperty("UsesKeyConnector") ?? false;
+    this.twoFactorProvidersEnabled = this.getResponseProperty("twoFactorProvidersEnabled");
   }
 }
 

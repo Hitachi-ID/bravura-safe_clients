@@ -13,6 +13,7 @@ import { LogService } from "@bitwarden/common/abstractions/log.service";
 import { FileDownloadService } from "@bitwarden/common/abstractions/fileDownload/fileDownload.service";
 import { NgxCaptureService } from "ngx-capture";
 import { OrganizationService } from "@bitwarden/common/abstractions/organization/organization.service.abstraction";
+import { OrganizationUserService } from "@bitwarden/common/abstractions/organization-user/organization-user.service";
 import { SyncService } from "@bitwarden/common/vault/abstractions/sync/sync.service.abstraction";
 
 import { SecurityAssessmentReportComponent as BaseSecurityAssessmentReportComponent } from "../../reports/pages/security-assessment-report.component";
@@ -21,6 +22,7 @@ import { ReusedPasswordsReportComponent } from "./reused-passwords-report.compon
 import { WeakPasswordsReportComponent } from "./weak-passwords-report.component";
 import { UnsecuredWebsitesReportComponent } from "./unsecured-websites-report.component";
 import { InactiveTwoFactorReportComponent } from "./inactive-two-factor-report.component";
+import { ConfiguredTwoFactorReportComponent } from "./configured-two-factor-report.component";
 
 @Component({
   selector: "app-org-security-assessment-report",
@@ -38,6 +40,7 @@ export class SecurityAssessmentReportComponent extends BaseSecurityAssessmentRep
     messagingService: MessagingService,
     stateService: StateService,
     private organizationService: OrganizationService,
+    private organizationUserService: OrganizationUserService,
     private route: ActivatedRoute,
     passwordRepromptService: PasswordRepromptService,
     passwordGenerationService: PasswordGenerationServiceAbstraction,
@@ -66,6 +69,7 @@ export class SecurityAssessmentReportComponent extends BaseSecurityAssessmentRep
     this.weakPasswords = new WeakPasswordsReportComponent(cipherService, passwordGenerationService, modalService, messagingService, route, organizationService, passwordRepromptService);
     this.unsecuredWebsites = new UnsecuredWebsitesReportComponent(cipherService, modalService, messagingService, route, organizationService, passwordRepromptService);
     this.inactiveTwoFactor = new InactiveTwoFactorReportComponent(cipherService, modalService, messagingService, route, logService, passwordRepromptService, organizationService);
+    this.configuredTwoFactor = new ConfiguredTwoFactorReportComponent(auditService, stateService, route, apiService, organizationService, organizationUserService);
   }
 
   async ngOnInit() {
@@ -74,6 +78,7 @@ export class SecurityAssessmentReportComponent extends BaseSecurityAssessmentRep
     await this.weakPasswords.ngOnInit();
     await this.unsecuredWebsites.ngOnInit();
     await this.inactiveTwoFactor.ngOnInit();
+    await this.configuredTwoFactor.ngOnInit();
 
     this.route.parent.parent.params.subscribe(async (params) => {
       this.organizationId = params.organizationId;
@@ -87,5 +92,11 @@ export class SecurityAssessmentReportComponent extends BaseSecurityAssessmentRep
   async getCiphersSize() {
     const ciphers = await this.cipherService.getAllFromApiForOrganization(this.organizationId);
     this.ciphersSize = ciphers.length;
+  }
+
+  async loadConfiguredTwoFactor() {
+    await this.configuredTwoFactor.load();
+    this.highlightedItemsTotal = this.configuredTwoFactor.unconfiguredUsersTotal;
+    this.configuredTwoFactorLoaded = true;
   }
 }

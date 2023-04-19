@@ -1,0 +1,58 @@
+<div class="page-header">
+  <h1>
+    {{ "configured2faReport" | i18n }}
+    <small *ngIf="hasLoaded && loading">
+      <i
+        class="fa fa-spinner fa-spin text-muted"
+        title="{{ 'loading' | i18n }}"
+        aria-hidden="true"
+      ></i>
+      <span class="sr-only">{{ "loading" | i18n }}</span>
+    </small>
+  </h1>
+</div>
+<p>{{ "configured2faReportDesc" | i18n }}</p>
+<div *ngIf="!hasLoaded && loading">
+  <i
+    class="fa fa-spinner fa-spin text-muted"
+    title="{{ 'loading' | i18n }}"
+    aria-hidden="true"
+  ></i>
+  <span class="sr-only">{{ "loading" | i18n }}</span>
+</div>
+<div class="mt-4" *ngIf="hasLoaded">
+  <app-callout type="success" title="{{ 'configured2faAssessmentUsers' | i18n }}" *ngIf="!unconfiguredUsersTotal">
+    {{ "allUsersConfigured2fa" | i18n }}
+  </app-callout>
+  <app-callout type="danger" title="{{ 'usersNoConfigured2faFound' | i18n }}" *ngIf="unconfiguredUsersTotal">
+    {{ "usersNoConfigured2faFoundDesc" | i18n : (unconfiguredUsersTotal | number) }}
+  </app-callout>
+  <bit-table class="table table-hover table-list">
+    <ng-container header>
+      <tr>
+        <th bitCell>{{ "name" | i18n }}</th>
+        <th bitCell>{{ "configured2faProviders" | i18n }}</th>
+      </tr>
+    </ng-container>
+
+    <ng-template body>
+    <tr bitRow *ngFor="let u of users" alignContent="middle">
+      <td bitCell>
+        <div>
+          <button bitLink>{{ u.name ?? u.email }}</button>
+        </div>
+        <div class="tw-text-sm tw-text-muted" *ngIf="u.name">
+          {{ u.email }}
+        </div>
+      </td>
+      <td bitCell>
+        <div class="logo-2fa d-flex" *ngIf="u.providers">
+          <span *ngFor="let p of u.providers">
+            <img [class]="'mfaType' + p.type + 'Report'" [alt]="p.name + ' logo'" />
+          </span>
+        </div>
+      </td>
+    </tr>
+    </ng-template>
+  </bit-table>
+</div>

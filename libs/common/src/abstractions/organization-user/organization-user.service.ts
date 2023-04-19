@@ -53,6 +53,7 @@ export abstract class OrganizationUserService {
     options?: {
       includeCollections?: boolean;
       includeGroups?: boolean;
+      includeProviders?: boolean;
     }
   ): Promise<ListResponse<OrganizationUserUserDetailsResponse>>;
 
