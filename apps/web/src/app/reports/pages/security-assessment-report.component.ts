@@ -21,6 +21,7 @@ import { ReusedPasswordsReportComponent } from "./reused-passwords-report.compon
 import { WeakPasswordsReportComponent } from "./weak-passwords-report.component";
 import { UnsecuredWebsitesReportComponent } from "./unsecured-websites-report.component";
 import { InactiveTwoFactorReportComponent } from "./inactive-two-factor-report.component";
+import { ConfiguredTwoFactorReportComponent } from "./configured-two-factor-report.component";
 
 @Component({
   selector: "app-security-assessment-report",
@@ -43,6 +44,9 @@ export class SecurityAssessmentReportComponent implements OnInit {
   protected inactiveTwoFactor: InactiveTwoFactorReportComponent;
   protected inactiveTwoFactorCiphers: CipherView[] = [];
   protected inactiveTwoFactorLoaded = false;
+  protected configuredTwoFactor: ConfiguredTwoFactorReportComponent;
+  protected highlightedItemsTotal = 0;
+  protected configuredTwoFactorLoaded = false;
   protected pageLoaded = false;
   protected executionDate: Date;
   protected userEmail = "";
@@ -71,6 +75,7 @@ export class SecurityAssessmentReportComponent implements OnInit {
     this.weakPasswords = new WeakPasswordsReportComponent(cipherService, passwordGenerationService, modalService, messagingService, passwordRepromptService);
     this.unsecuredWebsites = new UnsecuredWebsitesReportComponent(cipherService, modalService, messagingService, passwordRepromptService);
     this.inactiveTwoFactor = new InactiveTwoFactorReportComponent(cipherService, modalService, messagingService, logService, passwordRepromptService);
+    this.configuredTwoFactor = new ConfiguredTwoFactorReportComponent(auditService, stateService, apiService);
   }
 
   async ngOnInit() {
@@ -78,11 +83,12 @@ export class SecurityAssessmentReportComponent implements OnInit {
     await this.getCiphersSize();
     if (this.ciphersSize > 0) {
       await Promise.all([ this.loadExposedPasswords(), this.loadReusedPasswords(), this.loadWeakPasswords(), this.loadUnsecuredWebsites(), this.loadInactiveTwoFactor() ]);
+    }
+    await this.loadConfiguredTwoFactor();
       this.executionDate = new Date();
 
       const profile = await this.apiService.getProfile();
       this.userEmail = profile.email;
-    }
     this.pageLoaded = true;
   }
 
@@ -120,6 +126,12 @@ export class SecurityAssessmentReportComponent implements OnInit {
     await this.inactiveTwoFactor.load();
     this.inactiveTwoFactorCiphers = this.inactiveTwoFactor.ciphers;
     this.inactiveTwoFactorLoaded = true;
+  }
+
+  async loadConfiguredTwoFactor() {
+    await this.configuredTwoFactor.load();
+    this.highlightedItemsTotal = this.configuredTwoFactor.configuredProvidersTotal;
+    this.configuredTwoFactorLoaded = true;
   }
 
   async downloadAssessment() {

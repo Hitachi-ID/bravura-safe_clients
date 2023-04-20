@@ -559,6 +559,12 @@ table.assessment-report {
     }
     font-weight: bold;
   }
+  span.total-items-success {
+    @include themify($themes) {
+      color: themed("success");
+    }
+    font-weight: bold;
+  }
   a {
     text-decoration: none;
   }

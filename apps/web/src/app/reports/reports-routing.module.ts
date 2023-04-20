@@ -12,6 +12,7 @@ import { ReusedPasswordsReportComponent } from "./pages/reused-passwords-report.
 import { UnsecuredWebsitesReportComponent } from "./pages/unsecured-websites-report.component";
 import { WeakPasswordsReportComponent } from "./pages/weak-passwords-report.component";
 import { SecurityAssessmentReportComponent } from "./pages/security-assessment-report.component";
+import { ConfiguredTwoFactorReportComponent } from "./pages/configured-two-factor-report.component";
 import { ReportsLayoutComponent } from "./reports-layout.component";
 
 const routes: Routes = [
@@ -55,6 +56,12 @@ const routes: Routes = [
         path: "inactive-two-factor-report",
         component: InactiveTwoFactorReportComponent,
         data: { titleId: "inactive2faReport" },
+        canActivate: [HasPremiumGuard],
+      },
+      {
+        path: "configured-two-factor-report",
+        component: ConfiguredTwoFactorReportComponent,
+        data: { titleId: "configured2faReport" },
         canActivate: [HasPremiumGuard],
       },
     ],

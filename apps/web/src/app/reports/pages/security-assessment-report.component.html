@@ -5,17 +5,26 @@
       <h1>{{ "securityAssessmentReport" | i18n }}</h1>
     </div>
 
-    <div *ngIf="pageLoaded && ciphersSize == 0" class="no-items">
-      <bit-icon [icon]="noItemIcon" aria-hidden="true"></bit-icon>
-      <p>{{ "noItemsToRunReportOn" | i18n }}</p>
-    </div>
+    <small *ngIf="!pageLoaded">
+      <i
+        class="fa fa-spinner fa-spin text-muted"
+        title="{{ 'loading' | i18n }}"
+        aria-hidden="true"
+      ></i>
+      <span class="sr-only">{{ "loading" | i18n }}</span>
+    </small>
 
-    <span *ngIf="ciphersSize>0">
+    <div *ngIf="pageLoaded">
       <p>
       <span *ngIf="!organizationName">{{ "userSecurityAssessmentReportDesc" | i18n }}<b>{{userEmail}}</b></span>
       <span *ngIf="organizationName">{{ "teamSecurityAssessmentReportDesc" | i18n }}<b>{{organizationName}}</b></span>
       </p>
 
+      <span *ngIf="ciphersSize == 0">
+        <b><p>{{ "noItemsToRunReportOn" | i18n }}</p></b>
+      </span>
+
+      <span *ngIf="ciphersSize>0">
       <table class="assessment-report">
         <tbody>
           <tr class="first-row">
@@ -133,15 +142,61 @@
           </tr>
         </tbody>
       </table>
+      </span> <!-- ciphersSize>0 -->
+
+      <table class="assessment-report">
+        <tbody>
+          <tr class="first-row">
+            <td class="tw-p-1">
+              <div *ngIf="!configuredTwoFactorLoaded">
+                <i
+                  class="fa fa-spinner fa-spin text-muted"
+                  title="{{ 'loading' | i18n }}"
+                  aria-hidden="true"
+                ></i>
+                <span class="sr-only">{{ "loading" | i18n }}</span>
+              </div>
+              <div class="mt-4" *ngIf="configuredTwoFactorLoaded">
+                <a routerLink="../configured-two-factor-report" class="tw-block hover:tw-scale-105">
+                  <h2>{{ "configured2faReport" | i18n }}</h2>
+
+                  <span *ngIf="!organizationName">
+                    <app-callout type="success" title="{{ 'configured2faAssessment' | i18n }}" *ngIf="highlightedItemsTotal">
+                      {{ "totalProvidersAssessment" | i18n }} <span class="total-items-success">{{highlightedItemsTotal}}</span><br>
+                    </app-callout>
+                    <app-callout type="danger" title="{{ 'noConfigured2faFound' | i18n }}" *ngIf="!highlightedItemsTotal">
+                      {{ "noConfigured2faAssessmentRecommendation" | i18n }}
+                    </app-callout>
+                  </span>
+
+                  <span *ngIf="organizationName">
+                    <app-callout type="success" title="{{ 'configured2faAssessmentUsers' | i18n }}" *ngIf="!highlightedItemsTotal">
+                      {{ "allUsersConfigured2fa" | i18n }}
+                    </app-callout>
+                    <app-callout type="danger" title="{{ 'usersNoConfigured2faFound' | i18n }}" *ngIf="highlightedItemsTotal">
+                      {{ "totalUsersAssessment" | i18n }} <span class="total-items-danger">{{highlightedItemsTotal}}</span><br>
+                      {{ "usersNoConfigured2faAssessmentRecommendation" | i18n }}
+                    </app-callout>
+                  </span>
+
+                </a>
+              </div>
+            </td>
+            <td class="tw-p-1">
+            </td>
+            <td class="tw-p-1">
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <p><p>
       <small>{{ "reportExecutedOn" | i18n }}{{ executionDate | date:'medium' }}</small>
       <small *ngIf="organizationName"><br>{{ "reportExecutedBy" | i18n }}{{ userEmail }}</small>
 
-    </span> <!-- ciphersSize>0 -->
+    </div> <!-- pageLoaded -->
   </div> <!-- #reportResults -->
 
-  <div *ngIf="ciphersSize>0">
     <p><p>
     <button
       type="submit"
@@ -150,6 +205,5 @@
     >
       <span>{{ "exportAssessment" | i18n }}</span>
     </button>
-  </div>
 
 </form>

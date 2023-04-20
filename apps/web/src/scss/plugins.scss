@@ -59,6 +59,27 @@
   }
 }
 
+@each $mfaType in $mfaTypes {
+  .mfaType#{$mfaType}Report {
+    content: url("../images/two-factor/" + $mfaType + ".png");
+    max-height: 28px;
+  }
+}
+
+.mfaType1Report {
+  @include themify($themes) {
+    content: url("../images/two-factor/1" + themed("mfaLogoSuffix"));
+    max-height: 28px;
+  }
+}
+
+.mfaType7Report {
+  @include themify($themes) {
+    content: url("../images/two-factor/7" + themed("mfaLogoSuffix"));
+    max-height: 28px;
+  }
+}
+
 .recovery-code-img {
   @include themify($themes) {
     content: url("../images/two-factor/rc" + themed("mfaLogoSuffix"));

@@ -1,0 +1,58 @@
+<div class="page-header">
+  <h1>
+    {{ "configured2faReport" | i18n }}
+    <small *ngIf="hasLoaded && loading">
+      <i
+        class="fa fa-spinner fa-spin text-muted"
+        title="{{ 'loading' | i18n }}"
+        aria-hidden="true"
+      ></i>
+      <span class="sr-only">{{ "loading" | i18n }}</span>
+    </small>
+  </h1>
+</div>
+<p>{{ "configured2faReportDesc" | i18n }}</p>
+<div *ngIf="!hasLoaded && loading">
+  <i
+    class="fa fa-spinner fa-spin text-muted"
+    title="{{ 'loading' | i18n }}"
+    aria-hidden="true"
+  ></i>
+  <span class="sr-only">{{ "loading" | i18n }}</span>
+</div>
+<div class="mt-4" *ngIf="hasLoaded">
+  <app-callout type="success" title="{{ 'goodNews' | i18n }}" *ngIf="configuredProvidersTotal">
+    {{ "configured2faFoundDesc" | i18n }}
+  </app-callout>
+  <app-callout type="danger" title="{{ 'noConfigured2faFound' | i18n }}" *ngIf="!configuredProvidersTotal">
+    {{ "noConfigured2faFoundDesc" | i18n }}
+  </app-callout>
+  <ul class="list-group list-group-2fa">
+    <li *ngFor="let p of providers" class="list-group-item d-flex align-items-center">
+      <div class="logo-2fa d-flex justify-content-center">
+        <img [class]="'mfaType' + p.type  + 'Report'" [alt]="p.name + ' logo'" />
+      </div>
+      <div class="mx-4">
+        <h3 class="mb-0">
+          {{ p.name }}
+          <ng-container *ngIf="p.enabled">
+            <i
+              class="fa fa-check text-success fa-fw"
+              title="{{ 'enabled' | i18n }}"
+              aria-hidden="true"
+            ></i>
+            <span class="sr-only">{{ "enabled" | i18n }}</span>
+          </ng-container>
+          <ng-container *ngIf="!p.enabled">
+            <i
+              class="fa fa-times text-danger fa-fw"
+              title="{{ 'turnedOff' | i18n }}"
+              aria-hidden="true"
+            ></i>
+            <span class="sr-only">{{ "turnedOff" | i18n }}</span>
+          </ng-container>
+        </h3>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -13,6 +13,7 @@ import { ReusedPasswordsReportComponent } from "../tools/reused-passwords-report
 import { UnsecuredWebsitesReportComponent } from "../tools/unsecured-websites-report.component";
 import { WeakPasswordsReportComponent } from "../tools/weak-passwords-report.component";
 import { SecurityAssessmentReportComponent } from "../tools/security-assessment-report.component";
+import { ConfiguredTwoFactorReportComponent } from "../tools/configured-two-factor-report.component";
 
 import { ReportingComponent } from "./reporting.component";
 
@@ -75,6 +76,13 @@ const routes: Routes = [
             component: WeakPasswordsReportComponent,
             data: {
               titleId: "weakPasswordsReport",
+            },
+          },
+          {
+            path: "configured-two-factor-report",
+            component: ConfiguredTwoFactorReportComponent,
+            data: {
+              titleId: "configured2faReport",
             },
           },
         ],

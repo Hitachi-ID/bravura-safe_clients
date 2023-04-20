@@ -53,6 +53,14 @@
             {{ "inactive2faReport" | i18n }}
           </a>
           <a
+            routerLink="reports/configured-two-factor-report"
+            class="list-group-item"
+            routerLinkActive="active"
+            *ngIf="org.canAccessReports"
+          >
+            {{ "configured2faReport" | i18n }}
+          </a>
+          <a
             routerLink="events"
             class="list-group-item"
             routerLinkActive="active"

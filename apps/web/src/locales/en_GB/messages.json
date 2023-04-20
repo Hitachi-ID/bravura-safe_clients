@@ -6371,7 +6371,7 @@
     "message": "Bravura Safe security assessment for team: "
   },
   "noItemsToRunReportOn": {
-    "message": "There are no items for the security assessment report."
+    "message": "There are no ciphers for the report."
   },
   "exportAssessment": {
     "message": "Export assessment"
@@ -6895,5 +6895,59 @@
   },
   "dismiss": {
     "message": "Dismiss"
+  },
+  "configured2faReport": {
+    "message": "Configured two-step login providers"
+  },
+  "configured2faReportDesc": {
+    "message": "Two-step login adds a layer of protection to your account."
+  },
+  "noConfigured2faFound": {
+    "message": "No configured two-step login provider"
+  },
+  "noConfigured2faFoundDesc": {
+    "message": "We found that no two-step login provider is configured. To further protect your account, you should set up at least one two-step login provider."
+  },
+  "configured2faFoundDesc": {
+    "message": "We found at least one two-step login provider configured."
+  },
+  "configured2faAssessment": {
+    "message": "Configured two-step login providers found"
+  },
+  "noConfigured2faAssessmentRecommendation": {
+    "message": "You should configure at least one two-step login provider."
+  },
+  "totalProvidersAssessment": {
+    "message": "Providers: "
+  },
+  "configured2faProviders": {
+    "message": "Configured two-step login providers"
+  },
+  "configured2faAssessmentUsers": {
+    "message": "Users with configured two-step login providers found"
+  },
+  "totalUsersAssessment": {
+    "message": "Users: "
+  },
+  "allUsersConfigured2fa": {
+    "message": "All users in team have at least one two-step login provider configured."
+  },
+  "usersNoConfigured2faFound": {
+    "message": "Users with no configured two-step login provider"
+  },
+  "usersNoConfigured2faAssessmentRecommendation": {
+    "message": "They should configure at least one two-step login provider."
+  },
+  "usersNoConfigured2faFoundDesc": {
+    "message": "We found $COUNT$ users with no configured two-step login provider.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "8"
+      }
+    }
+  },
+  "turnedOff": {
+    "message": "Turned off"
   }
 }

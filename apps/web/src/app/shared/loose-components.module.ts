@@ -57,6 +57,7 @@ import { FamiliesForEnterpriseSetupComponent } from "../organizations/sponsorshi
 import { ExposedPasswordsReportComponent as OrgExposedPasswordsReportComponent } from "../organizations/tools/exposed-passwords-report.component";
 import { InactiveTwoFactorReportComponent as OrgInactiveTwoFactorReportComponent } from "../organizations/tools/inactive-two-factor-report.component";
 import { ReusedPasswordsReportComponent as OrgReusedPasswordsReportComponent } from "../organizations/tools/reused-passwords-report.component";
+import { ConfiguredTwoFactorReportComponent as OrgConfiguredTwoFactorReportComponent } from "../organizations/tools/configured-two-factor-report.component";
 import { ToolsComponent as OrgToolsComponent } from "../organizations/tools/tools.component";
 import { UnsecuredWebsitesReportComponent as OrgUnsecuredWebsitesReportComponent } from "../organizations/tools/unsecured-websites-report.component";
 import { WeakPasswordsReportComponent as OrgWeakPasswordsReportComponent } from "../organizations/tools/weak-passwords-report.component";
@@ -185,6 +186,7 @@ import { SharedModule } from "./shared.module";
     OrgUserConfirmComponent,
     OrgWeakPasswordsReportComponent,
     OrgSecurityAssessmentReportComponent,
+    OrgConfiguredTwoFactorReportComponent,
     GeneratorComponent,
     PasswordGeneratorHistoryComponent,
     PasswordRepromptComponent,
@@ -299,6 +301,7 @@ import { SharedModule } from "./shared.module";
     OrgUserConfirmComponent,
     OrgWeakPasswordsReportComponent,
     OrgSecurityAssessmentReportComponent,
+    OrgConfiguredTwoFactorReportComponent,
     GeneratorComponent,
     PasswordGeneratorHistoryComponent,
     PasswordRepromptComponent,
