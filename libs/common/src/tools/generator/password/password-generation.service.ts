@@ -388,7 +388,7 @@ export class PasswordGenerationService implements PasswordGenerationServiceAbstr
   }
 
   passwordStrength(password: string, userInputs: string[] = null): zxcvbn.ZXCVBNResult {
-    if (password == null || password.length === 0) {
+    if (password == null || password.length === 0 || password.length > 256) {
       return null;
     }
     let globalUserInputs = ["hitachiid", "hitachi", "id"];
