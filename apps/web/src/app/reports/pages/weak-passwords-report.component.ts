@@ -51,6 +51,7 @@ export class WeakPasswordsReportComponent extends CipherReportComponent implemen
         c.type !== CipherType.Login ||
         c.login.password == null ||
         c.login.password === "" ||
+        c.login.password.length > 256 ||
         c.isDeleted
       ) {
         return;
@@ -83,7 +84,7 @@ export class WeakPasswordsReportComponent extends CipherReportComponent implemen
           c.login.password,
           userInput.length > 0 ? userInput : null
         );
-        this.passwordStrengthCache.set(cacheKey, result.score);
+        this.passwordStrengthCache.set(cacheKey, result?.score);
       }
       const score = this.passwordStrengthCache.get(cacheKey);
       if (score != null && score <= 2) {

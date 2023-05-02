@@ -406,7 +406,7 @@ export class LoginCommand {
     );
 
     // Get New Master Password Re-type
-    const reTypeMessage = "Re-type New Master password (Strength: " + strengthResult.score + ")";
+    const reTypeMessage = "Re-type New Master password (Strength: " + strengthResult?.score + ")";
     const retype: inquirer.Answers = await inquirer.createPromptModule({ output: process.stderr })({
       type: "password",
       name: "password",
