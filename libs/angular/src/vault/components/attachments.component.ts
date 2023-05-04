@@ -68,8 +68,8 @@ export class AttachmentsComponent implements OnInit {
       return;
     }
 
-    if (files[0].size > 524288000) {
-      // 500 MB
+    if (files[0].size > 1932735284) {
+      // 1.8 GB
       this.platformUtilsService.showToast(
         "error",
         this.i18nService.t("errorOccurred"),
