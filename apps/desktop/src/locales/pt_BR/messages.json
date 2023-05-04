@@ -1411,7 +1411,7 @@
     "message": "Código PIN inválido."
   },
   "unlockWithWindowsHello": {
-    "message": "Desbloquear com o Windows Hello"
+    "message": "Desbloquear com o Smartdevice"
   },
   "windowsHelloConsentMessage": {
     "message": "Verifique para o Bravura Safe."

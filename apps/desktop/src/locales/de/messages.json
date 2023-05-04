@@ -1411,7 +1411,7 @@
     "message": "Ungültiger PIN-Code."
   },
   "unlockWithWindowsHello": {
-    "message": "Mit Windows Hello entsperren"
+    "message": "Mit Smartdevice entsperren"
   },
   "windowsHelloConsentMessage": {
     "message": "Für Bravura Safe verifizieren."
@@ -1423,7 +1423,7 @@
     "message": "Deinen Tresor entsperren"
   },
   "autoPromptWindowsHello": {
-    "message": "Beim Start nach Windows Hello fragen"
+    "message": "Beim Start nach Smartdevice fragen"
   },
   "autoPromptTouchId": {
     "message": "Beim Start nach Touch ID fragen"
