@@ -147,6 +147,14 @@ export class ChangePasswordComponent extends BaseChangePasswordComponent {
     if (this.checkForBreaches) {
       this.leakedPassword = (await this.auditService.passwordLeaked(this.masterPassword)) > 0;
     }
+    else {
+      this.platformUtilsService.showToast(
+        "error",
+        this.i18nService.t("errorOccurred"),
+        this.i18nService.t("shouldBeChecked", this.i18nService.t("checkForBreaches") )
+      );
+      return;
+    }
 
     await super.submit();
   }

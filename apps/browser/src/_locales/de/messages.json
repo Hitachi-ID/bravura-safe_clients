@@ -2127,5 +2127,14 @@
         "example": "14"
       }
     }
+  },
+  "shouldBeChecked": {
+    "message": "'$VALUE$' should be checked.",
+    "placeholders": {
+      "value": {
+        "content": "$1",
+        "example": "Check known data breaches for this password"
+      }
+    }
   }
 }

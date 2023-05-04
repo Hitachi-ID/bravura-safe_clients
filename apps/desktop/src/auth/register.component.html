@@ -121,6 +121,19 @@
           {{ "checkForBreaches" | i18n }}
         </label>
       </div>
+      <div class="box-footer checkbox" *ngIf="showTerms">
+        <input type="checkbox" id="acceptPolicies" formControlName="acceptPolicies" />
+        <label for="acceptPolicies">
+          {{ "acceptPolicies" | i18n }}<br />
+          <a href="https://bravurasecuritydocs.com/safe/#/index/10/11/" target="_blank" rel="noopener">{{
+            "termsOfService" | i18n
+          }}</a
+          >,
+          <a href="https://bravurasecuritydocs.com/safe/#/index/10/11/" target="_blank" rel="noopener">{{
+            "privacyPolicy" | i18n
+          }}</a>
+        </label>
+      </div>
     </div>
     <div class="buttons">
       <button type="submit" class="btn primary block" [disabled]="form.loading">

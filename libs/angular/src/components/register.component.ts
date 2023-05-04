@@ -59,7 +59,7 @@ export class RegisterComponent extends CaptchaProtectedComponent implements OnIn
           ),
         ],
       ],
-      checkForBreaches: [true],
+      checkForBreaches: [{value: true, disabled: true}],
       acceptPolicies: [false, [this.acceptPoliciesValidation()]],
     },
     {
@@ -102,6 +102,15 @@ export class RegisterComponent extends CaptchaProtectedComponent implements OnIn
   }
 
   async submit(showToast = true) {
+    if (!this.formGroup.controls.checkForBreaches.value) {
+      this.platformUtilsService.showToast(
+        "error",
+        this.i18nService.t("errorOccurred"),
+        this.i18nService.t("shouldBeChecked", this.i18nService.t("checkForBreaches") )
+      );
+      return;
+    }
+
     let email = this.formGroup.value.email;
     email = email.trim().toLowerCase();
     let name = this.formGroup.value.name;
