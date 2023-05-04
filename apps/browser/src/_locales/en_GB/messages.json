@@ -2140,8 +2140,6 @@
         "example": "14"
       }
     }
-  }
-}
   },
   "autofillPageLoadPolicyActivated": {
     "message": "Your team policies have turned on auto-fill on page load."
@@ -2188,6 +2186,15 @@
       "command": {
         "content": "$1",
         "example": "CTRL+Shift+L"
+      }
+    }
+  },
+  "shouldBeChecked": {
+    "message": "'$VALUE$' should be checked.",
+    "placeholders": {
+      "value": {
+        "content": "$1",
+        "example": "Check known data breaches for this password"
       }
     }
   }
