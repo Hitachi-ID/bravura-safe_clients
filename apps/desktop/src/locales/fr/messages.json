@@ -1411,7 +1411,7 @@
     "message": "Code PIN invalide."
   },
   "unlockWithWindowsHello": {
-    "message": "Déverrouiller avec Windows Hello"
+    "message": "Déverrouiller avec Smartdevice"
   },
   "windowsHelloConsentMessage": {
     "message": "Vérifier pour Bravura Safe."
@@ -1423,7 +1423,7 @@
     "message": "déverouiller votre coffre"
   },
   "autoPromptWindowsHello": {
-    "message": "Demander à Windows Hello au démarrage"
+    "message": "Demander à Smartdevice au démarrage"
   },
   "autoPromptTouchId": {
     "message": "Demander à Touch ID au démarrage"

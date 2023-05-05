@@ -23,7 +23,7 @@
   "generateUpdatesFilesForAllChannels": true,
   "publish": {
     "provider": "generic",
-    "url": "https://artifacts.bitwarden.com/desktop"
+    "url": "https://artifacts.bravurasecurity.com/desktop"
   },
   "mac": {
     "electronUpdaterCompatibility": ">=0.0.1",

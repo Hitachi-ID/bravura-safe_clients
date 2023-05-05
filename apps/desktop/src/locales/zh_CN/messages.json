@@ -1411,7 +1411,7 @@
     "message": "无效的 PIN 码。"
   },
   "unlockWithWindowsHello": {
-    "message": "使用 Windows Hello 解锁"
+    "message": "使用 Smartdevice 解锁"
   },
   "windowsHelloConsentMessage": {
     "message": "验证 Bravura Safe。"
@@ -1423,7 +1423,7 @@
     "message": "解锁您的密码库"
   },
   "autoPromptWindowsHello": {
-    "message": "启动时要求 Windows Hello"
+    "message": "启动时要求 Smartdevice"
   },
   "autoPromptTouchId": {
     "message": "启动时要求触控 ID"

@@ -1411,7 +1411,7 @@
     "message": "Invalid PIN code."
   },
   "unlockWithWindowsHello": {
-    "message": "Unlock with Windows Hello"
+    "message": "Unlock with Smartdevice"
   },
   "windowsHelloConsentMessage": {
     "message": "Verify for Bravura Safe."
@@ -1423,7 +1423,7 @@
     "message": "unlock your vault"
   },
   "autoPromptWindowsHello": {
-    "message": "Ask for Windows Hello on launch"
+    "message": "Ask for Smartdevice on launch"
   },
   "autoPromptTouchId": {
     "message": "Ask for Touch ID on launch"

@@ -1411,7 +1411,7 @@
     "message": "PIN コードが間違っています。"
   },
   "unlockWithWindowsHello": {
-    "message": "Windows Hello でロック解除"
+    "message": "Smartdevice でロック解除"
   },
   "windowsHelloConsentMessage": {
     "message": "Bravura Safe の認証を行います。"
@@ -1423,7 +1423,7 @@
     "message": "Bravura Safe の認証を行います。"
   },
   "autoPromptWindowsHello": {
-    "message": "起動時に Windows Hello を要求する"
+    "message": "起動時に Smartdevice を要求する"
   },
   "autoPromptTouchId": {
     "message": "起動時に Touch ID を要求する"
