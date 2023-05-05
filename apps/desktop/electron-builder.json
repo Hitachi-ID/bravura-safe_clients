@@ -112,7 +112,7 @@
   },
   "appx": {
     "artifactName": "${productName}-${version}-${arch}.${ext}",
-    "backgroundColor": "#175DDC",
+    "backgroundColor": "#FFFFFF",
     "applicationId": "bravurasafedesktop",
     "identityName": "HitachiIDSystemsInc.desktop",
     "publisher": "CN=&quot;Bravura Security, Inc.&quot;, O=&quot;Bravura Security, Inc.&quot;, L=Calgary, S=Alberta, C=CA",
