@@ -473,7 +473,7 @@
     "message": "ファイルを選択してください。"
   },
   "maxFileSize": {
-    "message": "最大ファイルサイズは500MBです。"
+    "message": "最大ファイルサイズは1.8GBです。"
   },
   "updateKey": {
     "message": "暗号キーを更新するまでこの機能は使用できません。"

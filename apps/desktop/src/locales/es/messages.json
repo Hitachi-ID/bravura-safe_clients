@@ -473,7 +473,7 @@
     "message": "Selecciona un archivo."
   },
   "maxFileSize": {
-    "message": "El tamaño máximo de archivo es de 500MB."
+    "message": "El tamaño máximo de archivo es de 1.8GB."
   },
   "updateKey": {
     "message": "No puedes usar esta característica hasta que actualices tu clave de cifrado."

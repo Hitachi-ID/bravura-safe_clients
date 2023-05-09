@@ -609,7 +609,7 @@
     "message": "ファイルを選択してください。"
   },
   "maxFileSize": {
-    "message": "最大ファイルサイズ: 500 MB"
+    "message": "最大ファイルサイズ: 1.8 GB"
   },
   "updateKey": {
     "message": "暗号キーを更新するまでこの機能は使用できません。"

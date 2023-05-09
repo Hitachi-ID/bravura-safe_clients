@@ -757,7 +757,7 @@
     "message": "ファイルを選択してください。"
   },
   "maxFileSize": {
-    "message": "最大ファイルサイズ: 500 MB"
+    "message": "最大ファイルサイズ: 1.8 GB"
   },
   "featureUnavailable": {
     "message": "サービスが利用できません"

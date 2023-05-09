@@ -68,8 +68,8 @@ export class AttachmentsComponent implements OnInit {
       return;
     }
 
-    if (files[0].size > 524288000) {
-      // 500 MB
+    if (files[0].size > 2147483648) {
+      // 2 GB hard limit to allow some buffer; language texts will 1.8 GB limit
       this.platformUtilsService.showToast(
         "error",
         this.i18nService.t("errorOccurred"),

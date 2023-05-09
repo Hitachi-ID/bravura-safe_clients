@@ -757,7 +757,7 @@
     "message": "选择一个文件"
   },
   "maxFileSize": {
-    "message": "文件最大为 500 MB。"
+    "message": "文件最大为 1.8 GB。"
   },
   "featureUnavailable": {
     "message": "功能不可用"

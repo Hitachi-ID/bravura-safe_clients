@@ -757,7 +757,7 @@
     "message": "Select a file"
   },
   "maxFileSize": {
-    "message": "Maximum file size is 500 MB."
+    "message": "Maximum file size is 1.8 GB."
   },
   "featureUnavailable": {
     "message": "Feature unavailable"

@@ -741,7 +741,7 @@
     "message": "Wähle eine Datei"
   },
   "maxFileSize": {
-    "message": "Die maximale Dateigröße beträgt 500 MB."
+    "message": "Die maximale Dateigröße beträgt 1.8 GB."
   },
   "featureUnavailable": {
     "message": "Funktion nicht verfügbar"

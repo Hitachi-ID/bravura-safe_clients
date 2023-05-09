@@ -609,7 +609,7 @@
     "message": "Wähle eine Datei."
   },
   "maxFileSize": {
-    "message": "Die maximale Dateigröße beträgt 500 MB."
+    "message": "Die maximale Dateigröße beträgt 1.8 GB."
   },
   "updateKey": {
     "message": "Sie können diese Funktion nicht nutzen, bevor Sie Ihren Verschlüsselungscode aktualisiert haben."

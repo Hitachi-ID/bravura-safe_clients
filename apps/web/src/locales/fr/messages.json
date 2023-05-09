@@ -609,7 +609,7 @@
     "message": "Sélectionnez un fichier."
   },
   "maxFileSize": {
-    "message": "La taille maximale du fichier est de 500 Mo."
+    "message": "La taille maximale du fichier est de 1.8 Go."
   },
   "updateKey": {
     "message": "Vous ne pouvez pas utiliser cette fonctionnalité avant de mettre à jour votre clé de chiffrement."
