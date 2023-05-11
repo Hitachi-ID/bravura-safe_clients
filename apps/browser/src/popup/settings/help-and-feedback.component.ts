@@ -8,13 +8,14 @@ import { BrowserApi } from "../../browser/browserApi";
 })
 export class HelpAndFeedbackComponent {
   launchHelp() {
-    BrowserApi.createNewTab("https://bitwarden.com/help/");
-  }
-  launchContactForm() {
-    BrowserApi.createNewTab("https://bitwarden.com/contact/");
+    BrowserApi.createNewTab("https://bravurasecuritydocs.com/safe/#/index/10/11");
   }
 
   launchForums() {
-    BrowserApi.createNewTab("https://bitwarden.com/getinvolved/");
+    BrowserApi.createNewTab("https://www.youtube.com/@BravuraSecurity/community");
+  }
+
+  launchContactForm() {
+    BrowserApi.createNewTab("https://www.bravurasecurity.com/contact");
   }
 }

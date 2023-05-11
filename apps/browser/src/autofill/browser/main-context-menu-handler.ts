@@ -117,7 +117,7 @@ export class MainContextMenuHandler {
 
       await create({
         id: ROOT_ID,
-        title: "Bitwarden",
+        title: "Bravura Safe",
       });
 
       await create({

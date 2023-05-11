@@ -64,7 +64,7 @@ export class AutofillComponent implements OnInit {
   }
 
   AboutAutofill() {
-    BrowserApi.createNewTab("https://bitwarden.com/help/auto-fill-browser/");
+    BrowserApi.createNewTab("https://bravurasecuritydocs.com/safe/#/home/27096/10/11");
   }
 
   private async setAutofillKeyboardHelperText(command: string) {
@@ -85,7 +85,7 @@ export class AutofillComponent implements OnInit {
     } else if (this.platformUtilsService.isVivaldi()) {
       BrowserApi.createNewTab("vivaldi://extensions/shortcuts");
     } else {
-      BrowserApi.createNewTab("https://bitwarden.com/help/keyboard-shortcuts");
+      BrowserApi.createNewTab("https://bravurasecuritydocs.com/safe/#/home/27096/10/11");
     }
   }
 }
