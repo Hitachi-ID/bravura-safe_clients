@@ -54,6 +54,9 @@ export class ChangePasswordComponent implements OnInit, OnDestroy {
         (enforcedPasswordPolicyOptions) =>
           (this.enforcedPolicyOptions ??= enforcedPasswordPolicyOptions)
       );
+    if( this.enforcedPolicyOptions != null && this.enforcedPolicyOptions.minLength > 0 ){
+      this.minimumLength = this.enforcedPolicyOptions.minLength;
+    }
   }
 
   ngOnDestroy(): void {
@@ -123,7 +126,7 @@ export class ChangePasswordComponent implements OnInit, OnDestroy {
       this.platformUtilsService.showToast(
         "error",
         this.i18nService.t("errorOccurred"),
-        this.i18nService.t("masterPasswordMinimumlength", this.minimumLength)
+        this.i18nService.t("masterPasswordMinlength", this.minimumLength)
       );
       return false;
     }

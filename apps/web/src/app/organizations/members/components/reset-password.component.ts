@@ -109,11 +109,15 @@ export class ResetPasswordComponent implements OnInit, OnDestroy {
       return false;
     }
 
-    if (this.newPassword.length < Utils.minimumPasswordLength) {
+    let minimumLength = Utils.minimumPasswordLength;
+    if( this.enforcedPolicyOptions != null && this.enforcedPolicyOptions.minLength > 0 ){
+      minimumLength = this.enforcedPolicyOptions.minLength;
+    }
+    if (this.newPassword.length < minimumLength) {
       this.platformUtilsService.showToast(
         "error",
         this.i18nService.t("errorOccurred"),
-        this.i18nService.t("masterPasswordMinlength", Utils.minimumPasswordLength)
+        this.i18nService.t("masterPasswordMinlength", minimumLength)
       );
       return false;
     }
