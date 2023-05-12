@@ -39,6 +39,7 @@ RUN set -eux; \
                 linux-pam \
                 shadow \
                 tzdata \
+                openssl \
                 icu-libs
 
 ENV ASPNETCORE_URLS http://+:5000
