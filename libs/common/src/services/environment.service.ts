@@ -55,12 +55,12 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
     if (this.baseUrl) {
       return this.baseUrl;
     }
-    return "https://hitachi-id.com";
+    return "https://blank-address-not-supported.com";
   }
 
   getSendUrl() {
-    return this.getWebVaultUrl() === "https://hitachi-id.com"
-      ? "https://share.hitachi-id.com/#"
+    return this.getWebVaultUrl() === "https://blank-address-not-supported.xxx.yyy" //make it a bad address on purpose since never want to support this case
+      ? "https://share-fix-your-environment-url-in-settings.com/#"
       : this.getWebVaultUrl() + "/#/send/";
   }
 
@@ -73,7 +73,7 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
       return this.baseUrl + "/icons";
     }
 
-    return "https://icons.hitachi-id.net";
+    return "https://icons.blank-address-not-supported.com";
   }
 
   getApiUrl() {
@@ -85,7 +85,7 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
       return this.baseUrl + "/api";
     }
 
-    return "https://hitachi-id.safe.hitachi-id.net/api";
+    return "https://blank-address-not-supported.net/api";
   }
 
   getIdentityUrl() {
@@ -97,7 +97,7 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
       return this.baseUrl + "/identity";
     }
 
-    return "https://hitachi-id.safe.hitachi-id.net/identity";
+    return "https://blank-address-not-supported.net/identity";
   }
 
   getEventsUrl() {
@@ -109,7 +109,7 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
       return this.baseUrl + "/events";
     }
 
-    return "https://hitachi-id.safe.hitachi-id.net/events";
+    return "https://blank-address-not-supported.net/events";
   }
 
   getKeyConnectorUrl() {
