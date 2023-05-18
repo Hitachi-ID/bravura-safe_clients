@@ -199,7 +199,7 @@ export class UpdateBadge {
       this.sidebarAction.setBadgeText({ text, tabId });
     } else if (this.sidebarAction) {
       // Firefox
-      const title = `Bitwarden${Utils.isNullOrEmpty(text) ? "" : ` [${text}]`}`;
+      const title = `Bravura Safe${Utils.isNullOrEmpty(text) ? "" : ` [${text}]`}`;
       this.sidebarAction.setTitle({ title, tabId });
     }
   }
