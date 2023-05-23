@@ -44,6 +44,16 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
       return this.baseUrl + "/notifications";
     }
 
+    if (!!(window && window.location && window.location.origin)) {
+      const origin = window.location.origin;
+      if (origin.indexOf('chrome-extension://') != 0 && // chrome / edge extension
+          origin.indexOf('moz-extension://') != 0 && // firefox extension
+          origin.indexOf('file://') != 0) { // desktop app
+        this.baseUrl = window.location.origin;
+        return window.location.origin + "/notifications";
+      }
+    }
+
     return "https://hitachi-id.safe.hitachi-id.net/notifications";
   }
 
@@ -55,6 +65,17 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
     if (this.baseUrl) {
       return this.baseUrl;
     }
+
+    if (!!(window && window.location && window.location.origin)) {
+      const origin = window.location.origin;
+      if (origin.indexOf('chrome-extension://') != 0 && // chrome / edge extension
+          origin.indexOf('moz-extension://') != 0 && // firefox extension
+          origin.indexOf('file://') != 0) { // desktop app
+        this.baseUrl = window.location.origin;
+        return window.location.origin;
+      }
+    }
+
     return "https://blank-address-not-supported.com";
   }
 
@@ -73,6 +94,16 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
       return this.baseUrl + "/icons";
     }
 
+    if (!!(window && window.location && window.location.origin)) {
+      const origin = window.location.origin;
+      if (origin.indexOf('chrome-extension://') != 0 && // chrome / edge extension
+          origin.indexOf('moz-extension://') != 0 && // firefox extension
+          origin.indexOf('file://') != 0) { // desktop app
+        this.baseUrl = window.location.origin;
+        return window.location.origin + "/icons";
+      }
+    }
+
     return "https://icons.blank-address-not-supported.com";
   }
 
@@ -83,6 +114,16 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
 
     if (this.baseUrl) {
       return this.baseUrl + "/api";
+    }
+
+    if (!!(window && window.location && window.location.origin)) {
+      const origin = window.location.origin;
+      if (origin.indexOf('chrome-extension://') != 0 && // chrome / edge extension
+          origin.indexOf('moz-extension://') != 0 && // firefox extension
+          origin.indexOf('file://') != 0) { // desktop app
+        this.baseUrl = window.location.origin;
+        return window.location.origin + "/api";
+      }
     }
 
     return "https://blank-address-not-supported.net/api";
@@ -97,6 +138,16 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
       return this.baseUrl + "/identity";
     }
 
+    if (!!(window && window.location && window.location.origin)) {
+      const origin = window.location.origin;
+      if (origin.indexOf('chrome-extension://') != 0 && // chrome / edge extension
+          origin.indexOf('moz-extension://') != 0 && // firefox extension
+          origin.indexOf('file://') != 0) { // desktop app
+        this.baseUrl = window.location.origin;
+        return window.location.origin + "/identity";
+      }
+    }
+
     return "https://blank-address-not-supported.net/identity";
   }
 
@@ -107,6 +158,16 @@ export class EnvironmentService implements EnvironmentServiceAbstraction {
 
     if (this.baseUrl) {
       return this.baseUrl + "/events";
+    }
+
+    if (!!(window && window.location && window.location.origin)) {
+      const origin = window.location.origin;
+      if (origin.indexOf('chrome-extension://') != 0 && // chrome / edge extension
+          origin.indexOf('moz-extension://') != 0 && // firefox extension
+          origin.indexOf('file://') != 0) { // desktop app
+        this.baseUrl = window.location.origin;
+        return window.location.origin + "/events";
+      }
     }
 
     return "https://blank-address-not-supported.net/events";
