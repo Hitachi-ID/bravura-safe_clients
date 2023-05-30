@@ -264,6 +264,7 @@
                 [ngClass]="{ 'list-options-item-disable': !c.login.canLaunch }"
                 href="#"
                 appStopClick
+                appStopProp
                 (click)="launch(c.login.launchUri)"
               >
                 <i class="fa fa-fw fa-share-square-o fa-lg" aria-hidden="true" title="{{ 'launch' | i18n }}"></i>
@@ -273,6 +274,7 @@
                 [ngClass]="{ 'list-options-item-disable': !c.login.username }"
                 href="#"
                 appStopClick
+                appStopProp
                 (click)="copy(c, c.login.username, 'username', 'Username')"
               >
                 <i class="fa fa-fw fa-user fa-lg" aria-hidden="true" title="{{ 'copyUsername' | i18n }}"></i>
@@ -282,6 +284,7 @@
                 [ngClass]="{ 'list-options-item-disable': !c.login.password }"
                 href="#"
                 appStopClick
+                appStopProp
                 (click)="copy(c, c.login.password, 'password', 'Password')"
               >
                 <i class="fa fa-fw fa-key fa-lg" aria-hidden="true" title="{{ 'copyPassword' | i18n }}"></i>
@@ -291,6 +294,7 @@
                 [ngClass]="{ 'list-options-item-disable': !displayTotpCopyButton(c) }"
                 href="#"
                 appStopClick
+                appStopProp
                 (click)="copy(c, c.login.totp, 'verificationCodeTotp', 'TOTP')"
               >
                 <i class="fa fa-fw fa-clock-o fa-lg" aria-hidden="true" title="{{ 'copyVerificationCode' | i18n }}"></i>
@@ -310,6 +314,7 @@
               class="list-options-item"
               href="#"
               appStopClick
+              appStopProp
               (click)="restore(c)"
               *ngIf="c.isDeleted"
             >
@@ -329,7 +334,6 @@
             <ng-container>
               <button
                 class="dropdown-item"
-                appStopClick
                 (click)="clone(c)"
                 *ngIf="((!organization && !c.organizationId) || organization) && !c.isDeleted"
               >
@@ -338,7 +342,6 @@
               </button>
               <button
                 class="dropdown-item"
-                appStopClick
                 (click)="share(c)"
                 *ngIf="!organization && !c.organizationId && !c.isDeleted"
               >
