@@ -365,7 +365,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bravura-safe.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -504,10 +504,10 @@
     "message": "Change master password"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "You can change your master password on the bravura-safe.com web safe. Do you want to visit the website now?"
+    "message": "You can change your master password on the Bravura Safe web safe. Do you want to visit the website now?"
   },
   "twoStepLoginConfirmation": {
-    "message": "Two-step login makes your account more secure by requiring you to verify your login with another device such as an authenticator app, or email. Two-step login can be set up on the bravura-safe.com web safe. Do you want to visit the website now?"
+    "message": "Two-step login makes your account more secure by requiring you to verify your login with another device such as an authenticator app, or email. Two-step login can be set up on the Bravura Safe web safe. Do you want to visit the website now?"
   },
   "editedFolder": {
     "message": "Folder saved"
@@ -693,7 +693,7 @@
     "message": "Learn about Teams"
   },
   "learnOrgConfirmation": {
-    "message": "Bravura Safe allows you to share your safe items with others by using a team. Would you like to visit the bravura-safe.com website to learn more?"
+    "message": "Bravura Safe allows you to share your safe items with others by using a team. Would you like to visit the Bravura Safe website to learn more?"
   },
   "moveToOrganization": {
     "message": "Move to team"
@@ -772,7 +772,7 @@
     "message": "Manage membership"
   },
   "premiumManageAlert": {
-    "message": "You can manage your membership on the bravura-safe.com web safe. Do you want to visit the website now?"
+    "message": "You can manage your membership on the Bravura Safe web safe. Do you want to visit the website now?"
   },
   "premiumRefresh": {
     "message": "Refresh membership"
@@ -805,7 +805,7 @@
     "message": "Purchase premium"
   },
   "premiumPurchaseAlert": {
-    "message": "You can purchase Premium membership on the bravura-safe.com web safe. Do you want to visit the website now?"
+    "message": "You can purchase Premium membership on the Bravura Safe web safe. Do you want to visit the website now?"
   },
   "premiumCurrentMember": {
     "message": "You are a Premium member!"
@@ -1488,6 +1488,15 @@
   "setMasterPassword": {
     "message": "Set master password"
   },
+  "currentMasterPass": {
+    "message": "Current master password"
+  },
+  "newMasterPass": {
+    "message": "New master password"
+  },
+  "confirmNewMasterPass": {
+    "message": "Confirm new master password"
+  },
   "masterPasswordPolicyInEffect": {
     "message": "One or more team policies require your master password to meet the following requirements:"
   },
@@ -1868,6 +1877,9 @@
   "updateMasterPasswordWarning": {
     "message": "Your master password was recently changed by an administrator in your team. In order to access the safe, you must update it now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
   },
+  "updateWeakMasterPasswordWarning": {
+    "message": "Your master password does not meet one or more of your team policies. In order to access the vault, you must update your master password now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
+  },
   "resetPasswordPolicyAutoEnroll": {
     "message": "Automatic enrolment"
   },
@@ -1896,6 +1908,32 @@
       "minutes": {
         "content": "$2",
         "example": "5"
+      }
+    }
+  },
+  "vaultTimeoutPolicyWithActionInEffect": {
+    "message": "Your team policies are affecting your vault timeout. Maximum allowed vault timeout is $HOURS$ hour(s) and $MINUTES$ minute(s). Your vault timeout action is set to $ACTION$.",
+    "placeholders": {
+      "hours": {
+        "content": "$1",
+        "example": "5"
+      },
+      "minutes": {
+        "content": "$2",
+        "example": "5"
+      },
+      "action": {
+        "content": "$3",
+        "example": "Lock"
+      }
+    }
+  },
+  "vaultTimeoutActionPolicyInEffect": {
+    "message": "Your team policies have set your vault timeout action to $ACTION$.",
+    "placeholders": {
+      "action": {
+        "content": "$1",
+        "example": "Lock"
       }
     }
   },
@@ -2197,5 +2235,8 @@
         "example": "Check known data breaches for this password"
       }
     }
+  },
+  "opensInANewWindow": {
+    "message": "Opens in a new window"
   }
 }

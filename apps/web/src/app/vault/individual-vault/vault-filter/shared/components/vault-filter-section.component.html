@@ -1,5 +1,3 @@
-<!-- Please remove this disable statement when editing this file! -->
-<!-- eslint-disable @angular-eslint/template/button-has-type -->
 <ng-container *ngIf="filters && filters.length">
   <div
     *ngIf="headerInfo.showHeader"
@@ -9,6 +7,7 @@
     }"
   >
     <button
+      type="button"
       class="toggle-button"
       (click)="toggleCollapse(headerNode.node)"
       [attr.aria-expanded]="!isCollapsed(headerNode.node)"
@@ -22,6 +21,7 @@
       ></i>
     </button>
     <button
+      type="button"
       *ngIf="headerInfo.isSelectable"
       appA11yTitle="{{ (isOrganizationFilter ? 'vault' : 'filter') | i18n }}: {{
         headerNode.node.name | i18n
@@ -42,6 +42,7 @@
     </h3>
 
     <button
+      type="button"
       *ngIf="showAddButton"
       (click)="onAdd()"
       class="text-muted ml-auto add-button"
@@ -67,6 +68,7 @@
         <span class="filter-buttons">
           <i *ngIf="f.children.length === 0" class="text-muted invisible"></i>
           <button
+            type="button"
             *ngIf="f.children.length"
             appA11yTitle="{{ 'toggleCollapse' | i18n }}: {{ f.node.name }}"
             (click)="toggleCollapse(f.node)"
@@ -85,6 +87,7 @@
           </button>
 
           <button
+            type="button"
             class="filter-button text-muted"
             appA11yTitle="{{ isOrganizationFilter ? 'vault' : ('filter' | i18n) }}: {{
               f.node.name
@@ -101,6 +104,7 @@
 
           <span class="ml-auto">
             <button
+              type="button"
               *ngIf="editInfo && f.node.id"
               class="edit-button text-muted"
               (click)="onEdit(f)"
@@ -115,7 +119,7 @@
               appA11yTitle="{{ 'organizationIsDisabled' | i18n }}"
             ></i
             ><ng-container *ngIf="optionsInfo && !f.node.hideOptions"
-              ><button [bitMenuTriggerFor]="optionsMenu" class="filter-options-icon">
+              ><button type="button" [bitMenuTriggerFor]="optionsMenu" class="filter-options-icon">
                 <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
               </button>
               <bit-menu class="filter-organization-options" #optionsMenu>

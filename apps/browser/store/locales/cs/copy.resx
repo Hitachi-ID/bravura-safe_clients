@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bravura Safe – Bezplatný správce hesel</value>
+    <value>Bravura Safe</value>
   </data>
   <data name="Summary" xml:space="preserve">
-    <value>Bezpečný a bezplatný správce hesel pro všechna vaše zařízení</value>
+    <value>Bezpečný a bezplatný správce hesel pro všechna Vaše zařízení</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Bravura Security Inc.</value>
   </data>
   <data name="AssetTitle" xml:space="preserve">
-    <value>Bezpečný a bezplatný správce hesel pro všechna vaše zařízení</value>
+    <value>Bezpečný a bezplatný správce hesel pro všechna Vaše zařízení</value>
   </data>
   <data name="ScreenshotSync" xml:space="preserve">
     <value>Synchronizujte a přistupujte ke svému trezoru z různých zařízení</value>
@@ -145,6 +145,6 @@
     <value>Vygenerujte si silná, jedinečná a bezpečná hesla</value>
   </data>
   <data name="ScreenshotEdit" xml:space="preserve">
-    <value>Vaše informace jsou bezpečně zašifrovány pomocí AES-256 šifrování</value>
+    <value>Vaše informace jsou bezpečně zašifrovány pomocí šifrování AES-256</value>
   </data>
 </root>

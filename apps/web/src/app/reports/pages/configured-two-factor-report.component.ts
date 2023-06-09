@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 import { AuditService } from "@bitwarden/common/abstractions/audit.service";
 import { StateService } from "@bitwarden/common/abstractions/state.service";
-import { Organization } from "@bitwarden/common/models/domain/organization";
+import { Organization } from "@bitwarden/common/admin-console/models/domain/organization";
 import { TwoFactorProviders } from "@bitwarden/common/auth/services/two-factor.service";
 import { ApiService } from "@bitwarden/common/abstractions/api.service";
 import { TwoFactorProviderType } from "@bitwarden/common/auth/enums/two-factor-provider-type";
@@ -79,15 +79,9 @@ export class ConfiguredTwoFactorReportComponent implements OnInit {
     });
   }
 
-  protected async checkAccess(): Promise<boolean> {
-    return true;
-  }
-
   async ngOnInit() {
-    if (await this.checkAccess()) {
       await this.load();
     }
-  }
 
   protected filterProvider(type: TwoFactorProviderType) {
     return type === TwoFactorProviderType.OrganizationDuo || type === TwoFactorProviderType.OrganizationHypr;

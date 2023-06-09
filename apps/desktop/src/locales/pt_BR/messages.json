@@ -794,6 +794,9 @@
   "contactUs": {
     "message": "Fale Conosco"
   },
+  "helpAndFeedback": {
+    "message": "Help and feedback"
+  },
   "getHelp": {
     "message": "Obter Ajuda"
   },
@@ -813,7 +816,7 @@
     "message": "Alterar Senha Mestra"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Você pode alterar a sua senha mestra no cofre web em bravurasecurity.com. Você deseja visitar o site agora?"
+    "message": "Você pode alterar a sua senha mestra no cofre web em Bravura Safe. Você deseja visitar o site agora?"
   },
   "fingerprintPhrase": {
     "message": "Frase biométrica",
@@ -861,7 +864,7 @@
     "message": "Senha mestra inválida"
   },
   "twoStepLoginConfirmation": {
-    "message": "A autenticação em duas etapas torna sua conta mais segura, exigindo que você verifique o seu login com outro dispositivo, como uma chave de segurança, um aplicativo de autenticação, SMS, chamada telefônica ou e-mail. A autenticação em duas etapas pode ser ativada no cofre web em bravurasecurity.com. Você deseja visitar o site agora?"
+    "message": "A autenticação em duas etapas torna sua conta mais segura, exigindo que você verifique o seu login com outro dispositivo, como uma chave de segurança, um aplicativo de autenticação, SMS, chamada telefônica ou e-mail. A autenticação em duas etapas pode ser ativada no cofre web em Bravura Safe. Você deseja visitar o site agora?"
   },
   "twoStepLogin": {
     "message": "Autenticação em duas etapas"
@@ -1084,7 +1087,7 @@
     "message": "Gerenciar Plano"
   },
   "premiumManageAlert": {
-    "message": "Você pode gerenciar a sua assinatura premium no cofre web em bravurasecurity.com. Você deseja visitar o site agora?"
+    "message": "Você pode gerenciar a sua assinatura premium no cofre web em Bravura Safe. Você deseja visitar o site agora?"
   },
   "premiumRefresh": {
     "message": "Atualizar Assinatura"
@@ -1117,7 +1120,7 @@
     "message": "Comprar Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Você pode comprar a assinatura premium no cofre web em bravurasecurity.com. Você deseja visitar o site agora?"
+    "message": "Você pode comprar a assinatura premium no cofre web em Bravura Safe. Você deseja visitar o site agora?"
   },
   "premiumCurrentMember": {
     "message": "Você é um membro premium!"
@@ -1413,11 +1416,17 @@
   "unlockWithWindowsHello": {
     "message": "Desbloquear com o Smartdevice"
   },
+  "additionalWindowsHelloSettings": {
+    "message": "Additional Windows Hello settings"
+  },
   "windowsHelloConsentMessage": {
     "message": "Verifique para o Bravura Safe."
   },
   "unlockWithTouchId": {
     "message": "Desbloquear com o Touch ID"
+  },
+  "additionalTouchIdSettings": {
+    "message": "Additional Touch ID settings"
   },
   "touchIdConsentMessage": {
     "message": "desbloquear o seu cofre"
@@ -1427,6 +1436,12 @@
   },
   "autoPromptTouchId": {
     "message": "Pedir pelo Touch ID ao iniciar"
+  },
+  "requirePasswordOnStart": {
+    "message": "Require password or PIN on app start"
+  },
+  "recommendedForSecurity": {
+    "message": "Recommended for security."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Bloquear com senha mestra ao reiniciar"
@@ -1547,6 +1562,9 @@
   },
   "ssoCompleteRegistration": {
     "message": "Para concluir o login com o SSO, defina uma senha mestra para acessar e proteger o seu cofre."
+  },
+  "currentMasterPass": {
+    "message": "Current master password"
   },
   "newMasterPass": {
     "message": "Nova Senha Mestra"
@@ -1864,6 +1882,9 @@
   "updateMasterPasswordWarning": {
     "message": "Sua Senha Mestra foi alterada recentemente por um administrador de sua organização. Para acessar o cofre, você precisa atualizá-la agora. O processo desconectará você da sessão atual, exigindo que você inicie a sessão novamente. Sessões ativas em outros dispositivos podem continuar ativas por até uma hora."
   },
+  "updateWeakMasterPasswordWarning": {
+    "message": "Your master password does not meet one or more of your team policies. In order to access the vault, you must update your master password now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
+  },
   "hours": {
     "message": "Horas"
   },
@@ -1880,6 +1901,32 @@
       "minutes": {
         "content": "$2",
         "example": "5"
+      }
+    }
+  },
+  "vaultTimeoutPolicyWithActionInEffect": {
+    "message": "Your team policies are affecting your vault timeout. Maximum allowed vault timeout is $HOURS$ hour(s) and $MINUTES$ minute(s). Your vault timeout action is set to $ACTION$.",
+    "placeholders": {
+      "hours": {
+        "content": "$1",
+        "example": "5"
+      },
+      "minutes": {
+        "content": "$2",
+        "example": "5"
+      },
+      "action": {
+        "content": "$3",
+        "example": "Lock"
+      }
+    }
+  },
+  "vaultTimeoutActionPolicyInEffect": {
+    "message": "Your team policies have set your vault timeout action to $ACTION$.",
+    "placeholders": {
+      "action": {
+        "content": "$1",
+        "example": "Lock"
       }
     }
   },
@@ -2231,5 +2278,11 @@
         "example": "Check known data breaches for this password"
       }
     }
+  },
+  "windowsBiometricUpdateWarning": {
+    "message": "Bravura Safe recommends updating your biometric settings to require your master password (or PIN) on the first unlock. Would you like to update your settings now?"
+  },
+  "windowsBiometricUpdateWarningTitle": {
+    "message": "Recommended Settings Update"
   }
 }

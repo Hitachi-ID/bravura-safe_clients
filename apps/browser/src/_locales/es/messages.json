@@ -365,7 +365,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bravurasafe.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -504,10 +504,10 @@
     "message": "Cambiar contraseña maestra"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Puedes cambiar tu contraseña maestra en la caja fuerte web de bravurasafe.com. ¿Quieres visitar ahora el sitio web?"
+    "message": "Puedes cambiar tu contraseña maestra en la caja fuerte web de Bravura Safe. ¿Quieres visitar ahora el sitio web?"
   },
   "twoStepLoginConfirmation": {
-    "message": "La autenticación en dos pasos hace que tu cuenta sea mucho más segura, requiriendo que introduzcas un código de seguridad de una aplicación de autenticación cada vez que accedes. La autenticación en dos pasos puede ser habilitada en la caja fuerte web de bravurasafe.com. ¿Quieres visitar ahora el sitio web?"
+    "message": "La autenticación en dos pasos hace que tu cuenta sea mucho más segura, requiriendo que introduzcas un código de seguridad de una aplicación de autenticación cada vez que accedes. La autenticación en dos pasos puede ser habilitada en la caja fuerte web de Bravura Safe. ¿Quieres visitar ahora el sitio web?"
   },
   "editedFolder": {
     "message": "Carpeta editada"
@@ -693,7 +693,7 @@
     "message": "Aprende sobre Organizaciones"
   },
   "learnOrgConfirmation": {
-    "message": "Bravura Safe te permite compartir objetos de tu caja fuerte con otros usando una organización. ¿Quieres visitar el sitio web de bravurasafe.com para saber más?"
+    "message": "Bravura Safe te permite compartir objetos de tu caja fuerte con otros usando una organización. ¿Quieres visitar el sitio web de Bravura Safe website para saber más?"
   },
   "moveToOrganization": {
     "message": "Mover a la Organización"
@@ -772,7 +772,7 @@
     "message": "Gestionar membresía"
   },
   "premiumManageAlert": {
-    "message": "Puedes gestionar tu membresía en la caja fuerte web de bravurasafe.com. ¿Quieres visitar el sitio web ahora?"
+    "message": "Puedes gestionar tu membresía en la caja fuerte web de Bravura Safe. ¿Quieres visitar el sitio web ahora?"
   },
   "premiumRefresh": {
     "message": "Actualizar membresía"
@@ -805,7 +805,7 @@
     "message": "Comprar Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Puedes comprar la membresía Premium en la caja fuerte web de bravurasafe.com. ¿Quieres visitar el sitio web ahora?"
+    "message": "Puedes comprar la membresía Premium en la caja fuerte web de Bravura Safe. ¿Quieres visitar el sitio web ahora?"
   },
   "premiumCurrentMember": {
     "message": "¡Eres un miembro Premium!"
@@ -1464,6 +1464,15 @@
   "setMasterPassword": {
     "message": "Establecer contraseña maestra"
   },
+  "currentMasterPass": {
+    "message": "Contraseña maestra actual"
+  },
+  "newMasterPass": {
+    "message": "Nueva contraseña maestra"
+  },
+  "confirmNewMasterPass": {
+    "message": "Confirma la nueva contraseña maestra"
+  },
   "masterPasswordPolicyInEffect": {
     "message": "Una o más políticas de la organización requieren que su contraseña maestra cumpla con los siguientes requisitos:"
   },
@@ -1844,6 +1853,9 @@
   "updateMasterPasswordWarning": {
     "message": "Su contraseña maestra ha sido cambiada recientemente por un administrador de su organización. Para acceder a la caja fuerte, debe actualizarla ahora. Proceder le desconectará de su sesión actual, requiriendo que vuelva a iniciar sesión. Las sesiones activas en otros dispositivos pueden seguir estando activas durante una hora."
   },
+  "updateWeakMasterPasswordWarning": {
+    "message": "Su contraseña maestra no cumple con una o más de las políticas de su organización. Para acceder a la caja fuerte, debe actualizar su contraseña maestra ahora. Proceder le desconectará de su sesión actual, requiriendo que vuelva a iniciar sesión. Las sesiones activas en otros dispositivos pueden seguir estando activas durante hasta una hora."
+  },
   "resetPasswordPolicyAutoEnroll": {
     "message": "Inscripción automática"
   },
@@ -1872,6 +1884,32 @@
       "minutes": {
         "content": "$2",
         "example": "5"
+      }
+    }
+  },
+  "vaultTimeoutPolicyWithActionInEffect": {
+    "message": "Las políticas de su organización están afectando al tiempo de espera de tu caja fuerte. El tiempo de espera de tu caja fuerte máximo permitido es de $HOURS$ hora(s) y $MINUTES$ minuto(s). La acción de tiempo de espera de tu caja fuerte está establecida en $ACTION$.",
+    "placeholders": {
+      "hours": {
+        "content": "$1",
+        "example": "5"
+      },
+      "minutes": {
+        "content": "$2",
+        "example": "5"
+      },
+      "action": {
+        "content": "$3",
+        "example": "Lock"
+      }
+    }
+  },
+  "vaultTimeoutActionPolicyInEffect": {
+    "message": "Las políticas de su organización han establecido su acción de tiempo de espera de tu caja fuerte en $ACTION$.",
+    "placeholders": {
+      "action": {
+        "content": "$1",
+        "example": "Lock"
       }
     }
   },
@@ -2173,5 +2211,8 @@
         "example": "Check known data breaches for this password"
       }
     }
+  },
+  "opensInANewWindow": {
+    "message": "Abre en una nueva ventana"
   }
 }

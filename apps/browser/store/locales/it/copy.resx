@@ -118,33 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bravura Safe – Gestore di password gratuito</value>
+    <value>Bravura Safe</value>
   </data>
   <data name="Summary" xml:space="preserve">
-    <value>Un gestore di password sicuro e gratuito per tutti i tuoi dispositivi</value>
+    <value>Un gestore di password sicuro e gratis per tutti i tuoi dispositivi</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Bravura Security Inc.</value>
   </data>
   <data name="AssetTitle" xml:space="preserve">
-    <value>Un gestore di password sicuro e gratuito per tutti i tuoi dispositivi</value>
+    <value>Un gestore di password sicuro e gratis per tutti i tuoi dispositivi</value>
   </data>
   <data name="ScreenshotSync" xml:space="preserve">
     <value>Sincronizza e accedi alla tua cassaforte da più dispositivi</value>
   </data>
   <data name="ScreenshotVault" xml:space="preserve">
-    <value>Gestisci tutte le tue password ed i tuoi login da una cassaforte sicura</value>
+    <value>Gestisci tutte le tue password e i tuoi login da una cassaforte sicura</value>
   </data>
   <data name="ScreenshotAutofill" xml:space="preserve">
-    <value>Completa velocemente tutte le tue credenziali di accesso in qualunque sito tu visiti</value>
+    <value>Riempi velocemente le tue credenziali di accesso in qualunque sito che visiti</value>
   </data>
   <data name="ScreenshotMenu" xml:space="preserve">
-    <value>La tua cassaforte è facilmente accessibile dal menu contestuale del tasto destro del mouse</value>
+    <value>La tua cassaforte è facilmente accessibile dal menu contestuale (tasto destro del mouse)</value>
   </data>
   <data name="ScreenshotPassword" xml:space="preserve">
     <value>Genera automaticamente password complesse, casuali e sicure</value>
   </data>
   <data name="ScreenshotEdit" xml:space="preserve">
-    <value>Le tue informazioni sono salvate in modo sicuro grazie all'algoritmo di cifratura AES-256</value>
+    <value>Le tue informazioni sono salvate in modo sicuro grazie all'algoritmo di criptografia AES-256</value>
   </data>
 </root>

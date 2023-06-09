@@ -1,8 +1,9 @@
-import "zone.js/dist/zone";
+import "zone.js";
 
 import { registerLocaleData } from "@angular/common";
 import localeEnGb from "@angular/common/locales/en-GB";
 import localeFr from "@angular/common/locales/fr";
+import { DialogModule } from "@angular/cdk/dialog";
 import { NgModule } from "@angular/core";
 
 import { ColorPasswordCountPipe } from "@bitwarden/angular/pipes/color-password-count.pipe";
@@ -27,6 +28,7 @@ import { PasswordRepromptComponent } from "../vault/app/components/password-repr
 import { AddEditCustomFieldsComponent } from "../vault/app/vault/add-edit-custom-fields.component";
 import { AddEditComponent } from "../vault/app/vault/add-edit.component";
 import { AttachmentsComponent } from "../vault/app/vault/attachments.component";
+import { CollectionsComponent } from "../vault/app/vault/collections.component";
 import { FolderAddEditComponent } from "../vault/app/vault/folder-add-edit.component";
 import { PasswordHistoryComponent } from "../vault/app/vault/password-history.component";
 import { ShareComponent } from "../vault/app/vault/share.component";
@@ -46,20 +48,19 @@ import { AccountSwitcherComponent } from "./layout/account-switcher.component";
 import { HeaderComponent } from "./layout/header.component";
 import { NavComponent } from "./layout/nav.component";
 import { SearchComponent } from "./layout/search/search.component";
-import { AddEditComponent as SendAddEditComponent } from "./send/add-edit.component";
-import { EffluxDatesComponent as SendEffluxDatesComponent } from "./send/efflux-dates.component";
-import { SendComponent } from "./send/send.component";
 import { SharedModule } from "./shared/shared.module";
+import { ExportComponent } from "./tools/export/export.component";
 import { GeneratorComponent } from "./tools/generator.component";
 import { PasswordGeneratorHistoryComponent } from "./tools/password-generator-history.component";
-import { CollectionsComponent } from "./vault/collections.component";
-import { ExportComponent } from "./vault/export.component";
+import { AddEditComponent as SendAddEditComponent } from "./tools/send/add-edit.component";
+import { EffluxDatesComponent as SendEffluxDatesComponent } from "./tools/send/efflux-dates.component";
+import { SendComponent } from "./tools/send/send.component";
 
 registerLocaleData(localeEnGb, "en-GB");
 registerLocaleData(localeFr, "fr");
 
 @NgModule({
-  imports: [SharedModule, AppRoutingModule, VaultFilterModule, LoginModule],
+  imports: [SharedModule, DialogModule, AppRoutingModule, VaultFilterModule, LoginModule],
   declarations: [
     AccessibilityCookieComponent,
     AccountSwitcherComponent,

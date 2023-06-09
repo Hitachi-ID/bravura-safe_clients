@@ -365,7 +365,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bravurasafe.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -439,7 +439,7 @@
     "message": "必须填写确认主密码。"
   },
   "masterPasswordMinlength": {
-    "message": "主密码至少需要 $VALUE$ 个字符。",
+    "message": "主密码必须至少 $VALUE$ 个字符长度。",
     "description": "The Master Password must be at least a specific number of characters long.",
     "placeholders": {
       "value": {
@@ -504,10 +504,10 @@
     "message": "修改主密码"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "您可以在 bravurasafe.com 网页版密码库修改主密码。您现在要访问这个网站吗？"
+    "message": "您可以在 Bravura Safe 网页版密码库修改主密码。您现在要访问这个网站吗？"
   },
   "twoStepLoginConfirmation": {
-    "message": "两步登录要求您从其他设备（例如安全钥匙、验证器应用、短信、电话或者电子邮件）来验证您的登录，这能使您的账户更加安全。两步登录需要在 bravurasafe.com 网页版密码中设置。您现在要访问这个网站吗？"
+    "message": "两步登录要求您从其他设备（例如安全钥匙、验证器应用、短信、电话或者电子邮件）来验证您的登录，这能使您的账户更加安全。两步登录需要在 Bravura Safe 网页版密码库中设置。现在访问此网站吗？"
   },
   "editedFolder": {
     "message": "文件夹已保存"
@@ -681,7 +681,7 @@
     "message": "此导出将使用您账户的加密密钥来加密您的数据。 如果您曾经轮换过账户的加密密钥，您应将其重新导出，否则您将无法解密导出的文件。"
   },
   "encExportAccountWarningDesc": {
-    "message": "账户加密密钥对每个 Bravura Safe 用户账户都是唯一的，所以您不能将加密的导出导入到另一个账户。"
+    "message": "每个 Bravura Safe 用户账户的账户加密密钥都是唯一的，因此您无法将加密的导出导入到另一个账户。"
   },
   "exportMasterPassword": {
     "message": "输入主密码来导出你的密码库。"
@@ -693,7 +693,7 @@
     "message": "了解组织"
   },
   "learnOrgConfirmation": {
-    "message": "Bravura Safe 允许您使用组织与他人共享您的密码库项目。要访问 bravurasafe.com 网站以了解更多内容吗？"
+    "message": "Bravura Safe 允许您使用组织与他人共享您的密码库项目。要访问 Bravura Safe website 网站以了解更多内容吗？"
   },
   "moveToOrganization": {
     "message": "移动到组织"
@@ -772,7 +772,7 @@
     "message": "管理会员资格"
   },
   "premiumManageAlert": {
-    "message": "您可以在 bravurasafe.com 网页版密码库管理您的会员资格。现在要访问吗？"
+    "message": "您可以在 Bravura Safe 网页版密码库管理您的会员资格。现在要访问吗？"
   },
   "premiumRefresh": {
     "message": "刷新会员资格"
@@ -805,7 +805,7 @@
     "message": "购买高级版"
   },
   "premiumPurchaseAlert": {
-    "message": "您可以在 bravurasafe.com 网页版密码库购买高级会员。现在要访问吗？"
+    "message": "您可以在 Bravura Safe 网页版密码库购买高级会员。现在要访问吗？"
   },
   "premiumCurrentMember": {
     "message": "您目前是高级会员！"
@@ -1101,13 +1101,13 @@
     "message": "品牌"
   },
   "expirationMonth": {
-    "message": "到期月份"
+    "message": "过期月份"
   },
   "expirationYear": {
-    "message": "到期年份"
+    "message": "过期年份"
   },
   "expiration": {
-    "message": "到期"
+    "message": "过期日"
   },
   "january": {
     "message": "一月"
@@ -1254,7 +1254,7 @@
     "message": "集合"
   },
   "favorites": {
-    "message": "收藏"
+    "message": "收藏夹"
   },
   "popOutNewWindow": {
     "message": "弹出到新窗口"
@@ -1488,6 +1488,15 @@
   "setMasterPassword": {
     "message": "设置主密码"
   },
+  "currentMasterPass": {
+    "message": "当前主密码"
+  },
+  "newMasterPass": {
+    "message": "新主密码"
+  },
+  "confirmNewMasterPass": {
+    "message": "确认新主密码"
+  },
   "masterPasswordPolicyInEffect": {
     "message": "一个或多个组织策略要求您的主密码满足下列要求："
   },
@@ -1519,7 +1528,7 @@
     "message": "至少包含一个数字"
   },
   "policyInEffectSpecial": {
-    "message": "至少包含一个下列的特殊字符：$CHARS$",
+    "message": "至少包含一个以下特殊字符 $CHARS$",
     "placeholders": {
       "chars": {
         "content": "$1",
@@ -1722,7 +1731,7 @@
     "description": "'Share' is a noun and the name of a feature called 'Bravura Safe Share'. It should not be translated."
   },
   "expirationDate": {
-    "message": "到期日期"
+    "message": "过期日期"
   },
   "expirationDateDesc": {
     "message": "设置后，对此 Share 的访问将在指定的日期和时间后过期。",
@@ -1824,19 +1833,19 @@
     "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'To use a calendar style date picker click here **to pop out your window.**'"
   },
   "expirationDateIsInvalid": {
-    "message": "所提供的到期日期无效。"
+    "message": "所提供的过期日期无效。"
   },
   "deletionDateIsInvalid": {
     "message": "所提供的删除日期无效。"
   },
   "expirationDateAndTimeRequired": {
-    "message": "需要到期日期和时间。"
+    "message": "需要过期日期和时间。"
   },
   "deletionDateAndTimeRequired": {
     "message": "需要删除日期和时间。"
   },
   "dateParsingError": {
-    "message": "保存您的删除和到期日期时出错。"
+    "message": "保存您的删除和过期日期时出错。"
   },
   "hideEmail": {
     "message": "对收件人隐藏我的电子邮件地址。"
@@ -1868,6 +1877,9 @@
   "updateMasterPasswordWarning": {
     "message": "您的主密码最近被您组织的管理员更改过。要访问密码库，您必须立即更新它。继续操作将使您退出当前会话并要求您重新登录。其他设备上的活动会话可能会继续保持活动状态长达一小时。"
   },
+  "updateWeakMasterPasswordWarning": {
+    "message": "您的主密码不符合您的组织策略要求。要访问密码库，必须立即更新您的主密码。继续操作将使您退出当前会话，要求您重新登录。其他设备上的活动会话可能会继续保持活动状态长达一小时。"
+  },
   "resetPasswordPolicyAutoEnroll": {
     "message": "自动注册"
   },
@@ -1887,7 +1899,7 @@
     "message": "分钟"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "您的组织策略正在影响您的密码库超时时间。最大允许的密码库超时时间是 $HOURS$ 小时 $MINUTES$ 分钟。",
+    "message": "您的组织策略已将您最大允许的密码库超时时间设置为 $HOURS$ 小时 $MINUTES$ 分钟。",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1896,6 +1908,32 @@
       "minutes": {
         "content": "$2",
         "example": "5"
+      }
+    }
+  },
+  "vaultTimeoutPolicyWithActionInEffect": {
+    "message": "您的组织策略正在影响您的密码库超时时间。最大允许的密码库超时时间是 $HOURS$ 小时 $MINUTES$ 分钟。您的密码库超时动作被设置为 $ACTION$。",
+    "placeholders": {
+      "hours": {
+        "content": "$1",
+        "example": "5"
+      },
+      "minutes": {
+        "content": "$2",
+        "example": "5"
+      },
+      "action": {
+        "content": "$3",
+        "example": "Lock"
+      }
+    }
+  },
+  "vaultTimeoutActionPolicyInEffect": {
+    "message": "您的组织策略已将您的密码库超时动作设置为 $ACTION$。",
+    "placeholders": {
+      "action": {
+        "content": "$1",
+        "example": "Lock"
       }
     }
   },
@@ -2088,7 +2126,7 @@
     "message": "记住电子邮件地址"
   },
   "loginWithDevice": {
-    "message": "使用设备登录"
+    "message": "设备登录"
   },
   "loginWithDeviceEnabledInfo": {
     "message": "必须在 Bravura Safe 应用程序的设置中启用设备登录。需要其他选项吗？"
@@ -2112,25 +2150,25 @@
     "message": "登录已发起"
   },
   "exposedMasterPassword": {
-    "message": "暴露的主密码"
+    "message": "已暴露的主密码"
   },
   "exposedMasterPasswordDesc": {
-    "message": "数据泄露中发现的密码。使用独特的密码来保护您的帐户。您确定要使用已暴露的密码吗？"
+    "message": "密码在数据泄露中被发现。请使用一个唯一的密码以保护您的账户。确定要使用已暴露的密码吗？"
   },
   "weakAndExposedMasterPassword": {
-    "message": "弱而暴露的主密码"
+    "message": "主密码弱且曾经暴露"
   },
   "weakAndBreachedMasterPasswordDesc": {
-    "message": "已经识别和发现在数据泄露中的弱密码。使用强大且独特的密码来保护您的帐户。您确定要使用此密码吗？"
+    "message": "识别到弱密码且其出现在数据泄露中。请使用一个强且唯一的密码以保护你的账户。确定要使用这个密码吗？"
   },
   "checkForBreaches": {
     "message": "检查已知的数据泄露是否包含此密码。"
   },
   "important": {
-    "message": "简体中文：重要"
+    "message": "重要："
   },
   "masterPasswordHint": {
-    "message": "检查此密码的已知数据泄露"
+    "message": "主密码忘记后，将无法恢复！"
   },
   "characterMinimum": {
     "message": "至少 $LENGTH$ 个字符",
@@ -2142,13 +2180,13 @@
     }
   },
   "autofillPageLoadPolicyActivated": {
-    "message": "您的组织策略已经在页面加载时打开了自动填充。"
+    "message": "您的组织策略已开启在页面加载时的自动填充。"
   },
   "howToAutofill": {
     "message": "如何自动填充"
   },
   "autofillSelectInfoWithCommand": {
-    "message": "从此页面选择一个项目，或使用快捷键: $COMMAND$",
+    "message": "从此页面选择一个项目，或使用快捷方式：$COMMAND$",
     "placeholders": {
       "command": {
         "content": "$1",
@@ -2169,7 +2207,7 @@
     "message": "自动填充键盘快捷键"
   },
   "autofillShortcutNotSet": {
-    "message": "未设置自动填充快捷键。请在浏览器设置中更改此设置。"
+    "message": "未设置自动填充快捷方式。请在浏览器设置中更改此设置。"
   },
   "autofillShortcutText": {
     "message": "自动填充快捷方式为： $COMMAND$。在浏览器设置中更改此项。",
@@ -2181,7 +2219,7 @@
     }
   },
   "autofillShortcutTextSafari": {
-    "message": "默认自动填充快捷键：$COMMAND$",
+    "message": "默认自动填充快捷方式：$COMMAND$。",
     "placeholders": {
       "command": {
         "content": "$1",
@@ -2197,5 +2235,8 @@
         "example": "Check known data breaches for this password"
       }
     }
+  },
+  "opensInANewWindow": {
+    "message": "在新窗口中打开"
   }
 }

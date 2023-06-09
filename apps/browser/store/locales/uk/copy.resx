@@ -118,31 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bravura Safe – Безкоштовний менеджер паролів</value>
+    <value>Bravura Safe</value>
   </data>
   <data name="Summary" xml:space="preserve">
-    <value>Захищений і безкоштовний менеджер паролів для всіх ваших пристроїв</value>
+    <value>Захищений, безплатний менеджер паролів для всіх ваших пристроїв</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Bravura Security Inc.</value>
   </data>
   <data name="AssetTitle" xml:space="preserve">
-    <value>Захищений і безкоштовний менеджер паролів для всіх ваших пристроїв</value>
+    <value>Захищений, безплатний менеджер паролів для всіх ваших пристроїв</value>
   </data>
   <data name="ScreenshotSync" xml:space="preserve">
-    <value>Синхронізуйте й отримуйте доступ до вашого сховища на багатьох пристроях</value>
+    <value>Синхронізуйте й отримуйте доступ до свого сховища на різних пристроях</value>
   </data>
   <data name="ScreenshotVault" xml:space="preserve">
     <value>Керуйте всіма своїми записами в захищеному сховищі</value>
   </data>
   <data name="ScreenshotAutofill" xml:space="preserve">
-    <value>Швидко й автоматично заповнюйте свої облікові дані на будь-якому веб-сайті</value>
+    <value>Швидко й автоматично заповнюйте свої облікові дані на будь-якому вебсайті</value>
   </data>
   <data name="ScreenshotMenu" xml:space="preserve">
     <value>Ви також можете зручно отримати доступ до свого сховища з контекстного меню</value>
   </data>
   <data name="ScreenshotPassword" xml:space="preserve">
-    <value>Автоматично генеруйте стійкі, випадкові та надійні паролі</value>
+    <value>Автоматично генеруйте надійні, випадкові та унікальні паролі</value>
   </data>
   <data name="ScreenshotEdit" xml:space="preserve">
     <value>Ваша інформація надійно захищена алгоритмом шифрування AES-256</value>

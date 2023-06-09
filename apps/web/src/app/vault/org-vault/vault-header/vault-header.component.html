@@ -1,15 +1,33 @@
 <div class="tw-mb-4 tw-flex tw-items-start tw-justify-between page-header">
   <div>
+    <bit-breadcrumbs *ngIf="showBreadcrumbs">
+      <bit-breadcrumb
+        [route]="[]"
+        [queryParams]="{ organizationId: organization.id, collectionId: null }"
+        queryParamsHandling="merge"
+      >
+        {{ organization.name }} {{ "vault" | i18n | lowercase }}
+      </bit-breadcrumb>
+      <ng-container>
+        <bit-breadcrumb
+          *ngFor="let collection of collections"
+          icon="fa-collection"
+          [route]="[]"
+          [queryParams]="{ collectionId: collection.id }"
+          queryParamsHandling="merge"
+        >
+          {{ collection.name }}
+        </bit-breadcrumb>
+      </ng-container>
+    </bit-breadcrumbs>
     <h1 class="tw-mb-0 tw-mt-1 tw-flex tw-items-center tw-space-x-2">
       <i
-        *ngIf="activeFilter.isCollectionSelected"
+        *ngIf="filter.collectionId !== undefined"
         class="fa fa-cube"
         aria-hidden="true"
       ></i>
       <span>{{ title }}</span>
-      <ng-container
-        *ngIf="organization.isManager && activeFilter.isCollectionSelected && !activeFilter.isUnassignedCollectionSelected"
-      >
+      <ng-container *ngIf="organization.isManager && collection !== undefined && (canEditCollection || canDeleteCollection)">
         <button
           bitIconButton="fa-angle-down"
           [bitMenuTriggerFor]="editCollectionMenu"
@@ -20,27 +38,27 @@
         <bit-menu #editCollectionMenu>
           <button
             type="button"
-            *ngIf="canEditCollection(activeFilter.selectedCollectionNode.node)"
+            *ngIf="canEditCollection"
             bitMenuItem
-            (click)="editCollection(activeFilter.selectedCollectionNode.node, 'info')"
+            (click)="editCollection(CollectionDialogTabType.Info)"
           >
             <i class="fa fa-fw fa-pencil-square-o" aria-hidden="true"></i>
             {{ "editInfo" | i18n }}
           </button>
           <button
             type="button"
-            *ngIf="canEditCollection(activeFilter.selectedCollectionNode.node)"
+            *ngIf="canEditCollection"
             bitMenuItem
-            (click)="editCollection(activeFilter.selectedCollectionNode.node, 'access')"
+            (click)="editCollection(CollectionDialogTabType.Access)"
           >
             <i class="fa fa-fw fa-users" aria-hidden="true"></i>
             {{ "access" | i18n }}
           </button>
           <button
             type="button"
-            *ngIf="canDeleteCollection(activeFilter.selectedCollectionNode.node)"
+            *ngIf="canDeleteCollection"
             bitMenuItem
-            (click)="deleteCollection(activeFilter.selectedCollectionNode.node)"
+            (click)="deleteCollection()"
           >
             <span class="tw-text-danger">
               <i class="fa fa-fw fa-trash-o" aria-hidden="true"></i>
@@ -49,20 +67,18 @@
           </button>
         </bit-menu>
       </ng-container>
-      <small #actionSpinner [appApiAction]="actionPromise">
-        <ng-container *ngIf="$any(actionSpinner).loading">
+      <small *ngIf="loading">
           <i
             class="fa fa-spinner fa-spin text-muted"
             title="{{ 'loading' | i18n }}"
             aria-hidden="true"
           ></i>
-          <span class="sr-only">{{ "loading" | i18n }}</span>
-        </ng-container>
+        <span class="tw-sr-only">{{ "loading" | i18n }}</span>
       </small>
     </h1>
   </div>
 
-  <div *ngIf="!activeFilter.isDeleted" class="tw-shrink-0">
+  <div *ngIf="filter.type !== 'trash' && filter.collectionId !== Unassigned" class="tw-shrink-0">
     <div *ngIf="organization.canCreateNewCollections" appListDropdown>
       <button
         bitButton

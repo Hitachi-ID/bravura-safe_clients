@@ -28,10 +28,10 @@ const Template: Story<SimpleDialogComponent> = (args: SimpleDialogComponent) => 
   <bit-simple-dialog>
       <span bitDialogTitle>Alert Dialog</span>
       <span bitDialogContent>Message Content</span>
-      <div bitDialogFooter class="tw-flex tw-flex-row tw-gap-2">
+    <ng-container bitDialogFooter>
         <button bitButton buttonType="primary">Yes</button>
         <button bitButton buttonType="secondary">No</button>
-      </div>
+    </ng-container>
   </bit-simple-dialog>
   `,
 });
@@ -45,10 +45,10 @@ const TemplateWithIcon: Story<SimpleDialogComponent> = (args: SimpleDialogCompon
       <i bitDialogIcon class="fa fa-star tw-text-3xl tw-text-success" aria-hidden="true"></i>
       <span bitDialogTitle>Premium Subscription Available</span>
       <span bitDialogContent> Message Content</span>
-      <div bitDialogFooter class="tw-flex tw-flex-row tw-gap-2">
+    <ng-container bitDialogFooter>
         <button bitButton buttonType="primary">Yes</button>
         <button bitButton buttonType="secondary">No</button>
-      </div>
+    </ng-container>
   </bit-simple-dialog>
   `,
 });
@@ -68,10 +68,10 @@ const TemplateScroll: Story<SimpleDialogComponent> = (args: SimpleDialogComponen
         </ng-container>
         end of sequence!
       </span>
-      <div bitDialogFooter class="tw-flex tw-flex-row tw-gap-2">
+    <ng-container bitDialogFooter>
         <button bitButton buttonType="primary">Yes</button>
         <button bitButton buttonType="secondary">No</button>
-      </div>
+    </ng-container>
   </bit-simple-dialog>
   `,
 });

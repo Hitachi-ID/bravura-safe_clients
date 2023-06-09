@@ -15,13 +15,14 @@ import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
 import { PasswordGenerationServiceAbstraction } from "@bitwarden/common/tools/generator/password";
 import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
-import { PolicyApiServiceAbstraction } from "@bitwarden/common/abstractions/policy/policy-api.service.abstraction";
-import { PolicyService } from "@bitwarden/common/abstractions/policy/policy.service.abstraction";
+import { PolicyApiServiceAbstraction } from "@bitwarden/common/admin-console/abstractions/policy/policy-api.service.abstraction";
+import { PolicyService } from "@bitwarden/common/admin-console/abstractions/policy/policy.service.abstraction";
 import { StateService } from "@bitwarden/common/abstractions/state.service";
-import { PolicyData } from "@bitwarden/common/models/data/policy.data";
-import { MasterPasswordPolicyOptions } from "@bitwarden/common/models/domain/master-password-policy-options";
-import { Policy } from "@bitwarden/common/models/domain/policy";
+import { PolicyData } from "@bitwarden/common/admin-console/models/data/policy.data";
+import { MasterPasswordPolicyOptions } from "@bitwarden/common/admin-console/models/domain/master-password-policy-options";
+import { Policy } from "@bitwarden/common/admin-console/models/domain/policy";
 import { ReferenceEventRequest } from "@bitwarden/common/models/request/reference-event.request";
+import { DialogServiceAbstraction } from "@bitwarden/angular/services/dialog";
 
 import { RouterService } from "../core";
 
@@ -55,7 +56,8 @@ export class RegisterComponent extends BaseRegisterComponent implements OnInit, 
     environmentService: EnvironmentService,
     logService: LogService,
     private routerService: RouterService,
-    auditService: AuditService
+    auditService: AuditService,
+    dialogService: DialogServiceAbstraction
   ) {
     super(
       formValidationErrorService,
@@ -70,7 +72,8 @@ export class RegisterComponent extends BaseRegisterComponent implements OnInit, 
       passwordGenerationService,
       environmentService,
       logService,
-      auditService
+      auditService,
+      dialogService
     );
   }
 

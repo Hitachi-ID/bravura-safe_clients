@@ -79,7 +79,8 @@
   </ng-container>
   <ng-container *ngIf="ciphers">
     <div class="no-items" *ngIf="!ciphers.length">
-      <i class="fa fa-spinner fa-spin fa-3x" *ngIf="!loaded" aria-hidden="true"></i>
+      <div class="no-items" *ngIf="!nestedFolders?.length && !nestedCollections?.length">
+        <i class="fa fa-spinner fa-spin fa-3x" *ngIf="!loaded" aria-hidden="true"></i>
       <ng-container *ngIf="loaded">
           <img class="no-items-image" aria-hidden="true" />
         <p>{{ "noItemsInList" | i18n }}</p>
@@ -87,6 +88,7 @@
           {{ "addItem" | i18n }}
         </button>
       </ng-container>
+      </div>
     </div>
     <cdk-virtual-scroll-viewport
       itemSize="55"

@@ -16,7 +16,7 @@ export class HelpMenu implements IMenubarMenu {
 
   get items(): MenuItemConstructorOptions[] {
     const items = [
-      this.getHelp,
+      this.helpAndFeedback,
       this.legal,
       this.separator,
       this.goToWebVault,
@@ -38,18 +38,10 @@ export class HelpMenu implements IMenubarMenu {
     this._aboutMenu = aboutMenu;
   }
 
-  private get contactUs(): MenuItemConstructorOptions {
+  private get helpAndFeedback(): MenuItemConstructorOptions {
     return {
-      id: "contactUs",
-      label: this.localize("contactUs"),
-      click: () => shell.openExternal("https://bravurasecurity.com/contact"),
-    };
-  }
-
-  private get getHelp(): MenuItemConstructorOptions {
-    return {
-      id: "getHelp",
-      label: this.localize("getHelp"),
+      id: "helpAndFeedback",
+      label: this.localize("helpAndFeedback"),
       click: () => shell.openExternal("https://bravurasecuritydocs.com/safe/#/home/2202/10/11"),
     };
   }

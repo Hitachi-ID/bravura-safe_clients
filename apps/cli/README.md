@@ -1,7 +1,7 @@
 # Bravura Safe Command-line Interface
 
 
-The Bravura Safe CLI is a powerful, full-featured command-line interface (CLI) tool to access and manage a Bitwarden vault. The CLI is written with TypeScript and Node.js and can be run on Windows, macOS, and Linux distributions.
+The Bravura Safe CLI is a powerful, full-featured command-line interface (CLI) tool to access and manage a Bravura Safe vault. The CLI is written with TypeScript and Node.js and can be run on Windows, macOS, and Linux distributions.
 
 ![CLI](https://raw.githubusercontent.com/<replace me>/brand/master/screenshots/cli-macos.png "CLI")
 

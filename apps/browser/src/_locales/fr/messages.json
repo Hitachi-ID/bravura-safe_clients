@@ -267,7 +267,7 @@
     "description": "Make the first letter of a work uppercase."
   },
   "includeNumber": {
-    "message": "Inclure le numéro"
+    "message": "Inclure un nombre"
   },
   "minNumbers": {
     "message": "Minimum de chiffres"
@@ -504,10 +504,10 @@
     "message": "Changer le mot de passe principal"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Vous pouvez changer votre mot de passe principal depuis le coffre web de bravurasecurity.com. Voulez-vous visiter le site web maintenant ?"
+    "message": "Vous pouvez changer votre mot de passe principal depuis le coffre web de Bravura Safe. Voulez-vous visiter le site web maintenant ?"
   },
   "twoStepLoginConfirmation": {
-    "message": "L'authentification à deux facteurs rend votre compte plus sûr en vous demandant de vérifier votre connexion avec un autre dispositif tel qu'une clé de sécurité, une application d'authentification, un SMS, un appel téléphonique ou un courriel. L'authentification à deux facteurs peut être configurée sur le coffre web de bravurasecurity.com. Voulez-vous visiter le site web maintenant ?"
+    "message": "L'authentification à deux facteurs rend votre compte plus sûr en vous demandant de vérifier votre connexion avec un autre dispositif tel qu'une clé de sécurité, une application d'authentification, un SMS, un appel téléphonique ou un courriel. L'authentification à deux facteurs peut être configurée sur le coffre web de Bravura Safe. Voulez-vous visiter le site web maintenant ?"
   },
   "editedFolder": {
     "message": "Dossier sauvegardé"
@@ -693,7 +693,7 @@
     "message": "En savoir plus sur les organisations"
   },
   "learnOrgConfirmation": {
-    "message": "Bravura Safe vous permet de partager des éléments de votre coffre avec d'autres personnes en utilisant un compte d'organisation. Souhaitez-vous visiter le site web bravurasafe.com pour en savoir plus ?"
+    "message": "Bravura Safe vous permet de partager des éléments de votre coffre avec d'autres personnes en utilisant un compte d'organisation. Souhaitez-vous visiter le site web Bravura Safe website pour en savoir plus ?"
   },
   "moveToOrganization": {
     "message": "Déplacer vers l'organisation"
@@ -772,7 +772,7 @@
     "message": "Gérer l'adhésion"
   },
   "premiumManageAlert": {
-    "message": "Vous pouvez gérer votre adhésion sur le coffre web de bravurasafe.com. Voulez-vous visiter le site web maintenant ?"
+    "message": "Vous pouvez gérer votre adhésion sur le coffre web de Bravura Safe. Voulez-vous visiter le site web maintenant ?"
   },
   "premiumRefresh": {
     "message": "Actualiser l'adhésion"
@@ -805,7 +805,7 @@
     "message": "Acheter Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Vous pouvez acheter une adhésion Premium sur le coffre web de bravurasafe.com. Voulez-vous visiter le site web maintenant ?"
+    "message": "Vous pouvez acheter une adhésion Premium sur le coffre web de Bravura Safe. Voulez-vous visiter le site web maintenant ?"
   },
   "premiumCurrentMember": {
     "message": "Vous êtes un membre Premium !"
@@ -1488,6 +1488,15 @@
   "setMasterPassword": {
     "message": "Définir le mot de passe principal"
   },
+  "currentMasterPass": {
+    "message": "Mot de passe principal actuel"
+  },
+  "newMasterPass": {
+    "message": "Nouveau mot de passe principal"
+  },
+  "confirmNewMasterPass": {
+    "message": "Confirmer le nouveau mot de passe principal"
+  },
   "masterPasswordPolicyInEffect": {
     "message": "Une ou plusieurs politiques de sécurité de l'organisation exigent que votre mot de passe principal réponde aux exigences suivantes :"
   },
@@ -1528,7 +1537,7 @@
     }
   },
   "masterPasswordPolicyRequirementsNotMet": {
-    "message": "Votre nouveau mot de passe principal ne répond pas aux exigences en matière de politique de sécurité."
+    "message": "Votre nouveau mot de passe principal ne répond pas aux exigences de politique de sécurité."
   },
   "acceptPolicies": {
     "message": "En cochant cette case vous acceptez ce qui suit :"
@@ -1868,6 +1877,9 @@
   "updateMasterPasswordWarning": {
     "message": "Votre mot de passe principal a été récemment changé par un administrateur de votre organisation. Pour pouvoir accéder au coffre, vous devez le mettre à jour maintenant. En poursuivant, vous serez déconnecté de votre session actuelle et vous devrez vous reconnecter. Les sessions actives sur d'autres appareils peuvent rester actives pendant encore une heure."
   },
+  "updateWeakMasterPasswordWarning": {
+    "message": "Votre mot de passe principal ne répond pas aux exigences de politique de sécurité de cette organisation. Pour accéder au coffre, vous devez mettre à jour votre mot de passe principal dès maintenant. En poursuivant, vous serez déconnecté de votre session actuelle et vous devrez vous reconnecter. Les sessions actives sur d'autres appareils peuver rester actives pendant encore une heure."
+  },
   "resetPasswordPolicyAutoEnroll": {
     "message": "Inscription automatique"
   },
@@ -1887,7 +1899,7 @@
     "message": "Minutes"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Les politiques de sécurité de votre organisation affectent le délai d'expiration de votre coffre. Le délai d'expiration autorisé du coffre est de $HOURS$ heure(s) et $MINUTES$ minute(s) maximum",
+    "message": "Les politiques de sécurité de votre organisation ont défini le délai d'expiration de votre coffre à $HOURS$ heure(s) et $MINUTES$ minute(s) maximum.",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1896,6 +1908,32 @@
       "minutes": {
         "content": "$2",
         "example": "5"
+      }
+    }
+  },
+  "vaultTimeoutPolicyWithActionInEffect": {
+    "message": "Les politiques de sécurité de votre organisation affectent le délai d'expiration de votre coffre. Le délai autorisé d'expiration du coffre est de $HOURS$ heure(s) et $MINUTES$ minute(s) maximum. L'action après délai d'expiration de votre coffre est fixée à $ACTION$.",
+    "placeholders": {
+      "hours": {
+        "content": "$1",
+        "example": "5"
+      },
+      "minutes": {
+        "content": "$2",
+        "example": "5"
+      },
+      "action": {
+        "content": "$3",
+        "example": "Lock"
+      }
+    }
+  },
+  "vaultTimeoutActionPolicyInEffect": {
+    "message": "Les politiques de sécurité de votre organisation ont défini l'action après délai d'expiration de votre coffre à $ACTION$.",
+    "placeholders": {
+      "action": {
+        "content": "$1",
+        "example": "Lock"
       }
     }
   },
@@ -2197,5 +2235,8 @@
         "example": "Check known data breaches for this password"
       }
     }
+  },
+  "opensInANewWindow": {
+    "message": "S'ouvre dans une nouvelle fenêtre"
   }
 }

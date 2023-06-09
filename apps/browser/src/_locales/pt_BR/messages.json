@@ -196,10 +196,10 @@
     "message": "Ajuda & Feedback"
   },
   "helpCenter": {
-    "message": "Bravura Safe Help center"
+    "message": "Central de Ajuda"
   },
   "communityForums": {
-    "message": "Explore Bravura Safe community forums"
+    "message": "Explore os fóruns da comunidade"
   },
   "contactSupport": {
     "message": "Contact Bravura Safe support"
@@ -365,7 +365,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bravurasafe.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -504,10 +504,10 @@
     "message": "Alterar Senha Mestra"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Você pode alterar a sua senha mestra no cofre web em bravurasafe.com. Você deseja visitar o site agora?"
+    "message": "Você pode alterar a sua senha mestra no cofre web em Bravura Safe. Você deseja visitar o site agora?"
   },
   "twoStepLoginConfirmation": {
-    "message": "O login de duas etapas torna a sua conta mais segura ao exigir que digite um código de segurança de um aplicativo de autenticação quando for iniciar a sessão. O login de duas etapas pode ser ativado no cofre web bravurasafe.com. Deseja visitar o site agora?"
+    "message": "O login de duas etapas torna a sua conta mais segura ao exigir que digite um código de segurança de um aplicativo de autenticação quando for iniciar a sessão. O login de duas etapas pode ser ativado no cofre web Bravura Safe. Deseja visitar o site agora?"
   },
   "editedFolder": {
     "message": "Pasta Editada"
@@ -693,7 +693,7 @@
     "message": "Aprenda mais sobre as Organizações"
   },
   "learnOrgConfirmation": {
-    "message": "O Bravura Safe permite compartilhar os seus itens do cofre com outros ao utilizar uma organização. Gostaria de visitar o site bravurasafe.com para saber mais?"
+    "message": "O Bravura Safe permite compartilhar os seus itens do cofre com outros ao utilizar uma organização. Gostaria de visitar o site Bravura Safe website para saber mais?"
   },
   "moveToOrganization": {
     "message": "Mover para a Organização"
@@ -772,7 +772,7 @@
     "message": "Gerenciar Plano"
   },
   "premiumManageAlert": {
-    "message": "Você pode gerenciar a sua assinatura premium no cofre web em bravurasafe.com. Você deseja visitar o site agora?"
+    "message": "Você pode gerenciar a sua assinatura premium no cofre web em Bravura Safe. Você deseja visitar o site agora?"
   },
   "premiumRefresh": {
     "message": "Atualizar Assinatura"
@@ -805,7 +805,7 @@
     "message": "Comprar Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Você pode comprar a assinatura premium no cofre web em bravurasafe.com. Você deseja visitar o site agora?"
+    "message": "Você pode comprar a assinatura premium no cofre web em Bravura Safe. Você deseja visitar o site agora?"
   },
   "premiumCurrentMember": {
     "message": "Você é um membro premium!"
@@ -1488,6 +1488,15 @@
   "setMasterPassword": {
     "message": "Definir Senha Mestra"
   },
+  "currentMasterPass": {
+    "message": "Current master password"
+  },
+  "newMasterPass": {
+    "message": "New master password"
+  },
+  "confirmNewMasterPass": {
+    "message": "Confirm new master password"
+  },
   "masterPasswordPolicyInEffect": {
     "message": "Uma ou mais políticas da organização exigem que a sua senha mestra cumpra aos seguintes requisitos:"
   },
@@ -1868,6 +1877,9 @@
   "updateMasterPasswordWarning": {
     "message": "Sua Senha Mestra foi alterada recentemente por um administrador de sua organização. Para acessar o cofre, você precisa atualizá-la agora. O processo desconectará você da sessão atual, exigindo que você inicie a sessão novamente. Sessões ativas em outros dispositivos podem continuar ativas por até uma hora."
   },
+  "updateWeakMasterPasswordWarning": {
+    "message": "Your master password does not meet one or more of your team policies. In order to access the vault, you must update your master password now. Proceeding will log you out of your current session, requiring you to log back in. Active sessions on other devices may continue to remain active for up to one hour."
+  },
   "resetPasswordPolicyAutoEnroll": {
     "message": "Inscrição Automática"
   },
@@ -1896,6 +1908,32 @@
       "minutes": {
         "content": "$2",
         "example": "5"
+      }
+    }
+  },
+  "vaultTimeoutPolicyWithActionInEffect": {
+    "message": "Your team policies are affecting your vault timeout. Maximum allowed vault timeout is $HOURS$ hour(s) and $MINUTES$ minute(s). Your vault timeout action is set to $ACTION$.",
+    "placeholders": {
+      "hours": {
+        "content": "$1",
+        "example": "5"
+      },
+      "minutes": {
+        "content": "$2",
+        "example": "5"
+      },
+      "action": {
+        "content": "$3",
+        "example": "Lock"
+      }
+    }
+  },
+  "vaultTimeoutActionPolicyInEffect": {
+    "message": "Your team policies have set your vault timeout action to $ACTION$.",
+    "placeholders": {
+      "action": {
+        "content": "$1",
+        "example": "Lock"
       }
     }
   },
@@ -2197,5 +2235,8 @@
         "example": "Check known data breaches for this password"
       }
     }
+  },
+  "opensInANewWindow": {
+    "message": "Opens in a new window"
   }
 }

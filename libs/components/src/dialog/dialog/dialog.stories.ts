@@ -32,6 +32,7 @@ export default {
     }),
   ],
   args: {
+    loading: false,
     dialogSize: "small",
   },
   argTypes: {
@@ -52,20 +53,21 @@ export default {
 const Template: Story<DialogComponent> = (args: DialogComponent) => ({
   props: args,
   template: `
-  <bit-dialog [dialogSize]="dialogSize" [disablePadding]="disablePadding">
+    <bit-dialog [dialogSize]="dialogSize" [loading]="loading" [disablePadding]="disablePadding">
     <span bitDialogTitle>{{title}}</span>
-    <span bitDialogContent>Dialog body text goes here.</span>
-    <div bitDialogFooter class="tw-flex tw-items-center tw-flex-row tw-gap-2">
-      <button bitButton buttonType="primary">Save</button>
-      <button bitButton buttonType="secondary">Cancel</button>
+      <ng-container bitDialogContent>Dialog body text goes here.</ng-container>
+      <ng-container bitDialogFooter>
+        <button bitButton buttonType="primary" [disabled]="loading">Save</button>
+        <button bitButton buttonType="secondary" [disabled]="loading">Cancel</button>
       <button
+          [disabled]="loading"
         class="tw-ml-auto"
         bitIconButton="fa-trash-o"
         buttonType="danger"
         size="default"
         title="Delete"
         aria-label="Delete"></button>
-    </div>
+      </ng-container>
   </bit-dialog>
   `,
 });
@@ -94,10 +96,17 @@ Large.args = {
   title: "Large",
 };
 
+export const Loading = Template.bind({});
+Loading.args = {
+  dialogSize: "large",
+  loading: true,
+  title: "Loading",
+};
+
 const TemplateScrolling: Story<DialogComponent> = (args: DialogComponent) => ({
   props: args,
   template: `
-  <bit-dialog [dialogSize]="dialogSize" [disablePadding]="disablePadding">
+    <bit-dialog [dialogSize]="dialogSize" [loading]="loading" [disablePadding]="disablePadding">
   <span bitDialogTitle>Scrolling Example</span>
   <span bitDialogContent>
     Dialog body text goes here.<br>
@@ -106,10 +115,10 @@ const TemplateScrolling: Story<DialogComponent> = (args: DialogComponent) => ({
     </ng-container>
     end of sequence!
   </span>
-  <div bitDialogFooter class="tw-flex tw-flex-row tw-gap-2">
-    <button bitButton buttonType="primary">Save</button>
-    <button bitButton buttonType="secondary">Cancel</button>
-  </div>
+      <ng-container bitDialogFooter>
+        <button bitButton buttonType="primary" [disabled]="loading">Save</button>
+        <button bitButton buttonType="secondary" [disabled]="loading">Cancel</button>
+      </ng-container>
   </bit-dialog>
   `,
 });
@@ -131,10 +140,10 @@ const TemplateTabbed: Story<DialogComponent> = (args: DialogComponent) => ({
         <bit-tab label="Third Tab">Third Tab Content</bit-tab>
     </bit-tab-group>
   </span>
-  <div bitDialogFooter class="tw-flex tw-flex-row tw-gap-2">
-    <button bitButton buttonType="primary">Save</button>
-    <button bitButton buttonType="secondary">Cancel</button>
-  </div>
+      <ng-container bitDialogFooter>
+        <button bitButton buttonType="primary" [disabled]="loading">Save</button>
+        <button bitButton buttonType="secondary" [disabled]="loading">Cancel</button>
+      </ng-container>
   </bit-dialog>
   `,
 });
