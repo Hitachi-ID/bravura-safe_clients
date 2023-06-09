@@ -180,7 +180,7 @@ export class AddEditComponent implements OnInit, OnDestroy {
       }
 
       file = files[0];
-      if (files[0].size > 2147483648) {
+      if (files[0].size > 1887500000) {
         // 2 GB hard limit to allow some buffer; language texts will 1.8 GB limit
         this.platformUtilsService.showToast(
           "error",

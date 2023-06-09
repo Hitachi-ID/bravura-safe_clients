@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "55E037472577FA6B00979016"
-               BuildableName = "desktop.app"
+               BuildableName = "Bravura Safe.app"
                BlueprintName = "desktop"
                ReferencedContainer = "container:desktop.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55E037472577FA6B00979016"
-            BuildableName = "desktop.app"
+            BuildableName = "Bravura Safe.app"
             BlueprintName = "desktop"
             ReferencedContainer = "container:desktop.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55E037472577FA6B00979016"
-            BuildableName = "desktop.app"
+            BuildableName = "Bravura Safe.app"
             BlueprintName = "desktop"
             ReferencedContainer = "container:desktop.xcodeproj">
          </BuildableReference>

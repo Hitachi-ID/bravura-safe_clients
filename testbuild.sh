@@ -67,7 +67,7 @@ then
 		cd apps
 		cd browser
 
-		npm run dist:firefox:nomin
+		npm run dist:firefox
 
             popd
         ;;
