@@ -24,4 +24,16 @@
   {{ "twoFactorHyprOpenDeviceManager" | i18n }}
 </button>
 
+<ng-container *ngIf="!loading && organization.useSso && organization.identifier">
+  <div class="secondary-header border-0 mb-0">
+    <h1>{{ "singleSignOn" | i18n }}</h1>
+  </div>
+  <button type="submit" class="btn btn-primary btn-submit" (click)="unlinkSso()" [disabled]="!organization.ssoBound">
+    {{ "unlinkSso" | i18n }}
+  </button>
+  <button type="submit" class="btn btn-primary btn-submit" (click)="linkSso()" [disabled]="organization.ssoBound">
+    {{ "linkSso" | i18n }}
+  </button>
+</ng-container>
+
 </ng-container>
