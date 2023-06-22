@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 
 import { ModalService } from "@bitwarden/angular/services/modal.service";
 import { LogService } from "@bitwarden/common/abstractions/log.service";
@@ -15,6 +15,14 @@ import { ApiService } from "@bitwarden/common/abstractions/api.service";
 import { ListResponse } from "@bitwarden/common/models/response/list.response";
 import { TwoFactorProviderType } from "@bitwarden/common/auth/enums/two-factor-provider-type";
 import { TwoFactorProviderResponse } from "@bitwarden/common/auth/models/response/two-factor-provider.response";
+import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
+import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
+import { SyncService } from "@bitwarden/common/vault/abstractions/sync/sync.service.abstraction";
+import { SsoComponent } from "@bitwarden/angular/auth/components/sso.component";
+import { AuthService } from "@bitwarden/common/auth/abstractions/auth.service";
+import { CryptoFunctionService } from "@bitwarden/common/abstractions/cryptoFunction.service";
+import { EnvironmentService } from "@bitwarden/common/abstractions/environment.service";
+import { PasswordGenerationServiceAbstraction } from "@bitwarden/common/tools/generator/password";
 
 @Component({
   selector: "app-org-account-options",
@@ -37,7 +45,15 @@ export class AccountComponent {
     private organizationService: OrganizationService,
     private stateService: StateService,
     private policyService: PolicyService,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private platformUtilsService: PlatformUtilsService,
+    private i18nService: I18nService,
+    private syncService: SyncService,
+    private authService: AuthService,
+    private router: Router,
+    private cryptoFunctionService: CryptoFunctionService,
+    private environmentService: EnvironmentService,
+    private passwordGenerationService: PasswordGenerationServiceAbstraction
   ) {}
 
   async ngOnInit() {
@@ -116,4 +132,46 @@ export class AccountComponent {
       await this.load();
     }
   }
+
+  async unlinkSso() {
+    let actionPromise: Promise<void | boolean>;
+    const confirmed = await this.platformUtilsService.showDialog(
+      this.i18nService.t("unlinkSsoConfirmation"),
+      this.organization.name,
+      this.i18nService.t("yes"),
+      this.i18nService.t("no"),
+      "warning"
+    );
+    if (!confirmed) {
+      return false;
+    }
+
+    try {
+      actionPromise = this.apiService.deleteSsoUser(this.organization.id).then(() => {
+        return this.syncService.fullSync(true);
+      });
+      await actionPromise;
+      this.platformUtilsService.showToast("success", null, "Unlinked SSO");
+    } catch (e) {
+      this.logService.error(e);
+    }
+    await this.load();
+  }
+
+  async linkSso() {
+    let ssoComponent: SsoComponent;
+    let returnUri = "/settings/organizations";
+
+    ssoComponent = new SsoComponent(this.authService, this.router, this.i18nService, this.route, this.stateService, this.platformUtilsService, this.apiService, this.cryptoFunctionService, this.environmentService, this.passwordGenerationService, this.logService);
+    ssoComponent.setRedirectUri(window.location.origin + "/sso-connector.html");
+    ssoComponent.setClientId("web");
+    ssoComponent.identifier = this.organization.identifier;
+    try {
+      ssoComponent.submit(returnUri, true);
+    } catch (e) {
+      this.logService.error(e);
+    }
+    await this.load();
+  }
+
 }

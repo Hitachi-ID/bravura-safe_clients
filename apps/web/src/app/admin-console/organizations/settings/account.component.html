@@ -28,16 +28,6 @@
           [(ngModel)]="org.name"
         />
       </div>
-      <div class="form-group">
-        <label for="identifier">{{ "identifier" | i18n }}</label>
-        <input
-          id="identifier"
-          class="form-control"
-          type="text"
-          name="Identifier"
-          [(ngModel)]="org.identifier"
-        />
-      </div>
     </div>
     <div class="col-6">
       <bit-avatar [text]="org.name" [id]="org.id" size="large"></bit-avatar>

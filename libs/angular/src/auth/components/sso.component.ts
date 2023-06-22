@@ -257,4 +257,13 @@ export class SsoComponent {
     const checkStateSplit = checkState.split("_identifier=");
     return stateSplit[0] === checkStateSplit[0];
   }
+
+  public setRedirectUri(redirectUri: string){
+    this.redirectUri = redirectUri;
+  }
+
+  public setClientId(clientId: string){
+    this.clientId = clientId;
+  }
+
 }
