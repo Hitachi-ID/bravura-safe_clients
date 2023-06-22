@@ -23,6 +23,7 @@ import { AuthService } from "@bitwarden/common/auth/abstractions/auth.service";
 import { CryptoFunctionService } from "@bitwarden/common/abstractions/cryptoFunction.service";
 import { EnvironmentService } from "@bitwarden/common/abstractions/environment.service";
 import { PasswordGenerationServiceAbstraction } from "@bitwarden/common/tools/generator/password";
+import { DialogServiceAbstraction, SimpleDialogType } from "@bitwarden/angular/services/dialog";
 
 @Component({
   selector: "app-org-account-options",
@@ -53,7 +54,8 @@ export class AccountComponent {
     private router: Router,
     private cryptoFunctionService: CryptoFunctionService,
     private environmentService: EnvironmentService,
-    private passwordGenerationService: PasswordGenerationServiceAbstraction
+    private passwordGenerationService: PasswordGenerationServiceAbstraction,
+    private dialogService: DialogServiceAbstraction
   ) {}
 
   async ngOnInit() {
@@ -135,13 +137,11 @@ export class AccountComponent {
 
   async unlinkSso() {
     let actionPromise: Promise<void | boolean>;
-    const confirmed = await this.platformUtilsService.showDialog(
-      this.i18nService.t("unlinkSsoConfirmation"),
-      this.organization.name,
-      this.i18nService.t("yes"),
-      this.i18nService.t("no"),
-      "warning"
-    );
+    const confirmed = await this.dialogService.openSimpleDialog({
+      title: this.organization.name,
+      content: { key: "unlinkSsoConfirmation" },
+      type: SimpleDialogType.WARNING,
+    });
     if (!confirmed) {
       return false;
     }
