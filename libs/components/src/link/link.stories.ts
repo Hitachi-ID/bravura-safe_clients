@@ -1,4 +1,4 @@
-import { Meta, moduleMetadata, Story } from "@storybook/angular";
+import { Meta, StoryObj, moduleMetadata } from "@storybook/angular";
 
 import { AnchorLinkDirective, ButtonLinkDirective } from "./link.directive";
 import { LinkModule } from "./link.module";
@@ -24,7 +24,10 @@ export default {
   },
 } as Meta;
 
-const ButtonTemplate: Story<ButtonLinkDirective> = (args: ButtonLinkDirective) => ({
+type Story = StoryObj<ButtonLinkDirective>;
+
+export const Buttons: Story = {
+  render: (args) => ({
   props: args,
   template: `
   <div class="tw-p-2" [ngClass]="{ 'tw-bg-transparent': linkType != 'contrast', 'tw-bg-primary-500': linkType === 'contrast' }">
@@ -48,9 +51,14 @@ const ButtonTemplate: Story<ButtonLinkDirective> = (args: ButtonLinkDirective) =
     </div>
   </div>
   `,
-});
+  }),
+  args: {
+    linkType: "primary",
+  },
+};
 
-const AnchorTemplate: Story<AnchorLinkDirective> = (args: AnchorLinkDirective) => ({
+export const Anchors: StoryObj<AnchorLinkDirective> = {
+  render: (args) => ({
   props: args,
   template: `
   <div class="tw-p-2" [ngClass]="{ 'tw-bg-transparent': linkType != 'contrast', 'tw-bg-primary-500': linkType === 'contrast' }">
@@ -74,33 +82,28 @@ const AnchorTemplate: Story<AnchorLinkDirective> = (args: AnchorLinkDirective) =
     </div>
   </div>
   `,
-});
-
-export const Buttons = ButtonTemplate.bind({});
-Buttons.args = {
+  }),
+  args: {
   linkType: "primary",
+  },
 };
 
-export const Anchors = AnchorTemplate.bind({});
-Anchors.args = {
-  linkType: "primary",
-};
-
-const InlineTemplate: Story = (args) => ({
+export const Inline: Story = {
+  render: (args) => ({
   props: args,
   template: `
     <span class="tw-text-main">
       On the internet paragraphs often contain <a bitLink href="#">inline links</a>, but few know that <button bitLink>buttons</button> can be used for similar purposes.
     </span>
   `,
-});
-
-export const Inline = InlineTemplate.bind({});
-Inline.args = {
+  }),
+  args: {
   linkType: "primary",
+  },
 };
 
-const DisabledTemplate: Story = (args) => ({
+export const Disabled: Story = {
+  render: (args) => ({
   props: args,
   template: `
     <button bitLink disabled linkType="primary" class="tw-mr-2">Primary</button>
@@ -109,12 +112,11 @@ const DisabledTemplate: Story = (args) => ({
       <button bitLink disabled linkType="contrast" class="tw-mr-2">Contrast</button>
     </div>
   `,
-});
-
-export const Disabled = DisabledTemplate.bind({});
-Disabled.parameters = {
+  }),
+  parameters: {
   controls: {
     exclude: ["linkType"],
     hideNoControlsWarning: true,
+  },
   },
 };

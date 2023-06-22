@@ -1,5 +1,5 @@
 import { RouterTestingModule } from "@angular/router/testing";
-import { Meta, moduleMetadata, Story } from "@storybook/angular";
+import { StoryObj, Meta, moduleMetadata } from "@storybook/angular";
 
 import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
 
@@ -36,7 +36,8 @@ export default {
   },
 } as Meta;
 
-export const Default: Story<NavGroupComponent> = (args) => ({
+export const Default: StoryObj<NavGroupComponent> = {
+  render: (args) => ({
   props: args,
   template: `
       <bit-nav-group text="Hello World (Anchor)" [route]="['']" icon="fa-filter" [open]="true">
@@ -50,9 +51,11 @@ export const Default: Story<NavGroupComponent> = (args) => ({
         <bit-nav-item text="Child C" icon="fa-filter"></bit-nav-item>
       </bit-nav-group>
     `,
-});
+  }),
+};
 
-export const Tree: Story<NavGroupComponent> = (args) => ({
+export const Tree: StoryObj<NavGroupComponent> = {
+  render: (args) => ({
   props: args,
   template: `
     <bit-nav-group text="Tree example" icon="fa-cube" [open]="true">
@@ -71,4 +74,5 @@ export const Tree: Story<NavGroupComponent> = (args) => ({
       <bit-nav-item text="Level 1 - no children" route="#" icon="fa-cube" variant="tree"></bit-nav-item>
     </bit-nav-group>
   `,
-});
+  }),
+};

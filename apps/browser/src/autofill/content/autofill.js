@@ -676,7 +676,7 @@
           var els = [];
           try {
               var elsList = theDoc.querySelectorAll('input:not([type="hidden"]):not([type="submit"]):not([type="reset"])' +
-                  ':not([type="button"]):not([type="image"]):not([type="file"]):not([data-faignore]), select, ' +
+                  ':not([type="button"]):not([type="image"]):not([type="file"]):not([data-faignore]), select, textarea, ' +
                   'span[data-bwautofill]');
               els = Array.prototype.slice.call(elsList);
           } catch (e) { }
@@ -741,14 +741,29 @@
 
       // Check if URL is not secure when the original saved one was
       function urlNotSecure(savedURLs) {
-          var passwordInputs = null;
-          if (!savedURLs) {
+          if (!savedURLs || !savedURLs.length) {
               return false;
           }
 
-          return savedURLs.some(url => url?.indexOf('https://') === 0) && 'http:' === document.location.protocol && (passwordInputs = document.querySelectorAll('input[type=password]'),
-              0 < passwordInputs.length && (confirmResult = confirm('Warning: This is an unsecured HTTP page, and any information you submit can potentially be seen and changed by others. This Login was originally saved on a secure (HTTPS) page.\n\nDo you still wish to fill this login?'),
-                  0 == confirmResult)) ? true : false;
+          const confirmationWarning = [
+              chrome.i18n.getMessage("insecurePageWarning"),
+              chrome.i18n.getMessage("insecurePageWarningFillPrompt", [window.location.hostname])
+          ].join('\n\n');
+
+          if (
+              // At least one of the `savedURLs` uses SSL
+              savedURLs.some(url => url.startsWith('https://')) &&
+              // The current page is not using SSL
+              document.location.protocol === 'http:' &&
+              // There are password inputs on the page
+              document.querySelectorAll('input[type=password]')?.length
+          ) {
+              // The user agrees the page is unsafe or not
+              return !confirm(confirmationWarning);
+      }
+
+          // The page is secure
+          return false;
       }
 
       // Detect if within an iframe, and the iframe is sandboxed
@@ -777,10 +792,13 @@
             // confirm() is blocked by sandboxed iframes, but we don't want to fill sandboxed iframes anyway.
             // If this occurs, confirm() returns false without displaying the dialog box, and autofill will be aborted.
             // The browser may print a message to the console, but this is not a standard error that we can handle.
-            var acceptedIframeWarning = confirm("The form is hosted by a different domain than the URI " +
-                "of your saved login. Choose OK to auto-fill anyway, or Cancel to stop. " +
-                "To prevent this warning in the future, save this URI, " +
-                window.location.hostname + ", to your login.");
+            const confirmationWarning = [
+              chrome.i18n.getMessage("autofillIframeWarning"),
+              chrome.i18n.getMessage("autofillIframeWarningTip", [window.location.hostname])
+            ].join('\n\n');
+
+            const acceptedIframeWarning = confirm(confirmationWarning);
+
             if (!acceptedIframeWarning) {
               return;
             }
@@ -1159,7 +1177,7 @@
           }
           try {
               // START MODIFICATION
-              var elements = Array.prototype.slice.call(selectAllFromDoc('input, select, button, ' +
+              var elements = Array.prototype.slice.call(selectAllFromDoc('input, select, button, textarea, ' +
                   'span[data-bwautofill]'));
               // END MODIFICATION
               var filteredElements = elements.filter(function (o) {

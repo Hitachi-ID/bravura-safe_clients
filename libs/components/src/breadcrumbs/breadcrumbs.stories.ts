@@ -1,6 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, importProvidersFrom } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { Meta, Story, moduleMetadata } from "@storybook/angular";
+import { Meta, StoryObj, applicationConfig, moduleMetadata } from "@storybook/angular";
 
 import { IconButtonModule } from "../icon-button";
 import { LinkModule } from "../link";
@@ -26,16 +26,19 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [BreadcrumbComponent],
-      imports: [
-        LinkModule,
-        MenuModule,
-        IconButtonModule,
-        RouterModule.forRoot([{ path: "**", component: EmptyComponent }], { useHash: true }),
+      imports: [LinkModule, MenuModule, IconButtonModule, RouterModule],
+    }),
+    applicationConfig({
+      providers: [
+        importProvidersFrom(
+          RouterModule.forRoot([{ path: "**", component: EmptyComponent }], { useHash: true })
+        ),
       ],
     }),
   ],
   args: {
     items: [],
+    show: 3,
   },
   argTypes: {
     breadcrumbs: {
@@ -45,7 +48,10 @@ export default {
   },
 } as Meta;
 
-const Template: Story<BreadcrumbsComponent> = (args: BreadcrumbsComponent) => ({
+type Story = StoryObj<BreadcrumbsComponent & { items: Breadcrumb[] }>;
+
+export const TopLevel: Story = {
+  render: (args) => ({
   props: args,
   template: `
     <h3 class="tw-text-main">Router links</h3>
@@ -62,23 +68,26 @@ const Template: Story<BreadcrumbsComponent> = (args: BreadcrumbsComponent) => ({
       </bit-breadcrumbs>
     </p>
   `,
-});
+  }),
 
-export const TopLevel = Template.bind({});
-TopLevel.args = {
+  args: {
   items: [{ icon: "fa-star", name: "Top Level" }] as Breadcrumb[],
+  },
 };
 
-export const SecondLevel = Template.bind({});
-SecondLevel.args = {
+export const SecondLevel: Story = {
+  ...TopLevel,
+  args: {
   items: [
     { name: "Acme Vault", route: "/" },
     { icon: "fa-cube", name: "Collection", route: "collection" },
   ] as Breadcrumb[],
+  },
 };
 
-export const Overflow = Template.bind({});
-Overflow.args = {
+export const Overflow: Story = {
+  ...TopLevel,
+  args: {
   items: [
     { name: "Acme Vault", route: "" },
     { icon: "fa-cube", name: "Collection", route: "collection" },
@@ -88,4 +97,5 @@ Overflow.args = {
     { icon: "fa-cube", name: "Middle-Collection 4", route: "middle-collection-4" },
     { icon: "fa-cube", name: "End Collection", route: "end-collection" },
   ] as Breadcrumb[],
+  },
 };

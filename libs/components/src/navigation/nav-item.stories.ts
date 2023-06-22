@@ -1,5 +1,5 @@
 import { RouterTestingModule } from "@angular/router/testing";
-import { Meta, moduleMetadata, Story } from "@storybook/angular";
+import { StoryObj, Meta, moduleMetadata } from "@storybook/angular";
 
 import { IconButtonModule } from "../icon-button";
 
@@ -23,33 +23,40 @@ export default {
   },
 } as Meta;
 
-const Template: Story<NavItemComponent> = (args: NavItemComponent) => ({
+type Story = StoryObj<NavItemComponent>;
+
+export const Default: Story = {
+  render: (args) => ({
   props: args,
   template: `
       <bit-nav-item text="${args.text}"  [route]="['']" icon="${args.icon}"></bit-nav-item>
     `,
-});
-
-export const Default = Template.bind({});
-Default.args = {
+  }),
+  args: {
   text: "Hello World",
   icon: "fa-filter",
+  },
 };
 
-export const WithoutIcon = Template.bind({});
-WithoutIcon.args = {
+export const WithoutIcon: Story = {
+  ...Default,
+  args: {
   text: "Hello World",
   icon: "",
+  },
 };
 
-export const WithoutRoute: Story<NavItemComponent> = (args: NavItemComponent) => ({
+export const WithoutRoute: Story = {
+  render: (args: NavItemComponent) => ({
   props: args,
   template: `
       <bit-nav-item text="Hello World" icon="fa-cube"></bit-nav-item>
     `,
-});
+  }),
+};
 
-export const WithChildButtons: Story<NavItemComponent> = (args: NavItemComponent) => ({
+export const WithChildButtons: Story = {
+  render: (args: NavItemComponent) => ({
   props: args,
   template: `
       <bit-nav-item text="Hello World" [route]="['']" icon="fa-cube">
@@ -79,9 +86,11 @@ export const WithChildButtons: Story<NavItemComponent> = (args: NavItemComponent
         ></button>
       </bit-nav-item>
     `,
-});
+  }),
+};
 
-export const MultipleItemsWithDivider: Story<NavItemComponent> = (args: NavItemComponent) => ({
+export const MultipleItemsWithDivider: Story = {
+  render: (args: NavItemComponent) => ({
   props: args,
   template: `
     <bit-nav-item text="Hello World" icon="fa-cube"></bit-nav-item>
@@ -90,4 +99,5 @@ export const MultipleItemsWithDivider: Story<NavItemComponent> = (args: NavItemC
     <bit-nav-item text="Hello World" icon="fa-cube"></bit-nav-item>
     <bit-nav-item text="Hello World" icon="fa-cube"></bit-nav-item>
   `,
-});
+  }),
+};

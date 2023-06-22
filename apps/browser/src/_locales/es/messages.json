@@ -77,7 +77,7 @@
     "message": "Copiar nota"
   },
   "copyUri": {
-    "message": "Copiar URI"
+    "message": "Copiar URL"
   },
   "copyUsername": {
     "message": "Copiar usuario"
@@ -534,11 +534,11 @@
     "message": "Contraseña copiada"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -547,7 +547,7 @@
     }
   },
   "newUri": {
-    "message": "Nueva URI"
+    "message": "Nueva URL"
   },
   "addedItem": {
     "message": "Elemento añadido"
@@ -637,11 +637,11 @@
     "message": "Haga clic con el botón secundario para acceder a la generación de contraseñas y a los inicios de sesión correspondientes al sitio web. "
   },
   "defaultUriMatchDetection": {
-    "message": "Detección por defecto de coincidencia de URI",
-    "description": "Default URI match detection for auto-fill."
+    "message": "Detección por defecto de coincidencia de URL",
+    "description": "Default URL match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "Elija el método de detección por defecto de coincidencia de URI que se utilizará para acciones de inicio de sesión como autorrellenado."
+    "message": "Elija el método de detección por defecto de coincidencia de URL que se utilizará para acciones de inicio de sesión como autorrellenado."
   },
   "theme": {
     "message": "Tema"
@@ -923,6 +923,30 @@
   "duoOrganizationDesc": {
     "message": "Verificar con Duo Security para tu organización usando la aplicación Duo Mobile, SMS, llamada telefónica o llave de seguridad U2F.",
     "description": "'Duo Security' and 'Duo Mobile' are product names and should not be translated."
+  },
+  "twoFactorHyprCheckDevice": {
+    "message": "Check device for notification"
+  },
+  "twoFactorHyprVerifyItIsYou": {
+    "message": "Verify it is you by approving the notification sent to your registered device"
+  },
+  "twoFactorHyprSendRegEmail": {
+    "message": "Send registration email"
+  },
+  "twoFactorHyprRegEmailSent": {
+    "message": "Registration email sent"
+  },
+  "twoFactorHyprNoToken": {
+    "message": "Failed to authenticate [no token]"
+  },
+  "twoFactorHyprAuthDenied": {
+    "message": "Authentication denied"
+  },
+  "twoFactorHyprAuthFailed": {
+    "message": "Failed to authenticate via HYPR"
+  },
+  "twoFactorHyprNoUserAndOrDevice": {
+    "message": "HYPR account not found and/or device needs to be registered"
   },
   "webAuthnTitle": {
     "message": "FIDO2 WebAuthn"
@@ -1293,22 +1317,22 @@
   },
   "matchDetection": {
     "message": "Tipo de detección",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Detección por defecto",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Alternar opciones"
   },
   "toggleCurrentUris": {
-    "message": "Alternar URIs actuales",
-    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
+    "message": "Alternar URLs actuales",
+    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
   },
   "currentUri": {
-    "message": "URI actual",
-    "description": "The URI of one of the current open tabs in the browser."
+    "message": "URL actual",
+    "description": "The URL of one of the current open tabs in the browser."
   },
   "organization": {
     "message": "Organización",
@@ -1456,10 +1480,28 @@
     "message": "Autorellenar y guardar"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "Objeto autorellenado y URI guardada"
+    "message": "Objeto autorellenado y URL guardada"
   },
   "autoFillSuccess": {
     "message": "Objeto autorellenado"
+  },
+  "insecurePageWarning": {
+    "message": "Atención: Esta es una página HTTP no segura, y cualquier información que envíes puede ser vista y cambiada por otros. Este inicio de sesión fue guardado originalmente en una página segura (HTTPS)."
+  },
+  "insecurePageWarningFillPrompt": {
+    "message": "¿Sigue deseando rellenar este inicio de sesión?"
+  },
+  "autofillIframeWarning": {
+    "message": "El formulario está alojado por un dominio diferente al URL de su registro guardado. Elija OK para autorrellenar de todos modos, o Cancelar para parar."
+  },
+  "autofillIframeWarningTip": {
+    "message": "Para prevenir esta advertencia en el futuro, guarde esta URL, $HOSTNAME$, en su elemento de inicio de sesión de Bravura Safe para este sitio.",
+    "placeholders": {
+      "hostname": {
+        "content": "$1",
+        "example": "www.example.com"
+      }
+    }
   },
   "setMasterPassword": {
     "message": "Establecer contraseña maestra"
@@ -2212,7 +2254,18 @@
       }
     }
   },
+  "region": {
+    "message": "Región"
+  },
   "opensInANewWindow": {
     "message": "Abre en una nueva ventana"
+  },
+  "eu": {
+    "message": "Unión Europea",
+    "description": "European Union"
+  },
+  "us": {
+    "message": "EE.UU.",
+    "description": "United States"
   }
 }

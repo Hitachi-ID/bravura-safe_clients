@@ -77,7 +77,7 @@
     "message": "Copier la note"
   },
   "copyUri": {
-    "message": "Copier l'URI"
+    "message": "Copier l'URL"
   },
   "copyUsername": {
     "message": "Copier le nom d'utilisateur"
@@ -534,11 +534,11 @@
     "message": "Mot de passe copié"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -547,7 +547,7 @@
     }
   },
   "newUri": {
-    "message": "Nouvel URI"
+    "message": "Nouvel URL"
   },
   "addedItem": {
     "message": "Élément ajouté"
@@ -637,11 +637,11 @@
     "message": "Utilisez un clic secondaire pour accéder à la génération de mots de passe et les identifiants correspondants pour le site Web. "
   },
   "defaultUriMatchDetection": {
-    "message": "Détection de correspondance URI par défaut",
-    "description": "Default URI match detection for auto-fill."
+    "message": "Détection de correspondance URL par défaut",
+    "description": "Default URL match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "Choisissez la manière de gestion par défaut de la détection de correspondance URI pour les identifiants lors de l'exécution d'actions telles que la saisie automatique."
+    "message": "Choisissez la manière de gestion par défaut de la détection de correspondance URL pour les identifiants lors de l'exécution d'actions telles que la saisie automatique."
   },
   "theme": {
     "message": "Thème"
@@ -1317,22 +1317,22 @@
   },
   "matchDetection": {
     "message": "Détection de correspondance",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Détection de correspondance par défaut",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Options de basculement"
   },
   "toggleCurrentUris": {
-    "message": "Afficher/masquer les URIs actuels",
-    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
+    "message": "Afficher/masquer les URLs actuels",
+    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
   },
   "currentUri": {
-    "message": "URI actuel",
-    "description": "The URI of one of the current open tabs in the browser."
+    "message": "URL actuel",
+    "description": "The URL of one of the current open tabs in the browser."
   },
   "organization": {
     "message": "Organisation",
@@ -1480,10 +1480,28 @@
     "message": "Saisir automatiquement et sauvegarder"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "Élément saisi automatiquement et URI sauvegardé"
+    "message": "Élément saisi automatiquement et URL sauvegardé"
   },
   "autoFillSuccess": {
     "message": "Élément saisi automatiquement"
+  },
+  "insecurePageWarning": {
+    "message": "Avertissement : il s'agit d'une page HTTP non sécurisée, et toute information que vous soumettez peut potentiellement être vue et modifiée par d'autres. À l'origine, cet identifiant a été enregistré sur une page sécurisée (HTTPS)."
+  },
+  "insecurePageWarningFillPrompt": {
+    "message": "Voulez-vous toujours saisir automatiquement cet identifiant ?"
+  },
+  "autofillIframeWarning": {
+    "message": "Le formulaire est hébergé par un domaine différent de l'URL d'enregistrement de votre identifiant. Choisissez OK pour poursuivre la saisie automatique, ou Annuler pour arrêter."
+  },
+  "autofillIframeWarningTip": {
+    "message": "À l'avenir, pour éviter cet avertissement, enregistrez cet URL, $HOSTNAME$, dans votre élément de connexion Bravura Safe pour ce site.",
+    "placeholders": {
+      "hostname": {
+        "content": "$1",
+        "example": "www.example.com"
+      }
+    }
   },
   "setMasterPassword": {
     "message": "Définir le mot de passe principal"
@@ -2236,7 +2254,18 @@
       }
     }
   },
+  "region": {
+    "message": "Région"
+  },
   "opensInANewWindow": {
     "message": "S'ouvre dans une nouvelle fenêtre"
+  },
+  "eu": {
+    "message": "EU",
+    "description": "European Union"
+  },
+  "us": {
+    "message": "US",
+    "description": "United States"
   }
 }

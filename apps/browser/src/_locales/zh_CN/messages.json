@@ -77,7 +77,7 @@
     "message": "复制备注"
   },
   "copyUri": {
-    "message": "复制 URI"
+    "message": "复制 URL"
   },
   "copyUsername": {
     "message": "复制用户名"
@@ -534,11 +534,11 @@
     "message": "密码已复制"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -547,7 +547,7 @@
     }
   },
   "newUri": {
-    "message": "新增 URI"
+    "message": "新增 URL"
   },
   "addedItem": {
     "message": "项目已添加"
@@ -637,11 +637,11 @@
     "message": "使用辅助点击来访问密码生成和匹配的网站登录项目。 "
   },
   "defaultUriMatchDetection": {
-    "message": "默认 URI 匹配检测",
-    "description": "Default URI match detection for auto-fill."
+    "message": "默认 URL 匹配检测",
+    "description": "Default URL match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "选择在执行诸如自动填充之类的操作时对登录进行 URI 匹配检测的默认方式。"
+    "message": "选择在执行诸如自动填充之类的操作时对登录进行 URL 匹配检测的默认方式。"
   },
   "theme": {
     "message": "主题"
@@ -1317,22 +1317,22 @@
   },
   "matchDetection": {
     "message": "匹配检测",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "默认匹配检测",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "切换选项"
   },
   "toggleCurrentUris": {
-    "message": "切换当前 URI",
-    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
+    "message": "切换当前 URL",
+    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
   },
   "currentUri": {
-    "message": "当前 URI",
-    "description": "The URI of one of the current open tabs in the browser."
+    "message": "当前 URL",
+    "description": "The URL of one of the current open tabs in the browser."
   },
   "organization": {
     "message": "组织",
@@ -1480,10 +1480,28 @@
     "message": "自动填充并保存"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "项目已自动填充且 URI 已保存"
+    "message": "项目已自动填充且 URL 已保存"
   },
   "autoFillSuccess": {
     "message": "项目已自动填充 "
+  },
+  "insecurePageWarning": {
+    "message": "警告：这是一个不安全的 HTTP 页面，您提交的任何信息都可能被其他人看到和更改。此登录最初保存在安全 (HTTPS) 页面上。"
+  },
+  "insecurePageWarningFillPrompt": {
+    "message": "您仍然想要填充此登录信息吗？"
+  },
+  "autofillIframeWarning": {
+    "message": "该表单由不同于您保存的登录的 URL 域名托管。选择「确定」以自动填充，或选择「取消」停止填充。"
+  },
+  "autofillIframeWarningTip": {
+    "message": "要防止以后再次出现此警告，请将此站点的 URL $HOSTNAME$ 保存到您的 Bravura Safe 登录项目中。",
+    "placeholders": {
+      "hostname": {
+        "content": "$1",
+        "example": "www.example.com"
+      }
+    }
   },
   "setMasterPassword": {
     "message": "设置主密码"
@@ -1878,7 +1896,7 @@
     "message": "您的主密码最近被您组织的管理员更改过。要访问密码库，您必须立即更新它。继续操作将使您退出当前会话并要求您重新登录。其他设备上的活动会话可能会继续保持活动状态长达一小时。"
   },
   "updateWeakMasterPasswordWarning": {
-    "message": "您的主密码不符合您的组织策略要求。要访问密码库，必须立即更新您的主密码。继续操作将使您退出当前会话，要求您重新登录。其他设备上的活动会话可能会继续保持活动状态长达一小时。"
+    "message": "您的主密码不符合某一项或多项组织策略要求。要访问密码库，必须立即更新您的主密码。继续操作将使您退出当前会话，并要求您重新登录。其他设备上的活动会话可能会继续保持活动状态长达一小时。"
   },
   "resetPasswordPolicyAutoEnroll": {
     "message": "自动注册"
@@ -2236,7 +2254,18 @@
       }
     }
   },
+  "region": {
+    "message": "区域"
+  },
   "opensInANewWindow": {
     "message": "在新窗口中打开"
+  },
+  "eu": {
+    "message": "欧盟",
+    "description": "European Union"
+  },
+  "us": {
+    "message": "美国",
+    "description": "United States"
   }
 }

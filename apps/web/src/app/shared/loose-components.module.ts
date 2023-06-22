@@ -69,8 +69,6 @@ import { TaxInfoComponent } from "../billing/settings/tax-info.component";
 import { UserSubscriptionComponent } from "../billing/settings/user-subscription.component";
 import { DynamicAvatarComponent } from "../components/dynamic-avatar.component";
 import { SelectableAvatarComponent } from "../components/selectable-avatar.component";
-import { UserVerificationPromptComponent } from "../components/user-verification-prompt.component";
-import { UserVerificationComponent } from "../components/user-verification.component";
 import { FooterComponent } from "../layouts/footer.component";
 import { FrontendLayoutComponent } from "../layouts/frontend-layout.component";
 import { NavbarComponent } from "../layouts/navbar.component";
@@ -117,6 +115,7 @@ import { AddEditComponent as OrgAddEditComponent } from "../vault/org-vault/add-
 import { AttachmentsComponent as OrgAttachmentsComponent } from "../vault/org-vault/attachments.component";
 import { CollectionsComponent as OrgCollectionsComponent } from "../vault/org-vault/collections.component";
 
+import { UserVerificationModule } from "./components/user-verification";
 import { SharedModule } from "./shared.module";
 
 // Please do not add to this list of declarations - we should refactor these into modules when doing so makes sense until there are none left.
@@ -127,6 +126,7 @@ import { SharedModule } from "./shared.module";
     OrganizationCreateModule,
     RegisterFormModule,
     ProductSwitcherModule,
+    UserVerificationModule,
     ChangeKdfModule,
     DynamicAvatarComponent,
   ],
@@ -187,7 +187,6 @@ import { SharedModule } from "./shared.module";
     GeneratorComponent,
     PasswordGeneratorHistoryComponent,
     PasswordRepromptComponent,
-    UserVerificationPromptComponent,
     PaymentComponent,
     PaymentMethodComponent,
     PreferencesComponent,
@@ -235,7 +234,6 @@ import { SharedModule } from "./shared.module";
     BillingHistoryViewComponent,
     UserLayoutComponent,
     UserSubscriptionComponent,
-    UserVerificationComponent,
     VaultTimeoutInputComponent,
     VerifyEmailComponent,
     VerifyEmailTokenComponent,
@@ -347,7 +345,6 @@ import { SharedModule } from "./shared.module";
     BillingHistoryViewComponent,
     UserLayoutComponent,
     UserSubscriptionComponent,
-    UserVerificationComponent,
     VaultTimeoutInputComponent,
     VerifyEmailComponent,
     VerifyEmailTokenComponent,

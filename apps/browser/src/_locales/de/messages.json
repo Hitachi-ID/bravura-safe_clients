@@ -77,7 +77,7 @@
     "message": "Notiz kopieren"
   },
   "copyUri": {
-    "message": "URI kopieren"
+    "message": "URL kopieren"
   },
   "copyUsername": {
     "message": "Nutzernamen kopieren"
@@ -518,11 +518,11 @@
     "message": "Passwort kopiert"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -618,14 +618,14 @@
     "message": "Kontextmenüoptionen anzeigen"
   },
   "contextMenuItemDesc": {
-    "message": "Verwende einen zweiten Klick, um auf die Erstellung von Passwörtern und passende Zugangsdaten für die Webseite zuzugreifen. "
+    "message": "Greife über einen Rechtsklick auf die Erstellung von Passwörtern und passende Zugangsdaten für die Website zu."
   },
   "defaultUriMatchDetection": {
-    "message": "Standard URI-Übereinstimmungserkennung",
-    "description": "Default URI match detection for auto-fill."
+    "message": "Standard URL-Übereinstimmungserkennung",
+    "description": "Default URL match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "Wähle die Standardmethode, mit der die URI-Match-Erkennung für Anmeldungen bei Aktionen wie dem automatischen Ausfüllen behandelt wird."
+    "message": "Wähle die Standardmethode, mit der die URL-Match-Erkennung für Anmeldungen bei Aktionen wie dem automatischen Ausfüllen behandelt wird."
   },
   "theme": {
     "message": "Design"
@@ -1301,22 +1301,22 @@
   },
   "matchDetection": {
     "message": "Übereinstimmungserkennung",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Standard-Match-Erkennung",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Optionen umschalten"
   },
   "toggleCurrentUris": {
-    "message": "Aktuelle URIs ändern",
-    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
+    "message": "Aktuelle URLs ändern",
+    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
   },
   "currentUri": {
-    "message": "Aktuelle URI",
-    "description": "The URI of one of the current open tabs in the browser."
+    "message": "Aktuelle URL",
+    "description": "The URL of one of the current open tabs in the browser."
   },
   "organization": {
     "message": "Organisation",
@@ -1464,10 +1464,28 @@
     "message": "Automatisch ausfüllen und speichern"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "Auto-Ausgefüllter Eintrag und gespeicherte URI"
+    "message": "Auto-Ausgefüllter Eintrag und gespeicherte URL"
   },
   "autoFillSuccess": {
     "message": "Automatisch ausgefüllter Eintrag"
+  },
+  "insecurePageWarning": {
+    "message": "Warnung: Dies ist eine ungesicherte HTTP-Seite und alle Informationen, die du absendest, können möglicherweise von anderen gesehen und geändert werden. Diese Zugangsdaten wurden ursprünglich auf einer sicheren (HTTPS-)Seite gespeichert."
+  },
+  "insecurePageWarningFillPrompt": {
+    "message": "Möchtest du diese Zugangsdaten trotzdem ausfüllen?"
+  },
+  "autofillIframeWarning": {
+    "message": "Das Formular wird von einer anderen Domain als der URL deines gespeicherten Logins gehostet. Wähle OK, um trotzdem automatisch auszufüllen, oder Abbrechen, um aufzuhören."
+  },
+  "autofillIframeWarningTip": {
+    "message": "Um diese Warnung in Zukunft zu verhindern, speichere diese URL, $HOSTNAME$, in deinem Bravura Safe Zugangsdaten-Eintrag für diese Seite.",
+    "placeholders": {
+      "hostname": {
+        "content": "$1",
+        "example": "www.example.com"
+      }
+    }
   },
   "setMasterPassword": {
     "message": "Master-Passwort festlegen"
@@ -2175,7 +2193,18 @@
       }
     }
   },
+  "region": {
+    "message": "Region"
+  },
   "opensInANewWindow": {
     "message": "Wird in einem neuen Fenster geöffnet"
+  },
+  "eu": {
+    "message": "EU",
+    "description": "European Union"
+  },
+  "us": {
+    "message": "US",
+    "description": "United States"
   }
 }
