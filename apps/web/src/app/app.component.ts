@@ -175,6 +175,11 @@ export class AppComponent implements OnDestroy, OnInit {
               acceptButtonText: { key: "learnMore" },
               type: SimpleDialogType.INFO,
             });
+            if (emailVerificationConfirmed) {
+              this.platformUtilsService.launchUri(
+                "https://bravurasecuritydocs.com/safe/#/home/27444/10/11"
+              );
+            }
             break;
           }
           case "showToast":

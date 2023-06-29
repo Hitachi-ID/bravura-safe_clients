@@ -124,7 +124,7 @@ export class AddEditComponent extends BaseAddEditComponent implements OnChanges,
 
   openHelpReprompt() {
     this.platformUtilsService.launchUri(
-      "https://bravurasafe.com/help/managing-items/#protect-individual-items"
+      "https://bravurasecuritydocs.com/safe/#/home/42012/10/11"
     );
   }
 }

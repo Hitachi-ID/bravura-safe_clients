@@ -296,7 +296,7 @@ export class AppComponent implements OnInit, OnDestroy {
             });
             if (emailVerificationConfirmed) {
               this.platformUtilsService.launchUri(
-                "https://bravurasafe.com/help/create-bitwarden-account/"
+                "https://bravurasecuritydocs.com/safe/#/home/27444/10/11"
               );
             }
             break;

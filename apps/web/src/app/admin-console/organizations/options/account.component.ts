@@ -77,11 +77,11 @@ export class AccountComponent {
         this.policies = await this.policyService.getAll( PolicyType.ResetPassword );
         const twoFactorProviderHyprEnabled = await this.apiService.getTwoFactorOrganizationHasProvider(this.organizationId, TwoFactorProviderType.OrganizationHypr);
         this.organizationOneAuthEnabled = this.organization && this.organization.use2fa && twoFactorProviderHyprEnabled;
+        this.loading = false;
       } catch( e ){
       this.logService.error( e );
       }
     });
-    this.loading = false;
   }
 
   allowEnrollmentChanges(): boolean {

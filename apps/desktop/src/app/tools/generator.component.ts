@@ -36,6 +36,6 @@ export class GeneratorComponent extends BaseGeneratorComponent {
   }
 
   usernameTypesLearnMore() {
-    this.platformUtilsService.launchUri("https://bravurasafe.com/help/generator/#username-types");
+    this.platformUtilsService.launchUri("https://bravurasecuritydocs.com/safe/#/home/31914/10/11");
   }
 }

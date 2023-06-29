@@ -68,7 +68,7 @@ export class HelpMenu implements IMenubarMenu {
       {
         id: "termsOfService",
         label: this.localize("termsOfService"),
-        click: () => shell.openExternal("https://bravurasecurity.com/terms/"),
+        click: () => shell.openExternal("https://bravurasecurity.com/terms-of-use/"),
       },
       {
         id: "privacyPolicy",

@@ -9,6 +9,9 @@
     <div class="col-8" *ngIf="hideEmail">
       <app-callout type="warning" title="{{ 'warning' | i18n }}">
         {{ "viewSendHiddenEmailWarning" | i18n }}
+        <a href="https://bravurasecuritydocs.com/safe/#/home/27916/10/11" target="_blank">{{
+          "learnMore" | i18n
+        }}</a>.
       </app-callout>
     </div>
     <div class="col-8" *ngIf="!loading && send?.type === sendType.File">

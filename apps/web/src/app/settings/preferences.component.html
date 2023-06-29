@@ -63,6 +63,15 @@
       <div class="form-group">
         <div class="d-flex">
           <label for="locale">{{ "language" | i18n }}</label>
+          <a
+            class="ml-auto"
+            href="https://bravurasecuritydocs.com/safe/#/home/30108/10/11"
+            target="_blank"
+            rel="noopener"
+            appA11yTitle="{{ 'learnMore' | i18n }}"
+          >
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+          </a>
         </div>
         <select id="locale" name="Locale" formControlName="locale" class="form-control">
           <option *ngFor="let o of localeOptions" [ngValue]="o.value">{{ o.name }}</option>

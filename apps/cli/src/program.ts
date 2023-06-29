@@ -35,7 +35,7 @@ export class Program {
       .option("--raw", "Return raw output instead of a descriptive message.")
       .option("--response", "Return a JSON formatted version of response output.")
       .option("--cleanexit", "Exit with a success exit code (0) unless an error is thrown.")
-      .option("--quiet", "Don't return anything to stdout.")
+      .option("--quiet", "Do not return anything to stdout.")
       .option("--nointeraction", "Do not prompt for interactive user input.")
       .option("--session <session>", "Pass session key instead of reading from env.")
       .version(await this.main.platformUtilsService.getInternalApplicationVersion(), "-v, --version");

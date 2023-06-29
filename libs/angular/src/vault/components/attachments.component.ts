@@ -217,7 +217,7 @@ export class AttachmentsComponent implements OnInit {
 
       if (confirmed) {
         this.platformUtilsService.launchUri(
-          "https://bravurasecurity.com/help/account-encryption-key/#rotate-your-encryption-key"
+          "https://bravurasecuritydocs.com/safe/#/home/41954/10/11"
         );
       }
     }

@@ -224,7 +224,7 @@
     "message": "Automatically generate strong, unique passwords for your logins."
   },
   "bitWebVault": {
-    "message": "Bravura Safe web safe"
+    "message": "Bravura Safe web vault"
   },
   "importItems": {
     "message": "Import items"
@@ -504,10 +504,10 @@
     "message": "Change master password"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "You can change your master password on the Bravura Safe web safe. Do you want to visit the website now?"
+    "message": "You can change your master password on the Bravura Safe web vault. Do you want to visit the website now?"
   },
   "twoStepLoginConfirmation": {
-    "message": "Two-step login makes your account more secure by requiring you to verify your login with another device such as an authenticator app, or email. Two-step login can be set up on the Bravura Safe web safe. Do you want to visit the website now?"
+    "message": "Two-step login makes your account more secure by requiring you to verify your login with another device such as an authenticator app, or email. Two-step login can be set up on the Bravura Safe web vault. Do you want to visit the website now?"
   },
   "editedFolder": {
     "message": "Folder saved"
@@ -772,7 +772,7 @@
     "message": "Manage membership"
   },
   "premiumManageAlert": {
-    "message": "You can manage your membership on the Bravura Safe web safe. Do you want to visit the website now?"
+    "message": "You can manage your membership on the Bravura Safe web vault. Do you want to visit the website now?"
   },
   "premiumRefresh": {
     "message": "Refresh membership"
@@ -805,7 +805,7 @@
     "message": "Purchase premium"
   },
   "premiumPurchaseAlert": {
-    "message": "You can purchase Premium membership on the Bravura Safe web safe. Do you want to visit the website now?"
+    "message": "You can purchase Premium membership on the Bravura Safe web vault. Do you want to visit the website now?"
   },
   "premiumCurrentMember": {
     "message": "You are a Premium member!"

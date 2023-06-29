@@ -104,7 +104,7 @@ export class LoginComponent extends BaseLoginComponent {
 
     let url = this.environmentService.getWebVaultUrl();
     if (url == null) {
-      url = "https://vault.bitwarden.com";
+      url = "https://bravurasafe.com";
     }
 
     const redirectUri = url + "/sso-connector.html";

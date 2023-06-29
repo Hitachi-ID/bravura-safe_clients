@@ -393,7 +393,7 @@ export class SettingsComponent implements OnInit {
       type: SimpleDialogType.INFO,
     });
     if (confirmed) {
-      BrowserApi.createNewTab("http://bravurasecuritydocs.com/safe/#/home/27069/10/10)");
+      BrowserApi.createNewTab("http://bravurasecuritydocs.com/safe/#/home/27069/10/11");
     }
   }
 
@@ -404,7 +404,7 @@ export class SettingsComponent implements OnInit {
       type: SimpleDialogType.INFO,
     });
     if (confirmed) {
-      BrowserApi.createNewTab("http://bravurasecuritydocs.com/safe/#/home/27071/10/10");
+      BrowserApi.createNewTab("http://bravurasecuritydocs.com/safe/#/home/41827/10/11");
     }
   }
 
