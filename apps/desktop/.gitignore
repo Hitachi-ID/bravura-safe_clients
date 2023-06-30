@@ -2,3 +2,6 @@ dist-safari/
 *.nupkg
 *.env
 PlugIns/safari.appex/
+PlugIns/safari.entitlements
+PlugIns_mas/safari.appex/
+PlugIns_mas/safari.entitlements

@@ -38,6 +38,33 @@ then
 		npm run build:prod
 		npm run dist:safari
 
+        echo "================== copying plugins ================="
+        # now copy appex to the PlugIns and PlugIns_mas folder within apps/desktop
+        rm -rf ../desktop/PlugIns_mas
+        mkdir -p ../desktop/PlugIns_mas
+        cp -r -f dist/Safari/mas/build/Release/safari.appex ../desktop/PlugIns_mas/safari.appex
+        cp -r -f dist/Safari/mas/safari/safari.entitlements ../desktop/PlugIns_mas/safari.entitlements
+        pushd .
+        cd ../desktop/PlugIns_mas
+        echo "================== signing Plugins_mas ================="
+        codesign --remove-signature safari.appex
+        codesign -s "Developer ID Application" -f --timestamp -o runtime --entitlements safari.entitlements safari.appex
+        codesign -s "Apple Distribution" -f --timestamp -o runtime --entitlements safari.entitlements safari.appex
+        popd
+        
+        rm -rf ../desktop/PlugIns
+        mkdir -p ../desktop/PlugIns
+        cp -r -f dist/Safari/mas/build/Release/safari.appex ../desktop/PlugIns/safari.appex
+        cp -r -f dist/Safari/mas/safari/safari.entitlements ../desktop/PlugIns/safari.entitlements
+        pushd .
+        cd ../desktop/PlugIns
+        echo "================== signing Plugins ================="
+        codesign --remove-signature safari.appex
+        codesign -s "Developer ID Application" -f --timestamp -o runtime --entitlements safari.entitlements safari.appex
+        popd
+        echo "==================  appex prep completed ================="
+        
+        # final pop of the dir to get back to root
             popd
         ;;
 
