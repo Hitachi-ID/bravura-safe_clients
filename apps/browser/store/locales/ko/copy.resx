@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bravura Safe - 무료 비밀번호 관리자</value>
+    <value>Bravura Safe</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>당신의 모든 기기에서 사용할 수 있는, 안전한 무료 비밀번호 관리자</value>

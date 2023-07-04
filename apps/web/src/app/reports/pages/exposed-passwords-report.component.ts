@@ -28,15 +28,7 @@ export class ExposedPasswordsReportComponent extends CipherReportComponent imple
   }
 
   async ngOnInit() {
-    if (await this.checkAccess()) {
-      super.load();
-    }
-  }
-
-  async load() {
-    if (await this.checkAccess()) {
-      super.load();
-    }
+    await super.load();
   }
 
   async setCiphers() {

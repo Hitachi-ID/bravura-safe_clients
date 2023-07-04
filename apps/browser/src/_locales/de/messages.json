@@ -77,7 +77,7 @@
     "message": "Notiz kopieren"
   },
   "copyUri": {
-    "message": "URI kopieren"
+    "message": "URL kopieren"
   },
   "copyUsername": {
     "message": "Nutzernamen kopieren"
@@ -356,7 +356,7 @@
       },
       "hostname": {
         "content": "$2",
-        "example": "bravurasafe.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -488,10 +488,10 @@
     "message": "Master-Passwort ändern"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Du kannst dein Master-Passwort im bravurasafe.com Web-Tresor ändern. Möchtest du die Seite jetzt öffnen?"
+    "message": "Du kannst dein Master-Passwort im Bravura Safe Web-Tresor ändern. Möchtest du die Seite jetzt öffnen?"
   },
   "twoStepLoginConfirmation": {
-    "message": "Mit der Zwei-Faktor-Authentifizierung wird dein Account zusätzlich abgesichert, da jede Anmeldung durch einen Sicherheitscode, eine Authentifizierungs-App, eine SMS, einen Anruf oder eine E-Mail verifiziert werden muss. Die Zwei-Faktor-Authentifizierung kann im bravurasafe.com Web-Tresor aktiviert werden. Möchtest du die Seite jetzt öffnen?"
+    "message": "Mit der Zwei-Faktor-Authentifizierung wird dein Account zusätzlich abgesichert, da jede Anmeldung durch einen Sicherheitscode, eine Authentifizierungs-App, eine SMS, einen Anruf oder eine E-Mail verifiziert werden muss. Die Zwei-Faktor-Authentifizierung kann im Bravura Safe Web-Tresor aktiviert werden. Möchtest du die Seite jetzt öffnen?"
   },
   "editedFolder": {
     "message": "Ordner bearbeitet"
@@ -518,11 +518,11 @@
     "message": "Passwort kopiert"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -580,13 +580,13 @@
     "message": "Karten auf Tab Seite anzeigen"
   },
   "showCardsCurrentTabDesc": {
-    "message": "Karten-Einträge auf der Tab Seite anzeigen, um das automatische Ausfüllen zu vereinfachen."
+    "message": "Karten-Einträge auf der Tab Seite anzeigen, um das Auto-Ausfüllen zu vereinfachen."
   },
   "showIdentitiesCurrentTab": {
     "message": "Identitäten auf Tab Seite anzeigen"
   },
   "showIdentitiesCurrentTabDesc": {
-    "message": "Identitäten-Einträge auf der Tab Seite anzeigen, um das automatische Ausfüllen zu vereinfachen."
+    "message": "Identitäten-Einträge auf der Tab Seite anzeigen, um das Auto-Ausfüllen zu vereinfachen."
   },
   "clearClipboard": {
     "message": "Zwischenablage leeren",
@@ -618,14 +618,14 @@
     "message": "Kontextmenüoptionen anzeigen"
   },
   "contextMenuItemDesc": {
-    "message": "Verwende einen zweiten Klick, um auf die Erstellung von Passwörtern und passende Zugangsdaten für die Webseite zuzugreifen. "
+    "message": "Greife über einen Rechtsklick auf die Erstellung von Passwörtern und passende Zugangsdaten für die Website zu."
   },
   "defaultUriMatchDetection": {
-    "message": "Standard-URI-Match-Erkennung",
-    "description": "Default URI match detection for auto-fill."
+    "message": "Standard URL-Übereinstimmungserkennung",
+    "description": "Default URL match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "Wähle die Standardmethode, mit der die URI-Match-Erkennung für Anmeldungen bei Aktionen wie dem automatischen Ausfüllen behandelt wird."
+    "message": "Wähle die Standardmethode, mit der die URL-Match-Erkennung für Anmeldungen bei Aktionen wie dem automatischen Ausfüllen behandelt wird."
   },
   "theme": {
     "message": "Design"
@@ -677,7 +677,7 @@
     "message": "Erfahre mehr über Organisationen"
   },
   "learnOrgConfirmation": {
-    "message": "Bravura Safe erlaubt es dir deine Tresor Einträge mit anderen zu teilen, wenn du einen Organisations Account hast. Möchtest du bravurasafe.com besuchen, um mehr zu erfahren?"
+    "message": "Bravura Safe erlaubt es dir deine Tresor Einträge mit anderen zu teilen, wenn du einen Organisations Account hast. Möchtest du Bravura Safe website besuchen, um mehr zu erfahren?"
   },
   "moveToOrganization": {
     "message": "In Organisation verschieben"
@@ -756,7 +756,7 @@
     "message": "Mitgliedschaft verwalten"
   },
   "premiumManageAlert": {
-    "message": "Du kannst deine Mitgliedschaft im bravursafe.com Webtresor verwalten. Möchtest du die Seite jetzt aufrufen?"
+    "message": "Du kannst deine Mitgliedschaft im Bravura Safe Webtresor verwalten. Möchtest du die Seite jetzt aufrufen?"
   },
   "premiumRefresh": {
     "message": "Mitgliedschaft erneuern"
@@ -789,7 +789,7 @@
     "message": "Premium-Mitgliedschaft kaufen"
   },
   "premiumPurchaseAlert": {
-    "message": "Du kannst deine Premium-Mitgliedschaft im bravurasafe.com Web-Tresor kaufen. Möchtest du die Webseite jetzt besuchen?"
+    "message": "Du kannst deine Premium-Mitgliedschaft im Bravura Safe Web-Tresor kaufen. Möchtest du die Webseite jetzt besuchen?"
   },
   "premiumCurrentMember": {
     "message": "Du bist jetzt Premium-Mitglied!"
@@ -1300,23 +1300,23 @@
     "description": "A programming term, also known as 'RegEx'."
   },
   "matchDetection": {
-    "message": "Match-Erkennung",
-    "description": "URI match detection for auto-fill."
+    "message": "Übereinstimmungserkennung",
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Standard-Match-Erkennung",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
-    "message": "Umschaltoptionen"
+    "message": "Optionen umschalten"
   },
   "toggleCurrentUris": {
-    "message": "Aktuelle URIs ändern",
-    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
+    "message": "Aktuelle URLs ändern",
+    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
   },
   "currentUri": {
-    "message": "Aktuelle URI",
-    "description": "The URI of one of the current open tabs in the browser."
+    "message": "Aktuelle URL",
+    "description": "The URL of one of the current open tabs in the browser."
   },
   "organization": {
     "message": "Organisation",
@@ -1464,13 +1464,40 @@
     "message": "Automatisch ausfüllen und speichern"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "Auto-Ausgefüllter Eintrag und gespeicherte URI"
+    "message": "Auto-Ausgefüllter Eintrag und gespeicherte URL"
   },
   "autoFillSuccess": {
     "message": "Automatisch ausgefüllter Eintrag"
   },
+  "insecurePageWarning": {
+    "message": "Warnung: Dies ist eine ungesicherte HTTP-Seite und alle Informationen, die du absendest, können möglicherweise von anderen gesehen und geändert werden. Diese Zugangsdaten wurden ursprünglich auf einer sicheren (HTTPS-)Seite gespeichert."
+  },
+  "insecurePageWarningFillPrompt": {
+    "message": "Möchtest du diese Zugangsdaten trotzdem ausfüllen?"
+  },
+  "autofillIframeWarning": {
+    "message": "Das Formular wird von einer anderen Domain als der URL deines gespeicherten Logins gehostet. Wähle OK, um trotzdem automatisch auszufüllen, oder Abbrechen, um aufzuhören."
+  },
+  "autofillIframeWarningTip": {
+    "message": "Um diese Warnung in Zukunft zu verhindern, speichere diese URL, $HOSTNAME$, in deinem Bravura Safe Zugangsdaten-Eintrag für diese Seite.",
+    "placeholders": {
+      "hostname": {
+        "content": "$1",
+        "example": "www.example.com"
+      }
+    }
+  },
   "setMasterPassword": {
     "message": "Master-Passwort festlegen"
+  },
+  "currentMasterPass": {
+    "message": "Aktuelles Master-Passwort"
+  },
+  "newMasterPass": {
+    "message": "Neues Master-Passwort"
+  },
+  "confirmNewMasterPass": {
+    "message": "Neues Master-Passwort bestätigen"
   },
   "masterPasswordPolicyInEffect": {
     "message": "Eine oder mehrere Organisationsrichtlinien erfordern, dass dein Masterpasswort die folgenden Anforderungen erfüllt:"
@@ -1852,6 +1879,9 @@
   "updateMasterPasswordWarning": {
     "message": "Dein Master-Passwort wurde kürzlich von einem Administrator Ihrer Organisation geändert. Um auf den Tresor zuzugreifen, musst du es jetzt aktualisieren. Wenn du fortfährst, wirst du aus der aktuellen Sitzung abgemeldet, eine erneute Anmeldung wird erforderlich. Aktive Sitzungen auf anderen Geräten können bis zu einer Stunde weiterhin aktiv bleiben."
   },
+  "updateWeakMasterPasswordWarning": {
+    "message": "Dein Master-Passwort entspricht nicht einer oder mehreren Richtlinien deiner Organisation. Um auf den Tresor zugreifen zu können, musst du dein Master-Passwort jetzt aktualisieren. Wenn du fortfährst, wirst du von deiner aktuellen Sitzung abgemeldet und musst dich erneut anmelden. Aktive Sitzungen auf anderen Geräten können noch bis zu einer Stunde lang aktiv bleiben."
+  },
   "resetPasswordPolicyAutoEnroll": {
     "message": "Automatische Registrierung"
   },
@@ -1871,7 +1901,7 @@
     "message": "Minuten"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Deine Unternehmensrichtlinien beeinflussen dein Tresor-Timeout. Das maximal zulässige Tresor-Timeout ist $HOURS$ Stunde(n) und $MINUTES$ Minute(n)",
+    "message": "Deine Unternehmensrichtlinien haben das maximal zulässige Tresor-Timeout auf $HOURS$ Stunde(n) und $MINUTES$ Minute(n) festgelegt.",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1880,6 +1910,32 @@
       "minutes": {
         "content": "$2",
         "example": "5"
+      }
+    }
+  },
+  "vaultTimeoutPolicyWithActionInEffect": {
+    "message": "Deine Organisationsrichtlinien beeinflussen dein Tresor-Timeout. Das maximal zulässige Tresor-Timeout beträgt $HOURS$ Stunde(n) und $MINUTES$ Minute(n). Deine Tresor-Timeout-Aktion ist auf $ACTION$ gesetzt.",
+    "placeholders": {
+      "hours": {
+        "content": "$1",
+        "example": "5"
+      },
+      "minutes": {
+        "content": "$2",
+        "example": "5"
+      },
+      "action": {
+        "content": "$3",
+        "example": "Lock"
+      }
+    }
+  },
+  "vaultTimeoutActionPolicyInEffect": {
+    "message": "Durch deine Organisationsrichtlinien wurde deine Tresor-Timeout-Aktion auf $ACTION$ gesetzt.",
+    "placeholders": {
+      "action": {
+        "content": "$1",
+        "example": "Lock"
       }
     }
   },
@@ -2136,5 +2192,19 @@
         "example": "Check known data breaches for this password"
       }
     }
+  },
+  "region": {
+    "message": "Region"
+  },
+  "opensInANewWindow": {
+    "message": "Wird in einem neuen Fenster geöffnet"
+  },
+  "eu": {
+    "message": "EU",
+    "description": "European Union"
+  },
+  "us": {
+    "message": "US",
+    "description": "United States"
   }
 }

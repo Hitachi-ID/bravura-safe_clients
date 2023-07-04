@@ -16,6 +16,7 @@ import { ValidationService } from "@bitwarden/common/abstractions/validation.ser
 import { AuthService } from "@bitwarden/common/auth/abstractions/auth.service";
 import { LoginService } from "@bitwarden/common/auth/abstractions/login.service";
 import { AuthRequestType } from "@bitwarden/common/auth/enums/auth-request-type";
+import { ForceResetPasswordReason } from "@bitwarden/common/auth/models/domain/force-reset-password-reason";
 import { PasswordlessLogInCredentials } from "@bitwarden/common/auth/models/domain/log-in-credentials";
 import { PasswordlessCreateAuthRequest } from "@bitwarden/common/auth/models/request/passwordless-create-auth.request";
 import { AuthRequestResponse } from "@bitwarden/common/auth/models/response/auth-request.response";
@@ -35,6 +36,7 @@ export class LoginWithDeviceComponent
   email: string;
   showResendNotification = false;
   passwordlessRequest: PasswordlessCreateAuthRequest;
+  fingerprintPhrase: string;
   onSuccessfulLoginTwoFactorNavigate: () => Promise<any>;
   onSuccessfulLogin: () => Promise<any>;
   onSuccessfulLoginNavigate: () => Promise<any>;
@@ -72,7 +74,7 @@ export class LoginWithDeviceComponent
 
     //gets signalR push notification
     this.authService
-      .getPushNotifcationObs$()
+      .getPushNotificationObs$()
       .pipe(takeUntil(this.destroy$))
       .subscribe((id) => {
         this.confirmResponse(id);
@@ -124,7 +126,7 @@ export class LoginWithDeviceComponent
         return;
       }
 
-      const credentials = await this.buildLoginCredntials(requestId, response);
+      const credentials = await this.buildLoginCredentials(requestId, response);
       const loginResponse = await this.authService.logIn(credentials);
 
       if (loginResponse.requiresTwoFactor) {
@@ -133,7 +135,7 @@ export class LoginWithDeviceComponent
         } else {
           this.router.navigate([this.twoFactorRoute]);
         }
-      } else if (loginResponse.forcePasswordReset) {
+      } else if (loginResponse.forcePasswordReset != ForceResetPasswordReason.None) {
         if (this.onSuccessfulLoginForceResetNavigate != null) {
           this.onSuccessfulLoginForceResetNavigate();
         } else {
@@ -170,24 +172,24 @@ export class LoginWithDeviceComponent
 
   private async buildAuthRequest() {
     this.authRequestKeyPair = await this.cryptoFunctionService.rsaGenerateKeyPair(2048);
-    const fingerprint = await (
-      await this.cryptoService.getFingerprint(this.email, this.authRequestKeyPair[0])
-    ).join("-");
     const deviceIdentifier = await this.appIdService.getAppId();
     const publicKey = Utils.fromBufferToB64(this.authRequestKeyPair[0]);
     const accessCode = await this.passwordGenerationService.generatePassword({ length: 25 });
+
+    this.fingerprintPhrase = (
+      await this.cryptoService.getFingerprint(this.email, this.authRequestKeyPair[0])
+    ).join("-");
 
     this.passwordlessRequest = new PasswordlessCreateAuthRequest(
       this.email,
       deviceIdentifier,
       publicKey,
       AuthRequestType.AuthenticateAndUnlock,
-      accessCode,
-      fingerprint
+      accessCode
     );
   }
 
-  private async buildLoginCredntials(
+  private async buildLoginCredentials(
     requestId: string,
     response: AuthRequestResponse
   ): Promise<PasswordlessLogInCredentials> {

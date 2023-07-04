@@ -1,10 +1,9 @@
-<!-- Please remove this disable statement when editing this file! -->
-<!-- eslint-disable @angular-eslint/template/button-has-type -->
-<span
+<button
   bitBadge
+  type="button"
   [style.color]="textColor"
   [class]="class"
   appA11yTitle="{{ organizationName }}"
 >
-  {{ organizationName | ellipsis: 13 }}
-</span>
+  {{ name | ellipsis : 13 }}
+</button>

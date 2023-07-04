@@ -15,7 +15,7 @@ export class AboutComponent {
   serverConfig$: Observable<ServerConfig>;
 
   year = new Date().getFullYear();
-  version = BrowserApi.getInternalApplicationVersion();
+  version = BrowserApi.getApplicationVersion();
   isCloud: boolean;
 
   constructor(configService: ConfigServiceAbstraction, environmentService: EnvironmentService) {

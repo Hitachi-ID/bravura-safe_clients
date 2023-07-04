@@ -1,0 +1,163 @@
+<td bitCell [ngClass]="RowHeightClass" class="tw-min-w-fit">
+  <input
+    type="checkbox"
+    bitCheckbox
+    appStopProp
+    [disabled]="disabled"
+    [checked]="checked"
+    (change)="$event ? this.checkedToggled.next() : null"
+  />
+</td>
+<td bitCell [ngClass]="RowHeightClass" class="tw-min-w-fit">
+  <app-vault-icon [cipher]="cipher"></app-vault-icon>
+</td>
+<td
+  bitCell
+  [ngClass]="RowHeightClass"
+  class="tw-overflow-hidden tw-text-ellipsis tw-whitespace-nowrap"
+>
+  <div class="tw-inline-flex tw-w-full">
+    <button
+      bitLink
+      class="tw-overflow-hidden tw-text-ellipsis tw-text-start tw-leading-snug"
+      [disabled]="disabled"
+      [routerLink]="[]"
+      [queryParams]="{ itemId: cipher.id }"
+      queryParamsHandling="merge"
+      title="{{ 'editItemWithName' | i18n : cipher.name }}"
+      type="button"
+    >
+      {{ cipher.name }}
+    </button>
+    <ng-container *ngIf="cipher.hasAttachments">
+      <i
+        class="fa fa-paperclip tw-ml-2 tw-leading-normal"
+        appStopProp
+        title="{{ 'attachments' | i18n }}"
+        aria-hidden="true"
+      ></i>
+      <span class="sr-only">{{ "attachments" | i18n }}</span>
+      <ng-container *ngIf="showFixOldAttachments">
+        <i
+          class="fa fa-exclamation-triangle tw-ml-2 tw-leading-normal tw-text-warning"
+          appStopProp
+          title="{{ 'attachmentsNeedFix' | i18n }}"
+          aria-hidden="true"
+        ></i>
+        <span class="sr-only">{{ "attachmentsNeedFix" | i18n }}</span>
+      </ng-container>
+    </ng-container>
+  </div>
+  <br />
+  <span class="tw-text-sm tw-text-muted" appStopProp>{{ cipher.subTitle }}</span>
+</td>
+<td bitCell [ngClass]="RowHeightClass" *ngIf="showOwner">
+  <app-org-badge
+    *ngIf="cipher.organizationId"
+    [disabled]="true"
+    [organizationId]="cipher.organizationId"
+    [organizationName]="cipher.organizationId | orgNameFromId : organizations"
+    appStopProp
+  >
+  </app-org-badge>
+</td>
+<td bitCell [ngClass]="RowHeightClass" *ngIf="showCollections">
+  <app-collection-badge
+    *ngIf="cipher.collectionIds"
+    [collectionIds]="cipher.collectionIds"
+    [collections]="collections"
+  ></app-collection-badge>
+</td>
+<td bitCell [ngClass]="RowHeightClass" *ngIf="showGroups"></td>
+<td bitCell [ngClass]="RowHeightClass" class="table-list-options reduced-lh">
+  <div class="list-options">
+    <ng-container *ngIf="cipher.type === CipherType.Login && !cipher.isDeleted">
+      <a
+        class="list-options-item"
+        [ngClass]="{ 'list-options-item-disable': !cipher.login.canLaunch }"
+        (click)="launch()"
+        appStopProp
+      >
+        <i class="fa fa-fw fa-share-square-o fa-lg" aria-hidden="true" title="{{ 'launch' | i18n }}"></i>
+      </a>
+      <a
+        class="list-options-item"
+        [ngClass]="{ 'list-options-item-disable': !cipher.login.username }"
+        (click)="copy('username')"
+        appStopProp
+      >
+        <i class="fa fa-fw fa-user fa-lg" aria-hidden="true" title="{{ 'copyUsername' | i18n }}"></i>
+      </a>
+      <a
+        class="list-options-item"
+        [ngClass]="{ 'list-options-item-disable': !cipher.login.password }"
+        (click)="copy('password')"
+        appStopProp
+      >
+        <i class="fa fa-fw fa-key fa-lg" aria-hidden="true" title="{{ 'copyPassword' | i18n }}"></i>
+      </a>
+      <a
+        class="list-options-item"
+        [ngClass]="{ 'list-options-item-disable': !showTotpCopyButton }"
+        (click)="copy('totp')"
+        appStopProp
+      >
+        <i class="fa fa-fw fa-clock-o fa-lg" aria-hidden="true" title="{{ 'copyVerificationCode' | i18n }}"></i>
+      </a>
+    </ng-container>
+    <a
+      class="list-options-item"
+      [ngClass]="{ 'list-options-item-disable': !cipher }"
+      (click)="attachments()"
+    >
+      <i class="fa fa-fw fa-paperclip fa-lg" aria-hidden="true" title="{{ 'attachments' | i18n }}"></i>
+    </a>
+    <a
+      class="list-options-item"
+      (click)="restore()"
+      *ngIf="cipher.isDeleted"
+      appStopProp
+    >
+      <i class="fa fa-fw fa-undo" aria-hidden="true" title="{{ 'restore' | i18n }}"></i>
+    </a>
+    <button
+      [disabled]="disabled"
+      [bitMenuTriggerFor]="cipherOptions"
+      size="small"
+      bitIconButton="fa fa-cog"
+      type="button"
+      appA11yTitle="{{ 'options' | i18n }}"
+              class="btn btn-sm btn-outline-secondary dropdown-toggle"
+      appStopProp
+    ></button>
+    <bit-menu #cipherOptions>
+      <ng-container>
+        <button class="dropdown-item" (click)="clone()" *ngIf="cloneable && !cipher.isDeleted">
+          <i class="fa fa-fw fa-files-o" aria-hidden="true"></i>
+          {{ "clone" | i18n }}
+        </button>
+        <button
+          class="dropdown-item"
+          (click)="moveToOrganization()"
+          *ngIf="!cipher.organizationId && !cipher.isDeleted"
+        >
+          <i class="fa fa-fw fa-arrow-circle-o-right" aria-hidden="true"></i>
+          {{ "moveToOrganization" | i18n }}
+        </button>
+        <button class="dropdown-item" (click)="editCollections()" *ngIf="cipher.organizationId && !cipher.isDeleted">
+          <i class="fa fa-fw fa-cube" aria-hidden="true"></i>
+          {{ "collections" | i18n }}
+        </button>
+        <button class="dropdown-item" (click)="events()" *ngIf="cipher.organizationId && useEvents">
+          <i class="fa fa-fw fa-file-text-o" aria-hidden="true"></i>
+          {{ "eventLogs" | i18n }}
+        </button>
+        <button class="dropdown-item text-danger" (click)="deleteCipher()">
+          <i class="fa fa-fw fa-trash-o" aria-hidden="true"></i>
+          {{ (cipher.isDeleted ? "permanentlyDelete" : "delete") | i18n }}
+        </button>
+      </ng-container>
+    </bit-menu>
+  </div>
+</td>
+

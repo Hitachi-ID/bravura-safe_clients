@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bravura Safe - Gestor de palavras-passe gratuito</value>
+    <value>Bravura Safe</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>Um gestor de palavras-passe seguro e gratuito para todos os seus dispositivos</value>
@@ -142,7 +142,7 @@
     <value>O seu cofre é também convenientemente acessível a partir do menu de contexto de clique de lado direito do rato</value>
   </data>
   <data name="ScreenshotPassword" xml:space="preserve">
-    <value>Gira automaticamente palvras-passe fortes, aleatórias e seguras</value>
+    <value>Gera automaticamente palavras-passe fortes, aleatórias e seguras</value>
   </data>
   <data name="ScreenshotEdit" xml:space="preserve">
     <value>A sua informação é gerida com segurança utilizando encriptação AES-256 bits</value>

@@ -794,6 +794,9 @@
   "contactUs": {
     "message": "Contáctenos"
   },
+  "helpAndFeedback": {
+    "message": "Ayuda y comentarios"
+  },
   "getHelp": {
     "message": "Obtener ayuda"
   },
@@ -813,7 +816,7 @@
     "message": "Cambiar contraseña maestra"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Puedes cambiar tu contraseña maestra en la caja fuerte web de bravurasecurity.com. ¿Quieres visitar ahora el sitio web?"
+    "message": "Puedes cambiar tu contraseña maestra en la caja fuerte web de Bravura Safe. ¿Quieres visitar ahora el sitio web?"
   },
   "fingerprintPhrase": {
     "message": "Frase de huella digital",
@@ -861,7 +864,7 @@
     "message": "Contraseña maestra no válida"
   },
   "twoStepLoginConfirmation": {
-    "message": "La autenticación en dos pasos hace que tu cuenta sea mucho más segura, requiriendo que introduzcas un código de seguridad de una aplicación de autenticación cada vez que accedes. La autenticación en dos pasos puede ser habilitada en la caja fuerte web de bravurasecurity.com. ¿Quieres visitar ahora el sitio web?"
+    "message": "La autenticación en dos pasos hace que tu cuenta sea mucho más segura, requiriendo que introduzcas un código de seguridad de una aplicación de autenticación cada vez que accedes. La autenticación en dos pasos puede ser habilitada en la caja fuerte web de Bravura Safe. ¿Quieres visitar ahora el sitio web?"
   },
   "twoStepLogin": {
     "message": "Autenticación en dos pasos"
@@ -1084,7 +1087,7 @@
     "message": "Gestionar membresía"
   },
   "premiumManageAlert": {
-    "message": "Puedes gestionar tu membresía en la caja fuerte web de bravurasecurity.com. ¿Quieres visitar el sitio web ahora?"
+    "message": "Puedes gestionar tu membresía en la caja fuerte web de Bravura Safe. ¿Quieres visitar el sitio web ahora?"
   },
   "premiumRefresh": {
     "message": "Actualizar membresía"
@@ -1117,7 +1120,7 @@
     "message": "Comprar Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Puedes comprar la membresía Premium en la caja fuerte web de bravurasecurity.com. ¿Quieres visitar el sitio web ahora?"
+    "message": "Puedes comprar la membresía Premium en la caja fuerte web de Bravura Safe. ¿Quieres visitar el sitio web ahora?"
   },
   "premiumCurrentMember": {
     "message": "¡Eres un miembro Premium!"
@@ -1413,11 +1416,17 @@
   "unlockWithWindowsHello": {
     "message": "Desbloquear con Smartdevice"
   },
+  "additionalWindowsHelloSettings": {
+    "message": "Ajustes adicionales de Windows Hello"
+  },
   "windowsHelloConsentMessage": {
     "message": "Verificar para Bravura Safe."
   },
   "unlockWithTouchId": {
     "message": "Desbloquear con Touch ID"
+  },
+  "additionalTouchIdSettings": {
+    "message": "Ajustes adicionales de Touch ID"
   },
   "touchIdConsentMessage": {
     "message": "Verificar para Bravura Safe."
@@ -1427,6 +1436,12 @@
   },
   "autoPromptTouchId": {
     "message": "Solicitar Touch ID al iniciar"
+  },
+  "requirePasswordOnStart": {
+    "message": "Solicitar contraseña o PIN al iniciar la aplicación"
+  },
+  "recommendedForSecurity": {
+    "message": "Recomendado por seguridad."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Bloquear con contraseña maestra al reiniciar"
@@ -1547,6 +1562,9 @@
   },
   "ssoCompleteRegistration": {
     "message": "Para completar el inicio de sesión con SSO, por favor establezca una contraseña maestra para acceder y proteger su caja fuerte."
+  },
+  "currentMasterPass": {
+    "message": "Contraseña maestra actual"
   },
   "newMasterPass": {
     "message": "Nueva contraseña maestra"
@@ -1864,6 +1882,9 @@
   "updateMasterPasswordWarning": {
     "message": "Su contraseña maestra ha sido cambiada recientemente por un administrador de su organización. Para acceder a la caja fuerte, debe actualizarla ahora. Proceder le desconectará de su sesión actual, requiriendo que vuelva a iniciar sesión. Las sesiones activas en otros dispositivos pueden seguir estando activas durante una hora."
   },
+  "updateWeakMasterPasswordWarning": {
+    "message": "Su contraseña maestra no cumple con una o más de las políticas de su organización. Para acceder a la caja fuerte, debe actualizar su contraseña maestra ahora. Proceder le desconectará de su sesión actual, requiriendo que vuelva a iniciar sesión. Las sesiones activas en otros dispositivos pueden seguir estando activas durante hasta una hora."
+  },
   "hours": {
     "message": "Horas"
   },
@@ -1880,6 +1901,32 @@
       "minutes": {
         "content": "$2",
         "example": "5"
+      }
+    }
+  },
+  "vaultTimeoutPolicyWithActionInEffect": {
+    "message": "Las políticas de su organización están afectando al tiempo de espera de tu caja fuerte. El tiempo de espera de tu caja fuerte máximo permitido es de $HOURS$ hora(s) y $MINUTES$ minuto(s). La acción de tiempo de espera de tu caja fuerte está establecida en $ACTION$.",
+    "placeholders": {
+      "hours": {
+        "content": "$1",
+        "example": "5"
+      },
+      "minutes": {
+        "content": "$2",
+        "example": "5"
+      },
+      "action": {
+        "content": "$3",
+        "example": "Lock"
+      }
+    }
+  },
+  "vaultTimeoutActionPolicyInEffect": {
+    "message": "Las políticas de su organización han establecido su acción de tiempo de espera de tu caja fuerte en $ACTION$.",
+    "placeholders": {
+      "action": {
+        "content": "$1",
+        "example": "Lock"
       }
     }
   },
@@ -2231,5 +2278,25 @@
         "example": "Check known data breaches for this password"
       }
     }
+  },
+  "windowsBiometricUpdateWarning": {
+    "message": "Bravura Safe recomienda actualizar su configuración biométrica para requerir su contraseña maestra (o PIN) en el primer desbloqueo. ¿Le gustaría actualizar su configuración ahora?"
+  },
+  "windowsBiometricUpdateWarningTitle": {
+    "message": "Actualización de ajustes recomendados"
+  },
+  "region": {
+    "message": "Región"
+  },
+  "eu": {
+    "message": "Unión Europea",
+    "description": "European Union"
+  },
+  "us": {
+    "message": "EE.UU.",
+    "description": "United States"
+  },
+  "selfHosted": {
+    "message": "Autoalojado"
   }
 }

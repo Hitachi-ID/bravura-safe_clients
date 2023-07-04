@@ -121,30 +121,30 @@
     <value>Bravura Safe</value>
   </data>
   <data name="Summary" xml:space="preserve">
-    <value>A secure password manager for all of your devices</value>
+    <value>Varen in brezplačen upravljalnik gesel za vse vaše naprave</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Bravura Security Inc.</value>
   </data>
   <data name="AssetTitle" xml:space="preserve">
-    <value>A secure password manager for all of your devices</value>
+    <value>Varen in brezplačen upravljalnik gesel za vse vaše naprave</value>
   </data>
   <data name="ScreenshotSync" xml:space="preserve">
-    <value>Sync and access your vault from multiple devices</value>
+    <value>Sinhronizirajte svoj trezor gesel in dostopajte do njega z več naprav</value>
   </data>
   <data name="ScreenshotVault" xml:space="preserve">
-    <value>Manage all your logins and passwords from a secure vault</value>
+    <value>Upravljajte s svojimi gesli in prijavami v varnem trezorju</value>
   </data>
   <data name="ScreenshotAutofill" xml:space="preserve">
-    <value>Quickly auto-fill your login credentials into any website that you visit</value>
+    <value>Uporabite samodejno izpolnitev prijavnih obrazcev za hitro prijavo na spletnih straneh</value>
   </data>
   <data name="ScreenshotMenu" xml:space="preserve">
-    <value>Your vault is also conveniently accessible from the right-click menu</value>
+    <value>Do svojega trezorja lahko hitro dostopate tudi prek menija na desnem kliku</value>
   </data>
   <data name="ScreenshotPassword" xml:space="preserve">
-    <value>Automatically generate strong, random, and secure passwords</value>
+    <value>Samodejno generirajte močna, naključna in varna gesla</value>
   </data>
   <data name="ScreenshotEdit" xml:space="preserve">
-    <value>Your information is managed securely using AES-256 bit encryption</value>
+    <value>Vaši podatki so varno shranjeni z uporabo 256-bitnega šifriranja AES</value>
   </data>
 </root>

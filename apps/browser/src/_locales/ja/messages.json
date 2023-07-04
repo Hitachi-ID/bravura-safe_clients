@@ -772,7 +772,7 @@
     "message": "会員情報の管理"
   },
   "premiumManageAlert": {
-    "message": "会員情報は bravurasecurity.com ウェブ保管庫で管理できます。ウェブサイトを開きますか？"
+    "message": "会員情報は Bravura Safe ウェブ保管庫で管理できます。ウェブサイトを開きますか？"
   },
   "premiumRefresh": {
     "message": "会員情報の更新"
@@ -805,7 +805,7 @@
     "message": "プレミアム会員に加入"
   },
   "premiumPurchaseAlert": {
-    "message": "プレミアム会員権は bravurasecurity.com ウェブ保管庫で購入できます。ウェブサイトを開きますか？"
+    "message": "プレミアム会員権は Bravura Safe ウェブ保管庫で購入できます。ウェブサイトを開きますか？"
   },
   "premiumCurrentMember": {
     "message": "あなたはプレミアム会員です！"
@@ -1485,8 +1485,35 @@
   "autoFillSuccess": {
     "message": "アイテムを自動入力しました"
   },
+  "insecurePageWarning": {
+    "message": "警告: これはセキュリティ保護されていない HTTP ページであり、送信する情報は他の人によって見られ、変更される可能性があります。 このログイン情報はもともとセキュア (HTTPS) ページに保存されていました。"
+  },
+  "insecurePageWarningFillPrompt": {
+    "message": "このログイン情報を入力しますか？"
+  },
+  "autofillIframeWarning": {
+    "message": "フォームは保存したログイン情報の URL とは異なるドメインによってホストされています。無視して自動入力するなら OK を選択し、中止したければキャンセルを選択してください。"
+  },
+  "autofillIframeWarningTip": {
+    "message": "この警告を将来的に防ぐためには、この URL と $HOSTNAME$ をこのサイトの Bravura Safe ログインアイテムに保存してください。",
+    "placeholders": {
+      "hostname": {
+        "content": "$1",
+        "example": "www.example.com"
+      }
+    }
+  },
   "setMasterPassword": {
     "message": "マスターパスワードを設定"
+  },
+  "currentMasterPass": {
+    "message": "現在のマスターパスワード"
+  },
+  "newMasterPass": {
+    "message": "新しいマスターパスワード"
+  },
+  "confirmNewMasterPass": {
+    "message": "新しいマスターパスワードの確認"
   },
   "masterPasswordPolicyInEffect": {
     "message": "組織が求めるマスターパスワードの要件："
@@ -1868,6 +1895,9 @@
   "updateMasterPasswordWarning": {
     "message": "マスターパスワードは最近組織の管理者によって変更されました。保管庫にアクセスするには、今すぐ更新する必要があります。 続行すると現在のセッションからログアウトし、再度ログインする必要があります。 他のデバイスでのアクティブなセッションは、最大1時間アクティブになり続けることがあります。"
   },
+  "updateWeakMasterPasswordWarning": {
+    "message": "あなたのマスターパスワードは、組織のポリシーを満たしていません。保管庫にアクセスするには、今すぐマスターパスワードを更新する必要があります。この操作を続けると、現在のセッションがログアウトされ、再ログインする必要があります。他のデバイスでのアクティブなセッションは最大1時間継続する場合があります。"
+  },
   "resetPasswordPolicyAutoEnroll": {
     "message": "自動登録"
   },
@@ -1896,6 +1926,32 @@
       "minutes": {
         "content": "$2",
         "example": "5"
+      }
+    }
+  },
+  "vaultTimeoutPolicyWithActionInEffect": {
+    "message": "組織のポリシーがあなたの保管庫のタイムアウトに影響しす。保管庫の最大許容タイムアウトは$HOURS$時間$MINUTES$分です。保管庫のタイムアウト設定は$ACTION$にあります。",
+    "placeholders": {
+      "hours": {
+        "content": "$1",
+        "example": "5"
+      },
+      "minutes": {
+        "content": "$2",
+        "example": "5"
+      },
+      "action": {
+        "content": "$3",
+        "example": "Lock"
+      }
+    }
+  },
+  "vaultTimeoutActionPolicyInEffect": {
+    "message": "あなたの保管庫のタイムアウト設定は、組織のポリシーで決められた$ACTION$にあります。",
+    "placeholders": {
+      "action": {
+        "content": "$1",
+        "example": "Lock"
       }
     }
   },
@@ -2197,5 +2253,19 @@
         "example": "Check known data breaches for this password"
       }
     }
+  },
+  "region": {
+    "message": "リージョン"
+  },
+  "opensInANewWindow": {
+    "message": "新しいウィンドウで開く"
+  },
+  "eu": {
+    "message": "EU",
+    "description": "European Union"
+  },
+  "us": {
+    "message": "米国",
+    "description": "United States"
   }
 }

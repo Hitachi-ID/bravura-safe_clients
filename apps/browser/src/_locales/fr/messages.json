@@ -77,7 +77,7 @@
     "message": "Copier la note"
   },
   "copyUri": {
-    "message": "Copier l'URI"
+    "message": "Copier l'URL"
   },
   "copyUsername": {
     "message": "Copier le nom d'utilisateur"
@@ -267,7 +267,7 @@
     "description": "Make the first letter of a work uppercase."
   },
   "includeNumber": {
-    "message": "Inclure le numéro"
+    "message": "Inclure un nombre"
   },
   "minNumbers": {
     "message": "Minimum de chiffres"
@@ -504,10 +504,10 @@
     "message": "Changer le mot de passe principal"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Vous pouvez changer votre mot de passe principal depuis le coffre web de bravurasecurity.com. Voulez-vous visiter le site web maintenant ?"
+    "message": "Vous pouvez changer votre mot de passe principal depuis le coffre web de Bravura Safe. Voulez-vous visiter le site web maintenant ?"
   },
   "twoStepLoginConfirmation": {
-    "message": "L'authentification à deux facteurs rend votre compte plus sûr en vous demandant de vérifier votre connexion avec un autre dispositif tel qu'une clé de sécurité, une application d'authentification, un SMS, un appel téléphonique ou un courriel. L'authentification à deux facteurs peut être configurée sur le coffre web de bravurasecurity.com. Voulez-vous visiter le site web maintenant ?"
+    "message": "L'authentification à deux facteurs rend votre compte plus sûr en vous demandant de vérifier votre connexion avec un autre dispositif tel qu'une clé de sécurité, une application d'authentification, un SMS, un appel téléphonique ou un courriel. L'authentification à deux facteurs peut être configurée sur le coffre web de Bravura Safe. Voulez-vous visiter le site web maintenant ?"
   },
   "editedFolder": {
     "message": "Dossier sauvegardé"
@@ -534,11 +534,11 @@
     "message": "Mot de passe copié"
   },
   "uri": {
-    "message": "URI"
+    "message": "URL"
   },
   "uriPosition": {
-    "message": "URI $POSITION$",
-    "description": "A listing of URIs. Ex: URI 1, URI 2, URI 3, etc.",
+    "message": "URL $POSITION$",
+    "description": "A listing of URLs. Ex: URL 1, URL 2, URL 3, etc.",
     "placeholders": {
       "position": {
         "content": "$1",
@@ -547,7 +547,7 @@
     }
   },
   "newUri": {
-    "message": "Nouvel URI"
+    "message": "Nouvel URL"
   },
   "addedItem": {
     "message": "Élément ajouté"
@@ -637,11 +637,11 @@
     "message": "Utilisez un clic secondaire pour accéder à la génération de mots de passe et les identifiants correspondants pour le site Web. "
   },
   "defaultUriMatchDetection": {
-    "message": "Détection de correspondance URI par défaut",
-    "description": "Default URI match detection for auto-fill."
+    "message": "Détection de correspondance URL par défaut",
+    "description": "Default URL match detection for auto-fill."
   },
   "defaultUriMatchDetectionDesc": {
-    "message": "Choisissez la manière de gestion par défaut de la détection de correspondance URI pour les identifiants lors de l'exécution d'actions telles que la saisie automatique."
+    "message": "Choisissez la manière de gestion par défaut de la détection de correspondance URL pour les identifiants lors de l'exécution d'actions telles que la saisie automatique."
   },
   "theme": {
     "message": "Thème"
@@ -693,7 +693,7 @@
     "message": "En savoir plus sur les organisations"
   },
   "learnOrgConfirmation": {
-    "message": "Bravura Safe vous permet de partager des éléments de votre coffre avec d'autres personnes en utilisant un compte d'organisation. Souhaitez-vous visiter le site web bravurasafe.com pour en savoir plus ?"
+    "message": "Bravura Safe vous permet de partager des éléments de votre coffre avec d'autres personnes en utilisant un compte d'organisation. Souhaitez-vous visiter le site web Bravura Safe website pour en savoir plus ?"
   },
   "moveToOrganization": {
     "message": "Déplacer vers l'organisation"
@@ -772,7 +772,7 @@
     "message": "Gérer l'adhésion"
   },
   "premiumManageAlert": {
-    "message": "Vous pouvez gérer votre adhésion sur le coffre web de bravurasafe.com. Voulez-vous visiter le site web maintenant ?"
+    "message": "Vous pouvez gérer votre adhésion sur le coffre web de Bravura Safe. Voulez-vous visiter le site web maintenant ?"
   },
   "premiumRefresh": {
     "message": "Actualiser l'adhésion"
@@ -805,7 +805,7 @@
     "message": "Acheter Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Vous pouvez acheter une adhésion Premium sur le coffre web de bravurasafe.com. Voulez-vous visiter le site web maintenant ?"
+    "message": "Vous pouvez acheter une adhésion Premium sur le coffre web de Bravura Safe. Voulez-vous visiter le site web maintenant ?"
   },
   "premiumCurrentMember": {
     "message": "Vous êtes un membre Premium !"
@@ -1317,22 +1317,22 @@
   },
   "matchDetection": {
     "message": "Détection de correspondance",
-    "description": "URI match detection for auto-fill."
+    "description": "URL match detection for auto-fill."
   },
   "defaultMatchDetection": {
     "message": "Détection de correspondance par défaut",
-    "description": "Default URI match detection for auto-fill."
+    "description": "Default URL match detection for auto-fill."
   },
   "toggleOptions": {
     "message": "Options de basculement"
   },
   "toggleCurrentUris": {
-    "message": "Afficher/masquer les URIs actuels",
-    "description": "Toggle the display of the URIs of the currently open tabs in the browser."
+    "message": "Afficher/masquer les URLs actuels",
+    "description": "Toggle the display of the URLs of the currently open tabs in the browser."
   },
   "currentUri": {
-    "message": "URI actuel",
-    "description": "The URI of one of the current open tabs in the browser."
+    "message": "URL actuel",
+    "description": "The URL of one of the current open tabs in the browser."
   },
   "organization": {
     "message": "Organisation",
@@ -1480,13 +1480,40 @@
     "message": "Saisir automatiquement et sauvegarder"
   },
   "autoFillSuccessAndSavedUri": {
-    "message": "Élément saisi automatiquement et URI sauvegardé"
+    "message": "Élément saisi automatiquement et URL sauvegardé"
   },
   "autoFillSuccess": {
     "message": "Élément saisi automatiquement"
   },
+  "insecurePageWarning": {
+    "message": "Avertissement : il s'agit d'une page HTTP non sécurisée, et toute information que vous soumettez peut potentiellement être vue et modifiée par d'autres. À l'origine, cet identifiant a été enregistré sur une page sécurisée (HTTPS)."
+  },
+  "insecurePageWarningFillPrompt": {
+    "message": "Voulez-vous toujours saisir automatiquement cet identifiant ?"
+  },
+  "autofillIframeWarning": {
+    "message": "Le formulaire est hébergé par un domaine différent de l'URL d'enregistrement de votre identifiant. Choisissez OK pour poursuivre la saisie automatique, ou Annuler pour arrêter."
+  },
+  "autofillIframeWarningTip": {
+    "message": "À l'avenir, pour éviter cet avertissement, enregistrez cet URL, $HOSTNAME$, dans votre élément de connexion Bravura Safe pour ce site.",
+    "placeholders": {
+      "hostname": {
+        "content": "$1",
+        "example": "www.example.com"
+      }
+    }
+  },
   "setMasterPassword": {
     "message": "Définir le mot de passe principal"
+  },
+  "currentMasterPass": {
+    "message": "Mot de passe principal actuel"
+  },
+  "newMasterPass": {
+    "message": "Nouveau mot de passe principal"
+  },
+  "confirmNewMasterPass": {
+    "message": "Confirmer le nouveau mot de passe principal"
   },
   "masterPasswordPolicyInEffect": {
     "message": "Une ou plusieurs politiques de sécurité de l'organisation exigent que votre mot de passe principal réponde aux exigences suivantes :"
@@ -1528,7 +1555,7 @@
     }
   },
   "masterPasswordPolicyRequirementsNotMet": {
-    "message": "Votre nouveau mot de passe principal ne répond pas aux exigences en matière de politique de sécurité."
+    "message": "Votre nouveau mot de passe principal ne répond pas aux exigences de politique de sécurité."
   },
   "acceptPolicies": {
     "message": "En cochant cette case vous acceptez ce qui suit :"
@@ -1868,6 +1895,9 @@
   "updateMasterPasswordWarning": {
     "message": "Votre mot de passe principal a été récemment changé par un administrateur de votre organisation. Pour pouvoir accéder au coffre, vous devez le mettre à jour maintenant. En poursuivant, vous serez déconnecté de votre session actuelle et vous devrez vous reconnecter. Les sessions actives sur d'autres appareils peuvent rester actives pendant encore une heure."
   },
+  "updateWeakMasterPasswordWarning": {
+    "message": "Votre mot de passe principal ne répond pas aux exigences de politique de sécurité de cette organisation. Pour accéder au coffre, vous devez mettre à jour votre mot de passe principal dès maintenant. En poursuivant, vous serez déconnecté de votre session actuelle et vous devrez vous reconnecter. Les sessions actives sur d'autres appareils peuver rester actives pendant encore une heure."
+  },
   "resetPasswordPolicyAutoEnroll": {
     "message": "Inscription automatique"
   },
@@ -1887,7 +1917,7 @@
     "message": "Minutes"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Les politiques de sécurité de votre organisation affectent le délai d'expiration de votre coffre. Le délai d'expiration autorisé du coffre est de $HOURS$ heure(s) et $MINUTES$ minute(s) maximum",
+    "message": "Les politiques de sécurité de votre organisation ont défini le délai d'expiration de votre coffre à $HOURS$ heure(s) et $MINUTES$ minute(s) maximum.",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1896,6 +1926,32 @@
       "minutes": {
         "content": "$2",
         "example": "5"
+      }
+    }
+  },
+  "vaultTimeoutPolicyWithActionInEffect": {
+    "message": "Les politiques de sécurité de votre organisation affectent le délai d'expiration de votre coffre. Le délai autorisé d'expiration du coffre est de $HOURS$ heure(s) et $MINUTES$ minute(s) maximum. L'action après délai d'expiration de votre coffre est fixée à $ACTION$.",
+    "placeholders": {
+      "hours": {
+        "content": "$1",
+        "example": "5"
+      },
+      "minutes": {
+        "content": "$2",
+        "example": "5"
+      },
+      "action": {
+        "content": "$3",
+        "example": "Lock"
+      }
+    }
+  },
+  "vaultTimeoutActionPolicyInEffect": {
+    "message": "Les politiques de sécurité de votre organisation ont défini l'action après délai d'expiration de votre coffre à $ACTION$.",
+    "placeholders": {
+      "action": {
+        "content": "$1",
+        "example": "Lock"
       }
     }
   },
@@ -2197,5 +2253,19 @@
         "example": "Check known data breaches for this password"
       }
     }
+  },
+  "region": {
+    "message": "Région"
+  },
+  "opensInANewWindow": {
+    "message": "S'ouvre dans une nouvelle fenêtre"
+  },
+  "eu": {
+    "message": "EU",
+    "description": "European Union"
+  },
+  "us": {
+    "message": "US",
+    "description": "United States"
   }
 }

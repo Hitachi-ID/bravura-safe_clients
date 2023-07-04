@@ -2,7 +2,7 @@ import * as chalk from "chalk";
 import * as program from "commander";
 
 import { AuthenticationStatus } from "@bitwarden/common/auth/enums/authentication-status";
-import { KeySuffixOptions } from "@bitwarden/common/enums/keySuffixOptions";
+import { KeySuffixOptions } from "@bitwarden/common/enums";
 
 import { LockCommand } from "./auth/commands/lock.command";
 import { LoginCommand } from "./auth/commands/login.command";
@@ -35,7 +35,7 @@ export class Program {
       .option("--raw", "Return raw output instead of a descriptive message.")
       .option("--response", "Return a JSON formatted version of response output.")
       .option("--cleanexit", "Exit with a success exit code (0) unless an error is thrown.")
-      .option("--quiet", "Don't return anything to stdout.")
+      .option("--quiet", "Do not return anything to stdout.")
       .option("--nointeraction", "Do not prompt for interactive user input.")
       .option("--session <session>", "Pass session key instead of reading from env.")
       .version(await this.main.platformUtilsService.getInternalApplicationVersion(), "-v, --version");
@@ -150,10 +150,12 @@ export class Program {
             this.main.twoFactorService,
             this.main.syncService,
             this.main.keyConnectorService,
+            this.main.policyApiService,
+            this.main.organizationService,
             async () => await this.main.logout()
           );
           const response = await command.run(email, password, options);
-          this.processResponse(response);
+          this.processResponse(response, true);
         }
       });
 

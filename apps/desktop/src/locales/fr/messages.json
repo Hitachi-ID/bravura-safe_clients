@@ -98,7 +98,7 @@
     "message": "Phrase de passe"
   },
   "editItem": {
-    "message": "Modifier l'élément"
+    "message": "Éditer l'élément"
   },
   "emailAddress": {
     "message": "Adresse électronique"
@@ -308,7 +308,7 @@
     "message": "Favori"
   },
   "edit": {
-    "message": "Modifier"
+    "message": "Édition"
   },
   "authenticatorKeyTotp": {
     "message": "Clé d'authentification (TOTP)"
@@ -386,7 +386,7 @@
     "message": "Ajouter un dossier"
   },
   "editFolder": {
-    "message": "Modifier le dossier"
+    "message": "Éditer le dossier"
   },
   "regeneratePassword": {
     "message": "Re-générer un mot de passe"
@@ -564,7 +564,7 @@
     "message": "Une erreur inattendue est survenue."
   },
   "itemInformation": {
-    "message": "Information sur l'identifiant"
+    "message": "Informations sur l'élément"
   },
   "noItemsInList": {
     "message": "Aucun élément à afficher."
@@ -794,6 +794,9 @@
   "contactUs": {
     "message": "Nous contacter"
   },
+  "helpAndFeedback": {
+    "message": "Aide et commentaires"
+  },
   "getHelp": {
     "message": "Obtenir de l'aide"
   },
@@ -813,7 +816,7 @@
     "message": "Changer le mot de passe principal"
   },
   "changeMasterPasswordConfirmation": {
-    "message": "Vous pouvez changer votre mot de passe principal depuis le coffre web de bravurasecurity.com. Souhaitez-vous visiter le site maintenant ?"
+    "message": "Vous pouvez changer votre mot de passe principal depuis le coffre web de Bravura Safe. Souhaitez-vous visiter le site maintenant ?"
   },
   "fingerprintPhrase": {
     "message": "Phrase d'empreinte",
@@ -861,7 +864,7 @@
     "message": "Mot de passe principal invalide"
   },
   "twoStepLoginConfirmation": {
-    "message": "L'authentification à deux facteurs rend votre compte plus sûr en vous demandant de vérifier votre connexion avec un autre dispositif tel qu'une clé de sécurité, une application d'authentification, un SMS, un appel téléphonique ou un courriel. L'authentification à deux facteurs peut être configurée sur le coffre web de bravurasafe.com. Voulez-vous visiter le site web maintenant ?"
+    "message": "L'authentification à deux facteurs rend votre compte plus sûr en vous demandant de vérifier votre connexion avec un autre dispositif tel qu'une clé de sécurité, une application d'authentification, un SMS, un appel téléphonique ou un courriel. L'authentification à deux facteurs peut être configurée sur le coffre web de Bravura Safe. Voulez-vous visiter le site web maintenant ?"
   },
   "twoStepLogin": {
     "message": "Authentification à deux facteurs"
@@ -1084,7 +1087,7 @@
     "message": "Gérer l'adhésion"
   },
   "premiumManageAlert": {
-    "message": "Vous pouvez gérer votre adhésion depuis le coffre web sur bravurasecurity.com. Souhaitez-vous visiter le site web maintenant ?"
+    "message": "Vous pouvez gérer votre adhésion depuis le coffre web sur Bravura Safe. Souhaitez-vous visiter le site web maintenant ?"
   },
   "premiumRefresh": {
     "message": "Actualiser l'adhésion"
@@ -1117,7 +1120,7 @@
     "message": "Acheter Premium"
   },
   "premiumPurchaseAlert": {
-    "message": "Vous pouvez opter pour une adhésion premium depuis le coffre web sur bravurasecurity.com. Souhaitez-vous visiter le site web maintenant ?"
+    "message": "Vous pouvez opter pour une adhésion premium depuis le coffre web sur Bravura Safe. Souhaitez-vous visiter le site web maintenant ?"
   },
   "premiumCurrentMember": {
     "message": "Vous êtes un membre Premium !"
@@ -1138,7 +1141,7 @@
     "message": "Actualisation terminée"
   },
   "passwordHistory": {
-    "message": "Historique des mots de passe"
+    "message": "Historique du mot de passe"
   },
   "clear": {
     "message": "Effacer",
@@ -1413,11 +1416,17 @@
   "unlockWithWindowsHello": {
     "message": "Déverrouiller avec Smartdevice"
   },
+  "additionalWindowsHelloSettings": {
+    "message": "Paramètres supplémentaires de Windows Hello"
+  },
   "windowsHelloConsentMessage": {
     "message": "Vérifier pour Bravura Safe."
   },
   "unlockWithTouchId": {
     "message": "Déverrouiller avec Touch ID"
+  },
+  "additionalTouchIdSettings": {
+    "message": "Paramètres supplémentaires de Touch ID"
   },
   "touchIdConsentMessage": {
     "message": "déverouiller votre coffre"
@@ -1427,6 +1436,12 @@
   },
   "autoPromptTouchId": {
     "message": "Demander à Touch ID au démarrage"
+  },
+  "requirePasswordOnStart": {
+    "message": "Exiger un mot de passe ou un code PIN au démarrage de Bravura Safe"
+  },
+  "recommendedForSecurity": {
+    "message": "Recommandé pour la sécurité."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Verrouiller avec le mot de passe principal au redémarrage"
@@ -1548,6 +1563,9 @@
   "ssoCompleteRegistration": {
     "message": "Afin de finaliser la connexion avec SSO, veuillez définir un mot de passe principal pour accéder et protéger votre coffre."
   },
+  "currentMasterPass": {
+    "message": "Mot de passe principal actuel"
+  },
   "newMasterPass": {
     "message": "Nouveau mot de passe principal"
   },
@@ -1594,7 +1612,7 @@
     }
   },
   "masterPasswordPolicyRequirementsNotMet": {
-    "message": "Votre nouveau mot de passe principal ne répond pas aux exigences en matière de politique de sécurité."
+    "message": "Votre nouveau mot de passe principal ne répond pas aux exigences de politique de sécurité."
   },
   "acceptPolicies": {
     "message": "En cochant cette case vous acceptez ce qui suit :"
@@ -1864,6 +1882,9 @@
   "updateMasterPasswordWarning": {
     "message": "Votre mot de passe principal a été récemment changé par un administrateur de votre organisation. Pour pouvoir accéder au coffre, vous devez le mettre à jour maintenant. En poursuivant, vous serez déconnecté de votre session actuelle et vous devrez vous reconnecter. Les sessions actives sur d'autres appareils peuvent rester actives pendant encore une heure."
   },
+  "updateWeakMasterPasswordWarning": {
+    "message": "Votre mot de passe principal ne répond pas aux exigences de politique de sécurité de cette organisation. Pour pouvoir accéder au coffre, vous devez mettre à jour votre mot de passe principal dès maintenant. En poursuivant, vous serez déconnecté de votre session actuelle et vous devrez vous reconnecter. Les sessions actives sur d'autres appareils peuver rester actives pendant encore une heure."
+  },
   "hours": {
     "message": "Heures"
   },
@@ -1871,7 +1892,7 @@
     "message": "Minutes"
   },
   "vaultTimeoutPolicyInEffect": {
-    "message": "Les politiques de sécurité de votre organisation affectent le délai d'expiration de votre coffre. Le délai d'expiration autorisé du coffre est de $HOURS$ heure(s) et $MINUTES$ minute(s) maximum",
+    "message": "Les politiques de sécurité de votre organisation ont défini le délai d'expiration de votre coffre à $HOURS$ heure(s) et $MINUTES$ minute(s) maximum.",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -1880,6 +1901,32 @@
       "minutes": {
         "content": "$2",
         "example": "5"
+      }
+    }
+  },
+  "vaultTimeoutPolicyWithActionInEffect": {
+    "message": "Les politiques de sécurité de votre organisation affectent le délai d'expiration de votre coffre. Le délai autorisé d'expiration du coffre est de $HOURS$ heure(s) et $MINUTES$ minute(s) au maximum. L'action après délai d'expiration de votre coffre est fixée à $ACTION$.",
+    "placeholders": {
+      "hours": {
+        "content": "$1",
+        "example": "5"
+      },
+      "minutes": {
+        "content": "$2",
+        "example": "5"
+      },
+      "action": {
+        "content": "$3",
+        "example": "Lock"
+      }
+    }
+  },
+  "vaultTimeoutActionPolicyInEffect": {
+    "message": "Les politiques de sécurité de votre organisation ont défini l'action après délai d'expiration de votre coffre à $ACTION$.",
+    "placeholders": {
+      "action": {
+        "content": "$1",
+        "example": "Lock"
       }
     }
   },
@@ -2231,5 +2278,25 @@
         "example": "Check known data breaches for this password"
       }
     }
+  },
+  "windowsBiometricUpdateWarning": {
+    "message": "Bravura Safe recommande de mettre à jour vos paramètres biométriques pour exiger votre mot de passe principal (ou votre code PIN) lors du premier déverrouillage. Voulez-vous mettre à jour vos paramètres maintenant ?"
+  },
+  "windowsBiometricUpdateWarningTitle": {
+    "message": "Une mise à jour des paramètres est recommandée"
+  },
+  "region": {
+    "message": "Région"
+  },
+  "eu": {
+    "message": "EU",
+    "description": "European Union"
+  },
+  "us": {
+    "message": "US",
+    "description": "United States"
+  },
+  "selfHosted": {
+    "message": "Auto-hébergé"
   }
 }

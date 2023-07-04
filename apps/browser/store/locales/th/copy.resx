@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bravura Safe – โปรแกรมจัดการรหัสผ่านฟรี</value>
+    <value>Bravura Safe</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>โปรแกรมจัดการรหัสผ่านที่ปลอดภัยและฟรี สำหรับอุปกรณ์ทั้งหมดของคุณ</value>

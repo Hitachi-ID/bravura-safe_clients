@@ -1,11 +1,16 @@
 <div class="icon" aria-hidden="true">
+  <ng-container *ngIf="data$ | async as data">
   <img
-    [src]="image"
-    appFallbackSrc="{{ fallbackImage }}"
-    *ngIf="imageEnabled && image"
+      [src]="data.image"
+      [appFallbackSrc]="data.fallbackImage"
+      *ngIf="data.imageEnabled && data.image"
     alt=""
     decoding="async"
     loading="lazy"
   />
-  <i class="tw-text-muted fa fa-lg {{ icon }}" *ngIf="!imageEnabled || !image"></i>
+    <i
+      class="tw-text-muted fa fa-lg {{ data.icon }}"
+      *ngIf="!data.imageEnabled || !data.image"
+    ></i>
+  </ng-container>
 </div>

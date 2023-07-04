@@ -7,7 +7,7 @@ import {
 } from "@angular/forms";
 import { NgSelectModule } from "@ng-select/ng-select";
 import { action } from "@storybook/addon-actions";
-import { Meta, moduleMetadata, Story } from "@storybook/angular";
+import { Meta, StoryObj, moduleMetadata } from "@storybook/angular";
 
 import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
 
@@ -75,7 +75,10 @@ function submit(formObj: FormGroup) {
   formObj.markAllAsTouched();
 }
 
-const MultiSelectTemplate: Story<MultiSelectComponent> = (args: MultiSelectComponent) => ({
+type Story = StoryObj<MultiSelectComponent & { name: string; hint: string }>;
+
+export const Loading: Story = {
+  render: (args) => ({
   props: {
     formObj: formObjFactory(),
     submit: submit,
@@ -100,25 +103,27 @@ const MultiSelectTemplate: Story<MultiSelectComponent> = (args: MultiSelectCompo
       <button type="submit" bitButton buttonType="primary">Submit</button>
     </form>
   `,
-});
-
-export const Loading = MultiSelectTemplate.bind({});
-Loading.args = {
-  baseItems: [],
+  }),
+  args: {
+    baseItems: [] as any,
   name: "Loading",
   hint: "This is what a loading multi-select looks like",
-  loading: "true",
+    loading: true,
+  },
 };
 
-export const Disabled = MultiSelectTemplate.bind({});
-Disabled.args = {
+export const Disabled: Story = {
+  ...Loading,
+  args: {
   name: "Disabled",
-  disabled: "true",
+    disabled: true,
   hint: "This is what a disabled multi-select looks like",
+  },
 };
 
-export const Groups = MultiSelectTemplate.bind({});
-Groups.args = {
+export const Groups: Story = {
+  ...Loading,
+  args: {
   name: "Select groups",
   hint: "Groups will be assigned to the associated member",
   baseItems: [
@@ -130,10 +135,12 @@ Groups.args = {
     { id: "6", listName: "Group 6", labelName: "Group 6", icon: "fa-family" },
     { id: "7", listName: "Group 7", labelName: "Group 7", icon: "fa-family" },
   ],
+  },
 };
 
-export const Members = MultiSelectTemplate.bind({});
-Members.args = {
+export const Members: Story = {
+  ...Loading,
+  args: {
   name: "Select members",
   hint: "Members will be assigned to the associated group/collection",
   baseItems: [
@@ -162,18 +169,25 @@ Members.args = {
       labelName: "Ashley Fletcher",
       icon: "fa-user",
     },
-    { id: "6", listName: "Rita Olson (rolson@mail.me)", labelName: "Rita Olson", icon: "fa-user" },
     {
+        id: "6",
+        listName: "Rita Olson (rolson@mail.me)",
+        labelName: "Rita Olson",
+        icon: "fa-user",
+      },
+      {
       id: "7",
       listName: "Final listName (fname@mail.me)",
       labelName: "(fname@mail.me)",
       icon: "fa-user",
     },
   ],
+  },
 };
 
-export const Collections = MultiSelectTemplate.bind({});
-Collections.args = {
+export const Collections: Story = {
+  ...Loading,
+  args: {
   name: "Select collections",
   hint: "Collections will be assigned to the associated member",
   baseItems: [
@@ -213,10 +227,12 @@ Collections.args = {
     { id: "6", listName: "Collection 6", labelName: "Collection 6", icon: "fa-cube" },
     { id: "7", listName: "Collection 7", labelName: "Collection 7", icon: "fa-cube" },
   ],
+  },
 };
 
-export const MembersAndGroups = MultiSelectTemplate.bind({});
-MembersAndGroups.args = {
+export const MembersAndGroups: Story = {
+  ...Loading,
+  args: {
   name: "Select groups and members",
   hint: "Members/Groups will be assigned to the associated collection",
   baseItems: [
@@ -233,10 +249,12 @@ MembersAndGroups.args = {
       icon: "fa-user",
     },
   ],
+  },
 };
 
-export const RemoveSelected = MultiSelectTemplate.bind({});
-RemoveSelected.args = {
+export const RemoveSelected: Story = {
+  ...Loading,
+  args: {
   name: "Select groups",
   hint: "Groups will be removed from the list once the dropdown is closed",
   baseItems: [
@@ -248,10 +266,12 @@ RemoveSelected.args = {
     { id: "6", listName: "Group 6", labelName: "Group 6", icon: "fa-family" },
     { id: "7", listName: "Group 7", labelName: "Group 7", icon: "fa-family" },
   ],
-  removeSelectedItems: "true",
+    removeSelectedItems: true,
+  },
 };
 
-const StandaloneTemplate: Story<MultiSelectComponent> = (args: MultiSelectComponent) => ({
+export const Standalone: Story = {
+  render: (args) => ({
   props: {
     ...args,
     onItemsConfirmed: actionsData.onItemsConfirmed,
@@ -266,10 +286,8 @@ const StandaloneTemplate: Story<MultiSelectComponent> = (args: MultiSelectCompon
       (onItemsConfirmed)="onItemsConfirmed($event)">
     </bit-multi-select>
   `,
-});
-
-export const Standalone = StandaloneTemplate.bind({});
-Standalone.args = {
+  }),
+  args: {
   baseItems: [
     { id: "1", listName: "Group 1", labelName: "Group 1", icon: "fa-family" },
     { id: "2", listName: "Group 2", labelName: "Group 2", icon: "fa-family" },
@@ -279,5 +297,6 @@ Standalone.args = {
     { id: "6", listName: "Group 6", labelName: "Group 6", icon: "fa-family" },
     { id: "7", listName: "Group 7", labelName: "Group 7", icon: "fa-family" },
   ],
-  removeSelectedItems: "true",
+    removeSelectedItems: true,
+  },
 };

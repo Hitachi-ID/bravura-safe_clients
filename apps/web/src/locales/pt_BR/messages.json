@@ -1354,6 +1354,15 @@
   "importSuccess": {
     "message": "Os dados foram importados com sucesso para o seu cofre."
   },
+  "importSuccessNumberOfItems": {
+    "message": "Um total de $AMOUNT$ itens foram importados.",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
   "dataExportSuccess": {
     "message": "Dados exportados com sucesso"
   },
@@ -2172,6 +2181,9 @@
   "cancelSubscription": {
     "message": "Cancelar Assinatura"
   },
+  "subscriptionExpiration": {
+    "message": "Subscription expiration"
+  },
   "subscriptionCanceled": {
     "message": "A assinatura foi cancelada."
   },
@@ -2894,6 +2906,24 @@
       }
     }
   },
+  "viewCollectionWithName": {
+    "message": "View collection - $NAME$",
+    "placeholders": {
+      "name": {
+        "content": "$1",
+        "example": "Collection1"
+      }
+    }
+  },
+  "editItemWithName": {
+    "message": "Edit item - $NAME$",
+    "placeholders": {
+      "name": {
+        "content": "$1",
+        "example": "Google Login"
+      }
+    }
+  },
   "copiedPasswordItemId": {
     "message": "Senha copiada para o item $ID$.",
     "placeholders": {
@@ -3268,6 +3298,9 @@
   },
   "inviteAcceptedDesc": {
     "message": "Você pode acessar essa organização quando um administrador confirmar sua associação. Enviaremos um e-mail quando isso acontecer."
+  },
+  "inviteInitAcceptedDesc": {
+    "message": "You can now access this team."
   },
   "inviteAcceptFailed": {
     "message": "Não é possível aceitar o convite. Peça a um administrador da organização para enviar um novo convite."
@@ -4957,6 +4990,9 @@
   "masterPasswordInvalidWarning": {
     "message": "Sua Senha Mestra foi alterada recentemente por um administrador de sua organização. Para acessar o cofre, você precisa atualizar sua Senha Mestra agora. O processo desconectará você da sessão atual, exigindo que você inicie a sessão novamente. Sessões ativas em outros dispositivos podem continuar ativas por até uma hora."
   },
+  "updateWeakMasterPasswordWarning": {
+    "message": "A sua senha mestra não atende a uma ou mais das políticas da sua organização. Para acessar o cofre, você deve atualizar a sua senha mestra agora. O processo desconectará você da sessão atual, exigindo que você inicie a sessão novamente. Sessões ativas em outros dispositivos podem continuar ativas por até uma hora."
+  },
   "maximumVaultTimeout": {
     "message": "Tempo Limite do Cofre"
   },
@@ -4988,6 +5024,32 @@
       }
     }
   },
+  "vaultTimeoutPolicyWithActionInEffect": {
+    "message": "Your team policies are affecting your vault timeout. Maximum allowed vault timeout is $HOURS$ hour(s) and $MINUTES$ minute(s). Your vault timeout action is set to $ACTION$.",
+    "placeholders": {
+      "hours": {
+        "content": "$1",
+        "example": "5"
+      },
+      "minutes": {
+        "content": "$2",
+        "example": "5"
+      },
+      "action": {
+        "content": "$3",
+        "example": "Lock"
+      }
+    }
+  },
+  "vaultTimeoutActionPolicyInEffect": {
+    "message": "Your team policies have set your vault timeout action to $ACTION$.",
+    "placeholders": {
+      "action": {
+        "content": "$1",
+        "example": "Lock"
+      }
+    }
+  },
   "customVaultTimeout": {
     "message": "Tempo Limite do Cofre Personalizado"
   },
@@ -5013,16 +5075,16 @@
     "message": "Uma ou mais políticas da organização impdem que você exporte seu cofre pessoal."
   },
   "activateAutofill": {
-    "message": "Activate auto-fill"
+    "message": "Ativar preenchimento automático"
   },
-  "activateAutofillDesc": {
-    "message": "Activate the auto-fill with page load settings on the browser extension for all existing and new members."
+  "activateAutofillPolicyDesc": {
+    "message": "Activate the auto-fill on page load setting on the browser extension for all existing and new members."
   },
   "experimentalFeature": {
-    "message": "Compromised or untrusted websites can exploit auto-fill on page load."
+    "message": "Sites comprometidos ou não confiáveis podem tomar vantagem do autopreenchimento ao carregar a página."
   },
   "learnMoreAboutAutofill": {
-    "message": "Learn more about auto-fill"
+    "message": "Saiba mais sobre preenchimento automático"
   },
   "selectType": {
     "message": "Selecionar Tipo de SSO"
@@ -5315,9 +5377,6 @@
     "message": "para exigir que todos os membros entrem com o SSO.",
     "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Use the require single-sign-on authentication policy to require all members to log in with SSO.'"
   },
-  "ssoPolicyHelpKeyConnector": {
-    "message": "As políticas de Autenticação de SSO e Organização Única são necessárias para configurar a descriptografia do Conector de Chave."
-  },
   "memberDecryptionOption": {
     "message": "Opções de Descriptografia de Membro"
   },
@@ -5327,8 +5386,17 @@
   "keyConnector": {
     "message": "Conector de Chave"
   },
-  "memberDecryptionKeyConnectorDesc": {
-    "message": "Conecte o Login com o SSO ao seu servidor de chave de descriptografia auto-hospedado. Usando esta opção, os membros não precisarão usar suas senhas mestras para descriptografar os dados do cofre."
+  "memberDecryptionKeyConnectorDescStart": {
+    "message": "Connect login with SSO to your self-hosted decryption key server. Using this option, members won’t need to use their master passwords to decrypt vault data. The",
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Connect login with SSO to your self-hosted decryption key server. Using this option, members won’t need to use their master passwords to decrypt vault data. The require SSO authentication and single team policies are required to set up Key Connector decryption. Contact Bravura Safe Support for set up assistance.'"
+  },
+  "memberDecryptionKeyConnectorDescLink": {
+    "message": "require SSO authentication and single team policies",
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Connect login with SSO to your self-hosted decryption key server. Using this option, members won’t need to use their master passwords to decrypt vault data. The require SSO authentication and single team policies are required to set up Key Connector decryption. Contact Bravura Safe Support for set up assistance.'"
+  },
+  "memberDecryptionKeyConnectorDescEnd": {
+    "message": "are required to set up Key Connector decryption. Contact Bravura Safe Support for set up assistance.",
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Connect login with SSO to your self-hosted decryption key server. Using this option, members won’t need to use their master passwords to decrypt vault data. The require SSO authentication and single team policies are required to set up Key Connector decryption. Contact Bravura Safe Support for set up assistance.'"
   },
   "keyConnectorPolicyRestriction": {
     "message": "\"Entrar com o SSO e Descriptografia de Conector de Chave\" está habilitado. Esta política se aplica apenas a Proprietários e Administradores."
@@ -5544,6 +5612,15 @@
     "message": "Organização atual",
     "description": "This is used by screen readers to indicate the team that is currently being shown to the user."
   },
+  "accountLoggedInAsName": {
+    "message": "Conta: Conectado como $NAME$",
+    "placeholders": {
+      "name": {
+        "content": "$1",
+        "example": "John Smith"
+      }
+    }
+  },
   "accountSettings": {
     "message": "Configurações da Conta"
   },
@@ -5623,7 +5700,7 @@
   },
   "lastSync": {
     "message": "Última Sincronização",
-    "Description": "Used as a prefix to indicate the last time a sync occured. Example \"Last sync 1968-11-16 00:00:00\""
+    "description": "Used as a prefix to indicate the last time a sync occured. Example \"Last sync 1968-11-16 00:00:00\""
   },
   "sponsorshipsSynced": {
     "message": "Patrocínios auto-hospedados sincronizados."
@@ -5765,6 +5842,24 @@
       "characters": {
         "content": "$1",
         "example": "@, #, $, %"
+      }
+    }
+  },
+  "inputMinValue": {
+    "message": "Input value must be at least $MIN$.",
+    "placeholders": {
+      "min": {
+        "content": "$1",
+        "example": "8"
+      }
+    }
+  },
+  "inputMaxValue": {
+    "message": "Input value must not exceed $MAX$.",
+    "placeholders": {
+      "max": {
+        "content": "$1",
+        "example": "100"
       }
     }
   },
@@ -6017,7 +6112,7 @@
     "description": "Action to view the details of a service account."
   },
   "deleteServiceAccountDialogMessage": {
-    "message": "Deleting service account $SERVICE_ACCOUNT$ is permanent and irreversible.",
+    "message": "Excluir conta de serviço $SERVICE_ACCOUNT$ é permanente e irreversível.",
     "placeholders": {
       "service_account": {
         "content": "$1",
@@ -6026,10 +6121,10 @@
     }
   },
   "deleteServiceAccountsDialogMessage": {
-    "message": "Deleting service accounts is permanent and irreversible."
+    "message": "A exclusão de projetos é permanente e irreversível."
   },
   "deleteServiceAccountsConfirmMessage": {
-    "message": "Delete $COUNT$ service accounts",
+    "message": "Excluir $COUNT$ contas de serviço",
     "placeholders": {
       "count": {
         "content": "$1",
@@ -6038,17 +6133,17 @@
     }
   },
   "deleteServiceAccountToast": {
-    "message": "The service account have been deleted"
+    "message": "Conta de serviço excluída"
   },
   "deleteServiceAccountsToast": {
-    "message": "Service accounts deleted"
+    "message": "Contas de serviço excluídas"
   },
   "searchServiceAccounts": {
     "message": "Pesquisar contas de serviço",
     "description": "Placeholder text for searching service accounts."
   },
   "editServiceAccount": {
-    "message": "Edit service account",
+    "message": "Editar conta de serviço",
     "description": "Title for editing a service account."
   },
   "addProject": {
@@ -6109,7 +6204,7 @@
     "description": "Notifies that a new service account has been created"
   },
   "serviceAccountUpdated": {
-    "message": "Service account updated",
+    "message": "Conta de serviço atualizada",
     "description": "Notifies that a service account has been updated"
   },
   "newSaSelectAccess": {
@@ -6199,8 +6294,8 @@
     "message": "Tokens de acesso",
     "description": "Title for the section displaying access tokens."
   },
-  "createAccessToken": {
-    "message": "Criar token de acesso",
+  "newAccessToken": {
+    "message": "Novo token de acesso",
     "description": "Button label for creating a new access token."
   },
   "expires": {
@@ -6228,57 +6323,61 @@
     "description": "Label for the expiration date of an access token."
   },
   "accessTokenCallOutTitle": {
-    "message": "Access tokens are not stored and cannot be retrieved",
+    "message": "Os tokens de acesso não são armazenados e não podem ser recuperados",
     "description": "Notification to inform the user that access tokens are only displayed once and cannot be retrieved again."
   },
   "copyToken": {
-    "message": "Copy token",
+    "message": "Copiar token",
     "description": "Copies the generated access token to the user's clipboard."
   },
   "accessToken": {
-    "message": "Access token",
+    "message": "Token de acesso",
     "description": "A unique string that gives a client application (eg. CLI) access to a secret or set of secrets."
   },
   "accessTokenExpirationRequired": {
-    "message": "Expiration date required",
+    "message": "Data de validade requerida",
     "description": "Error message indicating that an expiration date for the access token must be set."
   },
   "accessTokenCreatedAndCopied": {
-    "message": "Access token created and copied to clipboard",
+    "message": "Token de acesso criado e copiado para a área de transferência",
     "description": "Notification to inform the user that the access token has been created and copied to the clipboard."
   },
   "accessTokenPermissionsBetaNotification": {
-    "message": "Permissions management is unavailable for beta.",
+    "message": "O gerenciamento de permissões não está disponível para versão beta.",
     "description": "Notification to inform the user that the feature for managing access token permissions is not available in the beta version."
   },
   "revokeAccessToken": {
-    "message": "Revoke access token",
+    "message": "Revogar token de acesso",
     "description": "Invalidates / cancels an access token and as such removes access to secrets for the client application."
   },
   "revokeAccessTokens": {
-    "message": "Revoke access tokens"
+    "message": "Revogar tokens de acesso"
   },
   "revokeAccessTokenDesc": {
-    "message": "Revoking access tokens is permanent and irreversible."
+    "message": "Revogar tokens de acesso é permanente e irreversível."
   },
   "accessTokenRevoked": {
-    "message": "Access tokens revoked",
+    "message": "Tokens de acesso revogados",
     "description": "Toast message after deleting one or multiple access tokens."
+  },
+  "noAccessTokenSelected": {
+    "message": "No access token selected to revoke",
+    "description": "Toast error message after trying to delete access tokens but not selecting any access tokens."
   },
   "submenu": {
     "message": "Submenu"
   },
   "from": {
-    "message": "From"
+    "message": "De"
   },
   "to": {
-    "message": "To"
+    "message": "Para"
   },
   "member": {
-    "message": "Member"
+    "message": "Membro"
   },
   "update": {
-    "message": "Update"
+    "message": "Atualizar"
   },
   "plusNMore": {
     "message": "+ $QUANTITY$ mais",
@@ -6296,55 +6395,55 @@
     "message": "Conceder acesso às coleções atribuídas ao grupo."
   },
   "editGroupCollectionsDesc": {
-    "message": "Grant access to collections by adding them to this group."
+    "message": "Conceder acesso às coleções adicionando-as a este grupo."
   },
   "accessAllCollectionsDesc": {
-    "message": "Grant access to all current and future collections."
+    "message": "Conceder acesso a todas as coleções atuais e futuras."
   },
   "accessAllCollectionsHelp": {
-    "message": "If checked, this will replace all other collection permissions."
+    "message": "Se marcado, isto irá substituir todas as permissões de outras coleções."
   },
   "selectMembers": {
-    "message": "Select members"
+    "message": "Selecionar membros"
   },
   "selectCollections": {
-    "message": "Select collections"
+    "message": "Selecionar coleções"
   },
   "role": {
-    "message": "Role"
+    "message": "Função"
   },
   "removeMember": {
-    "message": "Remove member"
+    "message": "Remover membro"
   },
   "collection": {
-    "message": "Collection"
+    "message": "Coleção"
   },
   "noCollection": {
-    "message": "No collection"
+    "message": "Sem coleções"
   },
   "canView": {
-    "message": "Can view"
+    "message": "Pode ver"
   },
   "canViewExceptPass": {
-    "message": "Can view, except passwords"
+    "message": "Pode ver, exceto senhas"
   },
   "canEdit": {
-    "message": "Can edit"
+    "message": "Pode editar"
   },
   "canEditExceptPass": {
-    "message": "Can edit, except passwords"
+    "message": "Pode editar, exceto senhas"
   },
   "noCollectionsAdded": {
-    "message": "No collections added"
+    "message": "Nenhuma coleção adicionada"
   },
   "noMembersAdded": {
-    "message": "No members added"
+    "message": "Nenhum membro adicionado"
   },
   "noGroupsAdded": {
-    "message": "No groups added"
+    "message": "Nenhum grupo adicionado"
   },
   "group": {
-    "message": "Group"
+    "message": "Grupo"
   },
   "groupAccessAll": {
     "message": "This group can access and modify all items."
@@ -6428,7 +6527,7 @@
     "message": "Copy DNS TXT record"
   },
   "dnsTxtRecord": {
-    "message": "DNS TXT record"
+    "message": "Registro DNS TXT"
   },
   "dnsTxtRecordInputHint": {
     "message": "Copy and paste the TXT record into your DNS Provider."
@@ -6468,7 +6567,7 @@
     "placeholders": {
       "DOMAIN": {
         "content": "$1",
-        "example": "bravurasafe.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -6477,7 +6576,7 @@
     "placeholders": {
       "DOMAIN": {
         "content": "$1",
-        "example": "bravurasafe.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -6507,7 +6606,7 @@
     "placeholders": {
       "DOMAIN": {
         "content": "$1",
-        "example": "bravurasafe.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -6516,7 +6615,7 @@
     "placeholders": {
       "DOMAIN": {
         "content": "$1",
-        "example": "bravurasafe.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -6525,7 +6624,7 @@
     "placeholders": {
       "DOMAIN": {
         "content": "$1",
-        "example": "bravurasafe.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -6534,7 +6633,7 @@
     "placeholders": {
       "DOMAIN": {
         "content": "$1",
-        "example": "bravurasafe.com"
+        "example": "bravurasecurity.com"
       }
     }
   },
@@ -6670,6 +6769,18 @@
   "billingSyncHelp": {
     "message": "Billing Sync help"
   },
+  "licensePaidFeaturesHelp": {
+    "message": "License paid features help"
+  },
+  "selfHostGracePeriodHelp": {
+    "message": "After your subscription expires, you have 60 days to apply an updated license file to your team. Grace period ends $GRACE_PERIOD_END_DATE$.",
+    "placeholders": {
+      "GRACE_PERIOD_END_DATE": {
+        "content": "$1",
+        "example": "May 12, 2024"
+      }
+    }
+  },
   "uploadLicense": {
     "message": "Upload license"
   },
@@ -6709,11 +6820,8 @@
   "lowKdfIterations": {
     "message": "Low KDF Iterations"
   },
-  "lowKdfIterationsDesc": {
-    "message": "Increase your KDF encryption settings to improve the security of your account."
-  },
-  "changeKdfSettings": {
-    "message": "Change KDF settings"
+  "updateLowKdfIterationsDesc": {
+    "message": "Update your encryption settings to meet new security recommendations and improve account protection."
   },
   "changeKdfLoggedOutWarning": {
     "message": "Proceeding will log you out of all active sessions. You will need to log back in and complete two-step login setup. We recommend exporting your vault before changing your encryption settings to prevent data loss."
@@ -6938,6 +7046,38 @@
       }
     }
   },
+  "notAvailableForFreeOrganization": {
+    "message": "This feature is not available for free teams. Contact your team owner to upgrade."
+  },
+  "smProjectSecretsNoItemsNoAccess": {
+    "message": "Contact your team's admin to manage secrets for this project.",
+    "description": "The message shown to the user under a project's secrets tab when the user only has read access to the project."
+  },
+  "enforceOnLoginDesc": {
+    "message": "Require existing members to change their passwords"
+  },
+  "region": {
+    "message": "Region"
+  },
+  "eu": {
+    "message": "EU",
+    "description": "European Union"
+  },
+  "us": {
+    "message": "US",
+    "description": "United States"
+  },
+  "smProjectDeleteAccessRestricted": {
+    "message": "You don't have permissions to delete this project",
+    "description": "The individual description shown to the user when the user doesn't have access to delete a project."
+  },
+  "smProjectsDeleteBulkConfirmation": {
+    "message": "The following projects can not be deleted. Would you like to continue?",
+    "description": "The message shown to the user when bulk deleting projects and the user doesn't have access to some projects."
+  },
+  "updateKdfSettings": {
+    "message": "Update KDF settings"
+  },
   "turnedOff": {
     "message": "Turned off"
   },
@@ -6949,5 +7089,20 @@
         "example": "Check known data breaches for this password"
       }
     }
+  },
+  "trustedDeviceEncryption": {
+    "message": "Trusted device encryption"
+  },
+  "memberDecryptionTdeDescStart": {
+    "message": "Once authenticated, members will decrypt vault data using a key stored on their device. The",
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Once authenticated, members will decrypt vault data using a key stored on their device. The master password reset policy with automatic enrollment will turn on when this option is used.'"
+  },
+  "memberDecryptionTdeDescLink": {
+    "message": "master password reset policy",
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Once authenticated, members will decrypt vault data using a key stored on their device. The master password reset policy with automatic enrollment will turn on when this option is used.'"
+  },
+  "memberDecryptionTdeDescEnd": {
+    "message": "with automatic enrollment will turn on when this option is used.",
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Once authenticated, members will decrypt vault data using a key stored on their device. The master password reset policy with automatic enrollment will turn on when this option is used.'"
   }
 }
