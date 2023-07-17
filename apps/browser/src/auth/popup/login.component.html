@@ -61,13 +61,11 @@
         >
         <i class="fa fa-spinner fa-lg fa-spin" [hidden]="!form.loading" aria-hidden="true"></i>
       </button>
-      <!--
       <div class="tw-mb-3" *ngIf="showLoginWithDevice && showPasswordless">
         <button type="button" class="btn block" (click)="startPasswordlessLogin()">
           <span> <i class="fa fa-mobile"></i> {{ "loginWithDevice" | i18n }} </span>
         </button>
       </div>
-      -->
       <button type="button" (click)="launchSsoBrowser()" class="btn block">
         <i class="fa fa-provider" aria-hidden="true"></i> {{ "enterpriseSingleSignOn" | i18n }}
       </button>
