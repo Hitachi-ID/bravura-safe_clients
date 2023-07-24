@@ -3,8 +3,8 @@ import { Title } from "@angular/platform-browser";
 import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
 import { filter } from "rxjs";
 
-import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
-import { StateService } from "@bitwarden/common/abstractions/state.service";
+import { I18nService } from "@bitwarden/common/platform/abstractions/i18n.service";
+import { StateService } from "@bitwarden/common/platform/abstractions/state.service";
 
 @Injectable()
 export class RouterService {

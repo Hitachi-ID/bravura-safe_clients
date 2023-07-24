@@ -960,7 +960,7 @@
     "message": "Server URL"
   },
   "apiUrl": {
-    "message": "API Server URL"
+    "message": "API Server-URL"
   },
   "webVaultUrl": {
     "message": "Web-Tresor Server URL"
@@ -2206,5 +2206,14 @@
   "us": {
     "message": "US",
     "description": "United States"
+  },
+  "accessDenied": {
+    "message": "Zugriff verweigert. Du hast keine Berechtigung, diese Seite anzuzeigen."
+  },
+  "general": {
+    "message": "Allgemein"
+  },
+  "display": {
+    "message": "Anzeige"
   }
 }

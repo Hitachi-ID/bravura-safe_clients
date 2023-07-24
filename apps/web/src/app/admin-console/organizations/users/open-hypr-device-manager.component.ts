@@ -4,14 +4,14 @@ import { Component } from "@angular/core";
 import { ModalRef } from "@bitwarden/angular/components/modal/modal.ref";
 import { ModalConfig } from "@bitwarden/angular/services/modal.service";
 import { ApiService } from "@bitwarden/common/abstractions/api.service";
-import { CryptoService } from "@bitwarden/common/abstractions/crypto.service";
-import { I18nService } from "@bitwarden/common/abstractions/i18n.service";
-import { LogService } from "@bitwarden/common/abstractions/log.service";
+import { CryptoService } from "@bitwarden/common/platform/abstractions/crypto.service";
+import { I18nService } from "@bitwarden/common/platform/abstractions/i18n.service";
+import { LogService } from "@bitwarden/common/platform/abstractions/log.service";
 
-import { PlatformUtilsService } from "@bitwarden/common/abstractions/platformUtils.service";
+import { PlatformUtilsService } from "@bitwarden/common/platform/abstractions/platform-utils.service";
 import { SyncService } from "@bitwarden/common/vault/abstractions/sync/sync.service.abstraction";
-import { UserVerificationService } from "@bitwarden/common/abstractions/userVerification/userVerification.service.abstraction";
-import { Utils } from "@bitwarden/common/misc/utils";
+import { UserVerificationService } from "@bitwarden/common/auth/abstractions/user-verification/user-verification.service.abstraction";
+import { Utils } from "@bitwarden/common/platform/misc/utils";
 import { Organization } from "@bitwarden/common/admin-console/models/domain/organization";
 import { TwoFactorHyprAuthGetMagicLink } from "@bitwarden/common/auth/models/response/two-factor-hypr-auth-get-magic-link.response";
 

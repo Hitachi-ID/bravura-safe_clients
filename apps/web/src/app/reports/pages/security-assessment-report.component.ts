@@ -5,13 +5,13 @@ import { ApiService } from "@bitwarden/common/abstractions/api.service";
 import { ModalService } from "@bitwarden/angular/services/modal.service";
 import { AuditService } from "@bitwarden/common/abstractions/audit.service";
 import { CipherService } from "@bitwarden/common/vault/abstractions/cipher.service";
-import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
+import { MessagingService } from "@bitwarden/common/platform/abstractions/messaging.service";
 import { PasswordRepromptService } from "@bitwarden/common/vault/abstractions/password-reprompt.service";
-import { StateService } from "@bitwarden/common/abstractions/state.service";
+import { StateService } from "@bitwarden/common/platform/abstractions/state.service";
 import { CipherView } from "@bitwarden/common/vault/models/view/cipher.view";
-import { PasswordGenerationServiceAbstraction } from "@bitwarden/common/tools/generator/password";
-import { LogService } from "@bitwarden/common/abstractions/log.service";
-import { FileDownloadService } from "@bitwarden/common/abstractions/fileDownload/fileDownload.service";
+import { PasswordStrengthServiceAbstraction } from "@bitwarden/common/tools/password-strength";
+import { LogService } from "@bitwarden/common/platform/abstractions/log.service";
+import { FileDownloadService } from "@bitwarden/common/platform/abstractions/file-download/file-download.service";
 import { NgxCaptureService } from "ngx-capture";
 import { SyncService } from "@bitwarden/common/vault/abstractions/sync/sync.service.abstraction";
 import { Icons } from "@bitwarden/components";
@@ -64,7 +64,7 @@ export class SecurityAssessmentReportComponent implements OnInit {
     protected messagingService: MessagingService,
     protected stateService: StateService,
     protected passwordRepromptService: PasswordRepromptService,
-    protected passwordGenerationService: PasswordGenerationServiceAbstraction,
+    protected passwordStrengthService: PasswordStrengthServiceAbstraction,
     protected logService: LogService,
     protected fileDownloadService: FileDownloadService,
     protected captureService: NgxCaptureService,
@@ -72,7 +72,7 @@ export class SecurityAssessmentReportComponent implements OnInit {
   ) {
     this.exposedPasswords = new ExposedPasswordsReportComponent(cipherService, auditService, modalService, messagingService, passwordRepromptService);
     this.reusedPasswords = new ReusedPasswordsReportComponent(cipherService, modalService, messagingService, stateService, passwordRepromptService);
-    this.weakPasswords = new WeakPasswordsReportComponent(cipherService, passwordGenerationService, modalService, messagingService, passwordRepromptService);
+    this.weakPasswords = new WeakPasswordsReportComponent(cipherService, passwordStrengthService, modalService, messagingService, passwordRepromptService);
     this.unsecuredWebsites = new UnsecuredWebsitesReportComponent(cipherService, modalService, messagingService, passwordRepromptService);
     this.inactiveTwoFactor = new InactiveTwoFactorReportComponent(cipherService, modalService, messagingService, logService, passwordRepromptService);
     this.configuredTwoFactor = new ConfiguredTwoFactorReportComponent(auditService, stateService, apiService);

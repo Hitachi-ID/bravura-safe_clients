@@ -8,7 +8,6 @@ import { UnauthGuard } from "@bitwarden/angular/auth/guards/unauth.guard";
 import { SubscriptionRoutingModule } from "../app/billing/settings/subscription-routing.module";
 import { flagEnabled, Flags } from "../utils/flags";
 
-import { TrialInitiationComponent } from "./accounts/trial-initiation/trial-initiation.component";
 import { AcceptFamilySponsorshipComponent } from "./admin-console/organizations/sponsorships/accept-family-sponsorship.component";
 import { FamiliesForEnterpriseSetupComponent } from "./admin-console/organizations/sponsorships/families-for-enterprise-setup.component";
 import { CreateOrganizationComponent } from "./admin-console/settings/create-organization.component";
@@ -21,12 +20,13 @@ import { LoginWithDeviceComponent } from "./auth/login/login-with-device.compone
 import { LoginComponent } from "./auth/login/login.component";
 import { RecoverDeleteComponent } from "./auth/recover-delete.component";
 import { RecoverTwoFactorComponent } from "./auth/recover-two-factor.component";
-import { RegisterComponent } from "./accounts/register.component";
+import { RegisterComponent } from "./auth/register.component";
 import { RemovePasswordComponent } from "./auth/remove-password.component";
 import { SetPasswordComponent } from "./auth/set-password.component";
 import { EmergencyAccessViewComponent } from "./auth/settings/emergency-access/emergency-access-view.component";
 import { EmergencyAccessComponent } from "./auth/settings/emergency-access/emergency-access.component";
 import { SsoComponent } from "./auth/sso.component";
+import { TrialInitiationComponent } from "./auth/trial-initiation/trial-initiation.component";
 import { TwoFactorComponent } from "./auth/two-factor.component";
 import { UpdatePasswordComponent } from "./auth/update-password.component";
 import { UpdateTempPasswordComponent } from "./auth/update-temp-password.component";

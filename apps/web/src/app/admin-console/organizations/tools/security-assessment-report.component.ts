@@ -5,12 +5,12 @@ import { ApiService } from "@bitwarden/common/abstractions/api.service";
 import { ModalService } from "@bitwarden/angular/services/modal.service";
 import { AuditService } from "@bitwarden/common/abstractions/audit.service";
 import { CipherService } from "@bitwarden/common/vault/abstractions/cipher.service";
-import { MessagingService } from "@bitwarden/common/abstractions/messaging.service";
+import { MessagingService } from "@bitwarden/common/platform/abstractions/messaging.service";
 import { PasswordRepromptService } from "@bitwarden/common/vault/abstractions/password-reprompt.service";
-import { StateService } from "@bitwarden/common/abstractions/state.service";
-import { PasswordGenerationServiceAbstraction } from "@bitwarden/common/tools/generator/password";
-import { LogService } from "@bitwarden/common/abstractions/log.service";
-import { FileDownloadService } from "@bitwarden/common/abstractions/fileDownload/fileDownload.service";
+import { StateService } from "@bitwarden/common/platform/abstractions/state.service";
+import { PasswordStrengthServiceAbstraction } from "@bitwarden/common/tools/password-strength";
+import { LogService } from "@bitwarden/common/platform/abstractions/log.service";
+import { FileDownloadService } from "@bitwarden/common/platform/abstractions/file-download/file-download.service";
 import { NgxCaptureService } from "ngx-capture";
 import { OrganizationService } from "@bitwarden/common/admin-console/abstractions/organization/organization.service.abstraction";
 import { OrganizationUserService } from "@bitwarden/common/abstractions/organization-user/organization-user.service";
@@ -43,7 +43,7 @@ export class SecurityAssessmentReportComponent extends BaseSecurityAssessmentRep
     private organizationUserService: OrganizationUserService,
     private route: ActivatedRoute,
     passwordRepromptService: PasswordRepromptService,
-    passwordGenerationService: PasswordGenerationServiceAbstraction,
+    passwordStrengthService: PasswordStrengthServiceAbstraction,
     logService: LogService,
     fileDownloadService: FileDownloadService,
     captureService: NgxCaptureService,
@@ -57,7 +57,7 @@ export class SecurityAssessmentReportComponent extends BaseSecurityAssessmentRep
       messagingService,
       stateService,
       passwordRepromptService,
-      passwordGenerationService,
+      passwordStrengthService,
       logService,
       fileDownloadService,
       captureService,
@@ -66,7 +66,7 @@ export class SecurityAssessmentReportComponent extends BaseSecurityAssessmentRep
 
     this.exposedPasswords = new ExposedPasswordsReportComponent(cipherService, auditService, modalService, messagingService, organizationService, route, passwordRepromptService);
     this.reusedPasswords = new ReusedPasswordsReportComponent(cipherService, modalService, messagingService, stateService, route, organizationService, passwordRepromptService);
-    this.weakPasswords = new WeakPasswordsReportComponent(cipherService, passwordGenerationService, modalService, messagingService, route, organizationService, passwordRepromptService);
+    this.weakPasswords = new WeakPasswordsReportComponent(cipherService, passwordStrengthService, modalService, messagingService, route, organizationService, passwordRepromptService);
     this.unsecuredWebsites = new UnsecuredWebsitesReportComponent(cipherService, modalService, messagingService, route, organizationService, passwordRepromptService);
     this.inactiveTwoFactor = new InactiveTwoFactorReportComponent(cipherService, modalService, messagingService, route, logService, passwordRepromptService, organizationService);
     this.configuredTwoFactor = new ConfiguredTwoFactorReportComponent(auditService, stateService, route, apiService, organizationService, organizationUserService);

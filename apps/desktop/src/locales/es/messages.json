@@ -2298,5 +2298,8 @@
   },
   "selfHosted": {
     "message": "Autoalojado"
+  },
+  "accessDenied": {
+    "message": "Acceso denegado. No tiene permiso para ver esta página."
   }
 }
