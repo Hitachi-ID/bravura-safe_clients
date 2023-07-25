@@ -40,9 +40,31 @@
   </div>
 
   <div *ngIf="filter.type !== 'trash'" class="tw-shrink-0">
-    <button type="button" bitButton buttonType="primary" (click)="addCipher()">
-      <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
-      {{ "newItem" | i18n }}
-    </button>
+    <div appListDropdown>
+      <button
+        bitButton
+        buttonType="primary"
+        type="button"
+        [bitMenuTriggerFor]="addOptions"
+        id="newItemDropdown"
+        appA11yTitle="{{ 'new' | i18n }}"
+      >
+        {{ "new" | i18n }}<i class="fa fa-angle-down tw-ml-2" aria-hidden="true"></i>
+      </button>
+      <bit-menu #addOptions aria-labelledby="newItemDropdown">
+        <button type="button" bitMenuItem (click)="addCipher()">
+          <i class="fa fa-fw fa-globe" aria-hidden="true"></i>
+          {{ "item" | i18n }}
+        </button>
+        <button type="button" bitMenuItem (click)="addFolder()">
+          <i class="fa fa-fw fa-folder-o" aria-hidden="true"></i>
+          {{ "folder" | i18n }}
+        </button>
+        <button *ngIf="canCreateCollections" type="button" bitMenuItem (click)="addCollection()">
+          <i class="fa fa-fw fa-cube" aria-hidden="true"></i>
+          {{ "collection" | i18n }}
+        </button>
+      </bit-menu>
+    </div>
   </div>
 </div>

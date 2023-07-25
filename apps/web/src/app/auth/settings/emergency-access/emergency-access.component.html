@@ -72,19 +72,22 @@
 
         <small class="text-muted d-block" *ngIf="c.name">{{ c.name }}</small>
       </td>
-      <td class="table-list-options">
+      <td>
+        <div class="list-options">
         <button
           [bitMenuTriggerFor]="trustedContactOptions"
-          class="tw-border-none tw-bg-transparent tw-text-main"
+          class="btn btn-sm btn-outline-secondary dropdown-toggle"
           type="button"
           appA11yTitle="{{ 'options' | i18n }}"
+          size="small"
+          bitIconButton="fa fa-cog"
         >
           <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
         </button>
         <bit-menu #trustedContactOptions>
+          <ng-container>
           <button
-            type="button"
-            bitMenuItem
+            class="dropdown-item"
             *ngIf="c.status === emergencyAccessStatusType.Invited"
             (click)="reinvite(c)"
           >
@@ -92,8 +95,7 @@
             {{ "resendInvitation" | i18n }}
           </button>
           <button
-            type="button"
-            bitMenuItem
+            class="dropdown-item"
             *ngIf="c.status === emergencyAccessStatusType.Accepted"
             (click)="confirm(c)"
           >
@@ -101,8 +103,7 @@
             {{ "confirm" | i18n }}
           </button>
           <button
-            type="button"
-            bitMenuItem
+            class="dropdown-item"
             *ngIf="c.status === emergencyAccessStatusType.RecoveryInitiated"
             (click)="approve(c)"
           >
@@ -110,8 +111,7 @@
             {{ "approve" | i18n }}
           </button>
           <button
-            type="button"
-            bitMenuItem
+            class="dropdown-item"
             *ngIf="
               c.status === emergencyAccessStatusType.RecoveryInitiated ||
               c.status === emergencyAccessStatusType.RecoveryApproved
@@ -121,11 +121,16 @@
             <i class="fa fa-fw fa-close" aria-hidden="true"></i>
             {{ "reject" | i18n }}
           </button>
-          <button type="button" bitMenuItem (click)="remove(c)">
+          <button
+            class="dropdown-item"
+            (click)="remove(c)"
+          >
             <i class="fa fa-fw fa-close" aria-hidden="true"></i>
             {{ "remove" | i18n }}
           </button>
+          </ng-container>
         </bit-menu>
+        </div>
       </td>
     </tr>
   </tbody>
@@ -189,19 +194,22 @@
 
         <small class="text-muted d-block" *ngIf="c.name">{{ c.name }}</small>
       </td>
-      <td class="table-list-options">
+      <td>
+        <div class="list-options">
         <button
           [bitMenuTriggerFor]="grantedContactOptions"
-          class="tw-border-none tw-bg-transparent tw-text-main"
+          class="btn btn-sm btn-outline-secondary dropdown-toggle"
           type="button"
           appA11yTitle="{{ 'options' | i18n }}"
+          size="small"
+          bitIconButton="fa fa-cog"
         >
           <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
         </button>
         <bit-menu #grantedContactOptions>
+          <ng-container>
           <button
-            type="button"
-            bitMenuItem
+            class="dropdown-item"
             *ngIf="c.status === emergencyAccessStatusType.Confirmed"
             (click)="requestAccess(c)"
           >
@@ -209,8 +217,7 @@
             {{ "requestAccess" | i18n }}
           </button>
           <button
-            type="button"
-            bitMenuItem
+            class="dropdown-item"
             *ngIf="
               c.status === emergencyAccessStatusType.RecoveryApproved &&
               c.type === emergencyAccessType.Takeover
@@ -221,8 +228,7 @@
             {{ "takeover" | i18n }}
           </button>
           <button
-            type="button"
-            bitMenuItem
+            class="dropdown-item"
             *ngIf="
               c.status === emergencyAccessStatusType.RecoveryApproved &&
               c.type === emergencyAccessType.View
@@ -232,11 +238,16 @@
             <i class="fa fa-fw fa-eye" aria-hidden="true"></i>
             {{ "view" | i18n }}
           </button>
-          <button type="button" bitMenuItem (click)="remove(c)">
+          <button
+            class="dropdown-item"
+            (click)="remove(c)"
+          >
             <i class="fa fa-fw fa-close" aria-hidden="true"></i>
             {{ "remove" | i18n }}
           </button>
+          </ng-container>
         </bit-menu>
+        </div>
       </td>
     </tr>
   </tbody>

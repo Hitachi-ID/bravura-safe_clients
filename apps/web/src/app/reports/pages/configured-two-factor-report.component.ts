@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 import { AuditService } from "@bitwarden/common/abstractions/audit.service";
-import { StateService } from "@bitwarden/common/abstractions/state.service";
+import { StateService } from "@bitwarden/common/platform/abstractions/state.service";
 import { Organization } from "@bitwarden/common/admin-console/models/domain/organization";
 import { TwoFactorProviders } from "@bitwarden/common/auth/services/two-factor.service";
 import { ApiService } from "@bitwarden/common/abstractions/api.service";

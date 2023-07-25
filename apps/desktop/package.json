@@ -1,7 +1,7 @@
 {
   "name": "@bitwarden/desktop",
   "description": "A secure password manager for all of your devices.",
-  "version": "2023.5.0",
+  "version": "2023.7.0",
   "keywords": [
     "Bravura Safe",
     "password",
