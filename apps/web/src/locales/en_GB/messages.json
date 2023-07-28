@@ -4668,13 +4668,13 @@
     "message": "Your password hint cannot be the same as your password."
   },
   "enrollAccountRecovery": {
-    "message": "Enroll in account recovery"
+    "message": "Enroll in password reset"
   },
   "enrolledAccountRecovery": {
-    "message": "Enrolled in account recovery"
+    "message": "Enrolled in password reset"
   },
   "withdrawAccountRecovery": {
-    "message": "Withdraw from account recovery"
+    "message": "Withdraw from password reset"
   },
   "enrollPasswordResetSuccess": {
     "message": "Enrolment success!"
@@ -4683,7 +4683,7 @@
     "message": "Withdrawal success!"
   },
   "eventEnrollAccountRecovery": {
-    "message": "User $ID$ enrolled in account recovery.",
+    "message": "User $ID$ enrolled in password reset.",
     "placeholders": {
       "id": {
         "content": "$1",
@@ -4692,7 +4692,7 @@
     }
   },
   "eventWithdrawAccountRecovery": {
-    "message": "User $ID$ withdrew from account recovery.",
+    "message": "User $ID$ withdrew from password reset.",
     "placeholders": {
       "id": {
         "content": "$1",
@@ -4752,10 +4752,10 @@
     "message": "Enrolment will allow team administrators to change your master password. Are you sure you want to enroll?"
   },
   "accountRecoveryPolicy": {
-    "message": "Account recovery administration"
+    "message": "Master password reset"
   },
   "accountRecoveryPolicyDescription": {
-    "message": "Recover member accounts when master password or trusted devices are forgotten or lost. The recovery processes is based on the account encryption method."
+    "message": "Allow admins to reset master passwords for members."
   },
   "resetPasswordPolicyWarning": {
     "message": "Members in the team will need to self-enrol or be auto-enroled before administrators can reset their master password."
@@ -7122,11 +7122,11 @@
   },
   "memberDecryptionTdeDescriptionStart": {
     "message": "Once authenticated, members will decrypt vault data using a key stored on their device. The",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Once authenticated, members will decrypt vault data using a key stored on their device. The account recovery administration policy with automatic enrollment will turn on when this option is used.'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Once authenticated, members will decrypt vault data using a key stored on their device. The master password reset policy with automatic enrollment will turn on when this option is used.'"
   },
   "memberDecryptionTdeDescriptionLink": {
     "message": "account recovery administration policy",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Once authenticated, members will decrypt vault data using a key stored on their device. The account recovery administration policy with automatic enrollment will turn on when this option is used.'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Once authenticated, members will decrypt vault data using a key stored on their device. The master password reset policy with automatic enrollment will turn on when this option is used.'"
   },
   "memberDecryptionTdeDescriptionEnd": {
     "message": "with automatic enrollment will turn on when this option is used.",
@@ -7142,10 +7142,10 @@
     }
   },
   "recoverAccount": {
-    "message": "Recover account"
+    "message": "Reset password"
   },
   "updatedTempPassword": {
-    "message": "User updated a password issued through account recovery."
+    "message": "User updated a password issued through reset password."
   },
   "activatedAccessToSecretsManager": {
     "message": "Activated access to Secrets Manager",
