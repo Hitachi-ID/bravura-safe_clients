@@ -72,7 +72,7 @@ export class ConfigService implements ConfigServiceAbstraction {
     ) {
       return defaultValue;
     }
-    return serverConfig.featureStates[key] as T;
+    return serverConfig.featureStates[key] as unknown as T;
   }
 
   private async buildServerConfig(): Promise<ServerConfig> {
