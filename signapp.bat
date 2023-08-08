@@ -4,12 +4,6 @@ echo ***
 echo *** make sure signtool.exe is in your path, or run within VS 2022 x64 Command Prompt
 echo *** 
 
-if defined (BS_APP_VER) (
-echo App version is defined as %BS_APP_VER%
-} else (
-set BS_APP_VER=2023.11.0
-)
-
 IF "%BS_APP_VER%"=="" ( ECHO BS_APP_VER Variable is NOT defined .. exiting
 goto :exit
 ) else (
@@ -36,4 +30,4 @@ popd
 
 
 :exit
-echo Bye Bye Bye mmm
+echo Exiting script ....
