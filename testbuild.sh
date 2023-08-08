@@ -16,6 +16,9 @@ then
     echo "Usage: testbuild.sh build [target]"
     echo "Without any parameters will do nothing."
     echo "========================"
+	
+    echo "for MAC version info search CURRENT_PROJECT_VERSION in pbxproj"
+    echo "and also set buildVersion in exlectron-builder.json"
 
 elif [ $# -gt 1 -a "$1" == "build" ]
 then
@@ -66,6 +69,31 @@ then
         
         # final pop of the dir to get back to root
             popd
+        ;;
+		
+        "desktop_mac")
+		
+        echo "============ Make sure you have built safari plugins first ==========="
+            pushd .
+
+        npm install
+
+        cd apps/desktop
+        npm run clean:dist
+
+            popd
+
+        echo "build the native portion of the mac desktop app"
+        pushd .
+        cd apps/desktop/desktop_native
+        npm run build:cross-platform
+        popd
+		
+        pushd .
+        cd apps/desktop
+        npm run dist:mac:mas
+        popd
+
         ;;
 
         "browser")
