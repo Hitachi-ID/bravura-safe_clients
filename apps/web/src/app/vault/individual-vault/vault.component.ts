@@ -38,6 +38,7 @@ import { OrganizationService, isMember } from "@bitwarden/common/admin-console/a
 import { Organization } from "@bitwarden/common/admin-console/models/domain/organization";
 import { TokenService } from "@bitwarden/common/auth/abstractions/token.service";
 import { DEFAULT_PBKDF2_ITERATIONS, EventType, KdfType } from "@bitwarden/common/enums";
+import { FeatureFlag } from "@bitwarden/common/enums/feature-flag.enum";
 import { ServiceUtils } from "@bitwarden/common/misc/serviceUtils";
 import { TreeNode } from "@bitwarden/common/models/domain/tree-node";
 import { BroadcasterService } from "@bitwarden/common/platform/abstractions/broadcaster.service";
@@ -875,9 +876,17 @@ export class VaultComponent implements OnInit, OnDestroy {
   }
 
   async isLowKdfIteration() {
-    const kdfType = await this.stateService.getKdfType();
-    const kdfOptions = await this.stateService.getKdfConfig();
-    return kdfType === KdfType.PBKDF2_SHA256 && kdfOptions.iterations < DEFAULT_PBKDF2_ITERATIONS;
+    const showLowKdfEnabled = await this.configService.getFeatureFlagBool(
+      FeatureFlag.DisplayLowKdfIterationWarningFlag
+    );
+
+    if (showLowKdfEnabled) {
+      const kdfType = await this.stateService.getKdfType();
+      const kdfOptions = await this.stateService.getKdfConfig();
+      return kdfType === KdfType.PBKDF2_SHA256 && kdfOptions.iterations < DEFAULT_PBKDF2_ITERATIONS;
+    }
+
+    return showLowKdfEnabled;
   }
 
   protected async repromptCipher(ciphers: CipherView[]) {
