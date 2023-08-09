@@ -39,7 +39,7 @@ then
 		cd browser
 
 		npm run build:prod
-		npm run dist:safari
+		npm run dist:safari:mas
 
         echo "================== copying plugins ================="
         # now copy appex to the PlugIns and PlugIns_mas folder within apps/desktop
@@ -92,6 +92,8 @@ then
         pushd .
         cd apps/desktop
         npm run dist:mac:mas
+        # next line is to notarize, but for upload to store with transporter, no need to notarize, just upload .pkg
+        # npm run publish:mac
         popd
 
         ;;
