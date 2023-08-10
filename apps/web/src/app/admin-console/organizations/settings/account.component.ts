@@ -144,7 +144,7 @@ export class AccountComponent {
     const request = new OrganizationUpdateRequest();
     request.name = this.formGroup.value.orgName;
     request.businessName = this.formGroup.value.businessName;
-    request.billingEmail = this.formGroup.value.billingEmail;
+    request.billingEmail = this.org.billingEmail;
 
     // Backfill pub/priv key if necessary
     if (!this.org.hasPublicAndPrivateKeys) {

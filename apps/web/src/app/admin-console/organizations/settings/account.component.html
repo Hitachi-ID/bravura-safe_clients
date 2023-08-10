@@ -19,12 +19,6 @@
     </div>
     <div>
       <bit-avatar [text]="org.name" [id]="org.id" size="large"></bit-avatar>
-      <app-account-fingerprint
-        [fingerprintMaterial]="organizationId"
-        [publicKeyBuffer]="publicKeyBuffer"
-        fingerprintLabel="{{ 'yourOrganizationsFingerprint' | i18n }}"
-      >
-      </app-account-fingerprint>
     </div>
   </div>
   <button type="submit" bitButton bitFormButton buttonType="primary">
