@@ -3326,7 +3326,6 @@ export const EFFLongWordList = [
   "hypnotize",
   "hypocrisy",
   "hypocrite",
-  "hypr",
   "ibuprofen",
   "ice",
   "iciness",

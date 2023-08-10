@@ -440,7 +440,7 @@
 				CODE_SIGN_ENTITLEMENTS = safari/safari.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = P96648JUTV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = safari/Info.plist;
@@ -450,7 +450,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 2023.11.0;
+				MARKETING_VERSION = 2023.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hitachiid.desktop.safari;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -466,7 +466,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = P96648JUTV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = safari/Info.plist;
@@ -476,7 +476,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 2023.11.0;
+				MARKETING_VERSION = 2023.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hitachiid.desktop.safari;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -494,7 +494,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = P96648JUTV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				EXECUTABLE_NAME = "Bravura Safe";
@@ -504,7 +504,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 2023.11.0;
+				MARKETING_VERSION = 2023.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hitachiid.desktop;
 				PRODUCT_MODULE_NAME = desktop;
 				PRODUCT_NAME = "Bravura Safe";
@@ -523,7 +523,7 @@
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = P96648JUTV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				EXECUTABLE_NAME = "Bravura Safe";
@@ -533,7 +533,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 2023.11.0;
+				MARKETING_VERSION = 2023.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hitachiid.desktop;
 				PRODUCT_MODULE_NAME = desktop;
 				PRODUCT_NAME = "Bravura Safe";

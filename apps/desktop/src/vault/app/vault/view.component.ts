@@ -9,7 +9,7 @@ import {
 
 import { DialogServiceAbstraction } from "@bitwarden/angular/services/dialog";
 import { ViewComponent as BaseViewComponent } from "@bitwarden/angular/vault/components/view.component";
-import { ApiService } from "@bitwarden/common/platform/abstractions/api.service";
+import { ApiService } from "@bitwarden/common/abstractions/api.service";
 import { AuditService } from "@bitwarden/common/abstractions/audit.service";
 import { EventCollectionService } from "@bitwarden/common/abstractions/event/event-collection.service";
 import { TotpService } from "@bitwarden/common/abstractions/totp.service";

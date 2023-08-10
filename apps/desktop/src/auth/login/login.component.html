@@ -1,4 +1,16 @@
-<div id="login-page" class="page-top-padding">
+<div id="login-page">
+  <div class="login-header">
+    <button
+      type="button"
+      appStopClick
+      (click)="settings()"
+      class="environment-urls-settings-icon"
+      attr.aria-label="{{ 'settings' | i18n }}"
+    >
+      <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
+      {{ "settings" | i18n }}
+    </button>
+  </div>
   <form
     id="login-page"
     #form
@@ -25,9 +37,10 @@
               />
             </div>
           </div>
-          <environment-selector #environmentSelector (onOpenSelfHostedSettings)="settings()">
-          </environment-selector>
+          <div class="box-footer" *ngIf="selfHostedDomain">
+            {{ "loggingInTo" | i18n : selfHostedDomain }}
           </div>
+        </div>
         <div class="checkbox remember-email">
           <label for="rememberEmail">
             <input
