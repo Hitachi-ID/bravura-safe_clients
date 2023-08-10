@@ -1961,6 +1961,9 @@
   "vaultExportDisabled": {
     "message": "Exportação de Cofre Desativada"
   },
+  "pleaseUnlockVault": {
+    "message": "Certifique-se de que seu cofre está desbloqueado."
+  },
   "personalVaultExportPolicyInEffect": {
     "message": "Uma ou mais políticas da organização impedem que você exporte seu cofre pessoal."
   },
@@ -2165,7 +2168,7 @@
     "message": "Uma notificação foi enviada para seu dispositivo."
   },
   "logInInitiated": {
-    "message": "Login iniciado"
+    "message": "Login sem senha iniciado"
   },
   "exposedMasterPassword": {
     "message": "Senha Mestra comprometida"

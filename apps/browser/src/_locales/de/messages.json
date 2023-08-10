@@ -1945,6 +1945,9 @@
   "vaultExportDisabled": {
     "message": "Tresor-Export deaktiviert"
   },
+  "pleaseUnlockVault": {
+    "message": "Bitte stellen Sie sicher, dass Ihr Tresor entsperrt ist."
+  },
   "personalVaultExportPolicyInEffect": {
     "message": "Eine oder mehrere Unternehmensrichtlinien hindern dich daran, deinen persönlichen Tresor zu exportieren."
   },
@@ -2152,7 +2155,7 @@
     "message": "Eine Benachrichtigung wurde an dein Gerät gesendet."
   },
   "logInInitiated": {
-    "message": "Anmeldung initiiert"
+    "message": "Passwortlos anmeldung initiiert"
   },
   "exposedMasterPassword": {
     "message": "Kompromittiertes Master-Passwort"

@@ -1961,6 +1961,9 @@
   "vaultExportDisabled": {
     "message": "保管庫のエクスポートは無効です"
   },
+  "pleaseUnlockVault": {
+    "message": "金庫のロックが解除されていることを確認してください。"
+  },
   "personalVaultExportPolicyInEffect": {
     "message": "1 つまたは複数の組織ポリシーにより、個人の保管庫をエクスポートできません。"
   },
@@ -2165,7 +2168,7 @@
     "message": "デバイスに通知を送信しました。"
   },
   "logInInitiated": {
-    "message": "ログイン開始"
+    "message": "パスワードレスログインが開始されました"
   },
   "exposedMasterPassword": {
     "message": "流出したマスターパスワード"

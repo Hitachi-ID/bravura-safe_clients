@@ -1961,6 +1961,9 @@
   "vaultExportDisabled": {
     "message": "Safe export unavailable"
   },
+  "pleaseUnlockVault": {
+    "message": "Please make sure your vault is unlocked."
+  },
   "personalVaultExportPolicyInEffect": {
     "message": "One or more team policies prevents you from exporting your individual safe."
   },
@@ -2165,7 +2168,7 @@
     "message": "A notification has been sent to your device."
   },
   "logInInitiated": {
-    "message": "Log in initiated"
+    "message": "Passwordless login initiated"
   },
   "exposedMasterPassword": {
     "message": "Exposed Master Password"

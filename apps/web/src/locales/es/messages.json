@@ -730,7 +730,7 @@
     "message": "Identificarse"
   },
   "logInInitiated": {
-    "message": "Inicio de sesión en proceso"
+    "message": "Inicio de sesión sin contraseña en proceso"
   },
   "submit": {
     "message": "Enviar"
@@ -5085,6 +5085,9 @@
   },
   "vaultExportDisabled": {
     "message": "Exportación de caja fuerte desactivada"
+  },
+  "pleaseUnlockVault": {
+    "message": "Asegúrate de que tu bóveda esté desbloqueada."
   },
   "personalVaultExportPolicyInEffect": {
     "message": "Una o más políticas de tu organización te impiden exportar tu caja fuerte personal."

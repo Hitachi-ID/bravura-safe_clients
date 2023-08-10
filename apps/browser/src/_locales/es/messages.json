@@ -1961,6 +1961,9 @@
   "vaultExportDisabled": {
     "message": "Exportación de caja fuerte desactivada"
   },
+  "pleaseUnlockVault": {
+    "message": "Asegúrate de que tu bóveda esté desbloqueada."
+  },
   "personalVaultExportPolicyInEffect": {
     "message": "Una o más políticas de tu organización te impiden exportar tu caja fuerte personal."
   },
@@ -2165,7 +2168,7 @@
     "message": "Se ha enviado una notificación a tu dispositivo."
   },
   "logInInitiated": {
-    "message": "Inicio de sesión en proceso"
+    "message": "Inicio de sesión sin contraseña en proceso"
   },
   "exposedMasterPassword": {
     "message": "Contraseña maestra comprometida"

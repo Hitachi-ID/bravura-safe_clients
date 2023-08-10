@@ -1942,6 +1942,9 @@
   "vaultExportDisabled": {
     "message": "密码库导出已禁用"
   },
+  "pleaseUnlockVault": {
+    "message": "Please make sure your vault is unlocked."
+  },
   "personalVaultExportPolicyInEffect": {
     "message": "一个或多个组织策略阻止您导出个人密码库。"
   },
@@ -2137,7 +2140,7 @@
     "message": "使用其他设备登录"
   },
   "logInInitiated": {
-    "message": "登录已发起"
+    "message": "已啟動無密碼登錄"
   },
   "notificationSentDevice": {
     "message": "通知已发送到您的设备。"

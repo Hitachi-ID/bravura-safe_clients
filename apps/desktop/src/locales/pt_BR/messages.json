@@ -1942,6 +1942,9 @@
   "vaultExportDisabled": {
     "message": "Exportação de Cofre Desativada"
   },
+  "pleaseUnlockVault": {
+    "message": "Certifique-se de que seu cofre está desbloqueado."
+  },
   "personalVaultExportPolicyInEffect": {
     "message": "Uma ou mais políticas da organização impdem que você exporte seu cofre pessoal."
   },
@@ -2137,7 +2140,7 @@
     "message": "Fazer login com outro dispositivo"
   },
   "logInInitiated": {
-    "message": "Login iniciado"
+    "message": "Login sem senha iniciado"
   },
   "notificationSentDevice": {
     "message": "Uma notificação foi enviada para seu dispositivo."

@@ -730,7 +730,7 @@
     "message": "Se connecter"
   },
   "logInInitiated": {
-    "message": "Connexion initiée"
+    "message": "Connexion sans mot de passe initiée"
   },
   "submit": {
     "message": "Soumettre"
@@ -5085,6 +5085,9 @@
   },
   "vaultExportDisabled": {
     "message": "Export du coffre supprimé"
+  },
+  "pleaseUnlockVault": {
+    "message": "Veuillez vous assurer que votre coffre-fort est déverrouillé."
   },
   "personalVaultExportPolicyInEffect": {
     "message": "Une ou plusieurs politiques de sécurité de l'organisation vous empêchent d'exporter votre coffre individuel."
