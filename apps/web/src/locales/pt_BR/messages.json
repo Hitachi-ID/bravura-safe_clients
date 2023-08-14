@@ -730,7 +730,7 @@
     "message": "Iniciar sessão"
   },
   "logInInitiated": {
-    "message": "Login iniciado"
+    "message": "Login sem senha iniciado"
   },
   "submit": {
     "message": "Enviar"
@@ -5085,6 +5085,9 @@
   },
   "vaultExportDisabled": {
     "message": "Exportação de Cofre Desabilitada"
+  },
+  "pleaseUnlockVault": {
+    "message": "Certifique-se de que seu cofre está desbloqueado."
   },
   "personalVaultExportPolicyInEffect": {
     "message": "Uma ou mais políticas da organização impdem que você exporte seu cofre pessoal."

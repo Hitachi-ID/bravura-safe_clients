@@ -730,7 +730,7 @@
     "message": "Log in"
   },
   "logInInitiated": {
-    "message": "Log in initiated"
+    "message": "Passwordless login initiated"
   },
   "submit": {
     "message": "Submit"
@@ -5085,6 +5085,9 @@
   },
   "vaultExportDisabled": {
     "message": "Vault export removed"
+  },
+  "pleaseUnlockVault": {
+    "message": "Please make sure your vault is unlocked."
   },
   "personalVaultExportPolicyInEffect": {
     "message": "One or more team policies prevents you from exporting your individual vault."

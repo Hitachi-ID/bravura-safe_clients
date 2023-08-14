@@ -1311,6 +1311,9 @@
     "message": "Passwort aktualisiert",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "Einzelheiten"
+  },
   "exportVault": {
     "message": "Tresor exportieren"
   },
@@ -1942,6 +1945,9 @@
   "vaultExportDisabled": {
     "message": "Tresor-Export deaktiviert"
   },
+  "pleaseUnlockVault": {
+    "message": "Bitte stellen Sie sicher, dass Ihr Tresor entsperrt ist."
+  },
   "personalVaultExportPolicyInEffect": {
     "message": "Eine oder mehrere Unternehmensrichtlinien verhindern es, dass du deinen persönlichen Tresor exportieren kannst."
   },
@@ -2137,7 +2143,7 @@
     "message": "Mit einem anderen Gerät anmelden"
   },
   "logInInitiated": {
-    "message": "Anmeldung eingeleitet"
+    "message": "Passwortlos anmeldung eingeleitet"
   },
   "notificationSentDevice": {
     "message": "Eine Benachrichtigung wurde an dein Gerät gesendet."

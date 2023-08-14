@@ -4,24 +4,45 @@
       <span class="title">{{ "logIn" | i18n }}</span>
     </h1>
   </header>
-  <div class="content login-page">
+  <div class="content login-page text-center" style="
+    overflow-y: scroll;
+    height: 555px
+    ">
     <div>
-      <p class="lead">{{ "logInInitiated" | i18n }}</p>
+      <p class="lead"><b>{{ "logInInitiated" | i18n }}</b></p>
 
       <div>
         <p>{{ "notificationSentDevice" | i18n }}</p>
 
-        <p>
-          {{ "fingerprintMatchInfo" | i18n }}
-        </p>
+        <p><b>
+          {{ "pleaseUnlockVault" | i18n }}
+        </b></p>
       </div>
 
       <div>
-        <b class="fingerprint-phrase-header">{{ "fingerprintPhraseHeader" | i18n }}</b>
-        <p class="fingerprint-text">
-          <code>{{ fingerprintPhrase }}</code>
-        </p>
+        <span id="iconsFaStack" class="fa-stack fa-2x" style="font-size: 750%;">
+          <i id="outerIcon" class="fa fa-solid fa-user-o fa-stack-2x"></i>
+          <i id="innerIcon" class="fa fa-mobile"
+            style="
+              font-size: 80%;
+              position: relative;
+              top: 20%;
+          "></i>
+        </span>
       </div>
+
+      <details>
+        <summary>{{ "details" | i18n }}</summary>
+        <div>
+          <b class="fingerprint-phrase-header">{{ "fingerprintPhraseHeader" | i18n }}</b>
+          <p>
+            {{ "fingerprintMatchInfo" | i18n }}
+          </p>
+          <p class="fingerprint-text">
+            <code>{{ fingerprintPhrase }}</code>
+          </p>
+        </div>
+      </details>
 
       <div class="resend-notification" *ngIf="showResendNotification">
         <a (click)="startPasswordlessLogin()">{{ "resendNotification" | i18n }}</a>

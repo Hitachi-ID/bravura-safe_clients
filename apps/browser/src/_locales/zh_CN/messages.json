@@ -1365,6 +1365,9 @@
     "message": "密码更新于",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "细节"
+  },
   "neverLockWarning": {
     "message": "您确定要使用「从不」选项吗？将锁定选项设置为「从不」会将密码库的加密密钥存储在您的设备上。如果使用此选项，您必须确保您的设备安全。"
   },
@@ -1961,6 +1964,9 @@
   "vaultExportDisabled": {
     "message": "密码库导出已禁用"
   },
+  "pleaseUnlockVault": {
+    "message": "請確保您的保管庫已解鎖。"
+  },
   "personalVaultExportPolicyInEffect": {
     "message": "一个或多个组织策略禁止您导出个人密码库。"
   },
@@ -2165,7 +2171,7 @@
     "message": "通知已发送到您的设备。"
   },
   "logInInitiated": {
-    "message": "登录已发起"
+    "message": "已啟動無密碼登錄"
   },
   "exposedMasterPassword": {
     "message": "已暴露的主密码"

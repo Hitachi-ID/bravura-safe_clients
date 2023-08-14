@@ -1349,6 +1349,9 @@
     "message": "Passwort aktualisiert",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "Einzelheiten"
+  },
   "neverLockWarning": {
     "message": "Bist du sicher, dass dein Tresor nicht automatisch gesperrt werden soll? Dadurch wird der Verschlüsselungsschlüssel auf dem Gerät gespeichert. Wenn du diese Option verwendest, solltest du darauf achten, dass dein Gerät ausreichend geschützt ist."
   },
@@ -1945,6 +1948,9 @@
   "vaultExportDisabled": {
     "message": "Tresor-Export deaktiviert"
   },
+  "pleaseUnlockVault": {
+    "message": "Bitte stellen Sie sicher, dass Ihr Tresor entsperrt ist."
+  },
   "personalVaultExportPolicyInEffect": {
     "message": "Eine oder mehrere Unternehmensrichtlinien hindern dich daran, deinen persönlichen Tresor zu exportieren."
   },
@@ -2152,7 +2158,7 @@
     "message": "Eine Benachrichtigung wurde an dein Gerät gesendet."
   },
   "logInInitiated": {
-    "message": "Anmeldung initiiert"
+    "message": "Passwortlos anmeldung initiiert"
   },
   "exposedMasterPassword": {
     "message": "Kompromittiertes Master-Passwort"

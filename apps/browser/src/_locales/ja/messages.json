@@ -1365,6 +1365,9 @@
     "message": "パスワード更新日",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "詳細"
+  },
   "neverLockWarning": {
     "message": "ロックオプションを「なし」に設定してもよろしいですか？　ロックオプションを「なし」に設定すると、保管庫の暗号化キーが端末に保存されます。 このオプションを使用する場合は、端末を適切に保護しておく必要があります。"
   },
@@ -1961,6 +1964,9 @@
   "vaultExportDisabled": {
     "message": "保管庫のエクスポートは無効です"
   },
+  "pleaseUnlockVault": {
+    "message": "金庫のロックが解除されていることを確認してください。"
+  },
   "personalVaultExportPolicyInEffect": {
     "message": "1 つまたは複数の組織ポリシーにより、個人の保管庫をエクスポートできません。"
   },
@@ -2165,7 +2171,7 @@
     "message": "デバイスに通知を送信しました。"
   },
   "logInInitiated": {
-    "message": "ログイン開始"
+    "message": "パスワードレスログインが開始されました"
   },
   "exposedMasterPassword": {
     "message": "流出したマスターパスワード"

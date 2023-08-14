@@ -730,7 +730,7 @@
     "message": "Anmelden"
   },
   "logInInitiated": {
-    "message": "Anmeldung eingeleitet"
+    "message": "Passwortlos anmeldung initiiert"
   },
   "submit": {
     "message": "Absenden"
@@ -5085,6 +5085,9 @@
   },
   "vaultExportDisabled": {
     "message": "Tresor-Export entfernt"
+  },
+  "pleaseUnlockVault": {
+    "message": "Bitte stellen Sie sicher, dass Ihr Tresor entsperrt ist."
   },
   "personalVaultExportPolicyInEffect": {
     "message": "Eine oder mehrere Unternehmensrichtlinien verhindern es, dass du deinen persönlichen Tresor exportieren kannst."

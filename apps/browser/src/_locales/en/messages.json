@@ -1365,6 +1365,9 @@
     "message": "Password updated",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "Details"
+  },
   "neverLockWarning": {
     "message": "Are you sure you want to use the \"Never\" option? Setting your lock options to \"Never\" stores your safe's encryption key on your device. If you use this option you should ensure that you keep your device properly protected."
   },
@@ -1961,6 +1964,9 @@
   "vaultExportDisabled": {
     "message": "Safe export unavailable"
   },
+  "pleaseUnlockVault": {
+    "message": "Please make sure your vault is unlocked."
+  },
   "personalVaultExportPolicyInEffect": {
     "message": "One or more team policies prevents you from exporting your individual safe."
   },
@@ -2165,7 +2171,7 @@
     "message": "A notification has been sent to your device."
   },
   "logInInitiated": {
-    "message": "Log in initiated"
+    "message": "Passwordless login initiated"
   },
   "exposedMasterPassword": {
     "message": "Exposed Master Password"

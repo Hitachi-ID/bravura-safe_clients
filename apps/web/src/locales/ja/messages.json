@@ -730,7 +730,7 @@
     "message": "ログイン"
   },
   "logInInitiated": {
-    "message": "ログイン開始"
+    "message": "パスワードレスログインが開始されました"
   },
   "submit": {
     "message": "送信"
@@ -5085,6 +5085,9 @@
   },
   "vaultExportDisabled": {
     "message": "保管庫のエクスポートが無効化されました"
+  },
+  "pleaseUnlockVault": {
+    "message": "金庫のロックが解除されていることを確認してください。"
   },
   "personalVaultExportPolicyInEffect": {
     "message": "1 つ以上の組織ポリシーにより、個人の保管庫をエクスポートできません。"

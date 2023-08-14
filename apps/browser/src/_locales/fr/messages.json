@@ -1365,6 +1365,9 @@
     "message": "Mot de passe mis à jour",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "Détails"
+  },
   "neverLockWarning": {
     "message": "Êtes-vous sûr de vouloir utiliser l'option \"Jamais\" ? Définir le verrouillage sur \"Jamais\" stocke la clé de chiffrement de votre coffre sur votre appareil. Si vous utilisez cette option, vous devez vous assurer de correctement protéger votre appareil."
   },
@@ -1961,6 +1964,9 @@
   "vaultExportDisabled": {
     "message": "Export du coffre désactivé"
   },
+  "pleaseUnlockVault": {
+    "message": "Veuillez vous assurer que votre coffre-fort est déverrouillé."
+  },
   "personalVaultExportPolicyInEffect": {
     "message": "Une ou plusieurs politiques de sécurité de l'organisation vous empêchent d'exporter votre coffre individuel."
   },
@@ -2165,7 +2171,7 @@
     "message": "Une notification a été envoyée à votre appareil."
   },
   "logInInitiated": {
-    "message": "Connexion initiée"
+    "message": "Connexion sans mot de passe initiée"
   },
   "exposedMasterPassword": {
     "message": "Mot de passe principal exposé"
