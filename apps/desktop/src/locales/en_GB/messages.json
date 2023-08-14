@@ -1311,6 +1311,9 @@
     "message": "Password updated",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "Details"
+  },
   "exportVault": {
     "message": "Export safe"
   },

@@ -1349,6 +1349,9 @@
     "message": "Passwort aktualisiert",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "Einzelheiten"
+  },
   "neverLockWarning": {
     "message": "Bist du sicher, dass dein Tresor nicht automatisch gesperrt werden soll? Dadurch wird der Verschlüsselungsschlüssel auf dem Gerät gespeichert. Wenn du diese Option verwendest, solltest du darauf achten, dass dein Gerät ausreichend geschützt ist."
   },

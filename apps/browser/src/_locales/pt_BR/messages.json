@@ -1365,6 +1365,9 @@
     "message": "Senha Atualizada",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "Detalhes"
+  },
   "neverLockWarning": {
     "message": "Você tem certeza que deseja usar a opção \"Nunca\"? Definir suas opções de bloqueio para \"Nunca\" armazena a chave de criptografia do seu cofre no seu dispositivo. Se você usar esta opção, você deve garantir que irá manter o seu dispositivo devidamente protegido."
   },

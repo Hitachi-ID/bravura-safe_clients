@@ -1311,6 +1311,9 @@
     "message": "Senha atualizada",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "Detalhes"
+  },
   "exportVault": {
     "message": "Exportar cofre"
   },

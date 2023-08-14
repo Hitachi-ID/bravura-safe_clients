@@ -1365,6 +1365,9 @@
     "message": "Mot de passe mis à jour",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "Détails"
+  },
   "neverLockWarning": {
     "message": "Êtes-vous sûr de vouloir utiliser l'option \"Jamais\" ? Définir le verrouillage sur \"Jamais\" stocke la clé de chiffrement de votre coffre sur votre appareil. Si vous utilisez cette option, vous devez vous assurer de correctement protéger votre appareil."
   },

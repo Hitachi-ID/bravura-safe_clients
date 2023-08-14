@@ -1311,6 +1311,9 @@
     "message": "密码更新于",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "细节"
+  },
   "exportVault": {
     "message": "导出密码库"
   },

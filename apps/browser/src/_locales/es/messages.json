@@ -1365,6 +1365,9 @@
     "message": "Contraseña actualizada",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "Detalles"
+  },
   "neverLockWarning": {
     "message": "¿Está seguro de que quieres usar la opción \"Nunca\"? Al ajustar las opciones de bloqueo a \"Nunca\", la clave de cifrado de su caja fuerte se guardará en tu dispositivo. Si usas esta opción, asegúrate de mantener tu dispositivo debidamente protegido."
   },

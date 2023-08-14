@@ -1311,6 +1311,9 @@
     "message": "Passwort aktualisiert",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "Einzelheiten"
+  },
   "exportVault": {
     "message": "Tresor exportieren"
   },

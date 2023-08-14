@@ -1311,6 +1311,9 @@
     "message": "Mot de passe mis à jour",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "Détails"
+  },
   "exportVault": {
     "message": "Exporter le coffre"
   },

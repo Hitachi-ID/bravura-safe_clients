@@ -1311,6 +1311,9 @@
     "message": "Contraseña actualizada",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "Detalles"
+  },
   "exportVault": {
     "message": "Exportar caja fuerte"
   },

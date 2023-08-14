@@ -1311,6 +1311,9 @@
     "message": "パスワード更新日",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "詳細"
+  },
   "exportVault": {
     "message": "保管庫のエクスポート"
   },

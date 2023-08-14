@@ -1365,6 +1365,9 @@
     "message": "密码更新于",
     "description": "ex. Date this password was updated"
   },
+  "details": {
+    "message": "细节"
+  },
   "neverLockWarning": {
     "message": "您确定要使用「从不」选项吗？将锁定选项设置为「从不」会将密码库的加密密钥存储在您的设备上。如果使用此选项，您必须确保您的设备安全。"
   },
