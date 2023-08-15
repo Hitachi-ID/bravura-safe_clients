@@ -2140,7 +2140,7 @@
     }
   },
   "logInWithAnotherDevice": {
-    "message": "Log in with another device"
+    "message": "Log in with device"
   },
   "logInInitiated": {
     "message": "Passwordless login initiated"
