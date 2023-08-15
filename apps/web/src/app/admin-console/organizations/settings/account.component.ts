@@ -154,8 +154,9 @@ export class AccountComponent {
     }
 
     this.formPromise = this.organizationApiService.save(this.organizationId, request);
-    await this.formPromise;
+    const response = await this.formPromise;
     this.platformUtilsService.showToast("success", null, this.i18nService.t("organizationUpdated"));
+    this.formGroup.get("orgName").setValue(response.name);
   };
 
   async deleteOrganization() {
