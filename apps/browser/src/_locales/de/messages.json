@@ -2158,7 +2158,7 @@
     "message": "Eine Benachrichtigung wurde an dein Gerät gesendet."
   },
   "logInInitiated": {
-    "message": "Passwortlos anmeldung initiiert"
+    "message": "Passwortloses Anmelden/Entsperren initiiert"
   },
   "exposedMasterPassword": {
     "message": "Kompromittiertes Master-Passwort"

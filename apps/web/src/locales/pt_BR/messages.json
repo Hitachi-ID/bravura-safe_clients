@@ -730,7 +730,7 @@
     "message": "Iniciar sessão"
   },
   "logInInitiated": {
-    "message": "Login sem senha iniciado"
+    "message": "Sem senha login/desbloqueio iniciado"
   },
   "submit": {
     "message": "Enviar"

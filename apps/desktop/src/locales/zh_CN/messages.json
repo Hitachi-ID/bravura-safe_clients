@@ -2143,7 +2143,7 @@
     "message": "使用其他设备登录"
   },
   "logInInitiated": {
-    "message": "已啟動無密碼登錄"
+    "message": "已啟動無密碼登錄/解鎖"
   },
   "notificationSentDevice": {
     "message": "通知已发送到您的设备。"

@@ -2171,7 +2171,7 @@
     "message": "デバイスに通知を送信しました。"
   },
   "logInInitiated": {
-    "message": "パスワードレスログインが開始されました"
+    "message": "パスワードレスログイン/ロック解除を開始しました"
   },
   "exposedMasterPassword": {
     "message": "流出したマスターパスワード"

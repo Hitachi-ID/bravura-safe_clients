@@ -730,7 +730,7 @@
     "message": "Log in"
   },
   "logInInitiated": {
-    "message": "Passwordless login initiated"
+    "message": "Passwordless login/unlock initiated"
   },
   "submit": {
     "message": "Submit"

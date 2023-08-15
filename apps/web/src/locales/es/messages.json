@@ -730,7 +730,7 @@
     "message": "Identificarse"
   },
   "logInInitiated": {
-    "message": "Inicio de sesión sin contraseña en proceso"
+    "message": "Sin contraseña inicio de sesión / desbloqueo iniciado"
   },
   "submit": {
     "message": "Enviar"

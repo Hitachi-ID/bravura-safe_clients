@@ -2143,7 +2143,7 @@
     "message": "別のデバイスでログイン"
   },
   "logInInitiated": {
-    "message": "パスワードレスログインが開始されました"
+    "message": "パスワードレスログイン/ロック解除を開始しました"
   },
   "notificationSentDevice": {
     "message": "デバイスに通知を送信しました。"

@@ -2143,7 +2143,7 @@
     "message": "Connectez-vous avec un autre appareil"
   },
   "logInInitiated": {
-    "message": "Connexion sans mot de passe initiée"
+    "message": "Sans mot de passe connexion/déverrouillage initiée"
   },
   "notificationSentDevice": {
     "message": "Une notification a été envoyée à votre appareil."
