@@ -48,7 +48,7 @@ export class SsoComponent extends BaseSsoComponent {
     super.onSuccessfulLogin = () => {
       return syncService.fullSync(true);
     };
-    this.redirectUri = "bitwarden://sso-callback";
+    this.redirectUri = "bravurasafe://sso-callback";
     this.clientId = "desktop";
   }
 }

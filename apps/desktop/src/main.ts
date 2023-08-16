@@ -172,15 +172,15 @@ export class Main {
           this.nativeMessagingMain.listen();
         }
 
-        app.removeAsDefaultProtocolClient("bitwarden");
+        app.removeAsDefaultProtocolClient("bravurasafe");
         if (process.env.NODE_ENV === "development" && process.platform === "win32") {
           // Fix development build on Windows requirering a different protocol client
-          app.setAsDefaultProtocolClient("bitwarden", process.execPath, [
+          app.setAsDefaultProtocolClient("bravurasafe", process.execPath, [
             process.argv[1],
             path.resolve(process.argv[2]),
           ]);
         } else {
-          app.setAsDefaultProtocolClient("bitwarden");
+          app.setAsDefaultProtocolClient("bravurasafe");
         }
 
         // Process protocol for macOS
