@@ -2143,7 +2143,7 @@
     "message": "Iniciar sesión con otro dispositivo"
   },
   "logInInitiated": {
-    "message": "Inicio de sesión sin contraseña en proceso"
+    "message": "Sin contraseña inicio de sesión / desbloqueo iniciado"
   },
   "notificationSentDevice": {
     "message": "Se ha enviado una notificación a tu dispositivo."

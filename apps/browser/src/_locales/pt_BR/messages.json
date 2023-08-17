@@ -2171,7 +2171,7 @@
     "message": "Uma notificação foi enviada para seu dispositivo."
   },
   "logInInitiated": {
-    "message": "Login sem senha iniciado"
+    "message": "Sem senha login/desbloqueio iniciado"
   },
   "exposedMasterPassword": {
     "message": "Senha Mestra comprometida"

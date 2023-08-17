@@ -730,7 +730,7 @@
     "message": "Se connecter"
   },
   "logInInitiated": {
-    "message": "Connexion sans mot de passe initiée"
+    "message": "Sans mot de passe connexion/déverrouillage initiée"
   },
   "submit": {
     "message": "Soumettre"

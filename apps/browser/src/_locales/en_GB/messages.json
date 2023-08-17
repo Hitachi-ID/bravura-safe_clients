@@ -2171,7 +2171,7 @@
     "message": "A notification has been sent to your device."
   },
   "logInInitiated": {
-    "message": "Passwordless login initiated"
+    "message": "Passwordless login/unlock initiated"
   },
   "exposedMasterPassword": {
     "message": "Exposed Master Password"

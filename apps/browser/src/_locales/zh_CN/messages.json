@@ -2171,7 +2171,7 @@
     "message": "通知已发送到您的设备。"
   },
   "logInInitiated": {
-    "message": "已啟動無密碼登錄"
+    "message": "已啟動無密碼登錄/解鎖"
   },
   "exposedMasterPassword": {
     "message": "已暴露的主密码"

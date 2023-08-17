@@ -2143,7 +2143,7 @@
     "message": "Log in with device"
   },
   "logInInitiated": {
-    "message": "Passwordless login initiated"
+    "message": "Passwordless login/unlock initiated"
   },
   "notificationSentDevice": {
     "message": "A notification has been sent to your device."

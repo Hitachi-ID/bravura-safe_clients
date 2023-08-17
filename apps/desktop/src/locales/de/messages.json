@@ -2143,7 +2143,7 @@
     "message": "Mit einem anderen Gerät anmelden"
   },
   "logInInitiated": {
-    "message": "Passwortlos anmeldung eingeleitet"
+    "message": "Passwortloses Anmelden/Entsperren initiiert"
   },
   "notificationSentDevice": {
     "message": "Eine Benachrichtigung wurde an dein Gerät gesendet."

@@ -2171,7 +2171,7 @@
     "message": "Se ha enviado una notificación a tu dispositivo."
   },
   "logInInitiated": {
-    "message": "Inicio de sesión sin contraseña en proceso"
+    "message": "Sin contraseña inicio de sesión / desbloqueo iniciado"
   },
   "exposedMasterPassword": {
     "message": "Contraseña maestra comprometida"

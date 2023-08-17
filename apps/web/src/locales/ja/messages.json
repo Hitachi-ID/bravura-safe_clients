@@ -730,7 +730,7 @@
     "message": "ログイン"
   },
   "logInInitiated": {
-    "message": "パスワードレスログインが開始されました"
+    "message": "パスワードレスログイン/ロック解除を開始しました"
   },
   "submit": {
     "message": "送信"

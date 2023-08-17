@@ -730,7 +730,7 @@
     "message": "登录"
   },
   "logInInitiated": {
-    "message": "已啟動無密碼登錄"
+    "message": "已啟動無密碼登錄/解鎖"
   },
   "submit": {
     "message": "提交"

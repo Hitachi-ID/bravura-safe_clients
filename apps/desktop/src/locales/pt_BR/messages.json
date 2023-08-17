@@ -2143,7 +2143,7 @@
     "message": "Fazer login com outro dispositivo"
   },
   "logInInitiated": {
-    "message": "Login sem senha iniciado"
+    "message": "Sem senha login/desbloqueio iniciado"
   },
   "notificationSentDevice": {
     "message": "Uma notificação foi enviada para seu dispositivo."

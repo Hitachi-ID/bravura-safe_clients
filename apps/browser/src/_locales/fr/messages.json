@@ -2171,7 +2171,7 @@
     "message": "Une notification a été envoyée à votre appareil."
   },
   "logInInitiated": {
-    "message": "Connexion sans mot de passe initiée"
+    "message": "Sans mot de passe connexion/déverrouillage initiée"
   },
   "exposedMasterPassword": {
     "message": "Mot de passe principal exposé"
