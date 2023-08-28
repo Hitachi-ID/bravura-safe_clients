@@ -9,9 +9,20 @@
           <h4>{{ "logInAttemptBy" | i18n : email }}</h4>
         </div>
 
-        <div class="section">
-          <h4 class="label">{{ "fingerprintPhraseHeader" | i18n }}</h4>
-          <code>{{ fingerprintPhrase }}</code>
+        <div class="text-center section">
+          <span id="iconsFaStack" class="fa-stack fa-2x"
+            style="
+              font-size: 750%;
+              text-align: center;
+          ">
+            <i id="outerIcon" class="fa fa-solid fa-user-o fa-stack-2x"></i>
+            <i id="innerIcon" class="fa fa-unlock-alt"
+              style="
+                font-size: 75%;
+                position: relative;
+                top: 22%;
+            "></i>
+          </span>
         </div>
 
         <div class="section">
@@ -28,6 +39,15 @@
           <h4 class="label">{{ "time" | i18n }}</h4>
           <p>{{ requestTimeText }}</p>
         </div>
+
+        <details>
+          <summary>{{ "details" | i18n }}</summary>
+          <div class="section">
+            <h4 class="label">{{ "fingerprintPhraseHeader" | i18n }}</h4>
+            <code>{{ fingerprintPhrase }}</code>
+          </div>
+        </details>
+
       </div>
 
       <div class="modal-footer">
