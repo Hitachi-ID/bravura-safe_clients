@@ -206,7 +206,7 @@ export class Main {
 
   private processDeepLink(argv: string[]): void {
     argv
-      .filter((s) => s.indexOf("bitwarden://") === 0)
+      .filter((s) => s.indexOf("bravurasafe://") === 0)
       .forEach((s) => {
         const url = new URL(s);
         const code = url.searchParams.get("code");

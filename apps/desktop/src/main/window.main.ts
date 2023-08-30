@@ -32,8 +32,9 @@ export class WindowMain {
 
   init(): Promise<any> {
 
-    app.commandLine.appendSwitch('ignore-certificate-errors');
-    app.commandLine.appendSwitch('allow-insecure-localhost', 'true');
+    // uncomment for testing with self signed certs
+    // app.commandLine.appendSwitch('ignore-certificate-errors');
+    // app.commandLine.appendSwitch('allow-insecure-localhost', 'true');
 
     return new Promise<void>((resolve, reject) => {
       try {
