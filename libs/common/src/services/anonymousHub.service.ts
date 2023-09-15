@@ -19,6 +19,7 @@ import {
 export class AnonymousHubService implements AnonymousHubServiceAbstraction {
   private anonHubConnection: HubConnection;
   private url: string;
+  private logHeartbeat = true;
 
   constructor(
     private environmentService: EnvironmentService,
@@ -34,14 +35,28 @@ export class AnonymousHubService implements AnonymousHubServiceAbstraction {
         skipNegotiation: true,
         transport: HttpTransportType.WebSockets,
       })
+      .withAutomaticReconnect()
       .withHubProtocol(new MessagePackHubProtocol() as IHubProtocol)
       .build();
-
-    this.anonHubConnection.start().catch((error) => this.logService.error(error));
 
     this.anonHubConnection.on("AuthRequestResponseRecieved", (data: any) => {
       this.ProcessNotification(new NotificationResponse(data));
     });
+
+    // eslint-disable-next-line
+    this.anonHubConnection.on("Heartbeat", (data: any) => {
+      if (this.logHeartbeat) {
+        const currentTime = new Date();
+        console.log('Anon Heartbeat!', currentTime);
+      }
+    });
+
+    this.anonHubConnection.on("error", (error) => {
+      //const currentTime = new Date();
+      console.log('Anon Connection generated error !!!', error);
+    });
+
+    await this.anonHubConnection.start().catch((error) => this.logService.error(error));
   }
 
   stopHubConnection() {

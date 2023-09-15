@@ -260,6 +260,9 @@ const devServer =
                   'self'
                   data:
                   https://icons.bitwarden.net
+                  https://*.devlab.hids.ca
+                  https://*.hitachi-id.net
+                  https://*.bravurasecurity.net
                   https://*.paypal.com
                   https://www.paypalobjects.com
                   https://q.stripe.com
@@ -281,7 +284,13 @@ const devServer =
                 ;connect-src
                   'self'
                   wss://notifications.bitwarden.com
+                  wss://*.devlab.hids.ca
+                  wss://*.hitachi-id.net
+                  wss://*.bravurasecurity.net
                   https://notifications.bitwarden.com
+                  https://*.devlab.hids.ca
+                  https://*.hitachi-id.net
+                  https://*.bravurasecurity.net
                   https://cdn.bitwarden.net
                   https://api.pwnedpasswords.com
                   https://api.2fa.directory/v3/totp.json
@@ -298,6 +307,16 @@ const devServer =
                   https://api.fastmail.com
                   https://api.forwardemail.net
                   http://localhost:5000
+                  http://localhost:5001
+                  http://localhost:5002
+                  http://localhost:5003
+                  http://localhost:5004
+                  http://localhost:5005
+                  http://localhost:5006
+                  http://localhost:5007
+                  http://localhost:5008
+                  http://localhost:5009
+                  http://localhost:5010
                 ;object-src
                   'self'
                   blob:

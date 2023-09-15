@@ -26,6 +26,7 @@ export class NotificationsService implements NotificationsServiceAbstraction {
   private inited = false;
   private inactive = false;
   private reconnectTimer: any = null;
+  private logHeartbeat = true;
 
   constructor(
     private syncService: SyncService,
@@ -80,7 +81,10 @@ export class NotificationsService implements NotificationsServiceAbstraction {
     );
     // eslint-disable-next-line
     this.signalrConnection.on("Heartbeat", (data: any) => {
-      /*console.log('Heartbeat!');*/
+      if (this.logHeartbeat) {
+        const currentTime = new Date();
+        console.log('Heartbeat!', currentTime);
+      }
     });
     this.signalrConnection.onclose(() => {
       this.connected = false;
@@ -115,6 +119,9 @@ export class NotificationsService implements NotificationsServiceAbstraction {
   }
 
   async disconnectFromInactivity(): Promise<void> {
+    const currentTime = new Date();
+    console.log('Notification service: disconnectFromInactivity!', currentTime);
+    
     this.inactive = true;
     if (this.inited && this.connected) {
       await this.signalrConnection.stop();

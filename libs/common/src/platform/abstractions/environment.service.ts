@@ -24,9 +24,9 @@ export enum Region {
 }
 
 export enum RegionDomain {
-  US = "bitwarden.com",
-  EU = "bitwarden.eu",
-  USQA = "bitwarden.pw",
+  US = "bravurasecurity.net",
+  EU = "bravurasecurity.net.eu",
+  USQA = "bravurasecurity.net.pw",
 }
 
 export abstract class EnvironmentService {
