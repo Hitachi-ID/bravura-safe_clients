@@ -35,7 +35,7 @@ export class AnonymousHubService implements AnonymousHubServiceAbstraction {
         skipNegotiation: true,
         transport: HttpTransportType.WebSockets,
       })
-      .withAutomaticReconnect()
+      //.withAutomaticReconnect()
       .withHubProtocol(new MessagePackHubProtocol() as IHubProtocol)
       .build();
 
